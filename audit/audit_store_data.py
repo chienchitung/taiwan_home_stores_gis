@@ -17,8 +17,9 @@ from bs4 import BeautifulSoup
 
 
 ROOT = Path(__file__).resolve().parent
-CSV_PATH = ROOT / "taiwan_home_stores_status.csv"
-JSON_PATH = ROOT / "taiwan_home_stores_status.json"
+DATA_DIR = ROOT.parent / "data" if (ROOT.parent / "data").exists() else ROOT
+CSV_PATH = (DATA_DIR / "taiwan_home_stores_status.csv") if (DATA_DIR / "taiwan_home_stores_status.csv").exists() else (ROOT / "taiwan_home_stores_status.csv")
+JSON_PATH = (DATA_DIR / "taiwan_home_stores_status.json") if (DATA_DIR / "taiwan_home_stores_status.json").exists() else (ROOT / "taiwan_home_stores_status.json")
 QUERY_PATH = ROOT / "store_audit_queries.json"
 COUNT_PATH = ROOT / "store_count_audit.csv"
 AS_OF = date.today().isoformat()

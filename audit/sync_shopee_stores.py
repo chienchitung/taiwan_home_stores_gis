@@ -18,8 +18,9 @@ import aiohttp
 
 
 BASE_DIR = Path(__file__).resolve().parent
-DATA_PATH = BASE_DIR / "taiwan_home_stores_status.json"
-CSV_PATH = BASE_DIR / "taiwan_home_stores_status.csv"
+DATA_DIR = BASE_DIR.parent / "data" if (BASE_DIR.parent / "data").exists() else BASE_DIR
+DATA_PATH = (DATA_DIR / "taiwan_home_stores_status.json") if (DATA_DIR / "taiwan_home_stores_status.json").exists() else (BASE_DIR / "taiwan_home_stores_status.json")
+CSV_PATH = (DATA_DIR / "taiwan_home_stores_status.csv") if (DATA_DIR / "taiwan_home_stores_status.csv").exists() else (BASE_DIR / "taiwan_home_stores_status.csv")
 AUDIT_PATH = BASE_DIR / "shopee_location_audit.json"
 API_URL = "https://spx.tw/api/service-point/point/around/list"
 SOURCE_URL = "https://spx.tw/service-point"

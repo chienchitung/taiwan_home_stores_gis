@@ -3,6 +3,7 @@ import json, os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 json_candidates = [
+    os.path.join(BASE_DIR, 'data', 'taiwan_home_stores_status.json'),
     os.path.join(BASE_DIR, 'taiwan_home_stores_status.json'),
     '/Users/jackietung/taiwan_home_stores_gis/taiwan_home_stores_status.json',
     '/Users/jackietung/.gemini/antigravity/scratch/taiwan_home_stores_status.json'

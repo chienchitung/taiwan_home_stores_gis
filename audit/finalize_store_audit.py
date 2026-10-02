@@ -29,7 +29,8 @@ def distance_m(a, b):
     return 6371000 * 2 * math.asin(math.sqrt(x))
 
 
-current = json.loads((ROOT / "taiwan_home_stores_status.json").read_text(encoding="utf-8"))
+DATA_DIR = ROOT.parent / "data" if (ROOT.parent / "data").exists() else ROOT
+current = json.loads(((DATA_DIR / "taiwan_home_stores_status.json") if (DATA_DIR / "taiwan_home_stores_status.json").exists() else (ROOT / "taiwan_home_stores_status.json")).read_text(encoding="utf-8"))
 queries = {x["n"]: x for x in json.loads((ROOT / "store_audit_queries.json").read_text(encoding="utf-8"))}
 
 # The pre-refresh dashboard still contains the original 270-row snapshot.
