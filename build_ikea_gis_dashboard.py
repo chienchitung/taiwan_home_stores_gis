@@ -1685,23 +1685,25 @@ aside.collapsed .sidebar-collapse-toggle {
 }
 
 .detail-nav-top {
-  padding: 10px 14px;
+  padding: 5px 12px;
   background: #FFFFFF;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
+  height: 36px;
+  box-sizing: border-box;
 }
 .btn-back-to-list {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   background: #F1F5F9;
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 5px 12px;
-  font-size: 11.5px;
+  padding: 3px 9px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--text-body);
   cursor: pointer;
@@ -1716,8 +1718,8 @@ aside.collapsed .sidebar-collapse-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   border: 1px solid var(--border);
   background: #FFFFFF;
@@ -1731,43 +1733,46 @@ aside.collapsed .sidebar-collapse-toggle {
   border-color: #94A3B8;
 }
 .detail-brand-tag {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 800;
   color: #FFFFFF;
-  padding: 3px 9px;
+  padding: 2px 8px;
   border-radius: 4px;
 }
 
 /* Pinned Store Identity Bar */
 .detail-pinned-header {
-  padding: 11px 14px 9px;
+  padding: 6px 12px 5px;
   background: #FFFFFF;
   border-bottom: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
   flex-shrink: 0;
 }
 .detail-pinned-header .detail-meta-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 6px;
 }
 .detail-pinned-header .detail-title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 900;
   color: var(--text-main);
-  line-height: 1.3;
+  line-height: 1.25;
   margin: 0;
   letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .detail-pinned-header .detail-sub-meta {
-  font-size: 11.5px;
+  font-size: 11px;
   color: var(--text-muted);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   flex-wrap: wrap;
 }
 
@@ -1775,8 +1780,8 @@ aside.collapsed .sidebar-collapse-toggle {
 .detail-tabs-bar {
   display: flex;
   background: #F8FAFC;
-  padding: 6px 10px;
-  gap: 5px;
+  padding: 4px 8px;
+  gap: 4px;
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
 }
@@ -1785,10 +1790,11 @@ aside.collapsed .sidebar-collapse-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  padding: 6px 6px;
+  gap: 4px;
+  padding: 4px 5px;
+  min-height: 26px;
   border-radius: 20px;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--text-body);
   background: transparent;
@@ -1796,6 +1802,10 @@ aside.collapsed .sidebar-collapse-toggle {
   cursor: pointer;
   transition: all 0.15s ease;
   white-space: nowrap;
+}
+.detail-tab-btn svg {
+  width: 12px;
+  height: 12px;
 }
 .detail-tab-btn:hover {
   background: rgba(255, 255, 255, 0.9);
@@ -1813,12 +1823,12 @@ aside.collapsed .sidebar-collapse-toggle {
   justify-content: center;
   background: #E2E8F0;
   color: var(--text-main);
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 800;
   padding: 1px 5px;
   border-radius: 10px;
-  min-width: 17px;
-  height: 15px;
+  min-width: 16px;
+  height: 14px;
   line-height: 1;
 }
 .detail-tab-btn.active .tab-badge {
@@ -1831,7 +1841,8 @@ aside.collapsed .sidebar-collapse-toggle {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
-  padding: 12px 14px 20px;
+  padding: 8px 10px 14px;
+  box-sizing: border-box;
 }
 .detail-content-body::-webkit-scrollbar { width: 5px; }
 .detail-content-body::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
@@ -1839,7 +1850,7 @@ aside.collapsed .sidebar-collapse-toggle {
 .detail-tab-pane {
   display: none;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 .detail-tab-pane.active {
   display: flex;
@@ -2102,41 +2113,43 @@ aside.collapsed .sidebar-collapse-toggle {
 /* P2 Route Planning & Travel Time Box (Netlify & Google Maps Ready) */
 .route-planning-box {
   border: 1px solid #E2E8F0;
-  border-radius: 12px;
-  padding: 13px 14px;
+  border-radius: 10px;
+  padding: 8px 10px;
   background: #FFFFFF;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
 }
 .route-planning-box .box-hdr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 12.5px;
+  font-size: 11px;
   font-weight: 800;
   color: var(--text-main);
-  gap: 8px;
-  flex-wrap: wrap;
+  gap: 6px;
 }
 .route-hdr-title {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   color: #0F172A;
+  font-size: 11px;
 }
 .badge-route-status {
   background: #EFF6FF;
   color: #1D4ED8;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 12px;
+  padding: 1.5px 6px;
+  border-radius: 10px;
   border: 1px solid #BFDBFE;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
+  white-space: nowrap;
 }
 .badge-route-status.ready {
   background: #ECFDF5;
@@ -2148,13 +2161,13 @@ aside.collapsed .sidebar-collapse-toggle {
 .route-metric-cards-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 6px;
 }
 .route-metric-card {
   background: #F8FAFC;
   border: 1px solid #E2E8F0;
-  border-radius: 9px;
-  padding: 9px 11px;
+  border-radius: 8px;
+  padding: 6px 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2167,8 +2180,8 @@ aside.collapsed .sidebar-collapse-toggle {
 .metric-card-top {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 11px;
+  gap: 4px;
+  font-size: 10px;
   font-weight: 700;
   color: #64748B;
 }
@@ -2177,14 +2190,18 @@ aside.collapsed .sidebar-collapse-toggle {
   align-items: center;
   color: #1D4ED8;
 }
+.metric-card-icon svg {
+  width: 12px;
+  height: 12px;
+}
 .metric-card-main {
   display: flex;
   align-items: baseline;
-  gap: 3px;
-  margin: 5px 0 2px 0;
+  gap: 2px;
+  margin: 2px 0 1px 0;
 }
 .metric-card-val {
-  font-size: 23px;
+  font-size: 19px;
   font-weight: 800;
   color: #0F172A;
   line-height: 1.1;
@@ -2192,12 +2209,12 @@ aside.collapsed .sidebar-collapse-toggle {
   font-variant-numeric: tabular-nums;
 }
 .metric-card-unit {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   color: #475569;
 }
 .metric-card-sub {
-  font-size: 10px;
+  font-size: 9px;
   color: #64748B;
   white-space: nowrap;
   overflow: hidden;
@@ -2207,10 +2224,10 @@ aside.collapsed .sidebar-collapse-toggle {
 /* Mode Switcher */
 .route-mode-switcher {
   display: flex;
-  gap: 4px;
-  background: #FFFFFF;
+  gap: 3px;
+  background: #F1F5F9;
   border: 1px solid var(--skapa-border);
-  padding: 4px;
+  padding: 3px;
   border-radius: 10rem;
 }
 .btn-route-mode {
@@ -2218,13 +2235,13 @@ aside.collapsed .sidebar-collapse-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  min-height: 34px;
-  padding: 0 8px;
+  gap: 4px;
+  min-height: 28px;
+  padding: 0 4px;
   border: none;
   background: transparent;
   color: var(--skapa-text-2);
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 700;
   border-radius: 10rem;
   cursor: pointer;
@@ -2233,16 +2250,12 @@ aside.collapsed .sidebar-collapse-toggle {
 }
 .btn-route-mode svg {
   flex-shrink: 0;
-  width: 14px;
-  height: 14px;
-  transition: transform 0.15s ease;
+  width: 13px;
+  height: 13px;
 }
 .btn-route-mode:hover {
   background: var(--skapa-neutral);
   color: var(--skapa-text);
-}
-.btn-route-mode:hover svg {
-  transform: scale(1.08);
 }
 .btn-route-mode.active {
   background: var(--skapa-text);
@@ -2253,46 +2266,48 @@ aside.collapsed .sidebar-collapse-toggle {
   color: #FFFFFF;
 }
 .mode-badge-preview {
-  font-size: 10px;
-  font-weight: 600;
-  opacity: 0.85;
-  margin-left: 2px;
+  display: none;
 }
 
 /* Origin Selector Panel */
 .route-origin-panel {
-  background: #FFFFFF;
+  background: #F8FAFC;
   border: 1px solid var(--skapa-border);
   border-radius: 8px;
-  padding: 10px 12px;
+  padding: 5px 8px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 .route-origin-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 10.5px;
   color: var(--skapa-text-2);
   font-weight: 700;
 }
 .route-origin-controls {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
 .sel-route-origin {
   flex: 1;
+  min-width: 0;
   background: #FFFFFF;
   border: 1px solid var(--skapa-border);
   border-radius: 64px;
-  padding: 6px 12px;
-  font-size: 12px;
+  padding: 3px 8px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--skapa-text);
   outline: none;
   cursor: pointer;
+  height: 28px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .sel-route-origin:focus {
   border-color: var(--skapa-text);
@@ -2301,17 +2316,23 @@ aside.collapsed .sidebar-collapse-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  padding: 6px 12px;
+  gap: 3px;
+  padding: 3px 8px;
+  height: 28px;
   background: #FFFFFF;
   border: 1px solid var(--skapa-border-strong);
   border-radius: 64px;
-  font-size: 12px;
+  font-size: 10.5px;
   font-weight: 700;
   color: var(--skapa-text);
   cursor: pointer;
   transition: all 0.15s ease;
   white-space: nowrap;
+  flex-shrink: 0;
+}
+.btn-origin-locate svg, .btn-origin-map-pick svg {
+  width: 12px;
+  height: 12px;
 }
 .btn-origin-locate:hover, .btn-origin-map-pick:hover {
   background: var(--skapa-neutral);
@@ -2327,24 +2348,29 @@ aside.collapsed .sidebar-collapse-toggle {
 /* Route Action Buttons */
 .route-actions-row {
   display: flex;
-  gap: 8px;
+  gap: 6px;
 }
 .btn-calc-route {
   flex: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 5px;
   background: var(--ikea-blue);
   color: #FFFFFF;
   border: 1px solid var(--ikea-blue);
   border-radius: 10rem;
-  min-height: 40px;
-  padding: 0 16px;
-  font-size: 13.5px;
+  min-height: 32px;
+  padding: 0 10px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.btn-calc-route svg {
+  width: 13px;
+  height: 13px;
 }
 .btn-calc-route:hover {
   background: var(--skapa-emph-hover);
@@ -2362,17 +2388,18 @@ aside.collapsed .sidebar-collapse-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 3px;
   background: #FFFFFF;
   color: var(--skapa-text);
   border: 1px solid var(--skapa-border-strong);
   border-radius: 10rem;
-  min-height: 40px;
-  padding: 0 12px;
-  font-size: 13px;
+  min-height: 32px;
+  padding: 0 8px;
+  font-size: 11px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.15s ease;
+  white-space: nowrap;
 }
 .btn-clear-route:hover {
   background: var(--skapa-neutral);
@@ -2389,11 +2416,11 @@ aside.collapsed .sidebar-collapse-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  min-height: 36px;
-  padding: 0 12px;
+  gap: 4px;
+  min-height: 30px;
+  padding: 0 8px;
   border-radius: 10rem;
-  font-size: 12.5px;
+  font-size: 11px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.15s ease;
@@ -2401,6 +2428,10 @@ aside.collapsed .sidebar-collapse-toggle {
   background: #FFFFFF;
   color: var(--skapa-text);
   border: 1px solid var(--skapa-border-strong);
+}
+.btn-ext-nav svg {
+  width: 12px;
+  height: 12px;
 }
 .btn-ext-nav:hover {
   background: var(--skapa-neutral);
@@ -4526,7 +4557,7 @@ function renderMarkers(pulseYear = null) {
     const key = "s" + s.n;
     const isNewInYear = pulseYear && (s.opened_year === pulseYear);
     const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s, isNewInYear) })
-      .bindPopup(makePopupHtml(s), { className: "custom-popup", minWidth: 280, maxWidth: 340 });
+      .bindPopup(makePopupHtml(s), { className: "custom-popup", minWidth: 260, maxWidth: 320, autoPan: true, autoPanPadding: [24, 24] });
 
     if (markerClusterLayer) clusterMarkers.push(mk);
     else mk.addTo(map);
@@ -4776,6 +4807,7 @@ function triggerRoutePlanningByKey(key) {
 
 function triggerRoutePlanning(s) {
   if (!s) return;
+  if (map) map.closePopup();
   const key = "s" + s.n;
   selectStore(key, s, true);
   openStoreDrawer(s, "route");
@@ -4789,6 +4821,8 @@ function triggerRoutePlanning(s) {
 
 function openStoreDrawer(s, preferredTab = null) {
   currentDetailStore = s;
+
+  if (map) map.closePopup();
 
   if (isTimelineMode && timelinePlaying) {
     pauseTimeline();
@@ -4820,7 +4854,7 @@ function openStoreDrawer(s, preferredTab = null) {
         </div>
         ${(s._userDist !== undefined && s._userDist !== null) ? `<span class="card-dist-badge">${formatDist(s._userDist)}</span>` : ""}
       </div>
-      <h2 class="detail-title">${s.store_name}</h2>
+      <h2 class="detail-title" title="${s.store_name}">${s.store_name}</h2>
       <div class="detail-sub-meta">
         <span>${s.brand}</span>
         <span>·</span>
@@ -4847,13 +4881,13 @@ function openStoreDrawer(s, preferredTab = null) {
         <!-- Mode Switcher -->
         <div class="route-mode-switcher" id="routeModeSwitcher">
           <button class="btn-route-mode active" data-mode="driving" title="開車路線規劃">
-            ${SVG.car} 開車 <span class="mode-badge-preview" id="badgeModeDriving"></span>
+            ${SVG.car} <span>開車</span>
           </button>
           <button class="btn-route-mode" data-mode="transit" title="大眾運輸路線規劃">
-            ${SVG.transit} 大眾運輸 <span class="mode-badge-preview" id="badgeModeTransit"></span>
+            ${SVG.transit} <span>大眾運輸</span>
           </button>
           <button class="btn-route-mode" data-mode="walking" title="步行路線規劃">
-            ${SVG.walk} 步行 <span class="mode-badge-preview" id="badgeModeWalking"></span>
+            ${SVG.walk} <span>步行</span>
           </button>
         </div>
 
@@ -4887,8 +4921,7 @@ function openStoreDrawer(s, preferredTab = null) {
         <!-- Departure Origin Selector Panel -->
         <div class="route-origin-panel">
           <div class="route-origin-header">
-            <span>${SVG.gps} 出發起點：</span>
-            <span id="lblActiveOriginName" style="color:#1D4ED8;font-weight:700">我的目前位置 (GPS)</span>
+            <span>${SVG.gps} 起點：<strong id="lblActiveOriginName" style="color:#1D4ED8">我的位置 (GPS)</strong></span>
           </div>
           <div class="route-origin-controls">
             <select id="selRouteOrigin" class="sel-route-origin">
@@ -5411,10 +5444,6 @@ function updateRouteDisplay(s, explicitResult = null) {
   const sumEl = document.getElementById("lblRouteSummary");
   const engTag = document.getElementById("lblRouteEngine");
 
-  const bDrive = document.getElementById("badgeModeDriving");
-  const bTransit = document.getElementById("badgeModeTransit");
-  const bWalk = document.getElementById("badgeModeWalking");
-
   if (!explicitResult) {
     if (elDurVal) elDurVal.textContent = "...";
     if (elDurUnit) elDurUnit.textContent = "";
@@ -5491,12 +5520,6 @@ function updateRouteDisplay(s, explicitResult = null) {
         engTag.style.background = "#EFF6FF";
       }
     }
-
-    // Update active mode preview badge
-    const badgeText = durFmt.val + durFmt.unit;
-    if (explicitResult.mode === "driving" && bDrive) bDrive.textContent = badgeText;
-    else if (explicitResult.mode === "transit" && bTransit) bTransit.textContent = badgeText;
-    else if (explicitResult.mode === "walking" && bWalk) bWalk.textContent = badgeText;
   }
 
   // Update external navigation URLs
@@ -5738,7 +5761,7 @@ function ensureStoreMarkerOnMap(s) {
   if (!markers[key]) {
     const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s) })
       .addTo(map)
-      .bindPopup(makePopupHtml(s), { className: "custom-popup", minWidth: 280, maxWidth: 340 });
+      .bindPopup(makePopupHtml(s), { className: "custom-popup", minWidth: 260, maxWidth: 320, autoPan: true, autoPanPadding: [24, 24] });
     mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info"); });
     markers[key] = mk;
   }
@@ -5793,12 +5816,6 @@ function navigateToCompetitor(n) {
 
   selectedKey = key;
   map.flyTo([target.lat, target.lng], Math.max(map.getZoom(), 16), { duration: 0.8 });
-  setTimeout(() => {
-    if (markers[key]) {
-      markers[key].setZIndexOffset(3500);
-      markers[key].openPopup();
-    }
-  }, 850);
 
   openStoreDrawer(target, "info");
 }
@@ -5826,7 +5843,11 @@ function selectStore(key, s, flyTo) {
     setTimeout(() => {
       if (markers[key]) {
         markers[key].setZIndexOffset(3500);
-        markers[key].openPopup();
+        const detailSection = document.getElementById("sidebarDetailSection");
+        const isDrawerOpen = detailSection && detailSection.style.display === "flex";
+        if (!isDrawerOpen) {
+          markers[key].openPopup();
+        }
       }
     }, 850);
   }
