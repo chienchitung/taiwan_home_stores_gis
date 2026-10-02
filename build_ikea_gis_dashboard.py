@@ -250,7 +250,17 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   --b-hoi: #E11D48;
   --b-mr: #1E293B;
   
-  --sidebar-width: 420px;
+  --sidebar-width: 400px;
+}
+@media (max-width: 1200px) {
+  :root {
+    --sidebar-width: 380px;
+  }
+}
+@media (max-width: 992px) {
+  :root {
+    --sidebar-width: 350px;
+  }
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1670,13 +1680,12 @@ aside.collapsed .sidebar-collapse-toggle {
   flex-direction: column;
   background: #FFFFFF;
   min-height: 0;
-  overflow-y: auto;
+  height: 100%;
+  overflow: hidden;
 }
-#sidebarDetailSection::-webkit-scrollbar { width: 6px; }
-#sidebarDetailSection::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
 
 .detail-nav-top {
-  padding: 12px 16px;
+  padding: 10px 14px;
   background: #FFFFFF;
   border-bottom: 1px solid var(--border);
   display: flex;
@@ -1703,23 +1712,23 @@ aside.collapsed .sidebar-collapse-toggle {
   color: #FFFFFF;
   border-color: var(--ikea-blue);
 }
-
-.detail-content-body {
-  padding: 18px 20px 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.detail-header-block {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.detail-brand-badge-wrap {
-  display: flex;
+.btn-close-detail {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: #FFFFFF;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.btn-close-detail:hover {
+  background: #F1F5F9;
+  color: var(--text-main);
+  border-color: #94A3B8;
 }
 .detail-brand-tag {
   font-size: 11px;
@@ -1728,11 +1737,169 @@ aside.collapsed .sidebar-collapse-toggle {
   padding: 3px 9px;
   border-radius: 4px;
 }
-.detail-title {
-  font-size: 18px;
+
+/* Pinned Store Identity Bar */
+.detail-pinned-header {
+  padding: 11px 14px 9px;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.detail-pinned-header .detail-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.detail-pinned-header .detail-title {
+  font-size: 16px;
   font-weight: 900;
   color: var(--text-main);
   line-height: 1.3;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.detail-pinned-header .detail-sub-meta {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* 3-Tab Skapa Segmented Control */
+.detail-tabs-bar {
+  display: flex;
+  background: #F8FAFC;
+  padding: 6px 10px;
+  gap: 5px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.detail-tab-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 6px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-body);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.detail-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-main);
+}
+.detail-tab-btn.active {
+  background: #FFFFFF;
+  color: var(--ikea-blue);
+  border-color: #CBD5E1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.detail-tab-btn .tab-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #E2E8F0;
+  color: var(--text-main);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-radius: 10px;
+  min-width: 17px;
+  height: 15px;
+  line-height: 1;
+}
+.detail-tab-btn.active .tab-badge {
+  background: var(--ikea-blue);
+  color: #FFFFFF;
+}
+
+/* Scrollable Tab Pane Body */
+.detail-content-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 12px 14px 20px;
+}
+.detail-content-body::-webkit-scrollbar { width: 5px; }
+.detail-content-body::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+
+.detail-tab-pane {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+.detail-tab-pane.active {
+  display: flex;
+}
+
+/* Quick Nav Jump Cards */
+.detail-quick-nav-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+.quick-nav-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+  width: 100%;
+}
+.quick-nav-card:hover {
+  background: #F8FAFC;
+  border-color: #94A3B8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.quick-nav-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.quick-nav-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.quick-nav-text strong {
+  font-size: 12px;
+  color: var(--text-main);
+}
+.quick-nav-text span {
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+.quick-nav-arrow {
+  color: #94A3B8;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
 /* Detail Info Cards Grid */
@@ -3342,11 +3509,36 @@ aside.collapsed .sidebar-collapse-toggle {
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
             <span>返回門市清單</span>
           </button>
-          <span id="detailTopBrandBadge" class="detail-brand-tag">IKEA</span>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span id="detailTopBrandBadge" class="detail-brand-tag">IKEA</span>
+            <button class="btn-close-detail" id="btnCloseDetailDrawer" title="關閉門市面板" aria-label="關閉門市面板">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Pinned Store Identity Bar -->
+        <div class="detail-pinned-header" id="detailPinnedHeader"></div>
+
+        <!-- Pinned 3-Tab Skapa Segmented Navigation -->
+        <div class="detail-tabs-bar" id="detailTabsBar">
+          <button class="detail-tab-btn" data-tab="route" onclick="switchDetailTab('route')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a4.5 4.5 0 0 0 0-9H7a3 3 0 0 1 0-6h11"></path><polyline points="15 7 18 4 21 7"></polyline></svg>
+            <span>路線規劃</span>
+          </button>
+          <button class="detail-tab-btn" data-tab="catchment" onclick="switchDetailTab('catchment')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+            <span>商圈分析</span>
+            <span class="tab-badge" id="tabCatchmentCount">0</span>
+          </button>
+          <button class="detail-tab-btn active" data-tab="info" onclick="switchDetailTab('info')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>門市資訊</span>
+          </button>
         </div>
 
         <div class="detail-content-body" id="detailContentBody">
-          <!-- Dynamic Content Injected Here -->
+          <!-- Dynamic Content Panes Injected Here -->
         </div>
       </div>
 
@@ -4339,7 +4531,7 @@ function renderMarkers(pulseYear = null) {
     if (markerClusterLayer) clusterMarkers.push(mk);
     else mk.addTo(map);
 
-    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s); });
+    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info"); });
     markers[key] = mk;
   });
   if (markerClusterLayer) {
@@ -4472,7 +4664,7 @@ function createStoreCardElement(s) {
   card.onclick = (e) => {
     if (e.target.closest("a") || e.target.closest(".card-action-btn") || e.target.closest(".btn-card-view-detail")) return;
     selectStore(key, s, true);
-    openStoreDrawer(s);
+    openStoreDrawer(s, "info");
   };
 
   return card;
@@ -4545,16 +4737,36 @@ function renderTable(container) {
     tr.onclick = (e) => {
       if (e.target.tagName === "A") return;
       selectStore(key, s, true);
-      openStoreDrawer(s);
+      openStoreDrawer(s, "info");
     };
     tbody.appendChild(tr);
   });
 }
 
 /* ─── P1: CATCHMENT BUFFER CIRCLE & DRAWER CONTROLLER ─── */
+let currentDetailTab = "route";
+
+function switchDetailTab(tabName) {
+  currentDetailTab = tabName;
+  const tabs = document.querySelectorAll(".detail-tab-btn");
+  tabs.forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.tab === tabName);
+  });
+
+  const panes = document.querySelectorAll(".detail-tab-pane");
+  const targetPaneId = "paneDetail" + tabName.charAt(0).toUpperCase() + tabName.slice(1);
+  panes.forEach(pane => {
+    pane.classList.toggle("active", pane.id === targetPaneId);
+  });
+
+  if (tabName === "route" && currentDetailStore) {
+    updateRouteDisplay(currentDetailStore);
+  }
+}
+
 function openStoreDrawerByKey(key) {
   const s = ALL_STORES.find(item => "s" + item.n === key);
-  if (s) openStoreDrawer(s);
+  if (s) openStoreDrawer(s, "info");
 }
 
 function triggerRoutePlanningByKey(key) {
@@ -4566,20 +4778,16 @@ function triggerRoutePlanning(s) {
   if (!s) return;
   const key = "s" + s.n;
   selectStore(key, s, true);
-  openStoreDrawer(s);
+  openStoreDrawer(s, "route");
   setTimeout(() => {
-    const routeBox = document.getElementById("routePlanningBox");
-    if (routeBox) {
-      routeBox.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
     const calcBtn = document.getElementById("btnCalcRoute");
     if (calcBtn) {
       calcBtn.click();
     }
-  }, 80);
+  }, 60);
 }
 
-function openStoreDrawer(s) {
+function openStoreDrawer(s, preferredTab = null) {
   currentDetailStore = s;
 
   if (isTimelineMode && timelinePlaying) {
@@ -4601,202 +4809,245 @@ function openStoreDrawer(s) {
 
   updateBufferCircleOnMap(s);
 
-  const detailBody = document.getElementById("detailContentBody");
-  detailBody.innerHTML = `
-    <div class="detail-header-block">
-      <div class="detail-brand-badge-wrap">
-        <div style="display:flex;align-items:center;gap:6px">
-          ${s._isCoLocation ? `<span class="tag-badge tag-colocation">${SVG.battle} 150m 內有其他品牌</span>` : ""}
+  // Render Pinned Identity Header
+  const pinnedHdr = document.getElementById("detailPinnedHeader");
+  if (pinnedHdr) {
+    pinnedHdr.innerHTML = `
+      <div class="detail-meta-row">
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+          ${getStatusBadge(s)}
+          ${s._isCoLocation ? `<span class="tag-badge tag-colocation">${SVG.battle} 150m 內競品</span>` : ""}
         </div>
-        ${getStatusBadge(s)}
+        ${(s._userDist !== undefined && s._userDist !== null) ? `<span class="card-dist-badge">${formatDist(s._userDist)}</span>` : ""}
       </div>
       <h2 class="detail-title">${s.store_name}</h2>
+      <div class="detail-sub-meta">
+        <span>${s.brand}</span>
+        <span>·</span>
+        <span>${s.store_format || s.channel_format}</span>
+        <span>·</span>
+        <span>${s.city} ${s.district || ""}</span>
+      </div>
+    `;
+  }
+
+  // Render 3 Distinct Tab Panes inside Body
+  const detailBody = document.getElementById("detailContentBody");
+  detailBody.innerHTML = `
+    <!-- PANE 1: 路線規劃 (Route Planning) -->
+    <div class="detail-tab-pane" id="paneDetailRoute">
+      <div class="route-planning-box" id="routePlanningBox">
+        <div class="box-hdr">
+          <div class="route-hdr-title">
+            <span>${SVG.route} 路徑與抵達時間估算</span>
+          </div>
+          <span class="badge-route-status ready" id="lblRouteBadgeStatus">已即時試算</span>
+        </div>
+
+        <!-- Mode Switcher -->
+        <div class="route-mode-switcher" id="routeModeSwitcher">
+          <button class="btn-route-mode active" data-mode="driving" title="開車路線規劃">
+            ${SVG.car} 開車 <span class="mode-badge-preview" id="badgeModeDriving"></span>
+          </button>
+          <button class="btn-route-mode" data-mode="transit" title="大眾運輸路線規劃">
+            ${SVG.transit} 大眾運輸 <span class="mode-badge-preview" id="badgeModeTransit"></span>
+          </button>
+          <button class="btn-route-mode" data-mode="walking" title="步行路線規劃">
+            ${SVG.walk} 步行 <span class="mode-badge-preview" id="badgeModeWalking"></span>
+          </button>
+        </div>
+
+        <!-- Dual Metric Stat Cards -->
+        <div class="route-metric-cards-grid">
+          <div class="route-metric-card duration-card">
+            <div class="metric-card-top">
+              <span class="metric-card-icon" id="iconMetricDuration">${SVG.car}</span>
+              <span>預估時間</span>
+            </div>
+            <div class="metric-card-main">
+              <span class="metric-card-val" id="lblMetricDurationVal">--</span>
+              <span class="metric-card-unit" id="lblMetricDurationUnit">分鐘</span>
+            </div>
+            <div class="metric-card-sub" id="lblMetricDurationSub">大數據路況估算</div>
+          </div>
+
+          <div class="route-metric-card distance-card">
+            <div class="metric-card-top">
+              <span class="metric-card-icon">${SVG.route}</span>
+              <span>路徑里程 (公里數)</span>
+            </div>
+            <div class="metric-card-main">
+              <span class="metric-card-val" id="lblMetricDistanceVal">--</span>
+              <span class="metric-card-unit" id="lblMetricDistanceUnit">公里</span>
+            </div>
+            <div class="metric-card-sub" id="lblMetricDistanceSub">道路導航距離</div>
+          </div>
+        </div>
+
+        <!-- Departure Origin Selector Panel -->
+        <div class="route-origin-panel">
+          <div class="route-origin-header">
+            <span>${SVG.gps} 出發起點：</span>
+            <span id="lblActiveOriginName" style="color:#1D4ED8;font-weight:700">我的目前位置 (GPS)</span>
+          </div>
+          <div class="route-origin-controls">
+            <select id="selRouteOrigin" class="sel-route-origin">
+              <option value="gps">我的目前位置 (GPS 定位)</option>
+              <option value="tpe_main">台北車站 (北區核心樞紐)</option>
+              <option value="banqiao">板橋車站 (新北市中心)</option>
+              <option value="hsinchu">新竹車站 / 巨城商圈</option>
+              <option value="taichung">台中車站 (中台灣樞紐)</option>
+              <option value="tainan">台南車站 (南台灣核心)</option>
+              <option value="zuoying">左營高鐵站 / 高雄車站</option>
+              <option value="custom" disabled>地圖點選起點 (點擊右側按鈕)</option>
+            </select>
+            <button class="btn-origin-locate" id="btnRelocateGps" title="偵測我的目前 GPS 定位">${SVG.gps} 定位</button>
+            <button class="btn-origin-map-pick" id="btnPickOriginOnMap" title="點選地圖自訂出發點">${SVG.crosshair} 選點</button>
+          </div>
+        </div>
+
+        <!-- Route Action Buttons -->
+        <div class="route-actions-row">
+          <button class="btn-calc-route" id="btnCalcRoute">
+            ${SVG.route} 繪製地圖導航路線
+          </button>
+          <button class="btn-clear-route" id="btnClearRoute">
+            清除路線
+          </button>
+        </div>
+
+        <!-- External Navigation Links -->
+        <div class="route-ext-nav-row">
+          <a class="btn-ext-nav btn-ext-gmap" id="btnGmapsTurnByTurn" href="#" target="_blank" rel="noopener">
+            ${SVG.external} Google 地圖導航
+          </a>
+          <a class="btn-ext-nav btn-ext-apple" id="btnAppleMapsNav" href="#" target="_blank" rel="noopener">
+            ${SVG.navigation} Apple 導航
+          </a>
+        </div>
+
+        <!-- Route Results Bar -->
+        <div class="route-results-bar" id="routeResultsBar" style="display:none">
+          <div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1">
+            <strong id="lblRouteDistance">-- 公里</strong> · <span id="lblRouteSummary">路線準備就緒</span>
+          </div>
+          <span class="route-engine-tag" id="lblRouteEngine">Google Routes API</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Structured Info Grid -->
-    <div class="detail-info-grid">
-      <div class="detail-info-item">
-        <span class="icon-col">${SVG.store}</span>
-        <div class="text-col">
-          <div class="label">門市型態</div>
-          <strong>${s.store_format || s.channel_format}</strong>
+    <!-- PANE 2: 商圈分析 (Catchment Zone Analysis) -->
+    <div class="detail-tab-pane" id="paneDetailCatchment">
+      <div class="catchment-zone-box" id="catchmentZoneBox">
+        <div class="box-hdr">
+          <div class="catchment-hdr-title">
+            <span>${SVG.target} 周邊商圈與服務半徑</span>
+            <span class="badge-radius-val" id="lblRadiusVal">${currentRadiusKm.toFixed(1)} km</span>
+          </div>
+          <button class="btn-toggle-circle ${isBufferCircleEnabled ? 'active' : ''}" id="btnToggleCircle" title="點擊切換地圖上的商圈服務半徑緩衝圓">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3.5"></circle></svg>
+            <span id="lblCircleToggleText">${isBufferCircleEnabled ? '隱藏地圖圓形' : '顯示地圖圓形'}</span>
+          </button>
         </div>
-      </div>
-      <div class="detail-info-item">
-        <span class="icon-col">${SVG.pin}</span>
-        <div class="text-col">
-          <div class="label">所在區域</div>
-          <span>${s.region}地區 · ${s.city} ${s.district || ""}</span>
-        </div>
-      </div>
-      <div class="detail-info-item">
-        <span class="icon-col">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-        </span>
-        <div class="text-col">
-          <div class="label">門牌地址</div>
-          <div>${s.address}</div>
-        </div>
-      </div>
-      ${(s.status_category !== '現行營運中' && s.note) ? `
-        <div class="detail-info-item" style="background:#FEF3C7;padding:8px 10px;border-radius:6px;border-left:3px solid #D97706">
-          <span class="icon-col" style="color:#B45309">${SVG.pause}</span>
-          <div class="text-col" style="color:#92400E">
-            <div class="label" style="color:#B45309">重大營運狀態說明</div>
-            <div>${s.note}</div>
+
+        <div class="radius-slider-wrap">
+          <div class="radius-slider-header">
+            <span>自由調節服務半徑 (1.0 ~ 30.0 km)</span>
+            <span id="lblRadiusMinMax">1km ~ 30km</span>
+          </div>
+          <input type="range" id="rngRadius" class="radius-range-slider" min="1.0" max="30.0" step="0.5" value="${currentRadiusKm}">
+          <div class="radius-presets-row">
+            <button class="btn-radius-preset" data-km="1">1km (鄰近步行)</button>
+            <button class="btn-radius-preset" data-km="3">3km (生活圈)</button>
+            <button class="btn-radius-preset" data-km="5">5km (主要商圈)</button>
+            <button class="btn-radius-preset" data-km="10">10km (跨區驅車)</button>
+            <button class="btn-radius-preset" data-km="20">20km (全都會區)</button>
           </div>
         </div>
-      ` : ''}
-    </div>
 
-    <!-- Action Buttons -->
-    <div class="detail-actions-cluster">
-      <a class="btn-detail-gmap-primary" href="${getGmapsSearchUrl(s)}" target="_blank" rel="noopener">
-        ${SVG.external} 在 Google Maps 開啟完整導航
-      </a>
-      <div class="detail-secondary-actions">
-        <button class="btn-sec-action" onclick="copyStoreAddress('${s.address}')">
-          ${SVG.copy} 複製地址
-        </button>
-        <button class="btn-sec-action" onclick="focusCurrentDrawerStore()">
-          ${SVG.crosshair} 地圖聚焦
-        </button>
+        <div id="catchmentResultsBox">
+          <!-- Competitor List or Exclusive Zone Insight Dynamically Injected Here -->
+        </div>
       </div>
     </div>
 
-    <!-- P2 Route Planning & Travel Time Box (Netlify & Google Maps Ready) -->
-    <div class="route-planning-box" id="routePlanningBox">
-      <div class="box-hdr">
-        <div class="route-hdr-title">
-          <span>${SVG.route} 路徑與抵達時間估算</span>
-        </div>
-        <span class="badge-route-status ready" id="lblRouteBadgeStatus">已即時試算</span>
-      </div>
-
-      <!-- Mode Switcher -->
-      <div class="route-mode-switcher" id="routeModeSwitcher">
-        <button class="btn-route-mode active" data-mode="driving" title="開車路線規劃">
-          ${SVG.car} 開車 <span class="mode-badge-preview" id="badgeModeDriving"></span>
-        </button>
-        <button class="btn-route-mode" data-mode="transit" title="大眾運輸路線規劃">
-          ${SVG.transit} 大眾運輸 <span class="mode-badge-preview" id="badgeModeTransit"></span>
-        </button>
-        <button class="btn-route-mode" data-mode="walking" title="步行路線規劃">
-          ${SVG.walk} 步行 <span class="mode-badge-preview" id="badgeModeWalking"></span>
-        </button>
-      </div>
-
-      <!-- Dual Metric Stat Cards: 公里數 & 預估時間 看板 -->
-      <div class="route-metric-cards-grid">
-        <div class="route-metric-card duration-card">
-          <div class="metric-card-top">
-            <span class="metric-card-icon" id="iconMetricDuration">${SVG.car}</span>
-            <span>預估時間</span>
+    <!-- PANE 3: 門市資訊 (Store Info Grid & Actions) -->
+    <div class="detail-tab-pane" id="paneDetailInfo">
+      <!-- Structured Info Grid -->
+      <div class="detail-info-grid">
+        <div class="detail-info-item">
+          <span class="icon-col">${SVG.store}</span>
+          <div class="text-col">
+            <div class="label">門市型態</div>
+            <strong>${s.store_format || s.channel_format}</strong>
           </div>
-          <div class="metric-card-main">
-            <span class="metric-card-val" id="lblMetricDurationVal">--</span>
-            <span class="metric-card-unit" id="lblMetricDurationUnit">分鐘</span>
-          </div>
-          <div class="metric-card-sub" id="lblMetricDurationSub">大數據路況估算</div>
         </div>
-
-        <div class="route-metric-card distance-card">
-          <div class="metric-card-top">
-            <span class="metric-card-icon">${SVG.route}</span>
-            <span>路徑里程 (公里數)</span>
+        <div class="detail-info-item">
+          <span class="icon-col">${SVG.pin}</span>
+          <div class="text-col">
+            <div class="label">所在區域</div>
+            <span>${s.region}地區 · ${s.city} ${s.district || ""}</span>
           </div>
-          <div class="metric-card-main">
-            <span class="metric-card-val" id="lblMetricDistanceVal">--</span>
-            <span class="metric-card-unit" id="lblMetricDistanceUnit">公里</span>
-          </div>
-          <div class="metric-card-sub" id="lblMetricDistanceSub">道路導航距離</div>
         </div>
+        <div class="detail-info-item">
+          <span class="icon-col">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </span>
+          <div class="text-col">
+            <div class="label">門牌地址</div>
+            <div>${s.address}</div>
+          </div>
+        </div>
+        ${(s.status_category !== '現行營運中' && s.note) ? `
+          <div class="detail-info-item" style="background:#FEF3C7;padding:8px 10px;border-radius:6px;border-left:3px solid #D97706">
+            <span class="icon-col" style="color:#B45309">${SVG.pause}</span>
+            <div class="text-col" style="color:#92400E">
+              <div class="label" style="color:#B45309">重大營運狀態說明</div>
+              <div>${s.note}</div>
+            </div>
+          </div>
+        ` : ''}
       </div>
 
-      <!-- Departure Origin Selector Panel -->
-      <div class="route-origin-panel">
-        <div class="route-origin-header">
-          <span>${SVG.gps} 出發起點：</span>
-          <span id="lblActiveOriginName" style="color:#1D4ED8;font-weight:700">我的目前位置 (GPS)</span>
-        </div>
-        <div class="route-origin-controls">
-          <select id="selRouteOrigin" class="sel-route-origin">
-            <option value="gps">我的目前位置 (GPS 定位)</option>
-            <option value="tpe_main">台北車站 (北區核心樞紐)</option>
-            <option value="banqiao">板橋車站 (新北市中心)</option>
-            <option value="hsinchu">新竹車站 / 巨城商圈</option>
-            <option value="taichung">台中車站 (中台灣樞紐)</option>
-            <option value="tainan">台南車站 (南台灣核心)</option>
-            <option value="zuoying">左營高鐵站 / 高雄車站</option>
-            <option value="custom" disabled>地圖點選起點 (點擊右側按鈕)</option>
-          </select>
-          <button class="btn-origin-locate" id="btnRelocateGps" title="偵測我的目前 GPS 定位">${SVG.gps} 定位</button>
-          <button class="btn-origin-map-pick" id="btnPickOriginOnMap" title="點選地圖自訂出發點">${SVG.crosshair} 選點</button>
-        </div>
-      </div>
-
-      <!-- Route Action Buttons -->
-      <div class="route-actions-row">
-        <button class="btn-calc-route" id="btnCalcRoute">
-          ${SVG.route} 繪製地圖導航路線
-        </button>
-        <button class="btn-clear-route" id="btnClearRoute">
-          清除路線
-        </button>
-      </div>
-
-      <!-- External Navigation Links -->
-      <div class="route-ext-nav-row">
-        <a class="btn-ext-nav btn-ext-gmap" id="btnGmapsTurnByTurn" href="#" target="_blank" rel="noopener">
-          ${SVG.external} Google 地圖導航
+      <!-- Action Buttons -->
+      <div class="detail-actions-cluster">
+        <a class="btn-detail-gmap-primary" href="${getGmapsSearchUrl(s)}" target="_blank" rel="noopener">
+          ${SVG.external} 在 Google Maps 開啟完整導航
         </a>
-        <a class="btn-ext-nav btn-ext-apple" id="btnAppleMapsNav" href="#" target="_blank" rel="noopener">
-          ${SVG.navigation} Apple 導航
-        </a>
+        <div class="detail-secondary-actions">
+          <button class="btn-sec-action" onclick="copyStoreAddress('${s.address}')">
+            ${SVG.copy} 複製地址
+          </button>
+          <button class="btn-sec-action" onclick="focusCurrentDrawerStore()">
+            ${SVG.crosshair} 地圖聚焦
+          </button>
+        </div>
       </div>
 
-      <!-- Route Results Bar -->
-      <div class="route-results-bar" id="routeResultsBar" style="display:none">
-        <div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1">
-          <strong id="lblRouteDistance">-- 公里</strong> · <span id="lblRouteSummary">路線準備就緒</span>
-        </div>
-        <span class="route-engine-tag" id="lblRouteEngine">Google Routes API</span>
-      </div>
-    </div>
-
-    <!-- P1 Catchment Buffer Zone Analysis Box -->
-    <div class="catchment-zone-box" id="catchmentZoneBox">
-      <div class="box-hdr">
-        <div class="catchment-hdr-title">
-          <span>${SVG.target} 周邊商圈與服務半徑</span>
-          <span class="badge-radius-val" id="lblRadiusVal">${currentRadiusKm.toFixed(1)} km</span>
-        </div>
-        <button class="btn-toggle-circle ${isBufferCircleEnabled ? 'active' : ''}" id="btnToggleCircle" title="點擊切換地圖上的商圈服務半徑緩衝圓">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3.5"></circle></svg>
-          <span id="lblCircleToggleText">${isBufferCircleEnabled ? '隱藏地圖圓形' : '顯示地圖圓形'}</span>
+      <!-- Quick Nav Jump Cards -->
+      <div class="detail-quick-nav-cards">
+        <button class="quick-nav-card" onclick="switchDetailTab('route')">
+          <div class="quick-nav-icon" style="background:#EFF6FF;color:#1D4ED8">${SVG.route}</div>
+          <div class="quick-nav-text">
+            <strong>規劃抵達路線</strong>
+            <span>即時計算行車、大眾運輸與步行時間</span>
+          </div>
+          <span class="quick-nav-arrow">→</span>
         </button>
-      </div>
-
-      <div class="radius-slider-wrap">
-        <div class="radius-slider-header">
-          <span>自由調節服務半徑 (1.0 ~ 30.0 km)</span>
-          <span id="lblRadiusMinMax">1km ~ 30km</span>
-        </div>
-        <input type="range" id="rngRadius" class="radius-range-slider" min="1.0" max="30.0" step="0.5" value="${currentRadiusKm}">
-        <div class="radius-presets-row">
-          <button class="btn-radius-preset" data-km="1">1km (鄰近步行)</button>
-          <button class="btn-radius-preset" data-km="3">3km (生活圈)</button>
-          <button class="btn-radius-preset" data-km="5">5km (主要商圈)</button>
-          <button class="btn-radius-preset" data-km="10">10km (跨區驅車)</button>
-          <button class="btn-radius-preset" data-km="20">20km (全都會區)</button>
-        </div>
-      </div>
-
-      <div id="catchmentResultsBox">
-        <!-- Competitor List or Exclusive Zone Insight Dynamically Injected Here -->
+        <button class="quick-nav-card" onclick="switchDetailTab('catchment')">
+          <div class="quick-nav-icon" style="background:#F0FDF4;color:#15803D">${SVG.target}</div>
+          <div class="quick-nav-text">
+            <strong>查看周邊商圈與競品</strong>
+            <span id="lblQuickCatchmentMeta">分析服務半徑與競品重疊</span>
+          </div>
+          <span class="quick-nav-arrow">→</span>
+        </button>
       </div>
     </div>
   `;
+
+  const activeTab = preferredTab || currentDetailTab || "info";
+  switchDetailTab(activeTab);
 
   initCatchmentControls(s);
   updateCatchmentList(s);
@@ -4892,6 +5143,16 @@ function updateCatchmentList(s) {
   });
 
   nearby.sort((a, b) => a.dist - b.dist);
+
+  const tabBadge = document.getElementById("tabCatchmentCount");
+  if (tabBadge) tabBadge.textContent = nearby.length;
+
+  const quickMeta = document.getElementById("lblQuickCatchmentMeta");
+  if (quickMeta) {
+    quickMeta.textContent = nearby.length > 0
+      ? `半徑 ${currentRadiusKm.toFixed(1)} km 內有 ${nearby.length} 間競品`
+      : `半徑 ${currentRadiusKm.toFixed(1)} km 內獨佔無競品`;
+  }
 
   if (nearby.length === 0) {
     resBox.innerHTML = `
@@ -5421,6 +5682,8 @@ function closeStoreDrawer() {
 }
 
 document.getElementById("btnBackToList").onclick = closeStoreDrawer;
+const btnCloseDetail = document.getElementById("btnCloseDetailDrawer");
+if (btnCloseDetail) btnCloseDetail.onclick = closeStoreDrawer;
 
 function copyStoreAddress(addr) {
   navigator.clipboard.writeText(addr).then(() => {
@@ -5476,7 +5739,7 @@ function ensureStoreMarkerOnMap(s) {
     const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s) })
       .addTo(map)
       .bindPopup(makePopupHtml(s), { className: "custom-popup", minWidth: 280, maxWidth: 340 });
-    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s); });
+    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info"); });
     markers[key] = mk;
   }
   return markers[key];
@@ -5537,7 +5800,7 @@ function navigateToCompetitor(n) {
     }
   }, 850);
 
-  openStoreDrawer(target);
+  openStoreDrawer(target, "info");
 }
 
 /* ─── SELECT STORE ─── */
