@@ -1479,13 +1479,16 @@ aside.collapsed .sidebar-collapse-toggle {
   justify-content: space-between;
 }
 .card-brand-tag {
+  display: inline-flex;
+  align-items: center;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   color: #FFFFFF;
-  padding: 2px 8px;
-  border-radius: 4px;
+  padding: 2.5px 8.5px;
+  border-radius: 10rem;
   text-transform: uppercase;
   letter-spacing: 0.2px;
+  white-space: nowrap;
 }
 
 .card-name-title {
@@ -1493,6 +1496,7 @@ aside.collapsed .sidebar-collapse-toggle {
   font-weight: 700;
   color: var(--skapa-text);
   line-height: 1.35;
+  word-break: break-word;
 }
 .card-meta-line {
   display: flex;
@@ -1509,8 +1513,9 @@ aside.collapsed .sidebar-collapse-toggle {
 .tag-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 2px;
+  gap: 6px;
+  margin-top: 4px;
+  align-items: center;
 }
 .tag-badge {
   display: inline-flex;
@@ -1518,8 +1523,10 @@ aside.collapsed .sidebar-collapse-toggle {
   gap: 4px;
   font-size: 11px;
   font-weight: 600;
-  padding: 2px 7px;
-  border-radius: 4px;
+  padding: 2.5px 8.5px;
+  border-radius: 10rem;
+  line-height: 1.25;
+  white-space: nowrap;
 }
 .tag-channel {
   background: var(--skapa-neutral);
@@ -1535,14 +1542,15 @@ aside.collapsed .sidebar-collapse-toggle {
 .card-dist-badge {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  font-size: 11.5px;
+  gap: 3.5px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--skapa-text);
   background: var(--skapa-neutral);
-  padding: 2px 8px;
-  border-radius: 64px;
+  padding: 2.5px 8.5px;
+  border-radius: 10rem;
   border: 1px solid var(--skapa-border);
+  white-space: nowrap;
 }
 
 .card-address-box {
@@ -1553,6 +1561,7 @@ aside.collapsed .sidebar-collapse-toggle {
   color: var(--skapa-text-2);
   line-height: 1.45;
   margin-top: 2px;
+  word-break: break-word;
 }
 .card-address-box svg {
   flex-shrink: 0;
@@ -1566,8 +1575,9 @@ aside.collapsed .sidebar-collapse-toggle {
   gap: 4px;
   font-size: 11px;
   font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 4px;
+  padding: 2.5px 9px;
+  border-radius: 10rem;
+  white-space: nowrap;
 }
 .status-active {
   background: #ECFDF5;
@@ -1587,6 +1597,7 @@ aside.collapsed .sidebar-collapse-toggle {
 
 .card-actions-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   margin-top: 10px;
@@ -1594,22 +1605,30 @@ aside.collapsed .sidebar-collapse-toggle {
   border-top: 1px solid var(--skapa-border);
 }
 .card-action-btn {
-  flex: 1 1 0;
+  flex: 1 1 115px;
   min-width: 0;
-  min-height: 32px;
+  min-height: 34px;
+  height: 34px;
   padding: 0 12px;
-  border-radius: 64px;
+  border-radius: 10rem;
   font-size: 12.5px;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 6px;
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
   box-sizing: border-box;
   transition: all 0.15s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-action-btn svg {
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
 }
 .card-action-emph {
   background: var(--ikea-blue);
@@ -2408,34 +2427,50 @@ aside.collapsed .sidebar-collapse-toggle {
 }
 
 .custom-popup .leaflet-popup-content-wrapper {
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 0;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
   border: 1px solid var(--skapa-border);
 }
 .custom-popup .leaflet-popup-content {
   margin: 0;
   padding: 0;
+  width: auto !important;
+  line-height: inherit;
 }
 .custom-popup .leaflet-popup-tip-container { display: none; }
 
 .popup-box {
   padding: 16px;
-  width: 276px;
-  max-width: calc(100vw - 64px);
+  width: 320px;
+  max-width: min(340px, calc(100vw - 36px));
+  min-width: 260px;
+  box-sizing: border-box;
   color: var(--skapa-text);
   font-family: inherit;
   font-size: 13px;
   line-height: 1.5;
 }
+.popup-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+  padding-right: 18px;
+}
 .popup-brand-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   color: #FFFFFF;
-  padding: 2px 8px;
-  border-radius: 4px;
+  padding: 2.5px 9px;
+  border-radius: 10rem;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
 }
 .popup-title {
   font-size: 16px;
@@ -2443,6 +2478,7 @@ aside.collapsed .sidebar-collapse-toggle {
   color: var(--skapa-text);
   margin-bottom: 3px;
   line-height: 1.35;
+  word-break: break-word;
 }
 .popup-meta {
   font-size: 12.5px;
@@ -2458,6 +2494,7 @@ aside.collapsed .sidebar-collapse-toggle {
   line-height: 1.45;
   display: flex;
   gap: 6px;
+  word-break: break-word;
 }
 .popup-addr svg {
   flex-shrink: 0;
@@ -2476,17 +2513,18 @@ aside.collapsed .sidebar-collapse-toggle {
 }
 .popup-action-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px solid var(--skapa-border);
 }
 .popup-action-row .pop-btn {
-  flex: 1 1 0;
+  flex: 1 1 115px;
   min-width: 0;
   height: 36px;
   min-height: 36px;
-  padding: 0 10px;
+  padding: 0 12px;
   margin: 0;
   box-sizing: border-box;
   line-height: 1;
@@ -2502,6 +2540,13 @@ aside.collapsed .sidebar-collapse-toggle {
   white-space: nowrap;
   font-family: inherit;
   transition: all 0.15s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.popup-action-row .pop-btn svg {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
 }
 .pop-btn-emph {
   background: var(--ikea-blue);
@@ -2531,6 +2576,22 @@ aside.collapsed .sidebar-collapse-toggle {
 }
 .popup-gmap-btn, .popup-drawer-btn {
   display: none;
+}
+
+/* Responsive Button Label adaptation across widths */
+.btn-text-full {
+  display: none;
+}
+.btn-text-compact {
+  display: inline;
+}
+@media (min-width: 520px) {
+  .store-card .btn-text-full {
+    display: inline;
+  }
+  .store-card .btn-text-compact {
+    display: none;
+  }
 }
 
 .empty-state {
@@ -3648,7 +3709,7 @@ function makePopupHtml(s) {
   const key = "s" + s.n;
 
   return `<div class="popup-box">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+    <div class="popup-header-row">
       <span class="popup-brand-badge" style="background:${cfg.color}">${s.brand}</span>
       ${getStatusBadge(s)}
     </div>
@@ -3668,11 +3729,11 @@ function makePopupHtml(s) {
     </div>
     ${(s.status_category !== '現行營運中' && s.note) ? `<div class="popup-note-box">${s.note}</div>` : ''}
     <div class="popup-action-row">
-      <button class="pop-btn pop-btn-emph" onclick="triggerRoutePlanningByKey('${key}')">
-        ${SVG.route} 規劃路線
+      <button class="pop-btn pop-btn-emph" onclick="triggerRoutePlanningByKey('${key}')" title="規劃前往 ${s.store_name} 路線">
+        ${SVG.route} <span>規劃路線</span>
       </button>
-      <a class="pop-btn pop-btn-secondary" href="${getGmapsSearchUrl(s)}" target="_blank" rel="noopener">
-        ${SVG.external} 在 Google Maps 開啟
+      <a class="pop-btn pop-btn-secondary" href="${getGmapsSearchUrl(s)}" target="_blank" rel="noopener" title="在 Google Maps 開啟完整導航">
+        ${SVG.external} <span class="btn-text-full">在 Google Maps 開啟</span><span class="btn-text-compact">Google 地圖</span>
       </a>
     </div>
   </div>`;
@@ -4273,7 +4334,7 @@ function renderMarkers(pulseYear = null) {
     const key = "s" + s.n;
     const isNewInYear = pulseYear && (s.opened_year === pulseYear);
     const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s, isNewInYear) })
-      .bindPopup(makePopupHtml(s), { className: "custom-popup", maxWidth: 320 });
+      .bindPopup(makePopupHtml(s), { className: "custom-popup", minWidth: 280, maxWidth: 340 });
 
     if (markerClusterLayer) clusterMarkers.push(mk);
     else mk.addTo(map);
@@ -4399,11 +4460,11 @@ function createStoreCardElement(s) {
       <span>${s.address}</span>
     </div>
     <div class="card-actions-row">
-      <button class="card-action-btn card-action-emph" onclick="event.stopPropagation(); triggerRoutePlanning(ALL_STORES.find(item => item.n === ${s.n}))">
-        ${SVG.route} 規劃路線
+      <button class="card-action-btn card-action-emph" onclick="event.stopPropagation(); triggerRoutePlanning(ALL_STORES.find(item => item.n === ${s.n}))" title="規劃前往 ${s.store_name} 路線">
+        ${SVG.route} <span>規劃路線</span>
       </button>
-      <a class="card-action-btn card-action-secondary" href="${getGmapsSearchUrl(s)}" target="_blank" rel="noopener" onclick="event.stopPropagation();">
-        ${SVG.external} 在 Google Maps 開啟
+      <a class="card-action-btn card-action-secondary" href="${getGmapsSearchUrl(s)}" target="_blank" rel="noopener" onclick="event.stopPropagation();" title="在 Google Maps 開啟完整導航">
+        ${SVG.external} <span class="btn-text-full">在 Google Maps 開啟</span><span class="btn-text-compact">Google 地圖</span>
       </a>
     </div>
   `;
@@ -5414,7 +5475,7 @@ function ensureStoreMarkerOnMap(s) {
   if (!markers[key]) {
     const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s) })
       .addTo(map)
-      .bindPopup(makePopupHtml(s), { className: "custom-popup", maxWidth: 320 });
+      .bindPopup(makePopupHtml(s), { className: "custom-popup", minWidth: 280, maxWidth: 340 });
     mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s); });
     markers[key] = mk;
   }
