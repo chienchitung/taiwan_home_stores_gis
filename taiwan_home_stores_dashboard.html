@@ -2206,21 +2206,18 @@ aside.collapsed .sidebar-collapse-toggle {
   border-color: var(--skapa-text);
 }
 
-/* External Turn-by-Turn Nav Buttons */
-.route-ext-nav-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
-}
+/* External Turn-by-Turn Nav Button */
 .btn-ext-nav {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 5px;
   min-height: 30px;
-  padding: 0 8px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
   border-radius: 10rem;
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.15s ease;
@@ -4749,15 +4746,10 @@ function openStoreDrawer(s, preferredTab = null) {
           </button>
         </div>
 
-        <!-- External Navigation Links -->
-        <div class="route-ext-nav-row">
-          <a class="btn-ext-nav btn-ext-gmap" id="btnGmapsTurnByTurn" href="#" target="_blank" rel="noopener">
-            ${SVG.external} Google 地圖導航
-          </a>
-          <a class="btn-ext-nav btn-ext-apple" id="btnAppleMapsNav" href="#" target="_blank" rel="noopener">
-            ${SVG.navigation} Apple 導航
-          </a>
-        </div>
+        <!-- External Navigation Link -->
+        <a class="btn-ext-nav btn-ext-gmap" id="btnGmapsTurnByTurn" href="#" target="_blank" rel="noopener">
+          ${SVG.external} 在 Google Maps 開啟完整導航
+        </a>
 
         <!-- Route Results Bar -->
         <div class="route-results-bar" id="routeResultsBar" style="display:none">
@@ -5322,16 +5314,11 @@ function updateRouteDisplay(s, explicitResult = null) {
     }
   }
 
-  // Update external navigation URLs
+  // Update external navigation URL
   const gMode = currentRouteMode === "transit" ? "transit" : (currentRouteMode === "walking" ? "walking" : "driving");
-  const aMode = currentRouteMode === "transit" ? "r" : (currentRouteMode === "walking" ? "w" : "d");
   const gmapNavBtn = document.getElementById("btnGmapsTurnByTurn");
   if (gmapNavBtn) {
     gmapNavBtn.href = `https://www.google.com/maps/dir/?api=1&origin=${orig.lat},${orig.lng}&destination=${s.lat},${s.lng}&travelmode=${gMode}`;
-  }
-  const appleNavBtn = document.getElementById("btnAppleMapsNav");
-  if (appleNavBtn) {
-    appleNavBtn.href = `https://maps.apple.com/?saddr=${orig.lat},${orig.lng}&daddr=${s.lat},${s.lng}&dirflg=${aMode}`;
   }
 }
 
