@@ -4699,7 +4699,7 @@ function openStoreDrawer(s) {
         <div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1">
           <strong id="lblRouteDistance">-- 公里</strong> · <span id="lblRouteSummary">路線準備就緒</span>
         </div>
-        <span class="route-engine-tag" id="lblRouteEngine">Google Maps / OSRM</span>
+        <span class="route-engine-tag" id="lblRouteEngine">Google Routes API</span>
       </div>
     </div>
 
@@ -4875,7 +4875,7 @@ function updateCatchmentList(s) {
   `;
 }
 
-/* ─── P2: ROUTE PLANNING & TRAVEL TIME ENGINE (Netlify Serverless & Google / OSRM) ─── */
+/* ─── P2: ROUTE PLANNING & TRAVEL TIME ENGINE (Netlify Serverless & Google Routes API) ─── */
 let activeRouteLayer = null;
 let activeRouteOriginMarker = null;
 let currentRouteMode = "driving";
@@ -4904,36 +4904,6 @@ function getEffectiveOrigin() {
     return ROUTE_ORIGIN_PRESETS[selectedOriginPresetId];
   }
   return { id: "tpe_main", name: "台北車站 (預設起點)", lat: 25.0478, lng: 121.5170 };
-}
-
-function calculateInstantEstimates(originLat, originLng, destLat, destLng) {
-  const straightKm = haversineDistanceKm(originLat, originLng, destLat, destLng);
-  
-  // 1. Driving
-  const driveDistKm = Math.round(straightKm * 1.25 * 10) / 10;
-  let driveMin;
-  if (driveDistKm < 3) {
-    driveMin = Math.max(2, Math.round(driveDistKm * 2.8));
-  } else if (driveDistKm < 15) {
-    driveMin = Math.round(driveDistKm * 1.7);
-  } else {
-    driveMin = Math.round(driveDistKm * 1.0);
-  }
-
-  // 2. Transit
-  const transitDistKm = Math.round(straightKm * 1.3 * 10) / 10;
-  const transitMin = Math.max(6, Math.round(transitDistKm * 2.2) + 8);
-
-  // 3. Walking
-  const walkDistKm = Math.round(straightKm * 1.15 * 10) / 10;
-  const walkMin = Math.max(1, Math.round((walkDistKm / 4.5) * 60));
-
-  return {
-    straightKm,
-    driving: { distKm: driveDistKm, min: driveMin },
-    transit: { distKm: transitDistKm, min: transitMin },
-    walking: { distKm: walkDistKm, min: walkMin }
-  };
 }
 
 function formatDurationDisplay(minutes) {
@@ -4999,77 +4969,38 @@ function decodePolyline(encoded) {
 async function requestRoutePlan(originLat, originLng, destLat, destLng, mode) {
   try {
     const netlifyUrl = `/api/directions?originLat=${originLat}&originLng=${originLng}&destLat=${destLat}&destLng=${destLng}&mode=${mode}`;
-    const res = await fetch(netlifyUrl, { signal: AbortSignal.timeout(5000) });
-    if (res.ok) {
-      const data = await res.json();
-      if (data.success) return data;
+    const res = await fetch(netlifyUrl, { signal: AbortSignal.timeout(10000) });
+    const data = await res.json().catch(() => null);
+    if (res.ok && data && data.success) {
+      return data;
     }
+    const errMsg = (data && data.error) ? data.error : `HTTP ${res.status}: ${res.statusText || 'Google Routes API 連線失敗'}`;
+    return {
+      success: false,
+      engine: "google",
+      mode: mode,
+      error: errMsg
+    };
   } catch (e) {
-    // Proceed to client fallback
+    return {
+      success: false,
+      engine: "google",
+      mode: mode,
+      error: e.name === "TimeoutError" ? "Google Routes API 請求超時" : (e.message || "Google Routes API 連線異常")
+    };
   }
-
-  // Client-side OSRM fallback
-  try {
-    const osrmUrl = `https://router.project-osrm.org/route/v1/driving/${originLng},${originLat};${destLng},${destLat}?overview=full&geometries=polyline`;
-    const osrmRes = await fetch(osrmUrl);
-    const osrmJson = await osrmRes.json();
-    if (osrmJson.code === "Ok" && osrmJson.routes && osrmJson.routes.length) {
-      const r = osrmJson.routes[0];
-      const distKm = Math.round((r.distance / 1000) * 10) / 10;
-      let durMin = Math.round(r.duration / 60);
-      let summary = "開車路徑規劃 (OSRM 備援)";
-      if (mode === "walking") {
-        durMin = Math.max(1, Math.round((distKm / 4.5) * 60));
-        summary = "步行路徑估算 (OSRM 備援)";
-      } else if (mode === "transit") {
-        durMin = Math.max(5, Math.round((distKm / 24) * 60) + 8);
-        summary = "大眾運輸通勤估算 (OSRM 備援)";
-      }
-
-      return {
-        success: true,
-        engine: "osrm",
-        mode: mode,
-        duration_text: durMin < 60 ? `${durMin} 分鐘` : `${Math.floor(durMin / 60)} 小時 ${durMin % 60} 分鐘`,
-        duration_sec: durMin * 60,
-        duration_min: durMin,
-        distance_text: `${distKm} 公里`,
-        distance_km: distKm,
-        polyline: r.geometry,
-        summary: summary
-      };
-    }
-  } catch (err) {
-    // Fall through to instant geometric route fallback
-  }
-
-  // Instant geometric fallback if both Netlify proxy and OSRM are unreachable
-  const est = calculateInstantEstimates(originLat, originLng, destLat, destLng);
-  const curEst = est[mode] || est.driving;
-  const durFmt = formatDurationDisplay(curEst.min);
-  return {
-    success: true,
-    engine: "geometric",
-    mode: mode,
-    duration_text: `${durFmt.val} ${durFmt.unit}`,
-    duration_sec: curEst.min * 60,
-    duration_min: curEst.min,
-    distance_text: `${curEst.distKm} 公里`,
-    distance_km: curEst.distKm,
-    polyline: null,
-    points: [[originLat, originLng], [destLat, destLng]],
-    summary: "直線幾何地理估算"
-  };
 }
 
 function drawPolylineOnMap(result, orig) {
   clearActiveRoute();
 
-  let latlngs = [];
-  if (result.polyline) {
-    latlngs = decodePolyline(result.polyline);
-  } else if (result.points) {
-    latlngs = result.points;
+  if (!result || !result.polyline) {
+    return;
+  }
+
+  const latlngs = decodePolyline(result.polyline);
+  if (!latlngs || latlngs.length === 0) {
+    return;
   }
 
   if (latlngs.length > 0) {
@@ -5130,15 +5061,7 @@ function updateRouteDisplay(s, explicitResult = null) {
   if (!box) return;
 
   const orig = getEffectiveOrigin();
-  const est = calculateInstantEstimates(orig.lat, orig.lng, s.lat, s.lng);
-
-  // Update mode preview badges on tabs
-  const bDrive = document.getElementById("badgeModeDriving");
-  const bTransit = document.getElementById("badgeModeTransit");
-  const bWalk = document.getElementById("badgeModeWalking");
-  if (bDrive) bDrive.textContent = `${est.driving.min}分`;
-  if (bTransit) bTransit.textContent = est.transit.min < 60 ? `${est.transit.min}分` : `${Math.floor(est.transit.min/60)}時${est.transit.min%60}分`;
-  if (bWalk) bWalk.textContent = est.walking.min < 60 ? `${est.walking.min}分` : `${Math.floor(est.walking.min/60)}時${est.walking.min%60}分`;
+  const straightKm = haversineDistanceKm(orig.lat, orig.lng, s.lat, s.lng);
 
   // Update origin name label
   const lblOriginName = document.getElementById("lblActiveOriginName");
@@ -5154,91 +5077,104 @@ function updateRouteDisplay(s, explicitResult = null) {
     else iconDur.innerHTML = SVG.car;
   }
 
-  // Update metrics based on active mode
-  let targetMin, targetKm, targetSubDur, targetSubDist;
-  if (explicitResult) {
-    targetMin = explicitResult.duration_min || Math.round(explicitResult.duration_sec / 60);
-    targetKm = explicitResult.distance_km;
-    if (explicitResult.engine === "google") {
-      targetSubDur = `Google 即時路況 · ${explicitResult.summary || "推薦路線"}`;
-      targetSubDist = `導航實測道路里程 · 直線 ${est.straightKm.toFixed(1)} km`;
-    } else if (explicitResult.engine === "osrm") {
-      targetSubDur = explicitResult.google_error ? `OSRM 備援 (Google API 未接通)` : "OSRM 備援路網估算";
-      targetSubDist = `行車道路里程 · 直線 ${est.straightKm.toFixed(1)} km`;
-    } else {
-      targetSubDur = "大數據地理估算";
-      targetSubDist = `直線距離 ${est.straightKm.toFixed(1)} km`;
-    }
-  } else {
-    const curEst = est[currentRouteMode] || est.driving;
-    targetMin = curEst.min;
-    targetKm = curEst.distKm;
-    targetSubDur = "正在連線計算即時路況…";
-    targetSubDist = `預估行經道路里程 · 直線 ${est.straightKm.toFixed(1)} km`;
-  }
-
-  const durFmt = formatDurationDisplay(targetMin);
-  const distFmt = formatDistanceDisplay(targetKm);
-
   const elDurVal = document.getElementById("lblMetricDurationVal");
   const elDurUnit = document.getElementById("lblMetricDurationUnit");
   const elDurSub = document.getElementById("lblMetricDurationSub");
   const elDistVal = document.getElementById("lblMetricDistanceVal");
   const elDistUnit = document.getElementById("lblMetricDistanceUnit");
   const elDistSub = document.getElementById("lblMetricDistanceSub");
-
-  if (elDurVal) elDurVal.textContent = durFmt.val;
-  if (elDurUnit) elDurUnit.textContent = durFmt.unit;
-  if (elDurSub) elDurSub.textContent = targetSubDur;
-
-  if (elDistVal) elDistVal.textContent = distFmt.val;
-  if (elDistUnit) elDistUnit.textContent = distFmt.unit;
-  if (elDistSub) elDistSub.textContent = targetSubDist;
-
-  // Status Badge
   const badgeStatus = document.getElementById("lblRouteBadgeStatus");
-  if (badgeStatus) {
-    if (explicitResult && explicitResult.engine === "google") {
-      badgeStatus.className = "badge-route-status ready";
-      badgeStatus.innerHTML = `${SVG.check} Google Maps 官方即時路網`;
-      badgeStatus.style.background = "#ECFDF5";
-      badgeStatus.style.color = "#065F46";
-      badgeStatus.style.borderColor = "#A7F3D0";
-    } else if (explicitResult && explicitResult.engine === "osrm") {
+  const resBar = document.getElementById("routeResultsBar");
+  const distEl = document.getElementById("lblRouteDistance");
+  const sumEl = document.getElementById("lblRouteSummary");
+  const engTag = document.getElementById("lblRouteEngine");
+
+  const bDrive = document.getElementById("badgeModeDriving");
+  const bTransit = document.getElementById("badgeModeTransit");
+  const bWalk = document.getElementById("badgeModeWalking");
+
+  if (!explicitResult) {
+    if (elDurVal) elDurVal.textContent = "...";
+    if (elDurUnit) elDurUnit.textContent = "";
+    if (elDurSub) elDurSub.textContent = "Google Routes API 計算中…";
+
+    if (elDistVal) elDistVal.textContent = "...";
+    if (elDistUnit) elDistUnit.textContent = "";
+    if (elDistSub) elDistSub.textContent = `直線距離 ${straightKm.toFixed(1)} km`;
+
+    if (badgeStatus) {
       badgeStatus.className = "badge-route-status";
-      badgeStatus.textContent = "OSRM 備援圖資";
-      badgeStatus.style.background = "#FFFBEB";
-      badgeStatus.style.color = "#92400E";
-      badgeStatus.style.borderColor = "#FDE68A";
-    } else {
-      badgeStatus.className = "badge-route-status";
-      badgeStatus.textContent = "路網計算中…";
+      badgeStatus.textContent = "Google Routes API 計算中…";
       badgeStatus.style.background = "#EFF6FF";
       badgeStatus.style.color = "#1D4ED8";
       badgeStatus.style.borderColor = "#BFDBFE";
     }
-  }
 
-  // Results Bar
-  const resBar = document.getElementById("routeResultsBar");
-  if (resBar && explicitResult) {
-    resBar.style.display = "flex";
-    const distEl = document.getElementById("lblRouteDistance");
-    if (distEl) distEl.textContent = explicitResult.distance_text;
-    const sumEl = document.getElementById("lblRouteSummary");
-    if (sumEl) sumEl.textContent = explicitResult.summary || "路徑規劃完成";
-    const engTag = document.getElementById("lblRouteEngine");
-    if (engTag) {
-      if (explicitResult.engine === "google") {
-        engTag.textContent = "Google Maps Platform 官方多模式圖資";
-        engTag.style.color = "#1D4ED8";
-        engTag.style.background = "#EFF6FF";
-      } else if (explicitResult.engine === "osrm") {
-        engTag.textContent = explicitResult.google_error ? `OSRM 備援 (${explicitResult.google_error})` : "OSRM 備援圖資 (公車捷運/人行路網需 Google API Key)";
-        engTag.style.color = "#9A3412";
-        engTag.style.background = "#FFEDD5";
+    if (resBar) resBar.style.display = "none";
+  } else if (!explicitResult.success) {
+    if (elDurVal) elDurVal.textContent = "--";
+    if (elDurUnit) elDurUnit.textContent = "";
+    if (elDurSub) elDurSub.textContent = explicitResult.error || "Google Routes API 失敗";
+
+    if (elDistVal) elDistVal.textContent = "--";
+    if (elDistUnit) elDistUnit.textContent = "";
+    if (elDistSub) elDistSub.textContent = `直線距離 ${straightKm.toFixed(1)} km`;
+
+    if (badgeStatus) {
+      badgeStatus.className = "badge-route-status";
+      badgeStatus.textContent = "Google Routes API 錯誤";
+      badgeStatus.style.background = "#FEF2F2";
+      badgeStatus.style.color = "#DC2626";
+      badgeStatus.style.borderColor = "#FECACA";
+    }
+
+    if (resBar) {
+      resBar.style.display = "flex";
+      if (distEl) distEl.textContent = "-- 公里";
+      if (sumEl) sumEl.textContent = explicitResult.error || "查無路線或 API 錯誤";
+      if (engTag) {
+        engTag.textContent = "Google Routes API 錯誤";
+        engTag.style.color = "#DC2626";
+        engTag.style.background = "#FEF2F2";
       }
     }
+  } else {
+    // Google Routes API Success
+    const targetMin = explicitResult.duration_min;
+    const durFmt = formatDurationDisplay(targetMin);
+
+    if (elDurVal) elDurVal.textContent = durFmt.val;
+    if (elDurUnit) elDurUnit.textContent = durFmt.unit;
+    if (elDurSub) elDurSub.textContent = `Google Routes API · ${explicitResult.summary || "推薦路線"}`;
+
+    if (elDistVal) elDistVal.textContent = explicitResult.distance_km;
+    if (elDistUnit) elDistUnit.textContent = "公里";
+    if (elDistSub) elDistSub.textContent = `官方實測道路里程 · 直線 ${straightKm.toFixed(1)} km`;
+
+    if (badgeStatus) {
+      badgeStatus.className = "badge-route-status ready";
+      badgeStatus.innerHTML = `${SVG.check} Google Routes API 官方圖資`;
+      badgeStatus.style.background = "#ECFDF5";
+      badgeStatus.style.color = "#065F46";
+      badgeStatus.style.borderColor = "#A7F3D0";
+    }
+
+    if (resBar) {
+      resBar.style.display = "flex";
+      if (distEl) distEl.textContent = explicitResult.distance_text;
+      if (sumEl) sumEl.textContent = explicitResult.summary || "路徑規劃完成";
+      if (engTag) {
+        engTag.textContent = "Google Routes API 官方圖資";
+        engTag.style.color = "#1D4ED8";
+        engTag.style.background = "#EFF6FF";
+      }
+    }
+
+    // Update active mode preview badge
+    const badgeText = durFmt.val + durFmt.unit;
+    if (explicitResult.mode === "driving" && bDrive) bDrive.textContent = badgeText;
+    else if (explicitResult.mode === "transit" && bTransit) bTransit.textContent = badgeText;
+    else if (explicitResult.mode === "walking" && bWalk) bWalk.textContent = badgeText;
   }
 
   // Update external navigation URLs
@@ -5275,11 +5211,15 @@ function initRouteControls(s) {
       const result = await requestRoutePlan(orig.lat, orig.lng, s.lat, s.lng, currentRouteMode);
       updateRouteDisplay(s, result);
 
-      if (redrawMap || activeRouteLayer) {
+      if (result && result.success && result.polyline && (redrawMap || activeRouteLayer)) {
         drawPolylineOnMap(result, orig);
+      } else if (result && !result.success) {
+        clearActiveRoute();
       }
     } catch (err) {
-      console.warn("[Directions API] Background fetch error:", err);
+      console.warn("[Google Routes API] Background fetch error:", err);
+      updateRouteDisplay(s, { success: false, error: err.message, engine: "google" });
+      clearActiveRoute();
     } finally {
       if (redrawMap) {
         calcBtn.classList.remove("loading");

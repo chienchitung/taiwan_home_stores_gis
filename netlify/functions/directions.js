@@ -1,6 +1,6 @@
 const https = require("https");
 
-// Simple in-memory cache to avoid duplicate API calls and save quota (TTL: 10 mins)
+// In-memory cache to avoid duplicate API calls and save quota (TTL: 10 mins)
 const cache = new Map();
 const CACHE_TTL_MS = 10 * 60 * 1000;
 
@@ -20,24 +20,6 @@ function setCache(key, data) {
     cache.delete(oldestKey);
   }
   cache.set(key, { time: Date.now(), data });
-}
-
-function httpGet(url) {
-  return new Promise((resolve, reject) => {
-    https.get(url, (res) => {
-      let data = "";
-      res.on("data", (chunk) => { data += chunk; });
-      res.on("end", () => {
-        try {
-          resolve(JSON.parse(data));
-        } catch (e) {
-          reject(new Error("Failed to parse JSON response: " + e.message));
-        }
-      });
-    }).on("error", (err) => {
-      reject(err);
-    });
-  });
 }
 
 function httpPost(urlStr, headers, bodyObj) {
@@ -72,7 +54,7 @@ function httpPost(urlStr, headers, bodyObj) {
     req.on("error", (err) => { reject(err); });
     req.on("timeout", () => {
       req.destroy();
-      reject(new Error("Request timed out"));
+      reject(new Error("Google Routes API 請求超時 (Timeout)"));
     });
     req.write(postData);
     req.end();
@@ -80,8 +62,8 @@ function httpPost(urlStr, headers, bodyObj) {
 }
 
 /**
- * Modern Google Routes API (computeRoutes)
- * Resolves Google Cloud "LegacyApiNotActivatedMapError" for newly created projects.
+ * Exclusively calls Google Routes API (computeRoutes)
+ * Documentation: https://developers.google.com/maps/documentation/routes
  */
 async function fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode, apiKey) {
   const travelModeMap = {
@@ -113,7 +95,6 @@ async function fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode
     computeAlternativeRoutes: false
   };
 
-  // routingPreference is only valid for DRIVE and TWO_WHEELER
   if (travelMode === "DRIVE") {
     requestBody.routingPreference = "TRAFFIC_UNAWARE";
   }
@@ -163,95 +144,6 @@ async function fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode
   };
 }
 
-/**
- * Legacy Google Directions API (Fallback for older Google Cloud projects)
- */
-async function fetchGoogleDirectionsLegacy(originLat, originLng, destLat, destLng, mode, apiKey) {
-  const modeMap = {
-    driving: "driving",
-    transit: "transit",
-    walking: "walking"
-  };
-  const gMode = modeMap[mode] || "driving";
-  const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${originLat},${originLng}&destination=${destLat},${destLng}&mode=${gMode}&language=zh-TW&key=${apiKey}`;
-
-  const json = await httpGet(url);
-  if (json.status !== "OK" || !json.routes || json.routes.length === 0) {
-    const detail = json.error_message ? ` - ${json.error_message}` : "";
-    throw new Error(`Google Maps API [${json.status || "NO_ROUTES"}]${detail}`);
-  }
-
-  const route = json.routes[0];
-  const leg = route.legs[0];
-
-  return {
-    success: true,
-    engine: "google",
-    mode: gMode,
-    duration_text: leg.duration.text,
-    duration_sec: leg.duration.value,
-    duration_min: Math.round(leg.duration.value / 60),
-    distance_text: leg.distance.text,
-    distance_km: Math.round((leg.distance.value / 1000) * 10) / 10,
-    polyline: route.overview_polyline ? route.overview_polyline.points : "",
-    summary: route.summary || leg.start_address + " -> " + leg.end_address
-  };
-}
-
-async function fetchGoogleRoute(originLat, originLng, destLat, destLng, mode, apiKey) {
-  try {
-    // 1. Try modern Routes API first (standard for modern Google Cloud projects)
-    return await fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode, apiKey);
-  } catch (routesErr) {
-    // If modern Routes API failed, check if legacy Directions API is enabled on an older project
-    try {
-      return await fetchGoogleDirectionsLegacy(originLat, originLng, destLat, destLng, mode, apiKey);
-    } catch (legacyErr) {
-      // Re-throw the modern Routes API error as it is the official recommended path
-      throw routesErr;
-    }
-  }
-}
-
-async function fetchOsrmRoute(originLat, originLng, destLat, destLng, mode = "driving") {
-  const url = `https://router.project-osrm.org/route/v1/driving/${originLng},${originLat};${destLng},${destLat}?overview=full&geometries=polyline`;
-
-  const json = await httpGet(url);
-  if (json.code !== "Ok" || !json.routes || json.routes.length === 0) {
-    throw new Error(`OSRM returned code: ${json.code || "NO_ROUTES"}`);
-  }
-
-  const route = json.routes[0];
-  const distanceKm = Math.round((route.distance / 1000) * 10) / 10;
-  
-  let durationMin = Math.round(route.duration / 60);
-  let summaryText = "開車規劃路徑 (OSRM 備援引擎)";
-
-  if (mode === "walking") {
-    durationMin = Math.max(1, Math.round((distanceKm / 4.5) * 60));
-    summaryText = "步行路徑估算 (OSRM 備援引擎)";
-  } else if (mode === "transit") {
-    durationMin = Math.max(5, Math.round((distanceKm / 24) * 60) + 8);
-    summaryText = "大眾運輸通勤估算 (OSRM 備援引擎)";
-  }
-
-  const durationSec = durationMin * 60;
-  const durationText = durationMin < 60 ? `${durationMin} 分鐘` : `${Math.floor(durationMin / 60)} 小時 ${durationMin % 60} 分鐘`;
-
-  return {
-    success: true,
-    engine: "osrm",
-    mode: mode,
-    duration_text: durationText,
-    duration_sec: durationSec,
-    duration_min: durationMin,
-    distance_text: `${distanceKm} 公里`,
-    distance_km: distanceKm,
-    polyline: route.geometry,
-    summary: summaryText
-  };
-}
-
 exports.handler = async function (event, context) {
   const headers = {
     "Access-Control-Allow-Origin": "*",
@@ -276,7 +168,19 @@ exports.handler = async function (event, context) {
       return {
         statusCode: 400,
         headers,
-        body: JSON.stringify({ error: "Missing or invalid coordinate parameters (originLat, originLng, destLat, destLng)" })
+        body: JSON.stringify({ success: false, error: "Missing or invalid coordinate parameters (originLat, originLng, destLat, destLng)" })
+      };
+    }
+
+    const apiKey = (process.env.GOOGLE_MAPS_API_KEY || "").trim();
+    if (!apiKey) {
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({
+          success: false,
+          error: "未在 Netlify 讀取到 GOOGLE_MAPS_API_KEY 環境變數 (請在 Netlify Site configuration -> Environment variables 設定並觸發 Clear cache and deploy site)"
+        })
       };
     }
 
@@ -290,42 +194,22 @@ exports.handler = async function (event, context) {
       };
     }
 
-    const apiKey = (process.env.GOOGLE_MAPS_API_KEY || "").trim();
-    let googleError = null;
+    const result = await fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode, apiKey);
+    setCache(cacheKey, result);
 
-    if (apiKey) {
-      try {
-        const googleResult = await fetchGoogleRoute(originLat, originLng, destLat, destLng, mode, apiKey);
-        setCache(cacheKey, googleResult);
-        return {
-          statusCode: 200,
-          headers,
-          body: JSON.stringify(googleResult)
-        };
-      } catch (err) {
-        googleError = err.message;
-        console.warn("Google API call failed, falling back to OSRM:", err.message);
-      }
-    } else {
-      googleError = "未在 Netlify 讀取到 GOOGLE_MAPS_API_KEY 環境變數 (請在 Netlify Site configuration -> Environment variables 設定並觸發重新部署)";
-      console.warn(googleError);
-    }
-
-    // Free Open Source Routing Machine Fallback
-    const osrmResult = await fetchOsrmRoute(originLat, originLng, destLat, destLng, mode);
-    osrmResult.google_error = googleError;
-    osrmResult.google_configured = !!apiKey;
-    setCache(cacheKey, osrmResult);
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify(osrmResult)
+      body: JSON.stringify(result)
     };
   } catch (err) {
     return {
-      statusCode: 500,
+      statusCode: 502,
       headers,
-      body: JSON.stringify({ error: err.message })
+      body: JSON.stringify({
+        success: false,
+        error: err.message
+      })
     };
   }
 };

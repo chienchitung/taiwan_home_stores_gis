@@ -27,8 +27,7 @@
   * 支援瀏覽器 GPS 定位一鍵取得目前位置。
   * 內建全台主要交通樞紐選單（台北車站、板橋車站、新竹巨城、台中車站、台南車站、左營高鐵站）。
   * 地圖自由選點功能：點擊地圖任意位置即可自訂出發點。
-* **外部即時導航行動**：一鍵開啟 Google Maps 官方即時導航 App 或 Apple Maps 導航。
-* **雙圖資引擎支援**：支援 Google Maps Platform Directions API 官方即時多模式路網，並內建 OSRM 開源備援引擎。
+* **Google Routes API 官方圖資**：全面整合 Google Maps Platform 最新世代 Routes API（computeRoutes），精準計算開車、大眾運輸與步行等多元模式之即時路況、道路里程與公車捷運轉乘。
 
 ### 3. 商圈半徑緩衝區分析（Catchment Buffer Zone）
 * **服務半徑調節**：支援 1.0 ~ 30.0 km 自由拖曳半徑或使用預設值（1km 步行鄰近、3km 生活圈、5km 核心商圈、10km 跨區驅車、20km 全都會區）。
@@ -52,7 +51,7 @@ taiwan_home_stores_gis/
 ├── netlify.toml                         # Netlify 雲端部署規則與 API 反向代理配置
 ├── netlify/
 │   └── functions/
-│       └── directions.js                # Serverless 路徑規劃代理（支援 Google API / OSRM）
+│       └── directions.js                # Serverless 路徑規劃代理（Google Routes API 專用）
 ├── data/                                # 核心乾淨門市資料庫
 │   ├── taiwan_home_stores_status.json   # 394 間實體門市完整生命週期資料庫 (JSON)
 │   └── taiwan_home_stores_status.csv    # 394 間實體門市歷史狀態對帳表 (CSV)
@@ -100,16 +99,16 @@ python3 build_ikea_gis_dashboard.py
 1. 登入 [Netlify](https://www.netlify.com/)，點選 **Add new site** → **Import an existing project**。
 2. 連結您的 GitHub 儲存庫 `chienchitung/taiwan_home_stores_gis`。
 3. 部署設定會自動讀取 `netlify.toml`，無需額外填寫建置指令。
-4. **設定 Google Maps / Routes API Key（選填）**：
+4. **設定 Google Routes API Key**：
    * 前往 Netlify 控制台：**Site configuration** → **Environment variables**。
    * 新增變數：
      * **Key**：`GOOGLE_MAPS_API_KEY`
      * **Value**：您的 Google Cloud API 金鑰。
    * **Google Cloud Console 設定注意事項**：
-     * 需啟用 **Routes API**（Google 新版專案已全面停用舊版 Directions API，新專案皆由現代 Routes API 提供路徑計算）。
+     * 需啟用 **Routes API**（Google 新版專案由現代 Routes API 提供路徑計算）。
      * API 金鑰的「應用程式限制」請選 **無 (None)**（因由 Netlify 後端 Serverless Node.js 呼叫，不能設 HTTP 參照網址限制）。
      * API 金鑰的「API 限制」請勾選 **Routes API**（避免產生未授權費用）。
-   * 設定後，雲端 Serverless 函數會自動優先使用 Google Routes API 即時多模式路網；若未設定則自動採用 OSRM 開源備援引擎。
+   * 設定後，雲端 Serverless 函數即由 Google Routes API 提供即時多模式路網與精準公車捷運轉乘班次計算。
 
 ---
 
