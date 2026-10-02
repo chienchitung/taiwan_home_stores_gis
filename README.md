@@ -44,8 +44,8 @@
 
 ```text
 taiwan_home_stores_gis/
-├── index.html                           # 根目錄首頁跳轉（自動導向儀表板）
-├── taiwan_home_stores_dashboard.html   # 主生產環境 GIS 儀表板 HTML
+├── index.html                           # 主生產環境 GIS 儀表板首頁 HTML
+├── taiwan_home_stores_dashboard.html   # 兼容量產儀表板 HTML（線上環境自動規範導向至根路徑）
 ├── shopee_stores_data.js                # 隨選動態載入之全台門市資料集
 ├── build_ikea_gis_dashboard.py          # 儀表板打包與建置編譯腳本
 ├── netlify.toml                         # Netlify 雲端部署規則與 API 反向代理配置

@@ -8,9 +8,10 @@
   status = 200
 
 [[redirects]]
-  from = "/"
-  to = "/taiwan_home_stores_dashboard.html"
-  status = 200
+  from = "/taiwan_home_stores_dashboard.html"
+  to = "/"
+  status = 301
+  force = true
 
 [[headers]]
   for = "/*"

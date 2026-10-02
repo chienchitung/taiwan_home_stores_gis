@@ -6360,6 +6360,7 @@ HTML = (HTML_TEMPLATE
         .replace("DATA_UPDATED_DATE_PLACEHOLDER", DATA_UPDATED_DATE))
 
 out_paths = [
+    os.path.join(BASE_DIR, "index.html"),
     os.path.join(BASE_DIR, "taiwan_home_stores_dashboard.html"),
 ]
 
