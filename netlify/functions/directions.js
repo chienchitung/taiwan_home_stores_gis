@@ -40,7 +40,133 @@ function httpGet(url) {
   });
 }
 
-async function fetchGoogleDirections(originLat, originLng, destLat, destLng, mode, apiKey) {
+function httpPost(urlStr, headers, bodyObj) {
+  return new Promise((resolve, reject) => {
+    const url = new URL(urlStr);
+    const postData = JSON.stringify(bodyObj);
+    const options = {
+      hostname: url.hostname,
+      port: 443,
+      path: url.pathname + url.search,
+      method: "POST",
+      headers: {
+        ...headers,
+        "Content-Length": Buffer.byteLength(postData)
+      },
+      timeout: 8000
+    };
+
+    const req = https.request(options, (res) => {
+      let data = "";
+      res.on("data", (chunk) => { data += chunk; });
+      res.on("end", () => {
+        try {
+          const parsed = JSON.parse(data);
+          resolve({ ok: res.statusCode >= 200 && res.statusCode < 300, status: res.statusCode, json: parsed, raw: data });
+        } catch (e) {
+          resolve({ ok: false, status: res.statusCode, json: null, raw: data });
+        }
+      });
+    });
+
+    req.on("error", (err) => { reject(err); });
+    req.on("timeout", () => {
+      req.destroy();
+      reject(new Error("Request timed out"));
+    });
+    req.write(postData);
+    req.end();
+  });
+}
+
+/**
+ * Modern Google Routes API (computeRoutes)
+ * Resolves Google Cloud "LegacyApiNotActivatedMapError" for newly created projects.
+ */
+async function fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode, apiKey) {
+  const travelModeMap = {
+    driving: "DRIVE",
+    transit: "TRANSIT",
+    walking: "WALK"
+  };
+  const travelMode = travelModeMap[mode] || "DRIVE";
+
+  const requestBody = {
+    origin: {
+      location: {
+        latLng: {
+          latitude: originLat,
+          longitude: originLng
+        }
+      }
+    },
+    destination: {
+      location: {
+        latLng: {
+          latitude: destLat,
+          longitude: destLng
+        }
+      }
+    },
+    travelMode: travelMode,
+    languageCode: "zh-TW",
+    computeAlternativeRoutes: false
+  };
+
+  // routingPreference is only valid for DRIVE and TWO_WHEELER
+  if (travelMode === "DRIVE") {
+    requestBody.routingPreference = "TRAFFIC_UNAWARE";
+  }
+
+  const res = await httpPost(
+    "https://routes.googleapis.com/directions/v2:computeRoutes",
+    {
+      "Content-Type": "application/json",
+      "X-Goog-Api-Key": apiKey,
+      "X-Goog-FieldMask": "routes.duration,routes.distanceMeters,routes.polyline.encodedPolyline,routes.description"
+    },
+    requestBody
+  );
+
+  if (!res.ok || !res.json || res.json.error) {
+    const err = res.json?.error || {};
+    const errMsg = [err.status, err.message].filter(Boolean).join(" - ") || res.raw?.slice(0, 200) || `Status ${res.status}`;
+    throw new Error(`Google Routes API [${err.status || res.status}]: ${errMsg}`);
+  }
+
+  if (!res.json.routes || res.json.routes.length === 0) {
+    throw new Error("Google Routes API: 查無可行路線 (NO_ROUTES)");
+  }
+
+  const route = res.json.routes[0];
+  const durationSec = parseInt(route.duration, 10) || 0;
+  const durationMin = Math.round(durationSec / 60);
+  const durationText = durationMin < 60
+    ? `${durationMin} 分鐘`
+    : `${Math.floor(durationMin / 60)} 小時 ${durationMin % 60} 分鐘`;
+
+  const distanceMeters = route.distanceMeters || 0;
+  const distanceKm = Math.round((distanceMeters / 1000) * 10) / 10;
+  const distanceText = distanceKm < 1 ? `${distanceMeters} 公尺` : `${distanceKm} 公里`;
+
+  return {
+    success: true,
+    engine: "google",
+    mode: mode,
+    duration_text: durationText,
+    duration_sec: durationSec,
+    duration_min: durationMin,
+    distance_text: distanceText,
+    distance_km: distanceKm,
+    polyline: route.polyline ? route.polyline.encodedPolyline : "",
+    summary: route.description || (mode === "transit" ? "大眾運輸推薦班次" : (mode === "walking" ? "步行推薦路線" : "開車推薦路徑"))
+  };
+}
+
+/**
+ * Legacy Google Directions API (Fallback for older Google Cloud projects)
+ */
+async function fetchGoogleDirectionsLegacy(originLat, originLng, destLat, destLng, mode, apiKey) {
   const modeMap = {
     driving: "driving",
     transit: "transit",
@@ -70,6 +196,21 @@ async function fetchGoogleDirections(originLat, originLng, destLat, destLng, mod
     polyline: route.overview_polyline ? route.overview_polyline.points : "",
     summary: route.summary || leg.start_address + " -> " + leg.end_address
   };
+}
+
+async function fetchGoogleRoute(originLat, originLng, destLat, destLng, mode, apiKey) {
+  try {
+    // 1. Try modern Routes API first (standard for modern Google Cloud projects)
+    return await fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode, apiKey);
+  } catch (routesErr) {
+    // If modern Routes API failed, check if legacy Directions API is enabled on an older project
+    try {
+      return await fetchGoogleDirectionsLegacy(originLat, originLng, destLat, destLng, mode, apiKey);
+    } catch (legacyErr) {
+      // Re-throw the modern Routes API error as it is the official recommended path
+      throw routesErr;
+    }
+  }
 }
 
 async function fetchOsrmRoute(originLat, originLng, destLat, destLng, mode = "driving") {
@@ -154,7 +295,7 @@ exports.handler = async function (event, context) {
 
     if (apiKey) {
       try {
-        const googleResult = await fetchGoogleDirections(originLat, originLng, destLat, destLng, mode, apiKey);
+        const googleResult = await fetchGoogleRoute(originLat, originLng, destLat, destLng, mode, apiKey);
         setCache(cacheKey, googleResult);
         return {
           statusCode: 200,
