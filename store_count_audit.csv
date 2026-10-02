@@ -1,0 +1,8 @@
+﻿brand,before_active,official_active,official_paused,difference,source,checked_at
+宜得利,75,75,0,0,https://www.nitori-net.tw/store,2026-09-11
+特力屋,65,65,1,0,https://cdn.trplus.com.tw/rest/v2/trplus/pos/search,2026-09-11
+HOLA,21,21,1,0,https://www.hola.com.tw/rest/v2/trplus/pos/search,2026-09-11
+hoi! 好好生活,19,19,0,0,https://www.hoihome.tw/webapi/LocationV2/GetLocationList?lat=23.7&lng=120.9&startIndex=0&maxCount=100&shopId=40000,2026-09-11
+無印良品,75,75,0,0,https://www.muji.tw/tw/,2026-09-11
+IKEA,9,9,0,0,https://www.ikea.com.tw/zh/store/index,2026-09-11
+MR. LIVING 居家先生,6,6,0,0,https://www.mrliving.com.tw/store-locations,2026-09-11
