@@ -1,7 +1,7 @@
 # 台灣實體門市 GIS 地理圖資儀表板
 ### Taiwan Home & Retail Stores GIS Intelligence Dashboard
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/deploy-status?branch=main)](https://app.netlify.com/)
+[![Deploy: Netlify](https://img.shields.io/badge/Deploy-Netlify-00C7B7?logo=netlify&logoColor=white)](https://www.netlify.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 一個現代化、全功能的一站式台灣實體零售與居家生活門市地理資訊系統（GIS）與商圈競爭情報儀表板。整合 Leaflet 地圖、歷年展店時序軌跡、服務半徑商圈分析，以及多模式路徑導航估算。
