@@ -51,7 +51,8 @@ async function fetchGoogleDirections(originLat, originLng, destLat, destLng, mod
 
   const json = await httpGet(url);
   if (json.status !== "OK" || !json.routes || json.routes.length === 0) {
-    throw new Error(`Google API returned status: ${json.status || "NO_ROUTES"}`);
+    const detail = json.error_message ? ` - ${json.error_message}` : "";
+    throw new Error(`Google Maps API [${json.status || "NO_ROUTES"}]${detail}`);
   }
 
   const route = json.routes[0];
@@ -148,7 +149,8 @@ exports.handler = async function (event, context) {
       };
     }
 
-    const apiKey = process.env.GOOGLE_MAPS_API_KEY;
+    const apiKey = (process.env.GOOGLE_MAPS_API_KEY || "").trim();
+    let googleError = null;
 
     if (apiKey) {
       try {
@@ -160,12 +162,18 @@ exports.handler = async function (event, context) {
           body: JSON.stringify(googleResult)
         };
       } catch (err) {
+        googleError = err.message;
         console.warn("Google API call failed, falling back to OSRM:", err.message);
       }
+    } else {
+      googleError = "未在 Netlify 讀取到 GOOGLE_MAPS_API_KEY 環境變數 (請在 Netlify Site configuration -> Environment variables 設定並觸發重新部署)";
+      console.warn(googleError);
     }
 
     // Free Open Source Routing Machine Fallback
     const osrmResult = await fetchOsrmRoute(originLat, originLng, destLat, destLng, mode);
+    osrmResult.google_error = googleError;
+    osrmResult.google_configured = !!apiKey;
     setCache(cacheKey, osrmResult);
     return {
       statusCode: 200,

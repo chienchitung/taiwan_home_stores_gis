@@ -1763,8 +1763,8 @@ aside.collapsed .sidebar-collapse-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  padding: 6px 4px;
+  gap: 5px;
+  padding: 7px 5px;
   border: none;
   background: transparent;
   color: #64748B;
@@ -1775,13 +1775,25 @@ aside.collapsed .sidebar-collapse-toggle {
   transition: all 0.15s ease;
   white-space: nowrap;
 }
+.btn-route-mode svg {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  transition: transform 0.15s ease;
+}
 .btn-route-mode:hover {
   color: #1E293B;
+}
+.btn-route-mode:hover svg {
+  transform: scale(1.08);
 }
 .btn-route-mode.active {
   background: #FFFFFF;
   color: #1D4ED8;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.btn-route-mode.active svg {
+  color: #1D4ED8;
 }
 .mode-badge-preview {
   font-size: 9.5px;
@@ -3047,9 +3059,9 @@ const SVG = {
   star: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`,
   clock: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>`,
   route: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a4.5 4.5 0 0 0 0-9H7a3 3 0 0 1 0-6h12"></path><circle cx="18" cy="5" r="3"></circle></svg>`,
-  car: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-6H7L5 12v5z"></path><circle cx="7.5" cy="17.5" r="2.5"></circle><circle cx="16.5" cy="17.5" r="2.5"></circle></svg>`,
-  transit: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="16" rx="2"></rect><path d="M4 11h16M12 3v8M8 19l-2 3M16 19l2 3"></path><circle cx="8" cy="15" r="1"></circle><circle cx="16" cy="15" r="1"></circle></svg>`,
-  walk: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM7 21l3-7 2 3v5M14 13l3-3-2-4-4 2 1 4"></path></svg>`,
+  car: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l2-5a2 2 0 0 1 1.9-1.3h8.2A2 2 0 0 1 18 7l2 5v5a1 1 0 0 1-1 1h-1a2 2 0 0 1-4 0H10a2 2 0 0 1-4 0H5a1 1 0 0 1-1-1v-5z"></path><circle cx="8" cy="17" r="1.5"></circle><circle cx="16" cy="17" r="1.5"></circle><path d="M5 12h14"></path></svg>`,
+  transit: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a3 3 0 0 1 3 3v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a3 3 0 0 1 3-3z"></path><path d="M3 10h18"></path><path d="M12 3v7"></path><circle cx="7.5" cy="15" r="1.2" fill="currentColor"></circle><circle cx="16.5" cy="15" r="1.2" fill="currentColor"></circle><path d="M8 18l-3 3"></path><path d="M16 18l3 3"></path></svg>`,
+  walk: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="4" r="2"></circle><path d="M7 21l3.5-7 2.5 3.5V21"></path><path d="M18 10l-4-2.5-3.5 2-2.5-1.5"></path><path d="M11 14l2-4.5"></path></svg>`,
   navigation: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>`
 };
 
@@ -4742,6 +4754,69 @@ async function requestRoutePlan(originLat, originLng, destLat, destLng, mode) {
   };
 }
 
+function drawPolylineOnMap(result, orig) {
+  clearActiveRoute();
+
+  let latlngs = [];
+  if (result.polyline) {
+    latlngs = decodePolyline(result.polyline);
+  } else if (result.points) {
+    latlngs = result.points;
+  }
+
+  if (latlngs.length > 0) {
+    let casingColor = "#1E3A8A";
+    let innerColor = "#2563EB";
+    let dashPattern = null;
+    let innerWeight = 4.5;
+    let casingWeight = 7;
+
+    if (currentRouteMode === "walking") {
+      casingColor = "#064E3B";
+      innerColor = "#10B981";
+      dashPattern = "5, 6";
+      innerWeight = 4;
+      casingWeight = 6.5;
+    } else if (currentRouteMode === "transit") {
+      casingColor = "#3B0764";
+      innerColor = "#8B5CF6";
+      dashPattern = "10, 5";
+      innerWeight = 4.5;
+      casingWeight = 7;
+    }
+
+    const casing = L.polyline(latlngs, {
+      color: casingColor,
+      weight: casingWeight,
+      opacity: 0.45,
+      lineCap: "round",
+      lineJoin: "round"
+    });
+    const inner = L.polyline(latlngs, {
+      color: innerColor,
+      weight: innerWeight,
+      opacity: 0.95,
+      dashArray: dashPattern,
+      lineCap: "round",
+      lineJoin: "round"
+    });
+    casing.bindTooltip(`${result.distance_text} · ${result.duration_text}`, { permanent: false, sticky: true });
+    activeRouteLayer = L.layerGroup([casing, inner]).addTo(map);
+
+    const originIcon = L.divIcon({
+      className: "route-origin-pin",
+      html: `<div style="background:#10B981;width:14px;height:14px;border-radius:50%;border:2.5px solid #FFFFFF;box-shadow:0 2px 6px rgba(0,0,0,0.35)"></div>`,
+      iconSize: [14, 14],
+      iconAnchor: [7, 7]
+    });
+    activeRouteOriginMarker = L.marker([orig.lat, orig.lng], { icon: originIcon, zIndexOffset: 3000 })
+      .bindTooltip(`起點：${orig.name}`, { permanent: false, direction: "top" })
+      .addTo(map);
+
+    map.fitBounds(casing.getBounds(), { padding: [60, 60], duration: 0.8 });
+  }
+}
+
 function updateRouteDisplay(s, explicitResult = null) {
   const box = document.getElementById("routePlanningBox");
   if (!box) return;
@@ -4776,13 +4851,21 @@ function updateRouteDisplay(s, explicitResult = null) {
   if (explicitResult) {
     targetMin = explicitResult.duration_min || Math.round(explicitResult.duration_sec / 60);
     targetKm = explicitResult.distance_km;
-    targetSubDur = explicitResult.engine === "google" ? "Google Maps 即時路況" : (explicitResult.engine === "osrm" ? "OSRM 路線引擎估算" : "大數據地理估算");
-    targetSubDist = `導航路徑實測里程 · 直線 ${est.straightKm.toFixed(1)} km`;
+    if (explicitResult.engine === "google") {
+      targetSubDur = `Google 即時路況 · ${explicitResult.summary || "推薦路線"}`;
+      targetSubDist = `導航實測道路里程 · 直線 ${est.straightKm.toFixed(1)} km`;
+    } else if (explicitResult.engine === "osrm") {
+      targetSubDur = explicitResult.google_error ? `OSRM 備援 (Google API 未接通)` : "OSRM 備援路網估算";
+      targetSubDist = `行車道路里程 · 直線 ${est.straightKm.toFixed(1)} km`;
+    } else {
+      targetSubDur = "大數據地理估算";
+      targetSubDist = `直線距離 ${est.straightKm.toFixed(1)} km`;
+    }
   } else {
     const curEst = est[currentRouteMode] || est.driving;
     targetMin = curEst.min;
     targetKm = curEst.distKm;
-    targetSubDur = "大數據即時路況試算";
+    targetSubDur = "正在連線計算即時路況…";
     targetSubDist = `預估行經道路里程 · 直線 ${est.straightKm.toFixed(1)} km`;
   }
 
@@ -4804,6 +4887,52 @@ function updateRouteDisplay(s, explicitResult = null) {
   if (elDistUnit) elDistUnit.textContent = distFmt.unit;
   if (elDistSub) elDistSub.textContent = targetSubDist;
 
+  // Status Badge
+  const badgeStatus = document.getElementById("lblRouteBadgeStatus");
+  if (badgeStatus) {
+    if (explicitResult && explicitResult.engine === "google") {
+      badgeStatus.className = "badge-route-status ready";
+      badgeStatus.innerHTML = `${SVG.check} Google Maps 官方即時路網`;
+      badgeStatus.style.background = "#ECFDF5";
+      badgeStatus.style.color = "#065F46";
+      badgeStatus.style.borderColor = "#A7F3D0";
+    } else if (explicitResult && explicitResult.engine === "osrm") {
+      badgeStatus.className = "badge-route-status";
+      badgeStatus.textContent = "OSRM 備援圖資";
+      badgeStatus.style.background = "#FFFBEB";
+      badgeStatus.style.color = "#92400E";
+      badgeStatus.style.borderColor = "#FDE68A";
+    } else {
+      badgeStatus.className = "badge-route-status";
+      badgeStatus.textContent = "路網計算中…";
+      badgeStatus.style.background = "#EFF6FF";
+      badgeStatus.style.color = "#1D4ED8";
+      badgeStatus.style.borderColor = "#BFDBFE";
+    }
+  }
+
+  // Results Bar
+  const resBar = document.getElementById("routeResultsBar");
+  if (resBar && explicitResult) {
+    resBar.style.display = "flex";
+    const distEl = document.getElementById("lblRouteDistance");
+    if (distEl) distEl.textContent = explicitResult.distance_text;
+    const sumEl = document.getElementById("lblRouteSummary");
+    if (sumEl) sumEl.textContent = explicitResult.summary || "路徑規劃完成";
+    const engTag = document.getElementById("lblRouteEngine");
+    if (engTag) {
+      if (explicitResult.engine === "google") {
+        engTag.textContent = "Google Maps Platform 官方多模式圖資";
+        engTag.style.color = "#1D4ED8";
+        engTag.style.background = "#EFF6FF";
+      } else if (explicitResult.engine === "osrm") {
+        engTag.textContent = explicitResult.google_error ? `OSRM 備援 (${explicitResult.google_error})` : "OSRM 備援圖資 (公車捷運/人行路網需 Google API Key)";
+        engTag.style.color = "#9A3412";
+        engTag.style.background = "#FFEDD5";
+      }
+    }
+  }
+
   // Update external navigation URLs
   const gMode = currentRouteMode === "transit" ? "transit" : (currentRouteMode === "walking" ? "walking" : "driving");
   const aMode = currentRouteMode === "transit" ? "r" : (currentRouteMode === "walking" ? "w" : "d");
@@ -4820,6 +4949,37 @@ function updateRouteDisplay(s, explicitResult = null) {
 function initRouteControls(s) {
   const box = document.getElementById("routePlanningBox");
   if (!box) return;
+
+  const calcBtn = document.getElementById("btnCalcRoute");
+  const clearBtn = document.getElementById("btnClearRoute");
+
+  clearBtn.onclick = clearActiveRoute;
+
+  async function fetchAndApplyRoute(redrawMap = false) {
+    const orig = getEffectiveOrigin();
+    if (redrawMap) {
+      calcBtn.classList.add("loading");
+      calcBtn.disabled = true;
+      calcBtn.textContent = "繪製路線中…";
+    }
+
+    try {
+      const result = await requestRoutePlan(orig.lat, orig.lng, s.lat, s.lng, currentRouteMode);
+      updateRouteDisplay(s, result);
+
+      if (redrawMap || activeRouteLayer) {
+        drawPolylineOnMap(result, orig);
+      }
+    } catch (err) {
+      console.warn("[Directions API] Background fetch error:", err);
+    } finally {
+      if (redrawMap) {
+        calcBtn.classList.remove("loading");
+        calcBtn.disabled = false;
+        calcBtn.innerHTML = `${SVG.route} 繪製地圖導航路線`;
+      }
+    }
+  }
 
   // Initialize dropdown selection state
   const selOrigin = document.getElementById("selRouteOrigin");
@@ -4848,9 +5008,7 @@ function initRouteControls(s) {
         selectedOriginPresetId = val;
       }
       updateRouteDisplay(s);
-      if (activeRouteLayer) {
-        document.getElementById("btnCalcRoute").click();
-      }
+      fetchAndApplyRoute(!!activeRouteLayer);
     };
   }
 
@@ -4865,9 +5023,7 @@ function initRouteControls(s) {
         getUserLocation();
       }
       updateRouteDisplay(s);
-      if (activeRouteLayer) {
-        document.getElementById("btnCalcRoute").click();
-      }
+      fetchAndApplyRoute(!!activeRouteLayer);
     };
   }
 
@@ -4910,9 +5066,7 @@ function initRouteControls(s) {
         }
 
         updateRouteDisplay(s);
-        if (activeRouteLayer) {
-          document.getElementById("btnCalcRoute").click();
-        }
+        fetchAndApplyRoute(!!activeRouteLayer);
       });
     };
   }
@@ -4924,130 +5078,19 @@ function initRouteControls(s) {
       btn.classList.add("active");
       currentRouteMode = btn.dataset.mode;
       updateRouteDisplay(s);
-      if (activeRouteLayer) {
-        document.getElementById("btnCalcRoute").click();
-      }
+      fetchAndApplyRoute(!!activeRouteLayer);
     };
   });
 
-  const calcBtn = document.getElementById("btnCalcRoute");
-  const clearBtn = document.getElementById("btnClearRoute");
-
-  clearBtn.onclick = clearActiveRoute;
-
-  calcBtn.onclick = async () => {
-    const orig = getEffectiveOrigin();
-    calcBtn.classList.add("loading");
-    calcBtn.disabled = true;
-    calcBtn.textContent = "計算路徑中…";
-
-    try {
-      const result = await requestRoutePlan(orig.lat, orig.lng, s.lat, s.lng, currentRouteMode);
-
-      updateRouteDisplay(s, result);
-
-      const resBar = document.getElementById("routeResultsBar");
-      if (resBar) resBar.style.display = "flex";
-      const distEl = document.getElementById("lblRouteDistance");
-      if (distEl) distEl.textContent = result.distance_text;
-      const sumEl = document.getElementById("lblRouteSummary");
-      if (sumEl) sumEl.textContent = result.summary || "路徑規劃完成";
-      const engTag = document.getElementById("lblRouteEngine");
-      if (engTag) {
-        if (result.engine === "google") {
-          engTag.textContent = "Google Maps 官方圖資 (即時多模式路網)";
-          engTag.style.color = "#1D4ED8";
-          engTag.style.background = "#EFF6FF";
-        } else if (result.engine === "osrm") {
-          engTag.textContent = currentRouteMode === "driving" 
-            ? "OSRM 路線引擎 (行車導航)" 
-            : "OSRM 備援圖資 (公車捷運/人行專用路網需 Google API Key)";
-          engTag.style.color = "#9A3412";
-          engTag.style.background = "#FFEDD5";
-        } else {
-          engTag.textContent = "地理直線幾何估算";
-          engTag.style.color = "#475569";
-          engTag.style.background = "rgba(0,0,0,0.05)";
-        }
-      }
-
-      clearActiveRoute();
-
-      let latlngs = [];
-      if (result.polyline) {
-        latlngs = decodePolyline(result.polyline);
-      } else if (result.points) {
-        latlngs = result.points;
-      }
-
-      if (latlngs.length > 0) {
-        // Mode-specific visual styling for Leaflet polyline
-        let casingColor = "#1E3A8A";
-        let innerColor = "#2563EB";
-        let dashPattern = null;
-        let innerWeight = 4.5;
-        let casingWeight = 7;
-
-        if (currentRouteMode === "walking") {
-          casingColor = "#064E3B";
-          innerColor = "#10B981";
-          dashPattern = "5, 6";
-          innerWeight = 4;
-          casingWeight = 6.5;
-        } else if (currentRouteMode === "transit") {
-          casingColor = "#3B0764";
-          innerColor = "#8B5CF6";
-          dashPattern = "10, 5";
-          innerWeight = 4.5;
-          casingWeight = 7;
-        }
-
-        const casing = L.polyline(latlngs, {
-          color: casingColor,
-          weight: casingWeight,
-          opacity: 0.45,
-          lineCap: "round",
-          lineJoin: "round"
-        });
-        const inner = L.polyline(latlngs, {
-          color: innerColor,
-          weight: innerWeight,
-          opacity: 0.95,
-          dashArray: dashPattern,
-          lineCap: "round",
-          lineJoin: "round"
-        });
-        casing.bindTooltip(`${result.distance_text} · ${result.duration_text}`, { permanent: false, sticky: true });
-        activeRouteLayer = L.layerGroup([casing, inner]).addTo(map);
-
-        const originIcon = L.divIcon({
-          className: "route-origin-pin",
-          html: `<div style="background:#10B981;width:14px;height:14px;border-radius:50%;border:2.5px solid #FFFFFF;box-shadow:0 2px 6px rgba(0,0,0,0.35)"></div>`,
-          iconSize: [14, 14],
-          iconAnchor: [7, 7]
-        });
-        activeRouteOriginMarker = L.marker([orig.lat, orig.lng], { icon: originIcon, zIndexOffset: 3000 })
-          .bindTooltip(`起點：${orig.name}`, { permanent: false, direction: "top" })
-          .addTo(map);
-
-        map.fitBounds(casing.getBounds(), { padding: [60, 60], duration: 0.8 });
-      }
-    } catch (err) {
-      alert("路徑規劃失敗: " + err.message);
-    } finally {
-      calcBtn.classList.remove("loading");
-      calcBtn.disabled = false;
-      calcBtn.innerHTML = `${SVG.route} 繪製地圖導航路線`;
-    }
+  calcBtn.onclick = () => {
+    fetchAndApplyRoute(true);
   };
 
   // Immediate instant estimation display upon drawer open!
   updateRouteDisplay(s);
 
-  // If a route was already being displayed on the map, automatically refresh it for this store
-  if (activeRouteLayer) {
-    calcBtn.click();
-  }
+  // Automatically fetch exact Google Maps route in background without requiring button click!
+  fetchAndApplyRoute(!!activeRouteLayer);
 }
 
 function closeStoreDrawer() {
