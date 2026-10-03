@@ -3268,6 +3268,38 @@ aside.collapsed .sidebar-collapse-toggle {
   body:has(#sidebarDetailSection[style*="flex"]) .map-controls-dock,
   body:has(#sidebarDetailSection[style*="flex"]) .region-jump-bar { display: none; }
 }
+/* ─── Drawer v3: compact header, facts, collapsible origin ─── */
+#sidebarDetailSection .detail-nav-top { display: none; }
+.detail-pinned-header { padding: 8px 8px 8px 4px !important; }
+.sk-hdr-row { display: flex; align-items: center; gap: 4px; }
+.sk-hdr-text { flex: 1; min-width: 0; }
+.sk-hdr-text .detail-title { margin: 0; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sk-hdr-text .detail-sub-meta { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #484848; margin-top: 2px; }
+.sk-hdr-text .brand-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.sk-hdr-btn { flex-shrink: 0; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: none; border-radius: 50%; background: transparent; color: #111; cursor: pointer; }
+.sk-hdr-btn:hover { background: #F5F5F5; }
+.sk-hdr-status { padding: 6px 0 0 44px; }
+.sk-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0 0 16px; }
+.sk-facts > div { background: #F5F5F5; border-radius: 8px; padding: 8px 10px; min-width: 0; }
+.sk-facts dt { font-size: 11px; color: #767676; }
+.sk-facts dd { margin: 2px 0 0; font-size: 13px; font-weight: 700; color: #111; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sk-link-row { width: 100%; display: flex; align-items: center; justify-content: space-between; min-height: 48px; padding: 0 4px; margin-bottom: 16px; background: none; border: none; border-top: 1px solid #DFDFDF; border-bottom: 1px solid #DFDFDF; font-size: 14px; font-weight: 700; color: #111; cursor: pointer; font-family: inherit; text-align: left; }
+.sk-link-row:hover { color: var(--ikea-blue); }
+#paneDetailRoute .sk-route-result { border-top: none; padding-top: 4px; }
+.sk-notice-sm { font-size: 12px; padding: 8px 10px; margin-bottom: 12px; }
+.sk-notice[hidden] { display: none; }
+.sk-inline-link { background: none; border: none; padding: 0 0 0 4px; color: var(--ikea-blue); font-weight: 700; text-decoration: underline; cursor: pointer; font: inherit; }
+.sk-origin-details { margin-bottom: 16px; border-bottom: 1px solid #DFDFDF; }
+.sk-origin-details > summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; font-size: 13px; color: #484848; cursor: pointer; }
+.sk-origin-details > summary::-webkit-details-marker { display: none; }
+.sk-origin-details > summary strong { color: #111; }
+.sk-change { color: var(--ikea-blue); font-weight: 700; text-decoration: underline; flex-shrink: 0; }
+.sk-origin-details[open] .sk-change { visibility: hidden; }
+.sk-origin-details[open] .sk-origin-stack { padding-bottom: 12px; }
+.sk-origin-stack .sk-section { margin-bottom: 4px; }
+.sk-brand-chips { flex-wrap: nowrap !important; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+.sk-brand-chips::-webkit-scrollbar { display: none; }
+.sk-brand-chip { flex-shrink: 0; }
 </style>
 </head>
 <body>
@@ -3621,8 +3653,7 @@ aside.collapsed .sidebar-collapse-toggle {
           </button>
           <button class="detail-tab-btn" data-tab="catchment" role="tab" id="tabDetailCatchment" aria-controls="paneDetailCatchment" aria-selected="false" tabindex="-1" onclick="switchDetailTab('catchment')">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-            <span>周邊門市</span>
-            <span class="tab-badge" id="tabCatchmentCount">0</span>
+            <span>周邊 <span id="lblTabRadius">3</span> km</span>
           </button>
         </div>
 
@@ -4467,6 +4498,30 @@ function locateUser() {
 
 document.getElementById("btnLocateMe").onclick = locateUser;
 
+// 路線規劃用：只取得定位（不移動地圖、不重排清單），取得後重新計算路線
+function getUserLocation() {
+  if (!navigator.geolocation) {
+    alert("您的瀏覽器環境不支援地理定位功能");
+    return;
+  }
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      const { latitude, longitude } = pos.coords;
+      userLocation = { lat: latitude, lng: longitude };
+      try {
+        sessionStorage.setItem("taiwan_user_lat", String(latitude));
+        sessionStorage.setItem("taiwan_user_lng", String(longitude));
+      } catch (e) {}
+      ALL_STORES.forEach(s => {
+        s._userDist = haversineDistanceKm(latitude, longitude, s.lat, s.lng);
+      });
+      if (currentDetailStore && currentDetailTab === "route" && runRouteFetch) runRouteFetch();
+    },
+    () => alert("無法取得您的目前位置資訊（請確認已允許瀏覽器定位權限）"),
+    { timeout: 10000, enableHighAccuracy: true }
+  );
+}
+
 /* ─── NON-BRAND FILTER POOL ENGINE (For Dynamic Faceted Counts) ─── */
 function getNonBrandFilteredPool() {
   const q = document.getElementById("q").value.trim().toLowerCase();
@@ -4918,22 +4973,24 @@ function openStoreDrawer(s, preferredTab = null) {
   // Render Pinned Identity Header
   const pinnedHdr = document.getElementById("detailPinnedHeader");
   if (pinnedHdr) {
+    const distText = (s._userDist !== undefined && s._userDist !== null) ? ` · 距你 ${formatDist(s._userDist)}` : "";
     pinnedHdr.innerHTML = `
-      <div class="detail-meta-row">
-        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
-          ${getStatusBadge(s)}
-          ${s._isCoLocation ? `<span class="tag-badge tag-colocation">${SVG.battle} 附近有其他品牌</span>` : ""}
+      <div class="sk-hdr-row">
+        <button class="sk-hdr-btn" onclick="closeStoreDrawer()" title="返回門市清單" aria-label="返回門市清單">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="sk-hdr-text">
+          <h2 class="detail-title" title="${s.store_name}">${s.store_name}</h2>
+          <div class="detail-sub-meta">
+            <span class="brand-dot" style="background:${cfg.color}"></span>
+            <span>${s.city} ${s.district || ""}${distText}</span>
+          </div>
         </div>
-        ${(s._userDist !== undefined && s._userDist !== null) ? `<span class="card-dist-badge">${formatDist(s._userDist)}</span>` : ""}
+        <button class="sk-hdr-btn" onclick="closeStoreDrawer()" title="關閉" aria-label="關閉門市面板">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
       </div>
-      <h2 class="detail-title" title="${s.store_name}">${s.store_name}</h2>
-      <div class="detail-sub-meta">
-        <span>${s.brand}</span>
-        <span>·</span>
-        <span>${s.store_format || s.channel_format}</span>
-        <span>·</span>
-        <span>${s.city} ${s.district || ""}</span>
-      </div>
+      ${s.status_category !== "現行營運中" ? `<div class="sk-hdr-status">${getStatusBadge(s)}</div>` : ""}
     `;
   }
 
@@ -4942,6 +4999,11 @@ function openStoreDrawer(s, preferredTab = null) {
   detailBody.innerHTML = `
     <!-- 資訊 -->
     <div class="detail-tab-pane" id="paneDetailInfo" role="tabpanel" aria-labelledby="tabDetailInfo">
+      <dl class="sk-facts">
+        <div><dt>品牌</dt><dd>${s.brand}</dd></div>
+        <div><dt>型態</dt><dd>${s.store_format || s.channel_format}</dd></div>
+        ${s.opened_year ? `<div><dt>開幕</dt><dd>${s.opened_year} 年</dd></div>` : ""}
+      </dl>
       <div class="sk-section">
         <div class="sk-label">地址</div>
         <div class="sk-address-row">
@@ -4954,6 +5016,10 @@ function openStoreDrawer(s, preferredTab = null) {
           <strong>營運狀態</strong>
           <div>${s.note}</div>
         </div>` : ''}
+      <button class="sk-link-row" onclick="switchDetailTab('catchment')">
+        <span id="lblInfoNearby">查看周邊門市</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
       <div class="sk-actions">
         <a class="sk-btn sk-btn-primary" href="${getGmapsSearchUrl(s)}" target="_blank" rel="noopener">${SVG.external} 在 Google Maps 開啟</a>
         <div class="sk-btn-row">
@@ -4972,17 +5038,29 @@ function openStoreDrawer(s, preferredTab = null) {
           <button class="btn-route-mode ${currentRouteMode === 'walking' ? 'active' : ''}" data-mode="walking">${SVG.walk} <span>步行</span></button>
         </div>
 
-        <div class="sk-section" id="routeDepartureRow" ${currentRouteMode === 'transit' ? '' : 'hidden'}>
-          <label class="sk-label" for="selRouteDeparture">出發時間</label>
-          <select id="selRouteDeparture" class="sel-route-origin">
-            <option value="now" ${routeDeparture === 'now' ? 'selected' : ''}>現在出發</option>
-            <option value="tomorrow9" ${routeDeparture === 'tomorrow9' ? 'selected' : ''}>明天早上 9:00 出發</option>
-          </select>
+        <div class="sk-route-result" id="routeResult" aria-live="polite">
+          <div class="sk-route-duration" id="lblRouteDuration">--</div>
+          <div class="sk-route-meta" id="lblRouteMeta"></div>
         </div>
 
-        <div class="sk-section">
-          <label class="sk-label" for="selRouteOrigin">出發地</label>
+        <div class="sk-notice sk-notice-sm" id="routeGpsHint" hidden>
+          尚未取得你的位置，目前從台北車站計算。<button class="sk-inline-link" id="btnHintLocate">開啟定位</button>
+        </div>
+
+        <details class="sk-origin-details" id="routeOriginDetails">
+          <summary>
+            <span>從 <strong id="lblOriginSummary">我的位置</strong>${currentRouteMode === 'transit' ? ` · <span id="lblDepartureSummary">${routeDeparture === 'tomorrow9' ? '明早 9:00' : '現在'}</span>` : ''}</span>
+            <span class="sk-change">更改</span>
+          </summary>
           <div class="sk-origin-stack">
+            <div class="sk-section" id="routeDepartureRow" ${currentRouteMode === 'transit' ? '' : 'hidden'}>
+              <label class="sk-label" for="selRouteDeparture">出發時間</label>
+              <select id="selRouteDeparture" class="sel-route-origin">
+                <option value="now" ${routeDeparture === 'now' ? 'selected' : ''}>現在出發</option>
+                <option value="tomorrow9" ${routeDeparture === 'tomorrow9' ? 'selected' : ''}>明天早上 9:00 出發</option>
+              </select>
+            </div>
+            <label class="sk-label" for="selRouteOrigin">出發地</label>
             <select id="selRouteOrigin" class="sel-route-origin">
               <option value="gps">我的位置</option>
               <option value="tpe_main">台北車站</option>
@@ -4997,14 +5075,8 @@ function openStoreDrawer(s, preferredTab = null) {
               <button class="sk-btn sk-btn-secondary sk-btn-sm" id="btnRelocateGps">${SVG.gps} 用我目前的位置</button>
               <button class="sk-btn sk-btn-secondary sk-btn-sm" id="btnPickOriginOnMap">${SVG.crosshair} <span id="lblPickOrigin">在地圖上點選</span></button>
             </div>
-
           </div>
-        </div>
-
-        <div class="sk-route-result" id="routeResult" aria-live="polite">
-          <div class="sk-route-duration" id="lblRouteDuration">--</div>
-          <div class="sk-route-meta" id="lblRouteMeta"></div>
-        </div>
+        </details>
 
         <div class="sk-actions">
           <a class="sk-btn sk-btn-primary" id="btnGmapsTurnByTurn" href="#" target="_blank" rel="noopener">${SVG.external} 在 Google Maps 導航</a>
@@ -5115,6 +5187,15 @@ function initCatchmentControls(s) {
 let catchmentBrandFilter = { storeN: null, brand: null };
 const SAME_BUILDING_KM = 0.05;
 
+// 八方位（以目前門市為中心）
+function compassDirection(from, to) {
+  const y = Math.sin((to.lng - from.lng) * Math.PI / 180) * Math.cos(to.lat * Math.PI / 180);
+  const x = Math.cos(from.lat * Math.PI / 180) * Math.sin(to.lat * Math.PI / 180) -
+            Math.sin(from.lat * Math.PI / 180) * Math.cos(to.lat * Math.PI / 180) * Math.cos((to.lng - from.lng) * Math.PI / 180);
+  const deg = (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+  return ["北", "東北", "東", "東南", "南", "西南", "西", "西北"][Math.round(deg / 45) % 8] + "方";
+}
+
 function setCatchmentBrandFilter(brand) {
   catchmentBrandFilter.brand = catchmentBrandFilter.brand === brand ? null : brand;
   if (currentDetailStore) updateCatchmentList(currentDetailStore);
@@ -5136,8 +5217,12 @@ function updateCatchmentList(s) {
 
   nearby.sort((a, b) => a.dist - b.dist);
 
-  const tabBadge = document.getElementById("tabCatchmentCount");
-  if (tabBadge) tabBadge.textContent = nearby.length;
+  const tabRadius = document.getElementById("lblTabRadius");
+  if (tabRadius) tabRadius.textContent = String(+currentRadiusKm.toFixed(1));
+  const infoNearby = document.getElementById("lblInfoNearby");
+  if (infoNearby) infoNearby.textContent = nearby.length
+    ? `附近 ${+currentRadiusKm.toFixed(1)} km 內有 ${nearby.length} 間門市`
+    : `附近 ${+currentRadiusKm.toFixed(1)} km 內沒有其他門市`;
 
   if (nearby.length === 0) {
     resBox.innerHTML = `
@@ -5176,7 +5261,7 @@ function updateCatchmentList(s) {
               <span class="brand-dot" style="background:${cCfg.color}"></span>
               <div style="overflow:hidden;text-overflow:ellipsis">
                 <div class="c-name">${c.store_name}</div>
-                <div class="c-chan">${c.brand}${isSameBrand ? " · 同品牌" : ""}</div>
+                <div class="c-chan">${sameBuilding ? "同一棟建築" : `往${compassDirection(s, c)}`}${isSameBrand ? " · 同品牌" : ""}</div>
               </div>
             </div>
             <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
@@ -5217,7 +5302,7 @@ function getEffectiveOrigin() {
   if (ROUTE_ORIGIN_PRESETS[selectedOriginPresetId] && ROUTE_ORIGIN_PRESETS[selectedOriginPresetId].lat !== null) {
     return ROUTE_ORIGIN_PRESETS[selectedOriginPresetId];
   }
-  return { id: "tpe_main", name: "台北車站（尚未取得你的位置）", lat: 25.0478, lng: 121.5170 };
+  return { id: "tpe_main", name: "台北車站", lat: 25.0478, lng: 121.5170 };
 }
 
 function formatDurationDisplay(minutes) {
@@ -5378,10 +5463,20 @@ function updateRouteDisplay(s, explicitResult = null) {
   const elMeta = document.getElementById("lblRouteMeta");
   const result = document.getElementById("routeResult");
 
+  const noGps = selectedOriginPresetId === "gps" && !customRouteOrigin && !userLocation;
+  const summary = document.getElementById("lblOriginSummary");
+  if (summary) summary.textContent = orig.name;
+  const depSummary = document.getElementById("lblDepartureSummary");
+  if (depSummary) depSummary.textContent = routeDeparture === "tomorrow9" ? "明早 9:00" : "現在";
+  const gpsHint = document.getElementById("routeGpsHint");
+  if (gpsHint) gpsHint.hidden = !noGps;
+  const gpsOpt = document.querySelector('#selRouteOrigin option[value="gps"]');
+  if (gpsOpt) gpsOpt.textContent = noGps ? "我的位置（尚未取得定位）" : "我的位置";
+
   if (!explicitResult) {
     result.classList.remove("is-error");
     elDur.textContent = "計算中…";
-    elMeta.textContent = `從 ${orig.name}`;
+    elMeta.textContent = "";
   } else if (!explicitResult.success) {
     result.classList.add("is-error");
     elDur.textContent = "暫時無法取得路線";
@@ -5393,7 +5488,7 @@ function updateRouteDisplay(s, explicitResult = null) {
     result.classList.remove("is-error");
     const d = formatDurationDisplay(explicitResult.duration_min);
     elDur.textContent = `${d.val} ${d.unit}`;
-    elMeta.textContent = `${explicitResult.distance_text} · 從 ${orig.name}`;
+    elMeta.textContent = explicitResult.distance_text;
   }
 
   const gMode = currentRouteMode === "transit" ? "transit" : (currentRouteMode === "walking" ? "walking" : "driving");
@@ -5462,6 +5557,8 @@ function initRouteControls(s) {
 
   // GPS Locate Button
   const btnRelocate = document.getElementById("btnRelocateGps");
+  const btnHintLocate = document.getElementById("btnHintLocate");
+  if (btnHintLocate && btnRelocate) btnHintLocate.onclick = () => btnRelocate.onclick();
   if (btnRelocate) {
     btnRelocate.onclick = () => {
       customRouteOrigin = null;
