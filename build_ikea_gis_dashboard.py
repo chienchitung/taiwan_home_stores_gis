@@ -177,6 +177,11 @@ def assign_store_opened_year(s):
 dashboard_stores = [store for store in stores if not store.get('dashboard_excluded')]
 for store in dashboard_stores:
     store['opened_year'] = assign_store_opened_year(store)
+    # 部分資料的座標是字串（例如 "25.010977"）；Leaflet 的 bounds.contains() 會把字串陣列
+    # 誤判成範圍而無限遞迴，導致「只看地圖範圍內」當掉，因此統一轉成數字
+    for key in ('lat', 'lng'):
+        if isinstance(store.get(key), str):
+            store[key] = float(store[key])
 
 shopee_stores = [store for store in dashboard_stores if store.get('brand') == '蝦皮店到店']
 initial_stores = [store for store in dashboard_stores if store.get('brand') != '蝦皮店到店']
@@ -3331,6 +3336,16 @@ aside.collapsed .sidebar-collapse-toggle {
   .col-wide { display: none; }
   .col-narrow-meta { display: block; }
 }
+/* ─── Mobile bottom sheet handle ─── */
+.sheet-handle { display: none; }
+@media (max-width: 768px) {
+  .sheet-handle { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%; padding: 6px 0 4px; border: none; background: #fff; cursor: pointer; flex-shrink: 0; font-family: inherit; }
+  .sheet-grip { width: 40px; height: 4px; border-radius: 999px; background: #CCCCCC; }
+  .sheet-label { font-size: 11px; font-weight: 700; color: #484848; }
+  aside#mainSidebar { display: flex; flex-direction: column; max-height: 52vh; transition: max-height 0.25s ease; }
+  aside#mainSidebar.sheet-expanded { max-height: 88vh !important; }
+  aside#mainSidebar .sidebar-inner-content { flex: 1; min-height: 0; }
+}
 </style>
 </head>
 <body>
@@ -3517,6 +3532,11 @@ aside.collapsed .sidebar-collapse-toggle {
 
   <!-- ═══════════════════════ INTEGRATED SIDEBAR ═══════════════════════ -->
   <aside id="mainSidebar">
+    <!-- 手機版：拖曳把手，切換清單高度 -->
+    <button class="sheet-handle" id="btnSheetHandle" aria-expanded="false" aria-label="展開清單">
+      <span class="sheet-grip"></span>
+      <span class="sheet-label" id="lblSheetHandle">展開清單</span>
+    </button>
 
     <!-- Scheme 4: Collapse Toggle Handle -->
     <button class="sidebar-collapse-toggle" id="btnCollapseSidebar" title="收起側邊面板 (釋放全螢幕地圖)">
@@ -4582,13 +4602,35 @@ function getNonBrandFilteredPool() {
 
   if (isViewportSync && map) {
     const bounds = map.getBounds();
-    pool = pool.filter(s => bounds.contains([s.lat, s.lng]));
+    pool = pool.filter(s => bounds.contains(L.latLng(+s.lat, +s.lng)));
   }
 
   return pool;
 }
 
 /* ─── CORE FILTER & RENDER ─── */
+// 手機版清單高度：點把手或向上／下滑動切換「半屏」與「接近全屏」
+(function initSheetHandle() {
+  const aside = document.getElementById("mainSidebar");
+  const handle = document.getElementById("btnSheetHandle");
+  const setExpanded = (on) => {
+    aside.classList.toggle("sheet-expanded", on);
+    handle.setAttribute("aria-expanded", String(on));
+    handle.setAttribute("aria-label", on ? "收合清單" : "展開清單");
+    document.getElementById("lblSheetHandle").textContent = on ? "收合清單，查看地圖" : "展開清單";
+    setTimeout(() => map && map.invalidateSize(), 260);
+  };
+  handle.onclick = () => setExpanded(!aside.classList.contains("sheet-expanded"));
+  let startY = null;
+  handle.addEventListener("touchstart", e => { startY = e.touches[0].clientY; }, { passive: true });
+  handle.addEventListener("touchend", e => {
+    if (startY === null) return;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dy) > 30) { setExpanded(dy < 0); e.preventDefault(); }
+    startY = null;
+  });
+})();
+
 // 篩選面板：顯示已套用的條件數（營運狀態預設為「現行營運中」，不算在內）
 function updateFilterCount() {
   const n = ["selCity", "selDistrict", "selChannel"].filter(id => document.getElementById(id).value).length
