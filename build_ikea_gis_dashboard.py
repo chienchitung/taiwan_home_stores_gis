@@ -196,6 +196,25 @@ shopee_stores = [
     {key: value for key, value in store.items() if key in SHOPEE_DASHBOARD_FIELDS}
     for store in shopee_stores
 ]
+# 網頁沒有用到的欄位不打包，減少下載與解析量
+UNUSED_FIELDS = {'google_maps_url', 'source_url', 'clean_name', 'coordinate_source',
+                 'verification_status', 'geocode_score', 'location_role', 'core_store',
+                 'is_co_location', 'opened_date'}
+initial_stores = [{k: v for k, v in s.items() if k not in UNUSED_FIELDS} for s in initial_stores]
+
+# 150 公尺內是否有其他品牌：原本在每位使用者的瀏覽器裡兩兩比對，改成建置時算好
+def _haversine_km(a_lat, a_lng, b_lat, b_lng):
+    from math import radians, sin, cos, atan2, sqrt
+    d_lat, d_lng = radians(b_lat - a_lat), radians(b_lng - a_lng)
+    h = sin(d_lat / 2) ** 2 + cos(radians(a_lat)) * cos(radians(b_lat)) * sin(d_lng / 2) ** 2
+    return 6371 * 2 * atan2(sqrt(h), sqrt(1 - h))
+for s in initial_stores:
+    s['_isCoLocation'] = any(
+        o['n'] != s['n'] and o['brand'] != s['brand']
+        and _haversine_km(s['lat'], s['lng'], o['lat'], o['lng']) <= 0.15
+        for o in initial_stores
+    )
+
 STORES_JS = json.dumps(initial_stores, ensure_ascii=False, separators=(',', ':'))
 SHOPEE_STORES_JS = json.dumps(shopee_stores, ensure_ascii=False, separators=(',', ':'))
 ACTIVE_STORE_COUNT = sum(
@@ -3420,6 +3439,7 @@ aside.collapsed .sidebar-collapse-toggle {
 .m-fab-group { display: none; }
 .m-fab-group[hidden] { display: none !important; }
 .store-card { content-visibility: auto; contain-intrinsic-size: auto 230px; }
+.list-sentinel { height: 1px; }
 @media (max-width: 768px) {
   body.m-layout .sheet-top { display: flex; align-items: center; position: relative; flex-shrink: 0; }
   body.m-layout .sheet-top .sheet-handle { flex: 1; }
@@ -3855,9 +3875,10 @@ aside.collapsed .sidebar-collapse-toggle {
 
 <!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
 <script src="vendor/leaflet/leaflet.js"></script>
+<script src="stores_data.js?v=STORES_DATA_VERSION_PLACEHOLDER"></script>
 <script>
 /* ─── DATA INJECTION ─── */
-const ALL_STORES = STORES_DATA_PLACEHOLDER;
+const ALL_STORES = window.ALL_STORES_DATA || [];
 let shopeeDataLoaded = false;
 let shopeeLoadPromise = null;
 let markerClusterLayer = null;
@@ -3926,6 +3947,7 @@ function formatDist(km) {
 
 /* ─── PRECOMPUTE CO-LOCATION HUBS (<= 150m) ─── */
 ALL_STORES.forEach(s => {
+  if (typeof s._isCoLocation === "boolean") return; // 建置時已預先計算
   s._isCoLocation = ALL_STORES.some(o => 
     o.n !== s.n && 
     o.brand !== s.brand && 
@@ -5060,32 +5082,41 @@ function getCachedMarker(s, isNew) {
 }
 
 function renderMarkers(pulseYear = null) {
+  const useClusters = activeDatasetMode === "ecommerce" && typeof L.markerClusterGroup === "function";
+  if (useClusters) {
+    // 電商據點：聚合圖層只建立一次，之後只增減有變化的據點
+    if (!markerClusterLayer) {
+      Object.values(markers).forEach(m => map.removeLayer(m));
+      markers = {};
+      markerClusterLayer = L.markerClusterGroup({
+        chunkedLoading: true,
+        chunkInterval: 80,
+        chunkDelay: 24,
+        maxClusterRadius: 52,
+        disableClusteringAtZoom: 16,
+        removeOutsideVisibleBounds: true
+      });
+      map.addLayer(markerClusterLayer);
+    }
+    const next = {};
+    const toAdd = [];
+    filteredStores.forEach(s => {
+      const key = "s" + s.n;
+      const mk = getCachedMarker(s, pulseYear && s.opened_year === pulseYear);
+      next[key] = mk;
+      if (!markers[key]) toAdd.push(mk);
+    });
+    const toRemove = Object.keys(markers).filter(k => !next[k]).map(k => markers[k]);
+    if (toRemove.length) markerClusterLayer.removeLayers(toRemove);
+    if (toAdd.length) markerClusterLayer.addLayers(toAdd);
+    markers = next;
+    return;
+  }
   if (markerClusterLayer) {
     map.removeLayer(markerClusterLayer);
     markerClusterLayer.clearLayers();
     markerClusterLayer = null;
-  }
-
-  const useClusters = activeDatasetMode === "ecommerce" && typeof L.markerClusterGroup === "function";
-  if (useClusters) {
-    Object.values(markers).forEach(m => map.removeLayer(m));
     markers = {};
-    markerClusterLayer = L.markerClusterGroup({
-      chunkedLoading: true,
-      chunkInterval: 80,
-      chunkDelay: 24,
-      maxClusterRadius: 52,
-      disableClusteringAtZoom: 16,
-      removeOutsideVisibleBounds: true
-    });
-    const clusterMarkers = filteredStores.map(s => {
-      const mk = getCachedMarker(s, pulseYear && s.opened_year === pulseYear);
-      markers["s" + s.n] = mk;
-      return mk;
-    });
-    markerClusterLayer.addLayers(clusterMarkers);
-    map.addLayer(markerClusterLayer);
-    return;
   }
 
   const next = {};
@@ -5124,19 +5155,45 @@ function renderList() {
   else renderTable(container);
 }
 
-// 卡片分批建立：先畫第一批，其餘在空檔補上；新的 render 會取消舊的批次
-let cardRenderToken = 0;
-function appendCardsChunked(jobs) {
-  const token = ++cardRenderToken;
+// 清單分批建立：先畫第一批，其餘等捲到底部附近才建立（清單收起或在畫面外時完全不建立）。
+// 新的 render 會取消舊的批次。卡片與表格列共用。
+let listBuildToken = 0;
+let listBuildObserver = null;
+function buildListLazily(container, jobs, build) {
+  const token = ++listBuildToken;
+  if (listBuildObserver) { listBuildObserver.disconnect(); listBuildObserver = null; }
   let i = 0;
-  const FIRST = 24, CHUNK = 40;
+  const FIRST = 24, CHUNK = 30;
+  const sentinel = document.createElement("div");
+  sentinel.className = "list-sentinel";
+  sentinel.setAttribute("aria-hidden", "true");
+  container.appendChild(sentinel);
   const run = (limit) => {
-    if (token !== cardRenderToken) return;
+    if (token !== listBuildToken) return;
     const end = Math.min(jobs.length, i + limit);
-    for (; i < end; i++) jobs[i].wrap.appendChild(createStoreCardElement(jobs[i].s));
-    if (i < jobs.length) setTimeout(() => run(CHUNK), 16);
+    for (; i < end; i++) jobs[i].wrap.appendChild(build(jobs[i].s));
+    if (i >= jobs.length) {
+      sentinel.remove();
+      if (listBuildObserver) { listBuildObserver.disconnect(); listBuildObserver = null; }
+    }
   };
+  sentinel.addEventListener("build-more", () => run(CHUNK));
   run(FIRST);
+  if (i < jobs.length) {
+    if (!("IntersectionObserver" in window)) { run(jobs.length); return; }
+    listBuildObserver = new IntersectionObserver(entries => {
+      if (entries.some(e => e.isIntersecting)) run(CHUNK);
+    }, { rootMargin: "600px 0px" });
+    listBuildObserver.observe(sentinel);
+  }
+}
+
+// 需要某張卡片存在時（例如點地圖標記要捲到對應卡片），把清單補建到該門市為止
+function ensureListBuiltUntil(key) {
+  let sentinel;
+  while (!document.querySelector(`[data-key="${key}"]`) && (sentinel = document.querySelector(".list-sentinel"))) {
+    sentinel.dispatchEvent(new CustomEvent("build-more"));
+  }
 }
 
 function renderCards(container) {
@@ -5151,7 +5208,7 @@ function renderCards(container) {
   if (isSortedByDistance && userLocation) {
     const cardsWrap = document.createElement("div");
     container.appendChild(cardsWrap);
-    appendCardsChunked(displayStores.map(s => ({ wrap: cardsWrap, s })));
+    buildListLazily(container, displayStores.map(s => ({ wrap: cardsWrap, s })), createStoreCardElement);
     return;
   }
 
@@ -5188,7 +5245,7 @@ function renderCards(container) {
     list.forEach(s => jobs.push({ wrap: cardsWrap, s }));
     container.appendChild(cardsWrap);
   });
-  appendCardsChunked(jobs);
+  buildListLazily(container, jobs, createStoreCardElement);
 }
 
 function createStoreCardElement(s) {
@@ -5269,7 +5326,7 @@ function renderTable(container) {
     notice.textContent = `為維持流暢度，表格先顯示 200 筆；地圖仍包含全部 ${filteredStores.length} 間。`;
     container.appendChild(notice);
   }
-  displayStores.forEach(s => {
+  const buildRow = (s) => {
     const key = "s" + s.n;
     const cfg = BRANDS[s.brand] || { color: "#0058A3" };
     const tableBrand = cfg.tableLabel || s.brand;
@@ -5310,8 +5367,9 @@ function renderTable(container) {
       selectStore(key, s, true);
       openStoreDrawer(s, "info");
     };
-    tbody.appendChild(tr);
-  });
+    return tr;
+  };
+  buildListLazily(wrap, displayStores.map(s => ({ wrap: tbody, s })), buildRow);
 }
 
 /* ─── P1: CATCHMENT BUFFER CIRCLE & DRAWER CONTROLLER ─── */
@@ -6239,6 +6297,7 @@ function selectStore(key, s, flyTo) {
     r.style.background = (r.dataset.key === key) ? "#EBF4FC" : "";
   });
 
+  ensureListBuiltUntil(key);
   const cardEl = document.querySelector(`[data-key="${key}"]`);
   if (cardEl) cardEl.scrollIntoView({ block: "nearest", behavior: "smooth" });
 
@@ -6790,8 +6849,16 @@ render();
 </body>
 </html>"""
 
+# 門市資料獨立成檔案：瀏覽器可分開快取；內容雜湊當版本號，資料更新時網址會變、不會讀到舊快取
+import hashlib
+STORES_DATA_FILE = "window.ALL_STORES_DATA=" + STORES_JS + ";\n"
+STORES_DATA_VERSION = hashlib.sha1(STORES_DATA_FILE.encode("utf-8")).hexdigest()[:10]
+with open(os.path.join(BASE_DIR, "stores_data.js"), "w", encoding="utf-8") as f:
+    f.write(STORES_DATA_FILE)
+print(f"Generated successfully: {os.path.join(BASE_DIR, 'stores_data.js')} ({len(STORES_DATA_FILE.encode('utf-8')):,} bytes)")
+
 HTML = (HTML_TEMPLATE
-        .replace("STORES_DATA_PLACEHOLDER", STORES_JS)
+        .replace("STORES_DATA_VERSION_PLACEHOLDER", STORES_DATA_VERSION)
         .replace("ACTIVE_STORE_COUNT_PLACEHOLDER", str(ACTIVE_STORE_COUNT))
         .replace("DATA_UPDATED_DATE_PLACEHOLDER", DATA_UPDATED_DATE))
 
