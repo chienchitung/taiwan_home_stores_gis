@@ -3264,14 +3264,11 @@ aside.collapsed .sidebar-collapse-toggle {
 .badge-same-building { font-size:11px; font-weight:700; color:#111; background:#FFDB00; border-radius:4px; padding:1px 6px; }
 /* Mobile: store detail gets more room, tighter spacing */
 @media (max-width: 768px) {
-  aside:has(#sidebarDetailSection[style*="flex"]) { max-height: 64vh; }
   .sk-section { margin-bottom: 10px; }
   #paneDetailRoute .route-mode-switcher { margin-bottom: 10px; }
   .sk-route-result { padding: 10px 0; margin-bottom: 10px; }
   .sk-route-duration { font-size: 20px; }
   .sk-btn { min-height: 44px; }
-  body:has(#sidebarDetailSection[style*="flex"]) .map-controls-dock,
-  body:has(#sidebarDetailSection[style*="flex"]) .region-jump-bar { display: none; }
 }
 /* ─── Drawer v3: compact header, facts, collapsible origin ─── */
 #sidebarDetailSection .detail-nav-top { display: none; }
@@ -3336,22 +3333,84 @@ aside.collapsed .sidebar-collapse-toggle {
   .col-wide { display: none; }
   .col-narrow-meta { display: block; }
 }
-/* ─── Mobile bottom sheet handle ─── */
-.sheet-handle { display: none; }
-@media (max-width: 768px) {
-  .sheet-handle { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%; padding: 6px 0 4px; border: none; background: #fff; cursor: pointer; flex-shrink: 0; font-family: inherit; }
-  .sheet-grip { width: 40px; height: 4px; border-radius: 999px; background: #CCCCCC; }
-  .sheet-label { font-size: 11px; font-weight: 700; color: #484848; }
-  aside#mainSidebar { display: flex; flex-direction: column; max-height: 52vh; transition: max-height 0.25s ease; }
-  aside#mainSidebar.sheet-expanded { max-height: 88vh !important; }
-  aside#mainSidebar .sidebar-inner-content { flex: 1; min-height: 0; }
-}
 /* 手機或矮螢幕：整個清單面板一起捲動。原本只有卡片區可捲，展開篩選＋品牌比較時
    上方固定區會比面板還高，把清單整個擠出畫面而無法操作 */
 @media (max-width: 768px), (max-height: 720px) {
   #sidebarListSection { overflow-y: auto; }
   #sidebarListSection > * { flex-shrink: 0; }
   #sidebarListSection .store-cards-container { flex: none; overflow: visible; }
+}
+/* ═══════════ MOBILE LAYOUT（≤768px）：地圖在上、底部抽屜 ═══════════ */
+.m-topbar, .m-brand-slot, .m-row-actions, .m-applied-chips, .sheet-handle { display: none; }
+.m-filter-page[hidden], .m-menu-popover[hidden], .m-applied-chips[hidden] { display: none !important; }
+@media (max-width: 768px) {
+  body.m-layout { height: 100dvh; overflow: hidden; }
+  body.m-layout > header { display: none !important; }
+  body.m-layout .workspace { height: 100dvh; flex-direction: row !important; }
+  body.m-layout .map-wrap { position: absolute; inset: 0; }
+
+  /* 上方浮動搜尋列 */
+  .m-topbar { display: flex; align-items: center; gap: 8px; position: absolute; top: calc(8px + env(safe-area-inset-top)); left: 12px; right: 12px; z-index: 900; }
+  .m-logo-slot .ikea-logo-box { padding: 0; background: none; box-shadow: none; }
+  .m-logo-slot svg { width: 52px !important; height: auto !important; }
+  .m-search-slot { flex: 1; min-width: 0; }
+  .m-search-slot .search-input-group { width: 100%; box-shadow: 0 2px 8px rgba(0,0,0,0.15); border-radius: 999px; background: #fff; }
+  .m-search-slot .search-input-main { height: 44px; font-size: 16px; } /* 16px 避免 iOS 自動放大 */
+  .m-icon-btn { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; border: none; background: #fff; color: #111; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer; }
+  .m-menu-popover { position: absolute; top: 52px; right: 0; z-index: 950; background: #fff; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.18); padding: 8px; display: flex; flex-direction: column; gap: 6px; min-width: 220px; }
+  .m-menu-popover button { width: 100%; justify-content: flex-start; min-height: 44px; }
+
+  /* 地圖上的品牌列 */
+  .m-brand-slot { display: block; position: absolute; top: calc(60px + env(safe-area-inset-top)); left: 0; right: 0; z-index: 880; pointer-events: none; }
+  .m-brand-slot .brand-strip { background: transparent !important; border: none !important; padding: 0 12px !important; pointer-events: auto; }
+  .m-brand-slot .brand-chips-wrap > * { box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+
+  /* 底圖選單：品牌列下方右側 */
+  body.m-layout .map-controls-dock { top: calc(108px + env(safe-area-inset-top)) !important; left: auto !important; right: 12px; }
+  body.m-layout .map-control-trigger-btn .pill-active-style { display: none; }
+  body.m-layout .map-style-dropdown { right: 0; left: auto; width: 260px; }
+  body.m-layout .floating-open-sidebar-btn, body.m-layout .sidebar-collapse-toggle { display: none !important; }
+
+  /* 定位／縮放按鈕永遠在抽屜上方 */
+  body.m-layout .leaflet-bottom { bottom: var(--m-sheet-h, 50vh); transition: bottom 0.25s ease; }
+  body.m-layout .google-nav-control-group { margin-bottom: 12px !important; }
+  body.m-layout .leaflet-left .google-nav-control-group { margin-left: 12px !important; }
+
+  /* 底部抽屜 */
+  body.m-layout aside#mainSidebar { position: fixed; left: 0; right: 0; bottom: 0; width: 100% !important; max-height: none !important; flex: none; z-index: 1000; border: none; border-radius: 16px 16px 0 0; box-shadow: 0 -4px 20px rgba(0,0,0,0.15); transition: height 0.25s ease; padding-bottom: env(safe-area-inset-bottom); display: flex; flex-direction: column; }
+  body.m-layout aside#mainSidebar .sidebar-inner-content { flex: 1; min-height: 0; width: 100% !important; }
+  body.m-layout .sheet-handle { display: flex; justify-content: center; width: 100%; padding: 10px 0 6px; border: none; background: transparent; cursor: grab; flex-shrink: 0; touch-action: none; }
+  body.m-layout .sheet-grip { width: 40px; height: 5px; border-radius: 999px; background: #CCCCCC; }
+  body.m-layout .sidebar-control-box { display: none; }
+  body.m-layout .results-meta-bar { padding: 4px 16px 8px; border-bottom: none; }
+  body.m-layout .results-count-text strong { font-size: 16px; }
+  body.m-layout .view-switch-btns { display: none; }
+  .m-row-actions { gap: 8px; }
+  body.m-layout .m-row-actions { display: flex; }
+  body.m-layout .m-row-actions .btn-locate-me, body.m-layout .m-row-actions .btn-filter-toggle { min-height: 40px; flex: none; padding: 0 12px; }
+  body.m-layout .m-row-actions .btn-locate-me span { font-size: 13px; }
+  body.m-layout .m-applied-chips { display: flex; gap: 6px; overflow-x: auto; padding: 0 16px 8px; scrollbar-width: none; }
+  .m-chip { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--ikea-blue); background: #EBF3FA; color: var(--ikea-blue); font-size: 12px; font-weight: 700; font-family: inherit; cursor: pointer; }
+  .m-chip span { font-size: 14px; }
+  body.m-layout.timeline-mode-active aside#mainSidebar, body.m-layout.timeline-mode-active .m-brand-slot { display: none !important; }
+  body.m-layout.timeline-mode-active .leaflet-bottom { bottom: 0; }
+
+  /* 全螢幕篩選頁 */
+  .m-filter-page { position: fixed; inset: 0; z-index: 2000; background: #fff; display: flex; flex-direction: column; }
+  .m-filter-head { display: flex; align-items: center; justify-content: space-between; padding: calc(8px + env(safe-area-inset-top)) 12px 8px 16px; border-bottom: 1px solid #DFDFDF; }
+  .m-filter-head h2 { margin: 0; font-size: 18px; }
+  .m-filter-head .m-icon-btn { box-shadow: none; }
+  .m-filter-body { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 20px; }
+  .m-filter-label { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 8px; }
+  #mFilterSlot .filter-panel, #mFilterSlot .filter-panel[hidden] { display: flex !important; margin: 0; }
+  #mFilterSlot .btn-reset-filters { display: none; }
+  #mFilterSlot .custom-select { min-height: 44px; font-size: 14px; }
+  #mDatasetSlot .dataset-switch { margin: 0; }
+  #mViewportSlot .viewport-sync-label { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; color: #111; }
+  #mViewportSlot input { width: 20px; height: 20px; accent-color: var(--ikea-blue); }
+  #mRegionSlot .region-jump-bar { position: static !important; transform: none !important; max-width: none !important; display: flex !important; flex-wrap: wrap; gap: 8px; background: none !important; border: none !important; box-shadow: none !important; backdrop-filter: none; padding: 0 !important; overflow: visible !important; }
+  #mRegionSlot .btn-region-jump { border: 1px solid #DFDFDF; min-height: 40px; }
+  .m-filter-foot { display: grid; grid-template-columns: 1fr 2fr; gap: 8px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid #DFDFDF; }
 }
 </style>
 </head>
@@ -3393,6 +3452,17 @@ aside.collapsed .sidebar-collapse-toggle {
   <!-- Map Wrap -->
   <div class="map-wrap">
     <div id="map"></div>
+
+    <!-- 手機版：地圖上方浮動搜尋列與品牌列（桌機不顯示，內容由 mobileLayout 搬入） -->
+    <div class="m-topbar" id="mTopbar">
+      <div class="m-logo-slot" id="mLogoSlot"></div>
+      <div class="m-search-slot" id="mSearchSlot"></div>
+      <button class="m-icon-btn" id="btnMobileMenu" aria-label="更多功能" aria-expanded="false" aria-controls="mMenuPopover">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></svg>
+      </button>
+      <div class="m-menu-popover" id="mMenuPopover" hidden></div>
+    </div>
+    <div class="m-brand-slot" id="mBrandSlot"></div>
 
     <!-- SECTION 3: Region Quick Jump Bar with Interactive Boundary Envelopes -->
     <div class="region-jump-bar" id="regionJumpBar">
@@ -3540,9 +3610,8 @@ aside.collapsed .sidebar-collapse-toggle {
   <!-- ═══════════════════════ INTEGRATED SIDEBAR ═══════════════════════ -->
   <aside id="mainSidebar">
     <!-- 手機版：拖曳把手，切換清單高度 -->
-    <button class="sheet-handle" id="btnSheetHandle" aria-expanded="false" aria-label="展開清單">
+    <button class="sheet-handle" id="btnSheetHandle" aria-label="調整清單高度">
       <span class="sheet-grip"></span>
-      <span class="sheet-label" id="lblSheetHandle">展開清單</span>
     </button>
 
     <!-- Scheme 4: Collapse Toggle Handle -->
@@ -3654,6 +3723,7 @@ aside.collapsed .sidebar-collapse-toggle {
             </label>
             <span id="lblViewportIndicator" hidden></span>
           </div>
+          <div class="m-row-actions" id="mRowActions"></div>
           <div class="view-switch-btns">
             <button class="view-btn active" id="vtCards">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
@@ -3665,6 +3735,7 @@ aside.collapsed .sidebar-collapse-toggle {
             </button>
           </div>
         </div>
+        <div class="m-applied-chips" id="mAppliedChips" hidden></div>
         <div class="viewport-hint-bar" id="viewportHintBar" style="display:none;">
           <span class="hint-dot"></span>
           <span id="viewportHintText">目前地圖涵蓋全台，放大或拖曳地圖後清單會跟著更新。</span>
@@ -3724,6 +3795,25 @@ aside.collapsed .sidebar-collapse-toggle {
 </div>
 
 <!-- Copy Feedback Toast -->
+<!-- 手機版：全螢幕篩選頁（內容由 mobileLayout 搬入） -->
+<div class="m-filter-page" id="mFilterPage" role="dialog" aria-modal="true" aria-labelledby="mFilterTitle" hidden>
+  <div class="m-filter-head">
+    <h2 id="mFilterTitle">篩選</h2>
+    <button class="m-icon-btn" id="btnMobileFilterClose" aria-label="關閉篩選">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </div>
+  <div class="m-filter-body">
+    <div class="m-filter-group"><div class="m-filter-label">資料類型</div><div id="mDatasetSlot"></div></div>
+    <div class="m-filter-group"><div class="m-filter-label">條件</div><div id="mFilterSlot"></div></div>
+    <div class="m-filter-group"><div class="m-filter-label">地圖</div><div id="mViewportSlot"></div><div id="mRegionSlot"></div></div>
+  </div>
+  <div class="m-filter-foot">
+    <button class="sk-btn sk-btn-secondary" id="btnMobileFilterReset">重設</button>
+    <button class="sk-btn sk-btn-primary" id="btnMobileFilterApply">顯示門市</button>
+  </div>
+</div>
+
 <div class="toast-msg" id="toastMsg">已複製門市地址至剪貼簿！</div>
 
 <!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
@@ -4616,26 +4706,169 @@ function getNonBrandFilteredPool() {
 }
 
 /* ─── CORE FILTER & RENDER ─── */
-// 手機版清單高度：點把手或向上／下滑動切換「半屏」與「接近全屏」
-(function initSheetHandle() {
-  const aside = document.getElementById("mainSidebar");
+/* ═══════════ MOBILE LAYOUT（≤768px）═══════════
+   地圖在上、底部抽屜在下。不複製任何控制項：把現有元素搬進手機容器，
+   回到桌機寬度時再搬回原位，所以所有事件與狀態都沿用原本的程式。 */
+const MOBILE_MQ = window.matchMedia("(max-width: 768px)");
+const MOBILE_MOVES = [
+  [".ikea-logo-box", "mLogoSlot"],
+  [".search-input-group", "mSearchSlot"],
+  ["#btnToggleTimeline", "mMenuPopover"],
+  ["#btnExport", "mMenuPopover"],
+  [".brand-strip", "mBrandSlot"],
+  ["#btnLocateMe", "mRowActions"],
+  ["#btnFilterToggle", "mRowActions"],
+  [".dataset-switch", "mDatasetSlot"],
+  ["#filterPanel", "mFilterSlot"],
+  [".results-count-text .viewport-sync-label", "mViewportSlot"],
+  ["#regionJumpBar", "mRegionSlot"]
+];
+const mobileHomes = new Map();   // element -> placeholder comment at its desktop position
+let sheetState = "half";          // peek | half | full | route
+let sheetBeforeRoute = "half";
+
+function isMobileLayout() { return MOBILE_MQ.matches; }
+
+function applyMobileLayout() {
+  const mobile = isMobileLayout();
+  document.body.classList.toggle("m-layout", mobile);
+  MOBILE_MOVES.forEach(([sel, slotId]) => {
+    if (mobile) {
+      const el = document.querySelector(sel);
+      if (!el || mobileHomes.has(el)) return;
+      const ph = document.createComment("m-home");
+      el.parentNode.insertBefore(ph, el);
+      mobileHomes.set(el, ph);
+      document.getElementById(slotId).appendChild(el);
+    }
+  });
+  if (!mobile) {
+    mobileHomes.forEach((ph, el) => { ph.parentNode.insertBefore(el, ph); ph.remove(); });
+    mobileHomes.clear();
+    closeMobileFilter();
+    document.getElementById("mainSidebar").style.height = "";
+    document.body.style.removeProperty("--m-sheet-h");
+  } else {
+    if (viewMode === "table") document.getElementById("vtCards").click(); // 手機一律卡片
+    setSheet(sheetState);
+  }
+  setTimeout(() => map && map.invalidateSize(), 50);
+}
+
+function sheetHeightFor(state) {
+  const h = window.innerHeight;
+  if (state === "peek") return 132;
+  if (state === "route") return Math.min(430, Math.round(h * 0.52));
+  if (state === "full") return Math.round(h * 0.9);
+  return Math.round(h * 0.5);
+}
+
+function setSheet(state) {
+  sheetState = state;
+  if (!isMobileLayout()) return;
+  const px = sheetHeightFor(state);
+  document.getElementById("mainSidebar").style.height = px + "px";
+  document.body.style.setProperty("--m-sheet-h", px + "px");
+  document.getElementById("btnSheetHandle").setAttribute("aria-label",
+    state === "full" ? "收合清單" : "展開清單");
+}
+
+// 把地圖上的點移到「抽屜上方可見區域」的中央
+function panToVisible(lat, lng) {
+  if (!isMobileLayout() || !map) return;
+  const rect = map.getContainer().getBoundingClientRect();
+  const sheetH = sheetHeightFor(sheetState);
+  const topUsed = 112; // 搜尋列＋品牌列
+  const visibleCenterY = (topUsed + (rect.height - sheetH)) / 2;
+  const pt = map.latLngToContainerPoint([lat, lng]);
+  map.panBy([pt.x - rect.width / 2, pt.y - visibleCenterY], { animate: true });
+}
+
+function openMobileFilter() {
+  const page = document.getElementById("mFilterPage");
+  page.hidden = false;
+  document.getElementById("btnFilterToggle").setAttribute("aria-expanded", "true");
+  document.getElementById("btnMobileFilterClose").focus();
+}
+function closeMobileFilter() {
+  const page = document.getElementById("mFilterPage");
+  if (page.hidden) return;
+  page.hidden = true;
+  document.getElementById("btnFilterToggle").setAttribute("aria-expanded", "false");
+}
+
+// 已套用條件：在抽屜顯示可移除的標籤
+function renderAppliedChips() {
+  const box = document.getElementById("mAppliedChips");
+  if (!box) return;
+  const items = [];
+  [["selCity", ""], ["selDistrict", ""], ["selChannel", ""], ["selStatus", "現行營運中"]].forEach(([id, def]) => {
+    const sel = document.getElementById(id);
+    if (sel.value !== def) {
+      const label = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].textContent.replace(/\s*\(\d+\)$/, "") : sel.value;
+      items.push(`<button class="m-chip" data-sel="${id}" data-def="${def}" aria-label="移除條件：${label}">${label}<span aria-hidden="true">×</span></button>`);
+    }
+  });
+  box.innerHTML = items.join("");
+  box.hidden = items.length === 0;
+}
+document.getElementById("mAppliedChips").addEventListener("click", e => {
+  const chip = e.target.closest(".m-chip");
+  if (!chip) return;
+  const sel = document.getElementById(chip.dataset.sel);
+  sel.value = chip.dataset.def;
+  sel.dispatchEvent(new Event("change"));
+});
+
+(function initMobileControls() {
   const handle = document.getElementById("btnSheetHandle");
-  const setExpanded = (on) => {
-    aside.classList.toggle("sheet-expanded", on);
-    handle.setAttribute("aria-expanded", String(on));
-    handle.setAttribute("aria-label", on ? "收合清單" : "展開清單");
-    document.getElementById("lblSheetHandle").textContent = on ? "收合清單，查看地圖" : "展開清單";
-    setTimeout(() => map && map.invalidateSize(), 260);
+  const order = ["peek", "half", "full"];
+  const step = dir => {
+    const cur = sheetState === "route" ? 1 : order.indexOf(sheetState);
+    setSheet(order[Math.max(0, Math.min(order.length - 1, cur + dir))]);
   };
-  handle.onclick = () => setExpanded(!aside.classList.contains("sheet-expanded"));
+  handle.onclick = () => { if (sheetState === "full") setSheet("half"); else step(1); };
   let startY = null;
   handle.addEventListener("touchstart", e => { startY = e.touches[0].clientY; }, { passive: true });
   handle.addEventListener("touchend", e => {
     if (startY === null) return;
     const dy = e.changedTouches[0].clientY - startY;
-    if (Math.abs(dy) > 30) { setExpanded(dy < 0); e.preventDefault(); }
+    if (Math.abs(dy) > 30) { step(dy < 0 ? 1 : -1); e.preventDefault(); }
     startY = null;
   });
+
+  const menuBtn = document.getElementById("btnMobileMenu");
+  const menu = document.getElementById("mMenuPopover");
+  menuBtn.onclick = (e) => {
+    e.stopPropagation();
+    menu.hidden = !menu.hidden;
+    menuBtn.setAttribute("aria-expanded", String(!menu.hidden));
+  };
+  document.addEventListener("click", e => {
+    if (!menu.hidden && !menu.contains(e.target) && e.target !== menuBtn) {
+      menu.hidden = true;
+      menuBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+  menu.addEventListener("click", () => { menu.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); });
+
+  document.getElementById("btnMobileFilterClose").onclick = closeMobileFilter;
+  document.getElementById("btnMobileFilterApply").onclick = () => { closeMobileFilter(); if (sheetState === "peek") setSheet("half"); };
+  document.getElementById("btnMobileFilterReset").onclick = () => document.getElementById("btnResetAll").click();
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeMobileFilter(); });
+
+  MOBILE_MQ.addEventListener("change", applyMobileLayout);
+  // 手機初始畫面：讓全台落在「搜尋列下方、抽屜上方」的可見區域
+  if (isMobileLayout()) {
+    setTimeout(() => {
+      map.invalidateSize();
+      map.fitBounds([[21.85, 119.95], [25.35, 122.05]], {
+        paddingTopLeft: [12, 110], paddingBottomRight: [12, sheetHeightFor(sheetState) + 12], animate: false
+      });
+    }, 0);
+  }
+  window.addEventListener("resize", () => { if (isMobileLayout()) setSheet(sheetState); });
+  applyMobileLayout();
 })();
 
 // 篩選面板：顯示已套用的條件數（營運狀態預設為「現行營運中」，不算在內）
@@ -4646,9 +4879,11 @@ function updateFilterCount() {
   badge.textContent = n;
   badge.hidden = n === 0;
   document.getElementById("btnFilterToggle").classList.toggle("has-filters", n > 0);
+  renderAppliedChips();
 }
 
 document.getElementById("btnFilterToggle").onclick = () => {
+  if (isMobileLayout()) { openMobileFilter(); return; }
   const panel = document.getElementById("filterPanel");
   panel.hidden = !panel.hidden;
   document.getElementById("btnFilterToggle").setAttribute("aria-expanded", String(!panel.hidden));
@@ -4735,6 +4970,7 @@ function render() {
     document.getElementById("lblCount").textContent = `${filteredStores.length} 間門市${brandSuffix}`;
   }
   document.getElementById("lblFloatingCount").textContent = filteredStores.length;
+  document.getElementById("btnMobileFilterApply").textContent = `顯示 ${filteredStores.length} 間門市`;
   syncBrandPills();
   if (isPkMode) updatePkBanner(nonBrandPool);
   renderMarkers();
@@ -5021,6 +5257,10 @@ function switchDetailTab(tabName) {
     pane.classList.toggle("active", pane.id === targetPaneId);
   });
 
+  if (isMobileLayout()) {
+    if (tabName === "route" && sheetState !== "route") { sheetBeforeRoute = sheetState; setSheet("route"); }
+    else if (tabName !== "route" && sheetState === "route") setSheet(sheetBeforeRoute === "route" ? "half" : sheetBeforeRoute);
+  }
   if (tabName === "route" && currentDetailStore && runRouteFetch) {
     runRouteFetch();
   }
@@ -5203,6 +5443,10 @@ function openStoreDrawer(s, preferredTab = null) {
   `;
 
   clearActiveRoute();
+  if (isMobileLayout()) {
+    if (sheetState === "peek" || sheetState === "full") setSheet("half");
+    setTimeout(() => panToVisible(s.lat, s.lng), 350);
+  }
   initCatchmentControls(s);
   updateCatchmentList(s);
   initRouteControls(s);
@@ -5549,7 +5793,10 @@ function drawPolylineOnMap(result, orig) {
     .bindTooltip(`出發地：${orig.name}`, { direction: "top" })
     .addTo(map);
 
-  map.fitBounds(L.latLngBounds(all), { padding: [60, 60] });
+  const sheetPad = isMobileLayout() ? sheetHeightFor(sheetState) : 0;
+  map.fitBounds(L.latLngBounds(all), isMobileLayout()
+    ? { paddingTopLeft: [40, 130], paddingBottomRight: [40, sheetPad + 30] }
+    : { padding: [60, 60] });
 }
 
 function updateRouteDisplay(s, explicitResult = null) {
@@ -5742,6 +5989,7 @@ function initRouteControls(s) {
 }
 
 function closeStoreDrawer() {
+  if (isMobileLayout() && sheetState === "route") setSheet("half");
   document.getElementById("sidebarDetailSection").style.display = "none";
   document.getElementById("sidebarListSection").style.display = "flex";
   currentDetailStore = null;
