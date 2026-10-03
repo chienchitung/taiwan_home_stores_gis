@@ -3227,8 +3227,17 @@ aside.collapsed .sidebar-collapse-toggle {
 .sk-btn-secondary { background:#fff; color:#111; border:1px solid #929292; }
 .sk-btn-secondary:hover { border-color:#111; }
 .sk-link-btn { background:none; border:none; color:#484848; font-size:13px; text-decoration:underline; cursor:pointer; padding:6px; font-family:inherit; }
-.sk-origin-row { display:flex; gap:8px; align-items:center; }
-.sk-origin-row .sel-route-origin { flex:1; min-width:0; height:40px; }
+.sk-origin-stack { display:flex; flex-direction:column; gap:8px; }
+/* 自訂下拉箭頭，避免原生箭頭貼到膠囊圓角外 */
+#paneDetailRoute .sel-route-origin {
+  -webkit-appearance:none; appearance:none; width:100%; height:44px; flex:none;
+  padding:0 40px 0 16px; font-size:14px; border-radius:999px;
+  background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23111' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 16px center;
+}
+.sk-btn-sm { min-height:40px; font-size:13px; padding:0 12px; }
+.sk-btn-secondary.picking { background:var(--ikea-blue); border-color:var(--ikea-blue); color:#fff; }
+/* .sk-section 是 flex，需明確讓 hidden 生效（非大眾運輸時隱藏出發時間） */
+.sk-section[hidden] { display:none; }
 .sk-route-result { padding:14px 0; margin-bottom:12px; border-top:1px solid #DFDFDF; border-bottom:1px solid #DFDFDF; }
 .sk-route-duration { font-size:24px; font-weight:700; color:#111; line-height:1.2; }
 .sk-route-meta { font-size:13px; color:#484848; margin-top:4px; }
@@ -4973,7 +4982,7 @@ function openStoreDrawer(s, preferredTab = null) {
 
         <div class="sk-section">
           <label class="sk-label" for="selRouteOrigin">出發地</label>
-          <div class="sk-origin-row">
+          <div class="sk-origin-stack">
             <select id="selRouteOrigin" class="sel-route-origin">
               <option value="gps">我的位置</option>
               <option value="tpe_main">台北車站</option>
@@ -4984,8 +4993,11 @@ function openStoreDrawer(s, preferredTab = null) {
               <option value="zuoying">左營高鐵站</option>
               <option value="custom" disabled>地圖選點</option>
             </select>
-            <button class="sk-icon-btn" id="btnRelocateGps" title="使用我的位置" aria-label="使用我的位置">${SVG.gps}</button>
-            <button class="sk-icon-btn" id="btnPickOriginOnMap" title="在地圖上點選出發地" aria-label="在地圖上點選出發地">${SVG.crosshair}</button>
+            <div class="sk-btn-row">
+              <button class="sk-btn sk-btn-secondary sk-btn-sm" id="btnRelocateGps">${SVG.gps} 用我目前的位置</button>
+              <button class="sk-btn sk-btn-secondary sk-btn-sm" id="btnPickOriginOnMap">${SVG.crosshair} <span id="lblPickOrigin">在地圖上點選</span></button>
+            </div>
+
           </div>
         </div>
 
@@ -5470,16 +5482,20 @@ function initRouteControls(s) {
       if (isMapPickingOrigin) {
         isMapPickingOrigin = false;
         btnPick.classList.remove("picking");
+        document.getElementById("lblPickOrigin").textContent = "在地圖上點選";
         map.getContainer().style.cursor = "";
         return;
       }
       isMapPickingOrigin = true;
       btnPick.classList.add("picking");
+      document.getElementById("lblPickOrigin").textContent = "請點地圖（再按取消）";
       map.getContainer().style.cursor = "crosshair";
 
       map.once("click", (e) => {
         isMapPickingOrigin = false;
         btnPick.classList.remove("picking");
+        const lblPick = document.getElementById("lblPickOrigin");
+        if (lblPick) lblPick.textContent = "在地圖上點選";
         map.getContainer().style.cursor = "";
 
         customRouteOrigin = {
