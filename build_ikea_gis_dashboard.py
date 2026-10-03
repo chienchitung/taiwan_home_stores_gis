@@ -204,7 +204,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>台灣實體門市 GIS 地理圖資儀表板</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <style>
 :root {
   /* ================= IKEA SKAPA 設計規範對齊 =================
@@ -3238,6 +3238,27 @@ aside.collapsed .sidebar-collapse-toggle {
 .sk-switch { display:inline-flex; align-items:center; gap:6px; font-size:12px; color:#484848; cursor:pointer; }
 .sk-switch input { accent-color:var(--ikea-blue); width:16px; height:16px; }
 .sk-empty { font-size:13px; color:#484848; padding:12px 0; }
+
+/* Zoomed-out overview markers */
+.map-overview .brand-pin-marker svg { transform: scale(0.5); transform-origin: 50% 100%; }
+.map-overview .brand-pin-marker svg text { display: none; }
+/* Nearby list brand filter */
+.sk-brand-chips { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0; }
+.sk-brand-chip { display:inline-flex; align-items:center; gap:5px; min-height:32px; padding:0 10px; border-radius:999px; border:1px solid #DFDFDF; background:#fff; font-size:12px; font-weight:700; color:#111; cursor:pointer; font-family:inherit; }
+.sk-brand-chip.active { border-color:#111; background:#111; color:#fff; }
+.sk-brand-chip .brand-dot { width:8px; height:8px; border-radius:50%; }
+.badge-same-building { font-size:11px; font-weight:700; color:#111; background:#FFDB00; border-radius:4px; padding:1px 6px; }
+/* Mobile: store detail gets more room, tighter spacing */
+@media (max-width: 768px) {
+  aside:has(#sidebarDetailSection[style*="flex"]) { max-height: 64vh; }
+  .sk-section { margin-bottom: 10px; }
+  #paneDetailRoute .route-mode-switcher { margin-bottom: 10px; }
+  .sk-route-result { padding: 10px 0; margin-bottom: 10px; }
+  .sk-route-duration { font-size: 20px; }
+  .sk-btn { min-height: 44px; }
+  body:has(#sidebarDetailSection[style*="flex"]) .map-controls-dock,
+  body:has(#sidebarDetailSection[style*="flex"]) .region-jump-bar { display: none; }
+}
 </style>
 </head>
 <body>
@@ -3580,16 +3601,16 @@ aside.collapsed .sidebar-collapse-toggle {
         <div class="detail-pinned-header" id="detailPinnedHeader"></div>
 
         <!-- Pinned 3-Tab Skapa Segmented Navigation -->
-        <div class="detail-tabs-bar" id="detailTabsBar">
-          <button class="detail-tab-btn active" data-tab="info" onclick="switchDetailTab('info')">
+        <div class="detail-tabs-bar" id="detailTabsBar" role="tablist" aria-label="門市資訊分頁">
+          <button class="detail-tab-btn active" data-tab="info" role="tab" id="tabDetailInfo" aria-controls="paneDetailInfo" aria-selected="true" tabindex="0" onclick="switchDetailTab('info')">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
             <span>資訊</span>
           </button>
-          <button class="detail-tab-btn" data-tab="route" onclick="switchDetailTab('route')">
+          <button class="detail-tab-btn" data-tab="route" role="tab" id="tabDetailRoute" aria-controls="paneDetailRoute" aria-selected="false" tabindex="-1" onclick="switchDetailTab('route')">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a4.5 4.5 0 0 0 0-9H7a3 3 0 0 1 0-6h11"></path><polyline points="15 7 18 4 21 7"></polyline></svg>
             <span>路線</span>
           </button>
-          <button class="detail-tab-btn" data-tab="catchment" onclick="switchDetailTab('catchment')">
+          <button class="detail-tab-btn" data-tab="catchment" role="tab" id="tabDetailCatchment" aria-controls="paneDetailCatchment" aria-selected="false" tabindex="-1" onclick="switchDetailTab('catchment')">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
             <span>周邊門市</span>
             <span class="tab-badge" id="tabCatchmentCount">0</span>
@@ -3610,7 +3631,7 @@ aside.collapsed .sidebar-collapse-toggle {
 <div class="toast-msg" id="toastMsg">已複製門市地址至剪貼簿！</div>
 
 <!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="vendor/leaflet/leaflet.js"></script>
 <script>
 /* ─── DATA INJECTION ─── */
 const ALL_STORES = STORES_DATA_PLACEHOLDER;
@@ -3711,11 +3732,11 @@ function loadStyleOnce(href) {
 function ensureShopeeData() {
   if (shopeeDataLoaded) return Promise.resolve();
   if (shopeeLoadPromise) return shopeeLoadPromise;
-  loadStyleOnce("https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css");
-  loadStyleOnce("https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css");
+  loadStyleOnce("vendor/leaflet.markercluster/MarkerCluster.css");
+  loadStyleOnce("vendor/leaflet.markercluster/MarkerCluster.Default.css");
   shopeeLoadPromise = Promise.all([
     loadScriptOnce("shopee_stores_data.js", () => Array.isArray(window.SHOPEE_STORES)),
-    loadScriptOnce("https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js", () => typeof L.markerClusterGroup === "function").catch(() => {})
+    loadScriptOnce("vendor/leaflet.markercluster/leaflet.markercluster.js", () => typeof L.markerClusterGroup === "function").catch(() => {})
   ]).then(() => {
     const incoming = window.SHOPEE_STORES || [];
     incoming.forEach(s => { s._isCoLocation = false; });
@@ -3822,6 +3843,7 @@ const REGION_DATA = {
 
 /* ─── MAP INITIALIZATION ─── */
 const map = L.map("map", { zoomControl: false, attributionControl: false });
+map.on("zoomend load", () => syncMarkerOverviewMode());
 map.setView([23.75, 120.95], 8);
 
 /* ─── GOOGLE MAPS NAVIGATION CONTROLS (My Location + Zoom In/Out) ─── */
@@ -3935,7 +3957,7 @@ function getStatusBadge(s) {
   if (s.status_category === "暫停營業") {
     return `<span class="status-pill status-paused">${SVG.pause} 暫停營業</span>`;
   }
-  return `<span class="status-pill status-closed">${SVG.archive} 歷史紀錄</span>`;
+  return `<span class="status-pill status-closed">${SVG.archive} 已歇業</span>`;
 }
 
 function makeMarkerIcon(s, isNewlyOpened = false) {
@@ -3971,7 +3993,7 @@ function makePopupHtml(s) {
     <div class="tag-container" style="margin-bottom:8px">
       <span class="tag-badge tag-channel">${SVG.store} ${s.store_format || s.channel_format}</span>
       ${s.opened_year ? `<span class="tag-badge tag-opened-year">${SVG.clock} ${s.opened_year} 開幕</span>` : ""}
-      ${s._isCoLocation ? `<span class="tag-badge tag-colocation">${SVG.battle} 150m 內有其他品牌</span>` : ""}
+      ${s._isCoLocation ? `<span class="tag-badge tag-colocation">${SVG.battle} 附近有其他品牌</span>` : ""}
       ${s._userDist !== undefined && isSortedByDistance ? `<span class="card-dist-badge">${SVG.gps} 距您 ${formatDist(s._userDist)}</span>` : ""}
     </div>
     <div class="popup-addr">
@@ -4559,6 +4581,12 @@ function render() {
 }
 
 /* ─── MAP MARKERS ─── */
+// 縮小到全台／跨縣市視野時，標記改成小圓點並隱藏品牌縮寫，避免文字互相重疊
+// （地圖初始化時就會觸發，因此門檻直接寫在函式內，避免 const 尚未初始化）
+function syncMarkerOverviewMode() {
+  if (!map) return;
+  map.getContainer().classList.toggle("map-overview", map.getZoom() <= 9);
+}
 function renderMarkers(pulseYear = null) {
   Object.values(markers).forEach(m => map.removeLayer(m));
   if (markerClusterLayer) {
@@ -4704,7 +4732,7 @@ function createStoreCardElement(s) {
     </div>
     <div class="tag-container">
       <span class="tag-badge tag-channel">${SVG.store} ${s.store_format || s.channel_format}</span>
-      ${s._isCoLocation ? `<span class="tag-badge tag-colocation">${SVG.battle} 150m 內有其他品牌</span>` : ""}
+      ${s._isCoLocation ? `<span class="tag-badge tag-colocation">${SVG.battle} 附近有其他品牌</span>` : ""}
     </div>
     <div class="card-address-box">
       ${SVG.pin}
@@ -4805,11 +4833,24 @@ function renderTable(container) {
 /* ─── P1: CATCHMENT BUFFER CIRCLE & DRAWER CONTROLLER ─── */
 let currentDetailTab = "info";
 
+document.getElementById("detailTabsBar").addEventListener("keydown", (e) => {
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const tabs = [...document.querySelectorAll(".detail-tab-btn")];
+  const i = tabs.findIndex(b => b.classList.contains("active"));
+  const next = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length];
+  switchDetailTab(next.dataset.tab);
+  next.focus();
+  e.preventDefault();
+});
+
 function switchDetailTab(tabName) {
   currentDetailTab = tabName;
   const tabs = document.querySelectorAll(".detail-tab-btn");
   tabs.forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.tab === tabName);
+    const on = btn.dataset.tab === tabName;
+    btn.classList.toggle("active", on);
+    btn.setAttribute("aria-selected", on ? "true" : "false");
+    btn.tabIndex = on ? 0 : -1;
   });
 
   const panes = document.querySelectorAll(".detail-tab-pane");
@@ -4872,7 +4913,7 @@ function openStoreDrawer(s, preferredTab = null) {
       <div class="detail-meta-row">
         <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
           ${getStatusBadge(s)}
-          ${s._isCoLocation ? `<span class="tag-badge tag-colocation">${SVG.battle} 150m 內競品</span>` : ""}
+          ${s._isCoLocation ? `<span class="tag-badge tag-colocation">${SVG.battle} 附近有其他品牌</span>` : ""}
         </div>
         ${(s._userDist !== undefined && s._userDist !== null) ? `<span class="card-dist-badge">${formatDist(s._userDist)}</span>` : ""}
       </div>
@@ -4891,7 +4932,7 @@ function openStoreDrawer(s, preferredTab = null) {
   const detailBody = document.getElementById("detailContentBody");
   detailBody.innerHTML = `
     <!-- 資訊 -->
-    <div class="detail-tab-pane" id="paneDetailInfo">
+    <div class="detail-tab-pane" id="paneDetailInfo" role="tabpanel" aria-labelledby="tabDetailInfo">
       <div class="sk-section">
         <div class="sk-label">地址</div>
         <div class="sk-address-row">
@@ -4914,12 +4955,20 @@ function openStoreDrawer(s, preferredTab = null) {
     </div>
 
     <!-- 路線 -->
-    <div class="detail-tab-pane" id="paneDetailRoute">
+    <div class="detail-tab-pane" id="paneDetailRoute" role="tabpanel" aria-labelledby="tabDetailRoute">
       <div id="routePlanningBox">
         <div class="route-mode-switcher" id="routeModeSwitcher" role="group" aria-label="交通方式">
           <button class="btn-route-mode ${currentRouteMode === 'driving' ? 'active' : ''}" data-mode="driving">${SVG.car} <span>開車</span></button>
           <button class="btn-route-mode ${currentRouteMode === 'transit' ? 'active' : ''}" data-mode="transit">${SVG.transit} <span>大眾運輸</span></button>
           <button class="btn-route-mode ${currentRouteMode === 'walking' ? 'active' : ''}" data-mode="walking">${SVG.walk} <span>步行</span></button>
+        </div>
+
+        <div class="sk-section" id="routeDepartureRow" ${currentRouteMode === 'transit' ? '' : 'hidden'}>
+          <label class="sk-label" for="selRouteDeparture">出發時間</label>
+          <select id="selRouteDeparture" class="sel-route-origin">
+            <option value="now" ${routeDeparture === 'now' ? 'selected' : ''}>現在出發</option>
+            <option value="tomorrow9" ${routeDeparture === 'tomorrow9' ? 'selected' : ''}>明天早上 9:00 出發</option>
+          </select>
         </div>
 
         <div class="sk-section">
@@ -4953,7 +5002,7 @@ function openStoreDrawer(s, preferredTab = null) {
     </div>
 
     <!-- 周邊 -->
-    <div class="detail-tab-pane" id="paneDetailCatchment">
+    <div class="detail-tab-pane" id="paneDetailCatchment" role="tabpanel" aria-labelledby="tabDetailCatchment">
       <div class="sk-section">
         <div class="sk-catch-head">
           <span>半徑 <strong id="lblRadiusVal">${currentRadiusKm.toFixed(1)} km</strong></span>
@@ -5050,9 +5099,19 @@ function initCatchmentControls(s) {
   }
 }
 
+// 周邊門市品牌篩選（換門市時重設）
+let catchmentBrandFilter = { storeN: null, brand: null };
+const SAME_BUILDING_KM = 0.05;
+
+function setCatchmentBrandFilter(brand) {
+  catchmentBrandFilter.brand = catchmentBrandFilter.brand === brand ? null : brand;
+  if (currentDetailStore) updateCatchmentList(currentDetailStore);
+}
+
 function updateCatchmentList(s) {
   const resBox = document.getElementById("catchmentResultsBox");
   if (!resBox) return;
+  if (catchmentBrandFilter.storeN !== s.n) catchmentBrandFilter = { storeN: s.n, brand: null };
 
   const nearby = [];
   ALL_STORES.forEach(c => {
@@ -5075,13 +5134,30 @@ function updateCatchmentList(s) {
     return;
   }
 
+  // 依品牌統計，數量多的排前面
+  const brandCounts = {};
+  nearby.forEach(item => { brandCounts[item.store.brand] = (brandCounts[item.store.brand] || 0) + 1; });
+  const brands = Object.keys(brandCounts).sort((a, b) => brandCounts[b] - brandCounts[a]);
+  if (catchmentBrandFilter.brand && !brandCounts[catchmentBrandFilter.brand]) catchmentBrandFilter.brand = null;
+  const activeBrand = catchmentBrandFilter.brand;
+  const shown = activeBrand ? nearby.filter(item => item.store.brand === activeBrand) : nearby;
+
   resBox.innerHTML = `
-    <div class="sk-label">範圍內 ${nearby.length} 間門市（由近到遠）</div>
-    <div class="competitor-list" style="margin-top:8px">
-      ${nearby.map(item => {
+    <div class="sk-label">範圍內 ${nearby.length} 間門市・${brands.length} 個品牌</div>
+    <div class="sk-brand-chips" role="group" aria-label="依品牌篩選">
+      <button class="sk-brand-chip ${activeBrand ? "" : "active"}" aria-pressed="${!activeBrand}" onclick="setCatchmentBrandFilter(null)">全部 ${nearby.length}</button>
+      ${brands.map(b => {
+        const color = (BRANDS[b] || { color: "#0058A3" }).color;
+        const on = activeBrand === b;
+        return `<button class="sk-brand-chip ${on ? "active" : ""}" aria-pressed="${on}" data-brand="${b}" onclick="setCatchmentBrandFilter(this.dataset.brand)"><span class="brand-dot" style="background:${color}"></span>${b} ${brandCounts[b]}</button>`;
+      }).join("")}
+    </div>
+    <div class="competitor-list">
+      ${shown.map(item => {
         const c = item.store;
         const cCfg = BRANDS[c.brand] || { color: "#0058A3" };
         const isSameBrand = (c.brand === s.brand);
+        const sameBuilding = item.dist < SAME_BUILDING_KM;
         return `
           <div class="competitor-mini-item" onclick="navigateToCompetitor(${c.n})">
             <div style="display:flex;align-items:center;gap:8px;min-width:0">
@@ -5092,7 +5168,7 @@ function updateCatchmentList(s) {
               </div>
             </div>
             <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
-              <span class="badge-dist">${formatDist(item.dist)}</span>
+              ${sameBuilding ? `<span class="badge-same-building">同棟</span>` : `<span class="badge-dist">${formatDist(item.dist)}</span>`}
             </div>
           </div>
         `;
@@ -5192,12 +5268,30 @@ function decodePolyline(encoded) {
   return points;
 }
 
+// 前端快取：同一起訖點與交通方式不重複呼叫 API（後端記憶體快取在冷啟動後會清空）
+const routeResultCache = new Map();
+let routeDeparture = "now"; // "now" | "tomorrow9"（僅大眾運輸）
+
+function getDepartureIso() {
+  if (currentRouteMode !== "transit" || routeDeparture !== "tomorrow9") return null;
+  const d = new Date();
+  d.setDate(d.getDate() + 1);
+  d.setHours(9, 0, 0, 0);
+  return d.toISOString();
+}
+
 async function requestRoutePlan(originLat, originLng, destLat, destLng, mode) {
+  const departure = getDepartureIso();
+  const cacheKey = [originLat.toFixed(4), originLng.toFixed(4), destLat.toFixed(4), destLng.toFixed(4), mode, departure ? departure.slice(0, 10) : "now"].join("|");
+  if (routeResultCache.has(cacheKey)) return routeResultCache.get(cacheKey);
   try {
-    const netlifyUrl = `/api/directions?originLat=${originLat}&originLng=${originLng}&destLat=${destLat}&destLng=${destLng}&mode=${mode}`;
+    let netlifyUrl = `/api/directions?originLat=${originLat}&originLng=${originLng}&destLat=${destLat}&destLng=${destLng}&mode=${mode}`;
+    if (departure) netlifyUrl += `&departureTime=${encodeURIComponent(departure)}`;
     const res = await fetch(netlifyUrl, { signal: AbortSignal.timeout(10000) });
     const data = await res.json().catch(() => null);
     if (res.ok && data && data.success) {
+      if (routeResultCache.size > 100) routeResultCache.delete(routeResultCache.keys().next().value);
+      routeResultCache.set(cacheKey, data);
       return data;
     }
     const errMsg = (data && data.error) ? data.error : `HTTP ${res.status}: ${res.statusText || 'Google Routes API 連線失敗'}`;
@@ -5279,7 +5373,9 @@ function updateRouteDisplay(s, explicitResult = null) {
   } else if (!explicitResult.success) {
     result.classList.add("is-error");
     elDur.textContent = "暫時無法取得路線";
-    elMeta.textContent = "請稍後再試，或直接在 Google Maps 開啟導航";
+    elMeta.textContent = (currentRouteMode === "transit" && routeDeparture === "now")
+      ? "目前可能已無班次，可改選「明天早上 9:00 出發」，或在 Google Maps 開啟導航"
+      : "請稍後再試，或直接在 Google Maps 開啟導航";
     if (explicitResult.error) console.warn("[Routes API]", explicitResult.error);
   } else {
     result.classList.remove("is-error");
@@ -5414,10 +5510,20 @@ function initRouteControls(s) {
       box.querySelectorAll(".btn-route-mode").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       currentRouteMode = btn.dataset.mode;
+      const depRow = document.getElementById("routeDepartureRow");
+      if (depRow) depRow.hidden = currentRouteMode !== "transit";
       updateRouteDisplay(s);
       fetchAndApplyRoute();
     };
   });
+
+  const selDeparture = document.getElementById("selRouteDeparture");
+  if (selDeparture) {
+    selDeparture.onchange = () => {
+      routeDeparture = selDeparture.value;
+      fetchAndApplyRoute();
+    };
+  }
 
   // 只在「路線」分頁開啟時才呼叫 API（避免每次點門市都計費）
   runRouteFetch = () => fetchAndApplyRoute();
@@ -6120,7 +6226,6 @@ HTML = (HTML_TEMPLATE
 
 out_paths = [
     os.path.join(BASE_DIR, "index.html"),
-    os.path.join(BASE_DIR, "taiwan_home_stores_dashboard.html"),
 ]
 
 for path in out_paths:

@@ -45,7 +45,7 @@
 ```text
 taiwan_home_stores_gis/
 ├── index.html                           # 主生產環境 GIS 儀表板首頁 HTML
-├── taiwan_home_stores_dashboard.html   # 兼容量產儀表板 HTML（線上環境自動規範導向至根路徑）
+├── vendor/                              # 內建 Leaflet 與 MarkerCluster（不依賴外部 CDN）
 ├── shopee_stores_data.js                # 隨選動態載入之全台門市資料集
 ├── build_ikea_gis_dashboard.py          # 儀表板打包與建置編譯腳本
 ├── netlify.toml                         # Netlify 雲端部署規則與 API 反向代理配置
@@ -74,7 +74,7 @@ taiwan_home_stores_gis/
 ## 快速開始與本地執行
 
 ### 1. 直接開啟
-無需安裝任何後端依賴，直接使用現代瀏覽器開啟專案中的 `index.html` 或 `taiwan_home_stores_dashboard.html` 即可瀏覽完整 GIS 地圖圖資。
+無需安裝任何後端依賴，直接使用現代瀏覽器開啟專案中的 `index.html` 即可瀏覽完整 GIS 地圖圖資。
 
 ### 2. 本地 HTTP 伺服器（推薦）
 若要測試完整的定位與本機連線，可在專案目錄啟動簡易伺服器：
