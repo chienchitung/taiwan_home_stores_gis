@@ -3141,6 +3141,13 @@ aside.collapsed .sidebar-collapse-toggle {
   aside#mainSidebar.sheet-expanded { max-height: 88vh !important; }
   aside#mainSidebar .sidebar-inner-content { flex: 1; min-height: 0; }
 }
+/* 手機或矮螢幕：整個清單面板一起捲動。原本只有卡片區可捲，展開篩選＋品牌比較時
+   上方固定區會比面板還高，把清單整個擠出畫面而無法操作 */
+@media (max-width: 768px), (max-height: 720px) {
+  #sidebarListSection { overflow-y: auto; }
+  #sidebarListSection > * { flex-shrink: 0; }
+  #sidebarListSection .store-cards-container { flex: none; overflow: visible; }
+}
 </style>
 </head>
 <body>
@@ -5552,11 +5559,30 @@ const btnCloseDetail = document.getElementById("btnCloseDetailDrawer");
 if (btnCloseDetail) btnCloseDetail.onclick = closeStoreDrawer;
 
 function copyStoreAddress(addr) {
-  navigator.clipboard.writeText(addr).then(() => {
-    const toast = document.getElementById("toastMsg");
+  const toast = document.getElementById("toastMsg");
+  const showToast = (text) => {
+    if (text) toast.textContent = text;
     toast.classList.add("show");
     setTimeout(() => toast.classList.remove("show"), 2000);
-  });
+  };
+  // 非 HTTPS、內嵌頁面或使用者拒絕權限時 Clipboard API 會失敗，改用選取文字的舊方法
+  const fallback = () => {
+    const ta = document.createElement("textarea");
+    ta.value = addr;
+    ta.setAttribute("readonly", "");
+    ta.style.cssText = "position:fixed;opacity:0;top:0;left:0";
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) {}
+    ta.remove();
+    showToast(ok ? "已複製地址" : "無法自動複製，請長按地址手動複製");
+  };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(addr).then(() => showToast("已複製地址"), fallback);
+  } else {
+    fallback();
+  }
 }
 
 /* ─── SCHEME 4: SIDEBAR COLLAPSE / EXPAND ─── */
