@@ -3007,6 +3007,37 @@ aside.collapsed .sidebar-collapse-toggle {
   animation: tlMarkerPulse 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
   z-index: 6000 !important;
 }
+
+/* ─── Store drawer: simplified Skapa-style content ─── */
+.sk-section { display:flex; flex-direction:column; gap:8px; margin-bottom:16px; }
+.sk-label { font-size:12px; font-weight:700; color:#484848; }
+.sk-address-row { display:flex; align-items:flex-start; gap:8px; font-size:14px; line-height:1.5; color:#111; }
+.sk-address-row span { flex:1; }
+.sk-icon-btn { flex-shrink:0; width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; border:1px solid #DFDFDF; background:#fff; color:#111; cursor:pointer; }
+.sk-icon-btn:hover { border-color:#111; }
+.sk-icon-btn.picking { background:var(--ikea-blue); border-color:var(--ikea-blue); color:#fff; }
+.sk-icon-btn svg { width:16px; height:16px; }
+.sk-notice { background:#FFF7E0; border-left:4px solid #F2A900; padding:10px 12px; border-radius:4px; font-size:13px; line-height:1.5; color:#111; margin-bottom:16px; }
+.sk-actions { display:flex; flex-direction:column; gap:8px; }
+.sk-btn-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.sk-btn { display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:44px; padding:0 16px; border-radius:999px; font-size:14px; font-weight:700; text-decoration:none; cursor:pointer; font-family:inherit; white-space:nowrap; }
+.sk-btn svg { width:14px; height:14px; }
+.sk-btn-primary { background:var(--ikea-blue); color:#fff; border:none; }
+.sk-btn-primary:hover { background:var(--ikea-blue-dark); }
+.sk-btn-secondary { background:#fff; color:#111; border:1px solid #929292; }
+.sk-btn-secondary:hover { border-color:#111; }
+.sk-link-btn { background:none; border:none; color:#484848; font-size:13px; text-decoration:underline; cursor:pointer; padding:6px; font-family:inherit; }
+.sk-origin-row { display:flex; gap:8px; align-items:center; }
+.sk-origin-row .sel-route-origin { flex:1; min-width:0; height:40px; }
+.sk-route-result { padding:14px 0; margin-bottom:12px; border-top:1px solid #DFDFDF; border-bottom:1px solid #DFDFDF; }
+.sk-route-duration { font-size:24px; font-weight:700; color:#111; line-height:1.2; }
+.sk-route-meta { font-size:13px; color:#484848; margin-top:4px; }
+.sk-route-result.is-error .sk-route-duration { font-size:16px; color:#CC0008; }
+#paneDetailRoute .route-mode-switcher { margin-bottom:16px; }
+.sk-catch-head { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:14px; }
+.sk-switch { display:inline-flex; align-items:center; gap:6px; font-size:12px; color:#484848; cursor:pointer; }
+.sk-switch input { accent-color:var(--ikea-blue); width:16px; height:16px; }
+.sk-empty { font-size:13px; color:#484848; padding:12px 0; }
 </style>
 </head>
 <body>
@@ -3350,18 +3381,18 @@ aside.collapsed .sidebar-collapse-toggle {
 
         <!-- Pinned 3-Tab Skapa Segmented Navigation -->
         <div class="detail-tabs-bar" id="detailTabsBar">
+          <button class="detail-tab-btn active" data-tab="info" onclick="switchDetailTab('info')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>資訊</span>
+          </button>
           <button class="detail-tab-btn" data-tab="route" onclick="switchDetailTab('route')">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a4.5 4.5 0 0 0 0-9H7a3 3 0 0 1 0-6h11"></path><polyline points="15 7 18 4 21 7"></polyline></svg>
-            <span>路線規劃</span>
+            <span>路線</span>
           </button>
           <button class="detail-tab-btn" data-tab="catchment" onclick="switchDetailTab('catchment')">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-            <span>商圈分析</span>
+            <span>周邊門市</span>
             <span class="tab-badge" id="tabCatchmentCount">0</span>
-          </button>
-          <button class="detail-tab-btn active" data-tab="info" onclick="switchDetailTab('info')">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-            <span>門市資訊</span>
           </button>
         </div>
 
@@ -4572,7 +4603,7 @@ function renderTable(container) {
 }
 
 /* ─── P1: CATCHMENT BUFFER CIRCLE & DRAWER CONTROLLER ─── */
-let currentDetailTab = "route";
+let currentDetailTab = "info";
 
 function switchDetailTab(tabName) {
   currentDetailTab = tabName;
@@ -4587,8 +4618,8 @@ function switchDetailTab(tabName) {
     pane.classList.toggle("active", pane.id === targetPaneId);
   });
 
-  if (tabName === "route" && currentDetailStore) {
-    updateRouteDisplay(currentDetailStore);
+  if (tabName === "route" && currentDetailStore && runRouteFetch) {
+    runRouteFetch();
   }
 }
 
@@ -4608,12 +4639,6 @@ function triggerRoutePlanning(s) {
   const key = "s" + s.n;
   selectStore(key, s, true);
   openStoreDrawer(s, "route");
-  setTimeout(() => {
-    const calcBtn = document.getElementById("btnCalcRoute");
-    if (calcBtn) {
-      calcBtn.click();
-    }
-  }, 60);
 }
 
 function openStoreDrawer(s, preferredTab = null) {
@@ -4665,218 +4690,92 @@ function openStoreDrawer(s, preferredTab = null) {
   // Render 3 Distinct Tab Panes inside Body
   const detailBody = document.getElementById("detailContentBody");
   detailBody.innerHTML = `
-    <!-- PANE 1: 路線規劃 (Route Planning) -->
-    <div class="detail-tab-pane" id="paneDetailRoute">
-      <div class="route-planning-box" id="routePlanningBox">
-        <div class="box-hdr">
-          <div class="route-hdr-title">
-            <span>${SVG.route} 路徑與抵達時間估算</span>
-          </div>
-          <span class="badge-route-status ready" id="lblRouteBadgeStatus">已即時試算</span>
-        </div>
-
-        <!-- Mode Switcher -->
-        <div class="route-mode-switcher" id="routeModeSwitcher">
-          <button class="btn-route-mode active" data-mode="driving" title="開車路線規劃">
-            ${SVG.car} <span>開車</span>
-          </button>
-          <button class="btn-route-mode" data-mode="transit" title="大眾運輸路線規劃">
-            ${SVG.transit} <span>大眾運輸</span>
-          </button>
-          <button class="btn-route-mode" data-mode="walking" title="步行路線規劃">
-            ${SVG.walk} <span>步行</span>
-          </button>
-        </div>
-
-        <!-- Dual Metric Stat Cards -->
-        <div class="route-metric-cards-grid">
-          <div class="route-metric-card duration-card">
-            <div class="metric-card-top">
-              <span class="metric-card-icon" id="iconMetricDuration">${SVG.car}</span>
-              <span>預估時間</span>
-            </div>
-            <div class="metric-card-main">
-              <span class="metric-card-val" id="lblMetricDurationVal">--</span>
-              <span class="metric-card-unit" id="lblMetricDurationUnit">分鐘</span>
-            </div>
-            <div class="metric-card-sub" id="lblMetricDurationSub">大數據路況估算</div>
-          </div>
-
-          <div class="route-metric-card distance-card">
-            <div class="metric-card-top">
-              <span class="metric-card-icon">${SVG.route}</span>
-              <span>路徑里程 (公里數)</span>
-            </div>
-            <div class="metric-card-main">
-              <span class="metric-card-val" id="lblMetricDistanceVal">--</span>
-              <span class="metric-card-unit" id="lblMetricDistanceUnit">公里</span>
-            </div>
-            <div class="metric-card-sub" id="lblMetricDistanceSub">道路導航距離</div>
-          </div>
-        </div>
-
-        <!-- Departure Origin Selector Panel -->
-        <div class="route-origin-panel">
-          <div class="route-origin-header">
-            <span>${SVG.gps} 起點：<strong id="lblActiveOriginName" style="color:#1D4ED8">我的位置 (GPS)</strong></span>
-          </div>
-          <div class="route-origin-controls">
-            <select id="selRouteOrigin" class="sel-route-origin">
-              <option value="gps">我的目前位置 (GPS 定位)</option>
-              <option value="tpe_main">台北車站 (北區核心樞紐)</option>
-              <option value="banqiao">板橋車站 (新北市中心)</option>
-              <option value="hsinchu">新竹車站 / 巨城商圈</option>
-              <option value="taichung">台中車站 (中台灣樞紐)</option>
-              <option value="tainan">台南車站 (南台灣核心)</option>
-              <option value="zuoying">左營高鐵站 / 高雄車站</option>
-              <option value="custom" disabled>地圖點選起點 (點擊右側按鈕)</option>
-            </select>
-            <button class="btn-origin-locate" id="btnRelocateGps" title="偵測我的目前 GPS 定位">${SVG.gps} 定位</button>
-            <button class="btn-origin-map-pick" id="btnPickOriginOnMap" title="點選地圖自訂出發點">${SVG.crosshair} 選點</button>
-          </div>
-        </div>
-
-        <!-- Route Action Buttons -->
-        <div class="route-actions-row">
-          <button class="btn-calc-route" id="btnCalcRoute">
-            ${SVG.route} 繪製地圖導航路線
-          </button>
-          <button class="btn-clear-route" id="btnClearRoute">
-            清除路線
-          </button>
-        </div>
-
-        <!-- External Navigation Link -->
-        <a class="btn-ext-nav btn-ext-gmap" id="btnGmapsTurnByTurn" href="#" target="_blank" rel="noopener">
-          ${SVG.external} 在 Google Maps 開啟完整導航
-        </a>
-
-        <!-- Route Results Bar -->
-        <div class="route-results-bar" id="routeResultsBar" style="display:none">
-          <div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1">
-            <strong id="lblRouteDistance">-- 公里</strong> · <span id="lblRouteSummary">路線準備就緒</span>
-          </div>
-          <span class="route-engine-tag" id="lblRouteEngine">Google Routes API</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- PANE 2: 商圈分析 (Catchment Zone Analysis) -->
-    <div class="detail-tab-pane" id="paneDetailCatchment">
-      <div class="catchment-zone-box" id="catchmentZoneBox">
-        <div class="box-hdr">
-          <div class="catchment-hdr-title">
-            <span>${SVG.target} 周邊商圈與服務半徑</span>
-            <span class="badge-radius-val" id="lblRadiusVal">${currentRadiusKm.toFixed(1)} km</span>
-          </div>
-          <button class="btn-toggle-circle ${isBufferCircleEnabled ? 'active' : ''}" id="btnToggleCircle" title="點擊切換地圖上的商圈服務半徑緩衝圓">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3.5"></circle></svg>
-            <span id="lblCircleToggleText">${isBufferCircleEnabled ? '隱藏地圖圓形' : '顯示地圖圓形'}</span>
-          </button>
-        </div>
-
-        <div class="radius-slider-wrap">
-          <div class="radius-slider-header">
-            <span>自由調節服務半徑 (1.0 ~ 30.0 km)</span>
-            <span id="lblRadiusMinMax">1km ~ 30km</span>
-          </div>
-          <input type="range" id="rngRadius" class="radius-range-slider" min="1.0" max="30.0" step="0.5" value="${currentRadiusKm}">
-          <div class="radius-presets-row">
-            <button class="btn-radius-preset" data-km="1">1km (鄰近步行)</button>
-            <button class="btn-radius-preset" data-km="3">3km (生活圈)</button>
-            <button class="btn-radius-preset" data-km="5">5km (主要商圈)</button>
-            <button class="btn-radius-preset" data-km="10">10km (跨區驅車)</button>
-            <button class="btn-radius-preset" data-km="20">20km (全都會區)</button>
-          </div>
-        </div>
-
-        <div id="catchmentResultsBox">
-          <!-- Competitor List or Exclusive Zone Insight Dynamically Injected Here -->
-        </div>
-      </div>
-    </div>
-
-    <!-- PANE 3: 門市資訊 (Store Info Grid & Actions) -->
+    <!-- 資訊 -->
     <div class="detail-tab-pane" id="paneDetailInfo">
-      <!-- Structured Info Grid -->
-      <div class="detail-info-grid">
-        <div class="detail-info-item">
-          <span class="icon-col">${SVG.store}</span>
-          <div class="text-col">
-            <div class="label">門市型態</div>
-            <strong>${s.store_format || s.channel_format}</strong>
-          </div>
+      <div class="sk-section">
+        <div class="sk-label">地址</div>
+        <div class="sk-address-row">
+          <span>${s.address}</span>
+          <button class="sk-icon-btn" onclick="copyStoreAddress('${s.address}')" title="複製地址" aria-label="複製地址">${SVG.copy}</button>
         </div>
-        <div class="detail-info-item">
-          <span class="icon-col">${SVG.pin}</span>
-          <div class="text-col">
-            <div class="label">所在區域</div>
-            <span>${s.region}地區 · ${s.city} ${s.district || ""}</span>
-          </div>
-        </div>
-        <div class="detail-info-item">
-          <span class="icon-col">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          </span>
-          <div class="text-col">
-            <div class="label">門牌地址</div>
-            <div>${s.address}</div>
-          </div>
-        </div>
-        ${(s.status_category !== '現行營運中' && s.note) ? `
-          <div class="detail-info-item" style="background:#FEF3C7;padding:8px 10px;border-radius:6px;border-left:3px solid #D97706">
-            <span class="icon-col" style="color:#B45309">${SVG.pause}</span>
-            <div class="text-col" style="color:#92400E">
-              <div class="label" style="color:#B45309">重大營運狀態說明</div>
-              <div>${s.note}</div>
-            </div>
-          </div>
-        ` : ''}
       </div>
+      ${(s.status_category !== '現行營運中' && s.note) ? `
+        <div class="sk-notice">
+          <strong>營運狀態</strong>
+          <div>${s.note}</div>
+        </div>` : ''}
+      <div class="sk-actions">
+        <a class="sk-btn sk-btn-primary" href="${getGmapsSearchUrl(s)}" target="_blank" rel="noopener">${SVG.external} 在 Google Maps 開啟</a>
+        <div class="sk-btn-row">
+          <button class="sk-btn sk-btn-secondary" onclick="switchDetailTab('route')">${SVG.route} 規劃路線</button>
+          <button class="sk-btn sk-btn-secondary" onclick="focusCurrentDrawerStore()">${SVG.crosshair} 地圖定位</button>
+        </div>
+      </div>
+    </div>
 
-      <!-- Action Buttons -->
-      <div class="detail-actions-cluster">
-        <a class="btn-detail-gmap-primary" href="${getGmapsSearchUrl(s)}" target="_blank" rel="noopener">
-          ${SVG.external} 在 Google Maps 開啟完整導航
-        </a>
-        <div class="detail-secondary-actions">
-          <button class="btn-sec-action" onclick="copyStoreAddress('${s.address}')">
-            ${SVG.copy} 複製地址
-          </button>
-          <button class="btn-sec-action" onclick="focusCurrentDrawerStore()">
-            ${SVG.crosshair} 地圖聚焦
-          </button>
+    <!-- 路線 -->
+    <div class="detail-tab-pane" id="paneDetailRoute">
+      <div id="routePlanningBox">
+        <div class="route-mode-switcher" id="routeModeSwitcher" role="group" aria-label="交通方式">
+          <button class="btn-route-mode ${currentRouteMode === 'driving' ? 'active' : ''}" data-mode="driving">${SVG.car} <span>開車</span></button>
+          <button class="btn-route-mode ${currentRouteMode === 'transit' ? 'active' : ''}" data-mode="transit">${SVG.transit} <span>大眾運輸</span></button>
+          <button class="btn-route-mode ${currentRouteMode === 'walking' ? 'active' : ''}" data-mode="walking">${SVG.walk} <span>步行</span></button>
+        </div>
+
+        <div class="sk-section">
+          <label class="sk-label" for="selRouteOrigin">出發地</label>
+          <div class="sk-origin-row">
+            <select id="selRouteOrigin" class="sel-route-origin">
+              <option value="gps">我的位置</option>
+              <option value="tpe_main">台北車站</option>
+              <option value="banqiao">板橋車站</option>
+              <option value="hsinchu">新竹車站</option>
+              <option value="taichung">台中車站</option>
+              <option value="tainan">台南車站</option>
+              <option value="zuoying">左營高鐵站</option>
+              <option value="custom" disabled>地圖選點</option>
+            </select>
+            <button class="sk-icon-btn" id="btnRelocateGps" title="使用我的位置" aria-label="使用我的位置">${SVG.gps}</button>
+            <button class="sk-icon-btn" id="btnPickOriginOnMap" title="在地圖上點選出發地" aria-label="在地圖上點選出發地">${SVG.crosshair}</button>
+          </div>
+        </div>
+
+        <div class="sk-route-result" id="routeResult" aria-live="polite">
+          <div class="sk-route-duration" id="lblRouteDuration">--</div>
+          <div class="sk-route-meta" id="lblRouteMeta"></div>
+        </div>
+
+        <div class="sk-actions">
+          <a class="sk-btn sk-btn-primary" id="btnGmapsTurnByTurn" href="#" target="_blank" rel="noopener">${SVG.external} 在 Google Maps 導航</a>
+          <button class="sk-link-btn" id="btnClearRoute">清除地圖上的路線</button>
         </div>
       </div>
+    </div>
 
-      <!-- Quick Nav Jump Cards -->
-      <div class="detail-quick-nav-cards">
-        <button class="quick-nav-card" onclick="switchDetailTab('route')">
-          <div class="quick-nav-icon" style="background:#EFF6FF;color:#1D4ED8">${SVG.route}</div>
-          <div class="quick-nav-text">
-            <strong>規劃抵達路線</strong>
-            <span>即時計算行車、大眾運輸與步行時間</span>
-          </div>
-          <span class="quick-nav-arrow">→</span>
-        </button>
-        <button class="quick-nav-card" onclick="switchDetailTab('catchment')">
-          <div class="quick-nav-icon" style="background:#F0FDF4;color:#15803D">${SVG.target}</div>
-          <div class="quick-nav-text">
-            <strong>查看周邊商圈與競品</strong>
-            <span id="lblQuickCatchmentMeta">分析服務半徑與競品重疊</span>
-          </div>
-          <span class="quick-nav-arrow">→</span>
-        </button>
+    <!-- 周邊 -->
+    <div class="detail-tab-pane" id="paneDetailCatchment">
+      <div class="sk-section">
+        <div class="sk-catch-head">
+          <span>半徑 <strong id="lblRadiusVal">${currentRadiusKm.toFixed(1)} km</strong></span>
+          <label class="sk-switch">
+            <input type="checkbox" id="chkToggleCircle" ${isBufferCircleEnabled ? 'checked' : ''}>
+            <span>在地圖顯示範圍</span>
+          </label>
+        </div>
+        <input type="range" id="rngRadius" class="radius-range-slider" min="1.0" max="30.0" step="0.5" value="${currentRadiusKm}" aria-label="服務半徑">
+        <div class="radius-presets-row">
+          ${[1, 3, 5, 10, 20].map(km => `<button class="btn-radius-preset" data-km="${km}">${km} km</button>`).join("")}
+        </div>
       </div>
+      <div id="catchmentResultsBox"></div>
     </div>
   `;
 
-  const activeTab = preferredTab || currentDetailTab || "info";
-  switchDetailTab(activeTab);
-
+  clearActiveRoute();
   initCatchmentControls(s);
   updateCatchmentList(s);
   initRouteControls(s);
+  switchDetailTab(preferredTab || "info");
 }
 
 function updateBufferCircleOnMap(s) {
@@ -4942,13 +4841,10 @@ function initCatchmentControls(s) {
     p.classList.toggle("active", Math.abs(km - currentRadiusKm) < 0.1);
   });
 
-  const btnToggleCircle = document.getElementById("btnToggleCircle");
-  if (btnToggleCircle) {
-    btnToggleCircle.onclick = () => {
-      isBufferCircleEnabled = !isBufferCircleEnabled;
-      btnToggleCircle.classList.toggle("active", isBufferCircleEnabled);
-      const txt = document.getElementById("lblCircleToggleText");
-      if (txt) txt.textContent = isBufferCircleEnabled ? "隱藏地圖圓形" : "顯示地圖圓形";
+  const chkToggleCircle = document.getElementById("chkToggleCircle");
+  if (chkToggleCircle) {
+    chkToggleCircle.onchange = () => {
+      isBufferCircleEnabled = chkToggleCircle.checked;
       updateBufferCircleOnMap(s);
     };
   }
@@ -4972,31 +4868,15 @@ function updateCatchmentList(s) {
   const tabBadge = document.getElementById("tabCatchmentCount");
   if (tabBadge) tabBadge.textContent = nearby.length;
 
-  const quickMeta = document.getElementById("lblQuickCatchmentMeta");
-  if (quickMeta) {
-    quickMeta.textContent = nearby.length > 0
-      ? `半徑 ${currentRadiusKm.toFixed(1)} km 內有 ${nearby.length} 間競品`
-      : `半徑 ${currentRadiusKm.toFixed(1)} km 內獨佔無競品`;
-  }
-
   if (nearby.length === 0) {
     resBox.innerHTML = `
-      <div class="exclusive-zone-box">
-        <span class="icon-col">${SVG.star}</span>
-        <div>
-          <strong>獨立封閉商圈獨佔優勢</strong><br>
-          在半徑 <strong>${currentRadiusKm.toFixed(1)} km</strong> 範圍內，無任何其他居家品牌門市進駐，享有客群獨佔與高排他性市場紅利！
-        </div>
-      </div>
+      <div class="sk-empty">此範圍內沒有其他居家品牌門市</div>
     `;
     return;
   }
 
   resBox.innerHTML = `
-    <div class="catchment-meta-summary">
-      <span>商圈重疊門市共 <strong>${nearby.length}</strong> 間</span>
-      <span style="font-size:10.5px">依距離近至遠排序</span>
-    </div>
+    <div class="sk-label">範圍內 ${nearby.length} 間門市（由近到遠）</div>
     <div class="competitor-list" style="margin-top:8px">
       ${nearby.map(item => {
         const c = item.store;
@@ -5008,12 +4888,11 @@ function updateCatchmentList(s) {
               <span class="brand-dot" style="background:${cCfg.color}"></span>
               <div style="overflow:hidden;text-overflow:ellipsis">
                 <div class="c-name">${c.store_name}</div>
-                <div class="c-chan">${c.channel_format} · ${isSameBrand ? "同品牌分店" : "競品"}</div>
+                <div class="c-chan">${c.brand}${isSameBrand ? " · 同品牌" : ""}</div>
               </div>
             </div>
             <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
               <span class="badge-dist">${formatDist(item.dist)}</span>
-              <span style="font-size:11px;color:#0058A3;font-weight:700">檢視 →</span>
             </div>
           </div>
         `;
@@ -5031,13 +4910,13 @@ let customRouteOrigin = null;
 let isMapPickingOrigin = false;
 
 const ROUTE_ORIGIN_PRESETS = {
-  gps: { id: "gps", name: "我的目前位置 (GPS 定位)", lat: null, lng: null },
-  tpe_main: { id: "tpe_main", name: "台北車站 (北區核心樞紐)", lat: 25.0478, lng: 121.5170 },
-  banqiao: { id: "banqiao", name: "板橋車站 (新北市中心)", lat: 25.0142, lng: 121.4637 },
-  hsinchu: { id: "hsinchu", name: "新竹車站 / 巨城商圈", lat: 24.8018, lng: 120.9716 },
-  taichung: { id: "taichung", name: "台中車站 (中台灣樞紐)", lat: 24.1368, lng: 120.6850 },
-  tainan: { id: "tainan", name: "台南車站 (南台灣核心)", lat: 22.9972, lng: 120.2127 },
-  zuoying: { id: "zuoying", name: "左營高鐵站 / 高雄車站", lat: 22.6874, lng: 120.3082 }
+  gps: { id: "gps", name: "我的位置", lat: null, lng: null },
+  tpe_main: { id: "tpe_main", name: "台北車站", lat: 25.0478, lng: 121.5170 },
+  banqiao: { id: "banqiao", name: "板橋車站", lat: 25.0142, lng: 121.4637 },
+  hsinchu: { id: "hsinchu", name: "新竹車站", lat: 24.8018, lng: 120.9716 },
+  taichung: { id: "taichung", name: "台中車站", lat: 24.1368, lng: 120.6850 },
+  tainan: { id: "tainan", name: "台南車站", lat: 22.9972, lng: 120.2127 },
+  zuoying: { id: "zuoying", name: "左營高鐵站", lat: 22.6874, lng: 120.3082 }
 };
 
 function getEffectiveOrigin() {
@@ -5045,12 +4924,12 @@ function getEffectiveOrigin() {
     return customRouteOrigin;
   }
   if (selectedOriginPresetId === "gps" && userLocation) {
-    return { id: "gps", name: "我的目前位置 (GPS)", lat: userLocation.lat, lng: userLocation.lng };
+    return { id: "gps", name: "我的位置", lat: userLocation.lat, lng: userLocation.lng };
   }
   if (ROUTE_ORIGIN_PRESETS[selectedOriginPresetId] && ROUTE_ORIGIN_PRESETS[selectedOriginPresetId].lat !== null) {
     return ROUTE_ORIGIN_PRESETS[selectedOriginPresetId];
   }
-  return { id: "tpe_main", name: "台北車站 (預設起點)", lat: 25.0478, lng: 121.5170 };
+  return { id: "tpe_main", name: "台北車站（尚未取得你的位置）", lat: 25.0478, lng: 121.5170 };
 }
 
 function formatDurationDisplay(minutes) {
@@ -5140,67 +5019,48 @@ async function requestRoutePlan(originLat, originLng, destLat, destLng, mode) {
 
 function drawPolylineOnMap(result, orig) {
   clearActiveRoute();
+  if (!result || !result.polyline) return;
 
-  if (!result || !result.polyline) {
-    return;
-  }
-
-  const latlngs = decodePolyline(result.polyline);
-  if (!latlngs || latlngs.length === 0) {
-    return;
-  }
-
-  if (latlngs.length > 0) {
-    let casingColor = "#1E3A8A";
-    let innerColor = "#2563EB";
-    let dashPattern = null;
-    let innerWeight = 4.5;
-    let casingWeight = 7;
-
-    if (currentRouteMode === "walking") {
-      casingColor = "#064E3B";
-      innerColor = "#10B981";
-      dashPattern = "5, 6";
-      innerWeight = 4;
-      casingWeight = 6.5;
-    } else if (currentRouteMode === "transit") {
-      casingColor = "#3B0764";
-      innerColor = "#8B5CF6";
-      dashPattern = "10, 5";
-      innerWeight = 4.5;
-      casingWeight = 7;
+  const BLUE = "#0058A3";
+  const layers = [];
+  // Google 地圖式畫法：白色外框 + 色線；步行段用圓點虛線
+  const addLine = (pts, color, walking) => {
+    if (walking) {
+      layers.push(L.polyline(pts, { color, weight: 6, opacity: 0.9, dashArray: "0 10", lineCap: "round", interactive: false }));
+    } else {
+      layers.push(L.polyline(pts, { color: "#FFFFFF", weight: 9, opacity: 1, lineCap: "round", lineJoin: "round", interactive: false }));
+      layers.push(L.polyline(pts, { color, weight: 5, opacity: 1, lineCap: "round", lineJoin: "round", interactive: false }));
     }
+  };
 
-    const casing = L.polyline(latlngs, {
-      color: casingColor,
-      weight: casingWeight,
-      opacity: 0.45,
-      lineCap: "round",
-      lineJoin: "round"
+  let all = [];
+  if (currentRouteMode === "transit" && Array.isArray(result.steps) && result.steps.length) {
+    // 大眾運輸逐段繪製：搭乘段用路線官方顏色，轉乘步行段用灰色圓點
+    result.steps.forEach(st => {
+      const pts = decodePolyline(st.polyline);
+      if (!pts.length) return;
+      all = all.concat(pts);
+      addLine(pts, st.mode === "WALK" ? "#767676" : (st.color || BLUE), st.mode === "WALK");
     });
-    const inner = L.polyline(latlngs, {
-      color: innerColor,
-      weight: innerWeight,
-      opacity: 0.95,
-      dashArray: dashPattern,
-      lineCap: "round",
-      lineJoin: "round"
-    });
-    casing.bindTooltip(`${result.distance_text} · ${result.duration_text}`, { permanent: false, sticky: true });
-    activeRouteLayer = L.layerGroup([casing, inner]).addTo(map);
-
-    const originIcon = L.divIcon({
-      className: "route-origin-pin",
-      html: `<div style="background:#10B981;width:14px;height:14px;border-radius:50%;border:2.5px solid #FFFFFF;box-shadow:0 2px 6px rgba(0,0,0,0.35)"></div>`,
-      iconSize: [14, 14],
-      iconAnchor: [7, 7]
-    });
-    activeRouteOriginMarker = L.marker([orig.lat, orig.lng], { icon: originIcon, zIndexOffset: 3000 })
-      .bindTooltip(`起點：${orig.name}`, { permanent: false, direction: "top" })
-      .addTo(map);
-
-    map.fitBounds(casing.getBounds(), { padding: [60, 60], duration: 0.8 });
   }
+  if (!all.length) {
+    all = decodePolyline(result.polyline);
+    if (!all.length) return;
+    addLine(all, BLUE, currentRouteMode === "walking");
+  }
+  activeRouteLayer = L.layerGroup(layers).addTo(map);
+
+  const originIcon = L.divIcon({
+    className: "route-origin-pin",
+    html: `<div style="background:#FFFFFF;width:14px;height:14px;border-radius:50%;border:4px solid #111;box-sizing:border-box;box-shadow:0 1px 4px rgba(0,0,0,0.35)"></div>`,
+    iconSize: [14, 14],
+    iconAnchor: [7, 7]
+  });
+  activeRouteOriginMarker = L.marker([orig.lat, orig.lng], { icon: originIcon, zIndexOffset: 3000 })
+    .bindTooltip(`出發地：${orig.name}`, { direction: "top" })
+    .addTo(map);
+
+  map.fitBounds(L.latLngBounds(all), { padding: [60, 60] });
 }
 
 function updateRouteDisplay(s, explicitResult = null) {
@@ -5208,113 +5068,26 @@ function updateRouteDisplay(s, explicitResult = null) {
   if (!box) return;
 
   const orig = getEffectiveOrigin();
-  const straightKm = haversineDistanceKm(orig.lat, orig.lng, s.lat, s.lng);
-
-  // Update origin name label
-  const lblOriginName = document.getElementById("lblActiveOriginName");
-  if (lblOriginName) {
-    lblOriginName.textContent = orig.name;
-  }
-
-  // Update mode icon in duration card
-  const iconDur = document.getElementById("iconMetricDuration");
-  if (iconDur) {
-    if (currentRouteMode === "transit") iconDur.innerHTML = SVG.transit;
-    else if (currentRouteMode === "walking") iconDur.innerHTML = SVG.walk;
-    else iconDur.innerHTML = SVG.car;
-  }
-
-  const elDurVal = document.getElementById("lblMetricDurationVal");
-  const elDurUnit = document.getElementById("lblMetricDurationUnit");
-  const elDurSub = document.getElementById("lblMetricDurationSub");
-  const elDistVal = document.getElementById("lblMetricDistanceVal");
-  const elDistUnit = document.getElementById("lblMetricDistanceUnit");
-  const elDistSub = document.getElementById("lblMetricDistanceSub");
-  const badgeStatus = document.getElementById("lblRouteBadgeStatus");
-  const resBar = document.getElementById("routeResultsBar");
-  const distEl = document.getElementById("lblRouteDistance");
-  const sumEl = document.getElementById("lblRouteSummary");
-  const engTag = document.getElementById("lblRouteEngine");
+  const elDur = document.getElementById("lblRouteDuration");
+  const elMeta = document.getElementById("lblRouteMeta");
+  const result = document.getElementById("routeResult");
 
   if (!explicitResult) {
-    if (elDurVal) elDurVal.textContent = "...";
-    if (elDurUnit) elDurUnit.textContent = "";
-    if (elDurSub) elDurSub.textContent = "Google Routes API 計算中…";
-
-    if (elDistVal) elDistVal.textContent = "...";
-    if (elDistUnit) elDistUnit.textContent = "";
-    if (elDistSub) elDistSub.textContent = `直線距離 ${straightKm.toFixed(1)} km`;
-
-    if (badgeStatus) {
-      badgeStatus.className = "badge-route-status";
-      badgeStatus.textContent = "Google Routes API 計算中…";
-      badgeStatus.style.background = "#EFF6FF";
-      badgeStatus.style.color = "#1D4ED8";
-      badgeStatus.style.borderColor = "#BFDBFE";
-    }
-
-    if (resBar) resBar.style.display = "none";
+    result.classList.remove("is-error");
+    elDur.textContent = "計算中…";
+    elMeta.textContent = `從 ${orig.name}`;
   } else if (!explicitResult.success) {
-    if (elDurVal) elDurVal.textContent = "--";
-    if (elDurUnit) elDurUnit.textContent = "";
-    if (elDurSub) elDurSub.textContent = explicitResult.error || "Google Routes API 失敗";
-
-    if (elDistVal) elDistVal.textContent = "--";
-    if (elDistUnit) elDistUnit.textContent = "";
-    if (elDistSub) elDistSub.textContent = `直線距離 ${straightKm.toFixed(1)} km`;
-
-    if (badgeStatus) {
-      badgeStatus.className = "badge-route-status";
-      badgeStatus.textContent = "Google Routes API 錯誤";
-      badgeStatus.style.background = "#FEF2F2";
-      badgeStatus.style.color = "#DC2626";
-      badgeStatus.style.borderColor = "#FECACA";
-    }
-
-    if (resBar) {
-      resBar.style.display = "flex";
-      if (distEl) distEl.textContent = "-- 公里";
-      if (sumEl) sumEl.textContent = explicitResult.error || "查無路線或 API 錯誤";
-      if (engTag) {
-        engTag.textContent = "Google Routes API 錯誤";
-        engTag.style.color = "#DC2626";
-        engTag.style.background = "#FEF2F2";
-      }
-    }
+    result.classList.add("is-error");
+    elDur.textContent = "暫時無法取得路線";
+    elMeta.textContent = "請稍後再試，或直接在 Google Maps 開啟導航";
+    if (explicitResult.error) console.warn("[Routes API]", explicitResult.error);
   } else {
-    // Google Routes API Success
-    const targetMin = explicitResult.duration_min;
-    const durFmt = formatDurationDisplay(targetMin);
-
-    if (elDurVal) elDurVal.textContent = durFmt.val;
-    if (elDurUnit) elDurUnit.textContent = durFmt.unit;
-    if (elDurSub) elDurSub.textContent = `Google Routes API · ${explicitResult.summary || "推薦路線"}`;
-
-    if (elDistVal) elDistVal.textContent = explicitResult.distance_km;
-    if (elDistUnit) elDistUnit.textContent = "公里";
-    if (elDistSub) elDistSub.textContent = `官方實測道路里程 · 直線 ${straightKm.toFixed(1)} km`;
-
-    if (badgeStatus) {
-      badgeStatus.className = "badge-route-status ready";
-      badgeStatus.innerHTML = `${SVG.check} Google Routes API 官方圖資`;
-      badgeStatus.style.background = "#ECFDF5";
-      badgeStatus.style.color = "#065F46";
-      badgeStatus.style.borderColor = "#A7F3D0";
-    }
-
-    if (resBar) {
-      resBar.style.display = "flex";
-      if (distEl) distEl.textContent = explicitResult.distance_text;
-      if (sumEl) sumEl.textContent = explicitResult.summary || "路徑規劃完成";
-      if (engTag) {
-        engTag.textContent = "Google Routes API 官方圖資";
-        engTag.style.color = "#1D4ED8";
-        engTag.style.background = "#EFF6FF";
-      }
-    }
+    result.classList.remove("is-error");
+    const d = formatDurationDisplay(explicitResult.duration_min);
+    elDur.textContent = `${d.val} ${d.unit}`;
+    elMeta.textContent = `${explicitResult.distance_text} · 從 ${orig.name}`;
   }
 
-  // Update external navigation URL
   const gMode = currentRouteMode === "transit" ? "transit" : (currentRouteMode === "walking" ? "walking" : "driving");
   const gmapNavBtn = document.getElementById("btnGmapsTurnByTurn");
   if (gmapNavBtn) {
@@ -5322,45 +5095,32 @@ function updateRouteDisplay(s, explicitResult = null) {
   }
 }
 
+let runRouteFetch = null;
+let routeRequestSeq = 0;
+
 function initRouteControls(s) {
   const box = document.getElementById("routePlanningBox");
   if (!box) return;
 
-  const calcBtn = document.getElementById("btnCalcRoute");
   const clearBtn = document.getElementById("btnClearRoute");
-
   clearBtn.onclick = clearActiveRoute;
 
-  async function fetchAndApplyRoute(redrawMap = false) {
+  async function fetchAndApplyRoute() {
     const orig = getEffectiveOrigin();
-    if (redrawMap) {
-      calcBtn.classList.add("loading");
-      calcBtn.disabled = true;
-      calcBtn.textContent = "繪製路線中…";
-    }
-
+    const seq = ++routeRequestSeq;
+    updateRouteDisplay(s);
     try {
       const result = await requestRoutePlan(orig.lat, orig.lng, s.lat, s.lng, currentRouteMode);
+      if (seq !== routeRequestSeq || currentDetailStore !== s) return; // 已切換門市／模式，丟棄過期結果
       updateRouteDisplay(s, result);
-
-      if (result && result.success && result.polyline && (redrawMap || activeRouteLayer)) {
-        drawPolylineOnMap(result, orig);
-      } else if (result && !result.success) {
-        clearActiveRoute();
-      }
+      if (result && result.success && result.polyline) drawPolylineOnMap(result, orig);
+      else clearActiveRoute();
     } catch (err) {
-      console.warn("[Google Routes API] Background fetch error:", err);
-      updateRouteDisplay(s, { success: false, error: err.message, engine: "google" });
+      if (seq !== routeRequestSeq) return;
+      updateRouteDisplay(s, { success: false, error: err.message });
       clearActiveRoute();
-    } finally {
-      if (redrawMap) {
-        calcBtn.classList.remove("loading");
-        calcBtn.disabled = false;
-        calcBtn.innerHTML = `${SVG.route} 繪製地圖導航路線`;
-      }
     }
   }
-
   // Initialize dropdown selection state
   const selOrigin = document.getElementById("selRouteOrigin");
   if (selOrigin) {
@@ -5388,7 +5148,7 @@ function initRouteControls(s) {
         selectedOriginPresetId = val;
       }
       updateRouteDisplay(s);
-      fetchAndApplyRoute(!!activeRouteLayer);
+      fetchAndApplyRoute();
     };
   }
 
@@ -5403,7 +5163,7 @@ function initRouteControls(s) {
         getUserLocation();
       }
       updateRouteDisplay(s);
-      fetchAndApplyRoute(!!activeRouteLayer);
+      fetchAndApplyRoute();
     };
   }
 
@@ -5414,24 +5174,21 @@ function initRouteControls(s) {
       if (isMapPickingOrigin) {
         isMapPickingOrigin = false;
         btnPick.classList.remove("picking");
-        btnPick.innerHTML = `${SVG.crosshair} 選點`;
         map.getContainer().style.cursor = "";
         return;
       }
       isMapPickingOrigin = true;
       btnPick.classList.add("picking");
-      btnPick.innerHTML = `${SVG.crosshair} 點選地圖…`;
       map.getContainer().style.cursor = "crosshair";
 
       map.once("click", (e) => {
         isMapPickingOrigin = false;
         btnPick.classList.remove("picking");
-        btnPick.innerHTML = `${SVG.crosshair} 選點`;
         map.getContainer().style.cursor = "";
 
         customRouteOrigin = {
           id: "custom",
-          name: `地圖選點 (${e.latlng.lat.toFixed(3)}, ${e.latlng.lng.toFixed(3)})`,
+          name: "地圖選點",
           lat: e.latlng.lat,
           lng: e.latlng.lng
         };
@@ -5446,7 +5203,7 @@ function initRouteControls(s) {
         }
 
         updateRouteDisplay(s);
-        fetchAndApplyRoute(!!activeRouteLayer);
+        fetchAndApplyRoute();
       });
     };
   }
@@ -5458,19 +5215,13 @@ function initRouteControls(s) {
       btn.classList.add("active");
       currentRouteMode = btn.dataset.mode;
       updateRouteDisplay(s);
-      fetchAndApplyRoute(!!activeRouteLayer);
+      fetchAndApplyRoute();
     };
   });
 
-  calcBtn.onclick = () => {
-    fetchAndApplyRoute(true);
-  };
-
-  // Immediate instant estimation display upon drawer open!
+  // 只在「路線」分頁開啟時才呼叫 API（避免每次點門市都計費）
+  runRouteFetch = () => fetchAndApplyRoute();
   updateRouteDisplay(s);
-
-  // Automatically fetch exact Google Maps route in background without requiring button click!
-  fetchAndApplyRoute(!!activeRouteLayer);
 }
 
 function closeStoreDrawer() {
