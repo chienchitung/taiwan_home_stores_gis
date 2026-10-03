@@ -177,6 +177,11 @@ def assign_store_opened_year(s):
 dashboard_stores = [store for store in stores if not store.get('dashboard_excluded')]
 for store in dashboard_stores:
     store['opened_year'] = assign_store_opened_year(store)
+    # 部分資料的座標是字串（例如 "25.010977"）；Leaflet 的 bounds.contains() 會把字串陣列
+    # 誤判成範圍而無限遞迴，導致「只看地圖範圍內」當掉，因此統一轉成數字
+    for key in ('lat', 'lng'):
+        if isinstance(store.get(key), str):
+            store[key] = float(store[key])
 
 shopee_stores = [store for store in dashboard_stores if store.get('brand') == '蝦皮店到店']
 initial_stores = [store for store in dashboard_stores if store.get('brand') != '蝦皮店到店']
@@ -3300,6 +3305,54 @@ aside.collapsed .sidebar-collapse-toggle {
 .sk-brand-chips { flex-wrap: nowrap !important; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
 .sk-brand-chips::-webkit-scrollbar { display: none; }
 .sk-brand-chip { flex-shrink: 0; }
+/* ─── Store list header v2: collapsible filters, single-row brands ─── */
+.btn-filter-toggle { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border: 1px solid var(--skapa-border, #DFDFDF); border-radius: 999px; background: #fff; color: #111; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; }
+.btn-filter-toggle:hover, .btn-filter-toggle[aria-expanded="true"] { border-color: #111; }
+.btn-filter-toggle.has-filters { border-color: var(--ikea-blue); color: var(--ikea-blue); }
+.filter-count { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: var(--ikea-blue); color: #fff; font-size: 11px; display: inline-flex; align-items: center; justify-content: center; }
+.filter-count[hidden] { display: none; }
+.filter-panel { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.filter-panel[hidden] { display: none; }
+.filter-panel-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.search-wrapper { gap: 8px; flex-wrap: wrap; }
+.search-wrapper .search-input-group { min-width: 0; flex: 1 1 100%; }
+.search-wrapper .btn-locate-me, .search-wrapper .btn-filter-toggle { flex: 1 1 0; justify-content: center; min-height: 40px; }
+@media (max-width: 768px), (hover: none) { .kbd-hint { display: none !important; } }
+/* 下拉選單：自訂箭頭留在膠囊內 */
+.custom-select { -webkit-appearance: none; appearance: none; padding-right: 36px !important; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23111' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 14px center !important; }
+.custom-select:disabled { color: #929292; background-color: #F5F5F5 !important; cursor: not-allowed; }
+.brand-strip { padding: 8px 16px !important; }
+.brand-chips-wrap { flex-wrap: nowrap !important; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.brand-chips-wrap::-webkit-scrollbar { display: none; }
+.brand-chips-wrap > * { flex-shrink: 0; }
+.results-count-text { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; min-width: 0; }
+.results-count-text .viewport-sync-label { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #484848; cursor: pointer; }
+.results-count-text .viewport-sync-label input { accent-color: var(--ikea-blue); width: 16px; height: 16px; margin: 0; }
+/* 表格：側欄窄時只留門市與地區，型態／狀態移到店名下方 */
+.store-cards-container { container-type: inline-size; }
+.col-narrow-meta { display: none; font-size: 11px; color: #484848; margin-top: 2px; }
+@container (max-width: 560px) {
+  .col-wide { display: none; }
+  .col-narrow-meta { display: block; }
+}
+/* ─── Mobile bottom sheet handle ─── */
+.sheet-handle { display: none; }
+@media (max-width: 768px) {
+  .sheet-handle { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%; padding: 6px 0 4px; border: none; background: #fff; cursor: pointer; flex-shrink: 0; font-family: inherit; }
+  .sheet-grip { width: 40px; height: 4px; border-radius: 999px; background: #CCCCCC; }
+  .sheet-label { font-size: 11px; font-weight: 700; color: #484848; }
+  aside#mainSidebar { display: flex; flex-direction: column; max-height: 52vh; transition: max-height 0.25s ease; }
+  aside#mainSidebar.sheet-expanded { max-height: 88vh !important; }
+  aside#mainSidebar .sidebar-inner-content { flex: 1; min-height: 0; }
+}
+/* 手機或矮螢幕：整個清單面板一起捲動。原本只有卡片區可捲，展開篩選＋品牌比較時
+   上方固定區會比面板還高，把清單整個擠出畫面而無法操作 */
+@media (max-width: 768px), (max-height: 720px) {
+  #sidebarListSection { overflow-y: auto; }
+  #sidebarListSection > * { flex-shrink: 0; }
+  #sidebarListSection .store-cards-container { flex: none; overflow: visible; }
+}
 </style>
 </head>
 <body>
@@ -3486,6 +3539,11 @@ aside.collapsed .sidebar-collapse-toggle {
 
   <!-- ═══════════════════════ INTEGRATED SIDEBAR ═══════════════════════ -->
   <aside id="mainSidebar">
+    <!-- 手機版：拖曳把手，切換清單高度 -->
+    <button class="sheet-handle" id="btnSheetHandle" aria-expanded="false" aria-label="展開清單">
+      <span class="sheet-grip"></span>
+      <span class="sheet-label" id="lblSheetHandle">展開清單</span>
+    </button>
 
     <!-- Scheme 4: Collapse Toggle Handle -->
     <button class="sidebar-collapse-toggle" id="btnCollapseSidebar" title="收起側邊面板 (釋放全螢幕地圖)">
@@ -3510,7 +3568,7 @@ aside.collapsed .sidebar-collapse-toggle {
               <span class="search-icon-left">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
               </span>
-              <input id="q" class="search-input-main" type="text" placeholder="搜尋門市、商圈（快速鍵 Cmd+K）…">
+              <input id="q" class="search-input-main" type="text" placeholder="搜尋門市或地址" aria-label="搜尋門市或地址">
               <span class="kbd-hint">Cmd+K</span>
               <button class="search-clear-btn" id="btnClearSearch" title="清除搜尋">&times;</button>
             </div>
@@ -3518,8 +3576,13 @@ aside.collapsed .sidebar-collapse-toggle {
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="7"></circle></svg>
               <span>離我最近</span>
             </button>
+            <button class="btn-filter-toggle" id="btnFilterToggle" aria-expanded="false" aria-controls="filterPanel">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="7" y1="12" x2="17" y2="12"></line><line x1="10" y1="18" x2="14" y2="18"></line></svg>
+              <span>篩選</span><span class="filter-count" id="lblFilterCount" hidden>0</span>
+            </button>
           </div>
 
+          <div class="filter-panel" id="filterPanel" hidden>
           <div class="dropdown-grid">
             <select class="custom-select" id="selCity">
               <option value="">全部縣市</option>
@@ -3544,24 +3607,22 @@ aside.collapsed .sidebar-collapse-toggle {
               <option value="">全部營運狀態</option>
               <option value="現行營運中" selected>現行營運中</option>
               <option value="暫停營業">暫停營業</option>
-              <option value="歷史變動（已熄燈/遷址）">歷史紀錄（已熄燈/遷址）</option>
+              <option value="歷史變動（已熄燈/遷址）">已歇業／遷址</option>
             </select>
+          </div>
+          <div class="filter-panel-actions">
+            <button class="btn-pk-mode" id="btnPkMode" title="開啟雙品牌門市比較">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              <span>品牌比較</span>
+            </button>
+            <button class="btn-reset-filters" id="btnResetAll" title="清空全部關鍵字與條件">重設篩選</button>
+          </div>
           </div>
         </div>
 
         <!-- Quick Brand Strip -->
         <div class="brand-strip">
-          <div class="brand-strip-hdr">
-            <span>品牌快速篩選</span>
-            <div class="brand-strip-actions">
-              <button class="btn-pk-mode" id="btnPkMode" title="開啟雙品牌門市戰略對比">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                <span>品牌比較</span>
-              </button>
-              <button class="btn-reset-filters" id="btnResetAll" title="清空全部關鍵字與條件">重設篩選</button>
-            </div>
-          </div>
-          <div class="brand-chips-wrap" id="brandPills"></div>
+          <div class="brand-chips-wrap" id="brandPills" role="group" aria-label="品牌篩選"></div>
         </div>
 
         <!-- Brand PK Mode Banner -->
@@ -3583,24 +3644,15 @@ aside.collapsed .sidebar-collapse-toggle {
           </div>
         </div>
 
-        <!-- Scheme 2: Map Viewport Sync Toggle Bar -->
-        <div class="viewport-sync-bar">
-          <label class="viewport-sync-label" for="chkViewportSync" title="開啟後僅列出目前地圖畫面所看見的門市">
-            <input type="checkbox" id="chkViewportSync" style="cursor:pointer">
-            <span>門市清單跟隨目前地圖範圍</span>
-          </label>
-          <span class="viewport-sync-indicator" id="lblViewportIndicator">清單範圍：全台</span>
-        </div>
-        <div class="viewport-hint-bar" id="viewportHintBar" style="display:none;">
-          <span class="hint-dot"></span>
-          <span id="viewportHintText">目前地圖視野涵蓋全台。請滾動滑鼠滾輪放大地圖或拖曳，名錄將即時篩選畫面內門市！</span>
-        </div>
-
-        <!-- Results & View Switcher Bar -->
+        <!-- Results bar: count · viewport sync · view switch -->
         <div class="results-meta-bar">
           <div class="results-count-text">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-            目前顯示：<strong id="lblCount">ACTIVE_STORE_COUNT_PLACEHOLDER 間門市</strong>
+            <strong id="lblCount">ACTIVE_STORE_COUNT_PLACEHOLDER 間門市</strong>
+            <label class="viewport-sync-label" for="chkViewportSync" title="開啟後僅列出目前地圖畫面看得到的門市">
+              <input type="checkbox" id="chkViewportSync">
+              <span>只看地圖範圍內</span>
+            </label>
+            <span id="lblViewportIndicator" hidden></span>
           </div>
           <div class="view-switch-btns">
             <button class="view-btn active" id="vtCards">
@@ -3612,6 +3664,10 @@ aside.collapsed .sidebar-collapse-toggle {
               表格
             </button>
           </div>
+        </div>
+        <div class="viewport-hint-bar" id="viewportHintBar" style="display:none;">
+          <span class="hint-dot"></span>
+          <span id="viewportHintText">目前地圖涵蓋全台，放大或拖曳地圖後清單會跟著更新。</span>
         </div>
 
         <!-- Store List Area -->
@@ -4033,7 +4089,6 @@ function makePopupHtml(s) {
     <div class="tag-container" style="margin-bottom:8px">
       <span class="tag-badge tag-channel">${SVG.store} ${s.store_format || s.channel_format}</span>
       ${s.opened_year ? `<span class="tag-badge tag-opened-year">${SVG.clock} ${s.opened_year} 開幕</span>` : ""}
-      ${s._isCoLocation ? `<span class="tag-badge tag-colocation">${SVG.battle} 附近有其他品牌</span>` : ""}
       ${s._userDist !== undefined && isSortedByDistance ? `<span class="card-dist-badge">${SVG.gps} 距您 ${formatDist(s._userDist)}</span>` : ""}
     </div>
     <div class="popup-addr">
@@ -4092,6 +4147,8 @@ function initDropdowns() {
 
 function updateDistrictDropdown(selectedCity) {
   const distSel = document.getElementById("selDistrict");
+  distSel.disabled = false;
+  distSel.title = "";
   const previousVal = distSel.value;
 
   if (selectedCity) {
@@ -4113,8 +4170,10 @@ function updateDistrictDropdown(selectedCity) {
       distSel.value = "";
     }
   } else {
-    distSel.innerHTML = '<option value="">全部行政區（請先選縣市）</option>';
+    distSel.innerHTML = '<option value="">全部行政區</option>';
     distSel.value = "";
+    distSel.disabled = true;
+    distSel.title = "請先選擇縣市";
   }
 }
 
@@ -4550,14 +4609,53 @@ function getNonBrandFilteredPool() {
 
   if (isViewportSync && map) {
     const bounds = map.getBounds();
-    pool = pool.filter(s => bounds.contains([s.lat, s.lng]));
+    pool = pool.filter(s => bounds.contains(L.latLng(+s.lat, +s.lng)));
   }
 
   return pool;
 }
 
 /* ─── CORE FILTER & RENDER ─── */
+// 手機版清單高度：點把手或向上／下滑動切換「半屏」與「接近全屏」
+(function initSheetHandle() {
+  const aside = document.getElementById("mainSidebar");
+  const handle = document.getElementById("btnSheetHandle");
+  const setExpanded = (on) => {
+    aside.classList.toggle("sheet-expanded", on);
+    handle.setAttribute("aria-expanded", String(on));
+    handle.setAttribute("aria-label", on ? "收合清單" : "展開清單");
+    document.getElementById("lblSheetHandle").textContent = on ? "收合清單，查看地圖" : "展開清單";
+    setTimeout(() => map && map.invalidateSize(), 260);
+  };
+  handle.onclick = () => setExpanded(!aside.classList.contains("sheet-expanded"));
+  let startY = null;
+  handle.addEventListener("touchstart", e => { startY = e.touches[0].clientY; }, { passive: true });
+  handle.addEventListener("touchend", e => {
+    if (startY === null) return;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dy) > 30) { setExpanded(dy < 0); e.preventDefault(); }
+    startY = null;
+  });
+})();
+
+// 篩選面板：顯示已套用的條件數（營運狀態預設為「現行營運中」，不算在內）
+function updateFilterCount() {
+  const n = ["selCity", "selDistrict", "selChannel"].filter(id => document.getElementById(id).value).length
+    + (document.getElementById("selStatus").value !== "現行營運中" ? 1 : 0);
+  const badge = document.getElementById("lblFilterCount");
+  badge.textContent = n;
+  badge.hidden = n === 0;
+  document.getElementById("btnFilterToggle").classList.toggle("has-filters", n > 0);
+}
+
+document.getElementById("btnFilterToggle").onclick = () => {
+  const panel = document.getElementById("filterPanel");
+  panel.hidden = !panel.hidden;
+  document.getElementById("btnFilterToggle").setAttribute("aria-expanded", String(!panel.hidden));
+};
+
 function render() {
+  updateFilterCount();
   syncDatasetControls();
   const q = document.getElementById("q").value.trim().toLowerCase();
   document.getElementById("btnClearSearch").style.display = q ? "block" : "none";
@@ -4796,7 +4894,6 @@ function createStoreCardElement(s) {
     </div>
     <div class="tag-container">
       <span class="tag-badge tag-channel">${SVG.store} ${s.store_format || s.channel_format}</span>
-      ${s._isCoLocation ? `<span class="tag-badge tag-colocation">${SVG.battle} 附近有其他品牌</span>` : ""}
     </div>
     <div class="card-address-box">
       ${SVG.pin}
@@ -4831,10 +4928,10 @@ function renderTable(container) {
       <tr>
         <th style="padding:8px 10px;text-align:left;white-space:nowrap">品牌 / 門市</th>
         <th style="padding:8px 10px;white-space:nowrap">地區</th>
-        <th style="padding:8px 10px;white-space:nowrap">門市型態</th>
-        <th style="padding:8px 10px;white-space:nowrap">地址與導航</th>
+        <th class="col-wide" style="padding:8px 10px;white-space:nowrap">門市型態</th>
+        <th class="col-wide" style="padding:8px 10px;white-space:nowrap">地址與導航</th>
         ${isSortedByDistance ? `<th style="padding:8px 10px;white-space:nowrap">距離</th>` : ""}
-        <th style="padding:8px 10px;white-space:nowrap">營運狀態</th>
+        <th class="col-wide" style="padding:8px 10px;white-space:nowrap">營運狀態</th>
       </tr>
     </thead>
     <tbody id="tblBody"></tbody>`;
@@ -4865,12 +4962,13 @@ function renderTable(container) {
     tr.innerHTML = `
       <td style="padding:8px 10px;min-width:128px">
         <span title="${s.brand}" style="display:inline-flex;white-space:nowrap;background:${cfg.color};color:#fff;font-size:10px;font-weight:800;padding:2px 7px;border-radius:4px">${tableBrand}</span>
-        ${s._isCoLocation ? `<span class="tag-badge tag-colocation" title="150 公尺內有其他品牌門市" style="font-size:9.5px;padding:1px 4px;white-space:nowrap">${SVG.battle} 鄰近品牌</span>` : ""}<br>
+<br>
         <strong title="${tableStoreName}" style="font-size:12.5px;color:#111;margin-top:4px;display:block;white-space:nowrap;max-width:150px;overflow:hidden;text-overflow:ellipsis">${tableStoreName}</strong>
+        <span class="col-narrow-meta">${s.store_format || s.channel_format}${s.status_category !== "現行營運中" ? ` · ${s.status_category === "暫停營業" ? "暫停營業" : "已歇業"}` : ""}</span>
       </td>
       <td style="padding:8px 10px;white-space:nowrap">${s.city}<br><span style="color:#64748B;font-size:11px">${s.district||""}</span></td>
-      <td style="padding:8px 10px;white-space:nowrap;font-size:11px;color:#475569">${s.store_format || s.channel_format}</td>
-      <td style="padding:8px 10px">
+      <td class="col-wide" style="padding:8px 10px;white-space:nowrap;font-size:11px;color:#475569">${s.store_format || s.channel_format}</td>
+      <td class="col-wide" style="padding:8px 10px">
         <a href="${getGmapsSearchUrl(s)}" target="_blank" rel="noopener" style="color:#0058A3;font-weight:700;font-size:11.5px;text-decoration:none;display:inline-flex;align-items:center;gap:4px" onclick="event.stopPropagation()">
           ${SVG.external} ${s.address}
         </a>
@@ -4880,7 +4978,7 @@ function renderTable(container) {
           <span class="card-dist-badge">${formatDist(s._userDist)}</span>
         </td>
       ` : ""}
-      <td style="padding:8px 10px;white-space:nowrap">
+      <td class="col-wide" style="padding:8px 10px;white-space:nowrap">
         ${getStatusBadge(s)}
       </td>`;
     tr.onmouseenter = () => { if (selectedKey !== key) tr.style.background = "#F1F5F9"; };
@@ -5666,11 +5764,30 @@ const btnCloseDetail = document.getElementById("btnCloseDetailDrawer");
 if (btnCloseDetail) btnCloseDetail.onclick = closeStoreDrawer;
 
 function copyStoreAddress(addr) {
-  navigator.clipboard.writeText(addr).then(() => {
-    const toast = document.getElementById("toastMsg");
+  const toast = document.getElementById("toastMsg");
+  const showToast = (text) => {
+    if (text) toast.textContent = text;
     toast.classList.add("show");
     setTimeout(() => toast.classList.remove("show"), 2000);
-  });
+  };
+  // 非 HTTPS、內嵌頁面或使用者拒絕權限時 Clipboard API 會失敗，改用選取文字的舊方法
+  const fallback = () => {
+    const ta = document.createElement("textarea");
+    ta.value = addr;
+    ta.setAttribute("readonly", "");
+    ta.style.cssText = "position:fixed;opacity:0;top:0;left:0";
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) {}
+    ta.remove();
+    showToast(ok ? "已複製地址" : "無法自動複製，請長按地址手動複製");
+  };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(addr).then(() => showToast("已複製地址"), fallback);
+  } else {
+    fallback();
+  }
 }
 
 /* ─── SCHEME 4: SIDEBAR COLLAPSE / EXPAND ─── */
