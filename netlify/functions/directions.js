@@ -92,7 +92,9 @@ async function fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode
     },
     travelMode: travelMode,
     languageCode: "zh-TW",
-    computeAlternativeRoutes: false
+    computeAlternativeRoutes: false,
+    // 預設 OVERVIEW 是簡化過的折線，放大後會切過路口、偏離道路；HIGH_QUALITY 才會貼合實際道路
+    polylineQuality: "HIGH_QUALITY"
   };
 
   if (travelMode === "DRIVE") {
@@ -104,7 +106,18 @@ async function fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode
     {
       "Content-Type": "application/json",
       "X-Goog-Api-Key": apiKey,
-      "X-Goog-FieldMask": "routes.duration,routes.distanceMeters,routes.polyline.encodedPolyline,routes.description"
+      "X-Goog-FieldMask": [
+        "routes.duration",
+        "routes.distanceMeters",
+        "routes.polyline.encodedPolyline",
+        "routes.description",
+        // 大眾運輸逐段資料：讓前端用官方路線顏色畫搭乘段、灰色圓點畫步行段
+        ...(travelMode === "TRANSIT" ? [
+          "routes.legs.steps.travelMode",
+          "routes.legs.steps.polyline.encodedPolyline",
+          "routes.legs.steps.transitDetails.transitLine.color"
+        ] : [])
+      ].join(",")
     },
     requestBody
   );
@@ -140,6 +153,13 @@ async function fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode
     distance_text: distanceText,
     distance_km: distanceKm,
     polyline: route.polyline ? route.polyline.encodedPolyline : "",
+    steps: travelMode === "TRANSIT"
+      ? (route.legs || []).flatMap(leg => leg.steps || []).map(st => ({
+          mode: st.travelMode,
+          polyline: st.polyline ? st.polyline.encodedPolyline : "",
+          color: st.transitDetails?.transitLine?.color || null
+        }))
+      : undefined,
     summary: route.description || (mode === "transit" ? "大眾運輸推薦班次" : (mode === "walking" ? "步行推薦路線" : "開車推薦路徑"))
   };
 }
