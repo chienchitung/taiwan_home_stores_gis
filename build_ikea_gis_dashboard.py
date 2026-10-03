@@ -196,6 +196,25 @@ shopee_stores = [
     {key: value for key, value in store.items() if key in SHOPEE_DASHBOARD_FIELDS}
     for store in shopee_stores
 ]
+# 網頁沒有用到的欄位不打包，減少下載與解析量
+UNUSED_FIELDS = {'google_maps_url', 'source_url', 'clean_name', 'coordinate_source',
+                 'verification_status', 'geocode_score', 'location_role', 'core_store',
+                 'is_co_location', 'opened_date'}
+initial_stores = [{k: v for k, v in s.items() if k not in UNUSED_FIELDS} for s in initial_stores]
+
+# 150 公尺內是否有其他品牌：原本在每位使用者的瀏覽器裡兩兩比對，改成建置時算好
+def _haversine_km(a_lat, a_lng, b_lat, b_lng):
+    from math import radians, sin, cos, atan2, sqrt
+    d_lat, d_lng = radians(b_lat - a_lat), radians(b_lng - a_lng)
+    h = sin(d_lat / 2) ** 2 + cos(radians(a_lat)) * cos(radians(b_lat)) * sin(d_lng / 2) ** 2
+    return 6371 * 2 * atan2(sqrt(h), sqrt(1 - h))
+for s in initial_stores:
+    s['_isCoLocation'] = any(
+        o['n'] != s['n'] and o['brand'] != s['brand']
+        and _haversine_km(s['lat'], s['lng'], o['lat'], o['lng']) <= 0.15
+        for o in initial_stores
+    )
+
 STORES_JS = json.dumps(initial_stores, ensure_ascii=False, separators=(',', ':'))
 SHOPEE_STORES_JS = json.dumps(shopee_stores, ensure_ascii=False, separators=(',', ':'))
 ACTIVE_STORE_COUNT = sum(
@@ -207,7 +226,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 <title>台灣實體門市 GIS 地理圖資儀表板</title>
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <style>
@@ -3394,6 +3413,7 @@ aside.collapsed .sidebar-collapse-toggle {
   .m-chip span { font-size: 14px; }
   body.m-layout.timeline-mode-active aside#mainSidebar, body.m-layout.timeline-mode-active .m-brand-slot { display: none !important; }
   body.m-layout.timeline-mode-active .leaflet-bottom { bottom: 0; }
+  body.m-layout.timeline-mode-active .m-fab-group { display: none !important; }
 
   /* 全螢幕篩選頁 */
   .m-filter-page { position: fixed; inset: 0; z-index: 2000; background: #fff; display: flex; flex-direction: column; }
@@ -3404,13 +3424,34 @@ aside.collapsed .sidebar-collapse-toggle {
   .m-filter-label { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 8px; }
   #mFilterSlot .filter-panel, #mFilterSlot .filter-panel[hidden] { display: flex !important; margin: 0; }
   #mFilterSlot .btn-reset-filters { display: none; }
-  #mFilterSlot .custom-select { min-height: 44px; font-size: 14px; }
+  #mFilterSlot .custom-select { min-height: 44px; }
+  /* iOS 會在點擊字級 < 16px 的輸入框時自動放大整頁，放大後地圖吃掉縮放手勢就縮不回來 */
+  body.m-layout input, body.m-layout select, body.m-layout textarea { font-size: 16px !important; }
   #mDatasetSlot .dataset-switch { margin: 0; }
   #mViewportSlot .viewport-sync-label { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; color: #111; }
   #mViewportSlot input { width: 20px; height: 20px; accent-color: var(--ikea-blue); }
   #mRegionSlot .region-jump-bar { position: static !important; transform: none !important; max-width: none !important; display: flex !important; flex-wrap: wrap; gap: 8px; background: none !important; border: none !important; box-shadow: none !important; backdrop-filter: none; padding: 0 !important; overflow: visible !important; }
   #mRegionSlot .btn-region-jump { border: 1px solid #DFDFDF; min-height: 40px; }
   .m-filter-foot { display: grid; grid-template-columns: 1fr 2fr; gap: 8px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid #DFDFDF; }
+}
+/* ─── Mobile v2: FAB, collapse, perf ─── */
+.m-sheet-fab, .sheet-collapse-btn { display: none; }
+.m-fab-group { display: none; }
+.m-fab-group[hidden] { display: none !important; }
+.store-card { content-visibility: auto; contain-intrinsic-size: auto 230px; }
+.list-sentinel { height: 1px; }
+@media (max-width: 768px) {
+  body.m-layout .sheet-top { display: flex; align-items: center; position: relative; flex-shrink: 0; }
+  body.m-layout .sheet-top .sheet-handle { flex: 1; }
+  body.m-layout .sheet-collapse-btn { display: inline-flex; align-items: center; gap: 4px; position: absolute; right: 8px; top: 2px; min-height: 36px; padding: 0 10px; border: none; background: none; color: #484848; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer; }
+  body.m-layout aside#mainSidebar.m-sheet-hidden { transform: translateY(110%); pointer-events: none; }
+  body.m-layout aside#mainSidebar { transition: height 0.25s ease, transform 0.25s ease; }
+  body.m-layout .m-fab-group { display: flex; gap: 8px; position: absolute; right: 16px; bottom: calc(20px + env(safe-area-inset-bottom)); z-index: 950; }
+  body.m-layout .m-fab-secondary { display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 0 16px; border: none; border-radius: 999px; background: #fff; color: #111; font-size: 15px; font-weight: 700; font-family: inherit; box-shadow: 0 4px 14px rgba(0,0,0,0.2); cursor: pointer; }
+  body.m-layout .m-sheet-fab { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 18px; border: none; border-radius: 999px; background: var(--ikea-blue); color: #fff; font-size: 15px; font-weight: 700; font-family: inherit; box-shadow: 0 4px 14px rgba(0,0,0,0.25); cursor: pointer; }
+  .m-fab-count { min-width: 24px; height: 22px; padding: 0 7px; border-radius: 999px; background: #fff; color: var(--ikea-blue); font-size: 12px; display: inline-flex; align-items: center; justify-content: center; }
+  /* 毛玻璃與大面積陰影在手機上很吃效能 */
+  body.m-layout * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
 }
 </style>
 </head>
@@ -3463,6 +3504,16 @@ aside.collapsed .sidebar-collapse-toggle {
       <div class="m-menu-popover" id="mMenuPopover" hidden></div>
     </div>
     <div class="m-brand-slot" id="mBrandSlot"></div>
+    <div class="m-fab-group" id="mFabGroup" hidden>
+    <button class="m-fab-secondary" id="btnFabFilter" aria-label="開啟篩選">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="7" y1="12" x2="17" y2="12"></line><line x1="10" y1="18" x2="14" y2="18"></line></svg>
+      <span>篩選</span><span class="filter-count" id="lblFabFilterCount" hidden>0</span>
+    </button>
+    <button class="m-sheet-fab" id="btnSheetFab" aria-label="開啟門市清單">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+      <span>清單</span><span class="m-fab-count" id="lblSheetFabCount">ACTIVE_STORE_COUNT_PLACEHOLDER</span>
+    </button>
+    </div>
 
     <!-- SECTION 3: Region Quick Jump Bar with Interactive Boundary Envelopes -->
     <div class="region-jump-bar" id="regionJumpBar">
@@ -3610,9 +3661,15 @@ aside.collapsed .sidebar-collapse-toggle {
   <!-- ═══════════════════════ INTEGRATED SIDEBAR ═══════════════════════ -->
   <aside id="mainSidebar">
     <!-- 手機版：拖曳把手，切換清單高度 -->
-    <button class="sheet-handle" id="btnSheetHandle" aria-label="調整清單高度">
-      <span class="sheet-grip"></span>
-    </button>
+    <div class="sheet-top">
+      <button class="sheet-handle" id="btnSheetHandle" aria-label="調整清單高度">
+        <span class="sheet-grip"></span>
+      </button>
+      <button class="sheet-collapse-btn" id="btnSheetCollapse" aria-label="收起清單，只看地圖">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        收起
+      </button>
+    </div>
 
     <!-- Scheme 4: Collapse Toggle Handle -->
     <button class="sidebar-collapse-toggle" id="btnCollapseSidebar" title="收起側邊面板 (釋放全螢幕地圖)">
@@ -3818,9 +3875,10 @@ aside.collapsed .sidebar-collapse-toggle {
 
 <!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
 <script src="vendor/leaflet/leaflet.js"></script>
+<script src="stores_data.js?v=STORES_DATA_VERSION_PLACEHOLDER"></script>
 <script>
 /* ─── DATA INJECTION ─── */
-const ALL_STORES = STORES_DATA_PLACEHOLDER;
+const ALL_STORES = window.ALL_STORES_DATA || [];
 let shopeeDataLoaded = false;
 let shopeeLoadPromise = null;
 let markerClusterLayer = null;
@@ -3889,6 +3947,7 @@ function formatDist(km) {
 
 /* ─── PRECOMPUTE CO-LOCATION HUBS (<= 150m) ─── */
 ALL_STORES.forEach(s => {
+  if (typeof s._isCoLocation === "boolean") return; // 建置時已預先計算
   s._isCoLocation = ALL_STORES.some(o => 
     o.n !== s.n && 
     o.brand !== s.brand && 
@@ -4724,7 +4783,8 @@ const MOBILE_MOVES = [
   ["#regionJumpBar", "mRegionSlot"]
 ];
 const mobileHomes = new Map();   // element -> placeholder comment at its desktop position
-let sheetState = "half";          // peek | half | full | route
+let sheetState = "hidden";        // hidden（收成右下角按鈕）| peek | half | full | route
+let mobileFlyInProgress = false;
 let sheetBeforeRoute = "half";
 
 function isMobileLayout() { return MOBILE_MQ.matches; }
@@ -4757,6 +4817,7 @@ function applyMobileLayout() {
 
 function sheetHeightFor(state) {
   const h = window.innerHeight;
+  if (state === "hidden") return 0;
   if (state === "peek") return 132;
   if (state === "route") return Math.min(430, Math.round(h * 0.52));
   if (state === "full") return Math.round(h * 0.9);
@@ -4767,15 +4828,25 @@ function setSheet(state) {
   sheetState = state;
   if (!isMobileLayout()) return;
   const px = sheetHeightFor(state);
-  document.getElementById("mainSidebar").style.height = px + "px";
+  const aside = document.getElementById("mainSidebar");
+  aside.classList.toggle("m-sheet-hidden", state === "hidden");
+  if (state !== "hidden") aside.style.height = px + "px";
+  document.getElementById("mFabGroup").hidden = state !== "hidden";
   document.body.style.setProperty("--m-sheet-h", px + "px");
   document.getElementById("btnSheetHandle").setAttribute("aria-label",
     state === "full" ? "收合清單" : "展開清單");
 }
 
+// 讓 (lat, lng) 落在「搜尋列下方、抽屜上方」可見區域中央時，地圖中心應該在哪
+function visibleCenterFor(lat, lng, zoom, state) {
+  const h = map.getSize().y;
+  const offsetY = (sheetHeightFor(state) - 112) / 2;
+  return map.unproject(map.project([lat, lng], zoom).add([0, Math.max(0, offsetY)]), zoom);
+}
+
 // 把地圖上的點移到「抽屜上方可見區域」的中央
 function panToVisible(lat, lng) {
-  if (!isMobileLayout() || !map) return;
+  if (!isMobileLayout() || !map || mobileFlyInProgress) return;
   const rect = map.getContainer().getBoundingClientRect();
   const sheetH = sheetHeightFor(sheetState);
   const topUsed = 112; // 搜尋列＋品牌列
@@ -4822,12 +4893,15 @@ document.getElementById("mAppliedChips").addEventListener("click", e => {
 
 (function initMobileControls() {
   const handle = document.getElementById("btnSheetHandle");
-  const order = ["peek", "half", "full"];
+  const order = ["hidden", "peek", "half", "full"];
   const step = dir => {
     const cur = sheetState === "route" ? 1 : order.indexOf(sheetState);
     setSheet(order[Math.max(0, Math.min(order.length - 1, cur + dir))]);
   };
   handle.onclick = () => { if (sheetState === "full") setSheet("half"); else step(1); };
+  document.getElementById("btnSheetFab").onclick = () => setSheet("half");
+  document.getElementById("btnFabFilter").onclick = openMobileFilter;
+  document.getElementById("btnSheetCollapse").onclick = () => setSheet("hidden");
   let startY = null;
   handle.addEventListener("touchstart", e => { startY = e.touches[0].clientY; }, { passive: true });
   handle.addEventListener("touchend", e => {
@@ -4853,7 +4927,7 @@ document.getElementById("mAppliedChips").addEventListener("click", e => {
   menu.addEventListener("click", () => { menu.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); });
 
   document.getElementById("btnMobileFilterClose").onclick = closeMobileFilter;
-  document.getElementById("btnMobileFilterApply").onclick = () => { closeMobileFilter(); if (sheetState === "peek") setSheet("half"); };
+  document.getElementById("btnMobileFilterApply").onclick = () => { closeMobileFilter(); if (sheetState === "hidden" || sheetState === "peek") setSheet("half"); };
   document.getElementById("btnMobileFilterReset").onclick = () => document.getElementById("btnResetAll").click();
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeMobileFilter(); });
 
@@ -4878,6 +4952,9 @@ function updateFilterCount() {
   const badge = document.getElementById("lblFilterCount");
   badge.textContent = n;
   badge.hidden = n === 0;
+  const fabBadge = document.getElementById("lblFabFilterCount");
+  fabBadge.textContent = n;
+  fabBadge.hidden = n === 0;
   document.getElementById("btnFilterToggle").classList.toggle("has-filters", n > 0);
   renderAppliedChips();
 }
@@ -4971,6 +5048,7 @@ function render() {
   }
   document.getElementById("lblFloatingCount").textContent = filteredStores.length;
   document.getElementById("btnMobileFilterApply").textContent = `顯示 ${filteredStores.length} 間門市`;
+  document.getElementById("lblSheetFabCount").textContent = filteredStores.length;
   syncBrandPills();
   if (isPkMode) updatePkBanner(nonBrandPool);
   renderMarkers();
@@ -4985,44 +5063,70 @@ function syncMarkerOverviewMode() {
   if (!map) return;
   map.getContainer().classList.toggle("map-overview", map.getZoom() <= 9);
 }
+// 門市標記快取：篩選或移動地圖時只增減差異，不再每次重建全部標記（手機上原本是延遲主因之一）
+const markerCache = {};
+function getCachedMarker(s, isNew) {
+  const key = "s" + s.n;
+  const sig = `${highContrastPins ? 1 : 0}|${isNew ? 1 : 0}`;
+  let c = markerCache[key];
+  if (!c) {
+    const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s, isNew) })
+      .bindPopup(() => makePopupHtml(s), { className: "custom-popup", minWidth: 260, maxWidth: 320, autoPan: true, autoPanPadding: [24, 24] });
+    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info"); });
+    c = markerCache[key] = { mk, sig };
+  } else if (c.sig !== sig) {
+    c.mk.setIcon(makeMarkerIcon(s, isNew));
+    c.sig = sig;
+  }
+  return c.mk;
+}
+
 function renderMarkers(pulseYear = null) {
-  Object.values(markers).forEach(m => map.removeLayer(m));
+  const useClusters = activeDatasetMode === "ecommerce" && typeof L.markerClusterGroup === "function";
+  if (useClusters) {
+    // 電商據點：聚合圖層只建立一次，之後只增減有變化的據點
+    if (!markerClusterLayer) {
+      Object.values(markers).forEach(m => map.removeLayer(m));
+      markers = {};
+      markerClusterLayer = L.markerClusterGroup({
+        chunkedLoading: true,
+        chunkInterval: 80,
+        chunkDelay: 24,
+        maxClusterRadius: 52,
+        disableClusteringAtZoom: 16,
+        removeOutsideVisibleBounds: true
+      });
+      map.addLayer(markerClusterLayer);
+    }
+    const next = {};
+    const toAdd = [];
+    filteredStores.forEach(s => {
+      const key = "s" + s.n;
+      const mk = getCachedMarker(s, pulseYear && s.opened_year === pulseYear);
+      next[key] = mk;
+      if (!markers[key]) toAdd.push(mk);
+    });
+    const toRemove = Object.keys(markers).filter(k => !next[k]).map(k => markers[k]);
+    if (toRemove.length) markerClusterLayer.removeLayers(toRemove);
+    if (toAdd.length) markerClusterLayer.addLayers(toAdd);
+    markers = next;
+    return;
+  }
   if (markerClusterLayer) {
     map.removeLayer(markerClusterLayer);
     markerClusterLayer.clearLayers();
     markerClusterLayer = null;
+    markers = {};
   }
-  markers = {};
 
-  const useClusters = activeDatasetMode === "ecommerce" && typeof L.markerClusterGroup === "function";
-  if (useClusters) {
-    markerClusterLayer = L.markerClusterGroup({
-      chunkedLoading: true,
-      chunkInterval: 80,
-      chunkDelay: 24,
-      maxClusterRadius: 52,
-      disableClusteringAtZoom: 16,
-      removeOutsideVisibleBounds: true
-    });
-  }
-  const clusterMarkers = [];
-
+  const next = {};
   filteredStores.forEach(s => {
-    const key = "s" + s.n;
-    const isNewInYear = pulseYear && (s.opened_year === pulseYear);
-    const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s, isNewInYear) })
-      .bindPopup(makePopupHtml(s), { className: "custom-popup", minWidth: 260, maxWidth: 320, autoPan: true, autoPanPadding: [24, 24] });
-
-    if (markerClusterLayer) clusterMarkers.push(mk);
-    else mk.addTo(map);
-
-    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info"); });
-    markers[key] = mk;
+    const mk = getCachedMarker(s, pulseYear && s.opened_year === pulseYear);
+    next["s" + s.n] = mk;
+    if (!map.hasLayer(mk)) mk.addTo(map);
   });
-  if (markerClusterLayer) {
-    markerClusterLayer.addLayers(clusterMarkers);
-    map.addLayer(markerClusterLayer);
-  }
+  Object.keys(markers).forEach(k => { if (!next[k]) map.removeLayer(markers[k]); });
+  markers = next;
 }
 
 /* ─── STORE LIST ─── */
@@ -5051,6 +5155,47 @@ function renderList() {
   else renderTable(container);
 }
 
+// 清單分批建立：先畫第一批，其餘等捲到底部附近才建立（清單收起或在畫面外時完全不建立）。
+// 新的 render 會取消舊的批次。卡片與表格列共用。
+let listBuildToken = 0;
+let listBuildObserver = null;
+function buildListLazily(container, jobs, build) {
+  const token = ++listBuildToken;
+  if (listBuildObserver) { listBuildObserver.disconnect(); listBuildObserver = null; }
+  let i = 0;
+  const FIRST = 24, CHUNK = 30;
+  const sentinel = document.createElement("div");
+  sentinel.className = "list-sentinel";
+  sentinel.setAttribute("aria-hidden", "true");
+  container.appendChild(sentinel);
+  const run = (limit) => {
+    if (token !== listBuildToken) return;
+    const end = Math.min(jobs.length, i + limit);
+    for (; i < end; i++) jobs[i].wrap.appendChild(build(jobs[i].s));
+    if (i >= jobs.length) {
+      sentinel.remove();
+      if (listBuildObserver) { listBuildObserver.disconnect(); listBuildObserver = null; }
+    }
+  };
+  sentinel.addEventListener("build-more", () => run(CHUNK));
+  run(FIRST);
+  if (i < jobs.length) {
+    if (!("IntersectionObserver" in window)) { run(jobs.length); return; }
+    listBuildObserver = new IntersectionObserver(entries => {
+      if (entries.some(e => e.isIntersecting)) run(CHUNK);
+    }, { rootMargin: "600px 0px" });
+    listBuildObserver.observe(sentinel);
+  }
+}
+
+// 需要某張卡片存在時（例如點地圖標記要捲到對應卡片），把清單補建到該門市為止
+function ensureListBuiltUntil(key) {
+  let sentinel;
+  while (!document.querySelector(`[data-key="${key}"]`) && (sentinel = document.querySelector(".list-sentinel"))) {
+    sentinel.dispatchEvent(new CustomEvent("build-more"));
+  }
+}
+
 function renderCards(container) {
   const displayStores = activeDatasetMode === "ecommerce" ? filteredStores.slice(0, 200) : filteredStores;
   if (displayStores.length < filteredStores.length) {
@@ -5062,10 +5207,8 @@ function renderCards(container) {
   }
   if (isSortedByDistance && userLocation) {
     const cardsWrap = document.createElement("div");
-    displayStores.forEach(s => {
-      cardsWrap.appendChild(createStoreCardElement(s));
-    });
     container.appendChild(cardsWrap);
+    buildListLazily(container, displayStores.map(s => ({ wrap: cardsWrap, s })), createStoreCardElement);
     return;
   }
 
@@ -5073,6 +5216,7 @@ function renderCards(container) {
   BRAND_KEYS.forEach(b => groups[b] = []);
   displayStores.forEach(s => { if (groups[s.brand]) groups[s.brand].push(s); });
 
+  const jobs = [];
   BRAND_KEYS.forEach(brand => {
     const list = groups[brand];
     if (!list.length) return;
@@ -5098,11 +5242,10 @@ function renderCards(container) {
     container.appendChild(hdr);
 
     const cardsWrap = document.createElement("div");
-    list.forEach(s => {
-      cardsWrap.appendChild(createStoreCardElement(s));
-    });
+    list.forEach(s => jobs.push({ wrap: cardsWrap, s }));
     container.appendChild(cardsWrap);
   });
+  buildListLazily(container, jobs, createStoreCardElement);
 }
 
 function createStoreCardElement(s) {
@@ -5183,7 +5326,7 @@ function renderTable(container) {
     notice.textContent = `為維持流暢度，表格先顯示 200 筆；地圖仍包含全部 ${filteredStores.length} 間。`;
     container.appendChild(notice);
   }
-  displayStores.forEach(s => {
+  const buildRow = (s) => {
     const key = "s" + s.n;
     const cfg = BRANDS[s.brand] || { color: "#0058A3" };
     const tableBrand = cfg.tableLabel || s.brand;
@@ -5224,8 +5367,9 @@ function renderTable(container) {
       selectStore(key, s, true);
       openStoreDrawer(s, "info");
     };
-    tbody.appendChild(tr);
-  });
+    return tr;
+  };
+  buildListLazily(wrap, displayStores.map(s => ({ wrap: tbody, s })), buildRow);
 }
 
 /* ─── P1: CATCHMENT BUFFER CIRCLE & DRAWER CONTROLLER ─── */
@@ -5444,8 +5588,8 @@ function openStoreDrawer(s, preferredTab = null) {
 
   clearActiveRoute();
   if (isMobileLayout()) {
-    if (sheetState === "peek" || sheetState === "full") setSheet("half");
-    setTimeout(() => panToVisible(s.lat, s.lng), 350);
+    if (sheetState !== "half") setSheet("half");
+    setTimeout(() => panToVisible(s.lat, s.lng), 300);
   }
   initCatchmentControls(s);
   updateCatchmentList(s);
@@ -6153,6 +6297,7 @@ function selectStore(key, s, flyTo) {
     r.style.background = (r.dataset.key === key) ? "#EBF4FC" : "";
   });
 
+  ensureListBuiltUntil(key);
   const cardEl = document.querySelector(`[data-key="${key}"]`);
   if (cardEl) cardEl.scrollIntoView({ block: "nearest", behavior: "smooth" });
 
@@ -6161,7 +6306,14 @@ function selectStore(key, s, flyTo) {
     Object.values(markers).forEach(m => m.setZIndexOffset(0));
     if (mk) mk.setZIndexOffset(3500);
 
-    map.flyTo([s.lat, s.lng], Math.max(map.getZoom(), 16), { duration: 0.8 });
+    if (isMobileLayout()) {
+      const z = Math.max(map.getZoom(), 15);
+      mobileFlyInProgress = true;
+      map.once("moveend", () => { mobileFlyInProgress = false; });
+      map.flyTo(visibleCenterFor(s.lat, s.lng, z, "half"), z, { duration: 0.8 });
+    } else {
+      map.flyTo([s.lat, s.lng], Math.max(map.getZoom(), 16), { duration: 0.8 });
+    }
     setTimeout(() => {
       if (markers[key]) {
         markers[key].setZIndexOffset(3500);
@@ -6697,8 +6849,16 @@ render();
 </body>
 </html>"""
 
+# 門市資料獨立成檔案：瀏覽器可分開快取；內容雜湊當版本號，資料更新時網址會變、不會讀到舊快取
+import hashlib
+STORES_DATA_FILE = "window.ALL_STORES_DATA=" + STORES_JS + ";\n"
+STORES_DATA_VERSION = hashlib.sha1(STORES_DATA_FILE.encode("utf-8")).hexdigest()[:10]
+with open(os.path.join(BASE_DIR, "stores_data.js"), "w", encoding="utf-8") as f:
+    f.write(STORES_DATA_FILE)
+print(f"Generated successfully: {os.path.join(BASE_DIR, 'stores_data.js')} ({len(STORES_DATA_FILE.encode('utf-8')):,} bytes)")
+
 HTML = (HTML_TEMPLATE
-        .replace("STORES_DATA_PLACEHOLDER", STORES_JS)
+        .replace("STORES_DATA_VERSION_PLACEHOLDER", STORES_DATA_VERSION)
         .replace("ACTIVE_STORE_COUNT_PLACEHOLDER", str(ACTIVE_STORE_COUNT))
         .replace("DATA_UPDATED_DATE_PLACEHOLDER", DATA_UPDATED_DATE))
 
