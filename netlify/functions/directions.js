@@ -22,6 +22,24 @@ function setCache(key, data) {
   cache.set(key, { time: Date.now(), data });
 }
 
+// 只允許本站（正式網址、預覽部署）與本機呼叫，避免 API key 被其他網站盜用計費。
+// Netlify 會自動提供 URL / DEPLOY_PRIME_URL / SITE_NAME 環境變數。
+function isAllowedRequest(event) {
+  const h = event.headers || {};
+  const source = h.origin || h.Origin || h.referer || h.Referer;
+  if (!source) return false;
+  let host;
+  try { host = new URL(source).hostname; } catch (e) { return false; }
+  if (host === "localhost" || host === "127.0.0.1") return true;
+  const allowed = [process.env.URL, process.env.DEPLOY_PRIME_URL, process.env.DEPLOY_URL]
+    .filter(Boolean)
+    .map(u => { try { return new URL(u).hostname; } catch (e) { return null; } })
+    .filter(Boolean);
+  if (allowed.includes(host)) return true;
+  const site = process.env.SITE_NAME;
+  return !!site && (host === `${site}.netlify.app` || host.endsWith(`--${site}.netlify.app`));
+}
+
 function httpPost(urlStr, headers, bodyObj) {
   return new Promise((resolve, reject) => {
     const url = new URL(urlStr);
@@ -65,7 +83,7 @@ function httpPost(urlStr, headers, bodyObj) {
  * Exclusively calls Google Routes API (computeRoutes)
  * Documentation: https://developers.google.com/maps/documentation/routes
  */
-async function fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode, apiKey) {
+async function fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode, apiKey, departureTime) {
   const travelModeMap = {
     driving: "DRIVE",
     transit: "TRANSIT",
@@ -99,6 +117,9 @@ async function fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode
 
   if (travelMode === "DRIVE") {
     requestBody.routingPreference = "TRAFFIC_UNAWARE";
+  }
+  if (travelMode === "TRANSIT" && departureTime) {
+    requestBody.departureTime = departureTime;
   }
 
   const res = await httpPost(
@@ -184,6 +205,20 @@ exports.handler = async function (event, context) {
     const destLng = parseFloat(params.destLng);
     const mode = params.mode || "driving";
 
+    if (!isAllowedRequest(event)) {
+      return { statusCode: 403, headers, body: JSON.stringify({ success: false, error: "FORBIDDEN_ORIGIN" }) };
+    }
+
+    // 大眾運輸可指定出發時間（例如深夜改查明早班次）；只接受現在起 7 天內
+    let departureTime = null;
+    if (params.departureTime) {
+      const ms = Date.parse(params.departureTime);
+      if (mode !== "transit" || Number.isNaN(ms) || ms < Date.now() - 60000 || ms > Date.now() + 7 * 86400000) {
+        return { statusCode: 400, headers, body: JSON.stringify({ success: false, error: "BAD_DEPARTURE_TIME" }) };
+      }
+      departureTime = new Date(ms).toISOString();
+    }
+
     if (isNaN(originLat) || isNaN(originLng) || isNaN(destLat) || isNaN(destLng)) {
       return {
         statusCode: 400,
@@ -204,7 +239,7 @@ exports.handler = async function (event, context) {
       };
     }
 
-    const cacheKey = `${originLat.toFixed(4)},${originLng.toFixed(4)}_${destLat.toFixed(4)},${destLng.toFixed(4)}_${mode}`;
+    const cacheKey = `${originLat.toFixed(4)},${originLng.toFixed(4)}_${destLat.toFixed(4)},${destLng.toFixed(4)}_${mode}_${departureTime || "now"}`;
     const cachedResult = getCache(cacheKey);
     if (cachedResult) {
       return {
@@ -214,7 +249,7 @@ exports.handler = async function (event, context) {
       };
     }
 
-    const result = await fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode, apiKey);
+    const result = await fetchGoogleRoutesApi(originLat, originLng, destLat, destLng, mode, apiKey, departureTime);
     setCache(cacheKey, result);
 
     return {
