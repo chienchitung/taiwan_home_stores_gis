@@ -14,168 +14,18 @@ with open(json_path, 'r', encoding='utf-8') as f:
 
 import re
 
-year_regex = re.compile(r'(19\d\d|20\d\d)')
+date_year_regex = re.compile(r'^(19\d\d|20\d\d)(?:-\d\d){0,2}$')
 
 def assign_store_opened_year(s):
-    od = str(s.get('opened_date', ''))
-    m = year_regex.search(od)
-    if m:
-        y = int(m.group(1))
-        if 1980 <= y <= 2026:
-            return y
-    note = str(s.get('note', ''))
-    if '官方門市清單核對' not in note:
-        m2 = year_regex.search(note)
-        if m2:
-            y = int(m2.group(1))
-            if 1980 <= y <= 2026:
-                return y
-    brand = s.get('brand', '')
-    name = s.get('store_name', '')
-    if brand == 'Costco 好市多':
-        costco_map = {
-            '高雄亞灣': 1997, '高雄店': 1997, '內湖': 1999, '汐止': 2000,
-            '中和': 2005, '台中店': 2007, '新竹': 2009, '台南': 2011,
-            '大順': 2011, '桃園': 2012, '嘉義': 2013, '中壢': 2015,
-            '北投': 2016, '新莊': 2017, '北台中': 2020
-        }
-        for k, y in costco_map.items():
-            if k in name:
-                return y
-        return 2010
-    if brand == '大全聯':
-        rt_map = {
-            '平鎮': 1997, '中崙': 1997, '內湖店': 1999, '忠明': 1999,
-            '員林': 2000, '碧潭': 2000, '忠孝': 2000, '嘉義': 2001,
-            '鳳山': 2001, '斗六': 2001, '湳雅': 2001, '內湖二': 2001,
-            '台南': 2002, '安平': 2002, '中壢': 2003, '景平': 2003,
-            '頭份': 2004, '土城': 2004, '八德': 2005, '佳里': 2006,
-            '鮮食集': 2018
-        }
-        for k, y in rt_map.items():
-            if k in name:
-                return y
-        return 2002
-    if brand == 'IKEA':
-        return 2015
-    if brand == '萬家福':
-        carrefour_map = {
-            "愛河店": 1989, "鼎山店": 1990, "十全店": 1991, "南港店": 1992, "中和店": 1993,
-            "三民店": 1993, "光華店": 1994, "新店店": 1994, "重新店": 1995, "嘉義店": 1995,
-            "天母店": 1996, "文心店": 1996, "中原店": 1996, "屏東店": 1997, "內壢店": 1997,
-            "內湖店": 1998, "安平店": 1998, "中華店": 1999, "仁德店": 1999, "鳳山店": 2000,
-            "五甲店": 2000, "經國店": 2000, "桂林店": 2001, "中壢店": 2001, "重慶店": 2002,
-            "板橋店": 2002, "成功店": 2003, "中平店": 2003, "苗栗店": 2003, "斗六店": 2004,
-            "南投店": 2004, "彰化店": 2004, "宜蘭店": 2005, "蘆洲店": 2005, "花蓮店": 2006,
-            "樹林店": 2006, "土城店": 2006, "台東店": 2007, "青海店": 2007, "新營店": 2007,
-            "沙鹿店": 2008, "豐原店": 2008, "楠梓店": 2008, "太平店": 2009, "德安店": 2009,
-            "澄清店": 2009, "中清店": 2010, "埔里店": 2010, "北大店": 2011, "淡新店": 2013,
-            "虎尾店": 2014, "八德店": 2017, "平鎮店": 2017, "金門店": 2018, "西屯店": 2019,
-            "新楠店": 2019, "新仁店": 2019, "新屏店": 2019, "北港店": 2019, "林口店": 2020,
-            "青埔店": 2021, "汐科店": 2022
-        }
-        for k, y in carrefour_map.items():
-            if k in name:
-                return y
-        return 2005
-    if brand == '特力屋':
-        tlw_map = {
-            "南崁店": 1996, "士林店": 1997, "新莊店": 1998, "中和店": 1998, "台南仁德店": 1998,
-            "平鎮店": 1999, "新竹店": 1999, "北屯店": 2000, "內湖店": 2000, "西屯店": 2001,
-            "高雄左營店": 2001, "高雄鳳山店": 2002, "嘉義店": 2003, "羅東店": 2004, "花蓮店": 2005,
-            "屏東店": 2006, "斗六店": 2007, "八德店": 2009, "豐原店": 2010, "台南文賢店": 2011,
-            "新店店": 2012, "三峽店": 2013, "土城店": 2014, "林森店": 2014, "高雄大順店": 2015,
-            "台中大墩店": 2017, "彰化員林店": 2017, "彰化和美店": 2018, "台東店": 2020,
-            "大安安和店": 2019, "南港興華店": 2020, "大同重慶北店": 2020, "永和得和店": 2020,
-            "蘆洲長安店": 2020, "汐止新台店": 2020, "草屯虎山店": 2020, "板橋合宜店": 2020,
-            "澎湖馬公店": 2021, "三重集美店": 2021, "林口中山店": 2021, "龍潭北龍店": 2021,
-            "桃園大業店": 2021, "淡水中山北店": 2021, "基隆義一店": 2021, "竹北文興店": 2021,
-            "湖口和愛店": 2021, "頭份中央店": 2021, "大里國光店": 2021, "永康復國店": 2021,
-            "金門太湖店": 2022, "苗栗中正店": 2022, "板橋北門店": 2022, "台中復興店": 2022,
-            "埔里信義店": 2022, "三民澄清店": 2022, "苓雅三多店": 2022, "岡山大仁店": 2022,
-            "楠梓大學店": 2022, "虎尾公安店": 2023, "新營金華店": 2023, "佳里佳東店": 2023,
-            "東港光復店": 2023, "蘆洲集賢店": 2023, "朴子四維店": 2024, "梧棲中華店": 2024,
-            "宜蘭宜興店": 2024
-        }
-        for k, y in tlw_map.items():
-            if k in name:
-                return y
-        return 2015
-    if brand == 'HOLA':
-        hola_map = {
-            "台南永康店": 1998, "台北士林店": 1999, "台北內湖店": 1999, "桃園南崁店": 1999,
-            "新北中和店": 1999, "新竹店": 1999, "台中北屯店": 2001, "高雄左營店": 2001,
-            "台南仁德店": 2002, "宜蘭羅東店": 2004, "嘉義店": 2006, "花蓮店": 2006,
-            "高雄夢時代店": 2007, "台中西屯店": 2010, "台中大墩店": 2010, "中和環球店": 2012,
-            "新北土城店": 2014, "新北重新店": 2014, "林口三井店": 2016, "新北三峽店": 2016,
-            "彰化店": 2018, "台南三越小北店": 2018, "竹北享平方店": 2022, "新店裕隆城店": 2023,
-            "台中漢神洲際店": 2025
-        }
-        for k, y in hola_map.items():
-            if k in name:
-                return y
-        return 2010
-    if brand == 'hoi! 好好生活':
-        hoi_map = {
-            "微風松高店": 2018, "台北旗艦店-內湖店": 2018, "台北文昌概念店": 2019,
-            "台北微風南京店": 2019, "台中西屯店": 2019, "台南仁德店": 2019, "台中南屯店": 2020,
-            "新北旗艦店-新店店": 2020, "高雄左營店": 2020, "桃園旗艦店-八德": 2020,
-            "台中復興店": 2020, "新北新莊宏匯店": 2021, "新北板橋遠百中山店": 2021,
-            "台南大遠百成功店": 2021, "花蓮專櫃": 2021, "新竹遠東竹北店": 2022,
-            "宜蘭金東店": 2022, "桃園南崁店": 2022, "雲林斗六店": 2023, "台東店": 2023,
-            "桃園大江店": 2024
-        }
-        for k, y in hoi_map.items():
-            if k in name:
-                return y
-        return 2020
-    if brand == '無印良品':
-        muji_extra = {
-            "松山車站": 2019, "誠品生活西門": 2018, "遠企": 2005,
-            "義大": 2010, "南港中信": 2015, "大全聯中壢": 2023
-        }
-        for k, y in muji_extra.items():
-            if k in name:
-                return y
-        return 2018
-    if brand == '宜得利':
-        nitori_map = {
-            "高雄夢時代": 2007, "台南頂美": 2008, "中壢": 2008, "八德萬家福": 2008, "南投萬家福": 2008,
-            "中和環球": 2009, "台中台糖": 2009, "台北敦北": 2010, "高雄大樂": 2010, "內湖舊宗": 2010,
-            "台北內湖": 2010, "台中新時代": 2011, "台北西門": 2011, "新竹巨城": 2012, "林口萬家福": 2012,
-            "台中大買家": 2012, "北屯大買家": 2012, "新莊": 2012, "淡水": 2013, "台北景美": 2014,
-            "嘉義大全聯": 2015, "嘉義店": 2015, "苗栗頭份大全聯": 2015, "頭份尚順": 2015, "台中廣三SOGO": 2015,
-            "汐止遠雄": 2015, "台北明曜": 2016, "Outlet Park林口": 2016, "高雄成功": 2016, "桃園JC PARK": 2017,
-            "台南仁德": 2018, "樹林秀泰": 2018, "新竹大魯閣湳雅": 2018, "重新萬家福": 2018, "台中國光大買家": 2019,
-            "台中文心秀泰": 2019, "屏東環球": 2019, "台中西屯萬家福": 2019, "高雄新楠萬家福": 2019, "桃園台茂": 2020,
-            "台中水湳愛買": 2020, "苗栗萬家福": 2020, "台中中友百貨": 2020, "台南南紡": 2020, "台北中崙大全聯": 2020,
-            "高雄左營新光三越": 2020, "嘉義耐斯": 2021, "宜蘭羅東": 2021, "土城大全聯": 2021, "中和景平大全聯": 2021,
-            "彰化員林大全聯": 2021, "高雄鳳山大全聯": 2021, "雲林斗六萬家福": 2021, "板橋遠東百貨": 2021, "桃園愛買": 2021,
-            "桃園環球A8": 2022, "高雄岡山秀泰": 2022, "宜蘭站前": 2022, "花蓮遠東百貨": 2022, "微風松高": 2022,
-            "新竹大遠百": 2022, "天母新光三越": 2022, "台南中山新光三越": 2022, "竹北享平方": 2022, "LaLaport台中": 2023,
-            "高雄大遠百": 2023, "彰化萬家福": 2023, "高雄苓雅中正一": 2023, "台中忠明大全聯": 2023, "新店裕隆城": 2023,
-            "桃園遠東百貨": 2023, "台北站前新光三越": 2023, "桃園平鎮大全聯": 2023, "三重愛買": 2024, "豐原太平洋百貨": 2024,
-            "高雄大立百貨": 2024, "漢神巨蛋": 2024, "Mitsui Outlet Park台南": 2024, "DREAM PLAZA": 2025,
-            "LaLaport南港": 2025, "台北車站地下街": 2026, "永和比漾廣場": 2026, "台東": 2026
-        }
-        for k, y in nitori_map.items():
-            if k in name:
-                return y
-        return 2018
-    if brand == '全聯福利中心':
-        # 開店日期來自商工登記比對（opened_date 已在上方處理）；沒有就留空，不推估
-        return None
-    if brand == '蝦皮店到店':
-        n = s.get('n', 0)
-        if n % 10 < 2:
-            return 2021
-        elif n % 10 < 5:
-            return 2022
-        elif n % 10 < 8:
-            return 2023
-        else:
-            return 2024
-    return 2020
+    """開幕年份只取有出處的 opened_date（YYYY / YYYY-MM / YYYY-MM-DD）。
+
+    - 全聯福利中心：經濟部商工登記分公司核准設立日期（audit/sync_pxmart_stores.py）
+    - 其他品牌：audit/store_opened_dates_verified.json 中有新聞／官方來源的日期
+      （audit/apply_verified_opened_dates.py 寫入）
+    查無可靠來源就回傳 None（前端顯示為未知、不列入時間軸），不推估、不從備註抓年份。
+    """
+    m = date_year_regex.match(str(s.get('opened_date') or '').strip())
+    return int(m.group(1)) if m else None
 
 dashboard_stores = [store for store in stores if not store.get('dashboard_excluded')]
 for store in dashboard_stores:
@@ -3038,6 +2888,13 @@ aside.collapsed .sidebar-collapse-toggle {
   border-radius: 10px;
   margin-left: 4px;
 }
+.tl-unknown-note {
+  color: #64748B;
+  font-size: 10.5px;
+  font-weight: 600;
+  margin-left: 6px;
+}
+.tl-unknown-note[hidden] { display: none; }
 
 .timeline-header-actions {
   display: flex;
@@ -3621,6 +3478,7 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
             <span class="tl-counter-sep">|</span>
             累計 <strong id="tlCumulativeCount" class="tl-highlight-num">0</strong> 間
             <span id="tlNewInYearBadge" class="tl-new-badge">+0 新增</span>
+            <span id="tlUnknownNote" class="tl-unknown-note" hidden></span>
           </span>
         </div>
         <div class="timeline-header-actions">
@@ -6785,8 +6643,8 @@ function renderTimelineSparkline(pool) {
     countsByYear[y] = 0;
   }
   pool.forEach(s => {
-    const yr = s.opened_year || 2020;
-    if (yr >= timelineMinYear && yr <= timelineMaxYear) {
+    const yr = s.opened_year;
+    if (yr && yr >= timelineMinYear && yr <= timelineMaxYear) {
       countsByYear[yr] = (countsByYear[yr] || 0) + 1;
     }
   });
@@ -6827,8 +6685,15 @@ function updateTimeline(year, triggerPulse = true) {
   }
 
   const pool = getTimelineStorePool();
-  const openedSoFar = pool.filter(s => (s.opened_year || 2020) <= timelineYear);
-  const newlyOpenedInYear = pool.filter(s => (s.opened_year || 2020) === timelineYear);
+  // 開幕年份查無可靠來源的門市不放進時間軸（不推估年份）
+  const openedSoFar = pool.filter(s => s.opened_year && s.opened_year <= timelineYear);
+  const newlyOpenedInYear = pool.filter(s => s.opened_year === timelineYear);
+  const unknownCnt = pool.filter(s => !s.opened_year).length;
+  const unknownNote = document.getElementById("tlUnknownNote");
+  if (unknownNote) {
+    unknownNote.hidden = !unknownCnt;
+    unknownNote.textContent = `${unknownCnt.toLocaleString()} 間開幕年份未知，未列入`;
+  }
 
   const cumCntEl = document.getElementById("tlCumulativeCount");
   if (cumCntEl) {
