@@ -163,13 +163,8 @@ def assign_store_opened_year(s):
                 return y
         return 2018
     if brand == '全聯福利中心':
-        if s.get('opened_year'):
-            try:
-                return int(s['opened_year'])
-            except (ValueError, TypeError):
-                pass
-        from audit.sync_pxmart_stores import assign_pxmart_opened_year
-        return assign_pxmart_opened_year(s)
+        # 開店日期來自商工登記比對（opened_date 已在上方處理）；沒有就留空，不推估
+        return None
     if brand == '蝦皮店到店':
         n = s.get('n', 0)
         if n % 10 < 2:
