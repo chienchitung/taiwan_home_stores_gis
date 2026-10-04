@@ -3893,7 +3893,7 @@ const BRAND_KEYS = Object.keys(BRANDS);
 const DATASET_BRANDS = {
   home: ["IKEA", "無印良品", "宜得利", "特力屋", "HOLA", "hoi! 好好生活", "MR. LIVING 居家先生"],
   mass: ["Costco 好市多", "萬家福", "大全聯"],
-  supermarket: ["全聯福利中心", "大全聯"],
+  supermarket: ["全聯福利中心"],
   ecommerce: ["蝦皮店到店"]
 };
 
@@ -4347,10 +4347,9 @@ function initBrandPills() {
       if (b === "全聯福利中心" && !pxmartDataLoaded) {
         await ensurePxmartData();
       }
-      // 複選：再點一次取消；選到同資料類型的全部品牌時等同「全部」
+      // 複選：點一下選取、再點一下取消；點了哪個品牌就顯示哪個（不自動改回「全部」，
+      // 否則只有一、兩個品牌的分類會看起來點了沒反應）
       if (activeBrands.has(b)) activeBrands.delete(b); else activeBrands.add(b);
-      const datasetBrands = DATASET_BRANDS[activeDatasetMode] || [];
-      if (datasetBrands.length && datasetBrands.every(x => activeBrands.has(x))) activeBrands.clear();
       render();
     };
     container.appendChild(chip);
