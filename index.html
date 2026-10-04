@@ -3233,6 +3233,8 @@ aside.collapsed .sidebar-collapse-toggle {
 @media (max-width: 768px) {
   body.m-layout .brand-pin-marker, body.m-layout .brand-pin-marker:hover { filter: none !important; }
 }
+/* 地圖以外的區域停用「點兩下放大」（地圖本身由 Leaflet 處理觸控） */
+html, body { touch-action: manipulation; }
 </style>
 </head>
 <body>
@@ -4670,6 +4672,17 @@ document.getElementById("mAppliedChips").addEventListener("click", e => {
   sel.value = chip.dataset.def;
   sel.dispatchEvent(new Event("change"));
 });
+
+// 防止 iOS Safari 縮放整個網頁。iOS 10 起 Safari 會忽略 viewport 的 maximum-scale，
+// 在搜尋列、品牌列、清單上捏合或點兩下就會放大整頁；放大後畫面幾乎都是地圖，
+// 雙指手勢全被地圖接走，就縮不回來。地圖本身的雙指縮放走 pointer/touch 事件，不受影響。
+(function preventPageZoom() {
+  ["gesturestart", "gesturechange", "gestureend"].forEach(type =>
+    document.addEventListener(type, e => e.preventDefault(), { passive: false }));
+  document.addEventListener("touchmove", e => {
+    if (e.touches.length > 1 && !(e.target.closest && e.target.closest("#map"))) e.preventDefault();
+  }, { passive: false });
+})();
 
 (function initMobileControls() {
   const handle = document.getElementById("btnSheetHandle");
