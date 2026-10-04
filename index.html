@@ -805,14 +805,15 @@ aside.collapsed .sidebar-collapse-toggle {
 .dataset-switch-btn {
   flex: 1;
   min-height: 32px;
-  padding: 0 8px;
+  padding: 0 4px;
   border: none;
   border-radius: 10rem;
   background: transparent;
   color: var(--skapa-text-2);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
+  white-space: nowrap;
   transition: all 0.15s ease;
 }
 .dataset-switch-btn:hover {
@@ -3299,7 +3300,7 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
     </button>
     <button class="m-sheet-fab" id="btnSheetFab" aria-label="開啟門市清單">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/></svg>
-      <span>清單</span><span class="m-fab-count" id="lblSheetFabCount">3896</span>
+      <span>清單</span><span class="m-fab-count" id="lblSheetFabCount">5172</span>
     </button>
     </div>
 
@@ -3370,7 +3371,7 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
     <button class="floating-open-sidebar-btn" id="btnOpenSidebar" title="展開側邊門市面板">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 4v16h20V4H2zm18 4.67h-2.5V6H20v2.67zm-2.5 2H20v2.67h-2.5v-2.67zM4 6h11.5v12H4V6zm13.5 12v-2.67H20V18h-2.5z"/></svg>
       <span>門市名錄面板</span>
-      <span class="badge-num" id="lblFloatingCount">3896</span>
+      <span class="badge-num" id="lblFloatingCount">5172</span>
     </button>
 
     <!-- BOTTOM-CENTER: Timeline Player Panel -->
@@ -3456,6 +3457,7 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
         <div class="dataset-switch" aria-label="資料類型切換">
           <button class="dataset-switch-btn active" data-dataset="home">居家品牌</button>
           <button class="dataset-switch-btn" data-dataset="mass">量販通路</button>
+          <button class="dataset-switch-btn" data-dataset="supermarket">超市生鮮</button>
           <button class="dataset-switch-btn" data-dataset="ecommerce">電商取貨</button>
         </div>
 
@@ -3523,7 +3525,7 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
         <!-- Results bar: count · viewport sync · view switch -->
         <div class="results-meta-bar">
           <div class="results-count-text">
-            <strong id="lblCount">3896 間門市</strong>
+            <strong id="lblCount">5172 間門市</strong>
             <label class="viewport-sync-label" for="chkViewportSync" title="開啟後僅列出目前地圖畫面看得到的門市">
               <input type="checkbox" id="chkViewportSync">
               <span>只看地圖範圍內</span>
@@ -3553,7 +3555,7 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
 
         <!-- Footer Meta -->
         <div class="footer-info">
-          門市座標已依官方資訊與 Google Maps 核對 ｜ 資料更新：2026-10-02
+          門市座標已依官方資訊與 Google Maps 核對 ｜ 資料更新：2026-10-04
         </div>
       </div>
 
@@ -3631,6 +3633,8 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
 const ALL_STORES = window.ALL_STORES_DATA || [];
 let shopeeDataLoaded = false;
 let shopeeLoadPromise = null;
+let pxmartDataLoaded = false;
+let pxmartLoadPromise = null;
 let markerClusterLayer = null;
 
 /* ─── BRAND CONFIG ─── */
@@ -3645,12 +3649,14 @@ const BRANDS = {
   "Costco 好市多":      { color: "#E31837", label: "Costco 好市多",       tableLabel: "Costco",  abbr: "CO" },
   "萬家福":             { color: "#0B6E4F", label: "萬家福量販",          tableLabel: "萬家福",   abbr: "萬" },
   "大全聯":             { color: "#E60012", label: "大全聯 MEGA PXMART", tableLabel: "大全聯",   abbr: "大" },
+  "全聯福利中心":       { color: "#005BAC", label: "全聯福利中心",        tableLabel: "全聯",     abbr: "全" },
   "蝦皮店到店":         { color: "#EE4D2D", label: "蝦皮店到店",           tableLabel: "蝦皮",     abbr: "蝦" },
 };
 const BRAND_KEYS = Object.keys(BRANDS);
 const DATASET_BRANDS = {
   home: ["IKEA", "無印良品", "宜得利", "特力屋", "HOLA", "hoi! 好好生活", "MR. LIVING 居家先生"],
   mass: ["Costco 好市多", "萬家福", "大全聯"],
+  supermarket: ["全聯福利中心", "大全聯"],
   ecommerce: ["蝦皮店到店"]
 };
 
@@ -3738,6 +3744,25 @@ function ensureShopeeData() {
     initBrandPills();
   }).finally(() => { shopeeLoadPromise = null; });
   return shopeeLoadPromise;
+}
+
+function ensurePxmartData() {
+  if (pxmartDataLoaded) return Promise.resolve();
+  if (pxmartLoadPromise) return pxmartLoadPromise;
+  loadStyleOnce("vendor/leaflet.markercluster/MarkerCluster.css");
+  loadStyleOnce("vendor/leaflet.markercluster/MarkerCluster.Default.css");
+  pxmartLoadPromise = Promise.all([
+    loadScriptOnce("pxmart_stores_data.js", () => Array.isArray(window.PXMART_STORES)),
+    loadScriptOnce("vendor/leaflet.markercluster/leaflet.markercluster.js", () => typeof L.markerClusterGroup === "function").catch(() => {})
+  ]).then(() => {
+    const incoming = window.PXMART_STORES || [];
+    incoming.forEach(s => { s._isCoLocation = false; });
+    ALL_STORES.push(...incoming);
+    pxmartDataLoaded = true;
+    initDropdowns();
+    initBrandPills();
+  }).finally(() => { pxmartLoadPromise = null; });
+  return pxmartLoadPromise;
 }
 
 /* ─── BASE MAP TILES CONFIG (Google Maps High-Res Tiles) ─── */
@@ -4080,9 +4105,11 @@ function initBrandPills() {
     const chip = document.createElement("button");
     chip.className = "brand-chip";
     chip.dataset.brand = b;
-    chip.dataset.dataset = Object.keys(DATASET_BRANDS).find(key => DATASET_BRANDS[key].includes(b)) || "home";
     chip.innerHTML = `<span class="dot" style="background:${cfg.color}"></span> ${b} <span class="cnt">${count}</span>`;
-    chip.onclick = () => {
+    chip.onclick = async () => {
+      if (b === "全聯福利中心" && !pxmartDataLoaded) {
+        await ensurePxmartData();
+      }
       // 複選：再點一次取消；選到同資料類型的全部品牌時等同「全部」
       if (activeBrands.has(b)) activeBrands.delete(b); else activeBrands.add(b);
       const datasetBrands = DATASET_BRANDS[activeDatasetMode] || [];
@@ -4097,8 +4124,9 @@ function syncDatasetControls() {
   document.querySelectorAll(".dataset-switch-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.dataset === activeDatasetMode);
   });
+  const allowed = DATASET_BRANDS[activeDatasetMode] || [];
   document.querySelectorAll('.brand-chip[data-brand]:not([data-brand=""])').forEach(chip => {
-    chip.style.display = chip.dataset.dataset === activeDatasetMode ? "inline-flex" : "none";
+    chip.style.display = allowed.includes(chip.dataset.brand) ? "inline-flex" : "none";
   });
 }
 
@@ -4820,7 +4848,7 @@ map.on("zoomend", applyMarkerMode);
 
 function renderMarkers(pulseYear = null) {
   markerPulseActive = !!pulseYear;
-  const useClusters = activeDatasetMode === "ecommerce" && typeof L.markerClusterGroup === "function";
+  const useClusters = (activeDatasetMode === "ecommerce" || (activeDatasetMode === "supermarket" && filteredStores.length > 150)) && typeof L.markerClusterGroup === "function";
   if (useClusters) {
     // 電商據點：聚合圖層只建立一次，之後只增減有變化的據點
     if (!markerClusterLayer) {
@@ -4940,7 +4968,7 @@ function ensureListBuiltUntil(key) {
 }
 
 function renderCards(container) {
-  const displayStores = activeDatasetMode === "ecommerce" ? filteredStores.slice(0, 200) : filteredStores;
+  const displayStores = (activeDatasetMode === "ecommerce" || filteredStores.length > 250) ? filteredStores.slice(0, 200) : filteredStores;
   if (displayStores.length < filteredStores.length) {
     const notice = document.createElement("div");
     notice.className = "viewport-hint-bar";
@@ -5061,7 +5089,7 @@ function renderTable(container) {
   container.appendChild(wrap);
   const tbody = tbl.querySelector("#tblBody");
 
-  const displayStores = activeDatasetMode === "ecommerce" ? filteredStores.slice(0, 200) : filteredStores;
+  const displayStores = (activeDatasetMode === "ecommerce" || filteredStores.length > 250) ? filteredStores.slice(0, 200) : filteredStores;
   if (displayStores.length < filteredStores.length) {
     const notice = document.createElement("div");
     notice.className = "viewport-hint-bar";
@@ -6195,7 +6223,20 @@ document.querySelectorAll(".dataset-switch-btn").forEach(btn => {
   btn.onclick = async () => {
     activeDatasetMode = btn.dataset.dataset;
     activeBrands.clear();
-    if (activeDatasetMode === "ecommerce" && !shopeeDataLoaded) {
+    if (activeDatasetMode === "supermarket" && !pxmartDataLoaded) {
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "載入中…";
+      try {
+        await ensurePxmartData();
+      } catch (error) {
+        activeDatasetMode = "home";
+        alert("全聯門市資料載入失敗，請確認 pxmart_stores_data.js 與儀表板放在同一資料夾後再試一次。");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    } else if (activeDatasetMode === "ecommerce" && !shopeeDataLoaded) {
       const originalText = btn.textContent;
       btn.disabled = true;
       btn.textContent = "載入中…";

@@ -162,6 +162,14 @@ def assign_store_opened_year(s):
             if k in name:
                 return y
         return 2018
+    if brand == '全聯福利中心':
+        if s.get('opened_year'):
+            try:
+                return int(s['opened_year'])
+            except (ValueError, TypeError):
+                pass
+        from audit.sync_pxmart_stores import assign_pxmart_opened_year
+        return assign_pxmart_opened_year(s)
     if brand == '蝦皮店到店':
         n = s.get('n', 0)
         if n % 10 < 2:
@@ -184,7 +192,8 @@ for store in dashboard_stores:
             store[key] = float(store[key])
 
 shopee_stores = [store for store in dashboard_stores if store.get('brand') == '蝦皮店到店']
-initial_stores = [store for store in dashboard_stores if store.get('brand') != '蝦皮店到店']
+pxmart_stores = [store for store in dashboard_stores if store.get('brand') == '全聯福利中心']
+initial_stores = [store for store in dashboard_stores if store.get('brand') not in ('蝦皮店到店', '全聯福利中心')]
 SHOPEE_DASHBOARD_FIELDS = {
     'n', 'brand', 'store_name', 'store_type', 'region', 'city', 'address',
     'status', 'note', 'district', 'channel_format', 'status_category', 'lat',
@@ -201,6 +210,9 @@ UNUSED_FIELDS = {'google_maps_url', 'source_url', 'clean_name', 'coordinate_sour
                  'verification_status', 'geocode_score', 'location_role', 'core_store',
                  'is_co_location', 'opened_date'}
 initial_stores = [{k: v for k, v in s.items() if k not in UNUSED_FIELDS} for s in initial_stores]
+pxmart_stores = [{k: v for k, v in s.items() if k not in UNUSED_FIELDS} for s in pxmart_stores]
+for s in pxmart_stores:
+    s['_isCoLocation'] = False
 
 # 150 公尺內是否有其他品牌：原本在每位使用者的瀏覽器裡兩兩比對，改成建置時算好
 def _haversine_km(a_lat, a_lng, b_lat, b_lng):
@@ -217,10 +229,11 @@ for s in initial_stores:
 
 STORES_JS = json.dumps(initial_stores, ensure_ascii=False, separators=(',', ':'))
 SHOPEE_STORES_JS = json.dumps(shopee_stores, ensure_ascii=False, separators=(',', ':'))
+PXMART_STORES_JS = json.dumps(pxmart_stores, ensure_ascii=False, separators=(',', ':'))
 ACTIVE_STORE_COUNT = sum(
     1 for store in dashboard_stores if store.get('status_category') == '現行營運中'
 )
-DATA_UPDATED_DATE = '2026-10-02'
+DATA_UPDATED_DATE = '2026-10-04'
 
 HTML_TEMPLATE = r"""<!DOCTYPE html>
 <html lang="zh-Hant">
@@ -1029,14 +1042,15 @@ aside.collapsed .sidebar-collapse-toggle {
 .dataset-switch-btn {
   flex: 1;
   min-height: 32px;
-  padding: 0 8px;
+  padding: 0 4px;
   border: none;
   border-radius: 10rem;
   background: transparent;
   color: var(--skapa-text-2);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
+  white-space: nowrap;
   transition: all 0.15s ease;
 }
 .dataset-switch-btn:hover {
@@ -3680,6 +3694,7 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
         <div class="dataset-switch" aria-label="資料類型切換">
           <button class="dataset-switch-btn active" data-dataset="home">居家品牌</button>
           <button class="dataset-switch-btn" data-dataset="mass">量販通路</button>
+          <button class="dataset-switch-btn" data-dataset="supermarket">超市生鮮</button>
           <button class="dataset-switch-btn" data-dataset="ecommerce">電商取貨</button>
         </div>
 
@@ -3855,6 +3870,8 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
 const ALL_STORES = window.ALL_STORES_DATA || [];
 let shopeeDataLoaded = false;
 let shopeeLoadPromise = null;
+let pxmartDataLoaded = false;
+let pxmartLoadPromise = null;
 let markerClusterLayer = null;
 
 /* ─── BRAND CONFIG ─── */
@@ -3869,12 +3886,14 @@ const BRANDS = {
   "Costco 好市多":      { color: "#E31837", label: "Costco 好市多",       tableLabel: "Costco",  abbr: "CO" },
   "萬家福":             { color: "#0B6E4F", label: "萬家福量販",          tableLabel: "萬家福",   abbr: "萬" },
   "大全聯":             { color: "#E60012", label: "大全聯 MEGA PXMART", tableLabel: "大全聯",   abbr: "大" },
+  "全聯福利中心":       { color: "#005BAC", label: "全聯福利中心",        tableLabel: "全聯",     abbr: "全" },
   "蝦皮店到店":         { color: "#EE4D2D", label: "蝦皮店到店",           tableLabel: "蝦皮",     abbr: "蝦" },
 };
 const BRAND_KEYS = Object.keys(BRANDS);
 const DATASET_BRANDS = {
   home: ["IKEA", "無印良品", "宜得利", "特力屋", "HOLA", "hoi! 好好生活", "MR. LIVING 居家先生"],
   mass: ["Costco 好市多", "萬家福", "大全聯"],
+  supermarket: ["全聯福利中心", "大全聯"],
   ecommerce: ["蝦皮店到店"]
 };
 
@@ -3962,6 +3981,25 @@ function ensureShopeeData() {
     initBrandPills();
   }).finally(() => { shopeeLoadPromise = null; });
   return shopeeLoadPromise;
+}
+
+function ensurePxmartData() {
+  if (pxmartDataLoaded) return Promise.resolve();
+  if (pxmartLoadPromise) return pxmartLoadPromise;
+  loadStyleOnce("vendor/leaflet.markercluster/MarkerCluster.css");
+  loadStyleOnce("vendor/leaflet.markercluster/MarkerCluster.Default.css");
+  pxmartLoadPromise = Promise.all([
+    loadScriptOnce("pxmart_stores_data.js", () => Array.isArray(window.PXMART_STORES)),
+    loadScriptOnce("vendor/leaflet.markercluster/leaflet.markercluster.js", () => typeof L.markerClusterGroup === "function").catch(() => {})
+  ]).then(() => {
+    const incoming = window.PXMART_STORES || [];
+    incoming.forEach(s => { s._isCoLocation = false; });
+    ALL_STORES.push(...incoming);
+    pxmartDataLoaded = true;
+    initDropdowns();
+    initBrandPills();
+  }).finally(() => { pxmartLoadPromise = null; });
+  return pxmartLoadPromise;
 }
 
 /* ─── BASE MAP TILES CONFIG (Google Maps High-Res Tiles) ─── */
@@ -4304,9 +4342,11 @@ function initBrandPills() {
     const chip = document.createElement("button");
     chip.className = "brand-chip";
     chip.dataset.brand = b;
-    chip.dataset.dataset = Object.keys(DATASET_BRANDS).find(key => DATASET_BRANDS[key].includes(b)) || "home";
     chip.innerHTML = `<span class="dot" style="background:${cfg.color}"></span> ${b} <span class="cnt">${count}</span>`;
-    chip.onclick = () => {
+    chip.onclick = async () => {
+      if (b === "全聯福利中心" && !pxmartDataLoaded) {
+        await ensurePxmartData();
+      }
       // 複選：再點一次取消；選到同資料類型的全部品牌時等同「全部」
       if (activeBrands.has(b)) activeBrands.delete(b); else activeBrands.add(b);
       const datasetBrands = DATASET_BRANDS[activeDatasetMode] || [];
@@ -4321,8 +4361,9 @@ function syncDatasetControls() {
   document.querySelectorAll(".dataset-switch-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.dataset === activeDatasetMode);
   });
+  const allowed = DATASET_BRANDS[activeDatasetMode] || [];
   document.querySelectorAll('.brand-chip[data-brand]:not([data-brand=""])').forEach(chip => {
-    chip.style.display = chip.dataset.dataset === activeDatasetMode ? "inline-flex" : "none";
+    chip.style.display = allowed.includes(chip.dataset.brand) ? "inline-flex" : "none";
   });
 }
 
@@ -5044,7 +5085,7 @@ map.on("zoomend", applyMarkerMode);
 
 function renderMarkers(pulseYear = null) {
   markerPulseActive = !!pulseYear;
-  const useClusters = activeDatasetMode === "ecommerce" && typeof L.markerClusterGroup === "function";
+  const useClusters = (activeDatasetMode === "ecommerce" || (activeDatasetMode === "supermarket" && filteredStores.length > 150)) && typeof L.markerClusterGroup === "function";
   if (useClusters) {
     // 電商據點：聚合圖層只建立一次，之後只增減有變化的據點
     if (!markerClusterLayer) {
@@ -5164,7 +5205,7 @@ function ensureListBuiltUntil(key) {
 }
 
 function renderCards(container) {
-  const displayStores = activeDatasetMode === "ecommerce" ? filteredStores.slice(0, 200) : filteredStores;
+  const displayStores = (activeDatasetMode === "ecommerce" || filteredStores.length > 250) ? filteredStores.slice(0, 200) : filteredStores;
   if (displayStores.length < filteredStores.length) {
     const notice = document.createElement("div");
     notice.className = "viewport-hint-bar";
@@ -5285,7 +5326,7 @@ function renderTable(container) {
   container.appendChild(wrap);
   const tbody = tbl.querySelector("#tblBody");
 
-  const displayStores = activeDatasetMode === "ecommerce" ? filteredStores.slice(0, 200) : filteredStores;
+  const displayStores = (activeDatasetMode === "ecommerce" || filteredStores.length > 250) ? filteredStores.slice(0, 200) : filteredStores;
   if (displayStores.length < filteredStores.length) {
     const notice = document.createElement("div");
     notice.className = "viewport-hint-bar";
@@ -6419,7 +6460,20 @@ document.querySelectorAll(".dataset-switch-btn").forEach(btn => {
   btn.onclick = async () => {
     activeDatasetMode = btn.dataset.dataset;
     activeBrands.clear();
-    if (activeDatasetMode === "ecommerce" && !shopeeDataLoaded) {
+    if (activeDatasetMode === "supermarket" && !pxmartDataLoaded) {
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "載入中…";
+      try {
+        await ensurePxmartData();
+      } catch (error) {
+        activeDatasetMode = "home";
+        alert("全聯門市資料載入失敗，請確認 pxmart_stores_data.js 與儀表板放在同一資料夾後再試一次。");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    } else if (activeDatasetMode === "ecommerce" && !shopeeDataLoaded) {
       const originalText = btn.textContent;
       btn.disabled = true;
       btn.textContent = "載入中…";
@@ -6898,5 +6952,18 @@ for path in data_paths:
         with open(path, "w", encoding="utf-8") as f:
             f.write(SHOPEE_DATA_FILE)
         print(f"Generated successfully: {path} ({len(SHOPEE_DATA_FILE):,} bytes)")
+    except Exception as e:
+        print(f"Notice: skipped {path}: {e}")
+
+pxmart_data_paths = [
+    os.path.join(BASE_DIR, "pxmart_stores_data.js"),
+]
+PXMART_DATA_FILE = "window.PXMART_STORES=" + PXMART_STORES_JS + ";\n"
+for path in pxmart_data_paths:
+    try:
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(PXMART_DATA_FILE)
+        print(f"Generated successfully: {path} ({len(PXMART_DATA_FILE):,} bytes)")
     except Exception as e:
         print(f"Notice: skipped {path}: {e}")
