@@ -3387,7 +3387,11 @@ aside.collapsed .sidebar-collapse-toggle {
   /* 底圖選單：品牌列下方右側 */
   body.m-layout .map-controls-dock { top: calc(108px + env(safe-area-inset-top)) !important; left: auto !important; right: 12px; }
   body.m-layout .map-control-trigger-btn .pill-active-style { display: none; }
-  body.m-layout .map-style-dropdown { right: 0; left: auto; width: 260px; }
+  body.m-layout .map-style-dropdown { right: 0; left: auto; width: 260px; max-height: calc(100dvh - 170px); overflow-y: auto; }
+  /* 底圖選單要疊在清單抽屜之上，否則小螢幕上選單下半部會被抽屜蓋住 */
+  body.m-layout .map-wrap { z-index: auto; } /* 不形成獨立堆疊，底圖選單才能高過抽屜 */
+  body.m-layout .map-controls-dock.open { z-index: 1100; } /* 只在選單打開時高過抽屜，平常不蓋到抽屜或「⋯」選單 */
+  body.m-layout .m-topbar { z-index: 1050; } /* 「⋯」選單要高過底圖按鈕 */
   body.m-layout .floating-open-sidebar-btn, body.m-layout .sidebar-collapse-toggle { display: none !important; }
 
   /* 定位／縮放按鈕永遠在抽屜上方 */
@@ -3412,7 +3416,8 @@ aside.collapsed .sidebar-collapse-toggle {
   .m-chip { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--ikea-blue); background: #EBF3FA; color: var(--ikea-blue); font-size: 12px; font-weight: 700; font-family: inherit; cursor: pointer; }
   .m-chip span { font-size: 14px; }
   body.m-layout.timeline-mode-active aside#mainSidebar, body.m-layout.timeline-mode-active .m-brand-slot { display: none !important; }
-  body.m-layout.timeline-mode-active .leaflet-bottom { bottom: 0; }
+  /* 時光軸面板在底部：定位／縮放按鈕移到面板上方（高度由 JS 依面板實際大小寫入） */
+  body.m-layout.timeline-mode-active .leaflet-bottom { bottom: calc(var(--m-timeline-h, 150px) + 4px); }
   body.m-layout.timeline-mode-active .m-fab-group { display: none !important; }
 
   /* 全螢幕篩選頁 */
@@ -3457,6 +3462,9 @@ aside.collapsed .sidebar-collapse-toggle {
 @media (max-width: 768px) {
   body.m-layout .brand-pin-marker, body.m-layout .brand-pin-marker:hover { filter: none !important; }
 }
+/* 地圖以外的區域停用「點兩下放大」（地圖本身由 Leaflet 處理觸控） */
+html, body { touch-action: manipulation; }
+.filter-panel-hint { font-size: 12px; color: #767676; }
 </style>
 </head>
 <body>
@@ -3741,10 +3749,7 @@ aside.collapsed .sidebar-collapse-toggle {
             </select>
           </div>
           <div class="filter-panel-actions">
-            <button class="btn-pk-mode" id="btnPkMode" title="開啟雙品牌門市比較">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-              <span>品牌比較</span>
-            </button>
+            <span class="filter-panel-hint">品牌可複選：點多個品牌按鈕即可同時比較</span>
             <button class="btn-reset-filters" id="btnResetAll" title="清空全部關鍵字與條件">重設篩選</button>
           </div>
           </div>
@@ -3753,25 +3758,6 @@ aside.collapsed .sidebar-collapse-toggle {
         <!-- Quick Brand Strip -->
         <div class="brand-strip">
           <div class="brand-chips-wrap" id="brandPills" role="group" aria-label="品牌篩選"></div>
-        </div>
-
-        <!-- Brand PK Mode Banner -->
-        <div class="pk-banner-box" id="pkBannerBox">
-          <div class="pk-banner-top">
-            <span class="pk-banner-title">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-              雙品牌比較模式
-            </span>
-            <button class="btn-exit-pk" id="btnExitPk">結束比較 &times;</button>
-          </div>
-          <div class="pk-compare-bar">
-            <div class="pk-segment-a" id="pkSegA" style="width:50%;background:#0058A3"></div>
-            <div class="pk-segment-b" id="pkSegB" style="width:50%;background:#00A396"></div>
-          </div>
-          <div class="pk-labels-row">
-            <span id="pkLabelA" style="color:#0058A3">IKEA 11 間</span>
-            <span id="pkLabelB" style="color:#00A396">宜得利 77 間</span>
-          </div>
         </div>
 
         <!-- Results bar: count · viewport sync · view switch -->
@@ -4157,7 +4143,7 @@ let currentTile = TILE_LAYERS.mono;
 currentTile.addTo(map);
 
 /* ─── APPLICATION STATE ─── */
-let activeBrand = "";
+let activeBrands = new Set(); // 已選品牌（可複選）；空集合 = 全部
 let activeDatasetMode = "home";
 let selectedKey = null;
 let markers = {};
@@ -4190,8 +4176,6 @@ let activeRegionLayer = null;
 let currentActiveRegionKey = "all";
 
 // Brand PK Mode State (Section 4)
-let isPkMode = false;
-let pkBrands = ["IKEA", "宜得利"];
 
 /* ─── GOOGLE MAPS URL GENERATOR ─── */
 function getGmapsSearchUrl(s) {
@@ -4336,12 +4320,11 @@ function initBrandPills() {
   container.innerHTML = "";
 
   const allChip = document.createElement("button");
-  allChip.className = "brand-chip" + (!activeBrand && !isPkMode ? " active" : "");
+  allChip.className = "brand-chip" + (activeBrands.size === 0 ? " active" : "");
   allChip.dataset.brand = "";
   allChip.innerHTML = `<span class="dot" style="background:#0058A3"></span> 全部 <span class="cnt">${ALL_STORES.length}</span>`;
   allChip.onclick = () => {
-    if (isPkMode) return;
-    activeBrand = "";
+    activeBrands.clear();
     render();
   };
   container.appendChild(allChip);
@@ -4355,23 +4338,10 @@ function initBrandPills() {
     chip.dataset.dataset = Object.keys(DATASET_BRANDS).find(key => DATASET_BRANDS[key].includes(b)) || "home";
     chip.innerHTML = `<span class="dot" style="background:${cfg.color}"></span> ${b} <span class="cnt">${count}</span>`;
     chip.onclick = () => {
-      if (isPkMode) {
-        if (pkBrands.includes(b)) {
-          if (pkBrands.length > 1) {
-            pkBrands = pkBrands.filter(item => item !== b);
-          }
-        } else {
-          if (pkBrands.length >= 2) {
-            pkBrands[1] = b;
-          } else {
-            pkBrands.push(b);
-          }
-        }
-        updatePkBanner();
-        render();
-        return;
-      }
-      activeBrand = (activeBrand === b) ? "" : b;
+      // 複選：再點一次取消；選到同資料類型的全部品牌時等同「全部」
+      if (activeBrands.has(b)) activeBrands.delete(b); else activeBrands.add(b);
+      const datasetBrands = DATASET_BRANDS[activeDatasetMode] || [];
+      if (datasetBrands.length && datasetBrands.every(x => activeBrands.has(x))) activeBrands.clear();
       render();
     };
     container.appendChild(chip);
@@ -4385,13 +4355,6 @@ function syncDatasetControls() {
   document.querySelectorAll('.brand-chip[data-brand]:not([data-brand=""])').forEach(chip => {
     chip.style.display = chip.dataset.dataset === activeDatasetMode ? "inline-flex" : "none";
   });
-  const compareButton = document.getElementById("btnPkMode");
-  if (compareButton) {
-    const canCompareBrands = activeDatasetMode === "home";
-    compareButton.style.display = canCompareBrands ? "inline-flex" : "none";
-    compareButton.disabled = !canCompareBrands;
-    compareButton.setAttribute("aria-hidden", canCompareBrands ? "false" : "true");
-  }
 }
 
 /* ─── DYNAMIC FACETED BRAND PILLS COUNT SYNCHRONIZATION ─── */
@@ -4424,58 +4387,13 @@ function updateBrandPillsCounts(nonBrandPool) {
 function syncBrandPills() {
   document.querySelectorAll(".brand-chip").forEach(chip => {
     const b = chip.dataset.brand;
-    if (isPkMode) {
-      chip.classList.toggle("active", pkBrands.includes(b));
-    } else {
-      if (b === "") {
-        chip.classList.toggle("active", activeBrand === "");
-      } else {
-        chip.classList.toggle("active", activeBrand === b);
-      }
-    }
+    const on = b === "" ? activeBrands.size === 0 : activeBrands.has(b);
+    chip.classList.toggle("active", on);
+    chip.setAttribute("aria-pressed", String(on));
   });
 }
 
 /* ─── BRAND PK MODE (Section 4) ─── */
-function togglePkMode() {
-  if (activeDatasetMode !== "home" && !isPkMode) return;
-  isPkMode = !isPkMode;
-  document.getElementById("btnPkMode").classList.toggle("active", isPkMode);
-  const banner = document.getElementById("pkBannerBox");
-  banner.style.display = isPkMode ? "flex" : "none";
-  if (isPkMode) {
-    activeBrand = "";
-    if (pkBrands.length < 2) pkBrands = ["IKEA", "宜得利"];
-  }
-  render();
-}
-
-function updatePkBanner(poolToUse) {
-  if (!isPkMode) return;
-  const b1 = pkBrands[0] || "IKEA";
-  const b2 = pkBrands[1] || "宜得利";
-  const c1 = BRANDS[b1] ? BRANDS[b1].color : "#0058A3";
-  const c2 = BRANDS[b2] ? BRANDS[b2].color : "#00A396";
-  const targetPool = poolToUse || getNonBrandFilteredPool();
-  const count1 = targetPool.filter(s => s.brand === b1).length;
-  const count2 = targetPool.filter(s => s.brand === b2).length;
-  const total = count1 + count2 || 1;
-  const pct1 = Math.round((count1 / total) * 100);
-  const pct2 = 100 - pct1;
-
-  document.getElementById("pkSegA").style.width = `${pct1}%`;
-  document.getElementById("pkSegA").style.background = c1;
-  document.getElementById("pkSegB").style.width = `${pct2}%`;
-  document.getElementById("pkSegB").style.background = c2;
-
-  document.getElementById("pkLabelA").style.color = c1;
-  document.getElementById("pkLabelA").textContent = `${b1} ${count1} 間 (${pct1}%)`;
-  document.getElementById("pkLabelB").style.color = c2;
-  document.getElementById("pkLabelB").textContent = `${b2} ${count2} 間 (${pct2}%)`;
-}
-
-document.getElementById("btnPkMode").onclick = togglePkMode;
-document.getElementById("btnExitPk").onclick = togglePkMode;
 
 /* ─── REGION QUICK JUMP BAR & SPATIAL BOUNDARY ENVELOPE (Section 3) ─── */
 function updateActiveRegionTooltip() {
@@ -4895,6 +4813,29 @@ document.getElementById("mAppliedChips").addEventListener("click", e => {
   sel.dispatchEvent(new Event("change"));
 });
 
+// 防止 iOS Safari 縮放整個網頁。iOS 10 起 Safari 會忽略 viewport 的 maximum-scale，
+// 在搜尋列、品牌列、清單上捏合或點兩下就會放大整頁；放大後畫面幾乎都是地圖，
+// 雙指手勢全被地圖接走，就縮不回來。地圖本身的雙指縮放走 pointer/touch 事件，不受影響。
+(function preventPageZoom() {
+  ["gesturestart", "gesturechange", "gestureend"].forEach(type =>
+    document.addEventListener(type, e => e.preventDefault(), { passive: false }));
+  document.addEventListener("touchmove", e => {
+    if (e.touches.length > 1 && !(e.target.closest && e.target.closest("#map"))) e.preventDefault();
+  }, { passive: false });
+})();
+
+// 記錄時光軸面板高度，讓手機版地圖按鈕停在面板上方
+(function trackTimelinePanelHeight() {
+  const panel = document.getElementById("timelinePlayerPanel");
+  if (!panel || !("ResizeObserver" in window)) return;
+  new ResizeObserver(() => {
+    // 用面板高度＋底部間距計算（不用目前位置：面板打開時有滑入動畫）
+    const h = panel.offsetHeight;
+    const bottomGap = parseFloat(getComputedStyle(panel).bottom) || 12;
+    if (h) document.body.style.setProperty("--m-timeline-h", Math.round(h + bottomGap + 8) + "px");
+  }).observe(panel);
+})();
+
 (function initMobileControls() {
   const handle = document.getElementById("btnSheetHandle");
   const order = ["hidden", "peek", "half", "full"];
@@ -5013,18 +4954,13 @@ function render() {
   }
 
   // 4. Apply Brand Filter or PK Mode
-  if (activeBrand && !isPkMode) {
-    const brandHasStores = nonBrandPool.some(s => s.brand === activeBrand);
-    if (!brandHasStores && nonBrandPool.length > 0) {
-      activeBrand = "";
-    }
+  // 已選品牌在目前條件下沒有門市時自動取消，避免清單變空
+  if (activeBrands.size && nonBrandPool.length > 0) {
+    [...activeBrands].forEach(b => { if (!nonBrandPool.some(s => s.brand === b)) activeBrands.delete(b); });
   }
 
   let pool = nonBrandPool.filter(s => {
-    if (isPkMode) {
-      return pkBrands.includes(s.brand);
-    }
-    if (activeBrand && s.brand !== activeBrand) {
+    if (activeBrands.size && !activeBrands.has(s.brand)) {
       return false;
     }
     return true;
@@ -5042,7 +4978,7 @@ function render() {
     updateTimeline(timelineYear, false);
     return;
   }
-  const brandSuffix = (activeBrand && !isPkMode) ? `（${activeBrand}）` : "";
+  const brandSuffix = activeBrands.size === 0 ? "" : activeBrands.size <= 3 ? `（${[...activeBrands].join("、")}）` : `（${activeBrands.size} 個品牌）`;
   if (isViewportSync && map && map.getZoom() <= 8) {
     document.getElementById("lblCount").textContent = `${filteredStores.length} 間門市（全台視野）${brandSuffix}`;
   } else if (isViewportSync) {
@@ -5054,7 +4990,6 @@ function render() {
   document.getElementById("btnMobileFilterApply").textContent = `顯示 ${filteredStores.length} 間門市`;
   document.getElementById("lblSheetFabCount").textContent = filteredStores.length;
   syncBrandPills();
-  if (isPkMode) updatePkBanner(nonBrandPool);
   renderMarkers();
   renderList();
   updateActiveRegionTooltip();
@@ -6313,8 +6248,8 @@ function navigateToCompetitor(n) {
   if (!target) return;
 
   let filterChanged = false;
-  if (!isPkMode && activeBrand && activeBrand !== target.brand) {
-    activeBrand = "";
+  if (activeBrands.size && !activeBrands.has(target.brand)) {
+    activeBrands.clear();
     filterChanged = true;
   }
   const qInput = document.getElementById("q");
@@ -6471,8 +6406,7 @@ window.addEventListener("keydown", (e) => {
 document.querySelectorAll(".dataset-switch-btn").forEach(btn => {
   btn.onclick = async () => {
     activeDatasetMode = btn.dataset.dataset;
-    activeBrand = "";
-    if (isPkMode) togglePkMode();
+    activeBrands.clear();
     if (activeDatasetMode === "ecommerce" && !shopeeDataLoaded) {
       const originalText = btn.textContent;
       btn.disabled = true;
@@ -6501,8 +6435,7 @@ document.getElementById("btnResetAll").onclick = () => {
   document.getElementById("selDistrict").value = "";
   document.getElementById("selChannel").value = "";
   document.getElementById("selStatus").value = "現行營運中";
-  activeBrand = "";
-  if (isPkMode) togglePkMode();
+  activeBrands.clear();
   isSortedByDistance = false;
   if (activeRegionLayer) {
     map.removeLayer(activeRegionLayer);
@@ -6713,11 +6646,7 @@ function getTimelineStorePool() {
 
   return ALL_STORES.filter(s => {
     if (!allowedBrands.includes(s.brand)) return false;
-    if (isPkMode) {
-      if (!pkBrands.includes(s.brand)) return false;
-    } else if (activeBrand && s.brand !== activeBrand) {
-      return false;
-    }
+    if (activeBrands.size && !activeBrands.has(s.brand)) return false;
     if (stat && s.status_category !== stat) return false;
     if (chan && (s.store_format || s.channel_format) !== chan) return false;
     if (city && s.city !== city) return false;
