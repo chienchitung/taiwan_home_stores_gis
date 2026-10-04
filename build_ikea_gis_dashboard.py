@@ -3387,7 +3387,11 @@ aside.collapsed .sidebar-collapse-toggle {
   /* 底圖選單：品牌列下方右側 */
   body.m-layout .map-controls-dock { top: calc(108px + env(safe-area-inset-top)) !important; left: auto !important; right: 12px; }
   body.m-layout .map-control-trigger-btn .pill-active-style { display: none; }
-  body.m-layout .map-style-dropdown { right: 0; left: auto; width: 260px; }
+  body.m-layout .map-style-dropdown { right: 0; left: auto; width: 260px; max-height: calc(100dvh - 170px); overflow-y: auto; }
+  /* 底圖選單要疊在清單抽屜之上，否則小螢幕上選單下半部會被抽屜蓋住 */
+  body.m-layout .map-wrap { z-index: auto; } /* 不形成獨立堆疊，底圖選單才能高過抽屜 */
+  body.m-layout .map-controls-dock.open { z-index: 1100; } /* 只在選單打開時高過抽屜，平常不蓋到抽屜或「⋯」選單 */
+  body.m-layout .m-topbar { z-index: 1050; } /* 「⋯」選單要高過底圖按鈕 */
   body.m-layout .floating-open-sidebar-btn, body.m-layout .sidebar-collapse-toggle { display: none !important; }
 
   /* 定位／縮放按鈕永遠在抽屜上方 */
