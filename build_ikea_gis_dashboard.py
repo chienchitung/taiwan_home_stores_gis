@@ -3467,6 +3467,7 @@ html, body { touch-action: manipulation; }
 .filter-panel-hint { font-size: 12px; color: #767676; }
 /* Material 圖示是實心圖形，不吃舊線條圖示的描邊樣式（否則會變粗） */
 svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
+.leaflet-tooltip.store-hover-tip { font-family: inherit; font-size: 12px; font-weight: 700; color: #111; padding: 4px 8px; border-radius: 6px; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
 </style>
 </head>
 <body>
@@ -4709,6 +4710,7 @@ function sheetHeightFor(state) {
   const h = window.innerHeight;
   if (state === "hidden") return 0;
   if (state === "peek") return 132;
+  if (state === "preview") return Math.min(330, Math.round(window.innerHeight * 0.4));
   if (state === "route") return Math.min(430, Math.round(h * 0.52));
   if (state === "full") return Math.round(h * 0.9);
   return Math.round(h * 0.5);
@@ -4808,7 +4810,8 @@ document.getElementById("mAppliedChips").addEventListener("click", e => {
   const handle = document.getElementById("btnSheetHandle");
   const order = ["hidden", "peek", "half", "full"];
   const step = dir => {
-    const cur = sheetState === "route" ? 1 : order.indexOf(sheetState);
+    if (sheetState === "preview") { setSheet(dir > 0 ? "half" : "peek"); return; }
+    const cur = sheetState === "route" ? 2 : order.indexOf(sheetState);
     setSheet(order[Math.max(0, Math.min(order.length - 1, cur + dir))]);
   };
   handle.onclick = () => { if (sheetState === "full") setSheet("half"); else step(1); };
@@ -4974,15 +4977,16 @@ function syncMarkerOverviewMode() {
   map.getContainer().classList.toggle("map-overview", map.getZoom() <= 9);
 }
 // 門市標記快取：篩選或移動地圖時只增減差異，不再每次重建全部標記（手機上原本是延遲主因之一）
+const CAN_HOVER = window.matchMedia("(hover: hover)").matches;
 const markerCache = {};
 function getCachedMarker(s, isNew) {
   const key = "s" + s.n;
   const sig = `${highContrastPins ? 1 : 0}|${isNew ? 1 : 0}`;
   let c = markerCache[key];
   if (!c) {
-    const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s, isNew) })
-      .bindPopup(() => makePopupHtml(s), { className: "custom-popup", minWidth: 260, maxWidth: 320, autoPan: true, autoPanPadding: [24, 24] });
-    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info"); });
+    const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s, isNew) });
+    if (CAN_HOVER) mk.bindTooltip(s.store_name, { direction: "top", offset: [0, -34], className: "store-hover-tip" });
+    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info", { fromMap: true }); });
     c = markerCache[key] = { mk, sig };
   } else if (c.sig !== sig) {
     c.mk.setIcon(makeMarkerIcon(s, isNew));
@@ -5008,7 +5012,8 @@ function getCachedDot(s) {
       renderer: dotRenderer, radius: 5.5, weight: 1.5,
       color: "#FFFFFF", fillColor: cfg.color, fillOpacity: 1
     });
-    d.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info"); });
+    if (CAN_HOVER) d.bindTooltip(s.store_name, { direction: "top", offset: [0, -6], className: "store-hover-tip" });
+    d.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info", { fromMap: true }); });
     dotCache[key] = d;
   }
   d.setStyle({ color: highContrastPins ? "#111111" : "#FFFFFF" });
@@ -5390,7 +5395,21 @@ function triggerRoutePlanning(s) {
   openStoreDrawer(s, "route");
 }
 
-function openStoreDrawer(s, preferredTab = null) {
+// 門市詳情的瀏覽紀錄：從「周邊」點進另一間門市時，返回鍵回到前一間
+let detailHistory = [];
+let listScrollBeforeDetail = 0;
+
+// opts.pushHistory：保留目前門市以便返回；opts.fromMap：從地圖點擊開啟（手機先顯示預覽高度）
+function openStoreDrawer(s, preferredTab = null, opts = {}) {
+  const listSection = document.getElementById("sidebarListSection");
+  if (listSection.style.display !== "none") {
+    listScrollBeforeDetail = isMobileLayout() ? listSection.scrollTop : document.getElementById("storeList").scrollTop;
+  }
+  if (opts.pushHistory && currentDetailStore && currentDetailStore !== s) {
+    detailHistory.push({ s: currentDetailStore, tab: currentDetailTab });
+  } else if (!opts.keepHistory) {
+    detailHistory = [];
+  }
   currentDetailStore = s;
 
   if (map) map.closePopup();
@@ -5418,9 +5437,11 @@ function openStoreDrawer(s, preferredTab = null) {
   const pinnedHdr = document.getElementById("detailPinnedHeader");
   if (pinnedHdr) {
     const distText = (s._userDist !== undefined && s._userDist !== null) ? ` · 距你 ${formatDist(s._userDist)}` : "";
+    const prev = detailHistory[detailHistory.length - 1];
+    const backLabel = prev ? `返回 ${prev.s.store_name}` : "返回門市清單";
     pinnedHdr.innerHTML = `
       <div class="sk-hdr-row">
-        <button class="sk-hdr-btn" onclick="closeStoreDrawer()" title="返回門市清單" aria-label="返回門市清單">
+        <button class="sk-hdr-btn" onclick="goBackInDrawer()" title="${backLabel}" aria-label="${backLabel}">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/></svg>
         </button>
         <div class="sk-hdr-text">
@@ -5430,7 +5451,7 @@ function openStoreDrawer(s, preferredTab = null) {
             <span>${s.city} ${s.district || ""}${distText}</span>
           </div>
         </div>
-        <button class="sk-hdr-btn" onclick="closeStoreDrawer()" title="關閉" aria-label="關閉門市面板">
+        <button class="sk-hdr-btn" onclick="dismissStoreDrawer()" title="關閉並回到地圖" aria-label="關閉門市面板，回到地圖">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
         </button>
       </div>
@@ -5550,7 +5571,8 @@ function openStoreDrawer(s, preferredTab = null) {
 
   clearActiveRoute();
   if (isMobileLayout()) {
-    if (sheetState !== "half") setSheet("half");
+    const target = opts.fromMap ? "preview" : "half";
+    if (sheetState !== target && !(opts.fromMap && sheetState === "half")) setSheet(target);
     setTimeout(() => panToVisible(s.lat, s.lng), 300);
   }
   initCatchmentControls(s);
@@ -6094,28 +6116,54 @@ function initRouteControls(s) {
   updateRouteDisplay(s);
 }
 
+// 結束門市詳情、回到清單（不收起面板）
 function closeStoreDrawer() {
-  if (isMobileLayout() && sheetState === "route") setSheet("half");
+  if (isMobileLayout() && (sheetState === "route" || sheetState === "preview")) setSheet("half");
   document.getElementById("sidebarDetailSection").style.display = "none";
-  document.getElementById("sidebarListSection").style.display = "flex";
+  const listSection = document.getElementById("sidebarListSection");
+  listSection.style.display = "flex";
   currentDetailStore = null;
+  detailHistory = [];
 
   if (bufferCircle) {
     map.removeLayer(bufferCircle);
     bufferCircle = null;
   }
-
   clearActiveRoute();
 
-  // If in timeline mode, re-collapse sidebar to keep full map canvas unobstructed
-  if (isTimelineMode && !isSidebarCollapsed) {
-    collapseSidebar();
-  }
+  // 回到剛才的清單捲動位置，並讓選取的門市保持反白
+  requestAnimationFrame(() => {
+    if (isMobileLayout()) listSection.scrollTop = listScrollBeforeDetail;
+    else document.getElementById("storeList").scrollTop = listScrollBeforeDetail;
+  });
 }
 
-document.getElementById("btnBackToList").onclick = closeStoreDrawer;
+// ‹ 返回：有上一間門市就回到它（原本的分頁），否則回到門市清單；面板保持開啟
+function goBackInDrawer() {
+  const prev = detailHistory.pop();
+  if (prev) {
+    selectStore("s" + prev.s.n, prev.s, false);
+    map.panTo([prev.s.lat, prev.s.lng]);
+    openStoreDrawer(prev.s, prev.tab, { keepHistory: true });
+    return;
+  }
+  if (isSidebarCollapsed) expandSidebar();
+  closeStoreDrawer();
+}
+
+// × 關閉：結束查看並收起面板回到地圖（桌機收起側欄、手機收成右下角按鈕）
+function dismissStoreDrawer() {
+  closeStoreDrawer();
+  selectedKey = null;
+  document.querySelectorAll(".store-card.selected").forEach(c => c.classList.remove("selected"));
+  applyMarkerMode();
+  if (isMobileLayout()) setSheet("hidden");
+  else if (!isSidebarCollapsed) collapseSidebar();
+}
+
+document.getElementById("btnBackToList").onclick = goBackInDrawer;
 const btnCloseDetail = document.getElementById("btnCloseDetailDrawer");
-if (btnCloseDetail) btnCloseDetail.onclick = closeStoreDrawer;
+if (btnCloseDetail) btnCloseDetail.onclick = dismissStoreDrawer;
 
 function copyStoreAddress(addr) {
   const toast = document.getElementById("toastMsg");
@@ -6187,31 +6235,32 @@ document.getElementById("chkViewportSync").addEventListener("change", e => {
 function ensureStoreMarkerOnMap(s) {
   const key = "s" + s.n;
   if (!markers[key]) {
-    const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s) })
-      .addTo(map)
-      .bindPopup(makePopupHtml(s), { className: "custom-popup", minWidth: 260, maxWidth: 320, autoPan: true, autoPanPadding: [24, 24] });
-    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info"); });
+    const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s) }).addTo(map);
+    if (CAN_HOVER) mk.bindTooltip(s.store_name, { direction: "top", offset: [0, -34], className: "store-hover-tip" });
+    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info", { fromMap: true }); });
     markers[key] = mk;
   }
   return markers[key];
 }
 
+// 地圖定位：把地圖移到這間門市並放大（不再彈出地圖卡片）；手機把抽屜降到預覽高度露出地圖
 function focusCurrentDrawerStore() {
   if (!currentDetailStore) return;
   const s = currentDetailStore;
   const key = "s" + s.n;
-  
   const mk = ensureStoreMarkerOnMap(s);
   Object.values(markers).forEach(m => m.setZIndexOffset(0));
   if (mk) mk.setZIndexOffset(3500);
-
-  map.flyTo([s.lat, s.lng], Math.max(map.getZoom(), 16), { duration: 0.8 });
-  setTimeout(() => {
-    if (markers[key]) {
-      markers[key].setZIndexOffset(3500);
-      markers[key].openPopup();
-    }
-  }, 850);
+  const z = Math.max(map.getZoom(), 16);
+  if (isMobileLayout()) {
+    setSheet("preview");
+    mobileFlyInProgress = true;
+    map.once("moveend", () => { mobileFlyInProgress = false; });
+    map.flyTo(visibleCenterFor(s.lat, s.lng, z, "preview"), z, { duration: 0.8 });
+  } else {
+    map.flyTo([s.lat, s.lng], z, { duration: 0.8 });
+  }
+  setTimeout(() => { if (markers[key]) markers[key].setZIndexOffset(3500); }, 850);
 }
 
 function navigateToCompetitor(n) {
@@ -6243,9 +6292,10 @@ function navigateToCompetitor(n) {
   if (mk) mk.setZIndexOffset(3500);
 
   selectedKey = key;
+  applyMarkerMode();
   map.flyTo([target.lat, target.lng], Math.max(map.getZoom(), 16), { duration: 0.8 });
 
-  openStoreDrawer(target, "info");
+  openStoreDrawer(target, "info", { pushHistory: true });
 }
 
 /* ─── SELECT STORE ─── */
@@ -6278,16 +6328,7 @@ function selectStore(key, s, flyTo) {
     } else {
       map.flyTo([s.lat, s.lng], Math.max(map.getZoom(), 16), { duration: 0.8 });
     }
-    setTimeout(() => {
-      if (markers[key]) {
-        markers[key].setZIndexOffset(3500);
-        const detailSection = document.getElementById("sidebarDetailSection");
-        const isDrawerOpen = detailSection && detailSection.style.display === "flex";
-        if (!isDrawerOpen) {
-          markers[key].openPopup();
-        }
-      }
-    }, 850);
+    setTimeout(() => { if (markers[key]) markers[key].setZIndexOffset(3500); }, 850);
   }
 }
 
@@ -6362,7 +6403,7 @@ window.addEventListener("keydown", (e) => {
     q.select();
   } else if (e.key === "Escape") {
     if (currentDetailStore) {
-      closeStoreDrawer();
+      goBackInDrawer();
     } else {
       const q = document.getElementById("q");
       if (q && q.value) {
