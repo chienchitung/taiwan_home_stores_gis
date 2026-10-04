@@ -3415,7 +3415,7 @@ aside.collapsed .sidebar-collapse-toggle {
   body.m-layout .m-applied-chips { display: flex; gap: 6px; overflow-x: auto; padding: 0 16px 8px; scrollbar-width: none; }
   .m-chip { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--ikea-blue); background: #EBF3FA; color: var(--ikea-blue); font-size: 12px; font-weight: 700; font-family: inherit; cursor: pointer; }
   .m-chip span { font-size: 14px; }
-  body.m-layout.timeline-mode-active aside#mainSidebar, body.m-layout.timeline-mode-active .m-brand-slot { display: none !important; }
+  body.m-layout.timeline-mode-active aside#mainSidebar { display: none !important; }
   /* 時光軸面板在底部：定位／縮放按鈕移到面板上方（高度由 JS 依面板實際大小寫入） */
   body.m-layout.timeline-mode-active .leaflet-bottom { bottom: calc(var(--m-timeline-h, 150px) + 4px); }
   body.m-layout.timeline-mode-active .m-fab-group { display: none !important; }
@@ -4941,6 +4941,9 @@ function render() {
 
   filteredStores = pool;
   if (isTimelineMode) {
+    // 時光軸模式也要同步品牌按鈕狀態（原本提前 return，按鈕一直停在「全部」）
+    syncBrandPills();
+    recalculateTimelineBounds();
     const tlPool = getTimelineStorePool();
     renderTimelineSparkline(tlPool);
     updateTimeline(timelineYear, false);
@@ -6524,8 +6527,20 @@ document.getElementById("vtTable").onclick = () => {
 ════════════════════════════════════════════ */
 let isTimelineMode = false;
 let timelineYear = 2026;
+const TIMELINE_LAST_YEAR = Math.max(new Date().getFullYear(), ...ALL_STORES.map(s => s.opened_year || 0));
 let timelineMinYear = 1996;
-let timelineMaxYear = 2026;
+let timelineMaxYear = TIMELINE_LAST_YEAR;
+
+// 時間軸刻度：依目前起訖年份平均取 5～6 個
+function renderTimelineTicks() {
+  const el = document.querySelector(".tl-ticks");
+  if (!el) return;
+  const span = timelineMaxYear - timelineMinYear;
+  const n = Math.min(5, span);
+  const years = [];
+  for (let i = 0; i <= n; i++) years.push(Math.round(timelineMinYear + span * i / n));
+  el.innerHTML = [...new Set(years)].map(y => `<span>${y}</span>`).join("");
+}
 let isTimelineCumulative = true;
 let timelinePlaying = false;
 let timelineTimer = null;
@@ -6556,13 +6571,15 @@ function openTimelineMode() {
 
 function recalculateTimelineBounds() {
   const pool = getTimelineStorePool();
-  let validYears = pool.map(s => s.opened_year || 2020).filter(y => y >= 1980 && y <= 2026);
-  if (validYears.length > 0) {
-    timelineMinYear = Math.max(1996, Math.min(...validYears));
-  } else {
-    timelineMinYear = 1996;
-  }
-  timelineMaxYear = 2026;
+  // 起點＝目前篩選（品牌、縣市等）中最早開店的年份，不同品牌不必都從最早的年份開始
+  const prevMin = timelineMinYear;
+  let validYears = pool.map(s => s.opened_year).filter(y => y >= 1980 && y <= TIMELINE_LAST_YEAR);
+  timelineMinYear = validYears.length ? Math.min(...validYears) : TIMELINE_LAST_YEAR - 10;
+  timelineMaxYear = TIMELINE_LAST_YEAR;
+  if (timelineMaxYear - timelineMinYear < 2) timelineMinYear = timelineMaxYear - 2;
+  // 起點往後移（換成較晚開店的品牌）時，目前年份跟著移到新起點
+  if (timelineMinYear > prevMin && timelineYear < timelineMinYear) timelineYear = timelineMinYear;
+  renderTimelineTicks();
 
   const slider = document.getElementById("tlRangeSlider");
   if (slider) {
