@@ -3482,6 +3482,8 @@ html, body { touch-action: manipulation; }
 /* Material 圖示是實心圖形，不吃舊線條圖示的描邊樣式（否則會變粗） */
 svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
 .leaflet-tooltip.store-hover-tip { font-family: inherit; font-size: 12px; font-weight: 700; color: #111; padding: 4px 8px; border-radius: 6px; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.custom-popup .pop-btn.pop-btn-detail { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; min-height: 40px; margin: 4px 0 8px; padding: 0 14px; border-radius: 999px; background: #111; color: #fff !important; border: none; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer; }
+.custom-popup .pop-btn.pop-btn-detail:hover { background: #333; }
 </style>
 </head>
 <body>
@@ -3912,6 +3914,7 @@ const SVG = {
   gps: `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>`,
   clock: `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>`,
   pick: `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.71 17.99A5.993 5.993 0 0 1 6 12c0-3.31 2.69-6 6-6 3.22 0 5.84 2.53 5.99 5.71l-2.1-.63a3.999 3.999 0 1 0-4.81 4.81l.63 2.1zM22 12c0 .3-.01.6-.04.9l-1.97-.59c.01-.1.01-.21.01-.31 0-4.42-3.58-8-8-8s-8 3.58-8 8 3.58 8 8 8c.1 0 .21 0 .31-.01l.59 1.97c-.3.03-.6.04-.9.04-5.52 0-10-4.48-10-10S6.48 2 12 2s10 4.48 10 10zm-3.77 4.26L22 15l-10-3 3 10 1.26-3.77 4.27 4.27 1.98-1.98-4.28-4.26z"/></svg>`,
+  info: `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>`,
   route: `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m22.43 10.59-9.01-9.01c-.75-.75-2.07-.76-2.83 0l-9 9c-.78.78-.78 2.04 0 2.82l9 9c.39.39.9.58 1.41.58.51 0 1.02-.19 1.41-.58l8.99-8.99c.79-.76.8-2.02.03-2.82zm-10.42 10.4-9-9 9-9 9 9-9 9zM8 11v4h2v-3h4v2.5l3.5-3.5L14 7.5V10H9c-.55 0-1 .45-1 1z"/></svg>`,
   car: `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>`,
   transit: `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c-4.42 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-3.58-4-8-4zM7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm3.5-6H6V6h5v5zm5.5 6c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6h-5V6h5v5z"/></svg>`,
@@ -4240,6 +4243,9 @@ function makePopupHtml(s) {
       <span>${s.address}</span>
     </div>
     ${(s.status_category !== '現行營運中' && s.note) ? `<div class="popup-note-box">${s.note}</div>` : ''}
+    <button class="pop-btn pop-btn-detail" onclick="openStoreDrawerByKey('${key}')" title="查看 ${s.store_name} 詳細資訊">
+      ${SVG.info} <span>詳細資訊</span>
+    </button>
     <div class="popup-action-row">
       <button class="pop-btn pop-btn-emph" onclick="triggerRoutePlanningByKey('${key}')" title="規劃前往 ${s.store_name} 路線">
         ${SVG.route} <span>規劃路線</span>
@@ -5018,6 +5024,31 @@ function syncMarkerOverviewMode() {
 }
 // 門市標記快取：篩選或移動地圖時只增減差異，不再每次重建全部標記（手機上原本是延遲主因之一）
 const CAN_HOVER = window.matchMedia("(hover: hover)").matches;
+
+// 點地圖上的門市：先顯示資訊卡；若已在看某間門市的詳情，則直接切換面板到這一間
+function onStoreMarkerClick(s, layer) {
+  const key = "s" + s.n;
+  const detailOpen = document.getElementById("sidebarDetailSection").style.display === "flex";
+  selectStore(key, s, false);
+  if (detailOpen && (!isMobileLayout() || sheetState !== "hidden")) {
+    map.closePopup();
+    openStoreDrawer(s, currentDetailTab === "route" ? "info" : currentDetailTab);
+    return;
+  }
+  layer.openPopup();
+}
+
+function popupOptions() {
+  const sheetH = isMobileLayout() ? sheetHeightFor(sheetState) : 0;
+  return { className: "custom-popup", minWidth: 260, maxWidth: 320, autoPan: true,
+           autoPanPaddingTopLeft: [16, isMobileLayout() ? 120 : 24], autoPanPaddingBottomRight: [16, sheetH + 24] };
+}
+
+function bindStorePopup(layer, s) {
+  layer.bindPopup(() => makePopupHtml(s), popupOptions());
+  layer.on("popupopen", () => { layer.closeTooltip(); const pp = layer.getPopup(); if (pp) pp.options = Object.assign(pp.options, popupOptions()); });
+  layer.on("click", () => onStoreMarkerClick(s, layer));
+}
 const markerCache = {};
 function getCachedMarker(s, isNew) {
   const key = "s" + s.n;
@@ -5026,7 +5057,7 @@ function getCachedMarker(s, isNew) {
   if (!c) {
     const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s, isNew) });
     if (CAN_HOVER) mk.bindTooltip(s.store_name, { direction: "top", offset: [0, -34], className: "store-hover-tip" });
-    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info", { fromMap: true }); });
+    bindStorePopup(mk, s);
     c = markerCache[key] = { mk, sig };
   } else if (c.sig !== sig) {
     c.mk.setIcon(makeMarkerIcon(s, isNew));
@@ -5053,7 +5084,7 @@ function getCachedDot(s) {
       color: "#FFFFFF", fillColor: cfg.color, fillOpacity: 1
     });
     if (CAN_HOVER) d.bindTooltip(s.store_name, { direction: "top", offset: [0, -6], className: "store-hover-tip" });
-    d.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info", { fromMap: true }); });
+    bindStorePopup(d, s);
     dotCache[key] = d;
   }
   d.setStyle({ color: highContrastPins ? "#111111" : "#FFFFFF" });
@@ -5204,7 +5235,7 @@ function ensureListBuiltUntil(key) {
 }
 
 function renderCards(container) {
-  const displayStores = (activeDatasetMode === "ecommerce" || filteredStores.length > 250) ? filteredStores.slice(0, 200) : filteredStores;
+  const displayStores = activeDatasetMode === "ecommerce" ? filteredStores.slice(0, 200) : filteredStores;
   if (displayStores.length < filteredStores.length) {
     const notice = document.createElement("div");
     notice.className = "viewport-hint-bar";
@@ -5325,7 +5356,7 @@ function renderTable(container) {
   container.appendChild(wrap);
   const tbody = tbl.querySelector("#tblBody");
 
-  const displayStores = (activeDatasetMode === "ecommerce" || filteredStores.length > 250) ? filteredStores.slice(0, 200) : filteredStores;
+  const displayStores = activeDatasetMode === "ecommerce" ? filteredStores.slice(0, 200) : filteredStores;
   if (displayStores.length < filteredStores.length) {
     const notice = document.createElement("div");
     notice.className = "viewport-hint-bar";
@@ -5419,7 +5450,7 @@ function switchDetailTab(tabName) {
 
 function openStoreDrawerByKey(key) {
   const s = ALL_STORES.find(item => "s" + item.n === key);
-  if (s) openStoreDrawer(s, "info");
+  if (s) { selectStore(key, s, false); openStoreDrawer(s, "info", { fromMap: true }); }
 }
 
 function triggerRoutePlanningByKey(key) {
@@ -6238,7 +6269,7 @@ function collapseSidebar() {
   const aside = document.getElementById("mainSidebar");
   aside.classList.add("collapsed");
   document.getElementById("btnOpenSidebar").style.display = "inline-flex";
-  setTimeout(() => { map.invalidateSize(); }, 320);
+  setTimeout(() => { map.invalidateSize({ pan: false }); }, 320);
 }
 
 function expandSidebar() {
@@ -6246,7 +6277,16 @@ function expandSidebar() {
   const aside = document.getElementById("mainSidebar");
   aside.classList.remove("collapsed");
   document.getElementById("btnOpenSidebar").style.display = "none";
-  setTimeout(() => { map.invalidateSize(); }, 320);
+  // 不重新置中（原本 invalidateSize 會把整張地圖往左推，造成點門市時的跳動）；
+  // 只有選取的門市被展開的側欄蓋住時，才平移最小距離
+  setTimeout(() => {
+    map.invalidateSize({ pan: false });
+    if (currentDetailStore) {
+      const pt = map.latLngToContainerPoint([currentDetailStore.lat, currentDetailStore.lng]);
+      const w = map.getSize().x;
+      if (pt.x > w - 40) map.panBy([pt.x - (w - 80), 0]);
+    }
+  }, 320);
 }
 
 document.getElementById("btnCollapseSidebar").onclick = collapseSidebar;
@@ -6277,7 +6317,7 @@ function ensureStoreMarkerOnMap(s) {
   if (!markers[key]) {
     const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s) }).addTo(map);
     if (CAN_HOVER) mk.bindTooltip(s.store_name, { direction: "top", offset: [0, -34], className: "store-hover-tip" });
-    mk.on("click", () => { selectStore(key, s, false); openStoreDrawer(s, "info", { fromMap: true }); });
+    bindStorePopup(mk, s);
     markers[key] = mk;
   }
   return markers[key];
@@ -6343,7 +6383,6 @@ function selectStore(key, s, flyTo) {
   const prevKey = selectedKey;
   selectedKey = key;
   if (prevKey !== key) applyMarkerMode();
-  if (isSidebarCollapsed) expandSidebar();
 
   document.querySelectorAll(".store-card").forEach(c =>
     c.classList.toggle("selected", c.dataset.key === key));
