@@ -3412,7 +3412,8 @@ aside.collapsed .sidebar-collapse-toggle {
   .m-chip { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--ikea-blue); background: #EBF3FA; color: var(--ikea-blue); font-size: 12px; font-weight: 700; font-family: inherit; cursor: pointer; }
   .m-chip span { font-size: 14px; }
   body.m-layout.timeline-mode-active aside#mainSidebar, body.m-layout.timeline-mode-active .m-brand-slot { display: none !important; }
-  body.m-layout.timeline-mode-active .leaflet-bottom { bottom: 0; }
+  /* 時光軸面板在底部：定位／縮放按鈕移到面板上方（高度由 JS 依面板實際大小寫入） */
+  body.m-layout.timeline-mode-active .leaflet-bottom { bottom: calc(var(--m-timeline-h, 150px) + 4px); }
   body.m-layout.timeline-mode-active .m-fab-group { display: none !important; }
 
   /* 全螢幕篩選頁 */
@@ -4906,6 +4907,18 @@ document.getElementById("mAppliedChips").addEventListener("click", e => {
   document.addEventListener("touchmove", e => {
     if (e.touches.length > 1 && !(e.target.closest && e.target.closest("#map"))) e.preventDefault();
   }, { passive: false });
+})();
+
+// 記錄時光軸面板高度，讓手機版地圖按鈕停在面板上方
+(function trackTimelinePanelHeight() {
+  const panel = document.getElementById("timelinePlayerPanel");
+  if (!panel || !("ResizeObserver" in window)) return;
+  new ResizeObserver(() => {
+    // 用面板高度＋底部間距計算（不用目前位置：面板打開時有滑入動畫）
+    const h = panel.offsetHeight;
+    const bottomGap = parseFloat(getComputedStyle(panel).bottom) || 12;
+    if (h) document.body.style.setProperty("--m-timeline-h", Math.round(h + bottomGap + 8) + "px");
+  }).observe(panel);
 })();
 
 (function initMobileControls() {
