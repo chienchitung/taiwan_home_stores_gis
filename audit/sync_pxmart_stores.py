@@ -71,6 +71,13 @@ def load_gcis_branches():
     return exact_name, exact_addr, branches
 
 
+# 有新聞明確記載搬遷、現址開幕日與商工登記不同的門市：採現址開幕日（同一分公司登記沿用舊址日期）
+RELOCATED_OPENINGS = {
+    "台東中山": ("2022-01-22", "https://ec.ltn.com.tw/article/breakingnews/3809391",
+                 "自建五層樓旗艦店 2022-01-22 開幕，原台東中山店遷入；商工登記 2009-01-05 為舊店"),
+}
+
+
 def parse_pxmart_store(item, match):
     attr = item['attributes']
     raw_name = attr.get('name', '').strip()
@@ -103,6 +110,10 @@ def parse_pxmart_store(item, match):
         branch_ban = branch.get('branch_ban', '')
         branch_reg_name = branch.get('full_name', '')
         v_status = f"官方門市與經濟部商工登記分公司比對（{how}）；開店日期採分公司核准設立日期"
+        if raw_name in RELOCATED_OPENINGS:
+            opened_date, url, why = RELOCATED_OPENINGS[raw_name]
+            opened_year = int(opened_date[:4])
+            v_status = f"官方門市與經濟部商工登記分公司比對（{how}）；現址為搬遷後新店，開店日期採新聞記載現址開幕日（{why}；{url}）"
     else:
         # 找不到可靠對應：不推估，日期留空
         opened_year = None

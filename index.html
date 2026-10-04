@@ -2806,6 +2806,16 @@ aside.collapsed .sidebar-collapse-toggle {
   border-radius: 10px;
   margin-left: 4px;
 }
+.tl-unknown-note {
+  color: #64748B;
+  font-size: 10.5px;
+  font-weight: 600;
+  margin-left: 6px;
+}
+.tl-unknown-note[hidden] { display: none; }
+@media (max-width: 760px) {
+  .tl-unknown-note { display: block; margin: 2px 0 0; }
+}
 
 .timeline-header-actions {
   display: flex;
@@ -3389,6 +3399,7 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
             <span class="tl-counter-sep">|</span>
             累計 <strong id="tlCumulativeCount" class="tl-highlight-num">0</strong> 間
             <span id="tlNewInYearBadge" class="tl-new-badge">+0 新增</span>
+            <span id="tlUnknownNote" class="tl-unknown-note" hidden></span>
           </span>
         </div>
         <div class="timeline-header-actions">
@@ -3629,7 +3640,7 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
 
 <!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
 <script src="vendor/leaflet/leaflet.js"></script>
-<script src="stores_data.js?v=77ebb53bfa"></script>
+<script src="stores_data.js?v=95384f4b2f"></script>
 <script>
 /* ─── DATA INJECTION ─── */
 const ALL_STORES = window.ALL_STORES_DATA || [];
@@ -6553,8 +6564,8 @@ function renderTimelineSparkline(pool) {
     countsByYear[y] = 0;
   }
   pool.forEach(s => {
-    const yr = s.opened_year || 2020;
-    if (yr >= timelineMinYear && yr <= timelineMaxYear) {
+    const yr = s.opened_year;
+    if (yr && yr >= timelineMinYear && yr <= timelineMaxYear) {
       countsByYear[yr] = (countsByYear[yr] || 0) + 1;
     }
   });
@@ -6595,8 +6606,16 @@ function updateTimeline(year, triggerPulse = true) {
   }
 
   const pool = getTimelineStorePool();
-  const openedSoFar = pool.filter(s => (s.opened_year || 2020) <= timelineYear);
-  const newlyOpenedInYear = pool.filter(s => (s.opened_year || 2020) === timelineYear);
+  // 開幕年份查無可靠來源的門市不放進時間軸（不推估年份）
+  const openedSoFar = pool.filter(s => s.opened_year && s.opened_year <= timelineYear);
+  const newlyOpenedInYear = pool.filter(s => s.opened_year === timelineYear);
+  const unknownCnt = pool.filter(s => !s.opened_year).length;
+  const unknownNote = document.getElementById("tlUnknownNote");
+  if (unknownNote) {
+    unknownNote.hidden = !unknownCnt;
+    unknownNote.textContent = `另 ${unknownCnt.toLocaleString()} 間開幕年份未知`;
+    unknownNote.title = "查無可靠開幕日期來源的門市不列入時間軸（不推估年份）";
+  }
 
   const cumCntEl = document.getElementById("tlCumulativeCount");
   if (cumCntEl) {

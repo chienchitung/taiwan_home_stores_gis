@@ -2895,6 +2895,9 @@ aside.collapsed .sidebar-collapse-toggle {
   margin-left: 6px;
 }
 .tl-unknown-note[hidden] { display: none; }
+@media (max-width: 760px) {
+  .tl-unknown-note { display: block; margin: 2px 0 0; }
+}
 
 .timeline-header-actions {
   display: flex;
@@ -6692,7 +6695,8 @@ function updateTimeline(year, triggerPulse = true) {
   const unknownNote = document.getElementById("tlUnknownNote");
   if (unknownNote) {
     unknownNote.hidden = !unknownCnt;
-    unknownNote.textContent = `${unknownCnt.toLocaleString()} 間開幕年份未知，未列入`;
+    unknownNote.textContent = `另 ${unknownCnt.toLocaleString()} 間開幕年份未知`;
+    unknownNote.title = "查無可靠開幕日期來源的門市不列入時間軸（不推估年份）";
   }
 
   const cumCntEl = document.getElementById("tlCumulativeCount");

@@ -1,0 +1,4054 @@
+[
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 北投店",
+  "date": "2016-04-09",
+  "year": 2016,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.cna.com.tw/news/firstnews/201604080347.aspx",
+   "https://www.daybuy.tw/costco/54335/"
+  ],
+  "evidence": "中央社：好市多北投店9日開幕（2016年4月）"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 內湖店",
+  "date": "1999-07",
+  "year": 1999,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A5%BD%E5%B8%82%E5%A4%9A"
+  ],
+  "evidence": "維基百科分店表：內湖店（舊宗路一段268號）開幕於1999年7月，台北第一家"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 汐止店",
+  "date": "2000-01",
+  "year": 2000,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A5%BD%E5%B8%82%E5%A4%9A"
+  ],
+  "evidence": "維基百科分店表：汐止店（大同路一段158號）開幕於2000年1月"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 新莊店",
+  "date": "2017-01-07",
+  "year": 2017,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20170107002215-260405",
+   "https://www.cna.com.tw/news/afe/201612280148.aspx"
+  ],
+  "evidence": "中時2017-01-07：好市多新莊店開幕 進場得排3小時"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 中和店",
+  "date": "2005-01",
+  "year": 2005,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A5%BD%E5%B8%82%E5%A4%9A"
+  ],
+  "evidence": "維基百科分店表：中和店（中山路二段347號）於2005年1月開幕，面積1.15萬坪"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 桃園店",
+  "date": "2012-08-30",
+  "year": 2012,
+  "confidence": "confirmed",
+  "sources": [
+   "https://news.housefun.com.tw/news/article/4138006619.html",
+   "https://www.mobile01.com/topicdetail.php?f=456&t=1551852&p=75"
+  ],
+  "evidence": "桃園南崁店2012年8月30日開幕，台灣第9家店"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 中壢店",
+  "date": "2015-08-23",
+  "year": 2015,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.cna.com.tw/news/firstnews/201508235011.aspx",
+   "https://www.ctee.com.tw/news/20150818700077-439901"
+  ],
+  "evidence": "中央社2015-08-23：好市多中壢店全台最大賣場開幕"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 新竹店",
+  "date": "2009-07-09",
+  "year": 2009,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.cardu.com.tw/news/detail.php?7319="
+  ],
+  "evidence": "卡優新聞：好市多新竹店（慈雲路188號）於2009年7月9日開幕"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 台中店",
+  "date": "2007-11-09",
+  "year": 2007,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.taichung.gov.tw/894262/post"
+  ],
+  "evidence": "台中市政府新聞：好市多台中分店9日開幕（2007年11月9日），全台第五家分店"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 北台中店",
+  "date": "2020-11-20",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ettoday.net/news/20201019/1834847.htm",
+   "https://www.bnext.com.tw/article/60052/costco-north-taichung"
+  ],
+  "evidence": "ETtoday：中台灣第二家好市多（北台中店）11月20日開幕（2020年），全台第14家"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 嘉義店",
+  "date": "2013-08-28",
+  "year": 2013,
+  "confidence": "confirmed",
+  "sources": [
+   "https://work.chiayi.gov.tw/News_Content.aspx?n=3918&s=433265",
+   "https://www.daybuy.tw/costco/54456/"
+  ],
+  "evidence": "嘉義市政府：好市多嘉義店今(28)日開幕（2013-08-28），在台第十家"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 台南店",
+  "date": "2011-08-23",
+  "year": 2011,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/newspapers/20110812000099-260202",
+   "https://info.tainan.gov.tw/News_Content.aspx?n=25742&s=175846"
+  ],
+  "evidence": "工商時報2011-08-12：美商COSTCO台南店8月23日開幕"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 大順店",
+  "date": "2011-08-24",
+  "year": 2011,
+  "confidence": "confirmed",
+  "sources": [
+   "https://tw.news.yahoo.com/%E5%A5%BD%E5%B8%82%E5%A4%9A%E9%AB%98%E9%9B%84%E5%A4%A7%E9%A0%86%E5%BA%97-%E9%96%8B%E5%B9%95-160146555.html"
+  ],
+  "evidence": "好市多高雄大順店於2011年8月24日開幕，高雄第二家"
+ },
+ {
+  "brand": "Costco 好市多",
+  "store_name": "Costco 好市多 高雄亞灣店",
+  "date": "2026-07-03",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ctee.com.tw/news/20260703700941-431401",
+   "https://udn.com/news/story/7241/9585350"
+  ],
+  "evidence": "工商時報2026-07-03：好市多高雄亞灣店開幕；前身為1997年1月開幕之高雄中華店（中華五路），2026-07-02熄燈遷至智科路35號"
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 台北敦北店（初代）",
+  "date": "1998",
+  "year": 1998,
+  "confidence": "confirmed",
+  "sources": [
+   "https://news.ltn.com.tw/news/life/breakingnews/3466803"
+  ],
+  "evidence": "自由時報 2021：敦北店「23年歷史老店」4/26熄燈；敦北環亞百貨店 1998 年開幕（1994 首店在敦南永琦百貨地下室）"
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 桃園舊店（中山路店）",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2004-12-16 仍待查證"
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 台北城市店-小巨蛋",
+  "date": "2021-11-30",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://hypebeast.com/tw/2021/11/ikea-taipei-store-opening-info",
+   "https://news.tvbs.com.tw/life/1643977"
+  ],
+  "evidence": "2021-11-30 敦北原址開幕"
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 台北內湖店",
+  "date": "2021-04-28",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://udn.com/news/story/7270/5405262"
+  ],
+  "evidence": "聯合報：IKEA內湖店 4/28 開幕（2021）"
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 新北新莊店",
+  "date": "2006",
+  "year": 2006,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.idn.com.tw/news/news_content.aspx?catid=2&catdid=0&artid=20060114dd004",
+   "https://travel.udn.com/travel/story/7160/9443546"
+  ],
+  "evidence": "自立晚報 2006-01-14：新莊店六月前開幕；2026 年新莊店 20 周年"
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 新北新店店",
+  "date": "2019-05-16",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.taipeitimes.com/News/lang/archives/2019/05/16/2003715177",
+   "https://www.epochtimes.com/b5/19/5/16/n11262894.htm"
+  ],
+  "evidence": "2019-05-16 小碧潭店開幕"
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 桃園店",
+  "date": "2020-07-23",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.tycg.gov.tw/NewsPage_Content.aspx?n=10&s=306422",
+   "https://www.marieclaire.com.tw/lifestyle/whats-hot/50903"
+  ],
+  "evidence": "青埔旗艦店 7/23 開幕（2020），中山路舊店 7/22 熄燈"
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 新竹訂購取貨中心",
+  "date": "2016-09-08",
+  "year": 2016,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20160908005922-260405",
+   "https://www.searchome.net/article.aspx?id=32875"
+  ],
+  "evidence": "中時 2016-09-08：全台第1家訂購取貨中心竹縣開幕"
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 台中店",
+  "date": "2013-09-05",
+  "year": 2013,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/newspapers/20130906001656-260107",
+   "https://www.searchome.net/article.aspx?id=21532"
+  ],
+  "evidence": "中時 2013-09-06：台中旗艦店風光開幕（9/5）"
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 嘉義城市店",
+  "date": "2022-12-26",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20221215001810-260405"
+  ],
+  "evidence": "中時 2022-12-15：IKEA嘉義店12/26開幕"
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 高雄店",
+  "date": "2006",
+  "year": 2006,
+  "confidence": "confirmed",
+  "sources": [
+   "https://wayya99.pixnet.net/blog/post/1906395",
+   "https://www.taiwanfun.com/south/kaoping/shopping/0612/0612ikeaTW.htm"
+  ],
+  "evidence": "2006 年 11 月開幕（taiwanfun 2006-12 專文、開幕日部落格）"
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 台中文心門市（初代首店）",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2018-05-15 仍待查證"
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 新北新莊旗艦店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2023-08-12 仍待查證"
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 台北內湖門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2019-10-18 仍待查證"
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 新竹竹北門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2021-11-20 仍待查證"
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 台中黎明門市",
+  "date": "2022",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://dailyview.tw/popular/detail/15002",
+   "https://tsnio.com/mr-living/"
+  ],
+  "evidence": "台中門市籌備一年、耗資1500萬，2022年以旗艦店登場（黎明路二段599號）"
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 台南崇善門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2021-04-17 仍待查證"
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 高雄巨蛋門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2020-08-29 仍待查證"
+ },
+ {
+  "brand": "La-Z-Boy",
+  "store_name": "La-Z-Boy 微風南京店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 官方在線門市 仍待查證"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 內湖店",
+  "date": "2002",
+  "year": 2002,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC_(%E5%8F%B0%E7%81%A3)",
+   "https://ec.ltn.com.tw/article/breakingnews/4309617"
+  ],
+  "evidence": "維基百科：2002年台北內湖二店開幕，位於舊宗路一段188號（原大潤發內湖二店，2025-08-01改名大全聯）。內湖一店（128號）為2000年開幕，與本址不同。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 中和店",
+  "date": "1998",
+  "year": 1998,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E5%85%A8%E8%81%AF"
+  ],
+  "evidence": "維基百科：1998年同年台中忠明店、台北中和店開業（原大潤發中和店，2025年改名大全聯）。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 土城店",
+  "date": "1998-09",
+  "year": 1998,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E5%85%A8%E8%81%AF"
+  ],
+  "evidence": "維基百科：1998年9月併購台塑集團「亞太量販」三店，更名為台北土城店等（原址為亞太量販土城店，亞太時期開幕日未查得）。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 碧潭店",
+  "date": "2001",
+  "year": 2001,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E5%85%A8%E8%81%AF"
+  ],
+  "evidence": "維基百科：2001年潤泰與歐尚合資，同年台北（新店）碧潭店、桃園中壢店、台北（中和）景平店開幕。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 景平店",
+  "date": "2001",
+  "year": 2001,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://news.rt-mart.com.tw/main/5565"
+  ],
+  "evidence": "維基百科：2001年台北（中和）景平店開幕。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 中崙店",
+  "date": "2004-12",
+  "year": 2004,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://www.ettoday.net/news/20260623/3188190.htm",
+   "https://money.udn.com/money/story/5612/9584356"
+  ],
+  "evidence": "維基百科：2004年12月台北中崙店開幕；2026-06 新聞『大全聯中崙店…開業22年從沒賺錢』，與2004年一致。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 平鎮店",
+  "date": "1997",
+  "year": 1997,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://mnya.tw/yo/word/3210.html",
+   "https://baliman.tw/blog/post/pingzhen-daquanlian-floor-guide"
+  ],
+  "evidence": "維基百科：1997年台灣第一家大潤發桃園平鎮店開幕，原址潤泰紡織平鎮廠（公司1996年成立）。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 湳雅店",
+  "date": "1997",
+  "year": 1997,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3"
+  ],
+  "evidence": "維基百科：1997年…同年大潤發新竹湳雅店開業。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 忠孝店",
+  "date": "1998-09",
+  "year": 1998,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3"
+  ],
+  "evidence": "維基百科：1998年9月併購亞太量販三店，更名為台北土城店、新竹忠孝店、台南安平店（原址為亞太量販新竹店，亞太時期開幕日未查得）。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 中壢店",
+  "date": "2001",
+  "year": 2001,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://500times.udn.com/wtimes/story/12671/7269213"
+  ],
+  "evidence": "維基百科：2001年…桃園中壢店開幕。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 頭份店",
+  "date": "2010-11",
+  "year": 2010,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://www.ctee.com.tw/news/20100104700101-439901",
+   "http://www.5ch.com.tw/news.php?act=view&id=25198"
+  ],
+  "evidence": "維基百科/新聞：大潤發頭份店（苗栗第一家、全台第26家）2010年11月開幕；工商時報2010-01『頭份店動土 年底營運』。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 八德店",
+  "date": "2003-12",
+  "year": 2003,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC_(%E5%8F%B0%E7%81%A3)",
+   "https://news.tvbs.com.tw/life/391159"
+  ],
+  "evidence": "維基百科/TVBS：2003年12月桃園八德店開幕，原址為萬客隆八德店（萬客隆2003年3月停業），非同品牌改名。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 忠明店",
+  "date": "1998",
+  "year": 1998,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3"
+  ],
+  "evidence": "維基百科：1998年…同年台中忠明店、台北中和店開業。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 斗南店",
+  "date": "1999-08",
+  "year": 1999,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://zh.wikipedia.org/wiki/%E5%A4%A7%E8%88%88%E8%BE%B2%E9%87%8F%E8%B2%A9"
+  ],
+  "evidence": "維基百科：雲林斗南店（原址大興農量販斗南店，興農1998年底交大潤發接手）1999年8月開幕。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 員林店",
+  "date": "2000",
+  "year": 2000,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC_(%E5%8F%B0%E7%81%A3)"
+  ],
+  "evidence": "維基百科：2000年台北內湖一店、彰化員林店、台南店開幕。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 嘉義店",
+  "date": "2008-10-09",
+  "year": 2008,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.epochtimes.com/b5/8/10/9/n2291394.htm",
+   "https://www.chiayi.gov.tw/News_Content.aspx?n=455&s=340029"
+  ],
+  "evidence": "大紀元2008-10-09『大潤發嘉義店盛大開幕』，全台第24家分店，博愛路2段281號。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 台南店",
+  "date": "2000",
+  "year": 2000,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3"
+  ],
+  "evidence": "維基百科：2000年台北內湖一店、彰化員林店、台南店開幕。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 佳里店",
+  "date": "2002",
+  "year": 2002,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E5%85%A8%E8%81%AF"
+  ],
+  "evidence": "維基百科：2002年台南佳里店（原址為福元批發倉庫佳里店）、台北內湖二店開業。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 鳳山店",
+  "date": "2010-05-05",
+  "year": 2010,
+  "confidence": "confirmed",
+  "sources": [
+   "https://blog.xuite.net/yjkk0623/blog/33792497",
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3"
+  ],
+  "evidence": "大潤發鳳山店2010年5月5日開幕，高雄首家大潤發，文化路59號（原青年夜市位置）。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 台東店",
+  "date": "1999-08",
+  "year": 1999,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%8F%B0%E7%81%A3",
+   "https://news.rt-mart.com.tw/main/5582"
+  ],
+  "evidence": "維基百科：台東店1999年8月開幕，中興路三段592號。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 鮮食集",
+  "date": "2021-04-28",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%A4%A7%E6%BD%A4%E7%99%BC_(%E5%8F%B0%E7%81%A3)",
+   "https://news.rt-mart.com.tw/main/5568"
+  ],
+  "evidence": "原大潤發內湖一店 2000 年開幕，2020-02 歇業改建；2021-04-28 與 IKEA 內湖店同步以「大潤發鮮食集」重新開幕（現址現店型開幕日）。本址（舊宗路一段128號）為原大潤發內湖一店，維基：2000年開幕；2020-02-03停業改裝，2021-04-28以IKEA＋『大潤發鮮食集』重新開幕。若要以鮮食集新店型計，應為2021-04-28。"
+ },
+ {
+  "brand": "大全聯",
+  "store_name": "大全聯 青埔店",
+  "date": "2025-12-16",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.storm.mg/article/11087368",
+   "https://udn.com/news/story/7270/9194302",
+   "https://www.businesstoday.com.tw/article/category/183030/post/202512100038/"
+  ],
+  "evidence": "風傳媒：大全聯青埔店12月16日全新開幕（2025年，先行試營運），首家全新大全聯量販，原IKEA桃園店建物。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 花蓮店",
+  "date": "2014-05-10",
+  "year": 2014,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20140508004245-260405"
+  ],
+  "evidence": "中時 2014-05-08：HOLA特力和樂花蓮店10日開幕，全台第23家"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台南永康店",
+  "date": "1998",
+  "year": 1998,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.tainanlohas.cc/2021/12/HOLA-closes-business.html"
+  ],
+  "evidence": "全台第一家HOLA門市，在地經營23年，2021-12-12熄燈；1998年開幕"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 新北中和店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。 現有值 2000-11-10 未經本次查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台北內湖店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台北士林店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 新店裕隆城店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 新北重新店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 中和環球店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 新北土城店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 林口三井店",
+  "date": "2024-11",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://udn.com/news/story/7270/8364539",
+   "https://www.nownews.com/news/6581199"
+  ],
+  "evidence": "HOLA以日常店型進駐林口三井 OUTLET 二館，二館 2024-11-14 開幕"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 新北三峽店",
+  "date": "2013-01-12",
+  "year": 2013,
+  "confidence": "confirmed",
+  "sources": [
+   "https://tw.news.yahoo.com/%E7%89%B9%E5%8A%9B%E5%B1%8B-hola-12%E6%97%A5%E9%80%B2%E9%A7%90%E5%8C%97%E5%A4%A7%E5%95%86%E5%9C%88-213000155.html"
+  ],
+  "evidence": "特力屋、HOLA 2013-01-12 進駐北大商圈（三峽店）"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 桃園南崁店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 宜蘭羅東店",
+  "date": "2020-10-01",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://ec.ltn.com.tw/article/breakingnews/3306955"
+  ],
+  "evidence": "自由財經（2020）：特力屋與HOLA進軍羅東光榮路自建賣場，10/1開幕"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 竹北享平方店",
+  "date": "2024-11-22",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ettoday.net/news/20241210/2867933.htm",
+   "https://udn.com/news/story/7270/8364539"
+  ],
+  "evidence": "HOLA再展2店進駐林口三井二期、竹北享平方，11/22開幕（2024）"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 新竹店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台中北屯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台中西屯店",
+  "date": "2018-05-12",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ctee.com.tw/news/20180509700020-439803",
+   "https://www.niusnews.com/=P2667es2"
+  ],
+  "evidence": "工商時報 2018-05-09：特力和樂台中西屯店5/12開幕"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台中大墩店",
+  "date": "2019-03-29",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ctee.com.tw/news/20190328700446-431401",
+   "https://www.yummyday.com.tw/food/15774"
+  ],
+  "evidence": "工商時報 2019-03-28：HOLA插旗五期大墩路商圈，3/29開幕"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 彰化店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 嘉義店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台中漢神洲際店",
+  "date": "2026-04-10",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20260409002659-260421",
+   "https://zeekmagazine.com/archives/256515"
+  ],
+  "evidence": "HOLA台中漢神洲際店 4/10 開幕（2026）"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台南三越小北店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台南仁德店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 高雄左營店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 高雄夢時代店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 微風松高店（初代首店）",
+  "date": "2018-09-17",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://technews.tw/2018/09/17/taobao-hoi-smart-retail-store-in-taipei/",
+   "https://www.ctee.com.tw/news/20180918700199-439901"
+  ],
+  "evidence": "特力集團hoi!攜手淘寶於微風松高2樓打造全台首間智慧門店「Taobao × hoi! 淘寶精選店」，2018年9月17日開幕（科技新報2018/09/17、工商時報2018/09/18）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 台北文昌概念店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 新北板橋遠百中山店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "Mobile01有「板橋新店踩點分享」討論串，但未取得明確開幕日期"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 台中西屯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 台北微風南京店",
+  "date": "2020-06-05",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.niusnews.com/=P0h80fw0",
+   "https://udn.com/news/story/7934/4613406",
+   "https://samhenda.com/2020/06/savemoneylife8809/"
+  ],
+  "evidence": "「hoi!好好生活」第6間實體門市微風南京門市6/5正式開幕（B1），報導刊於2020年6月"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 台中南屯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "僅找到南屯店為hoi!中部首間門市之介紹，未查得明確開幕日期（第三方目錄標示2020但非明確來源）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 新北旗艦店-新店店(8/21試營運!)",
+  "date": "2026-08-21",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://n.yam.com/Article/20260821816569",
+   "https://money.udn.com/money/story/5635/9709120",
+   "https://www.nownews.com/news/6868087"
+  ],
+  "evidence": "hoi!新北旗艦店（新店中興路三段1號4樓，逾400坪）2026年8月21日試營運；報導標題「hoi!好好生活插旗新店！新北旗艦店試營運」"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 雲林斗六店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 台北旗艦店-內湖店",
+  "date": "",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://news.ebc.net.tw/news/living/519855",
+   "https://www.ctee.com.tw/news/20251031701954-431207"
+  ],
+  "evidence": "2025/10/31報導：「hoi!好好生活七年前在內湖紮根」→約2018年；原內湖店改裝升級為台北旗艦店，2025年11月1日重新開幕（同址新湖三路23號2F）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 宜蘭金東店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 台南大遠百成功店",
+  "date": "2024-03-22",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.feds.com.tw/tw/Event/Detail/24736",
+   "https://www.taiwanhot.net/news/1062873/"
+  ],
+  "evidence": "hoi!好好生活於2024年3月22日（五）在台南大遠百成功店B1開幕，第13間門市，180坪，當時全台最大門市"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 台東店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 花蓮專櫃(特力屋花蓮店內)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 高雄左營店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 台南仁德店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 新北新莊宏匯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 台中復興店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "門市清單標示「台中復興店(9/26盛大開幕!)」，但未查得年份"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 桃園旗艦店-八德",
+  "date": "2025-08-08",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://udn.com/news/story/7270/8906247",
+   "https://www.ctee.com.tw/news/20250731700207-439901",
+   "https://www.storm.mg/article/11056706"
+  ],
+  "evidence": "首間500坪大型店八德店（介壽路一段479號2樓）2025年8月1日試營運、8月8日正式開幕，為第17間店"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 桃園大江店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "僅見提及桃園大江生活選品店，未查得開幕日期"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 新竹遠東竹北店",
+  "date": "",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ctee.com.tw/news/20220228700598-439901",
+   "https://m.match.net.tw/mi/news/life/20220301/6407830",
+   "https://udn.com/news/story/7270/6118504"
+  ],
+  "evidence": "工商時報2022/02/28：hoi!第10間店開設在甫試營運的遠百竹北店5樓（72坪）；2022/03/01報導「新竹門市開幕進駐遠百竹北」。確切開幕日未查得"
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store_name": "hoi! 桃園南崁店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 微風門市（初代首店）",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 信義A11門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 淡水美麗新門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 微風松高旗艦店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 統一時代門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 美麗華旗艦店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 微風台北車站門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新光三越台北南西門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 遠東SOGO復興館門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 微風南京門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 館前門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 天母門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 大葉高島屋門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 京站門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 CITYLINK南港門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 CITYLINK內湖門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 景美瀚星門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 板橋車站門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 板橋大遠百門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 遠東百貨板橋門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新店裕隆城門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 中和環球門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 永和比漾門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新莊宏匯門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 三重重新門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 林口三井門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 汐止遠雄門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 樹林秀泰門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 徐匯廣場門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 基隆皇冠門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 桃園遠東門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 桃園台茂門市",
+  "date": "2016-09-08",
+  "year": 2016,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/160909.html",
+   "https://www.chinatimes.com/realtimenews/20160910002709-260405"
+  ],
+  "evidence": "官方新聞：MUJI無印良品台茂門市9/8全新開幕（台茂B2F，桃園第4間、全台第42間）；工商時報2016-09-10報導"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 中壢SOGO門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://www.muji.com/tw/news/news/191005.html"
+  ],
+  "evidence": "官方新聞(191005)：中壢門市10/5於遠東SOGO中壢店「將原有空間擴大近一倍」至304坪改裝開幕，屬擴大改裝，原始開幕日期未找到"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 中壢大江門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 環球A19門市",
+  "date": "2026-06-26",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://shop.muji.tw/muji-journal/news/news/260626.html",
+   "https://istyle.ltn.com.tw/article/40312"
+  ],
+  "evidence": "官方新聞(260626)：MUJI無印良品環球A19門市6/26開幕，桃園第9間、全台第74店，3F近315坪"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 環球A8門市",
+  "date": "2016-03-25",
+  "year": 2016,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20160324004892-260410",
+   "https://tw.stock.yahoo.com/news/%E7%94%A2%E6%A5%AD-%E7%84%A1%E5%8D%B0%E8%89%AF%E5%93%81%E7%A9%8D%E6%A5%B5%E5%B1%95%E5%BA%97-%E7%92%B0%E7%90%83%E6%9E%97%E5%8F%A3a8%E5%BA%97%E6%96%B0%E9%96%8B%E5%B9%95-064521175.html"
+  ],
+  "evidence": "《產業》無印良品積極展店，環球林口A8店新開幕，全台第39店，2016年3月25日開幕（復興一路8號2F，110坪）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 愛買桃園門市",
+  "date": "2024-03-28",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://500times.udn.com/wtimes/story/12671/7862011",
+   "https://www.bnext.com.tw/article/78696/muji-taoyuan-store"
+  ],
+  "evidence": "無印良品桃園愛買3/28開幕（2024年），首度攜手愛買、1樓挑高9米近500坪"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新竹大遠百門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新竹巨城門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新竹大魯閣門市",
+  "date": "2025-03-27",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/250327.html",
+   "https://news.pchome.com.tw/living/twpowernews/20250328/index-17431670768815847009.html"
+  ],
+  "evidence": "官方新聞(250327)：新竹大魯閣快閃門市3/27全新登場，B1F 130坪，全台首間服飾專門店，原定為期半年的快閃店"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 遠東百貨竹北門市",
+  "date": "2022-01-14",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.tw/tw/news/news/220114.html",
+   "https://www.nownews.com/news/5687391"
+  ],
+  "evidence": "官方新聞(220114)：新竹最大門市竹北門市盛大開幕，遠百竹北5F 310坪，全台第55間；遠百竹北2022-01-14試營運"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 竹北享平方門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 頭份尚順門市",
+  "date": "2022-12-07",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/221207.html",
+   "https://www.travelerluxe.com/article/desc/220008170"
+  ],
+  "evidence": "官方新聞(221207)：苗栗首店，MUJI無印良品尚順門市12/7盛大開幕（尚順3F近500坪）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新光三越台中中港門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://www.muji.com/tw/news/news/160823.html",
+   "https://www.ctee.com.tw/news/20160915700059-439901"
+  ],
+  "evidence": "2016-08-24起改裝，2016-09-29以台中旗艦店370坪改裝重新開幕；屬既有門市改裝，原始開幕日期未找到"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 台中大遠百門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 廣三SOGO門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://www.muji.com/tw/news/news/200828.html",
+   "https://www.ptt.cc/bbs/Lifeismoney/M.1600452490.A.F0C.html"
+  ],
+  "evidence": "廣三門市2020-09-16至10-04清倉特賣後結束營業，遷至對面金典；原始開幕日期未找到"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 中友百貨門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://shop.muji.tw/Shop/StoreDetail/41566/37634"
+  ],
+  "evidence": "搜尋摘要：中友百貨為全台第17家門市、台中第2家，9月18日開幕，但未見明確年份；官方地址為B棟3F（非A棟7F）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 金典概念店",
+  "date": "2020-09-30",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ctee.com.tw/news/20200930700544-431401",
+   "https://www.marieclaire.com.tw/lifestyle/living/53146/muji-taichung"
+  ],
+  "evidence": "工商時報2020-09-30：全台最大MUJI無印良品金典概念店今開幕，全台第54家，486坪；原廣三SOGO門市遷至對面金典"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 台中LaLaport門市",
+  "date": "2023-01-17",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ctee.com.tw/news/20230116700899-431401",
+   "https://taipeiwalker.walkerland.com.tw/articles/view/2314"
+  ],
+  "evidence": "工商時報2023-01-16：台中最大門市！無印良品LaLaport台中店17日開幕（南館1F近500坪）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 文心秀泰門市",
+  "date": "",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://udn.com/news/story/7270/8364496"
+  ],
+  "evidence": "聯合報改裝報導：台中文心門市「繼2018年開幕後」改裝擴大近400坪（秀泰文心店4F）；搜尋摘要稱2018年11月開幕但未見原文確認月日。注意官方地址為4F非B1"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新時代台中門市",
+  "date": "2025-12-23",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://shop.muji.tw/muji-journal/news/news/251223.html",
+   "https://500times.udn.com/wtimes/story/12671/9221142"
+  ],
+  "evidence": "官方新聞(251223)：MUJI無印良品新時代台中門市12/23盛大開幕，全台第71間，3F逾320坪（Threads稱為「回歸」新時代，先前曾有門市）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 台中港三井Outlet門市",
+  "date": "2026-01-13",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://shop.muji.tw/muji-journal/news/news/260113.html",
+   "https://500times.udn.com/wtimes/story/12671/9264975"
+  ],
+  "evidence": "官方新聞(260113)：MITSUI OUTLET PARK台中港門市1/13盛大開幕，大台中第10家、全台第72間，1F南四口275坪；2025年7-9月曾設快閃店"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 豐原太平洋門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 員林大潤發門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 雲林斗六門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 嘉義耐斯門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 嘉義垂楊新光門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新光三越台南新天地門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新光三越台南中山門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 台南南紡門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 台南三井Outlet門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://500times.udn.com/wtimes/story/12671/9384818",
+   "https://istyle.ltn.com.tw/article/39422"
+  ],
+  "evidence": "報導標題「無印良品台南三井3/20開幕！高鐵台南站旁370坪大型門市」及「MUJI進駐MITSUI台南二期」，但摘要未見明確年份（應為近期新店，非2022），年份未確認"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 台南大遠百門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 高雄大立旗艦店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 高雄岡山門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 漢神巨蛋門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 漢神本館門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 高雄夢時代門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新光三越高雄左營門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 三多門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 SKM Park高雄草衙門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 義大門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 屏東太平洋門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 屏東潮州驛站門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 宜蘭新月門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 花蓮遠東門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 台東門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 愛買台中門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 麗寶MALL門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 遠企門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 松山車站門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 大全聯內湖門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 誠品生活西門門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 南港中信門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 LaLaport南港門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 新店碧潭門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 大全聯八德門市",
+  "date": "2024-07-18",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://500times.udn.com/wtimes/story/12671/8104310"
+  ],
+  "evidence": "無印良品大潤發八德7/18開幕（2024），300坪；（現為大全聯八德）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 大全聯中壢門市",
+  "date": "2023-06-30",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://udn.com/news/story/7270/7273124",
+   "https://www.ettoday.net/news/20230630/2530472.htm"
+  ],
+  "evidence": "ETtoday 2023-06-30：大潤發中壢店改裝新開幕，MUJI 500坪複合大店與JINS首度合作，6/30起開幕（現大全聯中壢店，原大潤發中壢店）"
+ },
+ {
+  "brand": "無印良品",
+  "store_name": "無印良品 愛買台南門市",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 高雄夢時代店（初代首店）",
+  "date": "2007-05",
+  "year": 2007,
+  "confidence": "confirmed",
+  "sources": [
+   "https://news.ltn.com.tw/news/local/paper/372304",
+   "https://zh.wikipedia.org/zh-tw/%E5%AE%9C%E5%BE%97%E5%88%A9",
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利2007年5月於高雄夢時代店設立海外首間門市（台灣1號店）；日期12日未能另行查證。現址2024年重返夢時代2F為另一階段。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台中台糖店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未能確認：一搜尋摘要稱台中台糖店2009年11月開幕（台中市1號店），與輸入note之2011-06-18矛盾，來源不明確，未採用。（Web搜尋額度已用盡，無法再查證）"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 花蓮遠東百貨店",
+  "date": "2022-08",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "官方沿革（經搜尋摘要）：2022年8月「花蓮遠東百貨店」開幕。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台北站前新光三越店",
+  "date": "2023-11",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "官方沿革（經搜尋摘要）：2023年11月「台北站前新光三越店」開幕。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 三重愛買店",
+  "date": "2024-02",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "官方沿革（經搜尋摘要）：2024年2月「三重愛買店」開幕。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台中豐原太平洋百貨店",
+  "date": "2024-03",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "官方沿革（經搜尋摘要）：2024年3月「台中豐原太平洋百貨店」開幕。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台北內湖舊宗店",
+  "date": "2014-06",
+  "year": 2014,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "官方沿革（經搜尋摘要）：「台北內湖舊宗店」2014年6月開幕，地址舊宗路一段150巷25號2F、3F。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台北車站地下街店",
+  "date": "2026-07-24",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://mnya.tw/yo/word/3939.html",
+   "https://www.threads.com/@plumage21/post/DakPdfOmjlb/",
+   "https://www.nitori.com.tw/news"
+  ],
+  "evidence": "官方最新消息/新聞：台北車站地下街店2026年7月24日盛大開幕（開幕活動7/24-7/31），位於地下街Y區B2。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台北中崙大全聯店",
+  "date": "2020-12",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ettoday.net/news/20201230/1884464.htm",
+   "https://www.walkerland.com.tw/subject/view/283462",
+   "https://spot.line.me/detail/813534741763463385"
+  ],
+  "evidence": "ETtoday 2020-12-30：大潤發中崙店2020年底改裝首度引進「店中店」，NITORI宜得利、迪卡儂進駐；另一搜尋摘要稱台北中崙大潤發店2020年12月17日開幕（日未獨立核實）。原為大潤發中崙店，後改大全聯，宜得利2026-09-15隨商場結束營業。注意：官方沿革的搜尋摘要給出互相矛盾的年份(2007/2014/2016)，不採用。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台北敦北店",
+  "date": "2010-03",
+  "year": 2010,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "官方沿革（經搜尋摘要）：台北市1號店「台北敦北店」2010年3月開幕。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台北明曜店",
+  "date": "2016-10",
+  "year": 2016,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "官方沿革（經搜尋摘要）：「台北明曜店」2016年10月開幕。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 DECO HOME台北DREAM PLAZA店",
+  "date": "2025-07",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "官方沿革（經搜尋摘要）：「DECO HOME 台北DREAM PLAZA店」2025年7月開幕。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台北微風松高店",
+  "date": "2022-07",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "官方沿革（經搜尋摘要）：「台北微風松高店」2022年7月開幕。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台北天母新光三越店",
+  "date": "2022-10-26",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20221028000130-260405",
+   "https://udn.com/news/story/7270/6696746",
+   "https://udn.com/news/story/7934/6697490"
+  ],
+  "evidence": "新光三越天母店周年慶10/26開跑，宜得利首度進駐天母，開幕首日銷售破百萬（中時2022-10-28）。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 新竹大遠百店",
+  "date": "2022-10",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "官方沿革（經搜尋摘要）：2022年10月「新竹大遠百店」開幕。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 LaLaport南港店",
+  "date": "2025-03-20",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.bnext.com.tw/article/82124/lalaport--nangang-openingin0320",
+   "https://www.businessweekly.com.tw/style/blog/3018014"
+  ],
+  "evidence": "南港LaLaport 2025-03-20開幕，宜得利於開幕時進駐4樓"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 板橋遠東百貨店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 汐止遠雄店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 永和比漾廣場店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 中和景平大全聯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 Mitsui Outlet Park林口店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 中和環球店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 土城大全聯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 樹林秀泰店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 重新萬家福店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 新莊店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 林口萬家福店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 淡水店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 宜蘭站前店",
+  "date": "2022-07",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://osakaleo.pixnet.net/blog/posts/10355157170"
+  ],
+  "evidence": "宜得利宜蘭站前店（宜興路一段159號2樓）2022年7月盛大開幕"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 宜蘭羅東店",
+  "date": "2021-05-14",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://blog.udn.com/e1921525/162893842"
+  ],
+  "evidence": "宜得利宜蘭羅東店5月14日盛大開幕（2021，首度進軍東台灣）"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 新竹大魯閣湳雅店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 新竹巨城店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 竹北享平方店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 中壢店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 桃園平鎮大全聯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 桃園愛買店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 桃園環球A8店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 桃園八德萬家福店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 苗栗萬家福店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 桃園台茂店",
+  "date": "2020-01",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://news.shoninsha.co.jp/store/143668",
+   "https://www.ryutsuu.biz/abroad/l122608.html",
+   "https://www.nitorihd.co.jp/news/items/4c971a161f13c64a075c89bce65e9f72.pdf"
+  ],
+  "evidence": "商人舍標題：「台湾31店舗目｢NITORI桃園台茂店｣2020年1月出店」；流通新聞「台湾に30店舗目、2020年1月3日オープン」（店序30/31說法不一，故只記至月）"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 苗栗頭份大全聯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://m.facebook.com/NITORI.TW/photos/3146658535385763/",
+   "https://www.findcompany.com.tw/%E5%AE%9C%E5%BE%97%E5%88%A9%E5%AE%B6%E5%B1%85%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E8%8B%97%E6%A0%97%E9%A0%AD%E4%BB%BD%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%BA%97"
+  ],
+  "evidence": "官方FB貼文「苗栗頭份大潤發店 將於5月29日(五)盛大開幕」未寫年份（5/29為週五→2020年最可能）；分公司登記資料顯示2020-04-15設立。原為大潤發店中店，現大全聯。未見明確年份，不記錄。現值2015幾乎確定錯誤"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 DECO HOME LaLaport台中店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://niniandblue.com/blog/post/decohome-tc",
+   "https://www.ctee.com.tw/news/20241007701300-431401"
+  ],
+  "evidence": "部落格稱LaLaport台中北館1F DECO HOME於「5/29」開幕但未寫年份；工商時報2024-10-07報導DECO HOME海外首站為漢神巨蛋，故台中店不早於2024-10，現值2023應有誤"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 LaLaport台中店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "僅查得宜得利位於LaLaport台中南館3F；LaLaport台中南館2023-01-17試營運、全館2023-05-16開幕，但未找到宜得利本店開幕日期的明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台中新時代店",
+  "date": "2011-05",
+  "year": 2011,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ctee.com.tw/news/20110506700086-439901"
+  ],
+  "evidence": "工商時報2011-05-06「日本宜得利家居 中台灣展店」：進駐台中新時代購物中心，全台第8家、中部第2家分店"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台中廣三SOGO店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "搜尋摘要出現2007-09與2015-09兩種互相矛盾的說法，無可引用的明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台中中友百貨店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://www.chungyo.com.tw/floor_detail.php?cID=8&Key=1478"
+  ],
+  "evidence": "僅確認位於中友百貨A棟7樓；搜尋摘要出現2007-10、2020-10矛盾說法，無明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台中忠明大全聯店",
+  "date": "2023-09-20",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ryutsuu.biz/abroad/p091977.html",
+   "https://www.ettoday.net/news/20231027/2610818.htm"
+  ],
+  "evidence": "流通新聞（2023-09-19刊）「ニトリ／台湾58店舗目「台中忠明大潤発店」オープン」，9月20日開幕；原為大潤發忠明店（現大全聯）店中店"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 新店裕隆城店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://travelcom.com.tw/nitori250915/"
+  ],
+  "evidence": "裕隆城2023-09-28開幕，宜得利位於5F，但未找到宜得利本店開幕日期明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 桃園遠東百貨店",
+  "date": "2023-10-27",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ryutsuu.biz/abroad/p102611.html",
+   "https://news.shoninsha.co.jp/store/232266"
+  ],
+  "evidence": "流通新聞（2023-10-26刊）「台湾58店舗目の新店オープン」：10月27日（金）開設「NITORI 桃園遠東百貨店」桃園区中正路20号6階，集團第951店"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台中水湳愛買店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 北屯大買家店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台中西屯萬家福店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源（原家樂福店中店，現萬家福）"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台中文心秀泰店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://news.shoninsha.co.jp/store/125015",
+   "https://apoarea.tw/showtime-nitori-may/"
+  ],
+  "evidence": "商人舍標題「台湾32店舗目の212坪｢台中文心秀泰店｣4/3オープン」未寫年份（依店序30-31號為2020年1月，推測為2020-04-03，但無明確年份，不記錄）"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台中國光大買家",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 彰化萬家福店",
+  "date": "2023-05-04",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ctee.com.tw/news/20230504701085-431401"
+  ],
+  "evidence": "工商時報2023-05-04「宜得利家居插旗彰化家樂福5/4開幕」（家樂福店中店，現萬家福）"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 彰化員林大全聯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 南投萬家福店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 嘉義耐斯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 嘉義大全聯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 雲林斗六萬家福店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台南中山新光三越店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台南頂美店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台南南紡店",
+  "date": "2020-12",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ryutsuu.biz/abroad/m122140.html"
+  ],
+  "evidence": "流通新聞（2020-12-21刊）「ニトリHD／台湾35店舗目「NITORI台南南紡店」オープン」"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 DECO HOME Mitsui Outlet Park台南店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台南仁德店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 高雄大立百貨店",
+  "date": "2024-08",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20240830002999-260421"
+  ],
+  "evidence": "中時2024-08-30「宜得利家居進駐高雄大立百貨 南部首間旗艦店開幕」"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 DECO HOME高雄漢神巨蛋店",
+  "date": "2024-10",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ctee.com.tw/news/20241007701300-431401"
+  ],
+  "evidence": "工商時報2024-10-07「宜得利旗下DECO HOME品牌 海外首站進駐漢神巨蛋」"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 高雄苓雅中正一店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 高雄大遠百店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 高雄夢時代店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "搜尋摘要稱台灣1號店2007年開於高雄，但與夢時代店之對應及是否曾遷移無可靠來源，不記錄"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 高雄大樂店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 高雄新楠萬家福店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 高雄左營新光三越店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 高雄岡山秀泰店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 高雄鳳山大全聯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 屏東環球店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "宜得利",
+  "store_name": "宜得利 台東店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確來源"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 內湖店",
+  "date": "2000-04-01",
+  "year": 2000,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E7%89%B9%E5%8A%9B%E5%B1%8B",
+   "https://www.ctee.com.tw/news/20210429700361-431207"
+  ],
+  "evidence": "搜尋摘要(維基)：特力屋內湖店於2000年4月1日開幕，為特力屋進駐台北市第一家店；2021年報導稱「內湖店20年首度改裝」相符"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 南港興華店(社區店)",
+  "date": "2022-09-25",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.findcoupon.tw/store-53329.htm",
+   "https://www.trplus.com.tw/store/locations"
+  ],
+  "evidence": "南港興華店(社區店)於2022年9月25日新開幕"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 大安安和店(社區店)",
+  "date": "2020-05-30",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ettoday.net/news/20200531/1726828.htm"
+  ],
+  "evidence": "ETtoday 2020-05-31：特力屋社區店大安安和店於2020年5月30日開幕，開幕第2天爆人潮"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 大同重慶北店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://m.iyp.com.tw/tax/94041996"
+  ],
+  "evidence": "僅查到「特力屋大同重慶北分公司」設立登記日2023-05-02(商業登記，非開幕日)，未找到開幕日期來源"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 士林店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://house.ettoday.net/news/3150031"
+  ],
+  "evidence": "新聞僅稱士林店「開業超過20年」、2026年5月11日起暫停營業改裝，無明確開幕年"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 汐止新台店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "搜尋未找到開幕日期；店位於汐止遠雄IFG廣場D棟"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 三重集美店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "搜尋未找到開幕日期"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 永和得和店(社區店)",
+  "date": "2020-12-05",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://moptt.tw/p/ShuangHe.M.1607067468.A.338",
+   "https://tlw.trplus.com.tw/17DIY/G42-88"
+  ],
+  "evidence": "PTT ShuangHe板文章(時間戳2020-12-04)「永和中正路得和路口B&Q特力屋明天開幕」；官方有「永和得和店開幕活動」頁、開幕日12月5日"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 蘆洲集賢店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://house.ettoday.net/news/1727235"
+  ],
+  "evidence": "ETtoday房產新聞稱該店面「今年1月以1.155億售出…特力屋去年底才開幕，月租28萬」，但無法取得文章發布日期(搜尋摘要年份互相矛盾2023/2024；文章ID推估約2020年中→約2019年底)，故列未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 新店店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "搜尋未找到開幕日期(新店家樂福4樓)"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 中和店",
+  "date": "2003-12",
+  "year": 2003,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E7%89%B9%E5%8A%9B%E5%B1%8B"
+  ],
+  "evidence": "搜尋摘要：特力屋第十七家分店—中和店，於2003年12月成立，位於中山路二段291號"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 蘆洲長安店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 板橋北門店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 土城店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 板橋合宜店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 新莊店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [
+   "https://www.twincn.com/16099274"
+  ],
+  "evidence": "僅查到新莊分公司設立登記1997-11-22(商業登記，非開幕日)，未找到開幕日期"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 淡水中山北店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 林口中山店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 基隆義一店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 三峽店",
+  "date": "2013-01-12",
+  "year": 2013,
+  "confidence": "confirmed",
+  "sources": [
+   "https://tw.news.yahoo.com/%E7%89%B9%E5%8A%9B%E5%B1%8B-hola-12%E6%97%A5%E9%80%B2%E9%A7%90%E5%8C%97%E5%A4%A7%E5%95%86%E5%9C%88-213000155.html"
+  ],
+  "evidence": "特力屋、HOLA 2013-01-12 進駐北大商圈（三峽店，樹林大成路翡冷翠商場B1）"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 桃園大業店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 南崁店",
+  "date": "1996-01-27",
+  "year": 1996,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E7%89%B9%E5%8A%9B%E5%B1%8B",
+   "https://wanteatfood.com/recommend/88902"
+  ],
+  "evidence": "維基：首間門市特力屋南崁店於1996年1月27日開幕(B&Q特力屋首店)"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 八德店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 平鎮店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 宜蘭宜興店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 龍潭北龍店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 羅東店",
+  "date": "2020-10-01",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://ec.ltn.com.tw/article/breakingnews/3306955",
+   "https://osakaleo.pixnet.net/blog/posts/10353049002"
+  ],
+  "evidence": "自由財經（2020）：特力屋與HOLA自民生市場遷至光榮路自建路面店，10/1開幕"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 湖口和愛店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 竹北文興店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 新竹店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 林森店",
+  "date": "2026-03-13",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20260316000909-260410",
+   "https://www.cdns.com.tw/articles/1372467"
+  ],
+  "evidence": "時報 2026-03-16：特力屋新竹林森店（晶品城）13日開幕，新竹第4家"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 頭份中央店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 苗栗中正店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 花蓮店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 豐原店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 北屯店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 埔里信義店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 梧棲中華店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 西屯店",
+  "date": "2016-01-22",
+  "year": 2016,
+  "confidence": "confirmed",
+  "sources": [
+   "https://mercury0314.pixnet.net/blog/posts/9442497899-%E7%94%9F%E6%B4%BB%E3%80%82%E5%8F%B0%E4%B8%AD%E8%A5%BF%E5%B1%AF%E3%80%90%E7%89%B9%E5%8A%9B%E5%B1%8B-%E8%A5%BF%E5%B1%AF%E5%BA%97%E3%80%91"
+  ],
+  "evidence": "特力屋西屯店試營運後 1/22(五) 正式開幕（2016）"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 台中大墩店",
+  "date": "2019-01-11",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://n.yam.com/Article/20190112881056"
+  ],
+  "evidence": "2019-01-12 報導：特力屋首間智慧門店大墩店開幕"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 大里國光店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 台中復興店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 草屯虎山店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 彰化和美店",
+  "date": "2001-03-29",
+  "year": 2001,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E7%89%B9%E5%8A%9B%E5%B1%8B"
+  ],
+  "evidence": "特力屋彰化店位於彰化市與和美鎮交界，第十家店，2001-03-29開幕（維基百科摘要）"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 彰化員林店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 斗六店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 虎尾公安店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 嘉義店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 朴子四維店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 新營金華店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 佳里佳東店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 台東店",
+  "date": "2024-01-24",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://estate.ltn.com.tw/article/19488",
+   "https://www.epochtimes.com/b5/24/1/25/n14165777.htm"
+  ],
+  "evidence": "2024-01-24 特力屋台東店（寶桑路，500坪獨立賣場）開幕"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 澎湖馬公店(社區店)",
+  "date": "2021-04",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.mirrormedia.mg/story/20210424bus001/",
+   "https://udn.com/news/story/7241/5411070"
+  ],
+  "evidence": "鏡週刊 2021-04-24：特力屋「出海」澎湖首間店開幕（澎坊三號購物中心）"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 永康復國店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 台南文賢店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 台南仁德店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 岡山大仁店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 屏東店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 楠梓大學店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 高雄左營店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 三民澄清店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 高雄大順店",
+  "date": "1998",
+  "year": 1998,
+  "confidence": "confirmed",
+  "sources": [
+   "https://howlife.cna.com.tw/life/20220311s024.aspx",
+   "https://udn.com/news/story/7240/6157400"
+  ],
+  "evidence": "中央社 2022-03-11：成立於1998年的大順店是特力屋首間插旗南台灣賣場"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 高雄鳳山店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 苓雅三多店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 東港光復店(社區店)",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 金門太湖店(社區店)",
+  "date": "2022-08-18",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20220818005298-260405",
+   "https://www.kmdn.gov.tw/1117/1271/1272/546171"
+  ],
+  "evidence": "中時 2022-08-18：特力屋金門太湖店（全台第32間社區店）隆重開幕"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 青埔店",
+  "date": "2021-10-01",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://udn.com/news/story/7241/5785040",
+   "https://www.chinatimes.com/realtimenews/20210930005675-260405"
+  ],
+  "evidence": "家樂福青埔店2021年10月1日開幕，進駐Global Mall桃園A19，首家開進百貨的迷你量販"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 南港店",
+  "date": "2021-08-18",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ettoday.net/news/20210819/2059994.htm",
+   "https://money.udn.com/money/story/5612/5688530"
+  ],
+  "evidence": "家樂福南港店回歸，現址南港路二段146號於2021年8月18日正式開幕；舊南港店（1991年1月開設，台北首家）2020年9月結束營業，距現址約500公尺"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 新仁店",
+  "date": "2019-12-27",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E6%96%B0%E4%BB%81%E5%BA%97",
+   "https://www.chinatimes.com/realtimenews/20191227003688-260410"
+  ],
+  "evidence": "萬家福新仁店（大同路三段755號）於2019年12月27日開業；前身為2003年開業的台糖嘉年華購物中心，2019年6月16日結束營業後租予家樂福（停業半年後重新開幕，故採家樂福開業日）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 新楠店",
+  "date": "2019-12-20",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20191220004109-260410",
+   "https://udn.com/news/story/7327/4238357"
+  ],
+  "evidence": "工商 2019-12-20：家樂福新楠店（原台糖量販）開幕"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 北港店",
+  "date": "2002-12",
+  "year": 2002,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "北港店原為台糖量販，於2002年12月開幕，後轉入家樂福旗下（原址開業日期）（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 新屏店",
+  "date": "2019-12-05",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20191206001287-260410",
+   "https://news.ltn.com.tw/news/life/breakingnews/2999367"
+  ],
+  "evidence": "原台糖屏東量販店易名家樂福新屏店，12/5開幕（2019）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 西屯店",
+  "date": "2007-04-21",
+  "year": 2007,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "西屯店原台糖量販西屯店，2007年4月21日為台糖量販開業，2019年11月15日轉換為家樂福（原址開業日期）（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 金門店",
+  "date": "2018-06-30",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "金門店2018年6月30日開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 八德店",
+  "date": "2017-01-12",
+  "year": 2017,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "八德店2017年1月12日開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 北大店",
+  "date": "2009-07",
+  "year": 2009,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "北大店2009年7月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 林口店",
+  "date": "2008-03",
+  "year": 2008,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "林口店2008年3月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 新店店",
+  "date": "2004-11",
+  "year": 2004,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "新店店2004年11月開業（24小時營業）（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 樹林店",
+  "date": "2003-12",
+  "year": 2003,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "樹林店2003年12月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 土城店",
+  "date": "2002-02",
+  "year": 2002,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "土城店2002年2月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 中和店",
+  "date": "2003-12",
+  "year": 2003,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "中和店2003年12月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 板橋店",
+  "date": "1992-07",
+  "year": 1992,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "板橋店1992年7月開設，台北縣（今新北市）第一家家樂福（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）；未能確認是否曾遷址"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 中平店",
+  "date": "2009-07",
+  "year": 2009,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "中平店2009年7月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 蘆洲店",
+  "date": "2008-11",
+  "year": 2008,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "蘆洲店2008年11月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 重新店",
+  "date": "2007-07",
+  "year": 2007,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "重新店2007年7月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 汐科店",
+  "date": "2015-05-08",
+  "year": 2015,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "汐科店位於IFG遠雄汐止（新台五路一段99號B1），2015年5月8日開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 安平店",
+  "date": "2001-09",
+  "year": 2001,
+  "confidence": "confirmed",
+  "sources": [
+   "https://taikoinfotw.fandom.com/zh-tw/wiki/%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%AE%89%E5%B9%B3%E5%BA%97"
+  ],
+  "evidence": "前身特易購台南店 2001-09 開幕，2006-08 被家樂福收購改名（同址原始開幕）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 仁德店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 中華店",
+  "date": "1993-11",
+  "year": 1993,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "中華店1993年11月開設，台南地區第一家家樂福（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 中正店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 新營店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 斗六店",
+  "date": "2008-11-28",
+  "year": 2008,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "斗六店2008年11月28日開設，雲林地區第一家家樂福（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 虎尾店",
+  "date": "2015-04-30",
+  "year": 2015,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20150505002105-260511"
+  ],
+  "evidence": "時報資訊 2015-05-05：家樂福虎尾店上周開幕（4/30）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 嘉義店",
+  "date": "1997-09",
+  "year": 1997,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "嘉義店1997年9月開設，嘉義地區第一家家樂福（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 楠梓店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 光華店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 澄清店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 成功店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 屏東店",
+  "date": "1997-06",
+  "year": 1997,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "屏東店1997年6月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 鳳山店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 五甲店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 愛河店",
+  "date": "1996",
+  "year": 1996,
+  "confidence": "confirmed",
+  "sources": [
+   "https://news.tvbs.com.tw/life/3165188",
+   "https://udn.com/news/story/7160/6889274"
+  ],
+  "evidence": "TVBS 2026：30年歷史家樂福愛河店；聯合報 2022-12：經營27年，即 1996 年開幕"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 鼎山店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 苗栗店",
+  "date": "2006-08",
+  "year": 2006,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "苗栗店2006年8月開設，苗栗地區第一家家樂福（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 中原店",
+  "date": "2002-11-30",
+  "year": 2002,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "中原店2002年11月30日以特易購開業，2006年8月轉為家樂福（原址開業日期）（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 經國店",
+  "date": "2006-08",
+  "year": 2006,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "經國店開業2006年8月（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）；2006年8月為家樂福併購特易購時點，未確認是否原為特易購門市，若是則原址開業日期更早"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 內壢店",
+  "date": "2002-12",
+  "year": 2002,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "內壢店2002年12月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 中壢店",
+  "date": "1998-07",
+  "year": 1998,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "中壢店1998年7月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 台東店",
+  "date": "2008-09-26",
+  "year": 2008,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "台東店2008年9月26日開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 宜蘭店",
+  "date": "2008-11",
+  "year": 2008,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "宜蘭店2008年11月開設（蘭城新月廣場），宜蘭地區第一家家樂福（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 花蓮店",
+  "date": "1998-12",
+  "year": 1998,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "花蓮店1998年12月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 三民店",
+  "date": "2003-07",
+  "year": 2003,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "三民店2003年7月以特易購開業，2006年8月轉為家樂福（原址開業日期）（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 內湖店",
+  "date": "2005-07-22",
+  "year": 2005,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "內湖店2005年7月22日開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 豐原店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 太平店",
+  "date": "2008-07-25",
+  "year": 2008,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.cosme.net.tw/channel_details/6400"
+  ],
+  "evidence": "家樂福太平店（中平七街70號）自2008年7月25日開幕至今"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 文心店",
+  "date": "2006-09",
+  "year": 2006,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "文心店原特易購文心店開發案，開業日期2006年9月（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 青海店",
+  "date": "2004-12-09",
+  "year": 2004,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "青海店原特易購青海店，2004年12月9日特易購開業，2006年8月轉換為家樂福（原址開業日期）（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 德安店",
+  "date": "2004-07",
+  "year": 2004,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "德安購物中心內原由愛買吉安經營的空間，2004年7月起由台灣家樂福經營（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）；原愛買吉安開業日期未查得"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 南投店",
+  "date": "2000-07",
+  "year": 2000,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "南投店2000年7月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 彰化店",
+  "date": "2000-01",
+  "year": 2000,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "彰化店2000年1月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 中清店",
+  "date": "1999-03",
+  "year": 1999,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "中清店開業日期1999年3月（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 沙鹿店",
+  "date": "",
+  "year": null,
+  "confidence": "unverified",
+  "sources": [],
+  "evidence": "未找到明確開幕日期來源（WebSearch額度用盡前未查得）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 埔里店",
+  "date": "2013-12-20",
+  "year": 2013,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "埔里店2013年12月20日開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 平鎮店",
+  "date": "2016-09-03",
+  "year": 2016,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "平鎮店2016年9月3日開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 桂林店",
+  "date": "2006-11",
+  "year": 2006,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "桂林店2006年11月開業，首間24小時營業分店（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 重慶店",
+  "date": "2006-12",
+  "year": 2006,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "重慶店2006年12月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 淡新店",
+  "date": "2013-04-28",
+  "year": 2013,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "淡新店（中山北路二段383號）2013年4月28日開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ },
+ {
+  "brand": "萬家福",
+  "store_name": "萬家福 天母店",
+  "date": "1991-10",
+  "year": 1991,
+  "confidence": "confirmed",
+  "sources": [
+   "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8",
+   "https://zh.wikipedia.org/zh-tw/%E8%90%AC%E5%AE%B6%E7%A6%8F%E5%88%86%E5%BA%97%E5%88%97%E8%A1%A8"
+  ],
+  "evidence": "天母店1991年10月開業（來源：維基百科台灣家樂福/萬家福分店列表，經WebSearch摘要取得，原頁面無法直接存取）"
+ }
+]
