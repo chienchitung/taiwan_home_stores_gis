@@ -1062,11 +1062,13 @@
  {
   "brand": "hoi! 好好生活",
   "store_name": "hoi! 台南仁德店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2019",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.taiwanhot.net/news/1062873/"
+  ],
+  "evidence": "台灣好新聞〈hoi!好好生活全台最大門市 台南大遠百盛大開幕〉（2024）：「2019年首度插旗台南，第一間台南門市位於仁德區（中山路777號）」；僅能確認年份。取自搜尋摘要，原文未開啟"
  },
  {
   "brand": "hoi! 好好生活",
@@ -1124,11 +1126,13 @@
  {
   "brand": "hoi! 好好生活",
   "store_name": "hoi! 桃園南崁店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2019-04",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "http://www.chinapost101.com/2019/04/hoi.html"
+  ],
+  "evidence": "China Post e-News（2019-04）〈桃園 我們來了！hoi!好好生活南崁店正式開幕 進駐特力家居〉；hoi! 第三家智慧門市。取自搜尋摘要，原文未開啟"
  },
  {
   "brand": "無印良品",

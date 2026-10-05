@@ -113359,7 +113359,7 @@
     "region": "南部",
     "city": "台南市",
     "address": "台南市仁德區中山路777號2樓",
-    "opened_date": "",
+    "opened_date": "2019",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "仁德區",
@@ -113374,8 +113374,8 @@
     "n": 3817,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.taiwanhot.net/news/1062873/",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "hoi! 好好生活",
@@ -113509,7 +113509,7 @@
     "region": "北部",
     "city": "桃園市",
     "address": "桃園市蘆竹區中正路1號B1",
-    "opened_date": "",
+    "opened_date": "2019-04",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "蘆竹區",
@@ -113524,8 +113524,8 @@
     "n": 3823,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "http://www.chinapost101.com/2019/04/hoi.html",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "無印良品",
