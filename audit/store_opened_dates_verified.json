@@ -1020,11 +1020,13 @@
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 宜蘭金東店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+    "date": "2024-10-16",
+    "year": 2024,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.facebook.com/hoihometw/posts/932970635525891/"
+    ],
+    "evidence": "hoi!官方粉專2024年9月25日貼文：「hoi!桃園大江店及宜蘭金東店分別於10/9及10/16強勢開幕」（發文日由使用者於Facebook確認）。"
   },
   {
     "brand": "hoi! 好好生活",
@@ -1113,11 +1115,13 @@
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 桃園大江店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "僅見提及桃園大江生活選品店，未查得開幕日期"
+    "date": "2024-10-09",
+    "year": 2024,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.facebook.com/hoihometw/posts/932970635525891/"
+    ],
+    "evidence": "hoi!官方粉專2024年9月25日貼文：「hoi!桃園大江店及宜蘭金東店分別於10/9及10/16強勢開幕」（發文日由使用者於Facebook確認）。"
   },
   {
     "brand": "hoi! 好好生活",
@@ -2767,11 +2771,14 @@
   {
     "brand": "宜得利",
     "store_name": "宜得利 嘉義大全聯店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未找到明確來源"
+    "date": "2015-01",
+    "year": 2015,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.nitori.com.tw/about/history",
+      "https://www.findcoupon.tw/store-24017.htm"
+    ],
+    "evidence": "宜得利官網沿革：2015年1月「台灣第20間店舗達成，嘉義市1號店「嘉義店」開幕」；嘉義店地址為嘉義市西區博愛路二段281號B1F（原大潤發嘉義店，現大全聯），與本門市同址。嘉義市另一間耐斯店為2021-04開幕。"
   },
   {
     "brand": "宜得利",

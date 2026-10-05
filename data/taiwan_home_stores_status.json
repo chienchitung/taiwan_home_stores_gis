@@ -110378,7 +110378,7 @@
     "region": "南部",
     "city": "嘉義市",
     "address": "嘉義市西區博愛路2段281號B1F",
-    "opened_date": "",
+    "opened_date": "2015-01",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "西區",
@@ -110393,8 +110393,8 @@
     "n": 3698,
     "is_co_location": true,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -113232,7 +113232,7 @@
     "region": "北部",
     "city": "宜蘭縣",
     "address": "宜蘭縣宜蘭市宜興路一段159號",
-    "opened_date": "",
+    "opened_date": "2024-10-16",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "宜蘭市",
@@ -113247,8 +113247,8 @@
     "n": 3812,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.facebook.com/hoihometw/posts/932970635525891/",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "hoi! 好好生活",
@@ -113459,7 +113459,7 @@
     "region": "北部",
     "city": "桃園市",
     "address": "桃園市中壢區中園路二段501號GB樓",
-    "opened_date": "",
+    "opened_date": "2024-10-09",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "中壢區",
@@ -113474,8 +113474,8 @@
     "n": 3821,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.facebook.com/hoihometw/posts/932970635525891/",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "hoi! 好好生活",
