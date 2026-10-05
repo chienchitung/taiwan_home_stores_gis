@@ -21,7 +21,7 @@
     "n": 1,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "https://news.ltn.com.tw/news/local/paper/372304",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -31,7 +31,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市西屯區台灣大道四段1086號（原台糖量販內）",
-    "opened_date": "",
+    "opened_date": "2009-11",
     "status": "已歇業轉型",
     "note": "2019年6月隨西屯台糖結束營業退出，同年11月由家樂福西屯店接手後重新進駐",
     "district": "西屯區",
@@ -46,8 +46,8 @@
     "n": 2,
     "is_co_location": true,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "無印良品",
@@ -109074,7 +109074,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市內湖區舊宗路一段150巷25號2F，3F",
-    "opened_date": "2014-06",
+    "opened_date": "2025-12",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "內湖區",
@@ -109114,7 +109114,7 @@
     "n": 3647,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "https://mnya.tw/yo/word/3939.html",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -109139,7 +109139,7 @@
     "n": 3648,
     "is_co_location": false,
     "store_format": "量販店中店",
-    "opened_date_source": "https://www.ettoday.net/news/20201230/1884464.htm",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -109226,7 +109226,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市信義區松高路16號B1",
-    "opened_date": "2022-07",
+    "opened_date": "2022-08",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "信義區",
@@ -109266,7 +109266,7 @@
     "n": 3653,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "https://www.chinatimes.com/realtimenews/20221028000130-260405",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -109316,7 +109316,7 @@
     "n": 3655,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "https://www.bnext.com.tw/article/82124/lalaport--nangang-openingin0320",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -109326,7 +109326,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市板橋區中山路1段152號9樓",
-    "opened_date": "",
+    "opened_date": "2021-11",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "板橋區",
@@ -109341,8 +109341,8 @@
     "n": 3656,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109351,7 +109351,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市汐止區新台五路一段99號2樓",
-    "opened_date": "",
+    "opened_date": "2015-10",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "汐止區",
@@ -109366,8 +109366,8 @@
     "n": 3657,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109376,7 +109376,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市永和區中山路一段238號5樓",
-    "opened_date": "",
+    "opened_date": "2026-03",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "永和區",
@@ -109391,8 +109391,8 @@
     "n": 3658,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109401,7 +109401,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市中和區景平路182號B1",
-    "opened_date": "",
+    "opened_date": "2024-07",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "中和區",
@@ -109416,8 +109416,8 @@
     "n": 3659,
     "is_co_location": false,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109426,7 +109426,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市林口區文化三路一段356號1樓",
-    "opened_date": "",
+    "opened_date": "2025-02",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "林口區",
@@ -109441,8 +109441,8 @@
     "n": 3660,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109451,7 +109451,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市中和區中山路3段122號",
-    "opened_date": "",
+    "opened_date": "2009-01",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "中和區",
@@ -109466,8 +109466,8 @@
     "n": 3661,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109476,7 +109476,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市土城區永安街25號",
-    "opened_date": "",
+    "opened_date": "2021-07",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "土城區",
@@ -109491,8 +109491,8 @@
     "n": 3662,
     "is_co_location": false,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109501,7 +109501,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市樹林區樹新路40-6號5樓(秀泰生活樹林店5樓)",
-    "opened_date": "",
+    "opened_date": "2018-05",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "樹林區",
@@ -109516,8 +109516,8 @@
     "n": 3663,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109526,7 +109526,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市三重區重新路五段654號B1",
-    "opened_date": "",
+    "opened_date": "2018-07",
     "status": "營業中",
     "note": "2026-10-02 官方門市清單核對",
     "district": "三重區",
@@ -109541,8 +109541,8 @@
     "n": 3664,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109551,7 +109551,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市新莊區幸福路763號3F",
-    "opened_date": "",
+    "opened_date": "2012-12",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "新莊區",
@@ -109566,8 +109566,8 @@
     "n": 3665,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109576,7 +109576,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市林口區文化三路二段16號B1",
-    "opened_date": "",
+    "opened_date": "2012-06",
     "status": "營業中",
     "note": "2026-10-02 官方門市清單核對",
     "district": "林口區",
@@ -109591,8 +109591,8 @@
     "n": 3666,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109601,7 +109601,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市淡水區中山北路二段383號3F",
-    "opened_date": "",
+    "opened_date": "2013-04",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "淡水區",
@@ -109616,8 +109616,8 @@
     "n": 3667,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109641,7 +109641,7 @@
     "n": 3668,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "https://osakaleo.pixnet.net/blog/posts/10355157170",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -109666,7 +109666,7 @@
     "n": 3669,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "https://blog.udn.com/e1921525/162893842",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -109676,7 +109676,7 @@
     "region": "北部",
     "city": "新竹市",
     "address": "新竹市北區大雅路88號1樓",
-    "opened_date": "",
+    "opened_date": "2018-05",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "北區",
@@ -109691,8 +109691,8 @@
     "n": 3670,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109701,7 +109701,7 @@
     "region": "北部",
     "city": "新竹市",
     "address": "新竹市中央路229號B1F",
-    "opened_date": "",
+    "opened_date": "2012-04",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "新竹市",
@@ -109716,8 +109716,8 @@
     "n": 3671,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109726,7 +109726,7 @@
     "region": "北部",
     "city": "新竹縣",
     "address": "新竹縣竹北市自強南路36號2F",
-    "opened_date": "",
+    "opened_date": "2022-12",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "竹北市",
@@ -109741,8 +109741,8 @@
     "n": 3672,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109751,7 +109751,7 @@
     "region": "北部",
     "city": "桃園市",
     "address": "桃園市中壢區中華路一段480號",
-    "opened_date": "2008-11-18",
+    "opened_date": "2008-12",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "中壢區",
@@ -109766,8 +109766,8 @@
     "n": 3673,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 28454066",
-    "opened_date_basis": "商工登記"
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109776,7 +109776,7 @@
     "region": "北部",
     "city": "桃園市",
     "address": "桃園市平鎮區南東路57-1號2樓",
-    "opened_date": "",
+    "opened_date": "2023-12",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "平鎮區",
@@ -109791,8 +109791,8 @@
     "n": 3674,
     "is_co_location": false,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109801,7 +109801,7 @@
     "region": "北部",
     "city": "桃園市",
     "address": "桃園市桃園區中山路939號",
-    "opened_date": "",
+    "opened_date": "2021-12",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "桃園區",
@@ -109816,8 +109816,8 @@
     "n": 3675,
     "is_co_location": true,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109826,7 +109826,7 @@
     "region": "北部",
     "city": "桃園市",
     "address": "桃園市龜山區復興一路8號B1",
-    "opened_date": "",
+    "opened_date": "2022-01",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "龜山區",
@@ -109841,8 +109841,8 @@
     "n": 3676,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109851,7 +109851,7 @@
     "region": "北部",
     "city": "桃園市",
     "address": "桃園市八德區介壽路一段728號B2",
-    "opened_date": "",
+    "opened_date": "2024-12",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "八德區",
@@ -109866,8 +109866,8 @@
     "n": 3677,
     "is_co_location": false,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109876,7 +109876,7 @@
     "region": "北部",
     "city": "苗栗縣",
     "address": "苗栗縣苗栗市國華路599號1樓",
-    "opened_date": "",
+    "opened_date": "2025-08",
     "status": "營業中",
     "note": "2026-10-02 官方門市清單核對",
     "district": "苗栗市",
@@ -109891,8 +109891,8 @@
     "n": 3678,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109916,7 +109916,7 @@
     "n": 3679,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "https://news.shoninsha.co.jp/store/143668",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -109926,7 +109926,7 @@
     "region": "北部",
     "city": "苗栗縣",
     "address": "苗栗縣頭份市自強路230號",
-    "opened_date": "",
+    "opened_date": "2020-05",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "頭份市",
@@ -109941,8 +109941,8 @@
     "n": 3680,
     "is_co_location": false,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109953,7 +109953,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市東區進德路600號1樓(北館)",
-    "opened_date": "",
+    "opened_date": "2026-05",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "東區",
@@ -109968,8 +109968,8 @@
     "n": 3681,
     "is_co_location": true,
     "store_format": "子品牌門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -109978,7 +109978,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市東區進德路700號3樓",
-    "opened_date": "",
+    "opened_date": "2023-01",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "東區",
@@ -109993,8 +109993,8 @@
     "n": 3682,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110018,7 +110018,7 @@
     "n": 3683,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "https://www.ctee.com.tw/news/20110506700086-439901",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -110028,7 +110028,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市西區台灣大道二段459號7樓",
-    "opened_date": "",
+    "opened_date": "2015-09",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "西區",
@@ -110043,8 +110043,8 @@
     "n": 3684,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110053,7 +110053,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市北區三民路三段161號A棟7樓",
-    "opened_date": "",
+    "opened_date": "2020-10",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "北區",
@@ -110068,8 +110068,8 @@
     "n": 3685,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110078,7 +110078,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市北區忠明路499號2樓",
-    "opened_date": "2023-09-20",
+    "opened_date": "2023-08",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "北區",
@@ -110093,7 +110093,7 @@
     "n": 3686,
     "is_co_location": true,
     "store_format": "量販店中店",
-    "opened_date_source": "https://www.ryutsuu.biz/abroad/p091977.html",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -110103,7 +110103,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市新店區中興路三段70號5樓",
-    "opened_date": "",
+    "opened_date": "2023-09",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "新店區",
@@ -110118,8 +110118,8 @@
     "n": 3687,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110143,7 +110143,7 @@
     "n": 3688,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "https://www.ryutsuu.biz/abroad/p102611.html",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -110153,7 +110153,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市北屯區中清路二段1199號",
-    "opened_date": "",
+    "opened_date": "2020-08",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "北屯區",
@@ -110168,8 +110168,8 @@
     "n": 3689,
     "is_co_location": true,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110178,7 +110178,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市北屯路370號B1",
-    "opened_date": "",
+    "opened_date": "2012-08",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "台中市",
@@ -110193,8 +110193,8 @@
     "n": 3690,
     "is_co_location": false,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110203,7 +110203,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市西屯區台灣大道四段1086號2樓",
-    "opened_date": "",
+    "opened_date": "2019-11",
     "status": "營業中",
     "note": "2026-10-02 官方門市清單核對",
     "district": "西屯區",
@@ -110218,8 +110218,8 @@
     "n": 3691,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110228,7 +110228,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市南屯區文心南路289號B1",
-    "opened_date": "",
+    "opened_date": "2019-04",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "南屯區",
@@ -110243,8 +110243,8 @@
     "n": 3692,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110253,7 +110253,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市大里區國光路二段710號B1",
-    "opened_date": "",
+    "opened_date": "2019-01",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "大里區",
@@ -110268,8 +110268,8 @@
     "n": 3693,
     "is_co_location": false,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110293,7 +110293,7 @@
     "n": 3694,
     "is_co_location": true,
     "store_format": "量販店中店",
-    "opened_date_source": "https://www.ctee.com.tw/news/20230504701085-431401",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -110303,7 +110303,7 @@
     "region": "中部",
     "city": "彰化縣",
     "address": "彰化縣埔心鄉中山路319號2樓",
-    "opened_date": "",
+    "opened_date": "2024-06",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "埔心鄉",
@@ -110318,8 +110318,8 @@
     "n": 3695,
     "is_co_location": true,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110328,7 +110328,7 @@
     "region": "中部",
     "city": "南投縣",
     "address": "南投縣南投市三和三路21號B1",
-    "opened_date": "",
+    "opened_date": "2024-05",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "南投市",
@@ -110343,8 +110343,8 @@
     "n": 3696,
     "is_co_location": true,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110353,7 +110353,7 @@
     "region": "南部",
     "city": "嘉義市",
     "address": "嘉義市東區忠孝路600號4樓",
-    "opened_date": "",
+    "opened_date": "2021-04",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "東區",
@@ -110368,8 +110368,8 @@
     "n": 3697,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110403,7 +110403,7 @@
     "region": "中部",
     "city": "雲林縣",
     "address": "雲林縣斗六市雲林路二段297號",
-    "opened_date": "",
+    "opened_date": "2021-11",
     "status": "營業中",
     "note": "2026-10-02 官方門市清單核對",
     "district": "斗六市",
@@ -110418,8 +110418,8 @@
     "n": 3699,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110428,7 +110428,7 @@
     "region": "南部",
     "city": "台南市",
     "address": "台南市中西區中山路162號5F",
-    "opened_date": "",
+    "opened_date": "2022-11",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "中西區",
@@ -110443,8 +110443,8 @@
     "n": 3700,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110453,7 +110453,7 @@
     "region": "南部",
     "city": "台南市",
     "address": "台南市中西區中華西路二段685號",
-    "opened_date": "2008-10-07",
+    "opened_date": "2008-11",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "中西區",
@@ -110468,8 +110468,8 @@
     "n": 3701,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 28454066",
-    "opened_date_basis": "商工登記"
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110493,7 +110493,7 @@
     "n": 3702,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "https://www.ryutsuu.biz/abroad/m122140.html",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -110530,7 +110530,7 @@
     "region": "南部",
     "city": "台南市",
     "address": "台南市仁德區中山路777號2F",
-    "opened_date": "",
+    "opened_date": "2018-01",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "仁德區",
@@ -110545,8 +110545,8 @@
     "n": 3704,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110570,7 +110570,7 @@
     "n": 3705,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "https://www.chinatimes.com/realtimenews/20240830002999-260421",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -110597,7 +110597,7 @@
     "n": 3706,
     "is_co_location": true,
     "store_format": "子品牌門市",
-    "opened_date_source": "https://www.ctee.com.tw/news/20241007701300-431401",
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
     "opened_date_basis": "新聞／官方"
   },
   {
@@ -110607,7 +110607,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市苓雅區中正一路374,376號",
-    "opened_date": "",
+    "opened_date": "2023-06",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "苓雅區",
@@ -110622,8 +110622,8 @@
     "n": 3707,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110632,7 +110632,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市苓雅區三多四路21號10樓",
-    "opened_date": "",
+    "opened_date": "2023-04",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "苓雅區",
@@ -110647,8 +110647,8 @@
     "n": 3708,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110657,7 +110657,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市前鎮區中華五路789號2樓",
-    "opened_date": "",
+    "opened_date": "2016-12",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "前鎮區",
@@ -110672,8 +110672,8 @@
     "n": 3709,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110682,7 +110682,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市三民區民族一路463號B1",
-    "opened_date": "",
+    "opened_date": "2010-04",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "三民區",
@@ -110697,8 +110697,8 @@
     "n": 3710,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110707,7 +110707,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市楠梓區土庫一路60號1樓",
-    "opened_date": "",
+    "opened_date": "2019-12",
     "status": "營業中",
     "note": "2026-10-02 官方門市清單核對",
     "district": "楠梓區",
@@ -110722,8 +110722,8 @@
     "n": 3711,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110732,7 +110732,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市左營區高鐵路123號4樓",
-    "opened_date": "",
+    "opened_date": "2020-06",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "左營區",
@@ -110747,8 +110747,8 @@
     "n": 3712,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110757,7 +110757,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市岡山區捷安路1巷2號2F",
-    "opened_date": "",
+    "opened_date": "2022-05",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "岡山區",
@@ -110772,8 +110772,8 @@
     "n": 3713,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110782,7 +110782,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市鳳山區文化路59號B1",
-    "opened_date": "",
+    "opened_date": "2021-09",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "鳳山區",
@@ -110797,8 +110797,8 @@
     "n": 3714,
     "is_co_location": true,
     "store_format": "量販店中店",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110807,7 +110807,7 @@
     "region": "南部",
     "city": "屏東縣",
     "address": "屏東縣屏東市仁愛路90號4F",
-    "opened_date": "",
+    "opened_date": "2019-04",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "屏東市",
@@ -110822,8 +110822,8 @@
     "n": 3715,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",
@@ -110832,7 +110832,7 @@
     "region": "東部",
     "city": "台東縣",
     "address": "台東縣台東市中興路二段600號",
-    "opened_date": "",
+    "opened_date": "2026-08",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "台東市",
@@ -110847,8 +110847,8 @@
     "n": 3716,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "特力屋",

@@ -7,6 +7,7 @@
 - 搬遷門市採現址開幕日；同址換品牌（大潤發→大全聯、家樂福→萬家福、特易購→家樂福）採該址量販店原始開幕日；同址歇業後以新店型重新開幕者（大全聯鮮食集）採重新開幕日。
 - 年份未知的門市在時間軸上不列入，並顯示「另 N 間開幕年份未知」。
 - 查無新聞的門市，改用經濟部商工登記「分公司核准設立日」（`audit/apply_gcis_branch_dates.py`，原始資料在 `audit/gcis/`），與全聯同一標準；儀表板資料以 `opened_date_basis` 標示「新聞／官方」或「商工登記」。
+- 宜得利以官網沿革（https://www.nitori.com.tw/about/history，2026-10-05 擷取，`audit/nitori_history_events.json`）為準，`audit/apply_nitori_history.py` 套用；此頁也更正了先前依搜尋摘要記錄的 3 筆（台北內湖舊宗店 2014-06→2025-12、微風松高 2022-07→2022-08、台中忠明大全聯 2023-09→2023-08）。
 - 查核結果與出處：`audit/store_opened_dates_verified.json`；寫回主資料：`python3 audit/apply_verified_opened_dates.py`（需在各 sync 腳本之後執行）。
 
 ## 查核結果

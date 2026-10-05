@@ -2070,20 +2070,20 @@
   "year": 2007,
   "confidence": "confirmed",
   "sources": [
-   "https://news.ltn.com.tw/news/local/paper/372304",
-   "https://zh.wikipedia.org/zh-tw/%E5%AE%9C%E5%BE%97%E5%88%A9",
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "宜得利2007年5月於高雄夢時代店設立海外首間門市（台灣1號店）；日期12日未能另行查證。現址2024年重返夢時代2F為另一階段。"
+  "evidence": "宜得利官網沿革：「高雄夢時代店」2007年5月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台中台糖店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未能確認：一搜尋摘要稱台中台糖店2009年11月開幕（台中市1號店），與輸入note之2011-06-18矛盾，來源不明確，未採用。（Web搜尋額度已用盡，無法再查證）"
+  "date": "2009-11",
+  "year": 2009,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「台中台糖店」2009年11月開幕"
  },
  {
   "brand": "宜得利",
@@ -2094,7 +2094,7 @@
   "sources": [
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方沿革（經搜尋摘要）：2022年8月「花蓮遠東百貨店」開幕。"
+  "evidence": "宜得利官網沿革：「花蓮遠東百貨店」2022年8月開幕"
  },
  {
   "brand": "宜得利",
@@ -2105,7 +2105,7 @@
   "sources": [
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方沿革（經搜尋摘要）：2023年11月「台北站前新光三越店」開幕。"
+  "evidence": "宜得利官網沿革：「台北站前新光三越店」2023年11月開幕"
  },
  {
   "brand": "宜得利",
@@ -2116,7 +2116,7 @@
   "sources": [
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方沿革（經搜尋摘要）：2024年2月「三重愛買店」開幕。"
+  "evidence": "宜得利官網沿革：「三重愛買店」2024年2月開幕"
  },
  {
   "brand": "宜得利",
@@ -2127,18 +2127,18 @@
   "sources": [
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方沿革（經搜尋摘要）：2024年3月「台中豐原太平洋百貨店」開幕。"
+  "evidence": "宜得利官網沿革：「台中豐原太平洋百貨店」2024年3月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台北內湖舊宗店",
-  "date": "2014-06",
-  "year": 2014,
+  "date": "2025-12",
+  "year": 2025,
   "confidence": "confirmed",
   "sources": [
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方沿革（經搜尋摘要）：「台北內湖舊宗店」2014年6月開幕，地址舊宗路一段150巷25號2F、3F。"
+  "evidence": "宜得利官網沿革：「台北內湖舊宗店」2025年12月開幕"
  },
  {
   "brand": "宜得利",
@@ -2147,11 +2147,9 @@
   "year": 2026,
   "confidence": "confirmed",
   "sources": [
-   "https://mnya.tw/yo/word/3939.html",
-   "https://www.threads.com/@plumage21/post/DakPdfOmjlb/",
-   "https://www.nitori.com.tw/news"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方最新消息/新聞：台北車站地下街店2026年7月24日盛大開幕（開幕活動7/24-7/31），位於地下街Y區B2。"
+  "evidence": "宜得利官網沿革：「台北車站地下街店」2026年7月開幕"
  },
  {
   "brand": "宜得利",
@@ -2160,11 +2158,9 @@
   "year": 2020,
   "confidence": "confirmed",
   "sources": [
-   "https://www.ettoday.net/news/20201230/1884464.htm",
-   "https://www.walkerland.com.tw/subject/view/283462",
-   "https://spot.line.me/detail/813534741763463385"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "ETtoday 2020-12-30：大潤發中崙店2020年底改裝首度引進「店中店」，NITORI宜得利、迪卡儂進駐；另一搜尋摘要稱台北中崙大潤發店2020年12月17日開幕（日未獨立核實）。原為大潤發中崙店，後改大全聯，宜得利2026-09-15隨商場結束營業。注意：官方沿革的搜尋摘要給出互相矛盾的年份(2007/2014/2016)，不採用。"
+  "evidence": "宜得利官網沿革：「台北中崙大全聯店」2020年12月開幕"
  },
  {
   "brand": "宜得利",
@@ -2175,7 +2171,7 @@
   "sources": [
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方沿革（經搜尋摘要）：台北市1號店「台北敦北店」2010年3月開幕。"
+  "evidence": "宜得利官網沿革：「台北敦北店」2010年3月開幕"
  },
  {
   "brand": "宜得利",
@@ -2186,7 +2182,7 @@
   "sources": [
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方沿革（經搜尋摘要）：「台北明曜店」2016年10月開幕。"
+  "evidence": "宜得利官網沿革：「台北明曜店」2016年10月開幕"
  },
  {
   "brand": "宜得利",
@@ -2197,18 +2193,18 @@
   "sources": [
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方沿革（經搜尋摘要）：「DECO HOME 台北DREAM PLAZA店」2025年7月開幕。"
+  "evidence": "宜得利官網沿革：「DECO HOME台北DREAM PLAZA店」2025年7月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台北微風松高店",
-  "date": "2022-07",
+  "date": "2022-08",
   "year": 2022,
   "confidence": "confirmed",
   "sources": [
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方沿革（經搜尋摘要）：「台北微風松高店」2022年7月開幕。"
+  "evidence": "宜得利官網沿革：「台北微風松高店」2022年8月開幕"
  },
  {
   "brand": "宜得利",
@@ -2217,11 +2213,9 @@
   "year": 2022,
   "confidence": "confirmed",
   "sources": [
-   "https://www.chinatimes.com/realtimenews/20221028000130-260405",
-   "https://udn.com/news/story/7270/6696746",
-   "https://udn.com/news/story/7934/6697490"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "新光三越天母店周年慶10/26開跑，宜得利首度進駐天母，開幕首日銷售破百萬（中時2022-10-28）。"
+  "evidence": "宜得利官網沿革：「天母新光三越店」2022年10月開幕"
  },
  {
   "brand": "宜得利",
@@ -2232,7 +2226,7 @@
   "sources": [
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方沿革（經搜尋摘要）：2022年10月「新竹大遠百店」開幕。"
+  "evidence": "宜得利官網沿革：「新竹大遠百店」2022年10月開幕"
  },
  {
   "brand": "宜得利",
@@ -2241,118 +2235,141 @@
   "year": 2025,
   "confidence": "confirmed",
   "sources": [
-   "https://www.bnext.com.tw/article/82124/lalaport--nangang-openingin0320",
-   "https://www.businessweekly.com.tw/style/blog/3018014"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "南港LaLaport 2025-03-20開幕，宜得利於開幕時進駐4樓"
+  "evidence": "宜得利官網沿革：「LaLaport南港店」2025年3月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 板橋遠東百貨店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2021-11",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「板橋遠東百貨店」2021年11月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 汐止遠雄店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2015-10",
+  "year": 2015,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「汐止遠雄店」2015年10月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 永和比漾廣場店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2026-03",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「永和比漾店」2026年3月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 中和景平大全聯店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2024-07",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「中和景平大全聯店」2024年7月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 Mitsui Outlet Park林口店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2025-02",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「Mitsui Outlet Park林口店」2025年2月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 中和環球店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2009-01",
+  "year": 2009,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「中和環球店」2009年1月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 土城大全聯店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2021-07",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「土城大全聯店」2021年7月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 樹林秀泰店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2018-05",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「樹林秀泰店」2018年5月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 重新萬家福店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2018-07",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「重新萬家福店」2018年7月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 新莊店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2012-12",
+  "year": 2012,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「新荘店」2012年12月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 林口萬家福店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2012-06",
+  "year": 2012,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「林口萬家福店」2012年6月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 淡水店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2013-04",
+  "year": 2013,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「淡水萬家福店」2013年4月開幕"
  },
  {
   "brand": "宜得利",
@@ -2361,9 +2378,9 @@
   "year": 2022,
   "confidence": "confirmed",
   "sources": [
-   "https://osakaleo.pixnet.net/blog/posts/10355157170"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "宜得利宜蘭站前店（宜興路一段159號2樓）2022年7月盛大開幕"
+  "evidence": "宜得利官網沿革：「宜蘭站前店」2022年7月開幕"
  },
  {
   "brand": "宜得利",
@@ -2372,92 +2389,108 @@
   "year": 2021,
   "confidence": "confirmed",
   "sources": [
-   "https://blog.udn.com/e1921525/162893842"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "宜得利宜蘭羅東店5月14日盛大開幕（2021，首度進軍東台灣）"
+  "evidence": "宜得利官網沿革：「宜蘭羅東店」2021年5月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 新竹大魯閣湳雅店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2018-05",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「新竹大魯閣湳雅店」2018年5月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 新竹巨城店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2012-04",
+  "year": 2012,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「新竹巨城店」2012年4月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 竹北享平方店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2022-12",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「竹北享平方店」2022年12月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 中壢店",
-  "date": "2008-11-18",
+  "date": "2008-12",
   "year": 2008,
-  "confidence": "registry",
+  "confidence": "confirmed",
   "sources": [
-   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 28454066"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "經濟部商工登記：宜得利（統編 28454066）中壢分公司，分公司核准設立日 2008-11-18，地址 桃園市中壢區中華路1段480號；查無開幕新聞，以登記日代表開店日"
+  "evidence": "宜得利官網沿革：「中壢店」2008年12月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 桃園平鎮大全聯店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2023-12",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「桃園平鎮大全聯店」2023年12月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 桃園愛買店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2021-12",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「桃園愛買店」2021年12月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 桃園環球A8店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2022-01",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「桃園環球A8店」2022年1月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 桃園八德萬家福店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2024-12",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「桃園八德萬家福店」2024年12月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 苗栗萬家福店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2025-08",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「苗栗萬家福店」2025年8月開幕"
  },
  {
   "brand": "宜得利",
@@ -2466,44 +2499,42 @@
   "year": 2020,
   "confidence": "confirmed",
   "sources": [
-   "https://news.shoninsha.co.jp/store/143668",
-   "https://www.ryutsuu.biz/abroad/l122608.html",
-   "https://www.nitorihd.co.jp/news/items/4c971a161f13c64a075c89bce65e9f72.pdf"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "商人舍標題：「台湾31店舗目｢NITORI桃園台茂店｣2020年1月出店」；流通新聞「台湾に30店舗目、2020年1月3日オープン」（店序30/31說法不一，故只記至月）"
+  "evidence": "宜得利官網沿革：「桃園台茂店」2020年1月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 苗栗頭份大全聯店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2020-05",
+  "year": 2020,
+  "confidence": "confirmed",
   "sources": [
-   "https://m.facebook.com/NITORI.TW/photos/3146658535385763/",
-   "https://www.findcompany.com.tw/%E5%AE%9C%E5%BE%97%E5%88%A9%E5%AE%B6%E5%B1%85%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E8%8B%97%E6%A0%97%E9%A0%AD%E4%BB%BD%E5%A4%A7%E6%BD%A4%E7%99%BC%E5%BA%97"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "官方FB貼文「苗栗頭份大潤發店 將於5月29日(五)盛大開幕」未寫年份（5/29為週五→2020年最可能）；分公司登記資料顯示2020-04-15設立。原為大潤發店中店，現大全聯。未見明確年份，不記錄。現值2015幾乎確定錯誤"
+  "evidence": "宜得利官網沿革：「苗栗頭份大全聯店」2020年5月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 DECO HOME LaLaport台中店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2026-05",
+  "year": 2026,
+  "confidence": "confirmed",
   "sources": [
-   "https://niniandblue.com/blog/post/decohome-tc",
-   "https://www.ctee.com.tw/news/20241007701300-431401"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "部落格稱LaLaport台中北館1F DECO HOME於「5/29」開幕但未寫年份；工商時報2024-10-07報導DECO HOME海外首站為漢神巨蛋，故台中店不早於2024-10，現值2023應有誤"
+  "evidence": "宜得利官網沿革：「DECO HOME LaLaport台中店」2026年5月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 LaLaport台中店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "僅查得宜得利位於LaLaport台中南館3F；LaLaport台中南館2023-01-17試營運、全館2023-05-16開幕，但未找到宜得利本店開幕日期的明確來源"
+  "date": "2023-01",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「LALAPORT台中店」2023年1月開幕"
  },
  {
   "brand": "宜得利",
@@ -2512,52 +2543,53 @@
   "year": 2011,
   "confidence": "confirmed",
   "sources": [
-   "https://www.ctee.com.tw/news/20110506700086-439901"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "工商時報2011-05-06「日本宜得利家居 中台灣展店」：進駐台中新時代購物中心，全台第8家、中部第2家分店"
+  "evidence": "宜得利官網沿革：「台中新時代店」2011年5月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台中廣三SOGO店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "搜尋摘要出現2007-09與2015-09兩種互相矛盾的說法，無可引用的明確來源"
+  "date": "2015-09",
+  "year": 2015,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「台中廣三SOGO店」2015年9月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台中中友百貨店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2020-10",
+  "year": 2020,
+  "confidence": "confirmed",
   "sources": [
-   "https://www.chungyo.com.tw/floor_detail.php?cID=8&Key=1478"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "僅確認位於中友百貨A棟7樓；搜尋摘要出現2007-10、2020-10矛盾說法，無明確來源"
+  "evidence": "宜得利官網沿革：「台中中友百貨店」2020年10月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台中忠明大全聯店",
-  "date": "2023-09-20",
+  "date": "2023-08",
   "year": 2023,
   "confidence": "confirmed",
   "sources": [
-   "https://www.ryutsuu.biz/abroad/p091977.html",
-   "https://www.ettoday.net/news/20231027/2610818.htm"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "流通新聞（2023-09-19刊）「ニトリ／台湾58店舗目「台中忠明大潤発店」オープン」，9月20日開幕；原為大潤發忠明店（現大全聯）店中店"
+  "evidence": "宜得利官網沿革：「台中忠明大全聯店」2023年8月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 新店裕隆城店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2023-09",
+  "year": 2023,
+  "confidence": "confirmed",
   "sources": [
-   "https://travelcom.com.tw/nitori250915/"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "裕隆城2023-09-28開幕，宜得利位於5F，但未找到宜得利本店開幕日期明確來源"
+  "evidence": "宜得利官網沿革：「台北新店裕隆城店」2023年9月開幕"
  },
  {
   "brand": "宜得利",
@@ -2566,58 +2598,64 @@
   "year": 2023,
   "confidence": "confirmed",
   "sources": [
-   "https://www.ryutsuu.biz/abroad/p102611.html",
-   "https://news.shoninsha.co.jp/store/232266"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "流通新聞（2023-10-26刊）「台湾58店舗目の新店オープン」：10月27日（金）開設「NITORI 桃園遠東百貨店」桃園区中正路20号6階，集團第951店"
+  "evidence": "宜得利官網沿革：「桃園遠東百貨店」2023年10月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台中水湳愛買店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2020-08",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「台中水湳愛買店」2020年8月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 北屯大買家店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2012-08",
+  "year": 2012,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「台中大買家店」2012年8月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台中西屯萬家福店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源（原家樂福店中店，現萬家福）"
+  "date": "2019-11",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「台中西屯萬家福店」2019年11月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台中文心秀泰店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2019-04",
+  "year": 2019,
+  "confidence": "confirmed",
   "sources": [
-   "https://news.shoninsha.co.jp/store/125015",
-   "https://apoarea.tw/showtime-nitori-may/"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "商人舍標題「台湾32店舗目の212坪｢台中文心秀泰店｣4/3オープン」未寫年份（依店序30-31號為2020年1月，推測為2020-04-03，但無明確年份，不記錄）"
+  "evidence": "宜得利官網沿革：「台中文心秀泰店」2019年4月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台中國光大買家",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2019-01",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「台中國光大買家」2019年1月開幕"
  },
  {
   "brand": "宜得利",
@@ -2626,36 +2664,42 @@
   "year": 2023,
   "confidence": "confirmed",
   "sources": [
-   "https://www.ctee.com.tw/news/20230504701085-431401"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "工商時報2023-05-04「宜得利家居插旗彰化家樂福5/4開幕」（家樂福店中店，現萬家福）"
+  "evidence": "宜得利官網沿革：「彰化萬家福店」2023年5月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 彰化員林大全聯店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2024-06",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「彰化員林大全聯店」2024年6月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 南投萬家福店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2024-05",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「南投萬家福店」2024年5月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 嘉義耐斯店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2021-04",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「嘉義耐斯店」2021年4月開幕"
  },
  {
   "brand": "宜得利",
@@ -2669,31 +2713,35 @@
  {
   "brand": "宜得利",
   "store_name": "宜得利 雲林斗六萬家福店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2021-11",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「雲林斗六萬家福店」2021年11月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台南中山新光三越店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2022-11",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「台南中山新光三越店」2022年11月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台南頂美店",
-  "date": "2008-10-07",
+  "date": "2008-11",
   "year": 2008,
-  "confidence": "registry",
+  "confidence": "confirmed",
   "sources": [
-   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 28454066"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "經濟部商工登記：宜得利（統編 28454066）台南分公司，分公司核准設立日 2008-10-07，地址 臺南市中西區中華西路2段685號；查無開幕新聞，以登記日代表開店日"
+  "evidence": "宜得利官網沿革：「台南頂美店」2008年11月開幕"
  },
  {
   "brand": "宜得利",
@@ -2702,9 +2750,9 @@
   "year": 2020,
   "confidence": "confirmed",
   "sources": [
-   "https://www.ryutsuu.biz/abroad/m122140.html"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "流通新聞（2020-12-21刊）「ニトリHD／台湾35店舗目「NITORI台南南紡店」オープン」"
+  "evidence": "宜得利官網沿革：「台南南紡店」2020年12月開幕"
  },
  {
   "brand": "宜得利",
@@ -2715,16 +2763,18 @@
   "sources": [
    "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "宜得利官網沿革：「DECO HOME Mitsui Outlet Park台南店」2026年5月開幕（使用者於官網核對，2026-10-05）"
+  "evidence": "宜得利官網沿革：「DECO HOME Mitsui Outlet Park台南店」2026年5月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台南仁德店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2018-01",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「台南仁德店」2018年1月開幕"
  },
  {
   "brand": "宜得利",
@@ -2733,9 +2783,9 @@
   "year": 2024,
   "confidence": "confirmed",
   "sources": [
-   "https://www.chinatimes.com/realtimenews/20240830002999-260421"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "中時2024-08-30「宜得利家居進駐高雄大立百貨 南部首間旗艦店開幕」"
+  "evidence": "宜得利官網沿革：「高雄大立百貨店」2024年8月開幕"
  },
  {
   "brand": "宜得利",
@@ -2744,99 +2794,119 @@
   "year": 2024,
   "confidence": "confirmed",
   "sources": [
-   "https://www.ctee.com.tw/news/20241007701300-431401"
+   "https://www.nitori.com.tw/about/history"
   ],
-  "evidence": "工商時報2024-10-07「宜得利旗下DECO HOME品牌 海外首站進駐漢神巨蛋」"
+  "evidence": "宜得利官網沿革：「DECO HOME高雄漢神巨蛋店」2024年10月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 高雄苓雅中正一店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2023-06",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「高雄苓雅中正一店」2023年6月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 高雄大遠百店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2023-04",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「高雄大遠百店」2023年4月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 高雄夢時代店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "搜尋摘要稱台灣1號店2007年開於高雄，但與夢時代店之對應及是否曾遷移無可靠來源，不記錄"
+  "date": "2016-12",
+  "year": 2016,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「高雄夢時代店」2016年12月開幕（同名店 2010 年閉店後於 2016-12 重新開幕，此為現行門市）"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 高雄大樂店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2010-04",
+  "year": 2010,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「高雄大樂店」2010年4月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 高雄新楠萬家福店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2019-12",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「高雄新楠萬家福店」2019年12月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 高雄左營新光三越店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2020-06",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「高雄左營新光三越店」2020年6月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 高雄岡山秀泰店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2022-05",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「高雄岡山秀泰店」2022年5月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 高雄鳳山大全聯店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2021-09",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「高雄鳳山大全聯店」2021年9月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 屏東環球店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2019-04",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「屏東環球店」2019年4月開幕"
  },
  {
   "brand": "宜得利",
   "store_name": "宜得利 台東店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2026-08",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「台東店」2026年8月開幕"
  },
  {
   "brand": "特力屋",
