@@ -698,11 +698,13 @@
  {
   "brand": "HOLA",
   "store_name": "HOLA 新店裕隆城店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2026",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.threads.com/@hola.taiwan/post/DVREMWwEtC6"
+  ],
+  "evidence": "HOLA 官方 Threads（2026-02-27）：新店中興路店 3/8 後暫停營業，搬遷至裕隆城（誠品生活新店），預計5月開幕；現址門市已在官方清單營運中，故年份為 2026（月份未經確認）"
  },
  {
   "brand": "HOLA",
@@ -718,11 +720,15 @@
  {
   "brand": "HOLA",
   "store_name": "HOLA 中和環球店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2023-04-20",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.cdns.com.tw/articles/785445",
+   "https://www.everydayobject.us/hola-new-store/",
+   "https://tw.news.yahoo.com/hola%E9%A6%96%E5%AE%B6%E9%83%BD%E6%9C%83%E6%A6%82%E5%BF%B5%E5%BA%97-%E4%B8%AD%E5%92%8C%E7%92%B0%E7%90%83%E9%96%8B%E5%B9%95-122300177.html"
+  ],
+  "evidence": "〈HOLA全台首家「都會概念店」中和環球開幕〉：2023-04-20 於中和環球B2開幕。取自搜尋摘要，原文未開啟"
  },
  {
   "brand": "HOLA",

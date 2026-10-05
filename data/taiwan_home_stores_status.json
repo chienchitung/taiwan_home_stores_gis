@@ -112557,7 +112557,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市新店區中興路三段70號1F",
-    "opened_date": "",
+    "opened_date": "2026",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "新店區",
@@ -112572,8 +112572,8 @@
     "n": 3785,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.threads.com/@hola.taiwan/post/DVREMWwEtC6",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "HOLA",
@@ -112607,7 +112607,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市中和區中山路三段122號 B2",
-    "opened_date": "",
+    "opened_date": "2023-04-20",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "中和區",
@@ -112622,8 +112622,8 @@
     "n": 3787,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.cdns.com.tw/articles/785445",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "HOLA",
