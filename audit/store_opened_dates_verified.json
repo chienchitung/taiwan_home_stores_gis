@@ -889,11 +889,13 @@
  {
   "brand": "hoi! 好好生活",
   "store_name": "hoi! 台北文昌概念店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2019-10-14",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://eventblog.pixnet.net/blog/posts/5068427998"
+  ],
+  "evidence": "hoi!好好生活10/14進駐北市文昌家具街，第五間獨立門市，歡慶成立滿周年（2019）"
  },
  {
   "brand": "hoi! 好好生活",
@@ -2922,11 +2924,13 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 板橋北門店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2025-10-30",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.threads.com/@trplus_summer_sunny/post/DQb7kPNEtBh"
+  ],
+  "evidence": "特力屋官方社區管家帳號：板橋新埔店 2025-02-18 熄燈，板橋北門店（黃石市場4樓）2025-10-30 試營運開幕"
  },
  {
   "brand": "特力屋",
@@ -3037,11 +3041,14 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 宜蘭宜興店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2022-07-15",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://howlife.cna.com.tw/life/20220719s004.aspx",
+   "https://udn.com/news/story/7241/6464485"
+  ],
+  "evidence": "中央社：特力屋第30間社區店宜蘭宜興店7/15開幕（2022，爾本購物廣場）"
  },
  {
   "brand": "特力屋",
@@ -3142,11 +3149,13 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 北屯店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2001-10-12",
+  "year": 2001,
+  "confidence": "confirmed",
+  "sources": [
+   "https://travel.taichung.gov.tw/zh-tw/shop/consume/4782"
+  ],
+  "evidence": "特力屋北屯店 2001-10-12 盛大開幕（臺中觀光旅遊網店家資料）"
  },
  {
   "brand": "特力屋",
@@ -3238,11 +3247,14 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 斗六店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2022-06-24",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://howlife.cna.com.tw/life/20220624s006.aspx",
+   "https://www.ctee.com.tw/news/20220624700778-439803"
+  ],
+  "evidence": "中央社 2022-06-24：深耕雲林 特力屋斗六店正式營運（首度進駐雲林自建賣場）"
  },
  {
   "brand": "特力屋",

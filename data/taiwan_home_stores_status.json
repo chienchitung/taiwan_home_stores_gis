@@ -270,7 +270,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市大安區文昌街272號",
-    "opened_date": "",
+    "opened_date": "2019-10-14",
     "status": "已結束營業",
     "note": "進駐台北文昌家具街之風格實驗店，合約到期後將展售重心整合至內湖旗艦店",
     "district": "大安區",
@@ -285,7 +285,7 @@
     "n": 12,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://eventblog.pixnet.net/blog/posts/5068427998"
   },
   {
     "brand": "MR. LIVING 居家先生",
@@ -107430,7 +107430,7 @@
     "city": "新北市",
     "district": "板橋區",
     "address": "新北市板橋區北門街11號4F",
-    "opened_date": "",
+    "opened_date": "2025-10-30",
     "status": "營業中",
     "status_category": "現行營運中",
     "channel_format": "百貨商場 / 購物中心",
@@ -107444,7 +107444,7 @@
     "n": 3729,
     "is_co_location": false,
     "store_format": "都會／社區門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.threads.com/@trplus_summer_sunny/post/DQb7kPNEtBh"
   },
   {
     "brand": "特力屋",
@@ -107717,7 +107717,7 @@
     "region": "北部",
     "city": "宜蘭縣",
     "address": "宜蘭縣宜蘭市宜興路一段159號",
-    "opened_date": "",
+    "opened_date": "2022-07-15",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "宜蘭市",
@@ -107732,7 +107732,7 @@
     "n": 3741,
     "is_co_location": false,
     "store_format": "都會／社區門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://howlife.cna.com.tw/life/20220719s004.aspx"
   },
   {
     "brand": "特力屋",
@@ -107981,7 +107981,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市北屯區北屯路407-1號",
-    "opened_date": "",
+    "opened_date": "2001-10-12",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "北屯區",
@@ -107996,7 +107996,7 @@
     "n": 3752,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://travel.taichung.gov.tw/zh-tw/shop/consume/4782"
   },
   {
     "brand": "特力屋",
@@ -108222,7 +108222,7 @@
     "city": "雲林縣",
     "district": "斗六市",
     "address": "雲林縣斗六市莊敬路268號",
-    "opened_date": "",
+    "opened_date": "2022-06-24",
     "status": "營業中",
     "status_category": "現行營運中",
     "channel_format": "大型獨棟 / 獨立街邊店",
@@ -108236,7 +108236,7 @@
     "n": 3762,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://howlife.cna.com.tw/life/20220624s006.aspx"
   },
   {
     "brand": "特力屋",
