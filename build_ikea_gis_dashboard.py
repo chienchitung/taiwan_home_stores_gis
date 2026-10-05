@@ -30,6 +30,11 @@ def assign_store_opened_year(s):
 dashboard_stores = [store for store in stores if not store.get('dashboard_excluded')]
 for store in dashboard_stores:
     store['opened_year'] = assign_store_opened_year(store)
+    # 開幕日期依據：全聯一律為商工登記；其他品牌由 apply_verified_opened_dates.py 寫入
+    if store['opened_year']:
+        store['opened_basis'] = '商工登記' if store.get('brand') == '全聯福利中心' else (store.get('opened_date_basis') or '新聞／官方')
+    else:
+        store['opened_basis'] = ''
     # 部分資料的座標是字串（例如 "25.010977"）；Leaflet 的 bounds.contains() 會把字串陣列
     # 誤判成範圍而無限遞迴，導致「只看地圖範圍內」當掉，因此統一轉成數字
     for key in ('lat', 'lng'):
@@ -44,7 +49,7 @@ SHOPEE_DASHBOARD_FIELDS = {
     'status', 'note', 'district', 'channel_format', 'status_category', 'lat',
     'lng', 'clean_query', 'is_co_location', 'google_maps_url',
     'verification_status', 'official_store_id', 'location_role', 'core_store',
-    'store_format', 'opened_date', 'opened_year'
+    'store_format', 'opened_date', 'opened_year', 'opened_basis'
 }
 shopee_stores = [
     {key: value for key, value in store.items() if key in SHOPEE_DASHBOARD_FIELDS}
@@ -53,7 +58,8 @@ shopee_stores = [
 # 網頁沒有用到的欄位不打包，減少下載與解析量
 UNUSED_FIELDS = {'google_maps_url', 'source_url', 'clean_name', 'coordinate_source',
                  'verification_status', 'geocode_score', 'location_role', 'core_store',
-                 'is_co_location', 'opened_date'}
+                 'is_co_location', 'opened_date', 'opened_date_basis', 'opened_date_source',
+                 'address_floor_source'}
 initial_stores = [{k: v for k, v in s.items() if k not in UNUSED_FIELDS} for s in initial_stores]
 pxmart_stores = [{k: v for k, v in s.items() if k not in UNUSED_FIELDS} for s in pxmart_stores]
 for s in pxmart_stores:
@@ -3064,6 +3070,12 @@ aside.collapsed .sidebar-collapse-toggle {
   background: #FEF3C7 !important;
   color: #B45309 !important;
 }
+.tag-opened-unknown {
+  background: #F1F5F9 !important;
+  color: #64748B !important;
+}
+.sk-facts dd.sk-unknown { color: #64748B; font-weight: 600; }
+.sk-basis { display: block; margin-top: 1px; font-size: 11px; font-weight: 600; color: #64748B; }
 
 /* Timeline Mode Active overrides */
 .timeline-mode-active #regionJumpBar {
@@ -4091,7 +4103,7 @@ function makePopupHtml(s) {
     </div>
     <div class="tag-container" style="margin-bottom:8px">
       <span class="tag-badge tag-channel">${SVG.store} ${s.store_format || s.channel_format}</span>
-      ${s.opened_year ? `<span class="tag-badge tag-opened-year">${SVG.clock} ${s.opened_year} 開幕</span>` : ""}
+      ${s.opened_year ? `<span class="tag-badge tag-opened-year">${SVG.clock} ${s.opened_year} 開幕</span>` : `<span class="tag-badge tag-opened-unknown" title="查無可靠開幕日期來源，未標示年份">${SVG.clock} 開幕年份未知</span>`}
       ${s._userDist !== undefined && isSortedByDistance ? `<span class="card-dist-badge">${SVG.gps} 距您 ${formatDist(s._userDist)}</span>` : ""}
     </div>
     <div class="popup-addr">
@@ -5394,7 +5406,9 @@ function openStoreDrawer(s, preferredTab = null, opts = {}) {
       <dl class="sk-facts">
         <div><dt>品牌</dt><dd>${s.brand}</dd></div>
         <div><dt>型態</dt><dd>${s.store_format || s.channel_format}</dd></div>
-        ${s.opened_year ? `<div><dt>開幕</dt><dd>${s.opened_year} 年</dd></div>` : ""}
+        <div><dt>開幕</dt>${s.opened_year
+          ? `<dd>${s.opened_year} 年${s.opened_basis === "商工登記" ? `<span class="sk-basis" title="經濟部商工登記分公司核准設立日，通常比實際開幕早 1～4 個月">依商工登記</span>` : ""}</dd>`
+          : `<dd class="sk-unknown" title="查無新聞、官方或商工登記等可靠來源，不推估年份">未知<span class="sk-basis">查無可靠來源</span></dd>`}</div>
       </dl>
       <div class="sk-section">
         <div class="sk-label">地址</div>

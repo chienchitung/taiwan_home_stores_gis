@@ -2982,6 +2982,12 @@ aside.collapsed .sidebar-collapse-toggle {
   background: #FEF3C7 !important;
   color: #B45309 !important;
 }
+.tag-opened-unknown {
+  background: #F1F5F9 !important;
+  color: #64748B !important;
+}
+.sk-facts dd.sk-unknown { color: #64748B; font-weight: 600; }
+.sk-basis { display: block; margin-top: 1px; font-size: 11px; font-weight: 600; color: #64748B; }
 
 /* Timeline Mode Active overrides */
 .timeline-mode-active #regionJumpBar {
@@ -3640,7 +3646,7 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
 
 <!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
 <script src="vendor/leaflet/leaflet.js"></script>
-<script src="stores_data.js?v=bfe8b5253a"></script>
+<script src="stores_data.js?v=e4b49250eb"></script>
 <script>
 /* ─── DATA INJECTION ─── */
 const ALL_STORES = window.ALL_STORES_DATA || [];
@@ -4009,7 +4015,7 @@ function makePopupHtml(s) {
     </div>
     <div class="tag-container" style="margin-bottom:8px">
       <span class="tag-badge tag-channel">${SVG.store} ${s.store_format || s.channel_format}</span>
-      ${s.opened_year ? `<span class="tag-badge tag-opened-year">${SVG.clock} ${s.opened_year} 開幕</span>` : ""}
+      ${s.opened_year ? `<span class="tag-badge tag-opened-year">${SVG.clock} ${s.opened_year} 開幕</span>` : `<span class="tag-badge tag-opened-unknown" title="查無可靠開幕日期來源，未標示年份">${SVG.clock} 開幕年份未知</span>`}
       ${s._userDist !== undefined && isSortedByDistance ? `<span class="card-dist-badge">${SVG.gps} 距您 ${formatDist(s._userDist)}</span>` : ""}
     </div>
     <div class="popup-addr">
@@ -5312,7 +5318,9 @@ function openStoreDrawer(s, preferredTab = null, opts = {}) {
       <dl class="sk-facts">
         <div><dt>品牌</dt><dd>${s.brand}</dd></div>
         <div><dt>型態</dt><dd>${s.store_format || s.channel_format}</dd></div>
-        ${s.opened_year ? `<div><dt>開幕</dt><dd>${s.opened_year} 年</dd></div>` : ""}
+        <div><dt>開幕</dt>${s.opened_year
+          ? `<dd>${s.opened_year} 年${s.opened_basis === "商工登記" ? `<span class="sk-basis" title="經濟部商工登記分公司核准設立日，通常比實際開幕早 1～4 個月">依商工登記</span>` : ""}</dd>`
+          : `<dd class="sk-unknown" title="查無新聞、官方或商工登記等可靠來源，不推估年份">未知<span class="sk-basis">查無可靠來源</span></dd>`}</div>
       </dl>
       <div class="sk-section">
         <div class="sk-label">地址</div>
