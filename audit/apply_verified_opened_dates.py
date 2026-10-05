@@ -3,7 +3,8 @@
 
 - 全聯福利中心：日期來自商工登記（sync_pxmart_stores.py），這裡不動。
 - 蝦皮店到店：沒有公開的開店日期來源，維持空白。
-- 其他品牌：只有 confidence == "confirmed"（有新聞／官方來源明確寫出日期或年份）才寫入；
+- 其他品牌：confidence == "confirmed"（新聞／官方來源明確寫出日期）或 "registry"（經濟部商工登記
+  分公司核准設立日，見 apply_gcis_branch_dates.py）才寫入；
   查無來源的一律清空，不推估。
 """
 import csv
@@ -28,15 +29,18 @@ def main():
         if s.get("brand") in SKIP_BRANDS:
             continue
         v = by_key.get((s.get("brand"), s.get("store_name")))
-        if v and v.get("confidence") == "confirmed" and v.get("year"):
+        if v and v.get("confidence") in ("confirmed", "registry") and v.get("year"):
             s["opened_date"] = v.get("date") or str(v["year"])
             s["opened_date_source"] = (v.get("sources") or [""])[0]
+            # confirmed＝新聞／官方公告；registry＝經濟部商工登記分公司核准設立日
+            s["opened_date_basis"] = "商工登記" if v["confidence"] == "registry" else "新聞／官方"
             confirmed += 1
         else:
             if s.get("brand") != "蝦皮店到店" and not v:
                 missing += 1
             s["opened_date"] = ""
             s["opened_date_source"] = ""
+            s["opened_date_basis"] = ""
             cleared += 1
 
     MAIN_JSON.write_text(json.dumps(stores, ensure_ascii=False, indent=2), encoding="utf-8")

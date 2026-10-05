@@ -175,11 +175,13 @@
  {
   "brand": "IKEA",
   "store_name": "IKEA 桃園舊店（中山路店）",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2004-12-16 仍待查證"
+  "date": "2004-09-01",
+  "year": 2004,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 84309586"
+  ],
+  "evidence": "經濟部商工登記：宜家家居（統編 84309586）桃園分公司，分公司核准設立日 2004-09-01，地址 桃園市中壢區高鐵站前東路1段1號；查無開幕新聞，以登記日代表開店日（桃園分公司2004年設立，2020年隨門市遷至青埔沿用同一登記）"
  },
  {
   "brand": "IKEA",
@@ -290,38 +292,46 @@
  {
   "brand": "MR. LIVING 居家先生",
   "store_name": "MR. LIVING 台中文心門市（初代首店）",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2018-05-15 仍待查證"
+  "date": "2018-03-19",
+  "year": 2018,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 65905937"
+  ],
+  "evidence": "經濟部商工登記：居家先生（統編 65905937）台中分公司，分公司核准設立日 2018-03-19，地址 臺中市西屯區文心路3段243號；查無開幕新聞，以登記日代表開店日（台中分公司（文心路三段243號）已廢止，門市遷至黎明）"
  },
  {
   "brand": "MR. LIVING 居家先生",
   "store_name": "MR. LIVING 新北新莊旗艦店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2023-08-12 仍待查證"
+  "date": "2024-09-19",
+  "year": 2024,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 65905937"
+  ],
+  "evidence": "經濟部商工登記：居家先生（統編 65905937）新莊分公司，分公司核准設立日 2024-09-19，地址 新北市新莊區新北大道四段135號2、3樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "MR. LIVING 居家先生",
   "store_name": "MR. LIVING 台北內湖門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2019-10-18 仍待查證"
+  "date": "2019-05-13",
+  "year": 2019,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 65905937"
+  ],
+  "evidence": "經濟部商工登記：居家先生（統編 65905937）內湖分公司，分公司核准設立日 2019-05-13，地址 臺北市內湖區民權東路6段；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "MR. LIVING 居家先生",
   "store_name": "MR. LIVING 新竹竹北門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2021-11-20 仍待查證"
+  "date": "2020-03-19",
+  "year": 2020,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 65905937"
+  ],
+  "evidence": "經濟部商工登記：居家先生（統編 65905937）新竹分公司，分公司核准設立日 2020-03-19，地址 新竹縣竹北市光明六路東一段186號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "MR. LIVING 居家先生",
@@ -338,20 +348,24 @@
  {
   "brand": "MR. LIVING 居家先生",
   "store_name": "MR. LIVING 台南崇善門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2021-04-17 仍待查證"
+  "date": "2023-07-31",
+  "year": 2023,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 65905937"
+  ],
+  "evidence": "經濟部商工登記：居家先生（統編 65905937）台南分公司，分公司核准設立日 2023-07-31，地址 臺南市東區崇善路23號2樓之1；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "MR. LIVING 居家先生",
   "store_name": "MR. LIVING 高雄巨蛋門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 2020-08-29 仍待查證"
+  "date": "2018-10-05",
+  "year": 2018,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 65905937"
+  ],
+  "evidence": "經濟部商工登記：居家先生（統編 65905937）高雄分公司，分公司核准設立日 2018-10-05，地址 高雄市左營區新莊一路393號（2樓）；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "La-Z-Boy",
@@ -651,29 +665,35 @@
  {
   "brand": "HOLA",
   "store_name": "HOLA 新北中和店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。 現有值 2000-11-10 未經本次查證。"
+  "date": "2003-10-21",
+  "year": 2003,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂中和分公司，分公司核准設立日 2003-10-21，地址 新北市中和區中山路2段291號1、2樓，293號1樓，295號1樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "HOLA",
   "store_name": "HOLA 台北內湖店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2000-01-25",
+  "year": 2000,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂內湖分公司，分公司核准設立日 2000-01-25，地址 臺北市內湖區新湖三路23號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "HOLA",
   "store_name": "HOLA 台北士林店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2001-01-15",
+  "year": 2001,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂士林分公司，分公司核准設立日 2001-01-15，地址 臺北市士林區基河路258號地下1樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "HOLA",
@@ -687,11 +707,13 @@
  {
   "brand": "HOLA",
   "store_name": "HOLA 新北重新店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2021-11-24",
+  "year": 2021,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂重新分公司，分公司核准設立日 2021-11-24，地址 新北市三重區重新路5段654號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "HOLA",
@@ -705,11 +727,13 @@
  {
   "brand": "HOLA",
   "store_name": "HOLA 新北土城店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2006-02-22",
+  "year": 2006,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂土城分公司，分公司核准設立日 2006-02-22，地址 新北市土城區青雲路152號4、5樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "HOLA",
@@ -769,20 +793,24 @@
  {
   "brand": "HOLA",
   "store_name": "HOLA 新竹店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2010-04-12",
+  "year": 2010,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂新竹分公司，分公司核准設立日 2010-04-12，地址 新竹市光復里公道五路2段469號2樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "HOLA",
   "store_name": "HOLA 台中北屯店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2004-07-27",
+  "year": 2004,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂北屯分公司，分公司核准設立日 2004-07-27，地址 臺中市北屯區北屯路407之1號1樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "HOLA",
@@ -811,20 +839,24 @@
  {
   "brand": "HOLA",
   "store_name": "HOLA 彰化店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2010-12-14",
+  "year": 2010,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂彰化分公司，分公司核准設立日 2010-12-14，地址 彰化縣和美鎮詔安里彰美路2段49號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "HOLA",
   "store_name": "HOLA 嘉義店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2013-01-10",
+  "year": 2013,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂嘉義分公司，分公司核准設立日 2013-01-10，地址 嘉義市東區中庄里忠孝路549號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "HOLA",
@@ -850,29 +882,35 @@
  {
   "brand": "HOLA",
   "store_name": "HOLA 台南仁德店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2005-11-07",
+  "year": 2005,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂仁德分公司，分公司核准設立日 2005-11-07，地址 臺南市仁德區仁德村中山路779號1、2樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "HOLA",
   "store_name": "HOLA 高雄左營店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2005-02-17",
+  "year": 2005,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂左營分公司，分公司核准設立日 2005-02-17，地址 高雄市左營區民族一路948號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "HOLA",
   "store_name": "HOLA 高雄夢時代店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+  "date": "2011-06-08",
+  "year": 2011,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂高雄夢時代分公司，分公司核准設立日 2011-06-08，地址 高雄市前鎮區興邦里中華五路789號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "hoi! 好好生活",
@@ -2368,11 +2406,13 @@
  {
   "brand": "宜得利",
   "store_name": "宜得利 中壢店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查證：本工作階段WebSearch額度(200次)已用盡且官網/維基/新聞站被網路代理封鎖，無法取得明確來源。"
+  "date": "2008-11-18",
+  "year": 2008,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 28454066"
+  ],
+  "evidence": "經濟部商工登記：宜得利（統編 28454066）中壢分公司，分公司核准設立日 2008-11-18，地址 桃園市中壢區中華路1段480號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "宜得利",
@@ -2647,11 +2687,13 @@
  {
   "brand": "宜得利",
   "store_name": "宜得利 台南頂美店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2008-10-07",
+  "year": 2008,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 28454066"
+  ],
+  "evidence": "經濟部商工登記：宜得利（統編 28454066）台南分公司，分公司核准設立日 2008-10-07，地址 臺南市中西區中華西路2段685號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "宜得利",
@@ -2809,14 +2851,14 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 南港興華店(社區店)",
-  "date": "2022-09-25",
-  "year": 2022,
+  "date": "2021-09-25",
+  "year": 2021,
   "confidence": "confirmed",
   "sources": [
    "https://www.findcoupon.tw/store-53329.htm",
-   "https://www.trplus.com.tw/store/locations"
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
   ],
-  "evidence": "南港興華店(社區店)於2022年9月25日新開幕"
+  "evidence": "門市資料「9月25號新開幕」（評論 2022-01 記錄）；商工登記南港興華分公司 2021-09-06 設立，故為 2021-09-25（原查核誤記為 2022）"
  },
  {
   "brand": "特力屋",
@@ -2832,42 +2874,46 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 大同重慶北店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2023-04-27",
+  "year": 2023,
+  "confidence": "registry",
   "sources": [
-   "https://m.iyp.com.tw/tax/94041996"
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
   ],
-  "evidence": "僅查到「特力屋大同重慶北分公司」設立登記日2023-05-02(商業登記，非開幕日)，未找到開幕日期來源"
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）大同重慶北分公司，分公司核准設立日 2023-04-27，地址 臺北市大同區重慶北路2段69、69-1號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 士林店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2000-12-29",
+  "year": 2000,
+  "confidence": "registry",
   "sources": [
-   "https://house.ettoday.net/news/3150031"
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
   ],
-  "evidence": "新聞僅稱士林店「開業超過20年」、2026年5月11日起暫停營業改裝，無明確開幕年"
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）士林分公司，分公司核准設立日 2000-12-29，地址 臺北市士林區基河路258號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 汐止新台店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "搜尋未找到開幕日期；店位於汐止遠雄IFG廣場D棟"
+  "date": "2024-05-08",
+  "year": 2024,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）汐止新台分公司，分公司核准設立日 2024-05-08，地址 新北市汐止區新台五路1段93之3號1樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 三重集美店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "搜尋未找到開幕日期"
+  "date": "2020-12-28",
+  "year": 2020,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）三重集美分公司，分公司核准設立日 2020-12-28，地址 新北市三重區集美街18-3號及18-5號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -2884,22 +2930,24 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 蘆洲集賢店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2019-11-11",
+  "year": 2019,
+  "confidence": "registry",
   "sources": [
-   "https://house.ettoday.net/news/1727235"
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
   ],
-  "evidence": "ETtoday房產新聞稱該店面「今年1月以1.155億售出…特力屋去年底才開幕，月租28萬」，但無法取得文章發布日期(搜尋摘要年份互相矛盾2023/2024；文章ID推估約2020年中→約2019年底)，故列未證實"
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）蘆洲集賢分公司，分公司核准設立日 2019-11-11，地址 新北市蘆洲區集賢路401號1樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 新店店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "搜尋未找到開幕日期(新店家樂福4樓)"
+  "date": "2004-10-05",
+  "year": 2004,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）新店分公司，分公司核准設立日 2004-10-05，地址 新北市新店區中興路3段1號4樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -2915,11 +2963,13 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 蘆洲長安店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2021-03-15",
+  "year": 2021,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）蘆洲長安分公司，分公司核准設立日 2021-03-15，地址 新北市蘆洲區長安街101、103號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -2935,58 +2985,68 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 土城店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2001-10-24",
+  "year": 2001,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）土城分公司，分公司核准設立日 2001-10-24，地址 新北市土城區青雲路152號2樓、3樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 板橋合宜店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2026-05-08",
+  "year": 2026,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）板橋合宜分公司，分公司核准設立日 2026-05-08，地址 新北市板橋區合宜路149號1樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 新莊店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "1997-11-22",
+  "year": 1997,
+  "confidence": "registry",
   "sources": [
-   "https://www.twincn.com/16099274"
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
   ],
-  "evidence": "僅查到新莊分公司設立登記1997-11-22(商業登記，非開幕日)，未找到開幕日期"
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）新莊分公司，分公司核准設立日 1997-11-22，地址 新北市新莊區中正路620號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 淡水中山北店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2025-11-06",
+  "year": 2025,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）淡水中山北分公司，分公司核准設立日 2025-11-06，地址 新北市淡水區中山北路三段102號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 林口中山店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2019-06-27",
+  "year": 2019,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）林口中山分公司，分公司核准設立日 2019-06-27，地址 新北市林口區中山路248號地下1層3號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 基隆義一店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2020-10-20",
+  "year": 2020,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）基隆義一分公司，分公司核准設立日 2020-10-20，地址 基隆市中正區義一路99號1樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -3002,11 +3062,13 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 桃園大業店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2019-07-24",
+  "year": 2019,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）桃園大業分公司，分公司核准設立日 2019-07-24，地址 桃園市桃園區大業路1段138號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -3023,20 +3085,24 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 八德店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2010-12-09",
+  "year": 2010,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）八德分公司，分公司核准設立日 2010-12-09，地址 桃園市八德區大勇里介壽路1段479號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 平鎮店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2000-01-29",
+  "year": 2000,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）平鎮分公司，分公司核准設立日 2000-01-29，地址 桃園市平鎮區環南路2段261號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -3053,11 +3119,13 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 龍潭北龍店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2020-12-24",
+  "year": 2020,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）龍潭北龍分公司，分公司核准設立日 2020-12-24，地址 桃園市龍潭區北龍路19號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -3074,29 +3142,35 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 湖口和愛店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2022-10-21",
+  "year": 2022,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）湖口和愛分公司，分公司核准設立日 2022-10-21，地址 新竹縣湖口鄉和愛路60、62、66、68號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 竹北文興店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2019-10-18",
+  "year": 2019,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）竹北文興分公司，分公司核准設立日 2019-10-18，地址 新竹縣竹北市文興路347號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 新竹店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2003-08-06",
+  "year": 2003,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）新竹分公司，分公司核准設立日 2003-08-06，地址 新竹市光復里公道五路2段469號2樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -3113,38 +3187,46 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 頭份中央店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2020-06-15",
+  "year": 2020,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）頭份中央分公司，分公司核准設立日 2020-06-15，地址 苗栗縣頭份市中央路678、680號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 苗栗中正店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2022-12-14",
+  "year": 2022,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）苗栗中正分公司，分公司核准設立日 2022-12-14，地址 苗栗縣苗栗市中正路905-13號1樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 花蓮店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2007-10-17",
+  "year": 2007,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）花蓮分公司，分公司核准設立日 2007-10-17，地址 花蓮縣花蓮市林森路176號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 豐原店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2013-08-02",
+  "year": 2013,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）豐原分公司，分公司核准設立日 2013-08-02，地址 臺中市豐原區南村里水源路420號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -3160,20 +3242,24 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 埔里信義店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2021-12-21",
+  "year": 2021,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）埔里信義分公司，分公司核准設立日 2021-12-21，地址 南投縣埔里鎮信義路16、18、20號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 梧棲中華店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2022-01-17",
+  "year": 2022,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）梧棲中華分公司，分公司核准設立日 2022-01-17，地址 臺中市梧棲區中華路2段561及561之1號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -3200,29 +3286,35 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 大里國光店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2021-03-02",
+  "year": 2021,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）大里國光分公司，分公司核准設立日 2021-03-02，地址 臺中市大里區國光路2段363號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 台中復興店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2020-12-10",
+  "year": 2020,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）台中復興分公司，分公司核准設立日 2020-12-10，地址 臺中市南區復興路1段359號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 草屯虎山店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2012-07-06",
+  "year": 2012,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）草屯分公司，分公司核准設立日 2012-07-06，地址 南投縣草屯鎮和平里虎山路819號(1樓)；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -3238,11 +3330,13 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 彰化員林店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2001-09-27",
+  "year": 2001,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）員林分公司，分公司核准設立日 2001-09-27，地址 彰化縣員林市中山路2段399號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -3259,47 +3353,57 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 虎尾公安店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2025-08-08",
+  "year": 2025,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）虎尾公安分公司，分公司核准設立日 2025-08-08，地址 雲林縣虎尾鎮公安里公安路188號1樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 嘉義店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "1999-08-10",
+  "year": 1999,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）嘉義分公司，分公司核准設立日 1999-08-10，地址 嘉義市東區後湖里7鄰忠孝路547號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 朴子四維店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2022-07-20",
+  "year": 2022,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）朴子四維分公司，分公司核准設立日 2022-07-20，地址 嘉義縣朴子市四維路2段62號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 新營金華店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2020-03-10",
+  "year": 2020,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）新營金華分公司，分公司核准設立日 2020-03-10，地址 臺南市新營區隋唐街197號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 佳里佳東店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2021-04-27",
+  "year": 2021,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）佳里佳東分公司，分公司核准設立日 2021-04-27，地址 臺南市佳里區佳東路481號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -3328,74 +3432,90 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 永康復國店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2020-03-18",
+  "year": 2020,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）永康復國分公司，分公司核准設立日 2020-03-18，地址 臺南市永康區復國一路315巷1號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 台南文賢店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "1999-08-10",
+  "year": 1999,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）台南分公司，分公司核准設立日 1999-08-10，地址 臺南市北區文元里15鄰文賢路720號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 台南仁德店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2003-04-28",
+  "year": 2003,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）仁德分公司，分公司核准設立日 2003-04-28，地址 臺南市仁德區仁德村16鄰中山路799號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 岡山大仁店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2020-12-10",
+  "year": 2020,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）岡山大仁分公司，分公司核准設立日 2020-12-10，地址 高雄市岡山區大仁北路303號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 屏東店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2004-10-11",
+  "year": 2004,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）屏東分公司，分公司核准設立日 2004-10-11，地址 屏東縣屏東市民生路2之27號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 楠梓大學店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2023-04-27",
+  "year": 2023,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）楠梓大學分公司，分公司核准設立日 2023-04-27，地址 高雄市楠梓區大學東路161、163號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 高雄左營店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2005-01-26",
+  "year": 2005,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）北高雄分公司，分公司核准設立日 2005-01-26，地址 高雄市左營區民族一路948之1號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 三民澄清店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2020-08-18",
+  "year": 2020,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）三民澄清分公司，分公司核准設立日 2020-08-18，地址 高雄市三民區澄清路339號1樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
@@ -3412,29 +3532,35 @@
  {
   "brand": "特力屋",
   "store_name": "特力屋 高雄鳳山店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2002-03-12",
+  "year": 2002,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）鳳山分公司，分公司核准設立日 2002-03-12，地址 高雄市鳳山區老爺里38鄰瑞隆東路99號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 苓雅三多店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2021-10-07",
+  "year": 2021,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）苓雅三多分公司，分公司核准設立日 2021-10-07，地址 高雄市苓雅區三多三路166、168號1樓；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",
   "store_name": "特力屋 東港光復店(社區店)",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未搜尋到明確來源(WebSearch額度已用盡、WebFetch被網路封鎖)，未證實"
+  "date": "2021-12-01",
+  "year": 2021,
+  "confidence": "registry",
+  "sources": [
+   "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
+  ],
+  "evidence": "經濟部商工登記：特力屋（統編 89390488）東港光復分公司，分公司核准設立日 2021-12-01，地址 屏東縣東港鎮光復路1段66號；查無開幕新聞，以登記日代表開店日"
  },
  {
   "brand": "特力屋",

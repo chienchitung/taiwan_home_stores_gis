@@ -1,0 +1,41 @@
+[
+ {
+  "Business_Accounting_NO": "28454066",
+  "Branch_Office_Business_Accounting_NO": "24307992",
+  "Branch_Office_Manager_Name": "冨田 雄飛",
+  "Branch_Office_Status": "01",
+  "Branch_Office_Status_Desc": "核准設立",
+  "Branch_Office_Name": "中壢分公司",
+  "Branch_Office_Location": "桃園市中壢區中華路1段480號",
+  "BR_ESTAB_DATE": "0971118",
+  "CHG_APP_DATE": "1150916",
+  "Revoke_App_Date": "       ",
+  "_rowNum": 1
+ },
+ {
+  "Business_Accounting_NO": "28454066",
+  "Branch_Office_Business_Accounting_NO": "28991066",
+  "Branch_Office_Manager_Name": "冨田雄飛",
+  "Branch_Office_Status": "01",
+  "Branch_Office_Status_Desc": "核准設立",
+  "Branch_Office_Name": "台北分公司",
+  "Branch_Office_Location": "臺北市松山區敦化北路100號B1",
+  "BR_ESTAB_DATE": "0990204",
+  "CHG_APP_DATE": "1150918",
+  "Revoke_App_Date": "       ",
+  "_rowNum": 2
+ },
+ {
+  "Business_Accounting_NO": "28454066",
+  "Branch_Office_Business_Accounting_NO": "29064381",
+  "Branch_Office_Manager_Name": "冨田雄飛",
+  "Branch_Office_Status": "01",
+  "Branch_Office_Status_Desc": "核准設立",
+  "Branch_Office_Name": "台南分公司",
+  "Branch_Office_Location": "臺南市中西區中華西路2段685號",
+  "BR_ESTAB_DATE": "0971007",
+  "CHG_APP_DATE": "1150918",
+  "Revoke_App_Date": "       ",
+  "_rowNum": 3
+ }
+]
