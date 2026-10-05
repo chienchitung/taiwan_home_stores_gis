@@ -113409,7 +113409,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市南區復興路一段359號2樓",
-    "opened_date": "",
+    "opened_date": "2025-09-26",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "南區",
@@ -113424,8 +113424,8 @@
     "n": 3819,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.facebook.com/hoihometw/posts/1213355284154090/",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "hoi! 好好生活",
