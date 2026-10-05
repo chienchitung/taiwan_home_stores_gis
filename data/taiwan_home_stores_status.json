@@ -54,7 +54,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市松山區復興南路一段39號3F（微風廣場）",
-    "opened_date": "",
+    "opened_date": "2004-04",
     "status": "營業中",
     "note": "全台首家門市，2004年開幕，目前正常營運中",
     "district": "松山區",
@@ -69,7 +69,7 @@
     "n": 3,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://travel.udn.com/travel/story/7934/7923545"
   },
   {
     "brand": "無印良品",
@@ -78,7 +78,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市信義區松壽路11號3F（新光三越A11）",
-    "opened_date": "",
+    "opened_date": "2016-07-20",
     "status": "已歇業整併",
     "note": "2023年4月30日結束營業，整併至信義微風松高旗艦店",
     "district": "信義區",
@@ -93,7 +93,7 @@
     "n": 4,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/160720.html"
   },
   {
     "brand": "無印良品",
@@ -109711,7 +109711,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市信義區松高路16號1-2F（微風松高）",
-    "opened_date": "",
+    "opened_date": "2023-05-31",
     "status": "營業中",
     "note": "北台灣最大旗艦店，逾710坪，設飯糰輕食套餐與MUJI Green綠植",
     "district": "信義區",
@@ -109726,7 +109726,7 @@
     "n": 3824,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://udn.com/news/story/7270/7201065"
   },
   {
     "brand": "無印良品",
@@ -109735,7 +109735,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市信義區忠孝東路五段8號B2F（統一時代百貨台北店）",
-    "opened_date": "",
+    "opened_date": "2014-12-20",
     "status": "營業中",
     "note": "全台首間引進 Café&Meal MUJI 餐廳之生活概念大店",
     "district": "信義區",
@@ -109750,7 +109750,7 @@
     "n": 3825,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.marieclaire.com.tw/lifestyle/news/15141"
   },
   {
     "brand": "無印良品",
@@ -109759,7 +109759,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市中山區敬業三路20號2F（美麗華百樂園漾館）",
-    "opened_date": "",
+    "opened_date": "2022-01-26",
     "status": "營業中",
     "note": "逾600坪，全台首座玻璃工坊、良品市場小農產銷與免費給水站",
     "district": "中山區",
@@ -109774,7 +109774,7 @@
     "n": 3826,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/220124-1.html"
   },
   {
     "brand": "無印良品",
@@ -109783,7 +109783,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市中正區北平西路3號2F（微風台北車站）",
-    "opened_date": "",
+    "opened_date": "2018-04-03",
     "status": "營業中",
     "note": "高鐵與台鐵核心交通樞紐便利店，主打旅行與個人即時生活用品",
     "district": "中正區",
@@ -109798,7 +109798,7 @@
     "n": 3827,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/18040301.html"
   },
   {
     "brand": "無印良品",
@@ -109807,7 +109807,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市中山區南京西路15號B1（新光三越台北南西店三館）",
-    "opened_date": "",
+    "opened_date": "2018-08-02",
     "status": "營業中",
     "note": "南西商圈核心門市，年輕族群與都會白領主力採買門市",
     "district": "中山區",
@@ -109822,7 +109822,7 @@
     "n": 3828,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.tw/tw/news/news/180802.html"
   },
   {
     "brand": "無印良品",
@@ -109975,7 +109975,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市南港區忠孝東路七段369號C棟2F（CITYLINK南港店）",
-    "opened_date": "",
+    "opened_date": "2018-06-04",
     "status": "營業中",
     "note": "南港經貿園區與三鐵共構家庭樞紐大店",
     "district": "南港區",
@@ -109990,7 +109990,7 @@
     "n": 3835,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/180529.html"
   },
   {
     "brand": "無印良品",
@@ -110023,7 +110023,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市文山區景興路188號3-4F（瀚星百貨）",
-    "opened_date": "",
+    "opened_date": "2019-08-23",
     "status": "營業中",
     "note": "文山景美生活圈核心據點，鄰近世新大學與景美夜市商圈",
     "district": "文山區",
@@ -110038,7 +110038,7 @@
     "n": 3837,
     "is_co_location": false,
     "store_format": "都會／社區門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/190823.html"
   },
   {
     "brand": "無印良品",
@@ -110047,7 +110047,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市板橋區縣民大道二段7號B1（Global Mall 板橋車站）",
-    "opened_date": "",
+    "opened_date": "2024-12-12",
     "status": "營業中",
     "note": "新北新板特區核心交通樞紐店，通勤族與差旅日用品首選",
     "district": "板橋區",
@@ -110062,7 +110062,7 @@
     "n": 3838,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/241212.html"
   },
   {
     "brand": "無印良品",
@@ -110119,7 +110119,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市新店區中興路三段70號5F（誠品生活新店裕隆城）",
-    "opened_date": "",
+    "opened_date": "2023-09-28",
     "status": "營業中",
     "note": "新北新興地標商場主力店，提供良品市場在地農產與木育廣場",
     "district": "新店區",
@@ -110134,7 +110134,7 @@
     "n": 3841,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://500times.udn.com/wtimes/story/12671/7481165"
   },
   {
     "brand": "無印良品",
@@ -110191,7 +110191,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市新莊區新北大道四段3號2F（宏匯廣場）",
-    "opened_date": "",
+    "opened_date": "2020-07-31",
     "status": "營業中",
     "note": "副都心商圈核心，賣場寬廣並導入刺繡工房服務",
     "district": "新莊區",
@@ -110206,7 +110206,7 @@
     "n": 3844,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.tw/tw/news/news/200731.html"
   },
   {
     "brand": "無印良品",
@@ -110239,7 +110239,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市林口區文化三路一段356號1F（MITSUI OUTLET PARK 林口）",
-    "opened_date": "",
+    "opened_date": "2024-11-14",
     "status": "營業中",
     "note": "林口三井熱門休閒購物大店，提供全家戶外與生活用品",
     "district": "林口區",
@@ -110254,7 +110254,7 @@
     "n": 3846,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://500times.udn.com/wtimes/story/12671/8360514"
   },
   {
     "brand": "無印良品",
@@ -110263,7 +110263,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市汐止區新台五路一段93號D區1F（iFG遠雄廣場）",
-    "opened_date": "",
+    "opened_date": "2016-04-27",
     "status": "營業中",
     "note": "汐科園區新興商辦與住宅客群重要選品店",
     "district": "汐止區",
@@ -110278,7 +110278,7 @@
     "n": 3847,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/160428.html"
   },
   {
     "brand": "無印良品",
@@ -110287,7 +110287,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市樹林區樹新路40-6號4F（秀泰生活樹林店）",
-    "opened_date": "",
+    "opened_date": "2018-05-11",
     "status": "營業中",
     "note": "樹林土城交界家庭休閒購物主力大店",
     "district": "樹林區",
@@ -110302,7 +110302,7 @@
     "n": 3848,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/zh_tw/shop/detail/180511?error=login_required"
   },
   {
     "brand": "無印良品",
@@ -110311,7 +110311,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市蘆洲區中山一路8號3F（徐匯廣場）",
-    "opened_date": "",
+    "opened_date": "2017-11-17",
     "status": "營業中",
     "note": "徐匯中學捷運共構，三重蘆洲通勤客核心門市",
     "district": "蘆洲區",
@@ -110326,7 +110326,7 @@
     "n": 3849,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/171117.html"
   },
   {
     "brand": "無印良品",
@@ -110913,7 +110913,7 @@
     "region": "中部",
     "city": "彰化縣",
     "address": "彰化縣埔心鄉中山路319號2F（大潤發員林店）",
-    "opened_date": "",
+    "opened_date": "2024-09-12",
     "status": "營業中",
     "note": "南彰化唯一大型專門店，近300坪空間，填補彰化平原採買缺口",
     "district": "埔心鄉",
@@ -110928,7 +110928,7 @@
     "n": 3874,
     "is_co_location": true,
     "store_format": "量販店中店",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/240912.html"
   },
   {
     "brand": "無印良品",
@@ -110937,7 +110937,7 @@
     "region": "中部",
     "city": "雲林縣",
     "address": "雲林縣斗六市社口街261號1-2F",
-    "opened_date": "",
+    "opened_date": "2025-11-21",
     "status": "營業中",
     "note": "2025年11月開幕，由原斗六社口旅客服務中心改建之獨立大型路面店",
     "district": "斗六市",
@@ -110952,7 +110952,7 @@
     "n": 3875,
     "is_co_location": false,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.tw/tw/news/news/251121.html"
   },
   {
     "brand": "無印良品",
@@ -111057,7 +111057,7 @@
     "region": "南部",
     "city": "台南市",
     "address": "台南市東區中華東路一段366號A1館2F（南紡購物中心）",
-    "opened_date": "",
+    "opened_date": "2020-12-25",
     "status": "營業中",
     "note": "南紡核心大專櫃，提供家具顧問、生活配件與全品項展演",
     "district": "東區",
@@ -111072,7 +111072,7 @@
     "n": 3880,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://storeinfo.muji.tw/nf/"
   },
   {
     "brand": "無印良品",
@@ -111081,7 +111081,7 @@
     "region": "南部",
     "city": "台南市",
     "address": "台南市歸仁區歸仁大道101號1F（MITSUI OUTLET PARK 台南）",
-    "opened_date": "",
+    "opened_date": "2026-03-20",
     "status": "營業中",
     "note": "緊鄰高鐵台南站，南台灣出差旅客與歸仁家庭選品熱點",
     "district": "歸仁區",
@@ -111096,7 +111096,7 @@
     "n": 3881,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://shop.muji.tw/muji-journal/news/news/260317.html"
   },
   {
     "brand": "無印良品",
@@ -111129,7 +111129,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市前金區五福三路59號1-2F（大立百貨B館）",
-    "opened_date": "",
+    "opened_date": "2023-12-05",
     "status": "營業中",
     "note": "佔地870坪打破全台MUJI面積紀錄，設南部首發Brunch輕食、良品市場與最齊全商品",
     "district": "前金區",
@@ -111144,7 +111144,7 @@
     "n": 3883,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/231204.html"
   },
   {
     "brand": "無印良品",
@@ -111153,7 +111153,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市岡山區捷安路1巷1號（獨立街邊店）",
-    "opened_date": "",
+    "opened_date": "2022",
     "status": "營業中",
     "note": "逾700坪全台首間獨立街邊臨路店型，首次設立現烤烘焙麵包區與專屬餐廳",
     "district": "岡山區",
@@ -111168,7 +111168,7 @@
     "n": 3884,
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.chinatimes.com/realtimenews/20220717002335-260405"
   },
   {
     "brand": "無印良品",
@@ -111177,7 +111177,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市左營區博愛二路777號3F（漢神巨蛋購物廣場）",
-    "opened_date": "",
+    "opened_date": "2008",
     "status": "營業中",
     "note": "漢神巨蛋高坪效大店，年輕家庭與潮流白領核心採購點",
     "district": "左營區",
@@ -111192,7 +111192,7 @@
     "n": 3885,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/zh_tw/shop/detail/080611?error=login_required"
   },
   {
     "brand": "無印良品",
@@ -111225,7 +111225,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市前鎮區中華五路789號B1F（統一夢時代購物中心）",
-    "opened_date": "",
+    "opened_date": "2007-03",
     "status": "營業中",
     "note": "夢時代指標大櫃，鄰近摩天輪與藍鯨館，家庭休閒採買熱點",
     "district": "前鎮區",
@@ -111240,7 +111240,7 @@
     "n": 3887,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/180927.html"
   },
   {
     "brand": "無印良品",
@@ -111297,7 +111297,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市前鎮區中安路1-1號1F（SKM Park Outlets 高雄草衙）",
-    "opened_date": "",
+    "opened_date": "2020-03-27",
     "status": "營業中",
     "note": "草衙休閒娛樂特區核心家庭選品大櫃",
     "district": "前鎮區",
@@ -111312,7 +111312,7 @@
     "n": 3890,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/zh_tw/shop/detail/200311?error=login_required"
   },
   {
     "brand": "無印良品",
@@ -111321,7 +111321,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市大樹區學城路一段12號C區B1（義大世界購物廣場）",
-    "opened_date": "",
+    "opened_date": "2015-07-25",
     "status": "營業中",
     "note": "2026-10 官方門市清單核對",
     "district": "大樹區",
@@ -111336,7 +111336,7 @@
     "n": 3891,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://shop.muji.tw/Shop/StoreDetail/41566/37654"
   },
   {
     "brand": "無印良品",
@@ -111345,7 +111345,7 @@
     "region": "南部",
     "city": "屏東縣",
     "address": "屏東縣屏東市中正路72號4F（太平洋百貨屏東店）",
-    "opened_date": "",
+    "opened_date": "2017-09-22",
     "status": "營業中",
     "note": "屏東全縣首家專門店，服務屏東平原高屏溪以南家庭日用",
     "district": "屏東市",
@@ -111360,7 +111360,7 @@
     "n": 3892,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.tw/muji-journal/news/news/170922.html"
   },
   {
     "brand": "無印良品",
@@ -111393,7 +111393,7 @@
     "region": "北部",
     "city": "宜蘭縣",
     "address": "宜蘭縣宜蘭市民權路二段38巷6號1F（蘭城新月廣場）",
-    "opened_date": "",
+    "opened_date": "2016-05-21",
     "status": "營業中",
     "note": "進軍東台灣首店，蘭城新月核心主力專櫃，服務全宜蘭家庭",
     "district": "宜蘭市",
@@ -111408,7 +111408,7 @@
     "n": 3894,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.tw/tw/news/news/160523.html"
   },
   {
     "brand": "無印良品",
@@ -111441,7 +111441,7 @@
     "region": "東部及離島",
     "city": "台東縣",
     "address": "台東縣台東市中山路328號3-5F（全聯台東中山旗艦店複合）",
-    "opened_date": "",
+    "opened_date": "2022-07-27",
     "status": "營業中",
     "note": "橫跨三層樓近600坪，並設有『微型慢市集』推廣台東在地青農商品",
     "district": "台東市",
@@ -111456,7 +111456,7 @@
     "n": 3896,
     "is_co_location": false,
     "store_format": "量販店中店",
-    "opened_date_source": ""
+    "opened_date_source": "https://udn.com/news/story/7328/6491318"
   },
   {
     "brand": "無印良品",
@@ -111467,7 +111467,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市北屯區中清路二段1199號B1（愛買台中水湳店）",
-    "opened_date": "",
+    "opened_date": "2025-08-15",
     "status": "營業中",
     "note": "2026-09-11 依無印良品官方開幕公告及 Google Maps 核對補入",
     "district": "北屯區",
@@ -111486,7 +111486,7 @@
     "n": 3897,
     "is_co_location": true,
     "store_format": "量販店中店",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/250815.html"
   },
   {
     "brand": "無印良品",
@@ -111497,7 +111497,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市后里區福容路201號（麗寶OUTLET MALL A ZONE 1-2F，櫃號1106）",
-    "opened_date": "",
+    "opened_date": "2026-07-17",
     "status": "營業中",
     "note": "2026-09-11 依無印良品官方開幕公告及 Google Maps 實際地標核對補入",
     "district": "后里區",
@@ -111516,7 +111516,7 @@
     "n": 3898,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://money.udn.com/money/story/10871/9633863"
   },
   {
     "brand": "無印良品",
@@ -111549,7 +111549,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市信義區松山路11號3F（CITYLINK松山壹號店）",
-    "opened_date": "",
+    "opened_date": "2020-01-09",
     "status": "營業中",
     "note": "2026-10 官方門市清單核對",
     "district": "信義區",
@@ -111564,7 +111564,7 @@
     "n": 3900,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/200109.html"
   },
   {
     "brand": "無印良品",
@@ -111573,7 +111573,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市內湖區舊宗路一段188號2F（大全聯內湖店 / 原大潤發內湖一店）",
-    "opened_date": "",
+    "opened_date": "2023-05-19",
     "status": "營業中",
     "note": "2026-10 官方門市清單核對",
     "district": "內湖區",
@@ -111588,7 +111588,7 @@
     "n": 3901,
     "is_co_location": false,
     "store_format": "量販店中店",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/230519.html"
   },
   {
     "brand": "無印良品",
@@ -111597,7 +111597,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市萬華區峨嵋街52號B1F（誠品生活西門店）",
-    "opened_date": "",
+    "opened_date": "2017-06-22",
     "status": "營業中",
     "note": "2026-10 官方門市清單核對",
     "district": "萬華區",
@@ -111612,7 +111612,7 @@
     "n": 3902,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.tw/tw/news/news/170622.html"
   },
   {
     "brand": "無印良品",
@@ -111645,7 +111645,7 @@
     "region": "北部",
     "city": "台北市",
     "address": "台北市南港區經貿二路131號B1（南港LaLaport）",
-    "opened_date": "",
+    "opened_date": "2025-03-20",
     "status": "營業中",
     "note": "2026-10 官方門市清單核對",
     "district": "南港區",
@@ -111660,7 +111660,7 @@
     "n": 3904,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.tw/tw/news/news/250320.html"
   },
   {
     "brand": "無印良品",
@@ -111669,7 +111669,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市新店區北宜路一段16號1F（DCC碧潭廣場）",
-    "opened_date": "",
+    "opened_date": "2021-01-20",
     "status": "營業中",
     "note": "2026-10 官方門市清單核對",
     "district": "新店區",
@@ -111684,7 +111684,7 @@
     "n": 3905,
     "is_co_location": true,
     "store_format": "都會／社區門市",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/210120.html"
   },
   {
     "brand": "無印良品",
@@ -111741,7 +111741,7 @@
     "region": "南部",
     "city": "台南市",
     "address": "台南市永康區中正南路533號2F（愛買台南店）",
-    "opened_date": "",
+    "opened_date": "2024-06-06",
     "status": "營業中",
     "note": "2026-10 官方門市清單核對",
     "district": "永康區",
@@ -111756,7 +111756,7 @@
     "n": 3908,
     "is_co_location": false,
     "store_format": "量販店中店",
-    "opened_date_source": ""
+    "opened_date_source": "https://www.muji.com/tw/news/news/240606.html"
   },
   {
     "brand": "IKEA",

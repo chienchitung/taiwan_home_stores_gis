@@ -1091,20 +1091,25 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 微風門市（初代首店）",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2004-04",
+  "year": 2004,
+  "confidence": "confirmed",
+  "sources": [
+   "https://travel.udn.com/travel/story/7934/7923545",
+   "https://www.cheers.com.tw/article/article.action?id=5078675"
+  ],
+  "evidence": "2004年4月於台北微風廣場成立台灣第一家門市"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 信義A11門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2016-07-20",
+  "year": 2016,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/160720.html"
+  ],
+  "evidence": "MUJI官方新聞 160720：A11門市7/20開幕"
  },
  {
   "brand": "無印良品",
@@ -1118,47 +1123,61 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 微風松高旗艦店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2023-05-31",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://udn.com/news/story/7270/7201065",
+   "https://www.bnext.com.tw/article/75467/muji-breeze-shop"
+  ],
+  "evidence": "松高旗艦店 2023-05-31 開幕，全台第59店"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 統一時代門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2014-12-20",
+  "year": 2014,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.marieclaire.com.tw/lifestyle/news/15141",
+   "https://www.mook.com.tw/article/10771"
+  ],
+  "evidence": "2014-12-20 統一時代百貨台北店B2旗艦店開幕，引進台灣首家Café&Meal MUJI"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 美麗華旗艦店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2022-01-26",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/220124-1.html",
+   "https://playing.ltn.com.tw/article/25836/1"
+  ],
+  "evidence": "MUJI官方新聞：美麗華旗艦店 2022-01-26 遷址改裝開幕（現址600坪旗艦店）"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 微風台北車站門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2018-04-03",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/18040301.html"
+  ],
+  "evidence": "MUJI官方新聞：台北車站門市2009年開幕，2018-04-03擴大坪數搬遷新址（微風台北車站2F）開幕；採現址開幕日"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 新光三越台北南西門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2018-08-02",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.tw/tw/news/news/180802.html",
+   "https://www.muji.tw/tw/news/news/180504.html"
+  ],
+  "evidence": "MUJI官方新聞 180802：南西門市遷移至南西三館B1，8/2全新開幕；2026-05-22 再移至6F改裝"
  },
  {
   "brand": "無印良品",
@@ -1217,11 +1236,13 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 CITYLINK南港門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2018-06-04",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/180529.html"
+  ],
+  "evidence": "MUJI官方新聞 180529：南港車站門市（CITYLINK南港C棟3F）6/4全新開幕"
  },
  {
   "brand": "無印良品",
@@ -1235,20 +1256,25 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 景美瀚星門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2019-08-23",
+  "year": 2019,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/190823.html"
+  ],
+  "evidence": "MUJI官方新聞 190823：景美門市8/23開幕"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 板橋車站門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2024-12-12",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/241212.html",
+   "https://fashion.ettoday.net/news/2873181"
+  ],
+  "evidence": "MUJI官方新聞 241212：板橋車站門市12/12盛大開幕"
  },
  {
   "brand": "無印良品",
@@ -1271,11 +1297,14 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 新店裕隆城門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2023-09-28",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://500times.udn.com/wtimes/story/12671/7481165",
+   "https://www.shoppingdesign.com.tw/post/view/9468"
+  ],
+  "evidence": "裕隆城門市 9/28 開幕（2023，裕隆城開幕），全台第61家"
  },
  {
   "brand": "無印良品",
@@ -1298,11 +1327,13 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 新莊宏匯門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2020-07-31",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.tw/tw/news/news/200731.html"
+  ],
+  "evidence": "MUJI官方新聞 200731：新莊首店宏匯門市7/31盛大開幕"
  },
  {
   "brand": "無印良品",
@@ -1316,38 +1347,49 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 林口三井門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2024-11-14",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://500times.udn.com/wtimes/story/12671/8360514",
+   "https://www.designwant.com/article/11183"
+  ],
+  "evidence": "林口三井OUTLET二館 11/14 開幕（2024），610坪新北最大、全台第66家"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 汐止遠雄門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2016-04-27",
+  "year": 2016,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/160428.html",
+   "https://estate.ltn.com.tw/article/666"
+  ],
+  "evidence": "MUJI官方新聞 160428：汐止門市（遠雄購物中心）4/27開幕"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 樹林秀泰門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2018-05-11",
+  "year": 2018,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/zh_tw/shop/detail/180511?error=login_required",
+   "https://www.ctee.com.tw/news/20180511700136-439901"
+  ],
+  "evidence": "MUJI樹林首店於秀泰生活樹林店5/11開幕（2018，商場試營運日）"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 徐匯廣場門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2017-11-17",
+  "year": 2017,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/171117.html"
+  ],
+  "evidence": "MUJI官方新聞 171117：台灣第45店徐匯門市11/17開幕"
  },
  {
   "brand": "無印良品",
@@ -1613,20 +1655,24 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 員林大潤發門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2024-09-12",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/240912.html"
+  ],
+  "evidence": "MUJI官方新聞 240912：彰化首店大潤發員林門市9/12開幕"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 雲林斗六門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2025-11-21",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.tw/tw/news/news/251121.html"
+  ],
+  "evidence": "MUJI官方新聞 251121：首度進駐雲林斗六，11/21盛大開幕，第70間"
  },
  {
   "brand": "無印良品",
@@ -1667,23 +1713,25 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 台南南紡門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2020-12-25",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://storeinfo.muji.tw/nf/"
+  ],
+  "evidence": "MUJI官方門市頁：南紡門市（台南三號店）2020-12-25開幕"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 台南三井Outlet門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2026-03-20",
+  "year": 2026,
+  "confidence": "confirmed",
   "sources": [
-   "https://500times.udn.com/wtimes/story/12671/9384818",
-   "https://istyle.ltn.com.tw/article/39422"
+   "https://shop.muji.tw/muji-journal/news/news/260317.html",
+   "https://money.udn.com/money/story/5612/9385038"
   ],
-  "evidence": "報導標題「無印良品台南三井3/20開幕！高鐵台南站旁370坪大型門市」及「MUJI進駐MITSUI台南二期」，但摘要未見明確年份（應為近期新店，非2022），年份未確認"
+  "evidence": "MUJI官方：進駐MITSUI OUTLET PARK台南二期 3/20開幕（2026），全台第73間"
  },
  {
   "brand": "無印良品",
@@ -1697,29 +1745,38 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 高雄大立旗艦店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2023-12-05",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/231204.html",
+   "https://www.muji.com/tw/news/news/231114.html"
+  ],
+  "evidence": "MUJI官方新聞：大立旗艦店12/5盛大開幕（2023）"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 高雄岡山門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2022",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/realtimenews/20220717002335-260405",
+   "https://udn.com/news/story/7270/6393500/"
+  ],
+  "evidence": "中時 2022-07-17：全台首間無印良品街邊店岡山門市即將開幕（2022）"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 漢神巨蛋門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2008",
+  "year": 2008,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/zh_tw/shop/detail/080611?error=login_required",
+   "https://www.muji.com/tw/news/news/190425.html"
+  ],
+  "evidence": "巨蛋門市2008年6月開幕（漢神巨蛋2008-07開幕前試營運），2019-04-25改裝"
  },
  {
   "brand": "無印良品",
@@ -1733,11 +1790,13 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 高雄夢時代門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2007-03",
+  "year": 2007,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/180927.html"
+  ],
+  "evidence": "MUJI官方新聞 180927：夢時代門市自2007年開幕（2007-03，台灣第十家店），2018-09-27改裝"
  },
  {
   "brand": "無印良品",
@@ -1760,29 +1819,36 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 SKM Park高雄草衙門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2020-03-27",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/zh_tw/shop/detail/200311?error=login_required"
+  ],
+  "evidence": "MUJI大魯閣草衙道門市 2020-03-27 開幕，2022 年更名 SKM PARK 門市"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 義大門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2015-07-25",
+  "year": 2015,
+  "confidence": "confirmed",
+  "sources": [
+   "https://shop.muji.tw/Shop/StoreDetail/41566/37654"
+  ],
+  "evidence": "MUJI義大門市7/25盛大開幕（2015年開幕公告，7/25-8/2滿額贈）"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 屏東太平洋門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2017-09-22",
+  "year": 2017,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.tw/muji-journal/news/news/170922.html",
+   "https://n.yam.com/Article/20170923587406"
+  ],
+  "evidence": "MUJI官方新聞 170922：屏東首店（太平洋百貨屏東店）9/22開幕"
  },
  {
   "brand": "無印良品",
@@ -1796,11 +1862,13 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 宜蘭新月門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2016-05-21",
+  "year": 2016,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.tw/tw/news/news/160523.html"
+  ],
+  "evidence": "MUJI官方新聞 160523：宜蘭門市（蘭城新月廣場）5/21開幕"
  },
  {
   "brand": "無印良品",
@@ -1814,29 +1882,36 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 台東門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2022-07-27",
+  "year": 2022,
+  "confidence": "confirmed",
+  "sources": [
+   "https://udn.com/news/story/7328/6491318",
+   "https://news.tvbs.com.tw/life/1699595"
+  ],
+  "evidence": "聯合報 2022-07-27：台東旗艦店（全聯台東中山旗艦店3-5F）今開幕"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 愛買台中門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2025-08-15",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/250815.html"
+  ],
+  "evidence": "MUJI官方新聞 250815：愛買台中門市8/15盛大開幕，全台第69間"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 麗寶MALL門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2026-07-17",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://money.udn.com/money/story/10871/9633863"
+  ],
+  "evidence": "經濟日報 2026-07：無印良品7/17進駐麗寶OUTLET MALL，全台第75店"
  },
  {
   "brand": "無印良品",
@@ -1850,29 +1925,37 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 松山車站門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2020-01-09",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/200109.html",
+   "https://www.ctee.com.tw/news/20200110700594-439803"
+  ],
+  "evidence": "MUJI官方新聞 200109：松山車站門市1/9開幕，全台50店"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 大全聯內湖門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2023-05-19",
+  "year": 2023,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/230519.html",
+   "https://udn.com/news/story/7270/7176356"
+  ],
+  "evidence": "MUJI官方新聞 230519：首次與大潤發合作，內湖門市5/19開幕"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 誠品生活西門門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2017-06-22",
+  "year": 2017,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.tw/tw/news/news/170622.html"
+  ],
+  "evidence": "MUJI官方新聞 170622：由誠品武昌店搬遷至誠品生活西門店B1，6/22開幕；採現址開幕日"
  },
  {
   "brand": "無印良品",
@@ -1886,20 +1969,25 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 LaLaport南港門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2025-03-20",
+  "year": 2025,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.tw/tw/news/news/250320.html",
+   "https://www.ctee.com.tw/news/20250320702167-431401"
+  ],
+  "evidence": "MUJI官方新聞 250320：LaLaport南港門市3/20開幕，第68家"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 新店碧潭門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2021-01-20",
+  "year": 2021,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/210120.html"
+  ],
+  "evidence": "MUJI官方新聞 210120：新店門市（DCC碧潭廣場1F）1/20盛大開幕"
  },
  {
   "brand": "無印良品",
@@ -1927,11 +2015,13 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 愛買台南門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2024-06-06",
+  "year": 2024,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/news/news/240606.html"
+  ],
+  "evidence": "MUJI官方新聞 240606：愛買台南門市6/6盛大開幕"
  },
  {
   "brand": "宜得利",
