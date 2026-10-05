@@ -113132,7 +113132,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市南屯區永春東路1318號",
-    "opened_date": "",
+    "opened_date": "2020",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "南屯區",
@@ -113147,8 +113147,8 @@
     "n": 3808,
     "is_co_location": false,
     "store_format": "店中店／專櫃",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.seamay.com.tw/products/info.php?id=22199",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "hoi! 好好生活",

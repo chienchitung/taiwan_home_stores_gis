@@ -969,11 +969,13 @@
  {
   "brand": "hoi! 好好生活",
   "store_name": "hoi! 台中南屯店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "僅找到南屯店為hoi!中部首間門市之介紹，未查得明確開幕日期（第三方目錄標示2020但非明確來源）"
+  "date": "2020",
+  "year": 2020,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.seamay.com.tw/products/info.php?id=22199"
+  ],
+  "evidence": "喜美廣告（宣傳車業者）案例〈hoi! 好好生活家居選物店〉：南屯永春東路1318號新店開幕優惠「8折起至109/3/25」，即2020年3月前後開幕；僅能確認年份。取自搜尋摘要，原頁未開啟。舊程式碼寫死的 2020 無出處，此筆改以本來源佐證"
  },
  {
   "brand": "hoi! 好好生活",
