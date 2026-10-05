@@ -1222,20 +1222,24 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 遠東SOGO復興館門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2006-10",
+  "year": 2006,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2006年10月「台北SOGO復興店–崇光門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 微風南京門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2014-08",
+  "year": 2014,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2014年8月「台北南京門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
@@ -1258,11 +1262,13 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 大葉高島屋門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2007-10",
+  "year": 2007,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2007年10月「台北大葉高島屋–高島屋門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要；2019-09、2025-09 改裝"
  },
  {
   "brand": "無印良品",
@@ -1319,20 +1325,24 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 板橋大遠百門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2011-12",
+  "year": 2011,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2011年12月「新北板橋大遠百–新板門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 遠東百貨板橋門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2014-07",
+  "year": 2014,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2014年7月「新北板中門市（遠百板橋中山店）」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
@@ -1349,20 +1359,24 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 中和環球門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2011-05",
+  "year": 2011,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2011年5月「新北市環球購物中心–環球門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 永和比漾門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2015-09",
+  "year": 2015,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.wowlavie.com/article/ae2101440"
+  ],
+  "evidence": "Wow!lavie〈無印良品MUJI比漾門市新開幕〉：比漾門市2015年9月開幕，2021-10-13 擴大改裝重新開幕；取自搜尋摘要"
  },
  {
   "brand": "無印良品",
@@ -1434,20 +1448,25 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 基隆皇冠門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+  "date": "2014-08-14",
+  "year": 2014,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.chinatimes.com/newspapers/20140814000770-260508",
+   "https://www.ptt.cc/bbs/Keelung/M.1407766421.A.7D9.html"
+  ],
+  "evidence": "中國時報 2014-08-14〈消費快訊－無印良品基隆門市開幕 滿千送百〉；基隆首間門市，信一路177號3樓"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 桃園遠東門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2006-03",
+  "year": 2006,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2006年3月「桃園遠百門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
@@ -1464,22 +1483,24 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 中壢SOGO門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2010-10",
+  "year": 2010,
+  "confidence": "confirmed",
   "sources": [
-   "https://www.muji.com/tw/news/news/191005.html"
+   "https://www.muji.com/tw/aboutus/History.html"
   ],
-  "evidence": "官方新聞(191005)：中壢門市10/5於遠東SOGO中壢店「將原有空間擴大近一倍」至304坪改裝開幕，屬擴大改裝，原始開幕日期未找到"
+  "evidence": "無印良品官網沿革（企業情報）：2010年10月「中壢SOGO–中壢門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要；2019-10-05 擴大改裝"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 中壢大江門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2013-12",
+  "year": 2013,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2013年12月「桃園大江門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
@@ -1520,20 +1541,24 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 新竹大遠百門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2005-07",
+  "year": 2005,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2005年7月「新竹大遠百門市（首次進駐台北以外地區）」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 新竹巨城門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2012-04",
+  "year": 2012,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2012年4月「新竹巨城百貨–巨城門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
@@ -1583,46 +1608,47 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 新光三越台中中港門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2016-09-29",
+  "year": 2016,
+  "confidence": "confirmed",
   "sources": [
-   "https://www.muji.com/tw/news/news/160823.html",
-   "https://www.ctee.com.tw/news/20160915700059-439901"
+   "https://www.arch.tw/luxury/article.php?i=1958",
+   "https://www.abic.com.tw/place/view/id/8476"
   ],
-  "evidence": "2016-08-24起改裝，2016-09-29以台中旗艦店370坪改裝重新開幕；屬既有門市改裝，原始開幕日期未找到"
+  "evidence": "台中旗艦店（新光三越中港店11F，370坪，全台第3家旗艦店）2016-09-29開幕；原中港店門市擴大遷至現址，採現址開幕日。取自搜尋摘要"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 台中大遠百門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2011-12",
+  "year": 2011,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2011年12月「台中大遠百–中百門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 廣三SOGO門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2006-09",
+  "year": 2006,
+  "confidence": "confirmed",
   "sources": [
-   "https://www.muji.com/tw/news/news/200828.html",
-   "https://www.ptt.cc/bbs/Lifeismoney/M.1600452490.A.F0C.html"
+   "https://www.muji.com/tw/aboutus/History.html"
   ],
-  "evidence": "廣三門市2020-09-16至10-04清倉特賣後結束營業，遷至對面金典；原始開幕日期未找到"
+  "evidence": "無印良品官網沿革（企業情報）：2006年9月「台中廣三SOGO–廣三門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 中友百貨門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
+  "date": "2009-09",
+  "year": 2009,
+  "confidence": "confirmed",
   "sources": [
-   "https://shop.muji.tw/Shop/StoreDetail/41566/37634"
+   "https://www.muji.com/tw/aboutus/History.html"
   ],
-  "evidence": "搜尋摘要：中友百貨為全台第17家門市、台中第2家，9月18日開幕，但未見明確年份；官方地址為B棟3F（非A棟7F）"
+  "evidence": "無印良品官網沿革（企業情報）：2009年9月「台中中友百貨–中友門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要；先前查得『全台第17家、9月18日開幕』相符"
  },
  {
   "brand": "無印良品",
@@ -1686,11 +1712,13 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 豐原太平洋門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2015-06-04",
+  "year": 2015,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.ctee.com.tw/news/20150604700177-439901"
+  ],
+  "evidence": "工商時報 2015-06-04〈無印良品豐原店開幕 滿額贈好禮〉：台中第5家門市，太平洋百貨豐原店"
  },
  {
   "brand": "無印良品",
@@ -1717,11 +1745,14 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 嘉義耐斯門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2012-09",
+  "year": 2012,
+  "confidence": "confirmed",
+  "sources": [
+   "https://500times.udn.com/wtimes/story/12671/7923528",
+   "https://shop.muji.tw/Shop/StoreDetail/41566/37644"
+  ],
+  "evidence": "2012年9月進駐雲嘉地區，嘉義耐斯松屋耐斯門市開幕（無印良品台灣20週年回顧／官方沿革摘要）；取自搜尋摘要"
  },
  {
   "brand": "無印良品",
@@ -1735,20 +1766,24 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 新光三越台南新天地門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2008-11",
+  "year": 2008,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2008年11月「台南新光三越台南西門店（新天地）–台南門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 新光三越台南中山門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2012-07",
+  "year": 2012,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2012年7月「新光三越台南中山店–台南中山店」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要；官方門市頁編號 120711 相符"
  },
  {
   "brand": "無印良品",
@@ -1821,11 +1856,13 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 漢神本館門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2005-11",
+  "year": 2005,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2005年11月「高雄漢神百貨–漢神門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要；2012-03 改裝重新開幕"
  },
  {
   "brand": "無印良品",
@@ -1841,20 +1878,24 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 新光三越高雄左營門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2014-09",
+  "year": 2014,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2014年9月「高雄左營門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要；官方門市頁編號 140911 相符；2026-02-06 擴大改裝"
  },
  {
   "brand": "無印良品",
   "store_name": "無印良品 三多門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2012-09",
+  "year": 2012,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2012年9月「高雄大遠百–三多門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要"
  },
  {
   "brand": "無印良品",
@@ -1959,11 +2000,13 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 遠企門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2008-04",
+  "year": 2008,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.muji.com/tw/aboutus/History.html"
+  ],
+  "evidence": "無印良品官網沿革（企業情報）：2008年4月「台北遠企購物中心–遠企門市」開幕；官網頁面目前無法直接開啟，內容取自搜尋引擎索引摘要；2017-12-14 改裝"
  },
  {
   "brand": "無印良品",
@@ -2003,11 +2046,13 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 南港中信門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2015-02-01",
+  "year": 2015,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.wowlavie.com/article/ae1500206"
+  ],
+  "evidence": "Wow!lavie〈MUJI無印良品 南港門市2月1日盛大開幕〉：2月1日（日）於中信金融園區開幕，第35間門市；年份依文章為2015年系列（2015-02-01為星期日），取自搜尋摘要，原文未開啟"
  },
  {
   "brand": "無印良品",

@@ -8,6 +8,8 @@
 - 年份未知的門市在時間軸上不列入，並顯示「另 N 間開幕年份未知」。
 - 查無新聞的門市，改用經濟部商工登記「分公司核准設立日」（`audit/apply_gcis_branch_dates.py`，原始資料在 `audit/gcis/`），與全聯同一標準；儀表板資料以 `opened_date_basis` 標示「新聞／官方」或「商工登記」。
 - 宜得利以官網沿革（https://www.nitori.com.tw/about/history，2026-10-05 擷取，`audit/nitori_history_events.json`）為準，`audit/apply_nitori_history.py` 套用；此頁也更正了先前依搜尋摘要記錄的 3 筆（台北內湖舊宗店 2014-06→2025-12、微風松高 2022-07→2022-08、台中忠明大全聯 2023-09→2023-08）。
+- 無印良品：新聞／MUJI 官方公告優先；其餘取自 MUJI 官網沿革（https://www.muji.com/tw/aboutus/History.html，頁面目前無法直接開啟，內容取自搜尋引擎索引摘要；並與官方門市頁編號 YYMM 交叉比對，如左營 140911、台南中山 120711、耐斯 120911）。搜尋摘要只在能確認背後確有該篇報導／頁面時採用，並於 evidence 註明。
+- 樓層：Google 地圖在此環境無法連線，改以 MUJI 官方門市頁與商場樓層頁核對，修正 7 間無印良品地址樓層（`audit/apply_floor_fixes.py`）。
 - 查核結果與出處：`audit/store_opened_dates_verified.json`；寫回主資料：`python3 audit/apply_verified_opened_dates.py`（需在各 sync 腳本之後執行）。
 
 ## 查核結果
