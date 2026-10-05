@@ -115311,7 +115311,7 @@
     "region": "東部及離島",
     "city": "花蓮縣",
     "address": "花蓮縣花蓮市和平路581號B1（花蓮遠東百貨）",
-    "opened_date": "",
+    "opened_date": "2015-04-24",
     "status": "營業中",
     "note": "花蓮唯一無印良品專門店，解決花蓮鄉親採買日系家居用品痛點",
     "district": "花蓮市",
@@ -115326,8 +115326,8 @@
     "n": 3895,
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://magazine.feg.com.tw/magazine/tw/magazine_detail.aspx?id=8292",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "無印良品",

@@ -1913,11 +1913,14 @@
  {
   "brand": "無印良品",
   "store_name": "無印良品 花蓮遠東門市",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
+  "date": "2015-04-24",
+  "year": 2015,
+  "confidence": "confirmed",
+  "sources": [
+   "https://magazine.feg.com.tw/magazine/tw/magazine_detail.aspx?id=8292",
+   "https://shop.muji.tw/Shop/StoreDetail/41566/37652"
+  ],
+  "evidence": "遠東人月刊〈東部第一家花蓮遠百正式引進MUJI無印良品〉：2015-04-24 進駐遠東百貨花蓮店3樓（156坪），遠百總經理徐雪芳與台灣無印良品總經理梁益嘉剪綵。日期取自搜尋摘要，原文頁面因網路政策未能直接開啟；使用者另行查得同一日期（2026-10-05）。舊資料 2015-10-08 無出處，不採用。"
  },
  {
   "brand": "無印良品",
