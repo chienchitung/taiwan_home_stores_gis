@@ -110505,7 +110505,7 @@
     "region": "南部",
     "city": "台南市",
     "address": "台南市歸仁區歸仁大道101號1樓",
-    "opened_date": "",
+    "opened_date": "2026-05",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "歸仁區",
@@ -110520,8 +110520,8 @@
     "n": 3703,
     "is_co_location": true,
     "store_format": "子品牌門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://www.nitori.com.tw/about/history",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "宜得利",

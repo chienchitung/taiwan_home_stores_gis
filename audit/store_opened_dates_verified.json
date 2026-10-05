@@ -2709,11 +2709,13 @@
  {
   "brand": "宜得利",
   "store_name": "宜得利 DECO HOME Mitsui Outlet Park台南店",
-  "date": "",
-  "year": null,
-  "confidence": "unverified",
-  "sources": [],
-  "evidence": "未找到明確來源"
+  "date": "2026-05",
+  "year": 2026,
+  "confidence": "confirmed",
+  "sources": [
+   "https://www.nitori.com.tw/about/history"
+  ],
+  "evidence": "宜得利官網沿革：「DECO HOME Mitsui Outlet Park台南店」2026年5月開幕（使用者於官網核對，2026-10-05）"
  },
  {
   "brand": "宜得利",
