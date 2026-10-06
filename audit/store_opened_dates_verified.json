@@ -370,11 +370,13 @@
   {
     "brand": "La-Z-Boy",
     "store_name": "La-Z-Boy 微風南京店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未查證：本工作階段 WebSearch 配額（200次）已用盡，無法搜尋；非查無資料。原值 官方在線門市 仍待查證"
+    "date": "2025-06-16",
+    "year": 2025,
+    "confidence": "confirmed",
+    "sources": [
+      "https://breeze-assets.breeze.com.tw/navigation/9e0b1ffac2e1e43744f79edcb5b972444a1881bd.pdf"
+    ],
+    "evidence": "微風南京B1；微風官方開幕DM與櫃位資料：2025/06/16開幕（2026-10-06 使用者重新核對提供）"
   },
   {
     "brand": "大全聯",
@@ -709,13 +711,14 @@
   {
     "brand": "HOLA",
     "store_name": "HOLA 新北重新店",
-    "date": "2021-11-24",
+    "date": "2021-12-30",
     "year": 2021,
-    "confidence": "registry",
+    "confidence": "confirmed",
     "sources": [
+      "https://cdn.hola.com.tw/store/locations",
       "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 89390488"
     ],
-    "evidence": "經濟部商工登記：特力屋（統編 89390488）和樂重新分公司，分公司核准設立日 2021-11-24，地址 新北市三重區重新路5段654號；查無開幕新聞，以登記日代表開店日"
+    "evidence": "重新路五段654號B1；開幕當日實訪貼文為2021/12/30（待官方確認）；商工登記和樂重新分公司核准設立2021-11-24，早於開幕約1個月，相符（2026-10-06 使用者重新核對提供）"
   },
   {
     "brand": "HOLA",
@@ -767,11 +770,13 @@
   {
     "brand": "HOLA",
     "store_name": "HOLA 桃園南崁店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+    "date": "2011-09-02",
+    "year": 2011,
+    "confidence": "confirmed",
+    "sources": [
+      "https://cdn.hola.com.tw/_ui/pages/store/index.html"
+    ],
+    "evidence": "中正路1號1F；開幕日2011/09/02由使用者提供，官方門市頁確認門市存在（2026-10-06 使用者重新核對提供）"
   },
   {
     "brand": "HOLA",
@@ -882,8 +887,10 @@
     "date": "",
     "year": null,
     "confidence": "unverified",
-    "sources": [],
-    "evidence": "WebSearch 額度已用盡（session 200次上限），且WebFetch對維基/新聞/搜尋站皆被網路封鎖，未能查證。"
+    "sources": [
+      "https://cdn.hola.com.tw/store/locations"
+    ],
+    "evidence": "西門路四段135號3F；官方開幕優惠自2025/09/26起，不能直接認定為開幕日，待查（2026-10-06 使用者重新核對提供）"
   },
   {
     "brand": "HOLA",
@@ -999,11 +1006,13 @@
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 雲林斗六店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+    "date": "2026",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.shotnews.tw/news/7b5a4729f1904"
+    ],
+    "evidence": "莊敬路268號2樓；報導開幕首週活動自2026/06/26起，未明述開幕日，僅記年份（2026-10-06 使用者重新核對提供）"
   },
   {
     "brand": "hoi! 好好生活",
@@ -1043,11 +1052,11 @@
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 台東店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
+    "date": "2024-01",
+    "year": 2024,
+    "confidence": "confirmed",
     "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+    "evidence": "寶桑路373號1樓；hoi!官方開幕貼文發布於2024/1/19，未明述確切開幕日，記至月份；同址特力屋台東店2024-01-24開幕（2026-10-06 使用者重新核對提供）"
   },
   {
     "brand": "hoi! 好好生活",
@@ -1081,11 +1090,13 @@
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 新北新莊宏匯店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+    "date": "2025",
+    "year": 2025,
+    "confidence": "confirmed",
+    "sources": [
+      "https://udn.com/news/story/7270/9070001"
+    ],
+    "evidence": "宏匯廣場6F；聯合新聞網報導2025年下半年開幕，確切日期待查（2026-10-06 使用者重新核對提供）"
   },
   {
     "brand": "hoi! 好好生活",
@@ -1172,15 +1183,6 @@
   },
   {
     "brand": "無印良品",
-    "store_name": "無印良品 淡水美麗新門市",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
-  },
-  {
-    "brand": "無印良品",
     "store_name": "無印良品 微風松高旗艦店",
     "date": "2023-05-31",
     "year": 2023,
@@ -1263,20 +1265,13 @@
   {
     "brand": "無印良品",
     "store_name": "無印良品 館前門市",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
-  },
-  {
-    "brand": "無印良品",
-    "store_name": "無印良品 天母門市",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+    "date": "2016-12-01",
+    "year": 2016,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.muji.tw/muji-journal/news/news/161130.html"
+    ],
+    "evidence": "MUJI官方公告（161130）：館前門市遷至新光三越台北站前店3F，2016/12/01開幕；依搬遷門市採現址開幕日規則（2026-10-06 使用者重新核對提供）"
   },
   {
     "brand": "無印良品",
@@ -1291,15 +1286,6 @@
   },
   {
     "brand": "無印良品",
-    "store_name": "無印良品 京站門市",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
-  },
-  {
-    "brand": "無印良品",
     "store_name": "無印良品 CITYLINK南港門市",
     "date": "2018-06-04",
     "year": 2018,
@@ -1308,15 +1294,6 @@
       "https://www.muji.com/tw/news/news/180529.html"
     ],
     "evidence": "MUJI官方新聞 180529：南港車站門市（CITYLINK南港C棟3F）6/4全新開幕"
-  },
-  {
-    "brand": "無印良品",
-    "store_name": "無印良品 CITYLINK內湖門市",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
   },
   {
     "brand": "無印良品",
@@ -1407,15 +1384,6 @@
       "https://www.muji.tw/tw/news/news/200731.html"
     ],
     "evidence": "MUJI官方新聞 200731：新莊首店宏匯門市7/31盛大開幕"
-  },
-  {
-    "brand": "無印良品",
-    "store_name": "無印良品 三重重新門市",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
   },
   {
     "brand": "無印良品",
@@ -1605,15 +1573,6 @@
   },
   {
     "brand": "無印良品",
-    "store_name": "無印良品 竹北享平方門市",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
-  },
-  {
-    "brand": "無印良品",
     "store_name": "無印良品 頭份尚順門市",
     "date": "2022-12-07",
     "year": 2022,
@@ -1775,15 +1734,6 @@
   },
   {
     "brand": "無印良品",
-    "store_name": "無印良品 嘉義垂楊新光門市",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
-  },
-  {
-    "brand": "無印良品",
     "store_name": "無印良品 新光三越台南新天地門市",
     "date": "2008-11",
     "year": 2008,
@@ -1826,15 +1776,6 @@
       "https://money.udn.com/money/story/5612/9385038"
     ],
     "evidence": "MUJI官方：進駐MITSUI OUTLET PARK台南二期 3/20開幕（2026），全台第73間"
-  },
-  {
-    "brand": "無印良品",
-    "store_name": "無印良品 台南大遠百門市",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
   },
   {
     "brand": "無印良品",
@@ -1949,15 +1890,6 @@
       "https://n.yam.com/Article/20170923587406"
     ],
     "evidence": "MUJI官方新聞 170922：屏東首店（太平洋百貨屏東店）9/22開幕"
-  },
-  {
-    "brand": "無印良品",
-    "store_name": "無印良品 屏東潮州驛站門市",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
-    "sources": [],
-    "evidence": "未找到明確開幕日期來源（本批次搜尋額度用盡，未能完成查證）"
   },
   {
     "brand": "無印良品",
