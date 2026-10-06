@@ -3972,7 +3972,8 @@ const REGION_DATA = {
 /* ─── MAP INITIALIZATION ─── */
 const map = L.map("map", { zoomControl: false, attributionControl: false });
 map.on("zoomend load", () => syncMarkerOverviewMode());
-map.setView([23.75, 120.95], 8);
+// 手機版初始就用 zoom 7（之後 fitBounds 只微調中心），避免先抓一批 zoom 8 圖磚又整批換掉
+map.setView([23.75, 120.95], window.matchMedia("(max-width: 768px)").matches ? 7 : 8);
 
 /* ─── GOOGLE MAPS NAVIGATION CONTROLS (My Location + Zoom In/Out) ─── */
 const googleNavControl = L.control({ position: "bottomleft" });
@@ -4967,10 +4968,13 @@ function getCachedMarker(s, isNew) {
 // 縮小視野（全台／縣市）改用單一 canvas 畫圓點：數百個帶陰影的 DOM 大頭針在縮放動畫時
 // 每一格都要重畫，是手機在全台視野卡頓的主因；放大到街區才換回大頭針。
 const DOT_MAX_ZOOM = 10;
-const dotRenderer = L.canvas({ padding: 0.5, tolerance: 6 });
+// padding 0.5 會讓 canvas 變成視窗的 2×2 倍（高解析手機上數千萬像素），重畫與合成都很慢
+const dotRenderer = L.canvas({ padding: 0.15, tolerance: 6 });
 const dotCache = {};
 let dots = {};
 let markerPulseActive = false;
+let markerPulseYear = null;
+let pinStores = {}; // 目前篩選結果（key → 門市）；大頭針等需要時才建立
 
 function getCachedDot(s) {
   const key = "s" + s.n;
@@ -4997,6 +5001,12 @@ function useDotMode() {
 function applyMarkerMode() {
   if (markerClusterLayer) return;
   const dotMode = useDotMode();
+  // 大頭針延後到真的要顯示才建立（全台視野只畫圓點，初次載入不必建 270 個 marker）
+  Object.entries(pinStores).forEach(([k, s]) => {
+    if (!markers[k] && (!dotMode || k === selectedKey)) {
+      markers[k] = getCachedMarker(s, markerPulseYear && s.opened_year === markerPulseYear);
+    }
+  });
   Object.entries(markers).forEach(([k, mk]) => {
     const keepPin = !dotMode || k === selectedKey;
     if (keepPin && !map.hasLayer(mk)) mk.addTo(map);
@@ -5013,6 +5023,7 @@ map.on("zoomend", applyMarkerMode);
 
 function renderMarkers(pulseYear = null) {
   markerPulseActive = !!pulseYear;
+  markerPulseYear = pulseYear;
   const useClusters = (activeDatasetMode === "ecommerce" || (activeDatasetMode === "supermarket" && filteredStores.length > 150)) && typeof L.markerClusterGroup === "function";
   if (useClusters) {
     // 電商據點：聚合圖層只建立一次，之後只增減有變化的據點
@@ -5052,12 +5063,16 @@ function renderMarkers(pulseYear = null) {
     markers = {};
   }
 
-  const next = {}, nextDots = {};
+  const next = {}, nextDots = {}, nextStores = {};
+  const dotMode = useDotMode();
   filteredStores.forEach(s => {
     const key = "s" + s.n;
-    next[key] = getCachedMarker(s, pulseYear && s.opened_year === pulseYear);
+    nextStores[key] = s;
+    // 已建過的大頭針沿用（更新樣式）；圓點模式下其餘延後到 applyMarkerMode 需要時才建
+    if (!dotMode || key === selectedKey || markers[key]) next[key] = getCachedMarker(s, pulseYear && s.opened_year === pulseYear);
     nextDots[key] = getCachedDot(s);
   });
+  pinStores = nextStores;
   Object.keys(markers).forEach(k => { if (!next[k] && map.hasLayer(markers[k])) map.removeLayer(markers[k]); });
   Object.keys(dots).forEach(k => { if (!nextDots[k] && map.hasLayer(dots[k])) map.removeLayer(dots[k]); });
   markers = next;
@@ -6214,12 +6229,10 @@ document.getElementById("chkViewportSync").addEventListener("change", e => {
 /* ─── STORE MAP FOCUS & COMPETITOR NAVIGATION ─── */
 function ensureStoreMarkerOnMap(s) {
   const key = "s" + s.n;
-  if (!markers[key]) {
-    const mk = L.marker([s.lat, s.lng], { icon: makeMarkerIcon(s) }).addTo(map);
-    if (CAN_HOVER) mk.bindTooltip(s.store_name, { direction: "top", offset: [0, -34], className: "store-hover-tip" });
-    bindStorePopup(mk, s);
-    markers[key] = mk;
-  }
+  // 大頭針是延後建立的：一律從快取取，避免同一間店出現兩個 marker
+  if (!markers[key]) markers[key] = getCachedMarker(s, false);
+  const mk = markers[key];
+  if (!map.hasLayer(mk) && !(markerClusterLayer && markerClusterLayer.hasLayer(mk))) mk.addTo(map);
   return markers[key];
 }
 

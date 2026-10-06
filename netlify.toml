@@ -18,3 +18,9 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
+
+# 第三方函式庫（Leaflet）版本固定，讓手機重新整理時不必每次都回伺服器確認
+[[headers]]
+  for = "/vendor/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
