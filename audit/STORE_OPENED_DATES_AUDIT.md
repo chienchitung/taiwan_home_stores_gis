@@ -228,3 +228,23 @@
 
 - 查無無印良品曾在該址設櫃的紀錄，移除：淡水美麗新、天母、京站、CITYLINK內湖、嘉義垂楊新光、台南大遠百、屏東潮州驛站。
 - 品牌誤植，同址實為 HOLA（資料中已有 HOLA 新北重新店、HOLA 竹北享平方店），移除重複的無印良品紀錄：三重重新、竹北享平方。
+
+## 歷史門市查證（2026-10-06）
+
+非全聯品牌的歷史門市（已歇業／遷址／暫停營業）逐筆查證，14 筆皆確實存在過。備註修正以 `audit/apply_historical_store_fixes.py` 套用；宜得利高雄夢時代初代、台中台糖兩筆已由官網沿革佐證，不在此列。部分出處取自搜尋引擎摘要（新聞站無法直接連線），皆為具名報導。
+
+| 門市 | 查證結果 | 出處 |
+|---|---|---|
+| 無印良品 信義A11 | 2016-07-20 開幕、2023-04-30 結束（整併至松高旗艦店）正確 | https://www.muji.com/tw/news/news/160720.html ；https://www.bnext.com.tw/article/75467/muji-breeze-shop |
+| HOLA 花蓮店 | **地址錯誤**：實際在新城鄉嘉里路15號家樂福花蓮店 B1（原「吉安鄉國安一街21號2F」無出處）；2024-12-01 熄燈正確，但原因是經營策略調整，非「地震建物受損」 | https://www.chinatimes.com/realtimenews/20140508004245-260405 ；https://www.ksnews.com.tw/w2024110534/ |
+| HOLA 台南永康店 | 1998 年開幕、熄燈日補為 2021-12-12（租約到期） | https://www.tainanlohas.cc/2021/12/HOLA-closes-business.html ；https://news.tvbs.com.tw/life/1654151 |
+| HOLA 新北中和店 | 2025-03-31 熄燈正確（中山路二段291號，威力廣場） | https://www.nownews.com/news/6652401 ；https://news.ebc.net.tw/news/living/474088 |
+| IKEA 台北敦北店（初代） | 1998 年開幕、2021-04-26 熄燈正確；同址 2021-11-30 開台北城市店 | https://www.ctee.com.tw/news/20210314700333-430503 ；https://udn.com/news/story/7270/5415207 |
+| IKEA 桃園舊店（中山路） | 2020-07-22 熄燈、隔日青埔店開幕正確 | https://ec.ltn.com.tw/article/breakingnews/3185480 ；https://udn.com/news/story/7160/4656511 |
+| hoi! 微風松高店（初代） | 2018-09-17 開幕正確；**查無熄燈新聞**，已不在官方門市清單，熄燈日期改註「未查得」 | https://technews.tw/2018/09/17/taobao-hoi-smart-retail-store-in-taipei/ |
+| hoi! 台北文昌概念店 | 2019-10-14 開幕正確；**查無熄燈新聞**，改註「未查得」；門牌一說為文昌街270-1號，未確認，暫不改 | https://eventblog.pixnet.net/blog/posts/5068427998 ；https://www.ettoday.net/news/20191020/1561434.htm |
+| MR. LIVING 台中文心門市 | 2022 年遷至南屯黎明路正確，原備註「9月」查無出處，改為只記年份 | https://www.verse.com.tw/article/mr.living ；https://www.dailyview.tw/popular/detail/15002 |
+| 大全聯 中崙店 | 2026-09-06 熄燈正確（原訂 9/13，提前一週） | https://udn.com/news/story/7270/9738063 ；https://www.ettoday.net/news/20260623/3188190.htm |
+| 特力屋 士林店／HOLA 台北士林店 | 2026-05-11 起配合商場改裝暫停營業，官方稱非結束營業；截至 2026-10 未見重新開幕 | https://house.ettoday.net/news/3150031 ；https://news.ebc.net.tw/news/living/547238 |
+| 無印良品 廣三SOGO門市 | 2020-10-04 最後營業日正確，移至金典門市 | https://www.muji.tw/tw/news/news/200828.html |
+| 無印良品 漢神本館門市 | 2024-02-29 停止營業正確，原因為租約到期（原備註「因百貨樓層改裝」不精確） | https://www.muji.com/tw/news/news/240126.html ；https://udn.com/news/story/7327/7726548 |
