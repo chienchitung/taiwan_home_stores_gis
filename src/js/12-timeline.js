@@ -210,7 +210,8 @@ function updateTimeline(year, triggerPulse = true) {
 
   // Render markers with pulse for newly opened stores in this year
   renderMarkers(triggerPulse ? timelineYear : null);
-  renderList();
+  // 手機時光軸模式下清單整個隱藏，播放時每年重建清單只是白做工，停下來再更新
+  if (!(timelinePlaying && isMobileLayout())) renderList();
 }
 
 function playTimeline() {
@@ -224,26 +225,40 @@ function playTimeline() {
   if (playIcon) playIcon.style.display = "none";
   if (pauseIcon) pauseIcon.style.display = "block";
 
-  timelineTimer = setInterval(() => {
+  // 從頭播放時先把第一年畫出來，不要讓地圖停在上一輪的最後一年
+  updateTimeline(timelineYear, true);
+  scheduleTimelineTick();
+}
+
+// 每一年畫完、瀏覽器真的把地圖畫到螢幕上（requestAnimationFrame）之後才排下一年。
+// 原本用 setInterval：較慢的手機上每年的繪製時間比間隔長時，計時器會一路排隊、
+// 瀏覽器來不及把畫面畫出來，看起來就像播放中地圖沒有點，播完才一次出現。
+function scheduleTimelineTick() {
+  timelineTimer = setTimeout(() => {
+    timelineTimer = null;
+    if (!timelinePlaying) return;
     if (timelineYear >= timelineMaxYear) {
       pauseTimeline();
       return;
     }
     timelineYear++;
     updateTimeline(timelineYear, true);
+    requestAnimationFrame(() => { if (timelinePlaying) scheduleTimelineTick(); });
   }, timelineSpeed);
 }
 
 function pauseTimeline() {
   timelinePlaying = false;
   if (timelineTimer) {
-    clearInterval(timelineTimer);
+    clearTimeout(timelineTimer);
     timelineTimer = null;
   }
   const playIcon = document.getElementById("tlPlayIcon");
   const pauseIcon = document.getElementById("tlPauseIcon");
   if (playIcon) playIcon.style.display = "block";
   if (pauseIcon) pauseIcon.style.display = "none";
+  // 手機播放期間略過清單更新，停下來時補上
+  if (isTimelineMode && isMobileLayout()) renderList();
 }
 
 function toggleTimelinePlay() {
