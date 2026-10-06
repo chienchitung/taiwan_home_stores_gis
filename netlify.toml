@@ -24,3 +24,14 @@
   for = "/vendor/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# 網址帶內容雜湊版本號（?v=...）的檔案：內容變了網址就變，可長期快取
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/stores_data.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

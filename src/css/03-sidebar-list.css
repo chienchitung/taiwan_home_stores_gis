@@ -1,0 +1,773 @@
+/* ════════════════════════════════════════════
+   SIDEBAR (Scheme 2 + Scheme 4 Integrated)
+════════════════════════════════════════════ */
+aside {
+  width: var(--sidebar-width);
+  min-width: 0;
+  flex: 0 0 var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-left: 1px solid var(--border);
+  overflow: visible;
+  z-index: 2;
+  box-shadow: -2px 0 16px rgba(0, 0, 0, 0.05);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), flex-basis 0.3s cubic-bezier(0.4, 0, 0.2, 1), border 0.3s ease;
+  position: relative;
+}
+
+/* Collapsed Sidebar State (Scheme 4) */
+aside.collapsed {
+  width: 0 !important;
+  min-width: 0 !important;
+  flex: 0 0 0 !important;
+  flex-basis: 0 !important;
+  border-left: none !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+aside.collapsed .sidebar-inner-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar-inner-content {
+  width: var(--sidebar-width);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: opacity 0.2s ease;
+}
+
+/* Sidebar Toggle Collapse Handle (Scheme 4) */
+.sidebar-collapse-toggle {
+  position: absolute;
+  top: 16px;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  z-index: 860;
+  color: var(--text-body);
+  transition: all 0.15s ease;
+}
+.sidebar-collapse-toggle:hover {
+  background: var(--ikea-blue);
+  color: #FFFFFF;
+  border-color: var(--ikea-blue);
+  transform: scale(1.08);
+}
+aside.collapsed .sidebar-collapse-toggle {
+  display: none;
+}
+
+/* ─── VIEW 1: STORE LIST SECTION ─── */
+#sidebarListSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Control & Filter Center */
+.sidebar-control-box {
+  background: #FFFFFF;
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  flex-shrink: 0;
+}
+.dataset-switch {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  margin: 8px 16px 0;
+  background: #FFFFFF;
+  border: 1px solid var(--skapa-border);
+  border-radius: 10rem;
+}
+.dataset-switch-btn {
+  flex: 1;
+  min-height: 32px;
+  padding: 0 4px;
+  border: none;
+  border-radius: 10rem;
+  background: transparent;
+  color: var(--skapa-text-2);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+.dataset-switch-btn:hover {
+  background: var(--skapa-neutral);
+  color: var(--skapa-text);
+}
+.dataset-switch-btn.active {
+  color: #FFFFFF;
+  background: var(--skapa-text);
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.search-input-group {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.search-icon-left {
+  position: absolute;
+  left: 12px;
+  color: var(--skapa-text-2);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.search-input-main {
+  width: 100%;
+  padding: 10px 58px 10px 36px;
+  border: 1px solid var(--skapa-border);
+  border-radius: 64px;
+  font-size: 13.5px;
+  color: var(--skapa-text);
+  background: #FFFFFF;
+  outline: none;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+.search-input-main:focus {
+  background: #FFFFFF;
+  border-color: var(--skapa-text);
+  box-shadow: none;
+}
+.search-input-main::placeholder {
+  color: var(--skapa-text-3);
+  font-weight: normal;
+}
+.kbd-hint {
+  position: absolute;
+  right: 26px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--skapa-text-3);
+  background: var(--skapa-neutral);
+  border: 1px solid var(--skapa-border);
+  border-radius: 4px;
+  padding: 1.5px 4.5px;
+  pointer-events: none;
+}
+.search-clear-btn {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  color: var(--skapa-text-3);
+  cursor: pointer;
+  font-size: 14px;
+  display: none;
+  padding: 2px 4px;
+}
+.search-clear-btn:hover { color: var(--skapa-text); }
+
+/* GPS Locate Me Button */
+.btn-locate-me {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--skapa-border-strong);
+  border-radius: 64px;
+  padding: 0 16px;
+  min-height: 40px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--skapa-text);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+.btn-locate-me:hover {
+  background: var(--skapa-neutral);
+  color: var(--skapa-text);
+  border-color: var(--skapa-text);
+}
+.btn-locate-me.active {
+  background: var(--skapa-text);
+  color: #FFFFFF;
+  border-color: var(--skapa-text);
+}
+.btn-locate-me.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.dropdown-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+.custom-select {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid var(--skapa-border);
+  border-radius: 64px;
+  padding: 7px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--skapa-text);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.15s ease;
+}
+.custom-select:focus {
+  border-color: var(--skapa-text);
+  background: #FFFFFF;
+}
+
+/* Brand Selector Strip */
+.brand-strip {
+  padding: 9px 16px;
+  background: var(--skapa-neutral);
+  border-bottom: 1px solid var(--skapa-border);
+  flex-shrink: 0;
+}
+.brand-strip-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--skapa-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.brand-strip-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-pk-mode {
+  background: #FFFFFF;
+  border: 1px solid var(--skapa-border);
+  border-radius: 64px;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--skapa-text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+.btn-pk-mode:hover {
+  border-color: var(--skapa-text);
+  color: var(--skapa-text);
+}
+.btn-pk-mode.active {
+  background: var(--skapa-text);
+  border-color: var(--skapa-text);
+  color: #FFFFFF;
+}
+.btn-reset-filters {
+  background: none;
+  border: none;
+  color: var(--ikea-blue);
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.btn-reset-filters:hover { text-decoration: underline; }
+
+.brand-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.brand-chip {
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 64px;
+  border: 1px solid var(--skapa-border);
+  background: #FFFFFF;
+  color: var(--skapa-text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+.brand-chip .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.brand-chip .cnt {
+  font-size: 11px;
+  color: var(--skapa-text-2);
+  background: var(--skapa-neutral);
+  border-radius: 10px;
+  padding: 1px 6px;
+  font-weight: 700;
+}
+.brand-chip:hover {
+  border-color: var(--skapa-text);
+  color: var(--skapa-text);
+  background: #FFFFFF;
+}
+.brand-chip.active {
+  background: var(--skapa-text) !important;
+  color: #FFFFFF !important;
+  border-color: var(--skapa-text) !important;
+  box-shadow: none;
+}
+.brand-chip.active .cnt { color: #FFFFFF; background: rgba(255, 255, 255, 0.2); }
+.brand-chip.active .dot { box-shadow: 0 0 0 1.5px #FFFFFF; }
+
+.brand-chip.zero-count {
+  opacity: 0.45;
+}
+.brand-chip.zero-count:hover {
+  opacity: 0.75;
+}
+
+/* Brand PK Banner Box */
+.pk-banner-box {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 16px 0;
+  padding: 10px 12px;
+  background: #FFFBEB;
+  border: 1.5px solid #FCD34D;
+  border-radius: 8px;
+}
+.pk-banner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pk-banner-title {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #92400E;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.btn-exit-pk {
+  background: none;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  color: #B45309;
+  cursor: pointer;
+}
+.btn-exit-pk:hover { text-decoration: underline; }
+.pk-compare-bar {
+  display: flex;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #E2E8F0;
+}
+.pk-segment-a, .pk-segment-b {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+.pk-labels-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* Scheme 2: Map Viewport Sync Toggle Bar */
+.viewport-sync-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 16px;
+  background: #EEF5FB;
+  border-bottom: 1px solid #DCE7F2;
+  flex-shrink: 0;
+  font-size: 11.5px;
+}
+.viewport-sync-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--ikea-blue);
+  cursor: pointer;
+  user-select: none;
+}
+.viewport-sync-indicator {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.viewport-sync-indicator strong {
+  color: var(--ikea-blue);
+}
+
+.viewport-hint-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: #FEF9C3;
+  border-bottom: 1px solid #FEF08A;
+  color: #854D0E;
+  font-size: 11px;
+  line-height: 1.35;
+}
+.viewport-hint-bar .hint-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #D97706;
+  flex-shrink: 0;
+}
+
+/* Results & View Switcher Bar */
+.results-meta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.results-count-text {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.results-count-text strong {
+  color: var(--text-main);
+  font-weight: 800;
+}
+
+.view-switch-btns {
+  display: flex;
+  background: #F1F5F9;
+  padding: 2px;
+  border-radius: 6px;
+}
+.view-btn {
+  background: transparent;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.12s ease;
+}
+.view-btn.active {
+  background: #FFFFFF;
+  color: var(--ikea-blue);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Store Cards Container */
+.store-cards-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.store-cards-container::-webkit-scrollbar { width: 6px; }
+.store-cards-container::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+
+/* Brand Category Header in Card View */
+.brand-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 12px;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 4px;
+}
+.brand-section-header .left-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.brand-section-header .count-tag {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 10.5px;
+}
+.brand-section-header .chevron {
+  transition: transform 0.2s ease;
+}
+.brand-section-header.collapsed .chevron {
+  transform: rotate(-90deg);
+}
+
+/* Store Card Individual */
+.store-card {
+  background: #FFFFFF;
+  border: 1px solid var(--skapa-border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  box-shadow: none;
+}
+.store-card:hover {
+  border-color: var(--skapa-border-strong);
+  box-shadow: none;
+  transform: none;
+}
+.store-card.selected {
+  border: 2px solid var(--ikea-blue);
+  background: #FFFFFF;
+  padding: 13px 15px;
+  box-shadow: none;
+}
+.store-card.is-archived {
+  opacity: 0.72;
+  background: #F8FAFC;
+  border-style: dashed;
+}
+
+.card-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-brand-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #FFFFFF;
+  padding: 2.5px 8.5px;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.card-name-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--skapa-text);
+  line-height: 1.35;
+  word-break: break-word;
+}
+.card-meta-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--skapa-text-2);
+}
+.card-channel-pill {
+  font-weight: 600;
+  color: var(--skapa-text-2);
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+  align-items: center;
+}
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2.5px 8.5px;
+  border-radius: 10rem;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+.tag-channel {
+  background: var(--skapa-neutral);
+  color: var(--skapa-text-2);
+}
+.tag-colocation {
+  background: #FEF2F2 !important;
+  color: #B91C1C !important;
+  border: 1px solid #FECACA !important;
+  font-weight: 700 !important;
+}
+
+.card-dist-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3.5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--skapa-text);
+  background: var(--skapa-neutral);
+  padding: 2.5px 8.5px;
+  border-radius: 10rem;
+  border: 1px solid var(--skapa-border);
+  white-space: nowrap;
+}
+
+.card-address-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--skapa-text-2);
+  line-height: 1.45;
+  margin-top: 2px;
+  word-break: break-word;
+}
+.card-address-box svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--skapa-text-3);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2.5px 9px;
+  border-radius: 10rem;
+  white-space: nowrap;
+}
+.status-active {
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+.status-paused {
+  background: #FFFBEB;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+}
+.status-closed {
+  background: var(--skapa-neutral);
+  color: var(--skapa-text-2);
+  border: 1px solid var(--skapa-border);
+}
+
+.card-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--skapa-border);
+}
+.card-action-btn {
+  flex: 1 1 115px;
+  min-width: 0;
+  min-height: 34px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 10rem;
+  font-size: 12.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-action-btn svg {
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
+}
+.card-action-emph {
+  background: var(--ikea-blue);
+  color: #FFFFFF !important;
+  border: 1px solid var(--ikea-blue);
+}
+.card-action-emph:hover {
+  background: var(--skapa-emph-hover);
+  border-color: var(--skapa-emph-hover);
+}
+.card-action-emph:active {
+  background: var(--skapa-emph-active);
+  border-color: var(--skapa-emph-active);
+}
+.card-action-secondary {
+  background: #FFFFFF;
+  color: var(--skapa-text) !important;
+  border: 1px solid var(--skapa-border-strong);
+}
+.card-action-secondary:hover {
+  background: var(--skapa-neutral);
+  border-color: var(--skapa-text);
+  color: var(--skapa-text) !important;
+}
+.card-action-secondary:active {
+  background: #E5E5E5;
+}
+.btn-card-gmap, .btn-card-view-detail {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ikea-blue);
+  cursor: pointer;
+}
+

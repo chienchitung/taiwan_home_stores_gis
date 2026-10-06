@@ -1,0 +1,114 @@
+/* ═══════════ MOBILE LAYOUT（≤768px）：地圖在上、底部抽屜 ═══════════ */
+.m-topbar, .m-brand-slot, .m-row-actions, .m-applied-chips, .sheet-handle { display: none; }
+.m-filter-page[hidden], .m-menu-popover[hidden], .m-applied-chips[hidden] { display: none !important; }
+@media (max-width: 768px) {
+  body.m-layout { height: 100dvh; overflow: hidden; }
+  body.m-layout > header { display: none !important; }
+  body.m-layout .workspace { height: 100dvh; flex-direction: row !important; }
+  body.m-layout .map-wrap { position: absolute; inset: 0; }
+
+  /* 上方浮動搜尋列 */
+  .m-topbar { display: flex; align-items: center; gap: 8px; position: absolute; top: calc(8px + env(safe-area-inset-top)); left: 12px; right: 12px; z-index: 900; }
+  .m-logo-slot .ikea-logo-box { padding: 0; background: none; box-shadow: none; }
+  .m-logo-slot svg { width: 52px !important; height: auto !important; }
+  .m-search-slot { flex: 1; min-width: 0; }
+  .m-search-slot .search-input-group { width: 100%; box-shadow: 0 2px 8px rgba(0,0,0,0.15); border-radius: 999px; background: #fff; }
+  .m-search-slot .search-input-main { height: 44px; font-size: 16px; } /* 16px 避免 iOS 自動放大 */
+  .m-icon-btn { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; border: none; background: #fff; color: #111; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer; }
+  .m-menu-popover { position: absolute; top: 52px; right: 0; z-index: 950; background: #fff; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.18); padding: 8px; display: flex; flex-direction: column; gap: 6px; min-width: 220px; }
+  .m-menu-popover button { width: 100%; justify-content: flex-start; min-height: 44px; }
+
+  /* 地圖上的品牌列 */
+  .m-brand-slot { display: block; position: absolute; top: calc(60px + env(safe-area-inset-top)); left: 0; right: 0; z-index: 880; pointer-events: none; }
+  .m-brand-slot .brand-strip { background: transparent !important; border: none !important; padding: 0 12px !important; pointer-events: auto; }
+  .m-brand-slot .brand-chips-wrap > * { box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+
+  /* 底圖選單：品牌列下方右側 */
+  body.m-layout .map-controls-dock { top: calc(108px + env(safe-area-inset-top)) !important; left: auto !important; right: 12px; }
+  body.m-layout .map-control-trigger-btn .pill-active-style { display: none; }
+  body.m-layout .map-style-dropdown { right: 0; left: auto; width: 260px; max-height: calc(100dvh - 170px); overflow-y: auto; }
+  /* 底圖選單要疊在清單抽屜之上，否則小螢幕上選單下半部會被抽屜蓋住 */
+  body.m-layout .map-wrap { z-index: auto; } /* 不形成獨立堆疊，底圖選單才能高過抽屜 */
+  body.m-layout .map-controls-dock.open { z-index: 1100; } /* 只在選單打開時高過抽屜，平常不蓋到抽屜或「⋯」選單 */
+  body.m-layout .m-topbar { z-index: 1050; } /* 「⋯」選單要高過底圖按鈕 */
+  body.m-layout .floating-open-sidebar-btn, body.m-layout .sidebar-collapse-toggle { display: none !important; }
+
+  /* 定位／縮放按鈕永遠在抽屜上方 */
+  body.m-layout .leaflet-bottom { bottom: var(--m-sheet-h, 50vh); transition: bottom 0.25s ease; }
+  body.m-layout .google-nav-control-group { margin-bottom: 12px !important; }
+  body.m-layout .leaflet-left .google-nav-control-group { margin-left: 12px !important; }
+
+  /* 底部抽屜 */
+  body.m-layout aside#mainSidebar { position: fixed; left: 0; right: 0; bottom: 0; width: 100% !important; max-height: none !important; flex: none; z-index: 1000; border: none; border-radius: 16px 16px 0 0; box-shadow: 0 -4px 20px rgba(0,0,0,0.15); transition: height 0.25s ease; padding-bottom: env(safe-area-inset-bottom); display: flex; flex-direction: column; }
+  body.m-layout aside#mainSidebar .sidebar-inner-content { flex: 1; min-height: 0; width: 100% !important; }
+  body.m-layout .sheet-handle { display: flex; justify-content: center; width: 100%; padding: 10px 0 6px; border: none; background: transparent; cursor: grab; flex-shrink: 0; touch-action: none; }
+  body.m-layout .sheet-grip { width: 40px; height: 5px; border-radius: 999px; background: #CCCCCC; }
+  body.m-layout .sidebar-control-box { display: none; }
+  body.m-layout .results-meta-bar { padding: 4px 16px 8px; border-bottom: none; }
+  body.m-layout .results-count-text strong { font-size: 16px; }
+  body.m-layout .view-switch-btns { display: none; }
+  .m-row-actions { gap: 8px; }
+  body.m-layout .m-row-actions { display: flex; }
+  body.m-layout .m-row-actions .btn-locate-me, body.m-layout .m-row-actions .btn-filter-toggle { min-height: 40px; flex: none; padding: 0 12px; }
+  body.m-layout .m-row-actions .btn-locate-me span { font-size: 13px; }
+  body.m-layout .m-applied-chips { display: flex; gap: 6px; overflow-x: auto; padding: 0 16px 8px; scrollbar-width: none; }
+  .m-chip { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--ikea-blue); background: #EBF3FA; color: var(--ikea-blue); font-size: 12px; font-weight: 700; font-family: inherit; cursor: pointer; }
+  .m-chip span { font-size: 14px; }
+  body.m-layout.timeline-mode-active aside#mainSidebar { display: none !important; }
+  /* 時光軸面板在底部：定位／縮放按鈕移到面板上方（高度由 JS 依面板實際大小寫入） */
+  body.m-layout.timeline-mode-active .leaflet-bottom { bottom: calc(var(--m-timeline-h, 150px) + 4px); }
+  body.m-layout.timeline-mode-active .m-fab-group { display: none !important; }
+
+  /* 全螢幕篩選頁 */
+  .m-filter-page { position: fixed; inset: 0; z-index: 2000; background: #fff; display: flex; flex-direction: column; }
+  .m-filter-head { display: flex; align-items: center; justify-content: space-between; padding: calc(8px + env(safe-area-inset-top)) 12px 8px 16px; border-bottom: 1px solid #DFDFDF; }
+  .m-filter-head h2 { margin: 0; font-size: 18px; }
+  .m-filter-head .m-icon-btn { box-shadow: none; }
+  .m-filter-body { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 20px; }
+  .m-filter-label { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 8px; }
+  #mFilterSlot .filter-panel, #mFilterSlot .filter-panel[hidden] { display: flex !important; margin: 0; }
+  #mFilterSlot .btn-reset-filters { display: none; }
+  #mFilterSlot .custom-select { min-height: 44px; }
+  /* iOS 會在點擊字級 < 16px 的輸入框時自動放大整頁，放大後地圖吃掉縮放手勢就縮不回來 */
+  body.m-layout input, body.m-layout select, body.m-layout textarea { font-size: 16px !important; }
+  #mDatasetSlot .dataset-switch { margin: 0; }
+  #mViewportSlot .viewport-sync-label { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; color: #111; }
+  #mViewportSlot input { width: 20px; height: 20px; accent-color: var(--ikea-blue); }
+  #mRegionSlot .region-jump-bar { position: static !important; transform: none !important; max-width: none !important; display: flex !important; flex-wrap: wrap; gap: 8px; background: none !important; border: none !important; box-shadow: none !important; backdrop-filter: none; padding: 0 !important; overflow: visible !important; }
+  #mRegionSlot .btn-region-jump { border: 1px solid #DFDFDF; min-height: 40px; }
+  .m-filter-foot { display: grid; grid-template-columns: 1fr 2fr; gap: 8px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid #DFDFDF; }
+}
+/* ─── Mobile v2: FAB, collapse, perf ─── */
+.m-sheet-fab, .sheet-collapse-btn { display: none; }
+.m-fab-group { display: none; }
+.m-fab-group[hidden] { display: none !important; }
+.store-card { content-visibility: auto; contain-intrinsic-size: auto 230px; }
+.list-sentinel { height: 1px; }
+@media (max-width: 768px) {
+  body.m-layout .sheet-top { display: flex; align-items: center; position: relative; flex-shrink: 0; }
+  body.m-layout .sheet-top .sheet-handle { flex: 1; }
+  /* 收起鈕放在把手列左側、自成一列（44px 高）：遠離右側的「篩選」，避免誤觸 */
+  body.m-layout .sheet-top .sheet-handle { min-height: 44px; align-items: flex-start; padding-top: 8px; }
+  body.m-layout .sheet-collapse-btn { display: inline-flex; align-items: center; gap: 2px; position: absolute; left: 12px; top: 8px; height: 30px; padding: 0 12px 0 6px; border: 1px solid #DFDFDF; border-radius: 999px; background: #F5F5F5; color: #484848; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer; }
+  body.m-layout .sheet-collapse-btn:active { background: #E5E5E5; }
+  body.m-layout aside#mainSidebar.m-sheet-hidden { transform: translateY(110%); pointer-events: none; }
+  body.m-layout aside#mainSidebar { transition: height 0.25s ease, transform 0.25s ease; }
+  body.m-layout .m-fab-group { display: flex; gap: 8px; position: absolute; right: 16px; bottom: calc(20px + env(safe-area-inset-bottom)); z-index: 950; }
+  body.m-layout .m-fab-secondary { display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 0 16px; border: none; border-radius: 999px; background: #fff; color: #111; font-size: 15px; font-weight: 700; font-family: inherit; box-shadow: 0 4px 14px rgba(0,0,0,0.2); cursor: pointer; }
+  body.m-layout .m-sheet-fab { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 18px; border: none; border-radius: 999px; background: var(--ikea-blue); color: #fff; font-size: 15px; font-weight: 700; font-family: inherit; box-shadow: 0 4px 14px rgba(0,0,0,0.25); cursor: pointer; }
+  .m-fab-count { min-width: 24px; height: 22px; padding: 0 7px; border-radius: 999px; background: #fff; color: var(--ikea-blue); font-size: 12px; display: inline-flex; align-items: center; justify-content: center; }
+  /* 毛玻璃與大面積陰影在手機上很吃效能 */
+  body.m-layout * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+}
+/* 手機：大頭針不加陰影濾鏡（白色外框已足夠辨識），減少縮放時的重繪 */
+@media (max-width: 768px) {
+  body.m-layout .brand-pin-marker, body.m-layout .brand-pin-marker:hover { filter: none !important; }
+}
+/* 地圖以外的區域停用「點兩下放大」（地圖本身由 Leaflet 處理觸控） */
+html, body { touch-action: manipulation; }
+.filter-panel-hint { font-size: 12px; color: #767676; }
+/* Material 圖示是實心圖形，不吃舊線條圖示的描邊樣式（否則會變粗） */
+svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
+.leaflet-tooltip.store-hover-tip { font-family: inherit; font-size: 12px; font-weight: 700; color: #111; padding: 4px 8px; border-radius: 6px; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.custom-popup .pop-btn.pop-btn-detail { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; min-height: 40px; margin: 4px 0 8px; padding: 0 14px; border-radius: 999px; background: #111; color: #fff !important; border: none; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer; }
+.custom-popup .pop-btn.pop-btn-detail:hover { background: #333; }

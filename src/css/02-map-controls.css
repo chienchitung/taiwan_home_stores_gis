@@ -1,0 +1,514 @@
+/* ════════════════════════════════════════════
+   MAP CONTAINER & FLOATING CONTROLS
+════════════════════════════════════════════ */
+.map-wrap {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+  background: #E2E8F0;
+}
+#map {
+  width: 100%;
+  height: 100%;
+}
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+.mono-grayscale .leaflet-tile-pane {
+  filter: grayscale(100%) contrast(92%) brightness(98%) !important;
+}
+
+/* Google Maps Specialized Tile Styling */
+.tiles-google-mono .leaflet-tile {
+  filter: grayscale(100%) contrast(90%) brightness(103%) !important;
+}
+.tiles-google-satellite .leaflet-tile {
+  filter: contrast(102%) brightness(98%) !important;
+}
+.tiles-google-color .leaflet-tile {
+  filter: none !important;
+}
+
+/* ─── SECTION 3: REGION QUICK JUMP BAR & SPATIAL ENVELOPE ─── */
+.region-jump-bar {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 840;
+  max-width: calc(100% - 200px);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--skapa-border);
+  border-radius: 10rem;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  user-select: none;
+}
+.btn-region-jump {
+  background: transparent;
+  border: none;
+  border-radius: 10rem;
+  min-height: 32px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--skapa-text-2);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.btn-region-jump:hover {
+  background: var(--skapa-neutral);
+  color: var(--skapa-text);
+}
+.btn-region-jump.active {
+  background: var(--skapa-text);
+  color: #FFFFFF;
+  box-shadow: none;
+}
+
+/* Custom Regional Boundary Polygon & Tooltip */
+.region-boundary-poly {
+  transition: all 0.25s ease;
+}
+.region-boundary-poly:hover {
+  fill-opacity: 0.14 !important;
+  stroke-width: 3.5px !important;
+}
+.custom-region-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  pointer-events: none !important;
+}
+.custom-region-tooltip::before {
+  display: none !important;
+}
+.region-pill-box {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  font-size: 12px;
+  color: var(--text-main);
+  white-space: nowrap;
+  animation: regionPillPop 0.3s ease-out;
+}
+@keyframes regionPillPop {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+.region-pill-box .pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.region-pill-box .pill-cnt {
+  background: #F1F5F9;
+  color: var(--ikea-blue);
+  font-weight: 800;
+  font-size: 11px;
+  padding: 1.5px 7px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.region-pill-box .pill-cnt.pill-cnt-zero {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+.region-pill-box .pill-cnt.pill-cnt-filtered {
+  background: #EFF6FF;
+  color: #1D4ED8;
+}
+.region-pill-box .pill-filter-tag {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+/* Google Maps Navigation Controls (GPS Locate + Zoom In/Out) */
+.google-nav-control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px !important;
+  margin-left: 16px !important;
+  user-select: none;
+  z-index: 800;
+}
+
+.btn-google-locate {
+  width: 38px;
+  height: 38px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  color: #5F6368;
+  transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  outline: none;
+}
+
+.btn-google-locate:hover {
+  background: #F8FAFC;
+  color: #1A73E8;
+  border-color: rgba(26, 115, 232, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-google-locate:active {
+  transform: translateY(0);
+  background: #F1F5F9;
+}
+
+.btn-google-locate.active {
+  color: #1A73E8;
+  background: #FFFFFF;
+  border-color: rgba(26, 115, 232, 0.5);
+  box-shadow: 0 2px 8px rgba(26, 115, 232, 0.35);
+}
+
+.btn-google-locate.active svg {
+  color: #1A73E8;
+}
+
+.btn-google-locate.loading {
+  color: #1A73E8;
+  border-color: rgba(26, 115, 232, 0.6);
+}
+
+.btn-google-locate.loading::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 8px;
+  border: 2px solid #1A73E8;
+  animation: googleRadarRipple 1.3s ease-out infinite;
+  pointer-events: none;
+}
+
+.btn-google-locate.loading svg {
+  color: #1A73E8;
+}
+
+.btn-google-locate.loading svg circle:last-child {
+  animation: googleDotBreath 1.3s ease-in-out infinite;
+  transform-origin: 12px 12px;
+}
+
+@keyframes googleRadarRipple {
+  0% { transform: scale(0.85); opacity: 0.9; }
+  60% { transform: scale(1.35); opacity: 0.25; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes googleDotBreath {
+  0%, 100% { transform: scale(0.85); opacity: 0.7; }
+  50% { transform: scale(1.35); opacity: 1; }
+}
+
+.google-zoom-box {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.btn-google-zoom {
+  width: 38px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #5F6368;
+  transition: all 0.15s ease;
+  padding: 0;
+  outline: none;
+}
+
+.btn-google-zoom:hover {
+  background: #F8FAFC;
+  color: #1A73E8;
+}
+
+.btn-google-zoom:active {
+  background: #F1F5F9;
+}
+
+.google-zoom-divider {
+  width: 26px;
+  height: 1px;
+  background: #E2E8F0;
+  margin: 0 auto;
+}
+
+/* ─── TOP-LEFT MAP CONTROLS DOCK (No Overlap with Sidebar) ─── */
+.map-controls-dock {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 840;
+  user-select: none;
+}
+
+.map-control-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid var(--border);
+  border-radius: 24px;
+  padding: 7px 13px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-main);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.map-control-trigger-btn:hover {
+  background: #FFFFFF;
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  color: var(--ikea-blue);
+}
+
+.map-control-trigger-btn .pill-active-style {
+  background: #F1F5F9;
+  color: var(--ikea-blue);
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 1.5px 7.5px;
+  border-radius: 10px;
+  letter-spacing: 0.2px;
+}
+
+.map-control-trigger-btn .chevron-arrow {
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+.map-controls-dock.open .map-control-trigger-btn {
+  border-color: var(--ikea-blue);
+  box-shadow: 0 4px 16px rgba(0, 88, 163, 0.15);
+}
+
+.map-controls-dock.open .chevron-arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Settings Menu */
+.map-style-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 260px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 850;
+  animation: dropdownFadeIn 0.15s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.map-controls-dock.open .map-style-dropdown {
+  display: flex;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+.dropdown-title {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-close-dropdown {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.btn-close-dropdown:hover {
+  background: #F1F5F9;
+  color: var(--text-main);
+}
+
+.dropdown-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dropdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.tile-switch-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  background: #F1F5F9;
+  padding: 3px;
+  border-radius: 8px;
+}
+.tile-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 4px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+.tile-btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text-main);
+}
+.tile-btn.active {
+  background: #FFFFFF;
+  color: var(--ikea-blue);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.panel-opt-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+.switch-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-body);
+  cursor: pointer;
+}
+.toggle-checkbox {
+  appearance: none;
+  width: 32px;
+  height: 18px;
+  background: #CBD5E1;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s;
+}
+.toggle-checkbox::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.toggle-checkbox:checked { background: var(--ikea-blue); }
+.toggle-checkbox:checked::before { transform: translateX(14px); }
+
+/* ─── TOP-RIGHT FLOATING TRIGGER (Scheme 4 Exclusive Zone) ─── */
+.floating-open-sidebar-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 840;
+  background: #FFFFFF;
+  border: 1.5px solid var(--border);
+  border-radius: 24px;
+  padding: 8px 16px;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ikea-blue);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transition: all 0.15s ease;
+}
+
+.floating-open-sidebar-btn:hover {
+  background: var(--ikea-blue);
+  color: #FFFFFF;
+  border-color: var(--ikea-blue);
+  transform: translateY(-1px);
+}
+
+.floating-open-sidebar-btn .badge-num {
+  background: var(--ikea-yellow);
+  color: var(--ikea-blue);
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
