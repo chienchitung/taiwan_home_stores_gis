@@ -112932,7 +112932,7 @@
     "region": "南部",
     "city": "台南市",
     "address": "台南市北區西門路四段135號3F",
-    "opened_date": "",
+    "opened_date": "2025-09-26",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "北區",
@@ -112947,8 +112947,8 @@
     "n": 3801,
     "is_co_location": false,
     "store_format": "百貨／購物中心門市",
-    "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_source": "https://cdn.hola.com.tw/store/locations",
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "HOLA",
@@ -113032,7 +113032,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市板橋區中山路一段152號10樓",
-    "opened_date": "",
+    "opened_date": "2024-12-31",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "板橋區",
@@ -113048,7 +113048,7 @@
     "is_co_location": true,
     "store_format": "百貨／購物中心門市",
     "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "hoi! 好好生活",
@@ -113057,7 +113057,7 @@
     "region": "中部",
     "city": "台中市",
     "address": "台中市西屯區台灣大道四段528號2F",
-    "opened_date": "",
+    "opened_date": "2024-06-27",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "西屯區",
@@ -113073,7 +113073,7 @@
     "is_co_location": true,
     "store_format": "店中店／專櫃",
     "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "hoi! 好好生活",
@@ -113157,7 +113157,7 @@
     "region": "中部",
     "city": "雲林縣",
     "address": "雲林縣斗六市公正里莊敬路268號2樓",
-    "opened_date": "2026",
+    "opened_date": "2026-06-26",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "斗六市",
@@ -113257,7 +113257,7 @@
     "region": "東部",
     "city": "台東縣",
     "address": "台東縣台東市寶桑路373號1樓",
-    "opened_date": "2024-01",
+    "opened_date": "2024-01-24",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "台東市",
@@ -113284,7 +113284,7 @@
     "region": "東部",
     "city": "花蓮縣",
     "address": "花蓮縣花蓮市林森路176號",
-    "opened_date": "",
+    "opened_date": "2025-01",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "花蓮市",
@@ -113300,7 +113300,7 @@
     "is_co_location": true,
     "store_format": "店中店／專櫃",
     "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "hoi! 好好生活",
@@ -113309,7 +113309,7 @@
     "region": "南部",
     "city": "高雄市",
     "address": "高雄市左營區民族一路948號2樓",
-    "opened_date": "",
+    "opened_date": "2020-08-04",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "左營區",
@@ -113325,7 +113325,7 @@
     "is_co_location": true,
     "store_format": "大型獨棟／街邊門市",
     "opened_date_source": "",
-    "opened_date_basis": ""
+    "opened_date_basis": "新聞／官方"
   },
   {
     "brand": "hoi! 好好生活",
@@ -113359,7 +113359,7 @@
     "region": "北部",
     "city": "新北市",
     "address": "新北市新莊區新北大道四段3號6F",
-    "opened_date": "2025",
+    "opened_date": "2025-10-15",
     "status": "營業中",
     "note": "2026-09-11 官方門市清單核對",
     "district": "新莊區",

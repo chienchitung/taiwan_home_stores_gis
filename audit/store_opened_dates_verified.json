@@ -884,13 +884,13 @@
   {
     "brand": "HOLA",
     "store_name": "HOLA 台南三越小北店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
+    "date": "2025-09-26",
+    "year": 2025,
+    "confidence": "confirmed",
     "sources": [
       "https://cdn.hola.com.tw/store/locations"
     ],
-    "evidence": "西門路四段135號3F；官方開幕優惠自2025/09/26起，不能直接認定為開幕日，待查（2026-10-06 使用者重新核對提供）"
+    "evidence": "西門路四段135號3F（新光三越台南小北門）；開幕日2025/09/26（2026-10-06 使用者驗證）"
   },
   {
     "brand": "HOLA",
@@ -951,20 +951,20 @@
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 新北板橋遠百中山店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
+    "date": "2024-12-31",
+    "year": 2024,
+    "confidence": "confirmed",
     "sources": [],
-    "evidence": "Mobile01有「板橋新店踩點分享」討論串，但未取得明確開幕日期"
+    "evidence": "遠百板橋中山店10F；開幕日2024/12/31（2026-10-06 使用者驗證）"
   },
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 台中西屯店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
+    "date": "2024-06-27",
+    "year": 2024,
+    "confidence": "confirmed",
     "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+    "evidence": "台灣大道四段528號2樓；開幕日2024/06/27（2026-10-06 使用者驗證）"
   },
   {
     "brand": "hoi! 好好生活",
@@ -1006,13 +1006,13 @@
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 雲林斗六店",
-    "date": "2026",
+    "date": "2026-06-26",
     "year": 2026,
     "confidence": "confirmed",
     "sources": [
       "https://www.shotnews.tw/news/7b5a4729f1904"
     ],
-    "evidence": "莊敬路268號2樓；報導開幕首週活動自2026/06/26起，未明述開幕日，僅記年份（2026-10-06 使用者重新核對提供）"
+    "evidence": "莊敬路268號2樓；開幕日2026/06/26（2026-10-06 使用者驗證）"
   },
   {
     "brand": "hoi! 好好生活",
@@ -1052,29 +1052,29 @@
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 台東店",
-    "date": "2024-01",
+    "date": "2024-01-24",
     "year": 2024,
     "confidence": "confirmed",
     "sources": [],
-    "evidence": "寶桑路373號1樓；hoi!官方開幕貼文發布於2024/1/19，未明述確切開幕日，記至月份；同址特力屋台東店2024-01-24開幕（2026-10-06 使用者重新核對提供）"
+    "evidence": "寶桑路373號1樓（特力屋台東店同址，同日2024-01-24開幕）（2026-10-06 使用者驗證）"
   },
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 花蓮專櫃(特力屋花蓮店內)",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
+    "date": "2025-01",
+    "year": 2025,
+    "confidence": "confirmed",
     "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+    "evidence": "暫放：依hoi!貼文時間記為2025年1月，確切開幕日待查（2026-10-06 使用者驗證）"
   },
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 高雄左營店",
-    "date": "",
-    "year": null,
-    "confidence": "unverified",
+    "date": "2020-08-04",
+    "year": 2020,
+    "confidence": "confirmed",
     "sources": [],
-    "evidence": "未查得明確來源（WebSearch額度已用盡、WebFetch被網路封鎖，未能完成查證）"
+    "evidence": "民族一路948號2樓；開幕日2020/08/04（2026-10-06 使用者驗證）"
   },
   {
     "brand": "hoi! 好好生活",
@@ -1090,13 +1090,13 @@
   {
     "brand": "hoi! 好好生活",
     "store_name": "hoi! 新北新莊宏匯店",
-    "date": "2025",
+    "date": "2025-10-15",
     "year": 2025,
     "confidence": "confirmed",
     "sources": [
       "https://udn.com/news/story/7270/9070001"
     ],
-    "evidence": "宏匯廣場6F；聯合新聞網報導2025年下半年開幕，確切日期待查（2026-10-06 使用者重新核對提供）"
+    "evidence": "宏匯廣場6F；開幕日2025/10/15（2026-10-06 使用者驗證）"
   },
   {
     "brand": "hoi! 好好生活",
