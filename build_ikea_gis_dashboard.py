@@ -3329,7 +3329,10 @@ aside.collapsed .sidebar-collapse-toggle {
 @media (max-width: 768px) {
   body.m-layout .sheet-top { display: flex; align-items: center; position: relative; flex-shrink: 0; }
   body.m-layout .sheet-top .sheet-handle { flex: 1; }
-  body.m-layout .sheet-collapse-btn { display: inline-flex; align-items: center; gap: 4px; position: absolute; right: 8px; top: 2px; min-height: 36px; padding: 0 10px; border: none; background: none; color: #484848; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer; }
+  /* 收起鈕放在把手列左側、自成一列（44px 高）：遠離右側的「篩選」，避免誤觸 */
+  body.m-layout .sheet-top .sheet-handle { min-height: 44px; align-items: flex-start; padding-top: 8px; }
+  body.m-layout .sheet-collapse-btn { display: inline-flex; align-items: center; gap: 2px; position: absolute; left: 12px; top: 8px; height: 30px; padding: 0 12px 0 6px; border: 1px solid #DFDFDF; border-radius: 999px; background: #F5F5F5; color: #484848; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer; }
+  body.m-layout .sheet-collapse-btn:active { background: #E5E5E5; }
   body.m-layout aside#mainSidebar.m-sheet-hidden { transform: translateY(110%); pointer-events: none; }
   body.m-layout aside#mainSidebar { transition: height 0.25s ease, transform 0.25s ease; }
   body.m-layout .m-fab-group { display: flex; gap: 8px; position: absolute; right: 16px; bottom: calc(20px + env(safe-area-inset-bottom)); z-index: 950; }
