@@ -10,6 +10,11 @@ import re
 from pathlib import Path
 from urllib.parse import quote
 
+try:
+    from pxmart_gcis_match import match_all
+except ImportError:  # 從專案根目錄以 audit.sync_pxmart_stores 匯入時
+    from audit.pxmart_gcis_match import match_all
+
 BASE_DIR = Path(__file__).resolve().parent
 RAW_JSON = BASE_DIR / "pxmart_stores_raw.json"
 GCIS_JSON = BASE_DIR / "pxmart_gcis_branches.json"
@@ -65,41 +70,15 @@ def load_gcis_branches():
         exact_addr[b_addr] = b
     return exact_name, exact_addr, branches
 
-def find_gcis_match(attr, exact_name, exact_addr, branches):
-    s_name = norm_name(attr.get('name', ''))
-    s_addr = clean_addr_for_matching(attr.get('address', ''))
-    city = normalize_city(attr.get('city', ''))
-    
-    # 1. Exact branch name match
-    if s_name in exact_name:
-        return exact_name[s_name]
-    
-    # 2. Exact clean address match
-    if s_addr in exact_addr:
-        return exact_addr[s_addr]
-        
-    # 3. Address road/street + number match
-    m = re.search(r'([^\d]+(?:路|街|大道|段|巷|弄)[\d\-]+號?)', s_addr)
-    if m:
-        road_no = m.group(1)
-        for ca, b in exact_addr.items():
-            if road_no in ca:
-                return b
-                
-    # 4. Clean address substring match
-    for ca, b in exact_addr.items():
-        if len(ca) > 6 and (ca in s_addr or s_addr in ca):
-            return b
-            
-    # 5. Name substring match with city check
-    for bn, b in exact_name.items():
-        if len(bn) >= 2 and (bn in s_name or s_name in bn):
-            if city in b['address']:
-                return b
-                
-    return None
 
-def parse_pxmart_store(item, exact_name, exact_addr, branches):
+# 有新聞明確記載搬遷、現址開幕日與商工登記不同的門市：採現址開幕日（同一分公司登記沿用舊址日期）
+RELOCATED_OPENINGS = {
+    "台東中山": ("2022-01-22", "https://ec.ltn.com.tw/article/breakingnews/3809391",
+                 "自建五層樓旗艦店 2022-01-22 開幕，原台東中山店遷入；商工登記 2009-01-05 為舊店"),
+}
+
+
+def parse_pxmart_store(item, match):
     attr = item['attributes']
     raw_name = attr.get('name', '').strip()
     full_name = f"全聯福利中心 {raw_name}"
@@ -123,21 +102,25 @@ def parse_pxmart_store(item, exact_name, exact_addr, branches):
         if title:
             srv_list.append(title)
     
-    # Find exact MOEA / GCIS branch company record
-    gcis_match = find_gcis_match(attr, exact_name, exact_addr, branches)
-    if gcis_match and gcis_match.get('opened_year'):
-        opened_year = gcis_match['opened_year']
-        opened_date = gcis_match['opened_date']
-        branch_ban = gcis_match.get('branch_ban', '')
-        branch_reg_name = gcis_match.get('full_name', '')
-        v_status = "官方門市地址與經濟部商工登記核准設立日期已逐筆核對"
+    # 經濟部商工登記分公司比對結果（同縣市、一對一；同址重新登記取最早設立日期）
+    if match:
+        branch, how, first = match
+        opened_date = first['opened_date']
+        opened_year = int(opened_date[:4])
+        branch_ban = branch.get('branch_ban', '')
+        branch_reg_name = branch.get('full_name', '')
+        v_status = f"官方門市與經濟部商工登記分公司比對（{how}）；開店日期採分公司核准設立日期"
+        if raw_name in RELOCATED_OPENINGS:
+            opened_date, url, why = RELOCATED_OPENINGS[raw_name]
+            opened_year = int(opened_date[:4])
+            v_status = f"官方門市與經濟部商工登記分公司比對（{how}）；現址為搬遷後新店，開店日期採新聞記載現址開幕日（{why}；{url}）"
     else:
-        # Fallback to store milestone (if any)
-        opened_year = 2015
-        opened_date = "2015-01-01"
+        # 找不到可靠對應：不推估，日期留空
+        opened_year = None
+        opened_date = ""
         branch_ban = ""
         branch_reg_name = ""
-        v_status = "官方門市地址與經緯度已核對"
+        v_status = "官方門市地址與經緯度已核對；商工登記無可靠對應，開店日期未知"
 
     note_parts = []
     if desc:
@@ -191,14 +174,15 @@ def main():
     if not RAW_JSON.exists():
         raise FileNotFoundError(f"{RAW_JSON} not found!")
 
-    exact_name, exact_addr, branches = load_gcis_branches()
+    _, _, branches = load_gcis_branches()
     print(f"Loaded {len(branches)} GCIS branch records for exact opening date verification")
 
     with open(RAW_JSON, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     raw_items = data.get('data', [])
-    parsed_stores = [parse_pxmart_store(item, exact_name, exact_addr, branches) for item in raw_items]
+    matches = match_all([it['attributes'] for it in raw_items], branches)
+    parsed_stores = [parse_pxmart_store(item, matches.get(item['attributes'].get('code'))) for item in raw_items]
     print(f"Parsed {len(parsed_stores)} stores from {RAW_JSON}")
     
     matched_exact = sum(1 for s in parsed_stores if s.get('official_branch_ban'))
@@ -218,7 +202,7 @@ def main():
     for s in parsed_stores:
         c = s['city']
         audit_data['by_city'][c] = audit_data['by_city'].get(c, 0) + 1
-        y = s['opened_year']
+        y = s['opened_year'] if s['opened_year'] is not None else '未知'
         audit_data['by_year'][y] = audit_data['by_year'].get(y, 0) + 1
 
     with open(OUTPUT_AUDIT, 'w', encoding='utf-8') as f:
