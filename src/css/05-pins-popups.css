@@ -1,0 +1,309 @@
+/* ════════════════════════════════════════════
+   LEAFLET PIN & POPUP STYLING
+════════════════════════════════════════════ */
+.brand-pin-marker {
+  position: relative;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4));
+  transform-origin: 14px 36px !important;
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.brand-pin-marker:hover {
+  transform: scale(1.18);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.55));
+  z-index: 1000 !important;
+}
+
+.brand-pin-marker svg {
+  display: block;
+  overflow: visible;
+}
+
+.high-contrast-pin svg path {
+  stroke: #000000 !important;
+  stroke-width: 2.5 !important;
+}
+
+/* GPS User Pulsing Marker */
+.user-gps-pulse-marker {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.user-gps-pulse-marker .pulse-ring {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 88, 163, 0.35);
+  animation: gpsPulse 2s infinite ease-out;
+}
+.user-gps-pulse-marker .user-dot {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0058A3;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 88, 163, 0.5);
+}
+@keyframes gpsPulse {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.custom-popup .leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--skapa-border);
+}
+.custom-popup .leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+  width: auto !important;
+  line-height: inherit;
+}
+.custom-popup .leaflet-popup-tip-container { display: none; }
+
+.popup-box {
+  padding: 16px;
+  width: 320px;
+  max-width: min(340px, calc(100vw - 36px));
+  min-width: 260px;
+  box-sizing: border-box;
+  color: var(--skapa-text);
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.popup-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+  padding-right: 18px;
+}
+.popup-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #FFFFFF;
+  padding: 2.5px 9px;
+  border-radius: 10rem;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+.popup-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--skapa-text);
+  margin-bottom: 3px;
+  line-height: 1.35;
+  word-break: break-word;
+}
+.popup-meta {
+  font-size: 12.5px;
+  color: var(--skapa-text-2);
+  margin-bottom: 8px;
+  display: flex;
+  gap: 6px;
+}
+.popup-addr {
+  font-size: 12px;
+  color: var(--skapa-text-2);
+  margin-bottom: 10px;
+  line-height: 1.45;
+  display: flex;
+  gap: 6px;
+  word-break: break-word;
+}
+.popup-addr svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--skapa-text-2);
+}
+.popup-note-box {
+  background: #FEF3C7;
+  color: #92400E;
+  font-size: 11px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  line-height: 1.35;
+  border-left: 3px solid #D97706;
+}
+.popup-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--skapa-border);
+}
+.popup-action-row .pop-btn {
+  flex: 1 1 115px;
+  min-width: 0;
+  height: 36px;
+  min-height: 36px;
+  padding: 0 12px;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 10rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: inherit;
+  transition: all 0.15s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.popup-action-row .pop-btn svg {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+.pop-btn-emph {
+  background: var(--ikea-blue);
+  color: #FFFFFF !important;
+  border: 1px solid var(--ikea-blue);
+}
+.pop-btn-emph:hover {
+  background: var(--skapa-emph-hover);
+  border-color: var(--skapa-emph-hover);
+}
+.pop-btn-emph:active {
+  background: var(--skapa-emph-active);
+  border-color: var(--skapa-emph-active);
+}
+.pop-btn-secondary {
+  background: #FFFFFF;
+  color: var(--skapa-text) !important;
+  border: 1px solid var(--skapa-border-strong);
+}
+.pop-btn-secondary:hover {
+  background: var(--skapa-neutral);
+  border-color: var(--skapa-text);
+  color: var(--skapa-text) !important;
+}
+.pop-btn-secondary:active {
+  background: #E5E5E5;
+}
+.popup-gmap-btn, .popup-drawer-btn {
+  display: none;
+}
+
+/* Responsive Button Label adaptation across widths */
+.btn-text-full {
+  display: none;
+}
+.btn-text-compact {
+  display: inline;
+}
+@media (min-width: 520px) {
+  .store-card .btn-text-full {
+    display: inline;
+  }
+  .store-card .btn-text-compact {
+    display: none;
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+}
+.empty-state svg {
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+.empty-state .title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-body);
+  margin-bottom: 4px;
+}
+.empty-state .desc {
+  font-size: 12px;
+}
+
+.footer-info {
+  padding: 10px 16px;
+  font-size: 10.5px;
+  color: var(--text-light);
+  border-top: 1px solid var(--border);
+  background: #FFFFFF;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Mobile Responsive Optimization (Section 4) */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 10px 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .title-group h1 { font-size: 14px; }
+  .title-group .subtitle { display: none; }
+  .header-actions { width: 100%; margin-left: 0; justify-content: space-between; }
+  .stat-pill { padding: 5px 9px; }
+  .btn-export-csv { min-height: 40px; padding: 7px 12px; }
+  .workspace {
+    flex-direction: column-reverse;
+  }
+  aside {
+    width: 100% !important;
+    max-height: 48vh;
+    border-left: none;
+    border-top: 2px solid var(--border);
+  }
+  .sidebar-inner-content {
+    width: 100% !important;
+  }
+  .sidebar-collapse-toggle { display: none; }
+  .region-jump-bar {
+    top: auto;
+    bottom: 12px;
+    max-width: 95%;
+    overflow-x: auto;
+  }
+  .btn-region-jump { min-height: 40px; flex: 0 0 auto; }
+  .btn-card-view-detail, .btn-card-gmap, .btn-sec-action { min-height: 40px; }
+  .google-nav-control-group {
+    margin-bottom: 56px !important;
+    margin-left: 10px !important;
+  }
+  .map-controls-dock {
+    top: 10px;
+    left: 10px;
+  }
+  .map-style-dropdown { width: 230px; }
+  .timeline-mode-active #regionJumpBar {
+    display: none !important;
+  }
+  .timeline-player-panel {
+    width: 95% !important;
+    bottom: 12px !important;
+    padding: 10px 12px !important;
+  }
+}
+

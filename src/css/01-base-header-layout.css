@@ -1,0 +1,181 @@
+:root {
+  /* ================= IKEA SKAPA 設計規範對齊 =================
+     取自 IKEA SKAPA 設計規範（與 ikea-na-store-map 對齊）：
+     primary text #111111、secondary #484848、tertiary #767676、
+     border #DFDFDF、border-strong #484848、neutral #F5F5F5、
+     emphasised #0058A3（hover #004F93、按下 #003E72）、
+     圓角 10rem / 64px（膠囊形） */
+  --skapa-text: #111111;
+  --skapa-text-2: #484848;
+  --skapa-text-3: #767676;
+  --skapa-border: #DFDFDF;
+  --skapa-border-strong: #484848;
+  --skapa-neutral: #F5F5F5;
+  --skapa-focus: #0058A3;
+  --skapa-emph-hover: #004F93;
+  --skapa-emph-active: #003E72;
+
+  --ikea-blue: #0058A3;
+  --ikea-blue-dark: #004F93;
+  --ikea-blue-light: #EBF3FA;
+  --ikea-yellow: #FFDB00;
+  --ikea-yellow-hover: #F2A900;
+  
+  --bg-app: #F5F5F5;
+  --panel: #FFFFFF;
+  --panel-muted: #F5F5F5;
+  --border: #DFDFDF;
+  --border-strong: #484848;
+  --border-focus: #0058A3;
+  
+  --text-main: #111111;
+  --text-body: #484848;
+  --text-muted: #767676;
+  --text-light: #999999;
+  
+  /* Brand Theme Colors */
+  --b-ikea: #0058A3;
+  --b-muji: #7F0019;
+  --b-nitori: #00A396;
+  --b-tlw: #EA580C;
+  --b-hola: #D97706;
+  --b-hoi: #E11D48;
+  --b-mr: #1E293B;
+  
+  --sidebar-width: 400px;
+}
+@media (max-width: 1200px) {
+  :root {
+    --sidebar-width: 380px;
+  }
+}
+@media (max-width: 992px) {
+  :root {
+    --sidebar-width: 350px;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-app);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--skapa-text);
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--skapa-focus);
+  outline-offset: 2px;
+}
+
+/* ════════════════════════════════════════════
+   HEADER (Pure White Background with Official IKEA Logo)
+════════════════════════════════════════════ */
+header {
+  background: #FFFFFF;
+  color: var(--skapa-text);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 24px;
+  height: 62px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--skapa-border);
+  box-shadow: none;
+  z-index: 900;
+}
+
+.ikea-logo-box {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.ikea-logo-box:hover { transform: scale(1.02); }
+
+.title-group h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--skapa-text);
+  letter-spacing: -0.2px;
+  line-height: 1.25;
+}
+.title-group .subtitle {
+  font-size: 12px;
+  color: var(--skapa-text-2);
+  margin-top: 1.5px;
+}
+
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--skapa-neutral);
+  border: 1px solid var(--skapa-border);
+  color: var(--skapa-text);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 64px;
+}
+.stat-pill .live-indicator {
+  width: 7px;
+  height: 7px;
+  background: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+}
+.stat-pill strong {
+  color: var(--ikea-blue);
+  font-weight: 700;
+}
+.btn-export-csv {
+  background: var(--ikea-blue);
+  color: #FFFFFF !important;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 7px 18px;
+  border-radius: 64px;
+  border: 1px solid var(--ikea-blue);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  box-shadow: none;
+}
+.btn-export-csv svg {
+  color: #FFFFFF;
+  stroke: #FFFFFF;
+}
+.btn-export-csv:hover {
+  background: var(--skapa-emph-hover);
+  border-color: var(--skapa-emph-hover);
+}
+.btn-export-csv:active {
+  background: var(--skapa-emph-active);
+  border-color: var(--skapa-emph-active);
+}
+
+/* ════════════════════════════════════════════
+   MAIN WORKSPACE & LAYOUT
+════════════════════════════════════════════ */
+.workspace {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+

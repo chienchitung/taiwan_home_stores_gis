@@ -44,11 +44,18 @@
 
 ```text
 taiwan_home_stores_gis/
-├── index.html                           # 主生產環境 GIS 儀表板首頁 HTML
+├── index.html                           # 產出檔：儀表板首頁（由建置腳本產生，請勿直接修改）
+├── assets/                              # 產出檔：app.css、app.js（由 src/ 合併而成，請勿直接修改）
+├── src/                                 # 前端原始碼（要改畫面請改這裡）
+│   ├── index.html                       # 頁面結構樣板（PLACEHOLDER 由建置腳本替換）
+│   ├── css/                             # 樣式，依檔名順序合併：基礎、地圖、清單、詳情、大頭針、時光軸、手機版
+│   └── js/                              # 互動程式，依檔名順序合併：資料設定、地圖、狀態、篩選、定位、
+│                                        #   清單渲染與手機版面、大頭針、清單、詳情與商圈、路線、互動事件、時光軸、啟動
+├── stores_data.js                       # 產出檔：居家／量販門市資料
 ├── vendor/                              # 內建 Leaflet 與 MarkerCluster（不依賴外部 CDN）
 ├── pxmart_stores_data.js                # 隨選動態載入之全聯福利中心門市資料集
 ├── shopee_stores_data.js                # 隨選動態載入之全台電商門市資料集
-├── build_ikea_gis_dashboard.py          # 儀表板打包與建置編譯腳本
+├── build_ikea_gis_dashboard.py          # 建置腳本：整理門市資料、合併 src/ 產出 index.html 與 assets/
 ├── netlify.toml                         # Netlify 雲端部署規則與 API 反向代理配置
 ├── netlify/
 │   └── functions/
@@ -89,10 +96,18 @@ python3 -m http.server 8080
 開啟瀏覽器訪問 `http://localhost:8080`。
 
 ### 3. 重新編譯儀表板
-若更新了 `data/taiwan_home_stores_status.json` 中的門市資料，可執行編譯腳本重新產生靜態檔案：
+更新了 `data/taiwan_home_stores_status.json` 中的門市資料，或修改了 `src/` 底下的畫面、樣式、程式後，執行建置腳本重新產生靜態檔案：
 ```bash
 python3 build_ikea_gis_dashboard.py
 ```
+
+建置腳本會：
+- 依檔名順序把 `src/css/*.css` 合併成 `assets/app.css`、`src/js/*.js` 合併成 `assets/app.js`（合併成單一檔案，執行順序與作用域和分檔前完全相同）。
+- 以檔案內容雜湊當版本號寫進 `index.html`（`?v=...`），只有內容改變時瀏覽器才會重新下載；資料更新不會讓 CSS／JS 快取失效。
+
+> `index.html`、`assets/`、`stores_data.js` 等都是產出檔，直接修改會在下次建置時被覆蓋，請改 `src/` 或 `data/`。
+
+新增 JS 檔時以兩位數字開頭命名（例如 `src/js/14-new-feature.js`）決定合併順序；在 JS 檔最上層直接呼叫其他檔案定義的函式時，該檔需排在定義檔之後（函式內呼叫則不受影響）。
 
 ---
 
