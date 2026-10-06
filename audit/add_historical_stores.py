@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""新增經查證的歷史門市紀錄（已不在任何官方門市清單中，sync 腳本不會產生）。可重複執行。"""
+"""新增經查證的歷史門市紀錄（已不在任何官方門市清單中，sync 腳本不會產生）。
+可重複執行：已存在的紀錄會以這裡的欄位更新（保留原 n）。"""
 import csv
 import json
 from pathlib import Path
@@ -18,7 +19,7 @@ NEW_STORES = [
         "city": "台北市",
         "address": "台北市大安區敦化南路一段246號B1（原永琦百貨，現遠東SOGO敦化館）",
         "status": "已結束營業",
-        "note": "IKEA台灣首店，位於永琦百貨地下室，約1,200坪；1994/12/14試賣、12/17正式開幕。熄燈日待確認（一說2001年9月2日）",
+        "note": "IKEA台灣首店，位於永琦百貨地下室，約1,200坪；1994/12/14試賣、12/17正式開幕，2001年9月2日熄燈",
         "district": "大安區",
         "channel_format": "百貨商場 / 購物中心",
         "status_category": "歷史變動（已熄燈/遷址）",
@@ -42,6 +43,9 @@ def main():
     added = 0
     for new in NEW_STORES:
         if (new["brand"], new["store_name"]) in existing:
+            for s in stores:
+                if (s.get("brand"), s.get("store_name")) == (new["brand"], new["store_name"]):
+                    s.update(new)
             continue
         stores.append({**new, "n": next_n})
         next_n += 1
