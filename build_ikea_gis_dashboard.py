@@ -4126,17 +4126,40 @@ function makePopupHtml(s) {
 }
 
 /* ─── DROPDOWNS INITIALIZATION & TWO-WAY LINKAGE ─── */
-function getScopedStorePoolForDropdowns() {
+// 下拉選單的選項與數字依「目前資料集＋已選品牌＋其他篩選條件」計算（排除自身那一欄，方便改選）
+function getScopedStorePoolForDropdowns(exclude = "") {
   const allowedBrands = DATASET_BRANDS[activeDatasetMode] || [];
-  const statEl = document.getElementById("selStatus");
-  const stat = statEl ? statEl.value : "";
-  const chanEl = document.getElementById("selChannel");
-  const chan = chanEl ? chanEl.value : "";
+  const val = id => { const el = document.getElementById(id); return el ? el.value : ""; };
+  const city = exclude === "city" ? "" : val("selCity");
+  const dist = (exclude === "city" || exclude === "district") ? "" : val("selDistrict");
+  const chan = exclude === "channel" ? "" : val("selChannel");
+  const stat = exclude === "status" ? "" : val("selStatus");
   return ALL_STORES.filter(s => {
     if (!allowedBrands.includes(s.brand)) return false;
-    if (stat && s.status_category !== stat) return false;
+    if (activeBrands.size && !activeBrands.has(s.brand)) return false;
+    if (city && s.city !== city) return false;
+    if (dist && s.district !== dist) return false;
     if (chan && (s.store_format || s.channel_format) !== chan) return false;
+    if (stat && s.status_category !== stat) return false;
     return true;
+  });
+}
+
+// 固定選項的下拉（門市型態、營運狀態）：標上數字，該條件下沒有門市的選項停用（目前選取的除外）
+function updateFixedOptionCounts(selId, keyFn, exclude) {
+  const sel = document.getElementById(selId);
+  if (!sel) return;
+  const counts = {};
+  getScopedStorePoolForDropdowns(exclude).forEach(s => {
+    const k = keyFn(s);
+    if (k) counts[k] = (counts[k] || 0) + 1;
+  });
+  Array.from(sel.options).forEach(opt => {
+    if (!opt.dataset.label) opt.dataset.label = opt.textContent;
+    if (!opt.value) return;
+    const n = counts[opt.value] || 0;
+    opt.textContent = `${opt.dataset.label} (${n})`;
+    opt.disabled = n === 0 && sel.value !== opt.value;
   });
 }
 
@@ -4144,7 +4167,7 @@ function initDropdowns() {
   const citySel = document.getElementById("selCity");
   const selectedCity = citySel.value;
   citySel.innerHTML = '<option value="">全部縣市</option>';
-  const pool = getScopedStorePoolForDropdowns();
+  const pool = getScopedStorePoolForDropdowns("city");
   const counts = {};
   pool.forEach(s => {
     if (s.city) counts[s.city] = (counts[s.city] || 0) + 1;
@@ -4161,6 +4184,8 @@ function initDropdowns() {
     citySel.value = "";
   }
   updateDistrictDropdown(citySel.value);
+  updateFixedOptionCounts("selChannel", s => s.store_format || s.channel_format, "channel");
+  updateFixedOptionCounts("selStatus", s => s.status_category, "status");
 }
 
 function updateDistrictDropdown(selectedCity) {
@@ -4171,7 +4196,7 @@ function updateDistrictDropdown(selectedCity) {
 
   if (selectedCity) {
     distSel.innerHTML = '<option value="">全部行政區</option>';
-    const pool = getScopedStorePoolForDropdowns().filter(s => s.city === selectedCity);
+    const pool = getScopedStorePoolForDropdowns("district").filter(s => s.city === selectedCity);
     const counts = {};
     pool.forEach(s => {
       if (s.district) counts[s.district] = (counts[s.district] || 0) + 1;
@@ -4843,6 +4868,8 @@ function render() {
   if (activeBrands.size && nonBrandPool.length > 0) {
     [...activeBrands].forEach(b => { if (!nonBrandPool.some(s => s.brand === b)) activeBrands.delete(b); });
   }
+  // 縣市／行政區／型態／狀態的選項與數字跟著已選品牌更新
+  initDropdowns();
 
   let pool = nonBrandPool.filter(s => {
     if (activeBrands.size && !activeBrands.has(s.brand)) {
