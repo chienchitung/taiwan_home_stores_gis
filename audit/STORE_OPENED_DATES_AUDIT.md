@@ -17,7 +17,7 @@
 | 品牌 | 門市數 | 新聞／官方 | 商工登記 | 未知 |
 |---|---|---|---|---|
 | Costco 好市多 | 14 | 14 | 0 | 0 |
-| IKEA | 11 | 10 | 1 | 0 |
+| IKEA | 12 | 11 | 1 | 0 |
 | MR. LIVING 居家先生 | 7 | 1 | 6 | 0 |
 | La-Z-Boy | 1 | 1 | 0 | 0 |
 | 大全聯 | 22 | 22 | 0 | 0 |
@@ -236,7 +236,8 @@
 | HOLA 花蓮店 | **地址錯誤**：實際在新城鄉嘉里路15號家樂福花蓮店 B1（原「吉安鄉國安一街21號2F」無出處）；2024-12-01 熄燈正確，但原因是經營策略調整，非「地震建物受損」 | https://www.chinatimes.com/realtimenews/20140508004245-260405 ；https://www.ksnews.com.tw/w2024110534/ |
 | HOLA 台南永康店 | 1998 年開幕、熄燈日補為 2021-12-12（租約到期） | https://www.tainanlohas.cc/2021/12/HOLA-closes-business.html ；https://news.tvbs.com.tw/life/1654151 |
 | HOLA 新北中和店 | 2025-03-31 熄燈正確（中山路二段291號，威力廣場） | https://www.nownews.com/news/6652401 ；https://news.ebc.net.tw/news/living/474088 |
-| IKEA 台北敦北店（初代） | 1998 年開幕、2021-04-26 熄燈正確；同址 2021-11-30 開台北城市店 | https://www.ctee.com.tw/news/20210314700333-430503 ；https://udn.com/news/story/7270/5415207 |
+| IKEA 台北敦南店（台灣首店） | **新增**：永琦百貨（現遠東SOGO敦化館）地下室，1994-12-14 試賣、12-17 正式開幕；熄燈日待確認（一說 2001-09-02）；座標人工定位（`audit/add_historical_stores.py`） | https://time.udn.com/udntime/story/122835/8125670 |
+| IKEA 台北敦北店（初代） | 1998-09-01 開幕（使用者驗證）、2021-04-26 熄燈正確；同址 2021-11-30 開台北城市店 | https://www.ctee.com.tw/news/20210314700333-430503 ；https://udn.com/news/story/7270/5415207 |
 | IKEA 桃園舊店（中山路） | 2020-07-22 熄燈、隔日青埔店開幕正確 | https://ec.ltn.com.tw/article/breakingnews/3185480 ；https://udn.com/news/story/7160/4656511 |
 | hoi! 微風松高店（初代） | 2018-09-17 開幕正確；**查無熄燈新聞**，已不在官方門市清單，熄燈日期改註「未查得」 | https://technews.tw/2018/09/17/taobao-hoi-smart-retail-store-in-taipei/ |
 | hoi! 台北文昌概念店 | 2019-10-14 開幕正確；**查無熄燈新聞**，改註「未查得」；門牌一說為文昌街270-1號，未確認，暫不改 | https://eventblog.pixnet.net/blog/posts/5068427998 ；https://www.ettoday.net/news/20191020/1561434.htm |
