@@ -71,6 +71,7 @@ function closeTimelineMode() {
   if (!isTimelineMode) return;
   pauseTimeline();
   isTimelineMode = false;
+  timelineListDirty = false; // 下面 render() 會整個重建清單
   document.body.classList.remove("timeline-mode-active");
   const triggerBtn = document.getElementById("btnToggleTimeline");
   if (triggerBtn) triggerBtn.classList.remove("active");
@@ -199,8 +200,18 @@ function updateTimeline(year, triggerPulse = true) {
 
   // Render markers with pulse for newly opened stores in this year
   renderMarkers(triggerPulse ? timelineYear : null);
-  // 手機時光軸模式下清單整個隱藏，播放時每年重建清單只是白做工，停下來再更新
-  if (!(timelinePlaying && isMobileLayout())) renderList();
+  // 時光軸模式下清單通常是收起的（桌機側欄收合、手機抽屜隱藏）：拖曳／播放時每年重建清單
+  // 會讓主執行緒忙到來不及畫地圖，所以清單看不到就先不重建，打開時再補
+  if (isTimelineListHidden()) timelineListDirty = true;
+  else renderList();
+}
+
+let timelineListDirty = false;
+function isTimelineListHidden() {
+  return isMobileLayout() || isSidebarCollapsed;
+}
+function flushTimelineList() {
+  if (timelineListDirty) { timelineListDirty = false; renderList(); }
 }
 
 function playTimeline() {
@@ -246,8 +257,6 @@ function pauseTimeline() {
   const pauseIcon = document.getElementById("tlPauseIcon");
   if (playIcon) playIcon.style.display = "block";
   if (pauseIcon) pauseIcon.style.display = "none";
-  // 手機播放期間略過清單更新，停下來時補上
-  if (isTimelineMode && isMobileLayout()) renderList();
 }
 
 function toggleTimelinePlay() {
