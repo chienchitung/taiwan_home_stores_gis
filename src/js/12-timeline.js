@@ -95,23 +95,15 @@ function toggleTimelineMode() {
   }
 }
 
-function getTimelineStorePool() {
+function getTimelineStorePool(ignoreBrands = false) {
   const allowedBrands = DATASET_BRANDS[activeDatasetMode] || [];
-  const qEl = document.getElementById("q");
-  const q = qEl ? qEl.value.trim().toLowerCase() : "";
+  const q = currentSearchQuery();
 
   return ALL_STORES.filter(s => {
     if (!allowedBrands.includes(s.brand)) return false;
-    if (activeBrands.size && !activeBrands.has(s.brand)) return false;
+    if (!ignoreBrands && activeBrands.size && !activeBrands.has(s.brand)) return false;
     if (!storeMatchesFacets(s)) return false;
-    if (q) {
-      const match = (s.store_name && s.store_name.toLowerCase().includes(q)) ||
-                    (s.brand && s.brand.toLowerCase().includes(q)) ||
-                    (s.address && s.address.toLowerCase().includes(q)) ||
-                    (s.district && s.district.toLowerCase().includes(q));
-      if (!match) return false;
-    }
-    return true;
+    return storeMatchesSearch(s, q);
   });
 }
 
@@ -198,6 +190,15 @@ function updateTimeline(year, triggerPulse = true) {
   // Filter stores on map
   filteredStores = isTimelineCumulative ? openedSoFar : newlyOpenedInYear;
 
+  // 品牌按鈕、門市數標籤跟著年份走（原本停在時光軸開啟前的全部門市數）
+  const inYear = s => s.opened_year && (isTimelineCumulative ? s.opened_year <= timelineYear : s.opened_year === timelineYear);
+  updateBrandPillsCounts(getTimelineStorePool(true).filter(inYear));
+  const n = filteredStores.length;
+  document.getElementById("lblCount").textContent = `${n} 間門市（${timelineYear} 年${isTimelineCumulative ? "累計" : "新開"}）`;
+  document.getElementById("lblFloatingCount").textContent = n;
+  document.getElementById("lblSheetFabCount").textContent = n;
+  document.getElementById("btnMobileFilterApply").textContent = `顯示 ${n} 間門市`;
+
   // Render markers with pulse for newly opened stores in this year
   renderMarkers(triggerPulse ? timelineYear : null);
   // 時光軸模式下清單通常是收起的（桌機側欄收合、手機抽屜隱藏）：拖曳／播放時每年重建清單
@@ -220,6 +221,7 @@ function playTimeline() {
     timelineYear = timelineMinYear;
   }
   timelinePlaying = true;
+  timelinePlayGen++;
   const playIcon = document.getElementById("tlPlayIcon");
   const pauseIcon = document.getElementById("tlPauseIcon");
   if (playIcon) playIcon.style.display = "none";
@@ -233,17 +235,19 @@ function playTimeline() {
 // 每一年畫完、瀏覽器真的把地圖畫到螢幕上（requestAnimationFrame）之後才排下一年。
 // 原本用 setInterval：較慢的手機上每年的繪製時間比間隔長時，計時器會一路排隊、
 // 瀏覽器來不及把畫面畫出來，看起來就像播放中地圖沒有點，播完才一次出現。
+let timelinePlayGen = 0; // 每次按播放加一：暫停後立刻再播放時，舊一輪排好的回呼不會接著跑（避免兩倍速）
 function scheduleTimelineTick() {
+  const gen = timelinePlayGen;
   timelineTimer = setTimeout(() => {
     timelineTimer = null;
-    if (!timelinePlaying) return;
+    if (!timelinePlaying || gen !== timelinePlayGen) return;
     if (timelineYear >= timelineMaxYear) {
       pauseTimeline();
       return;
     }
     timelineYear++;
     updateTimeline(timelineYear, true);
-    requestAnimationFrame(() => { if (timelinePlaying) scheduleTimelineTick(); });
+    requestAnimationFrame(() => { if (timelinePlaying && gen === timelinePlayGen) scheduleTimelineTick(); });
   }, timelineSpeed);
 }
 

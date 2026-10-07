@@ -2356,16 +2356,15 @@ aside.collapsed .sidebar-collapse-toggle {
 /* ════════════════════════════════════════════
    LEAFLET PIN & POPUP STYLING
 ════════════════════════════════════════════ */
+/* 外層的 transform 由 Leaflet 寫入（定位用的 translate3d），樣式與動畫一律不要動外層的 transform；
+   放大效果改用內層 svg 的 scale 屬性（可和全台視野的縮小相乘） */
 .brand-pin-marker {
   position: relative;
   cursor: pointer;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4));
-  transform-origin: 14px 36px !important;
-  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .brand-pin-marker:hover {
-  transform: scale(1.18);
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.55));
   z-index: 1000 !important;
 }
@@ -2373,7 +2372,10 @@ aside.collapsed .sidebar-collapse-toggle {
 .brand-pin-marker svg {
   display: block;
   overflow: visible;
+  transform-origin: 50% 100%;
+  transition: scale 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+.brand-pin-marker:hover svg { scale: 1.18; }
 
 .high-contrast-pin svg path {
   stroke: #000000 !important;
@@ -2996,23 +2998,30 @@ aside.collapsed .sidebar-collapse-toggle {
 }
 
 /* Pulse animation for newly opened store pins */
+/* 用獨立的 scale 屬性（不是 transform）：會和全台視野縮小一半的 transform: scale(0.5) 相乘，
+   動畫期間圖標維持該視野的大小，不會先變大再突然縮回 */
 @keyframes tlMarkerPulse {
   0% {
-    transform: scale(0.6);
+    scale: 0.6;
     filter: drop-shadow(0 0 0 rgba(0, 88, 163, 0.8));
   }
   50% {
-    transform: scale(1.35);
+    scale: 1.35;
     filter: drop-shadow(0 0 10px rgba(0, 88, 163, 0.9));
   }
   100% {
-    transform: scale(1);
+    scale: 1;
     filter: drop-shadow(0 0 0 rgba(0, 88, 163, 0));
   }
 }
+/* 動畫只能套在圖標內的 svg：外層 .brand-pin-marker 的 transform 是 Leaflet 用來定位的
+   translate3d，動畫若改寫它，播放期間圖標會跑到地圖原點（全台視野下約在福建外海一帶） */
 .brand-pin-marker.marker-new-pulse {
-  animation: tlMarkerPulse 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
   z-index: 6000 !important;
+}
+.brand-pin-marker.marker-new-pulse > svg {
+  transform-origin: 50% 100%;
+  animation: tlMarkerPulse 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ─── Store drawer: simplified Skapa-style content ─── */

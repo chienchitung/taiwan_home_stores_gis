@@ -1,16 +1,15 @@
 /* ════════════════════════════════════════════
    LEAFLET PIN & POPUP STYLING
 ════════════════════════════════════════════ */
+/* 外層的 transform 由 Leaflet 寫入（定位用的 translate3d），樣式與動畫一律不要動外層的 transform；
+   放大效果改用內層 svg 的 scale 屬性（可和全台視野的縮小相乘） */
 .brand-pin-marker {
   position: relative;
   cursor: pointer;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4));
-  transform-origin: 14px 36px !important;
-  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .brand-pin-marker:hover {
-  transform: scale(1.18);
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.55));
   z-index: 1000 !important;
 }
@@ -18,7 +17,10 @@
 .brand-pin-marker svg {
   display: block;
   overflow: visible;
+  transform-origin: 50% 100%;
+  transition: scale 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+.brand-pin-marker:hover svg { scale: 1.18; }
 
 .high-contrast-pin svg path {
   stroke: #000000 !important;

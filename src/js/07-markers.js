@@ -106,6 +106,13 @@ function applyMarkerMode() {
 map.on("zoomend", applyMarkerMode);
 
 function renderMarkers(pulseYear = null) {
+  if (forcedPin) {
+    const inResult = filteredStores.some(s => "s" + s.n === forcedPin.key);
+    if (inResult || forcedPin.key !== selectedKey) {
+      map.removeLayer(forcedPin.mk);
+      forcedPin = null;
+    }
+  }
   markerPulseActive = !!pulseYear;
   markerPulseYear = pulseYear;
   const useClusters = (activeDatasetMode === "ecommerce" || (activeDatasetMode === "supermarket" && filteredStores.length > 150)) && typeof L.markerClusterGroup === "function";
@@ -138,6 +145,7 @@ function renderMarkers(pulseYear = null) {
     if (toRemove.length) markerClusterLayer.removeLayers(toRemove);
     if (toAdd.length) markerClusterLayer.addLayers(toAdd);
     markers = next;
+    pinStores = {}; // 聚合模式不使用延後建立的大頭針清單
     return;
   }
   if (markerClusterLayer) {

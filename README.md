@@ -62,8 +62,8 @@ taiwan_home_stores_gis/
 │   └── functions/
 │       └── directions.js                # Serverless 路徑規劃代理（Google Routes API 專用）
 ├── data/                                # 核心乾淨門市資料庫
-│   ├── taiwan_home_stores_status.json   # 5,199 間實體門市完整生命週期資料庫 (JSON)
-│   └── taiwan_home_stores_status.csv    # 5,199 間實體門市歷史狀態對帳表 (CSV)
+│   ├── taiwan_home_stores_status.json   # 5,191 間實體門市完整生命週期資料庫 (JSON)
+│   └── taiwan_home_stores_status.csv    # 5,191 間實體門市歷史狀態對帳表 (CSV)
 └── audit/                               # 歷史門市地毯式查核紀錄與同步腳本
     ├── HOME_BRAND_STORE_AUDIT.md        # 居家品牌查核總報告
     ├── PXMART_STORE_LOCATION_AUDIT.md   # 全聯門市 Google 地圖地理位置核對報告

@@ -48,13 +48,23 @@ document.getElementById("chkViewportSync").addEventListener("change", e => {
 });
 
 /* ─── STORE MAP FOCUS & COMPETITOR NAVIGATION ─── */
+// 不在目前篩選結果中、但被點開的門市（例如從周邊門市清單點進來）：大頭針另外記著，
+// 下次重畫時若已不是選取中的門市或已在結果內，就從地圖移除，不會殘留
+let forcedPin = null;
 function ensureStoreMarkerOnMap(s) {
   const key = "s" + s.n;
-  // 大頭針是延後建立的：一律從快取取，避免同一間店出現兩個 marker
-  if (!markers[key]) markers[key] = getCachedMarker(s, false);
-  const mk = markers[key];
-  if (!map.hasLayer(mk) && !(markerClusterLayer && markerClusterLayer.hasLayer(mk))) mk.addTo(map);
-  return markers[key];
+  if (markers[key] || pinStores[key]) {
+    // 目前結果內的門市：大頭針是延後建立的，一律從快取取，避免同一間店出現兩個 marker
+    if (!markers[key]) markers[key] = getCachedMarker(s, false);
+    const mk = markers[key];
+    if (!map.hasLayer(mk) && !(markerClusterLayer && markerClusterLayer.hasLayer(mk))) mk.addTo(map);
+    return mk;
+  }
+  if (forcedPin && forcedPin.key !== key) { map.removeLayer(forcedPin.mk); forcedPin = null; }
+  const mk = getCachedMarker(s, false);
+  if (!map.hasLayer(mk)) mk.addTo(map);
+  forcedPin = { key, mk };
+  return mk;
 }
 
 // 地圖定位：把地圖移到這間門市並放大（不再彈出地圖卡片）；手機把抽屜降到預覽高度露出地圖
@@ -281,6 +291,7 @@ document.getElementById("btnResetAll").onclick = () => {
   document.querySelectorAll(".btn-region-jump").forEach(b => b.classList.remove("active"));
   document.querySelector('.btn-region-jump[data-region="all"]').classList.add("active");
   const btnLocate = document.getElementById("btnLocateMe");
+  btnLocate.classList.remove("active"); // 已取消依距離排序
   if (userLocation) {
     btnLocate.querySelector("span").textContent = "我的位置";
     btnLocate.title = "點擊立即回到我的目前所在位置（已定位）";
