@@ -346,8 +346,13 @@
     filter: drop-shadow(0 0 0 rgba(0, 88, 163, 0));
   }
 }
+/* 動畫只能套在圖標內的 svg：外層 .brand-pin-marker 的 transform 是 Leaflet 用來定位的
+   translate3d，動畫若改寫它，播放期間圖標會跑到地圖原點（全台視野下約在福建外海一帶） */
 .brand-pin-marker.marker-new-pulse {
-  animation: tlMarkerPulse 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
   z-index: 6000 !important;
+}
+.brand-pin-marker.marker-new-pulse > svg {
+  transform-origin: 50% 100%;
+  animation: tlMarkerPulse 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
