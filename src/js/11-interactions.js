@@ -268,10 +268,7 @@ document.querySelectorAll(".dataset-switch-btn").forEach(btn => {
 
 document.getElementById("btnResetAll").onclick = () => {
   document.getElementById("q").value = "";
-  document.getElementById("selCity").value = "";
-  document.getElementById("selDistrict").value = "";
-  document.getElementById("selChannel").value = "";
-  document.getElementById("selStatus").value = "現行營運中";
+  resetFacetFilters();
   activeBrands.clear();
   isSortedByDistance = false;
   if (activeRegionLayer) {
@@ -325,55 +322,7 @@ document.getElementById("btnClearSearch").onclick = () => {
   render();
 };
 
-document.getElementById("selCity").addEventListener("change", e => {
-  const city = e.target.value;
-  updateDistrictDropdown(city);
-  if (city) {
-    const scopedStores = getScopedStorePoolForDropdowns().filter(s => s.city === city);
-    const fitList = scopedStores.length > 0 ? scopedStores : ALL_STORES.filter(s => s.city === city);
-    if (fitList.length > 0) {
-      const b = L.latLngBounds(fitList.map(s => [s.lat, s.lng]));
-      map.fitBounds(b, { padding: [50, 50], maxZoom: 13, duration: 0.8 });
-    }
-  } else {
-    map.flyTo([23.75, 120.95], 8, { duration: 0.8 });
-  }
-  render();
-});
-
-document.getElementById("selDistrict").addEventListener("change", e => {
-  const dist = e.target.value;
-  const city = document.getElementById("selCity").value;
-  if (dist && city) {
-    const scopedStores = getScopedStorePoolForDropdowns().filter(s => s.city === city && s.district === dist);
-    const fitList = scopedStores.length > 0 ? scopedStores : ALL_STORES.filter(s => s.city === city && s.district === dist);
-    if (fitList.length > 0) {
-      if (fitList.length === 1) {
-        map.flyTo([fitList[0].lat, fitList[0].lng], 15, { duration: 0.8 });
-      } else {
-        const b = L.latLngBounds(fitList.map(s => [s.lat, s.lng]));
-        map.fitBounds(b, { padding: [50, 50], maxZoom: 15, duration: 0.8 });
-      }
-    }
-  } else if (!dist && city) {
-    const scopedStores = getScopedStorePoolForDropdowns().filter(s => s.city === city);
-    const fitList = scopedStores.length > 0 ? scopedStores : ALL_STORES.filter(s => s.city === city);
-    if (fitList.length > 0) {
-      const b = L.latLngBounds(fitList.map(s => [s.lat, s.lng]));
-      map.fitBounds(b, { padding: [50, 50], maxZoom: 13, duration: 0.8 });
-    }
-  }
-  render();
-});
-
-document.getElementById("selChannel").addEventListener("change", () => {
-  initDropdowns();
-  render();
-});
-document.getElementById("selStatus").addEventListener("change", () => {
-  initDropdowns();
-  render();
-});
+initFacetPanel();
 
 document.getElementById("vtCards").onclick = () => {
   viewMode = "cards";
