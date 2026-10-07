@@ -18,7 +18,6 @@ const FACET_CITY_GROUPS = [
 const FACET_CHANNEL_OPTIONS = ["大型獨棟／街邊門市", "百貨／購物中心門市", "都會／社區門市", "量販店中店",
   "店中店／專櫃", "子品牌門市", "訂購取貨中心", "期間限定門市"];
 const FACET_STATUS_OPTIONS = [["現行營運中", "現行營運中"], ["暫停營業", "暫停營業"], ["歷史變動（已熄燈/遷址）", "已歇業／遷址"]];
-const FACET_DISTRICT_MAX_CITIES = 3;   // 選太多縣市時行政區選項會上百個，只在 1～3 個縣市時提供
 const FACET_DISTRICT_PREVIEW = 8;      // 每個縣市先列 8 個行政區，其餘收在「顯示更多」
 const facetOpen = { status: true, city: true, district: true, channel: false };
 const facetDistrictExpanded = new Set();
@@ -135,13 +134,10 @@ function renderFacetPanel() {
   }).join("");
 
   // 行政區（依已選縣市分組）
-  let districtBody;
+  // 勾了縣市才出現；不限縣市數量，每個縣市先列 8 個、其餘收在「顯示更多」控制長度
+  let districtBody = "";
   const selCities = [...filterState.city];
-  if (!selCities.length) {
-    districtBody = `<div class="facet-hint">先勾選縣市（最多 ${FACET_DISTRICT_MAX_CITIES} 個）即可選擇行政區</div>`;
-  } else if (selCities.length > FACET_DISTRICT_MAX_CITIES) {
-    districtBody = `<div class="facet-hint">已選 ${selCities.length} 個縣市；勾選 ${FACET_DISTRICT_MAX_CITIES} 個以內的縣市才能再細分行政區</div>`;
-  } else {
+  if (selCities.length) {
     const distCounts = countBy(getFacetPool("district"), s => s.district ? districtKeyOf(s) : "");
     districtBody = selCities.map(city => {
       const keys = Object.keys(distCounts).filter(k => k.startsWith(city + "|"));
@@ -170,7 +166,7 @@ function renderFacetPanel() {
   panel.innerHTML =
     facetSectionHtml("status", "營運狀態", isFacetStatusDefault() ? 0 : filterState.status.size, statusBody) +
     facetSectionHtml("city", "縣市", filterState.city.size, cityBody) +
-    facetSectionHtml("district", "行政區", filterState.district.size, districtBody) +
+    (districtBody ? facetSectionHtml("district", "行政區", filterState.district.size, districtBody) : "") +
     facetSectionHtml("channel", "門市型態", filterState.channel.size, chanBody);
 
   panel.scrollTop = scrollTop;
