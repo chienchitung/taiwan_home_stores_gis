@@ -332,17 +332,19 @@
 }
 
 /* Pulse animation for newly opened store pins */
+/* 用獨立的 scale 屬性（不是 transform）：會和全台視野縮小一半的 transform: scale(0.5) 相乘，
+   動畫期間圖標維持該視野的大小，不會先變大再突然縮回 */
 @keyframes tlMarkerPulse {
   0% {
-    transform: scale(0.6);
+    scale: 0.6;
     filter: drop-shadow(0 0 0 rgba(0, 88, 163, 0.8));
   }
   50% {
-    transform: scale(1.35);
+    scale: 1.35;
     filter: drop-shadow(0 0 10px rgba(0, 88, 163, 0.9));
   }
   100% {
-    transform: scale(1);
+    scale: 1;
     filter: drop-shadow(0 0 0 rgba(0, 88, 163, 0));
   }
 }

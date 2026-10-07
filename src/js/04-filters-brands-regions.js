@@ -42,13 +42,28 @@ function storeMatchesFacets(s, exclude = "") {
   return true;
 }
 
-// 目前資料集＋已選品牌＋縣市等條件（排除 exclude 那一類）
+// 搜尋框關鍵字：清單、篩選數字、時光軸共用同一套比對欄位
+function currentSearchQuery() {
+  const el = document.getElementById("q");
+  return el ? el.value.trim().toLowerCase() : "";
+}
+function storeMatchesSearch(s, q) {
+  if (!q) return true;
+  return `${s.brand} ${s.store_name} ${s.city} ${s.district || ""} ${s.address} ${s.channel_format} ${s.store_type} ${s.note || ""}`
+    .toLowerCase().includes(q);
+}
+
+// 目前資料集＋已選品牌＋關鍵字＋地圖範圍（開啟「只看地圖範圍內」時）＋縣市等條件（排除 exclude 那一類）
 function getFacetPool(exclude = "") {
   const allowedBrands = DATASET_BRANDS[activeDatasetMode] || [];
+  const q = currentSearchQuery();
+  const bounds = isViewportSync && map ? map.getBounds() : null;
   return ALL_STORES.filter(s =>
     allowedBrands.includes(s.brand) &&
     (!activeBrands.size || activeBrands.has(s.brand)) &&
-    storeMatchesFacets(s, exclude));
+    storeMatchesFacets(s, exclude) &&
+    storeMatchesSearch(s, q) &&
+    (!bounds || bounds.contains(L.latLng(+s.lat, +s.lng))));
 }
 
 // 已套用條件數（營運狀態維持預設「現行營運中」時不算）
@@ -158,7 +173,9 @@ function renderFacetPanel() {
 
   // 門市型態
   const chanCounts = countBy(getFacetPool("channel"), storeFormatOf);
-  const chanBody = FACET_CHANNEL_OPTIONS
+  // 固定清單排前面，資料裡其他型態（量販「大型獨棟 / 獨立街邊店」、超市「社區超市」、電商取貨等）接在後面
+  const chanValues = [...new Set([...FACET_CHANNEL_OPTIONS, ...Object.keys(chanCounts), ...filterState.channel])];
+  const chanBody = chanValues
     .filter(v => chanCounts[v] || filterState.channel.has(v))
     .map(v => facetOptionHtml("channel", v, v, chanCounts[v], filterState.channel.has(v))).join("") ||
     `<div class="facet-hint">目前條件下沒有門市</div>`;
@@ -226,11 +243,14 @@ function initFacetPanel() {
     e.preventDefault();
     const arg = btn.dataset.arg;
     if (btn.dataset.action === "city-group") {
-      const group = FACET_CITY_GROUPS.find(g => g[0] === arg);
       const cityCounts = countBy(getFacetPool("city"), s => s.city);
-      const cities = (group ? group[1] : Object.keys(cityCounts)).filter(c => cityCounts[c]);
+      const known = new Set(FACET_CITY_GROUPS.flatMap(g => g[1]));
+      const group = FACET_CITY_GROUPS.find(g => g[0] === arg);
+      const groupCities = group ? group[1] : Object.keys(cityCounts).filter(c => !known.has(c));
+      const cities = groupCities.filter(c => cityCounts[c]);
       const allOn = cities.length && cities.every(c => filterState.city.has(c));
-      cities.forEach(c => {
+      // 取消全選時連 0 間但仍勾著的縣市一起取消（例如切換資料集後留下的）
+      (allOn ? groupCities.filter(c => filterState.city.has(c)) : cities).forEach(c => {
         if (allOn) {
           filterState.city.delete(c);
           [...filterState.district].forEach(k => { if (k.startsWith(c + "|")) filterState.district.delete(k); });
@@ -344,8 +364,9 @@ function updateActiveRegionTooltip() {
   const statusLabel = statusSet.size
     ? FACET_STATUS_OPTIONS.filter(([v]) => statusSet.has(v)).map(o => o[1]).join("、")
     : "全部狀態";
+  const datasetBrands = DATASET_BRANDS[activeDatasetMode] || [];
   const totalStoresInRegion = ALL_STORES.filter(s =>
-    reg.cities.includes(s.city) && (!statusSet.size || statusSet.has(s.status_category))
+    datasetBrands.includes(s.brand) && reg.cities.includes(s.city) && (!statusSet.size || statusSet.has(s.status_category))
   ).length;
   const isFiltered = regStores.length !== totalStoresInRegion;
 

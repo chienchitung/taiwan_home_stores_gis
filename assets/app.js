@@ -108,6 +108,7 @@ function ensureShopeeData() {
   ]).then(() => {
     const incoming = window.SHOPEE_STORES || [];
     incoming.forEach(s => { s._isCoLocation = false; });
+    if (userLocation) incoming.forEach(s => { s._userDist = haversineDistanceKm(userLocation.lat, userLocation.lng, s.lat, s.lng); });
     ALL_STORES.push(...incoming);
     shopeeDataLoaded = true;
     initDropdowns();
@@ -127,6 +128,7 @@ function ensurePxmartData() {
   ]).then(() => {
     const incoming = window.PXMART_STORES || [];
     incoming.forEach(s => { s._isCoLocation = false; });
+    if (userLocation) incoming.forEach(s => { s._userDist = haversineDistanceKm(userLocation.lat, userLocation.lng, s.lat, s.lng); });
     ALL_STORES.push(...incoming);
     pxmartDataLoaded = true;
     initDropdowns();
@@ -432,13 +434,28 @@ function storeMatchesFacets(s, exclude = "") {
   return true;
 }
 
-// 目前資料集＋已選品牌＋縣市等條件（排除 exclude 那一類）
+// 搜尋框關鍵字：清單、篩選數字、時光軸共用同一套比對欄位
+function currentSearchQuery() {
+  const el = document.getElementById("q");
+  return el ? el.value.trim().toLowerCase() : "";
+}
+function storeMatchesSearch(s, q) {
+  if (!q) return true;
+  return `${s.brand} ${s.store_name} ${s.city} ${s.district || ""} ${s.address} ${s.channel_format} ${s.store_type} ${s.note || ""}`
+    .toLowerCase().includes(q);
+}
+
+// 目前資料集＋已選品牌＋關鍵字＋地圖範圍（開啟「只看地圖範圍內」時）＋縣市等條件（排除 exclude 那一類）
 function getFacetPool(exclude = "") {
   const allowedBrands = DATASET_BRANDS[activeDatasetMode] || [];
+  const q = currentSearchQuery();
+  const bounds = isViewportSync && map ? map.getBounds() : null;
   return ALL_STORES.filter(s =>
     allowedBrands.includes(s.brand) &&
     (!activeBrands.size || activeBrands.has(s.brand)) &&
-    storeMatchesFacets(s, exclude));
+    storeMatchesFacets(s, exclude) &&
+    storeMatchesSearch(s, q) &&
+    (!bounds || bounds.contains(L.latLng(+s.lat, +s.lng))));
 }
 
 // 已套用條件數（營運狀態維持預設「現行營運中」時不算）
@@ -548,7 +565,9 @@ function renderFacetPanel() {
 
   // 門市型態
   const chanCounts = countBy(getFacetPool("channel"), storeFormatOf);
-  const chanBody = FACET_CHANNEL_OPTIONS
+  // 固定清單排前面，資料裡其他型態（量販「大型獨棟 / 獨立街邊店」、超市「社區超市」、電商取貨等）接在後面
+  const chanValues = [...new Set([...FACET_CHANNEL_OPTIONS, ...Object.keys(chanCounts), ...filterState.channel])];
+  const chanBody = chanValues
     .filter(v => chanCounts[v] || filterState.channel.has(v))
     .map(v => facetOptionHtml("channel", v, v, chanCounts[v], filterState.channel.has(v))).join("") ||
     `<div class="facet-hint">目前條件下沒有門市</div>`;
@@ -616,11 +635,14 @@ function initFacetPanel() {
     e.preventDefault();
     const arg = btn.dataset.arg;
     if (btn.dataset.action === "city-group") {
-      const group = FACET_CITY_GROUPS.find(g => g[0] === arg);
       const cityCounts = countBy(getFacetPool("city"), s => s.city);
-      const cities = (group ? group[1] : Object.keys(cityCounts)).filter(c => cityCounts[c]);
+      const known = new Set(FACET_CITY_GROUPS.flatMap(g => g[1]));
+      const group = FACET_CITY_GROUPS.find(g => g[0] === arg);
+      const groupCities = group ? group[1] : Object.keys(cityCounts).filter(c => !known.has(c));
+      const cities = groupCities.filter(c => cityCounts[c]);
       const allOn = cities.length && cities.every(c => filterState.city.has(c));
-      cities.forEach(c => {
+      // 取消全選時連 0 間但仍勾著的縣市一起取消（例如切換資料集後留下的）
+      (allOn ? groupCities.filter(c => filterState.city.has(c)) : cities).forEach(c => {
         if (allOn) {
           filterState.city.delete(c);
           [...filterState.district].forEach(k => { if (k.startsWith(c + "|")) filterState.district.delete(k); });
@@ -734,8 +756,9 @@ function updateActiveRegionTooltip() {
   const statusLabel = statusSet.size
     ? FACET_STATUS_OPTIONS.filter(([v]) => statusSet.has(v)).map(o => o[1]).join("、")
     : "全部狀態";
+  const datasetBrands = DATASET_BRANDS[activeDatasetMode] || [];
   const totalStoresInRegion = ALL_STORES.filter(s =>
-    reg.cities.includes(s.city) && (!statusSet.size || statusSet.has(s.status_category))
+    datasetBrands.includes(s.brand) && reg.cities.includes(s.city) && (!statusSet.size || statusSet.has(s.status_category))
   ).length;
   const isFiltered = regStores.length !== totalStoresInRegion;
 
@@ -984,17 +1007,13 @@ function getUserLocation() {
 
 /* ─── NON-BRAND FILTER POOL ENGINE (For Dynamic Faceted Counts) ─── */
 function getNonBrandFilteredPool() {
-  const q = document.getElementById("q").value.trim().toLowerCase();
+  const q = currentSearchQuery();
 
   let pool = ALL_STORES.filter(s => {
     if (!(DATASET_BRANDS[activeDatasetMode] || []).includes(s.brand)) return false;
     if (!storeMatchesFacets(s)) return false;
 
-    if (q) {
-      const haystack = `${s.brand} ${s.store_name} ${s.city} ${s.district || ""} ${s.address} ${s.channel_format} ${s.store_type} ${s.note || ""}`.toLowerCase();
-      if (!haystack.includes(q)) return false;
-    }
-    return true;
+    return storeMatchesSearch(s, q);
   });
 
   if (isViewportSync && map) {
@@ -1434,6 +1453,13 @@ function applyMarkerMode() {
 map.on("zoomend", applyMarkerMode);
 
 function renderMarkers(pulseYear = null) {
+  if (forcedPin) {
+    const inResult = filteredStores.some(s => "s" + s.n === forcedPin.key);
+    if (inResult || forcedPin.key !== selectedKey) {
+      map.removeLayer(forcedPin.mk);
+      forcedPin = null;
+    }
+  }
   markerPulseActive = !!pulseYear;
   markerPulseYear = pulseYear;
   const useClusters = (activeDatasetMode === "ecommerce" || (activeDatasetMode === "supermarket" && filteredStores.length > 150)) && typeof L.markerClusterGroup === "function";
@@ -1466,6 +1492,7 @@ function renderMarkers(pulseYear = null) {
     if (toRemove.length) markerClusterLayer.removeLayers(toRemove);
     if (toAdd.length) markerClusterLayer.addLayers(toAdd);
     markers = next;
+    pinStores = {}; // 聚合模式不使用延後建立的大頭針清單
     return;
   }
   if (markerClusterLayer) {
@@ -2640,13 +2667,23 @@ document.getElementById("chkViewportSync").addEventListener("change", e => {
 });
 
 /* ─── STORE MAP FOCUS & COMPETITOR NAVIGATION ─── */
+// 不在目前篩選結果中、但被點開的門市（例如從周邊門市清單點進來）：大頭針另外記著，
+// 下次重畫時若已不是選取中的門市或已在結果內，就從地圖移除，不會殘留
+let forcedPin = null;
 function ensureStoreMarkerOnMap(s) {
   const key = "s" + s.n;
-  // 大頭針是延後建立的：一律從快取取，避免同一間店出現兩個 marker
-  if (!markers[key]) markers[key] = getCachedMarker(s, false);
-  const mk = markers[key];
-  if (!map.hasLayer(mk) && !(markerClusterLayer && markerClusterLayer.hasLayer(mk))) mk.addTo(map);
-  return markers[key];
+  if (markers[key] || pinStores[key]) {
+    // 目前結果內的門市：大頭針是延後建立的，一律從快取取，避免同一間店出現兩個 marker
+    if (!markers[key]) markers[key] = getCachedMarker(s, false);
+    const mk = markers[key];
+    if (!map.hasLayer(mk) && !(markerClusterLayer && markerClusterLayer.hasLayer(mk))) mk.addTo(map);
+    return mk;
+  }
+  if (forcedPin && forcedPin.key !== key) { map.removeLayer(forcedPin.mk); forcedPin = null; }
+  const mk = getCachedMarker(s, false);
+  if (!map.hasLayer(mk)) mk.addTo(map);
+  forcedPin = { key, mk };
+  return mk;
 }
 
 // 地圖定位：把地圖移到這間門市並放大（不再彈出地圖卡片）；手機把抽屜降到預覽高度露出地圖
@@ -2873,6 +2910,7 @@ document.getElementById("btnResetAll").onclick = () => {
   document.querySelectorAll(".btn-region-jump").forEach(b => b.classList.remove("active"));
   document.querySelector('.btn-region-jump[data-region="all"]').classList.add("active");
   const btnLocate = document.getElementById("btnLocateMe");
+  btnLocate.classList.remove("active"); // 已取消依距離排序
   if (userLocation) {
     btnLocate.querySelector("span").textContent = "我的位置";
     btnLocate.title = "點擊立即回到我的目前所在位置（已定位）";
@@ -3027,23 +3065,15 @@ function toggleTimelineMode() {
   }
 }
 
-function getTimelineStorePool() {
+function getTimelineStorePool(ignoreBrands = false) {
   const allowedBrands = DATASET_BRANDS[activeDatasetMode] || [];
-  const qEl = document.getElementById("q");
-  const q = qEl ? qEl.value.trim().toLowerCase() : "";
+  const q = currentSearchQuery();
 
   return ALL_STORES.filter(s => {
     if (!allowedBrands.includes(s.brand)) return false;
-    if (activeBrands.size && !activeBrands.has(s.brand)) return false;
+    if (!ignoreBrands && activeBrands.size && !activeBrands.has(s.brand)) return false;
     if (!storeMatchesFacets(s)) return false;
-    if (q) {
-      const match = (s.store_name && s.store_name.toLowerCase().includes(q)) ||
-                    (s.brand && s.brand.toLowerCase().includes(q)) ||
-                    (s.address && s.address.toLowerCase().includes(q)) ||
-                    (s.district && s.district.toLowerCase().includes(q));
-      if (!match) return false;
-    }
-    return true;
+    return storeMatchesSearch(s, q);
   });
 }
 
@@ -3130,6 +3160,15 @@ function updateTimeline(year, triggerPulse = true) {
   // Filter stores on map
   filteredStores = isTimelineCumulative ? openedSoFar : newlyOpenedInYear;
 
+  // 品牌按鈕、門市數標籤跟著年份走（原本停在時光軸開啟前的全部門市數）
+  const inYear = s => s.opened_year && (isTimelineCumulative ? s.opened_year <= timelineYear : s.opened_year === timelineYear);
+  updateBrandPillsCounts(getTimelineStorePool(true).filter(inYear));
+  const n = filteredStores.length;
+  document.getElementById("lblCount").textContent = `${n} 間門市（${timelineYear} 年${isTimelineCumulative ? "累計" : "新開"}）`;
+  document.getElementById("lblFloatingCount").textContent = n;
+  document.getElementById("lblSheetFabCount").textContent = n;
+  document.getElementById("btnMobileFilterApply").textContent = `顯示 ${n} 間門市`;
+
   // Render markers with pulse for newly opened stores in this year
   renderMarkers(triggerPulse ? timelineYear : null);
   // 時光軸模式下清單通常是收起的（桌機側欄收合、手機抽屜隱藏）：拖曳／播放時每年重建清單
@@ -3152,6 +3191,7 @@ function playTimeline() {
     timelineYear = timelineMinYear;
   }
   timelinePlaying = true;
+  timelinePlayGen++;
   const playIcon = document.getElementById("tlPlayIcon");
   const pauseIcon = document.getElementById("tlPauseIcon");
   if (playIcon) playIcon.style.display = "none";
@@ -3165,17 +3205,19 @@ function playTimeline() {
 // 每一年畫完、瀏覽器真的把地圖畫到螢幕上（requestAnimationFrame）之後才排下一年。
 // 原本用 setInterval：較慢的手機上每年的繪製時間比間隔長時，計時器會一路排隊、
 // 瀏覽器來不及把畫面畫出來，看起來就像播放中地圖沒有點，播完才一次出現。
+let timelinePlayGen = 0; // 每次按播放加一：暫停後立刻再播放時，舊一輪排好的回呼不會接著跑（避免兩倍速）
 function scheduleTimelineTick() {
+  const gen = timelinePlayGen;
   timelineTimer = setTimeout(() => {
     timelineTimer = null;
-    if (!timelinePlaying) return;
+    if (!timelinePlaying || gen !== timelinePlayGen) return;
     if (timelineYear >= timelineMaxYear) {
       pauseTimeline();
       return;
     }
     timelineYear++;
     updateTimeline(timelineYear, true);
-    requestAnimationFrame(() => { if (timelinePlaying) scheduleTimelineTick(); });
+    requestAnimationFrame(() => { if (timelinePlaying && gen === timelinePlayGen) scheduleTimelineTick(); });
   }, timelineSpeed);
 }
 

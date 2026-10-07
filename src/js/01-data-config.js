@@ -108,6 +108,7 @@ function ensureShopeeData() {
   ]).then(() => {
     const incoming = window.SHOPEE_STORES || [];
     incoming.forEach(s => { s._isCoLocation = false; });
+    if (userLocation) incoming.forEach(s => { s._userDist = haversineDistanceKm(userLocation.lat, userLocation.lng, s.lat, s.lng); });
     ALL_STORES.push(...incoming);
     shopeeDataLoaded = true;
     initDropdowns();
@@ -127,6 +128,7 @@ function ensurePxmartData() {
   ]).then(() => {
     const incoming = window.PXMART_STORES || [];
     incoming.forEach(s => { s._isCoLocation = false; });
+    if (userLocation) incoming.forEach(s => { s._userDist = haversineDistanceKm(userLocation.lat, userLocation.lng, s.lat, s.lng); });
     ALL_STORES.push(...incoming);
     pxmartDataLoaded = true;
     initDropdowns();

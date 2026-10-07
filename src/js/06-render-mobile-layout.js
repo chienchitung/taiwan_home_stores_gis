@@ -1,16 +1,12 @@
 /* ─── NON-BRAND FILTER POOL ENGINE (For Dynamic Faceted Counts) ─── */
 function getNonBrandFilteredPool() {
-  const q = document.getElementById("q").value.trim().toLowerCase();
+  const q = currentSearchQuery();
 
   let pool = ALL_STORES.filter(s => {
     if (!(DATASET_BRANDS[activeDatasetMode] || []).includes(s.brand)) return false;
     if (!storeMatchesFacets(s)) return false;
 
-    if (q) {
-      const haystack = `${s.brand} ${s.store_name} ${s.city} ${s.district || ""} ${s.address} ${s.channel_format} ${s.store_type} ${s.note || ""}`.toLowerCase();
-      if (!haystack.includes(q)) return false;
-    }
-    return true;
+    return storeMatchesSearch(s, q);
   });
 
   if (isViewportSync && map) {
