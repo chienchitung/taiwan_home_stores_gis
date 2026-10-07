@@ -38,7 +38,7 @@ function getNonBrandFilteredPool() {
    回到桌機寬度時再搬回原位，所以所有事件與狀態都沿用原本的程式。 */
 const MOBILE_MQ = window.matchMedia("(max-width: 768px)");
 const MOBILE_MOVES = [
-  [".ikea-logo-box", "mLogoSlot"],
+  [".app-logo", "mLogoSlot"],
   [".search-input-group", "mSearchSlot"],
   ["#btnToggleTimeline", "mMenuPopover"],
   ["#btnExport", "mMenuPopover"],

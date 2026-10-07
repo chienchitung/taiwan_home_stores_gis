@@ -9,8 +9,8 @@
 
   /* 上方浮動搜尋列 */
   .m-topbar { display: flex; align-items: center; gap: 8px; position: absolute; top: calc(8px + env(safe-area-inset-top)); left: 12px; right: 12px; z-index: 900; }
-  .m-logo-slot .ikea-logo-box { padding: 0; background: none; box-shadow: none; }
-  .m-logo-slot svg { width: 52px !important; height: auto !important; }
+  .m-logo-slot .app-logo { padding: 0; background: none; }
+  .m-logo-slot .app-logo svg { width: 40px; height: 40px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
   .m-search-slot { flex: 1; min-width: 0; }
   .m-search-slot .search-input-group { width: 100%; box-shadow: 0 2px 8px rgba(0,0,0,0.15); border-radius: 999px; background: #fff; }
   .m-search-slot .search-input-main { height: 44px; font-size: 16px; } /* 16px 避免 iOS 自動放大 */

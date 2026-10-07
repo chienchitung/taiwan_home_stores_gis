@@ -51,6 +51,7 @@ taiwan_home_stores_gis/
 │   ├── css/                             # 樣式，依檔名順序合併：基礎、地圖、清單、詳情、大頭針、時光軸、手機版
 │   └── js/                              # 互動程式，依檔名順序合併：資料設定、地圖、狀態、篩選、定位、
 │                                        #   清單渲染與手機版面、大頭針、清單、詳情與商圈、路線、互動事件、時光軸、啟動
+├── favicon.svg / favicon.ico / favicon-32.png / apple-touch-icon.png  # 網站圖示（中性地圖定位針）
 ├── stores_data.js                       # 產出檔：居家／量販門市資料
 ├── vendor/                              # 內建 Leaflet 與 MarkerCluster（不依賴外部 CDN）
 ├── pxmart_stores_data.js                # 隨選動態載入之全聯福利中心門市資料集

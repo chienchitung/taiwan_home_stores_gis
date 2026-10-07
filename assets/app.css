@@ -73,7 +73,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 /* ════════════════════════════════════════════
-   HEADER (Pure White Background with Official IKEA Logo)
+   HEADER (Pure White Background, neutral map-pin app logo)
 ════════════════════════════════════════════ */
 header {
   background: #FFFFFF;
@@ -89,14 +89,12 @@ header {
   z-index: 900;
 }
 
-.ikea-logo-box {
+.app-logo {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  cursor: pointer;
-  transition: transform 0.15s ease;
 }
-.ikea-logo-box:hover { transform: scale(1.02); }
+.app-logo svg { display: block; border-radius: 9px; }
 
 .title-group h1 {
   font-size: 16px;
@@ -3155,8 +3153,8 @@ aside.collapsed .sidebar-collapse-toggle {
 
   /* 上方浮動搜尋列 */
   .m-topbar { display: flex; align-items: center; gap: 8px; position: absolute; top: calc(8px + env(safe-area-inset-top)); left: 12px; right: 12px; z-index: 900; }
-  .m-logo-slot .ikea-logo-box { padding: 0; background: none; box-shadow: none; }
-  .m-logo-slot svg { width: 52px !important; height: auto !important; }
+  .m-logo-slot .app-logo { padding: 0; background: none; }
+  .m-logo-slot .app-logo svg { width: 40px; height: 40px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
   .m-search-slot { flex: 1; min-width: 0; }
   .m-search-slot .search-input-group { width: 100%; box-shadow: 0 2px 8px rgba(0,0,0,0.15); border-radius: 999px; background: #fff; }
   .m-search-slot .search-input-main { height: 44px; font-size: 16px; } /* 16px 避免 iOS 自動放大 */
