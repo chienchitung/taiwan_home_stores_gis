@@ -73,7 +73,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 /* ════════════════════════════════════════════
-   HEADER (Pure White Background with Official IKEA Logo)
+   HEADER (Pure White Background, neutral map-pin app logo)
 ════════════════════════════════════════════ */
 header {
   background: #FFFFFF;
@@ -89,14 +89,12 @@ header {
   z-index: 900;
 }
 
-.ikea-logo-box {
+.app-logo {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  cursor: pointer;
-  transition: transform 0.15s ease;
 }
-.ikea-logo-box:hover { transform: scale(1.02); }
+.app-logo svg { display: block; border-radius: 9px; }
 
 .title-group h1 {
   font-size: 16px;
