@@ -12,6 +12,7 @@ function expandSidebar() {
   const aside = document.getElementById("mainSidebar");
   aside.classList.remove("collapsed");
   document.getElementById("btnOpenSidebar").style.display = "none";
+  if (isTimelineMode) flushTimelineList(); // 時光軸期間略過的清單更新
   // 不重新置中（原本 invalidateSize 會把整張地圖往左推，造成點門市時的跳動）；
   // 只有選取的門市被展開的側欄蓋住時，才平移最小距離
   setTimeout(() => {
