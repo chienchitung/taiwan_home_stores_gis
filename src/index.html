@@ -247,35 +247,9 @@
           </div>
 
           <div class="filter-panel" id="filterPanel" hidden>
-          <div class="dropdown-grid">
-            <select class="custom-select" id="selCity">
-              <option value="">全部縣市</option>
-            </select>
-            <select class="custom-select" id="selDistrict">
-              <option value="">全部行政區</option>
-            </select>
-          </div>
-          <div class="dropdown-grid">
-            <select class="custom-select" id="selChannel">
-              <option value="">全部門市型態</option>
-              <option value="大型獨棟／街邊門市">大型獨棟／街邊門市</option>
-              <option value="百貨／購物中心門市">百貨／購物中心門市</option>
-              <option value="都會／社區門市">都會／社區門市</option>
-              <option value="量販店中店">量販店中店</option>
-              <option value="店中店／專櫃">店中店／專櫃</option>
-              <option value="子品牌門市">子品牌門市</option>
-              <option value="訂購取貨中心">訂購取貨中心</option>
-              <option value="期間限定門市">期間限定門市</option>
-            </select>
-            <select class="custom-select" id="selStatus">
-              <option value="">全部營運狀態</option>
-              <option value="現行營運中" selected>現行營運中</option>
-              <option value="暫停營業">暫停營業</option>
-              <option value="歷史變動（已熄燈/遷址）">已歇業／遷址</option>
-            </select>
-          </div>
+          <div class="facet-panel" id="facetPanel" role="group" aria-label="篩選條件"></div>
           <div class="filter-panel-actions">
-            <span class="filter-panel-hint">品牌可複選：點多個品牌按鈕即可同時比較</span>
+            <span class="filter-panel-hint">每一類都可複選；不同類的條件會同時套用</span>
             <button class="btn-reset-filters" id="btnResetAll" title="清空全部關鍵字與條件">重設篩選</button>
           </div>
           </div>

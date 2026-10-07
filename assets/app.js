@@ -388,99 +388,260 @@ function makePopupHtml(s) {
   </div>`;
 }
 
-/* ─── DROPDOWNS INITIALIZATION & TWO-WAY LINKAGE ─── */
-// 下拉選單的選項與數字依「目前資料集＋已選品牌＋其他篩選條件」計算（排除自身那一欄，方便改選）
-function getScopedStorePoolForDropdowns(exclude = "") {
+/* ─── MULTI-SELECT FACET FILTERS（縣市／行政區／門市型態／營運狀態）─── */
+// 同一類內是「或」（台北市或新北市），不同類之間是「且」（且為百貨型門市）。
+// 每個選項的數字＝套用「其他類」條件後的門市數；0 間的選項停用（已勾選的除外，方便取消）。
+const FACET_DEFAULT_STATUS = "現行營運中";
+const filterState = {
+  city: new Set(),
+  district: new Set(),   // 值為「縣市|行政區」，避免不同縣市的同名行政區（如東區、中正區）混在一起
+  channel: new Set(),
+  status: new Set([FACET_DEFAULT_STATUS])
+};
+const FACET_CITY_GROUPS = [
+  ["北部", ["台北市", "新北市", "基隆市", "桃園市", "新竹市", "新竹縣", "宜蘭縣"]],
+  ["中部", ["苗栗縣", "台中市", "彰化縣", "南投縣", "雲林縣"]],
+  ["南部", ["嘉義市", "嘉義縣", "台南市", "高雄市", "屏東縣"]],
+  ["東部", ["花蓮縣", "台東縣"]],
+  ["離島", ["澎湖縣", "金門縣", "連江縣"]]
+];
+const FACET_CHANNEL_OPTIONS = ["大型獨棟／街邊門市", "百貨／購物中心門市", "都會／社區門市", "量販店中店",
+  "店中店／專櫃", "子品牌門市", "訂購取貨中心", "期間限定門市"];
+const FACET_STATUS_OPTIONS = [["現行營運中", "現行營運中"], ["暫停營業", "暫停營業"], ["歷史變動（已熄燈/遷址）", "已歇業／遷址"]];
+const FACET_DISTRICT_MAX_CITIES = 3;   // 選太多縣市時行政區選項會上百個，只在 1～3 個縣市時提供
+const FACET_DISTRICT_PREVIEW = 8;      // 每個縣市先列 8 個行政區，其餘收在「顯示更多」
+const facetOpen = { status: true, city: true, district: true, channel: false };
+const facetDistrictExpanded = new Set();
+
+const storeFormatOf = s => s.store_format || s.channel_format;
+const districtKeyOf = s => `${s.city}|${s.district || ""}`;
+
+function isFacetStatusDefault() {
+  return filterState.status.size === 1 && filterState.status.has(FACET_DEFAULT_STATUS);
+}
+
+// 門市是否符合縣市／行政區／型態／狀態條件；exclude 指定略過哪一類（算該類選項數字用）
+function storeMatchesFacets(s, exclude = "") {
+  if (exclude !== "city" && filterState.city.size && !filterState.city.has(s.city)) return false;
+  if (exclude !== "city" && exclude !== "district" && filterState.district.size) {
+    // 只有勾了行政區的縣市才限縮行政區；同時勾選的其他縣市維持全縣市
+    const cityHasDistrict = [...filterState.district].some(k => k.startsWith(s.city + "|"));
+    if (cityHasDistrict && !filterState.district.has(districtKeyOf(s))) return false;
+  }
+  if (exclude !== "channel" && filterState.channel.size && !filterState.channel.has(storeFormatOf(s))) return false;
+  if (exclude !== "status" && filterState.status.size && !filterState.status.has(s.status_category)) return false;
+  return true;
+}
+
+// 目前資料集＋已選品牌＋縣市等條件（排除 exclude 那一類）
+function getFacetPool(exclude = "") {
   const allowedBrands = DATASET_BRANDS[activeDatasetMode] || [];
-  const val = id => { const el = document.getElementById(id); return el ? el.value : ""; };
-  const city = exclude === "city" ? "" : val("selCity");
-  const dist = (exclude === "city" || exclude === "district") ? "" : val("selDistrict");
-  const chan = exclude === "channel" ? "" : val("selChannel");
-  const stat = exclude === "status" ? "" : val("selStatus");
-  return ALL_STORES.filter(s => {
-    if (!allowedBrands.includes(s.brand)) return false;
-    if (activeBrands.size && !activeBrands.has(s.brand)) return false;
-    if (city && s.city !== city) return false;
-    if (dist && s.district !== dist) return false;
-    if (chan && (s.store_format || s.channel_format) !== chan) return false;
-    if (stat && s.status_category !== stat) return false;
-    return true;
-  });
+  return ALL_STORES.filter(s =>
+    allowedBrands.includes(s.brand) &&
+    (!activeBrands.size || activeBrands.has(s.brand)) &&
+    storeMatchesFacets(s, exclude));
 }
 
-// 固定選項的下拉（門市型態、營運狀態）：標上數字，該條件下沒有門市的選項停用（目前選取的除外）
-function updateFixedOptionCounts(selId, keyFn, exclude) {
-  const sel = document.getElementById(selId);
-  if (!sel) return;
-  const counts = {};
-  getScopedStorePoolForDropdowns(exclude).forEach(s => {
-    const k = keyFn(s);
-    if (k) counts[k] = (counts[k] || 0) + 1;
-  });
-  Array.from(sel.options).forEach(opt => {
-    if (!opt.dataset.label) opt.dataset.label = opt.textContent;
-    if (!opt.value) return;
-    const n = counts[opt.value] || 0;
-    opt.textContent = `${opt.dataset.label} (${n})`;
-    opt.disabled = n === 0 && sel.value !== opt.value;
-  });
+// 已套用條件數（營運狀態維持預設「現行營運中」時不算）
+function activeFacetCount() {
+  return filterState.city.size + filterState.district.size + filterState.channel.size +
+    (isFacetStatusDefault() ? 0 : 1);
 }
 
+// 清單／時光軸上「範圍」的文字描述
+function describeFacetScope(fallback) {
+  const cities = [...filterState.city];
+  if (!cities.length) return fallback;
+  if (cities.length === 1) {
+    const dists = [...filterState.district].filter(k => k.startsWith(cities[0] + "|")).map(k => k.split("|")[1]);
+    return dists.length ? `${cities[0]} ${dists.slice(0, 3).join("、")}${dists.length > 3 ? ` 等 ${dists.length} 區` : ""}` : cities[0];
+  }
+  return cities.length <= 3 ? cities.join("、") : `${cities.length} 個縣市`;
+}
+
+function resetFacetFilters() {
+  filterState.city.clear();
+  filterState.district.clear();
+  filterState.channel.clear();
+  filterState.status = new Set([FACET_DEFAULT_STATUS]);
+  facetDistrictExpanded.clear();
+}
+
+function countBy(pool, keyFn) {
+  const c = {};
+  pool.forEach(s => { const k = keyFn(s); if (k) c[k] = (c[k] || 0) + 1; });
+  return c;
+}
+
+const escAttr = v => String(v).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+
+function facetOptionHtml(facet, value, label, count, checked) {
+  const disabled = !count && !checked;
+  return `<label class="facet-opt${disabled ? " is-disabled" : ""}${checked ? " is-checked" : ""}">
+    <input type="checkbox" data-facet="${facet}" value="${escAttr(value)}"${checked ? " checked" : ""}${disabled ? " disabled" : ""}>
+    <span class="facet-label">${label}</span><span class="facet-cnt">${count || 0}</span>
+  </label>`;
+}
+
+function facetSectionHtml(facet, title, selCount, body) {
+  return `<details class="facet-section" data-facet="${facet}"${facetOpen[facet] ? " open" : ""}>
+    <summary><span class="facet-title">${title}${selCount ? `<span class="facet-sel-count">${selCount}</span>` : ""}</span>
+      <svg class="facet-chevron" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg></summary>
+    <div class="facet-body">${body}</div>
+  </details>`;
+}
+
+function renderFacetPanel() {
+  const panel = document.getElementById("facetPanel");
+  if (!panel) return;
+  // 重畫前記住焦點與捲動位置，勾選後不會跳掉
+  const active = document.activeElement;
+  const focusKey = active && panel.contains(active) && active.dataset
+    ? (active.dataset.facet ? `${active.dataset.facet}::${active.value}` : (active.dataset.action ? `${active.dataset.action}::${active.dataset.arg || ""}` : ""))
+    : "";
+  const scrollTop = panel.scrollTop;
+
+  // 營運狀態
+  const statusCounts = countBy(getFacetPool("status"), s => s.status_category);
+  const statusBody = FACET_STATUS_OPTIONS.map(([v, label]) =>
+    facetOptionHtml("status", v, label, statusCounts[v], filterState.status.has(v))).join("") +
+    (filterState.status.size ? "" : `<div class="facet-hint">未勾選＝顯示全部營運狀態</div>`);
+
+  // 縣市（依地區分組，每組可一次全選）
+  const cityCounts = countBy(getFacetPool("city"), s => s.city);
+  const knownCities = new Set(FACET_CITY_GROUPS.flatMap(g => g[1]));
+  const otherCities = Object.keys(cityCounts).filter(c => !knownCities.has(c));
+  const groups = otherCities.length ? [...FACET_CITY_GROUPS, ["其他", otherCities]] : FACET_CITY_GROUPS;
+  const cityBody = groups.map(([gName, cities]) => {
+    const shown = cities.filter(c => cityCounts[c] || filterState.city.has(c));
+    if (!shown.length) return "";
+    const selectable = shown.filter(c => cityCounts[c]);
+    const allOn = selectable.length && selectable.every(c => filterState.city.has(c));
+    return `<div class="facet-group">
+      <div class="facet-group-head"><span>${gName}</span>
+        <button type="button" class="facet-link" data-action="city-group" data-arg="${gName}">${allOn ? "取消全選" : "全選"}</button></div>
+      <div class="facet-grid">${shown.map(c => facetOptionHtml("city", c, c, cityCounts[c], filterState.city.has(c))).join("")}</div>
+    </div>`;
+  }).join("");
+
+  // 行政區（依已選縣市分組）
+  let districtBody;
+  const selCities = [...filterState.city];
+  if (!selCities.length) {
+    districtBody = `<div class="facet-hint">先勾選縣市（最多 ${FACET_DISTRICT_MAX_CITIES} 個）即可選擇行政區</div>`;
+  } else if (selCities.length > FACET_DISTRICT_MAX_CITIES) {
+    districtBody = `<div class="facet-hint">已選 ${selCities.length} 個縣市；勾選 ${FACET_DISTRICT_MAX_CITIES} 個以內的縣市才能再細分行政區</div>`;
+  } else {
+    const distCounts = countBy(getFacetPool("district"), s => s.district ? districtKeyOf(s) : "");
+    districtBody = selCities.map(city => {
+      const keys = Object.keys(distCounts).filter(k => k.startsWith(city + "|"));
+      filterState.district.forEach(k => { if (k.startsWith(city + "|") && !keys.includes(k)) keys.push(k); });
+      keys.sort((a, b) => (distCounts[b] || 0) - (distCounts[a] || 0));
+      if (!keys.length) return "";
+      const expanded = facetDistrictExpanded.has(city);
+      const visible = expanded ? keys : keys.filter((k, i) => i < FACET_DISTRICT_PREVIEW || filterState.district.has(k));
+      const more = keys.length - visible.length;
+      return `<div class="facet-group">
+        <div class="facet-group-head"><span>${city}</span></div>
+        <div class="facet-grid">${visible.map(k => facetOptionHtml("district", k, k.split("|")[1], distCounts[k], filterState.district.has(k))).join("")}</div>
+        ${more > 0 ? `<button type="button" class="facet-link facet-more" data-action="district-more" data-arg="${escAttr(city)}">顯示更多（${more}）</button>`
+          : (expanded && keys.length > FACET_DISTRICT_PREVIEW ? `<button type="button" class="facet-link facet-more" data-action="district-less" data-arg="${escAttr(city)}">收合</button>` : "")}
+      </div>`;
+    }).join("");
+  }
+
+  // 門市型態
+  const chanCounts = countBy(getFacetPool("channel"), storeFormatOf);
+  const chanBody = FACET_CHANNEL_OPTIONS
+    .filter(v => chanCounts[v] || filterState.channel.has(v))
+    .map(v => facetOptionHtml("channel", v, v, chanCounts[v], filterState.channel.has(v))).join("") ||
+    `<div class="facet-hint">目前條件下沒有門市</div>`;
+
+  panel.innerHTML =
+    facetSectionHtml("status", "營運狀態", isFacetStatusDefault() ? 0 : filterState.status.size, statusBody) +
+    facetSectionHtml("city", "縣市", filterState.city.size, cityBody) +
+    facetSectionHtml("district", "行政區", filterState.district.size, districtBody) +
+    facetSectionHtml("channel", "門市型態", filterState.channel.size, chanBody);
+
+  panel.scrollTop = scrollTop;
+  if (focusKey) {
+    const [a, b] = focusKey.split("::");
+    const el = [...panel.querySelectorAll("input[data-facet], button[data-action]")]
+      .find(x => (x.dataset.facet === a && x.value === b) || (x.dataset.action === a && (x.dataset.arg || "") === b));
+    if (el) el.focus({ preventScroll: true });
+  }
+}
+
+// 舊名稱沿用：資料集、品牌、重設等處都會呼叫
 function initDropdowns() {
-  const citySel = document.getElementById("selCity");
-  const selectedCity = citySel.value;
-  citySel.innerHTML = '<option value="">全部縣市</option>';
-  const pool = getScopedStorePoolForDropdowns("city");
-  const counts = {};
-  pool.forEach(s => {
-    if (s.city) counts[s.city] = (counts[s.city] || 0) + 1;
-  });
-  Object.keys(counts).sort((a, b) => counts[b] - counts[a]).forEach(c => {
-    const opt = document.createElement("option");
-    opt.value = c;
-    opt.textContent = `${c} (${counts[c]})`;
-    citySel.appendChild(opt);
-  });
-  if (selectedCity && counts[selectedCity]) {
-    citySel.value = selectedCity;
-  } else {
-    citySel.value = "";
-  }
-  updateDistrictDropdown(citySel.value);
-  updateFixedOptionCounts("selChannel", s => s.store_format || s.channel_format, "channel");
-  updateFixedOptionCounts("selStatus", s => s.status_category, "status");
+  renderFacetPanel();
 }
 
-function updateDistrictDropdown(selectedCity) {
-  const distSel = document.getElementById("selDistrict");
-  distSel.disabled = false;
-  distSel.title = "";
-  const previousVal = distSel.value;
-
-  if (selectedCity) {
-    distSel.innerHTML = '<option value="">全部行政區</option>';
-    const pool = getScopedStorePoolForDropdowns("district").filter(s => s.city === selectedCity);
-    const counts = {};
-    pool.forEach(s => {
-      if (s.district) counts[s.district] = (counts[s.district] || 0) + 1;
-    });
-    Object.keys(counts).sort((a, b) => counts[b] - counts[a]).forEach(d => {
-      const opt = document.createElement("option");
-      opt.value = d;
-      opt.textContent = `${d} (${counts[d]})`;
-      distSel.appendChild(opt);
-    });
-    if (previousVal && counts[previousVal]) {
-      distSel.value = previousVal;
-    } else {
-      distSel.value = "";
-    }
-  } else {
-    distSel.innerHTML = '<option value="">全部行政區</option>';
-    distSel.value = "";
-    distSel.disabled = true;
-    distSel.title = "請先選擇縣市";
+// 勾選縣市／行政區後，地圖縮放到符合條件的門市
+function fitMapToFacetSelection() {
+  if (!filterState.city.size) {
+    map.flyTo([23.75, 120.95], 8, { duration: 0.8 });
+    return;
   }
+  let fitList = getFacetPool();
+  if (!fitList.length) fitList = ALL_STORES.filter(s => filterState.city.has(s.city));
+  if (!fitList.length) return;
+  if (fitList.length === 1) {
+    map.flyTo([fitList[0].lat, fitList[0].lng], 15, { duration: 0.8 });
+    return;
+  }
+  map.fitBounds(L.latLngBounds(fitList.map(s => [s.lat, s.lng])),
+    { padding: [50, 50], maxZoom: filterState.district.size ? 15 : 13, duration: 0.8 });
+}
+
+function initFacetPanel() {
+  const panel = document.getElementById("facetPanel");
+  panel.addEventListener("toggle", e => {
+    const sec = e.target.closest && e.target.closest(".facet-section");
+    if (sec) facetOpen[sec.dataset.facet] = sec.open;
+  }, true);
+  panel.addEventListener("change", e => {
+    const input = e.target;
+    if (!input.dataset || !input.dataset.facet) return;
+    const facet = input.dataset.facet;
+    const set = filterState[facet];
+    if (input.checked) set.add(input.value); else set.delete(input.value);
+    if (facet === "city" && !input.checked) {
+      // 取消縣市時一併取消該縣市的行政區
+      [...filterState.district].forEach(k => { if (k.startsWith(input.value + "|")) filterState.district.delete(k); });
+      facetDistrictExpanded.delete(input.value);
+    }
+    if (facet === "city" || facet === "district") fitMapToFacetSelection();
+    render();
+  });
+  panel.addEventListener("click", e => {
+    const btn = e.target.closest("button[data-action]");
+    if (!btn) return;
+    e.preventDefault();
+    const arg = btn.dataset.arg;
+    if (btn.dataset.action === "city-group") {
+      const group = FACET_CITY_GROUPS.find(g => g[0] === arg);
+      const cityCounts = countBy(getFacetPool("city"), s => s.city);
+      const cities = (group ? group[1] : Object.keys(cityCounts)).filter(c => cityCounts[c]);
+      const allOn = cities.length && cities.every(c => filterState.city.has(c));
+      cities.forEach(c => {
+        if (allOn) {
+          filterState.city.delete(c);
+          [...filterState.district].forEach(k => { if (k.startsWith(c + "|")) filterState.district.delete(k); });
+        } else {
+          filterState.city.add(c);
+        }
+      });
+      fitMapToFacetSelection();
+      render();
+    } else if (btn.dataset.action === "district-more") {
+      facetDistrictExpanded.add(arg);
+      renderFacetPanel();
+    } else if (btn.dataset.action === "district-less") {
+      facetDistrictExpanded.delete(arg);
+      renderFacetPanel();
+    }
+  });
 }
 
 /* ─── QUICK BRAND CHIPS INITIALIZATION ─── */
@@ -573,10 +734,12 @@ function updateActiveRegionTooltip() {
   if (!reg) return;
 
   const regStores = filteredStores.filter(s => reg.cities.includes(s.city));
-  const selectedStatus = document.getElementById("selStatus").value;
-  const statusLabel = selectedStatus || "全部狀態";
+  const statusSet = filterState.status;
+  const statusLabel = statusSet.size
+    ? FACET_STATUS_OPTIONS.filter(([v]) => statusSet.has(v)).map(o => o[1]).join("、")
+    : "全部狀態";
   const totalStoresInRegion = ALL_STORES.filter(s =>
-    reg.cities.includes(s.city) && (!selectedStatus || s.status_category === selectedStatus)
+    reg.cities.includes(s.city) && (!statusSet.size || statusSet.has(s.status_category))
   ).length;
   const isFiltered = regStores.length !== totalStoresInRegion;
 
@@ -826,21 +989,10 @@ function getUserLocation() {
 /* ─── NON-BRAND FILTER POOL ENGINE (For Dynamic Faceted Counts) ─── */
 function getNonBrandFilteredPool() {
   const q = document.getElementById("q").value.trim().toLowerCase();
-  const city = document.getElementById("selCity").value;
-  const dist = document.getElementById("selDistrict").value;
-  const chan = document.getElementById("selChannel").value;
-  const stat = document.getElementById("selStatus").value;
 
   let pool = ALL_STORES.filter(s => {
     if (!(DATASET_BRANDS[activeDatasetMode] || []).includes(s.brand)) return false;
-    if (city && s.city !== city) return false;
-    if (dist && s.district !== dist) return false;
-
-    if (chan && (s.store_format || s.channel_format) !== chan) {
-      return false;
-    }
-
-    if (stat && s.status_category !== stat) return false;
+    if (!storeMatchesFacets(s)) return false;
 
     if (q) {
       const haystack = `${s.brand} ${s.store_name} ${s.city} ${s.district || ""} ${s.address} ${s.channel_format} ${s.store_type} ${s.note || ""}`.toLowerCase();
@@ -967,22 +1119,35 @@ function renderAppliedChips() {
   const box = document.getElementById("mAppliedChips");
   if (!box) return;
   const items = [];
-  [["selCity", ""], ["selDistrict", ""], ["selChannel", ""], ["selStatus", "現行營運中"]].forEach(([id, def]) => {
-    const sel = document.getElementById(id);
-    if (sel.value !== def) {
-      const label = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].textContent.replace(/\s*\(\d+\)$/, "") : sel.value;
-      items.push(`<button class="m-chip" data-sel="${id}" data-def="${def}" aria-label="移除條件：${label}">${label}<span aria-hidden="true">×</span></button>`);
+  const chip = (facet, value, label) =>
+    `<button class="m-chip" data-facet="${facet}" data-value="${escAttr(value)}" aria-label="移除條件：${label}">${label}<span aria-hidden="true">×</span></button>`;
+  filterState.city.forEach(c => items.push(chip("city", c, c)));
+  filterState.district.forEach(k => items.push(chip("district", k, k.replace("|", " "))));
+  filterState.channel.forEach(v => items.push(chip("channel", v, v)));
+  if (!isFacetStatusDefault()) {
+    if (filterState.status.size) {
+      FACET_STATUS_OPTIONS.filter(([v]) => filterState.status.has(v)).forEach(([v, label]) => items.push(chip("status", v, label)));
+    } else {
+      items.push(chip("status", "", "全部營運狀態"));
     }
-  });
+  }
   box.innerHTML = items.join("");
   box.hidden = items.length === 0;
 }
 document.getElementById("mAppliedChips").addEventListener("click", e => {
   const chip = e.target.closest(".m-chip");
   if (!chip) return;
-  const sel = document.getElementById(chip.dataset.sel);
-  sel.value = chip.dataset.def;
-  sel.dispatchEvent(new Event("change"));
+  const { facet, value } = chip.dataset;
+  if (facet === "status") {
+    // 移除營運狀態條件＝回到預設「現行營運中」
+    if (value && filterState.status.size > 1) filterState.status.delete(value);
+    else filterState.status = new Set([FACET_DEFAULT_STATUS]);
+  } else {
+    filterState[facet].delete(value);
+    if (facet === "city") [...filterState.district].forEach(k => { if (k.startsWith(value + "|")) filterState.district.delete(k); });
+  }
+  if (facet === "city" || facet === "district") fitMapToFacetSelection();
+  render();
 });
 
 // 防止 iOS Safari 縮放整個網頁。iOS 10 起 Safari 會忽略 viewport 的 maximum-scale，
@@ -1065,8 +1230,7 @@ document.getElementById("mAppliedChips").addEventListener("click", e => {
 
 // 篩選面板：顯示已套用的條件數（營運狀態預設為「現行營運中」，不算在內）
 function updateFilterCount() {
-  const n = ["selCity", "selDistrict", "selChannel"].filter(id => document.getElementById(id).value).length
-    + (document.getElementById("selStatus").value !== "現行營運中" ? 1 : 0);
+  const n = activeFacetCount();
   const badge = document.getElementById("lblFilterCount");
   badge.textContent = n;
   badge.hidden = n === 0;
@@ -1099,9 +1263,6 @@ function render() {
   // 3. Update viewport status indicator & guidance hint
   const hintBar = document.getElementById("viewportHintBar");
   const hintText = document.getElementById("viewportHintText");
-  const city = document.getElementById("selCity").value;
-  const dist = document.getElementById("selDistrict").value;
-
   if (isViewportSync && map) {
     const curZoom = map.getZoom();
     if (curZoom <= 8) {
@@ -1111,17 +1272,13 @@ function render() {
         if (hintText) hintText.textContent = "目前地圖視野涵蓋全台。請滾動滑鼠滾輪放大或拖曳地圖，名錄將即時篩選畫面內門市！";
       }
     } else {
-      const areaLabel = (city && dist) ? ` (${city} ${dist})` : (city ? ` (${city})` : "");
+      const scope = describeFacetScope("");
+      const areaLabel = scope ? ` (${scope})` : "";
       document.getElementById("lblViewportIndicator").innerHTML = `目前地圖範圍${areaLabel}：<strong>${nonBrandPool.length}</strong> 間`;
       if (hintBar) hintBar.style.display = "none";
     }
   } else {
-    let scopeDesc = "全台";
-    if (city && dist) {
-      scopeDesc = `${city} ${dist}`;
-    } else if (city) {
-      scopeDesc = city;
-    }
+    const scopeDesc = describeFacetScope("全台");
     document.getElementById("lblViewportIndicator").textContent = `清單範圍：${scopeDesc}，共 ${nonBrandPool.length} 間`;
     if (hintBar) hintBar.style.display = "none";
   }
@@ -2707,10 +2864,7 @@ document.querySelectorAll(".dataset-switch-btn").forEach(btn => {
 
 document.getElementById("btnResetAll").onclick = () => {
   document.getElementById("q").value = "";
-  document.getElementById("selCity").value = "";
-  document.getElementById("selDistrict").value = "";
-  document.getElementById("selChannel").value = "";
-  document.getElementById("selStatus").value = "現行營運中";
+  resetFacetFilters();
   activeBrands.clear();
   isSortedByDistance = false;
   if (activeRegionLayer) {
@@ -2764,55 +2918,7 @@ document.getElementById("btnClearSearch").onclick = () => {
   render();
 };
 
-document.getElementById("selCity").addEventListener("change", e => {
-  const city = e.target.value;
-  updateDistrictDropdown(city);
-  if (city) {
-    const scopedStores = getScopedStorePoolForDropdowns().filter(s => s.city === city);
-    const fitList = scopedStores.length > 0 ? scopedStores : ALL_STORES.filter(s => s.city === city);
-    if (fitList.length > 0) {
-      const b = L.latLngBounds(fitList.map(s => [s.lat, s.lng]));
-      map.fitBounds(b, { padding: [50, 50], maxZoom: 13, duration: 0.8 });
-    }
-  } else {
-    map.flyTo([23.75, 120.95], 8, { duration: 0.8 });
-  }
-  render();
-});
-
-document.getElementById("selDistrict").addEventListener("change", e => {
-  const dist = e.target.value;
-  const city = document.getElementById("selCity").value;
-  if (dist && city) {
-    const scopedStores = getScopedStorePoolForDropdowns().filter(s => s.city === city && s.district === dist);
-    const fitList = scopedStores.length > 0 ? scopedStores : ALL_STORES.filter(s => s.city === city && s.district === dist);
-    if (fitList.length > 0) {
-      if (fitList.length === 1) {
-        map.flyTo([fitList[0].lat, fitList[0].lng], 15, { duration: 0.8 });
-      } else {
-        const b = L.latLngBounds(fitList.map(s => [s.lat, s.lng]));
-        map.fitBounds(b, { padding: [50, 50], maxZoom: 15, duration: 0.8 });
-      }
-    }
-  } else if (!dist && city) {
-    const scopedStores = getScopedStorePoolForDropdowns().filter(s => s.city === city);
-    const fitList = scopedStores.length > 0 ? scopedStores : ALL_STORES.filter(s => s.city === city);
-    if (fitList.length > 0) {
-      const b = L.latLngBounds(fitList.map(s => [s.lat, s.lng]));
-      map.fitBounds(b, { padding: [50, 50], maxZoom: 13, duration: 0.8 });
-    }
-  }
-  render();
-});
-
-document.getElementById("selChannel").addEventListener("change", () => {
-  initDropdowns();
-  render();
-});
-document.getElementById("selStatus").addEventListener("change", () => {
-  initDropdowns();
-  render();
-});
+initFacetPanel();
 
 document.getElementById("vtCards").onclick = () => {
   viewMode = "cards";
@@ -2925,22 +3031,13 @@ function toggleTimelineMode() {
 
 function getTimelineStorePool() {
   const allowedBrands = DATASET_BRANDS[activeDatasetMode] || [];
-  const statEl = document.getElementById("selStatus");
-  const stat = statEl ? statEl.value : "";
-  const chanEl = document.getElementById("selChannel");
-  const chan = chanEl ? chanEl.value : "";
-  const city = document.getElementById("selCity").value;
-  const dist = document.getElementById("selDistrict").value;
   const qEl = document.getElementById("q");
   const q = qEl ? qEl.value.trim().toLowerCase() : "";
 
   return ALL_STORES.filter(s => {
     if (!allowedBrands.includes(s.brand)) return false;
     if (activeBrands.size && !activeBrands.has(s.brand)) return false;
-    if (stat && s.status_category !== stat) return false;
-    if (chan && (s.store_format || s.channel_format) !== chan) return false;
-    if (city && s.city !== city) return false;
-    if (dist && s.district !== dist) return false;
+    if (!storeMatchesFacets(s)) return false;
     if (q) {
       const match = (s.store_name && s.store_name.toLowerCase().includes(q)) ||
                     (s.brand && s.brand.toLowerCase().includes(q)) ||
@@ -2996,11 +3093,9 @@ function updateTimeline(year, triggerPulse = true) {
   if (curYearLabel) curYearLabel.textContent = timelineYear;
 
   // Update scope label
-  const city = document.getElementById("selCity").value;
-  const dist = document.getElementById("selDistrict").value;
   const scopeTextEl = document.getElementById("tlScopeText");
   if (scopeTextEl) {
-    scopeTextEl.textContent = dist ? `${city} ${dist}` : (city || "全台門市");
+    scopeTextEl.textContent = describeFacetScope("全台門市");
   }
 
   const pool = getTimelineStorePool();

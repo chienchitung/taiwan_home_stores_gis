@@ -3256,3 +3256,51 @@ svg[viewBox="0 0 24 24"][fill="currentColor"] { stroke: none !important; }
 .leaflet-tooltip.store-hover-tip { font-family: inherit; font-size: 12px; font-weight: 700; color: #111; padding: 4px 8px; border-radius: 6px; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
 .custom-popup .pop-btn.pop-btn-detail { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; min-height: 40px; margin: 4px 0 8px; padding: 0 14px; border-radius: 999px; background: #111; color: #fff !important; border: none; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer; }
 .custom-popup .pop-btn.pop-btn-detail:hover { background: #333; }
+/* ─── 多選篩選（縣市／行政區／門市型態／營運狀態）：可收合區塊＋勾選清單 ─── */
+.facet-panel { display: flex; flex-direction: column; max-height: min(45vh, 440px); overflow-y: auto; overscroll-behavior: contain; margin: 0 -4px; padding: 0 4px; }
+.facet-section { border-bottom: 1px solid var(--skapa-border); }
+.facet-section:last-child { border-bottom: none; }
+.facet-section > summary { list-style: none; display: flex; align-items: center; justify-content: space-between; min-height: 42px; padding: 0 4px; font-size: 14px; font-weight: 700; color: var(--skapa-text); cursor: pointer; user-select: none; }
+.facet-section > summary::-webkit-details-marker { display: none; }
+.facet-section > summary:focus-visible { outline: 2px solid var(--ikea-blue); outline-offset: -2px; border-radius: 6px; }
+.facet-title { display: inline-flex; align-items: center; gap: 8px; }
+.facet-sel-count { min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--ikea-blue); color: #fff; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+.facet-chevron { color: #767676; transition: transform 0.15s ease; flex-shrink: 0; }
+.facet-section[open] .facet-chevron { transform: rotate(180deg); }
+.facet-body { padding: 0 0 10px; }
+.facet-group + .facet-group { margin-top: 6px; }
+.facet-group-head { display: flex; align-items: center; justify-content: space-between; padding: 6px 6px 2px; font-size: 12px; font-weight: 700; color: var(--skapa-text-2); }
+.facet-link { border: none; background: none; padding: 4px 6px; margin: -4px -6px; border-radius: 6px; color: var(--ikea-blue); font-size: 12px; font-weight: 700; font-family: inherit; cursor: pointer; }
+.facet-link:hover { background: var(--ikea-blue-light); }
+.facet-more { display: block; margin: 2px 0 0 26px; }
+@media (max-width: 768px) { .facet-more { margin: 4px 0 0 32px; } }
+/* 縣市、行政區名稱短，排成兩欄省一半高度 */
+.facet-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 8px; }
+.facet-opt { display: flex; align-items: center; gap: 10px; min-height: 34px; padding: 0 6px; border-radius: 8px; font-size: 13px; color: var(--skapa-text); cursor: pointer; }
+.facet-opt:hover { background: #F5F5F5; }
+.facet-opt input { width: 16px; height: 16px; margin: 0; flex-shrink: 0; accent-color: var(--ikea-blue); cursor: pointer; }
+.facet-opt .facet-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.facet-opt .facet-cnt { flex-shrink: 0; font-size: 12px; color: var(--skapa-text-2); font-variant-numeric: tabular-nums; }
+.facet-opt.is-checked .facet-label { font-weight: 700; }
+.facet-opt.is-disabled { opacity: 0.4; cursor: default; }
+.facet-opt.is-disabled:hover { background: none; }
+.facet-opt.is-disabled input { cursor: default; }
+.facet-hint { padding: 4px 6px 6px; font-size: 12px; line-height: 1.5; color: var(--skapa-text-2); }
+
+/* 手機全螢幕篩選頁：不限高度（整頁捲動），每列 44px 方便點 */
+#mFilterSlot .facet-panel { max-height: none; overflow: visible; margin: 0; padding: 0; }
+@media (max-width: 768px) {
+  .facet-section > summary { min-height: 48px; font-size: 15px; }
+  .facet-opt { min-height: 44px; font-size: 15px; gap: 12px; }
+  .facet-opt input { width: 20px; height: 20px; }
+  .facet-opt .facet-cnt { font-size: 13px; }
+  .facet-group-head { font-size: 13px; padding-top: 8px; }
+  .facet-link { font-size: 13px; padding: 8px 10px; margin: -8px -10px; }
+}
+
+/* 桌機：篩選面板展開時整個清單面板一起捲動，避免勾選清單把門市清單擠出畫面（同矮螢幕的做法） */
+@media (min-width: 769px) {
+  #sidebarListSection:has(#filterPanel:not([hidden])) { overflow-y: auto; }
+  #sidebarListSection:has(#filterPanel:not([hidden])) > * { flex-shrink: 0; }
+  #sidebarListSection:has(#filterPanel:not([hidden])) .store-cards-container { flex: none; overflow: visible; }
+}

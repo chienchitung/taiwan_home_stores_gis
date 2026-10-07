@@ -96,22 +96,13 @@ function toggleTimelineMode() {
 
 function getTimelineStorePool() {
   const allowedBrands = DATASET_BRANDS[activeDatasetMode] || [];
-  const statEl = document.getElementById("selStatus");
-  const stat = statEl ? statEl.value : "";
-  const chanEl = document.getElementById("selChannel");
-  const chan = chanEl ? chanEl.value : "";
-  const city = document.getElementById("selCity").value;
-  const dist = document.getElementById("selDistrict").value;
   const qEl = document.getElementById("q");
   const q = qEl ? qEl.value.trim().toLowerCase() : "";
 
   return ALL_STORES.filter(s => {
     if (!allowedBrands.includes(s.brand)) return false;
     if (activeBrands.size && !activeBrands.has(s.brand)) return false;
-    if (stat && s.status_category !== stat) return false;
-    if (chan && (s.store_format || s.channel_format) !== chan) return false;
-    if (city && s.city !== city) return false;
-    if (dist && s.district !== dist) return false;
+    if (!storeMatchesFacets(s)) return false;
     if (q) {
       const match = (s.store_name && s.store_name.toLowerCase().includes(q)) ||
                     (s.brand && s.brand.toLowerCase().includes(q)) ||
@@ -167,11 +158,9 @@ function updateTimeline(year, triggerPulse = true) {
   if (curYearLabel) curYearLabel.textContent = timelineYear;
 
   // Update scope label
-  const city = document.getElementById("selCity").value;
-  const dist = document.getElementById("selDistrict").value;
   const scopeTextEl = document.getElementById("tlScopeText");
   if (scopeTextEl) {
-    scopeTextEl.textContent = dist ? `${city} ${dist}` : (city || "全台門市");
+    scopeTextEl.textContent = describeFacetScope("全台門市");
   }
 
   const pool = getTimelineStorePool();

@@ -1,21 +1,10 @@
 /* ─── NON-BRAND FILTER POOL ENGINE (For Dynamic Faceted Counts) ─── */
 function getNonBrandFilteredPool() {
   const q = document.getElementById("q").value.trim().toLowerCase();
-  const city = document.getElementById("selCity").value;
-  const dist = document.getElementById("selDistrict").value;
-  const chan = document.getElementById("selChannel").value;
-  const stat = document.getElementById("selStatus").value;
 
   let pool = ALL_STORES.filter(s => {
     if (!(DATASET_BRANDS[activeDatasetMode] || []).includes(s.brand)) return false;
-    if (city && s.city !== city) return false;
-    if (dist && s.district !== dist) return false;
-
-    if (chan && (s.store_format || s.channel_format) !== chan) {
-      return false;
-    }
-
-    if (stat && s.status_category !== stat) return false;
+    if (!storeMatchesFacets(s)) return false;
 
     if (q) {
       const haystack = `${s.brand} ${s.store_name} ${s.city} ${s.district || ""} ${s.address} ${s.channel_format} ${s.store_type} ${s.note || ""}`.toLowerCase();
@@ -142,22 +131,35 @@ function renderAppliedChips() {
   const box = document.getElementById("mAppliedChips");
   if (!box) return;
   const items = [];
-  [["selCity", ""], ["selDistrict", ""], ["selChannel", ""], ["selStatus", "現行營運中"]].forEach(([id, def]) => {
-    const sel = document.getElementById(id);
-    if (sel.value !== def) {
-      const label = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].textContent.replace(/\s*\(\d+\)$/, "") : sel.value;
-      items.push(`<button class="m-chip" data-sel="${id}" data-def="${def}" aria-label="移除條件：${label}">${label}<span aria-hidden="true">×</span></button>`);
+  const chip = (facet, value, label) =>
+    `<button class="m-chip" data-facet="${facet}" data-value="${escAttr(value)}" aria-label="移除條件：${label}">${label}<span aria-hidden="true">×</span></button>`;
+  filterState.city.forEach(c => items.push(chip("city", c, c)));
+  filterState.district.forEach(k => items.push(chip("district", k, k.replace("|", " "))));
+  filterState.channel.forEach(v => items.push(chip("channel", v, v)));
+  if (!isFacetStatusDefault()) {
+    if (filterState.status.size) {
+      FACET_STATUS_OPTIONS.filter(([v]) => filterState.status.has(v)).forEach(([v, label]) => items.push(chip("status", v, label)));
+    } else {
+      items.push(chip("status", "", "全部營運狀態"));
     }
-  });
+  }
   box.innerHTML = items.join("");
   box.hidden = items.length === 0;
 }
 document.getElementById("mAppliedChips").addEventListener("click", e => {
   const chip = e.target.closest(".m-chip");
   if (!chip) return;
-  const sel = document.getElementById(chip.dataset.sel);
-  sel.value = chip.dataset.def;
-  sel.dispatchEvent(new Event("change"));
+  const { facet, value } = chip.dataset;
+  if (facet === "status") {
+    // 移除營運狀態條件＝回到預設「現行營運中」
+    if (value && filterState.status.size > 1) filterState.status.delete(value);
+    else filterState.status = new Set([FACET_DEFAULT_STATUS]);
+  } else {
+    filterState[facet].delete(value);
+    if (facet === "city") [...filterState.district].forEach(k => { if (k.startsWith(value + "|")) filterState.district.delete(k); });
+  }
+  if (facet === "city" || facet === "district") fitMapToFacetSelection();
+  render();
 });
 
 // 防止 iOS Safari 縮放整個網頁。iOS 10 起 Safari 會忽略 viewport 的 maximum-scale，
@@ -240,8 +242,7 @@ document.getElementById("mAppliedChips").addEventListener("click", e => {
 
 // 篩選面板：顯示已套用的條件數（營運狀態預設為「現行營運中」，不算在內）
 function updateFilterCount() {
-  const n = ["selCity", "selDistrict", "selChannel"].filter(id => document.getElementById(id).value).length
-    + (document.getElementById("selStatus").value !== "現行營運中" ? 1 : 0);
+  const n = activeFacetCount();
   const badge = document.getElementById("lblFilterCount");
   badge.textContent = n;
   badge.hidden = n === 0;
@@ -274,9 +275,6 @@ function render() {
   // 3. Update viewport status indicator & guidance hint
   const hintBar = document.getElementById("viewportHintBar");
   const hintText = document.getElementById("viewportHintText");
-  const city = document.getElementById("selCity").value;
-  const dist = document.getElementById("selDistrict").value;
-
   if (isViewportSync && map) {
     const curZoom = map.getZoom();
     if (curZoom <= 8) {
@@ -286,17 +284,13 @@ function render() {
         if (hintText) hintText.textContent = "目前地圖視野涵蓋全台。請滾動滑鼠滾輪放大或拖曳地圖，名錄將即時篩選畫面內門市！";
       }
     } else {
-      const areaLabel = (city && dist) ? ` (${city} ${dist})` : (city ? ` (${city})` : "");
+      const scope = describeFacetScope("");
+      const areaLabel = scope ? ` (${scope})` : "";
       document.getElementById("lblViewportIndicator").innerHTML = `目前地圖範圍${areaLabel}：<strong>${nonBrandPool.length}</strong> 間`;
       if (hintBar) hintBar.style.display = "none";
     }
   } else {
-    let scopeDesc = "全台";
-    if (city && dist) {
-      scopeDesc = `${city} ${dist}`;
-    } else if (city) {
-      scopeDesc = city;
-    }
+    const scopeDesc = describeFacetScope("全台");
     document.getElementById("lblViewportIndicator").textContent = `清單範圍：${scopeDesc}，共 ${nonBrandPool.length} 間`;
     if (hintBar) hintBar.style.display = "none";
   }
