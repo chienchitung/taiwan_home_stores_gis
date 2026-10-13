@@ -72,7 +72,8 @@ taiwan_home_stores_gis/
     ├── finalize_store_audit.py          # 查核彙整產出腳本
     ├── sync_mass_retail_stores.py       # 量販門市同步腳本
     ├── sync_pxmart_stores.py            # 全聯福利中心門市同步腳本
-    ├── sync_lejiakang_stores.py         # 樂家康（原家樂福超市）門市同步＋商工登記開幕日期
+    ├── sync_lejiakang_stores.py         # 樂家康（原家樂福超市）門市同步（開幕日期只列新聞可查證者）
+    ├── verify_lejiakang_google_maps.py  # 樂家康門市座標逐筆比對 Google 地圖
     ├── LEJIAKANG_STORE_DATES_AUDIT.md   # 樂家康門市與開幕日期查核報告
     ├── sync_shopee_stores.py            # 蝦皮店到店同步腳本
     ├── mass_retail_location_audit.json  # 量販查核資料庫

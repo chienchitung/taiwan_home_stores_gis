@@ -1,0 +1,3800 @@
+[
+ {
+  "store": "樂家康 朴子文明南店",
+  "address": "嘉義縣朴子市文明南路162號",
+  "dashboard": [
+   23.45963274518147,
+   120.24800242127941
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 朴子文明南店",
+   "address": "613台灣嘉義縣朴子市平和里文明南路162號",
+   "lat": 23.459363399999997,
+   "lng": 120.2481468
+  },
+  "distance_m": 33,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台南文賢二店",
+  "address": "台南市北區文賢路1122巷1號",
+  "dashboard": [
+   23.016942,
+   120.19345
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 台南文賢店",
+   "address": "704臺南市北區文元里文賢路1122巷1號",
+   "lat": 23.01674,
+   "lng": 120.19377209999999
+  },
+  "distance_m": 40,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 潮州光春店",
+  "address": "屏東縣潮州鎮光春路216號",
+  "dashboard": [
+   22.539023247998944,
+   120.53896366579484
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 潮州光春店",
+   "address": "920屏東縣潮州鎮光春里光春路216號",
+   "lat": 22.538844899999997,
+   "lng": 120.5389744
+  },
+  "distance_m": 20,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新莊民安2店",
+  "address": "新北市新莊區民安路179號B1",
+  "dashboard": [
+   25.023333691794654,
+   121.42581780821347
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 新莊民安二店",
+   "address": "242新北市新莊區建安里民安路179號B1",
+   "lat": 25.023149,
+   "lng": 121.42585
+  },
+  "distance_m": 21,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新市民生店",
+  "address": "台南市新市區富林路418號",
+  "dashboard": [
+   23.07983115,
+   120.2899433
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 新市民生店",
+   "address": "744臺南市新市區新和里富林路418號",
+   "lat": 23.079623899999998,
+   "lng": 120.289836
+  },
+  "distance_m": 26,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 新莊新泰店",
+  "address": "新北市新莊區新泰路85號B1",
+  "dashboard": [
+   25.034693416479364,
+   121.44910920990294
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 新莊新泰店",
+   "address": "242新北市新莊區文衡里新泰路85號B1",
+   "lat": 25.0345558,
+   "lng": 121.44914279999999
+  },
+  "distance_m": 16,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 汐止龍安店",
+  "address": "新北市汐止區龍安路28巷6號B1",
+  "dashboard": [
+   25.064588723506187,
+   121.65513868509954
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 汐止龍安店",
+   "address": "221030新北市汐止區復興里龍安路28巷6號B1",
+   "lat": 25.064470099999998,
+   "lng": 121.6550319
+  },
+  "distance_m": 17,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 花蓮林森店",
+  "address": "花蓮縣花蓮市林森路349號",
+  "dashboard": [
+   23.9811861,
+   121.6047334
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 花蓮林森店",
+   "address": "970花蓮縣花蓮市國華里林森路349號",
+   "lat": 23.9810749,
+   "lng": 121.60463449999999
+  },
+  "distance_m": 16,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 大安仁愛店",
+  "address": "台北市大安區仁愛路四段151巷37號B1",
+  "dashboard": [
+   25.0406114,
+   121.5520535
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 大安仁愛店",
+   "address": "106臺北市大安區建倫里仁愛路四段151巷37號B1",
+   "lat": 25.0406729,
+   "lng": 121.55171279999999
+  },
+  "distance_m": 35,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 士林華聲店",
+  "address": "台北市士林區華聲街17號1樓",
+  "dashboard": [
+   25.09673772,
+   121.5225279
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 士林華聲店",
+   "address": "111臺北市士林區福佳里華聲街17號1樓",
+   "lat": 25.0963109,
+   "lng": 121.52216089999999
+  },
+  "distance_m": 60,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 左營文上店",
+  "address": "高雄市左營區文上路5號",
+  "dashboard": [
+   22.671896074971162,
+   120.30090526765314
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 左營文上店",
+   "address": "813高雄市左營區新下里文上路5號",
+   "lat": 22.6716783,
+   "lng": 120.3008409
+  },
+  "distance_m": 25,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 太保祥和店",
+  "address": "嘉義縣太保市太保二路111號",
+  "dashboard": [
+   23.45662233901608,
+   120.29532891164787
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 太保祥和店",
+   "address": "612嘉義縣太保市安仁里太保二路111號",
+   "lat": 23.456450099999998,
+   "lng": 120.2954362
+  },
+  "distance_m": 22,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 三峽大學店",
+  "address": "新北市三峽區大學路119.121.123號一樓",
+  "dashboard": [
+   24.946255626439125,
+   121.37382166876597
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 三峽大學店",
+   "address": "237新北市三峽區龍學里大學路119.121號123號1樓",
+   "lat": 24.9431688,
+   "lng": 121.3748409
+  },
+  "distance_m": 358,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 太平育賢店",
+  "address": "台中市太平區育賢路190號",
+  "dashboard": [
+   24.1576974,
+   120.720645
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 太平育賢店",
+   "address": "411臺中市太平區新坪里育賢路190號",
+   "lat": 24.1576117,
+   "lng": 120.7207564
+  },
+  "distance_m": 15,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 北屯總太店",
+  "address": "台中市北屯區環太東路477號",
+  "dashboard": [
+   24.1583144,
+   120.7294812
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 北屯總太店",
+   "address": "406臺中市北屯區廍子里環太東路477號",
+   "lat": 24.1582188,
+   "lng": 120.730184
+  },
+  "distance_m": 72,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 烏日信義店",
+  "address": "台中市烏日區信義街164巷9弄17號",
+  "dashboard": [
+   24.1053457,
+   120.6394683
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 烏日信義店",
+   "address": "414臺中市烏日區仁德里信義街164巷9弄17號",
+   "lat": 24.1053045,
+   "lng": 120.6395273
+  },
+  "distance_m": 8,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 嘉義民族店",
+  "address": "嘉義市西區民族路610號",
+  "dashboard": [
+   23.4757486,
+   120.4456088
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 嘉義民族店",
+   "address": "600嘉義市西區西榮里民族路610號1F",
+   "lat": 23.4757486,
+   "lng": 120.44560879999999
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 龜山文青店",
+  "address": "桃園市龜山區文青路137號B1",
+  "dashboard": [
+   25.04041,
+   121.3872
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 龜山文青店",
+   "address": "333桃園市龜山區文青路137號B1",
+   "lat": 25.040379899999998,
+   "lng": 121.3865517
+  },
+  "distance_m": 65,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園中埔六店",
+  "address": "桃園市桃園區中埔六街127號",
+  "dashboard": [
+   25.0179321,
+   121.2953184
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園中埔六店",
+   "address": "330台灣桃園市桃園區中埔六街127號",
+   "lat": 25.0178791,
+   "lng": 121.295318
+  },
+  "distance_m": 6,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 八里商港店",
+  "address": "新北市八里區商港七路21號1樓",
+  "dashboard": [
+   25.1483621,
+   121.3976446
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 八里商港店",
+   "address": "249台灣新北市八里區訊塘里商港七路21號1樓",
+   "lat": 25.148197099999997,
+   "lng": 121.3988376
+  },
+  "distance_m": 121,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 土城廣明店",
+  "address": "新北市土城區廣明街63巷31號1F",
+  "dashboard": [
+   24.9930186,
+   121.453874
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 土城廣明店",
+   "address": "236新北市土城區廣明街63巷31號1樓",
+   "lat": 24.9930699,
+   "lng": 121.4539528
+  },
+  "distance_m": 10,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 高雄九如1店",
+  "address": "高雄市三民區九如一路886號",
+  "dashboard": [
+   22.6403642,
+   120.3178039
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 高雄九如一店",
+   "address": "807台灣高雄市三民區九如一路886號",
+   "lat": 22.6402474,
+   "lng": 120.31796
+  },
+  "distance_m": 21,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 土城中央店",
+  "address": "新北市土城區中央路二段191號B1",
+  "dashboard": [
+   24.97555,
+   121.442169
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 土城中央店",
+   "address": "236台灣新北市土城區中央路二段191號B1",
+   "lat": 24.975534999999997,
+   "lng": 121.442173
+  },
+  "distance_m": 2,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 大安臨江店",
+  "address": "台北市大安區臨江街87號B1",
+  "dashboard": [
+   25.0302181,
+   121.555016
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 大安臨江店",
+   "address": "106台灣臺北市大安區臨江街87號",
+   "lat": 25.0301999,
+   "lng": 121.5549539
+  },
+  "distance_m": 7,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 鳳山甲1店",
+  "address": "高雄市鳳山區和興里五甲一路261號",
+  "dashboard": [
+   22.6171627,
+   120.354439
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 鳳山甲一店",
+   "address": "830台灣高雄市鳳山區和興里五甲一路261號",
+   "lat": 22.6167236,
+   "lng": 120.3542526
+  },
+  "distance_m": 52,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 小港漢民店",
+  "address": "高雄市小港區漢民路798號",
+  "dashboard": [
+   22.5684223,
+   120.364365
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 小港漢民店",
+   "address": "812台灣高雄市小港區山明里漢民路798號",
+   "lat": 22.5684355,
+   "lng": 120.3643371
+  },
+  "distance_m": 3,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 三重新北大道店",
+  "address": "新北市三重區新北大道一段115號B1",
+  "dashboard": [
+   25.0613766,
+   121.483978
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 三重新北大道店",
+   "address": "241台灣新北市三重區光田里新北大道一段115號B1",
+   "lat": 25.061248499999998,
+   "lng": 121.4836254
+  },
+  "distance_m": 38,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台中復興店",
+  "address": "台中市南區復興路二段120號",
+  "dashboard": [
+   24.1240482,
+   120.663628
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 台中復興店",
+   "address": "402臺中市南區福順里復興路二段120號",
+   "lat": 24.1239773,
+   "lng": 120.6635295
+  },
+  "distance_m": 13,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 中壢成章1店",
+  "address": "桃園市中壢區成章一街88號",
+  "dashboard": [
+   24.97688,
+   121.258156
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 中壢成章1店",
+   "address": "320台灣桃園市中壢區成章一街88號",
+   "lat": 24.9769808,
+   "lng": 121.257984
+  },
+  "distance_m": 21,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 高雄天祥店",
+  "address": "高雄市三民區天祥一路102號",
+  "dashboard": [
+   22.6676369,
+   120.320175
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 高雄天祥店",
+   "address": "807台灣高雄市三民區天祥一路102號",
+   "lat": 22.667796199999998,
+   "lng": 120.3203475
+  },
+  "distance_m": 25,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 內湖江南店",
+  "address": "台北市內湖區江南街55號",
+  "dashboard": [
+   25.0775318,
+   121.577835
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 內湖江南店",
+   "address": "114台灣臺北市內湖區港墘里江南街55號",
+   "lat": 25.077458099999998,
+   "lng": 121.5779106
+  },
+  "distance_m": 11,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 北投明德店",
+  "address": "台北市北投區明德路161號B1樓",
+  "dashboard": [
+   25.1115189,
+   121.52066
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 北投明德店",
+   "address": "112台灣臺北市北投區明德路161號B1樓",
+   "lat": 25.1115678,
+   "lng": 121.5210164
+  },
+  "distance_m": 36,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 左營崇德店",
+  "address": "高雄市左營區崇德路360號",
+  "dashboard": [
+   22.6770153,
+   120.302238
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 左營崇德店",
+   "address": "813台灣高雄市左營區新光里崇德路360號",
+   "lat": 22.676884299999998,
+   "lng": 120.30204619999999
+  },
+  "distance_m": 24,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 內湖成功店",
+  "address": "台北市內湖區成功路三段174巷8號B1",
+  "dashboard": [
+   25.08103,
+   121.590523
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 內湖成功店",
+   "address": "114台灣臺北市內湖區成功路三段174巷8號B1",
+   "lat": 25.080927,
+   "lng": 121.5905513
+  },
+  "distance_m": 12,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台中大里中興店",
+  "address": "台中市大里區中興路二段550號",
+  "dashboard": [
+   24.11381,
+   120.689941
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 大里中興店",
+   "address": "412台灣臺中市大里區中興路二段550號",
+   "lat": 24.1137189,
+   "lng": 120.6899294
+  },
+  "distance_m": 10,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 太平環中店",
+  "address": "台中市太平區環中東路三段567號",
+  "dashboard": [
+   24.1493568,
+   120.715408
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 太平環中東店",
+   "address": "411台灣臺中市太平區環中東路三段567號",
+   "lat": 24.1493739,
+   "lng": 120.7152895
+  },
+  "distance_m": 12,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北錦州店",
+  "address": "台北市中山區錦州街276號",
+  "dashboard": [
+   25.0602202,
+   121.5348214
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北錦州店",
+   "address": "10477台灣臺北市中山區松江里錦州街276號",
+   "lat": 25.0602174,
+   "lng": 121.5349875
+  },
+  "distance_m": 17,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 土城日月光店",
+  "address": "新北市土城區學府路二段210號B2樓",
+  "dashboard": [
+   24.9788036,
+   121.445122
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 土城日月光店",
+   "address": "236台灣新北市土城區學府路二段210號B2樓",
+   "lat": 24.9787201,
+   "lng": 121.4451146
+  },
+  "distance_m": 9,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園大興店",
+  "address": "桃園市桃園區大興路1號",
+  "dashboard": [
+   25.0152035,
+   121.308449
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園大興店",
+   "address": "330台灣桃園市桃園區大興路1號",
+   "lat": 25.015336299999998,
+   "lng": 121.3096515
+  },
+  "distance_m": 122,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 板橋文化店",
+  "address": "新北市板橋區文化路二段313號B1",
+  "dashboard": [
+   25.0297356,
+   121.469688
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 板橋文化店",
+   "address": "220新北市板橋區江翠里文化路二段313號B1",
+   "lat": 25.029736099999997,
+   "lng": 121.47188399999999
+  },
+  "distance_m": 221,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北內湖1店",
+  "address": "台北市內湖區內湖路一段155號",
+  "dashboard": [
+   25.0835419,
+   121.563217
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北內湖一店",
+   "address": "114台灣臺北市內湖區西康里內湖路一段155號",
+   "lat": 25.083633499999998,
+   "lng": 121.5633122
+  },
+  "distance_m": 14,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台中大墩11店",
+  "address": "台中市南屯區大墩十一街730號",
+  "dashboard": [
+   24.14861,
+   120.632851
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台中大墩11店",
+   "address": "408台灣臺中市南屯區大墩十一街730號",
+   "lat": 24.148604799999998,
+   "lng": 120.63504429999999
+  },
+  "distance_m": 223,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台中進化店",
+  "address": "台中市北區進化路379號",
+  "dashboard": [
+   24.1546936,
+   120.694229
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台中進化店",
+   "address": "404台灣臺中市北區進化路379號",
+   "lat": 24.154664699999998,
+   "lng": 120.69420699999999
+  },
+  "distance_m": 4,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新莊中港店",
+  "address": "新北市新莊區中港路336號",
+  "dashboard": [
+   25.04601,
+   121.451492
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 新莊中港店",
+   "address": "242新北市新莊區中港路336號",
+   "lat": 25.0456522,
+   "lng": 121.452283
+  },
+  "distance_m": 89,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北濟南店",
+  "address": "台北市中正區濟南路2段46號B1",
+  "dashboard": [
+   25.0403671,
+   121.530579
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北濟南店",
+   "address": "100台灣臺北市中正區幸市里濟南路二段46號",
+   "lat": 25.040329,
+   "lng": 121.530964
+  },
+  "distance_m": 39,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 蘆洲光華店",
+  "address": "新北市蘆洲區光華路200號",
+  "dashboard": [
+   25.0819626,
+   121.46331
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 蘆洲光華店",
+   "address": "247台灣新北市蘆洲區光華路200號",
+   "lat": 25.0820507,
+   "lng": 121.46442069999999
+  },
+  "distance_m": 112,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台南裕農店",
+  "address": "台南市東區裕農路766號",
+  "dashboard": [
+   22.9890327,
+   120.238136
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台南裕農店",
+   "address": "701台灣臺南市東區裕農路766號",
+   "lat": 22.9888013,
+   "lng": 120.2386459
+  },
+  "distance_m": 58,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新竹南大店",
+  "address": "新竹市東區南大路286號",
+  "dashboard": [
+   24.7992153,
+   120.971542
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新竹南大店",
+   "address": "300台灣新竹市東區南大路286號",
+   "lat": 24.7992048,
+   "lng": 120.97210009999999
+  },
+  "distance_m": 56,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 大甲蔣公店",
+  "address": "台中市大甲區蔣公路295號",
+  "dashboard": [
+   24.34784,
+   120.617447
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 大甲蔣公店",
+   "address": "437台灣臺中市大甲區蔣公路295號",
+   "lat": 24.3477176,
+   "lng": 120.6175744
+  },
+  "distance_m": 19,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園龍安店",
+  "address": "桃園市桃園區龍安街137號",
+  "dashboard": [
+   24.99078,
+   121.279526
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園龍安店",
+   "address": "330台灣桃園市桃園區龍安街137號",
+   "lat": 24.9908494,
+   "lng": 121.279405
+  },
+  "distance_m": 14,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 內湖東湖店",
+  "address": "台北市內湖區東湖路69號B1",
+  "dashboard": [
+   25.0686741,
+   121.614441
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 內湖東湖店",
+   "address": "114台灣臺北市內湖區安湖里東湖路69號B1",
+   "lat": 25.0689469,
+   "lng": 121.61513439999999
+  },
+  "distance_m": 76,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 屏東自由店",
+  "address": "屏東縣屏東市自由路618號",
+  "dashboard": [
+   22.68336,
+   120.482346
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 屏東自由店",
+   "address": "900台灣屏東縣屏東市崇蘭里自由路618號",
+   "lat": 22.6833849,
+   "lng": 120.48296979999999
+  },
+  "distance_m": 64,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台南北安店",
+  "address": "台南市北區北安路一段167號",
+  "dashboard": [
+   23.0176144,
+   120.208595
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台南北安店",
+   "address": "704台灣臺南市北區北安路一段167號",
+   "lat": 23.0175797,
+   "lng": 120.2085051
+  },
+  "distance_m": 10,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 左營重和店",
+  "address": "高雄市左營區文川路323號",
+  "dashboard": [
+   22.6845856,
+   120.3124
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 左營重和店",
+   "address": "813台灣高雄市左營區文川路323號",
+   "lat": 22.684807,
+   "lng": 120.31238769999999
+  },
+  "distance_m": 25,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 中壢中北店",
+  "address": "桃園市中壢區中北路111號",
+  "dashboard": [
+   24.9569645,
+   121.236137
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 中壢中北店",
+   "address": "320台灣桃園市中壢區普仁里中北路111號",
+   "lat": 24.9567226,
+   "lng": 121.23846479999999
+  },
+  "distance_m": 236,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台南開元店",
+  "address": "台南市北區開元路501號",
+  "dashboard": [
+   23.00767,
+   120.220833
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台南開元店",
+   "address": "704台灣臺南市北區開元路501號",
+   "lat": 23.010527,
+   "lng": 120.2248867
+  },
+  "distance_m": 523,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 板橋中正店",
+  "address": "新北市板橋區中正路302號",
+  "dashboard": [
+   25.0207176,
+   121.455223
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 板橋中正店",
+   "address": "220台灣新北市板橋區港尾里中正路302號",
+   "lat": 25.020648599999998,
+   "lng": 121.4548502
+  },
+  "distance_m": 38,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 三民建工店",
+  "address": "高雄市三民區建工路497號",
+  "dashboard": [
+   22.650034,
+   120.3247
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 三民建工店",
+   "address": "807台灣高雄市三民區建工路497號",
+   "lat": 22.6487521,
+   "lng": 120.3225181
+  },
+  "distance_m": 265,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 永和永安店",
+  "address": "新北市永和區中和路499-1號",
+  "dashboard": [
+   25.0022545,
+   121.51059
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 永和永安店",
+   "address": "234台灣新北市永和區安和里中和路499-1號",
+   "lat": 25.0022384,
+   "lng": 121.5105292
+  },
+  "distance_m": 6,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 景安店",
+  "address": "新北市中和區景平路353號B1",
+  "dashboard": [
+   24.99338,
+   121.504791
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 中和景安店",
+   "address": "235台灣新北市中和區和興里景平路353號B1",
+   "lat": 24.9932475,
+   "lng": 121.5047146
+  },
+  "distance_m": 17,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 莊敬店",
+  "address": "台南市東區莊敬路118號1樓",
+  "dashboard": [
+   22.9956245,
+   120.232895
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台南莊敬店",
+   "address": "701台灣臺南市東區莊敬路118號1樓",
+   "lat": 22.9957003,
+   "lng": 120.2331016
+  },
+  "distance_m": 23,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 南竹店",
+  "address": "桃園市蘆竹區桃園街118號B1",
+  "dashboard": [
+   25.0481,
+   121.2907
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園南竹店",
+   "address": "338台灣桃園市蘆竹區桃園街118號B1",
+   "lat": 25.0476913,
+   "lng": 121.29159539999999
+  },
+  "distance_m": 101,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 天母中北店",
+  "address": "台北市士林區中山北路七段113號",
+  "dashboard": [
+   25.1224,
+   121.531647
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 天母中北店",
+   "address": "111台灣臺北市士林區天母里中山北路七段113號B1",
+   "lat": 25.1223839,
+   "lng": 121.53166309999999
+  },
+  "distance_m": 2,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 豐南店",
+  "address": "台中市豐原區豐南街118號",
+  "dashboard": [
+   24.24056,
+   120.715279
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 豐原豐南店",
+   "address": "420台灣臺中市豐原區豐南街118號",
+   "lat": 24.2392289,
+   "lng": 120.7148103
+  },
+  "distance_m": 155,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台中昌平店",
+  "address": "台中市北屯區昌平路一段105-1號",
+  "dashboard": [
+   24.17332,
+   120.690331
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 台中昌平店",
+   "address": "406臺中市北屯區昌平路一段105-1號",
+   "lat": 24.173446199999997,
+   "lng": 120.6904052
+  },
+  "distance_m": 16,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新莊丹鳳店",
+  "address": "新北市新莊區雙鳳路59號",
+  "dashboard": [
+   25.02726,
+   121.415855
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新莊丹鳳店",
+   "address": "242台灣新北市新莊區雙鳳路59號",
+   "lat": 25.0274038,
+   "lng": 121.4151909
+  },
+  "distance_m": 69,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 永康二王店",
+  "address": "台南市永康區中山南路696號",
+  "dashboard": [
+   23.0202084,
+   120.244316
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 永康二王店",
+   "address": "710台灣臺南市永康區中山南路696號",
+   "lat": 23.020094399999998,
+   "lng": 120.24462849999999
+  },
+  "distance_m": 34,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 高雄岡山店",
+  "address": "高雄市岡山區岡山路288號",
+  "dashboard": [
+   22.79323,
+   120.296036
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 高雄岡山店",
+   "address": "820台灣高雄市岡山區岡山路288號",
+   "lat": 22.7932183,
+   "lng": 120.29653859999999
+  },
+  "distance_m": 52,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 高雄小港店",
+  "address": "高雄市小港區宏平路411號",
+  "dashboard": [
+   22.5697117,
+   120.358109
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 高雄小港店",
+   "address": "812台灣高雄市小港區順苓里宏平路411號",
+   "lat": 22.5695929,
+   "lng": 120.3580051
+  },
+  "distance_m": 17,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台中漢口店",
+  "address": "台中市北區漢口路四段295號",
+  "dashboard": [
+   24.1673126,
+   120.680244
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台中漢口店",
+   "address": "404台灣臺中市北區梅川里漢口路四段295號",
+   "lat": 24.1672811,
+   "lng": 120.6804425
+  },
+  "distance_m": 20,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 楠梓益群店",
+  "address": "高雄市楠梓區益群路50號",
+  "dashboard": [
+   22.7249565,
+   120.296913
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 楠梓益群店",
+   "address": "811台灣高雄市楠梓區仁昌里益群路50號",
+   "lat": 22.7246724,
+   "lng": 120.29733209999999
+  },
+  "distance_m": 53,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園南平店",
+  "address": "桃園市桃園區南平路168號",
+  "dashboard": [
+   25.0198746,
+   121.302208
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園南平店",
+   "address": "330台灣桃園市桃園區自強里南平路168號",
+   "lat": 25.019916199999997,
+   "lng": 121.3020681
+  },
+  "distance_m": 15,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北敦化北店",
+  "address": "台北市松山區敦化北路199巷5號",
+  "dashboard": [
+   25.057122,
+   121.55113
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北敦化北店",
+   "address": "105台灣臺北市松山區精忠里敦化北路199巷5號",
+   "lat": 25.0570257,
+   "lng": 121.55124699999999
+  },
+  "distance_m": 16,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 南港舊莊店",
+  "address": "台北市南港區舊莊街一段196號",
+  "dashboard": [
+   25.03854,
+   121.622105
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 南港舊莊店",
+   "address": "115台灣臺北市南港區舊莊里舊莊街一段196號",
+   "lat": 25.0385301,
+   "lng": 121.62203819999999
+  },
+  "distance_m": 7,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 三重中正北店",
+  "address": "新北市三重區中正北路67號、69號",
+  "dashboard": [
+   25.06324,
+   121.490416
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 三重中正北店",
+   "address": "241台灣新北市三重區重陽里中正北路67號",
+   "lat": 25.0630901,
+   "lng": 121.49034859999999
+  },
+  "distance_m": 18,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 三重五華店",
+  "address": "新北市三重區五華街110巷1-4號",
+  "dashboard": [
+   25.083056,
+   121.492035
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 三重五華店",
+   "address": "241台灣新北市三重區五華街110巷1-4號",
+   "lat": 25.0829837,
+   "lng": 121.49218619999999
+  },
+  "distance_m": 17,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 三重仁愛二店",
+  "address": "新北市三重區仁愛街81號",
+  "dashboard": [
+   25.073129,
+   121.496089
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 三重仁愛二店",
+   "address": "241台灣新北市三重區仁愛街81號",
+   "lat": 25.0730416,
+   "lng": 121.4961196
+  },
+  "distance_m": 10,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 三重永福店",
+  "address": "新北市三重區永福街245、247、249號",
+  "dashboard": [
+   25.074304,
+   121.480958
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 三重永福店",
+   "address": "241新北市三重區永福街245號",
+   "lat": 25.0743041,
+   "lng": 121.4809576
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 三重重陽店",
+  "address": "新北市三重區重陽路一段41號",
+  "dashboard": [
+   25.057874,
+   121.48683
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 三重重陽店",
+   "address": "241台灣新北市三重區過田里重陽路一段41號",
+   "lat": 25.057831399999998,
+   "lng": 121.4868743
+  },
+  "distance_m": 7,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 三重溪尾店",
+  "address": "新北市三重區溪尾街125號1樓",
+  "dashboard": [
+   25.079211,
+   121.489526
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 三重溪尾店",
+   "address": "241台灣新北市三重區溪美里溪尾街125號1樓",
+   "lat": 25.079748199999997,
+   "lng": 121.4895488
+  },
+  "distance_m": 60,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 三峽中山店",
+  "address": "新北市三峽區中山路171號",
+  "dashboard": [
+   24.936457,
+   121.364276
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 三峽中山店",
+   "address": "237台灣新北市三峽區鳶山里中山路171號",
+   "lat": 24.936516299999997,
+   "lng": 121.3640068
+  },
+  "distance_m": 28,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 三峽光明店",
+  "address": "新北市三峽區光明路71號",
+  "dashboard": [
+   24.928314,
+   121.376125
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 三峽光明店",
+   "address": "237台灣新北市三峽區介壽里光明路71號",
+   "lat": 24.928313499999998,
+   "lng": 121.37612449999999
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 土城立德店",
+  "address": "新北市土城區立德路105號",
+  "dashboard": [
+   24.987553,
+   121.463859
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 土城立德店",
+   "address": "236台灣新北市土城區立德路105號",
+   "lat": 24.9875229,
+   "lng": 121.46385
+  },
+  "distance_m": 3,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 土城金城店",
+  "address": "新北市土城區金城路三段202-6號",
+  "dashboard": [
+   24.988294,
+   121.469544
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市-土城金城店",
+   "address": "236台灣新北市土城區金城路三段202-6號",
+   "lat": 24.987567799999997,
+   "lng": 121.46897279999999
+  },
+  "distance_m": 99,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 土城學府店",
+  "address": "新北市土城區學府路一段157,161號",
+  "dashboard": [
+   24.985812,
+   121.453168
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 土城學府店",
+   "address": "236台灣新北市土城區學府里學府路一段157號",
+   "lat": 24.9858123,
+   "lng": 121.4531677
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 士林社中店",
+  "address": "台北市士林區社中街222號1樓",
+  "dashboard": [
+   25.091336,
+   121.508256
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 士林社中店",
+   "address": "111台灣臺北市士林區社中街222號1樓",
+   "lat": 25.0912681,
+   "lng": 121.5082674
+  },
+  "distance_m": 8,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 士林雨聲店",
+  "address": "台北市士林區雨聲街52號、52-1號、52巷1號",
+  "dashboard": [
+   25.102891,
+   121.528783
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 士林雨聲店",
+   "address": "111台灣臺北市士林區雨聲街52號",
+   "lat": 25.102810299999998,
+   "lng": 121.5287599
+  },
+  "distance_m": 9,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 士林華齡店",
+  "address": "台北市士林區華齡街175號",
+  "dashboard": [
+   25.087095,
+   121.51921
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 士林華齡店",
+   "address": "111台灣臺北市士林區華齡街175號",
+   "lat": 25.087132399999998,
+   "lng": 121.5192471
+  },
+  "distance_m": 6,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 士林德行東店",
+  "address": "台北市士林區德行東路230號",
+  "dashboard": [
+   25.109207,
+   121.53297
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 士林德行東店",
+   "address": "111台灣臺北市士林區聖山里德行東路230號",
+   "lat": 25.1093232,
+   "lng": 121.5333555
+  },
+  "distance_m": 41,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 大安和平東店",
+  "address": "台北市大安區和平東路一段145號",
+  "dashboard": [
+   25.026639,
+   121.530695
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 大安和平東店",
+   "address": "106台灣臺北市大安區和平東路一段145號",
+   "lat": 25.0266965,
+   "lng": 121.53074249999999
+  },
+  "distance_m": 8,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 大安敦化南店",
+  "address": "台北市大安區敦化南路二段48號",
+  "dashboard": [
+   25.030658,
+   121.548626
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 大安敦化南店",
+   "address": "106台灣臺北市大安區敦化南路二段48號",
+   "lat": 25.0311678,
+   "lng": 121.54839369999999
+  },
+  "distance_m": 61,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 大雅民生二店",
+  "address": "台中市大雅區上雅村民生路一段37號",
+  "dashboard": [
+   24.226005,
+   120.646497
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 大雅民生二店",
+   "address": "428台灣臺中市大雅區上雅里民生路一段37號",
+   "lat": 24.2262341,
+   "lng": 120.64685039999999
+  },
+  "distance_m": 44,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 大溪介壽店",
+  "address": "桃園市大溪區介壽路894號、896號",
+  "dashboard": [
+   24.90031,
+   121.28372
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 大溪介壽店",
+   "address": "335台灣桃園市大溪區介壽路894號",
+   "lat": 24.900100899999998,
+   "lng": 121.2837775
+  },
+  "distance_m": 24,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 中和民治店",
+  "address": "新北市中和區民治街120號",
+  "dashboard": [
+   25.003345,
+   121.47525
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 中和民治店",
+   "address": "235台灣新北市中和區民治街120號",
+   "lat": 25.0034162,
+   "lng": 121.4751342
+  },
+  "distance_m": 14,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 中和復興店",
+  "address": "新北市中和區復興路268號",
+  "dashboard": [
+   24.990466,
+   121.502912
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 中和復興店",
+   "address": "235台灣新北市中和區復興里復興路268號",
+   "lat": 24.9904451,
+   "lng": 121.5030955
+  },
+  "distance_m": 19,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 中和圓通店",
+  "address": "新北市中和區圓通路274號",
+  "dashboard": [
+   24.990823,
+   121.492504
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 中和圓通店",
+   "address": "235台灣新北市中和區錦中里圓通路274號",
+   "lat": 24.9909277,
+   "lng": 121.4923134
+  },
+  "distance_m": 22,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 中和壽德店",
+  "address": "新北市中和區壽德街20號1樓",
+  "dashboard": [
+   24.994675,
+   121.466205
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 中和壽德店",
+   "address": "235台灣新北市中和區壽德里壽德街20號1樓",
+   "lat": 24.9946104,
+   "lng": 121.46626309999999
+  },
+  "distance_m": 9,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 中和興南店",
+  "address": "新北市中和區興南路一段20號B1",
+  "dashboard": [
+   24.991316,
+   121.511248
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 中和興南店",
+   "address": "235台灣新北市中和區景新里興南路一段20號b1",
+   "lat": 24.9909331,
+   "lng": 121.5111776
+  },
+  "distance_m": 43,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 中壢環北店",
+  "address": "桃園市中壢區環北路392號",
+  "dashboard": [
+   24.965722,
+   121.225872
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 中壢環北店",
+   "address": "320台灣桃園市中壢區新街里環北路392號",
+   "lat": 24.9655648,
+   "lng": 121.22610519999999
+  },
+  "distance_m": 29,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 五股成泰店",
+  "address": "新北市五股區成泰路一段235號之4",
+  "dashboard": [
+   25.079035,
+   121.43608
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 五股成泰店",
+   "address": "248台灣新北市五股區成泰路一段235號之4",
+   "lat": 25.0798509,
+   "lng": 121.4362876
+  },
+  "distance_m": 93,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 五股西雲店",
+  "address": "新北市五股區西雲路169-1號、171號、171-1號",
+  "dashboard": [
+   25.095005,
+   121.447081
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 五股西雲店",
+   "address": "248新北市五股區西雲路169-1號",
+   "lat": 25.0949416,
+   "lng": 121.4468989
+  },
+  "distance_m": 20,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 五股明德店",
+  "address": "新北市五股區明德路12巷5號",
+  "dashboard": [
+   25.072267,
+   121.432847
+  ],
+  "how": "search",
+  "google": {
+   "name": "樂家康超市 五股明德店",
+   "address": "248新北市五股區明德路12巷5號",
+   "lat": 25.0720513,
+   "lng": 121.4330119
+  },
+  "distance_m": 29,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 內湖民權東店",
+  "address": "台北市內湖區民權東路六段296巷42-3號地下樓",
+  "dashboard": [
+   25.071725,
+   121.607615
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 內湖民權東店",
+   "address": "114台灣臺北市內湖區葫洲里民權東路六段296巷42-3號",
+   "lat": 25.071707,
+   "lng": 121.607598
+  },
+  "distance_m": 3,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 內湖成功二店",
+  "address": "台北市內湖區成功路二段320巷19號",
+  "dashboard": [
+   25.06769,
+   121.589987
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 內湖成功二店",
+   "address": "114台灣臺北市內湖區湖興里成功路二段320巷19號",
+   "lat": 25.0676901,
+   "lng": 121.58998709999999
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 內湖康樂店",
+  "address": "台北市內湖區康樂街150號",
+  "dashboard": [
+   25.072577,
+   121.619228
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 內湖康樂店",
+   "address": "114台灣臺北市內湖區樂康里康樂街150號",
+   "lat": 25.0726244,
+   "lng": 121.61924579999999
+  },
+  "distance_m": 6,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 文山木新店",
+  "address": "台北市文山區木新路二段158-1號",
+  "dashboard": [
+   24.984137,
+   121.568877
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 文山木新店",
+   "address": "116台灣臺北市文山區順興里木新路二段158-1號",
+   "lat": 24.9841855,
+   "lng": 121.5688771
+  },
+  "distance_m": 5,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 文山景隆店",
+  "address": "台北市文山區景隆街36巷2號",
+  "dashboard": [
+   24.998611,
+   121.543531
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 文山景隆店",
+   "address": "116台灣臺北市文山區景隆街36巷2號",
+   "lat": 24.998610799999998,
+   "lng": 121.543531
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 文山萬慶店",
+  "address": "台北市文山區萬慶街27號",
+  "dashboard": [
+   24.992448,
+   121.539372
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 文山萬慶店",
+   "address": "116台灣臺北市文山區景美里萬慶街27號",
+   "lat": 24.992394299999997,
+   "lng": 121.53931
+  },
+  "distance_m": 9,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 北投公館店",
+  "address": "台北市北投區公館路198號",
+  "dashboard": [
+   25.127728,
+   121.50736
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 北投公館店",
+   "address": "112台灣臺北市北投區奇岩里公舘路198號",
+   "lat": 25.1277281,
+   "lng": 121.50693729999999
+  },
+  "distance_m": 43,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 北投光明店",
+  "address": "台北市北投區光明路220號1F",
+  "dashboard": [
+   25.136237,
+   121.50451
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康 北投光明店",
+   "address": "112台灣臺北市北投區光明路220號1F",
+   "lat": 25.136249199999998,
+   "lng": 121.5045536
+  },
+  "distance_m": 5,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 北投致遠一店",
+  "address": "台北市北投區致遠一路二段19號、21號、23號",
+  "dashboard": [
+   25.111157,
+   121.514166
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 北投致遠一店",
+   "address": "112台灣臺北市北投區福興里致遠一路二段19號",
+   "lat": 25.111262,
+   "lng": 121.5141699
+  },
+  "distance_m": 12,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北八德店",
+  "address": "台北市松山區八德路四段83號",
+  "dashboard": [
+   25.048607,
+   121.560436
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北八德店",
+   "address": "105台灣臺北市松山區吉祥里八德路四段83號",
+   "lat": 25.0486166,
+   "lng": 121.56044949999999
+  },
+  "distance_m": 2,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北大理店",
+  "address": "台北市萬華區大理街114號1樓",
+  "dashboard": [
+   25.034158,
+   121.497522
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北大理店",
+   "address": "108台灣臺北市萬華區大理街114號1樓",
+   "lat": 25.034113299999998,
+   "lng": 121.49739199999999
+  },
+  "distance_m": 14,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北中坡南店",
+  "address": "台北市南港區中坡南路3號",
+  "dashboard": [
+   25.044263,
+   121.582314
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北中坡南店",
+   "address": "115台灣臺北市南港區萬福里中坡南路3號",
+   "lat": 25.044061199999998,
+   "lng": 121.58226339999999
+  },
+  "distance_m": 23,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北太原店",
+  "address": "台北市大同區太原路155、157號",
+  "dashboard": [
+   25.05533,
+   121.516772
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北太原店",
+   "address": "103台灣臺北市大同區星明里太原路155號",
+   "lat": 25.0553138,
+   "lng": 121.51677769999999
+  },
+  "distance_m": 2,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 台北北安店",
+  "address": "台北市中山區北安路595巷11-13號",
+  "dashboard": [
+   25.082395,
+   121.547957
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北北安店",
+   "address": "104台灣臺北市中山區大直里北安路595巷11-13號",
+   "lat": 25.082232599999998,
+   "lng": 121.5478988
+  },
+  "distance_m": 19,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北四維店",
+  "address": "台北市大安區四維路198巷35號",
+  "dashboard": [
+   25.026796,
+   121.547198
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北四維店",
+   "address": "106台灣臺北市大安區群英里四維路198巷35號",
+   "lat": 25.027181799999997,
+   "lng": 121.5457601
+  },
+  "distance_m": 151,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北光復店",
+  "address": "台北市松山區光復北路198號",
+  "dashboard": [
+   25.054983,
+   121.555518
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北光復店",
+   "address": "105台灣臺北市松山區光復北路198號",
+   "lat": 25.0548798,
+   "lng": 121.5555289
+  },
+  "distance_m": 12,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北同安店",
+  "address": "台北市中正區同安街71號",
+  "dashboard": [
+   25.023328,
+   121.521452
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北同安店",
+   "address": "100台灣臺北市中正區同安街71號",
+   "lat": 25.0233551,
+   "lng": 121.5214469
+  },
+  "distance_m": 3,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北西藏店",
+  "address": "台北市萬華區西藏路125巷13-15號",
+  "dashboard": [
+   25.029392,
+   121.502254
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北西藏店",
+   "address": "108台灣臺北市萬華區新忠里西藏路125巷13-15號",
+   "lat": 25.028363199999998,
+   "lng": 121.50248959999999
+  },
+  "distance_m": 117,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北延吉店",
+  "address": "台北市大安區延吉街250號B1",
+  "dashboard": [
+   25.034887,
+   121.555992
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北延吉店",
+   "address": "106台灣臺北市大安區延吉街250號B1",
+   "lat": 25.034813399999997,
+   "lng": 121.556034
+  },
+  "distance_m": 9,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北忠孝東二店",
+  "address": "台北市大安區忠孝東路三段218號B1",
+  "dashboard": [
+   25.041404,
+   121.540335
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北忠孝東二店",
+   "address": "106台灣臺北市大安區忠孝東路三段218號正義國宅3座B1",
+   "lat": 25.041397,
+   "lng": 121.54030639999999
+  },
+  "distance_m": 3,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北忠孝東店",
+  "address": "台北市大安區忠孝東路四段71號B1",
+  "dashboard": [
+   25.041899,
+   121.546878
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北忠孝東店",
+   "address": "106台灣臺北市大安區忠孝東路四段71號B1",
+   "lat": 25.0419403,
+   "lng": 121.546809
+  },
+  "distance_m": 8,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北松德店",
+  "address": "台北市信義區松德路99號B1",
+  "dashboard": [
+   25.037891,
+   121.575945
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北松德店",
+   "address": "110台灣臺北市信義區松德路99號B1",
+   "lat": 25.0379087,
+   "lng": 121.5759552
+  },
+  "distance_m": 2,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北林森北店",
+  "address": "台北市中山區林森北路413號B1",
+  "dashboard": [
+   25.059887,
+   121.525738
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北林森北店",
+   "address": "104台灣臺北市中山區聚盛里林森北路413號B1",
+   "lat": 25.059945799999998,
+   "lng": 121.5257295
+  },
+  "distance_m": 7,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北長安東店",
+  "address": "台北市中山區長安東路二段63、63-1、63-2號",
+  "dashboard": [
+   25.048589,
+   121.533647
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北長安東店",
+   "address": "104台灣臺北市中山區長安東路二段63號",
+   "lat": 25.0486199,
+   "lng": 121.5336294
+  },
+  "distance_m": 4,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 台北長沙店",
+  "address": "台北市萬華區長沙街二段93號B1",
+  "dashboard": [
+   25.040737,
+   121.50453
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北長沙店",
+   "address": "108台灣臺北市萬華區長沙街二段93號B1",
+   "lat": 25.0406645,
+   "lng": 121.5044271
+  },
+  "distance_m": 13,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北信義店",
+  "address": "台北市大安區信義路四段296號B1",
+  "dashboard": [
+   25.033017,
+   121.554543
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北信義店",
+   "address": "106台灣臺北市大安區信義路四段296號B1",
+   "lat": 25.0327409,
+   "lng": 121.5543969
+  },
+  "distance_m": 34,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北師大店",
+  "address": "台北市大安區師大路129號1樓",
+  "dashboard": [
+   25.0217,
+   121.528247
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北師大店",
+   "address": "106台灣臺北市大安區師大路129號1樓",
+   "lat": 25.0216894,
+   "lng": 121.5282714
+  },
+  "distance_m": 3,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北酒泉店",
+  "address": "台北市大同區酒泉街105號",
+  "dashboard": [
+   25.072073,
+   121.515256
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北酒泉店",
+   "address": "103台灣臺北市大同區保安里酒泉街105號",
+   "lat": 25.072139699999997,
+   "lng": 121.51524859999999
+  },
+  "distance_m": 7,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北新生南店",
+  "address": "台北市大安區新生南路三段2號B1",
+  "dashboard": [
+   25.025746,
+   121.534531
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北新生南店",
+   "address": "106台灣臺北市大安區龍坡里新生南路三段2號B1",
+   "lat": 25.025745999999998,
+   "lng": 121.534531
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北萬大店",
+  "address": "台北市萬華區萬大路486巷48號1樓",
+  "dashboard": [
+   25.020751,
+   121.495864
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北萬大店",
+   "address": "108台灣臺北市萬華區萬大路486巷48號1樓",
+   "lat": 25.020844399999998,
+   "lng": 121.495875
+  },
+  "distance_m": 10,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 台北農安店",
+  "address": "台北市中山區農安街257、259號",
+  "dashboard": [
+   25.064859,
+   121.535484
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北農安店",
+   "address": "104台灣臺北市中山區行政里農安街257號",
+   "lat": 25.0648594,
+   "lng": 121.53548359999999
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 台北羅斯福店",
+  "address": "台北市大安區羅斯福路三段285號B1",
+  "dashboard": [
+   25.017856,
+   121.531479
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 台北羅斯福店",
+   "address": "106台灣臺北市大安區羅斯福路三段285號B1",
+   "lat": 25.0179379,
+   "lng": 121.53162309999999
+  },
+  "distance_m": 17,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 平鎮文化店",
+  "address": "桃園市平鎮區文化街102號",
+  "dashboard": [
+   24.954067,
+   121.20352
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 平鎮文化店",
+   "address": "324台灣桃園市平鎮區復興里文化街102號",
+   "lat": 24.953269,
+   "lng": 121.2030497
+  },
+  "distance_m": 101,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 平鎮廣明店",
+  "address": "桃園市平鎮區廣明路1號",
+  "dashboard": [
+   24.952318,
+   121.214498
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 平鎮廣明店",
+   "address": "324台灣桃園市平鎮區廣明路1號",
+   "lat": 24.9524738,
+   "lng": 121.2145118
+  },
+  "distance_m": 17,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 永和仁愛店",
+  "address": "新北市永和區仁愛路152號B1",
+  "dashboard": [
+   25.013108,
+   121.510632
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 永和仁愛店",
+   "address": "234台灣新北市永和區仁愛路152號B1",
+   "lat": 25.0128938,
+   "lng": 121.5106747
+  },
+  "distance_m": 24,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 永和竹林店",
+  "address": "新北市永和區竹林路60號",
+  "dashboard": [
+   25.013768,
+   121.518092
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 永和竹林店",
+   "address": "234台灣新北市永和區竹林路60號",
+   "lat": 25.013769999999997,
+   "lng": 121.51806149999999
+  },
+  "distance_m": 3,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 汐止大同店",
+  "address": "新北市汐止區大同路二段285號B1",
+  "dashboard": [
+   25.066007,
+   121.653834
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 汐止大同店",
+   "address": "221台灣新北市汐止區大同路二段285號B1",
+   "lat": 25.065984,
+   "lng": 121.6539705
+  },
+  "distance_m": 14,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 汐止明峰店",
+  "address": "新北市汐止區明峰街117號B1",
+  "dashboard": [
+   25.07096,
+   121.631162
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 汐止明峰店",
+   "address": "221台灣新北市汐止區金龍里明峰街117號B1",
+   "lat": 25.0709597,
+   "lng": 121.63116199999999
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 汐止建成店",
+  "address": "新北市汐止區建成路39號",
+  "dashboard": [
+   25.071811,
+   121.661011
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 汐止建成店",
+   "address": "221台灣新北市汐止區城中里建成路39號",
+   "lat": 25.072913099999997,
+   "lng": 121.6631762
+  },
+  "distance_m": 250,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 汐止福德一店",
+  "address": "新北市汐止區福德一路256號",
+  "dashboard": [
+   25.064731,
+   121.633483
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 汐止福德一店",
+   "address": "221台灣新北市汐止區中興里福德一路256號",
+   "lat": 25.064731,
+   "lng": 121.633483
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 汐止樟樹一店",
+  "address": "新北市汐止區樟樹一路176號1樓及174號地下室",
+  "dashboard": [
+   25.065846,
+   121.642396
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 汐止樟樹一店",
+   "address": "221台灣新北市汐止區樟樹一路176號B1",
+   "lat": 25.0658459,
+   "lng": 121.64239549999999
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 竹北中正東店",
+  "address": "新竹縣竹北市中正東路71號",
+  "dashboard": [
+   24.834967,
+   121.01792
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 竹北中正東店",
+   "address": "302台灣新竹縣竹北市竹仁里中正東路71號",
+   "lat": 24.8349674,
+   "lng": 121.0179197
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 竹北六家店",
+  "address": "新竹縣竹北市六家五路一段133號",
+  "dashboard": [
+   24.809511,
+   121.025567
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 竹北六家店",
+   "address": "302台灣新竹縣竹北市東平里六家五路一段133號",
+   "lat": 24.809531,
+   "lng": 121.0256481
+  },
+  "distance_m": 8,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 竹北成功店",
+  "address": "新竹縣竹北市成功八路158號",
+  "dashboard": [
+   24.816871,
+   121.020398
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 竹北成功店",
+   "address": "302台灣新竹縣竹北市鹿場里成功八路158號",
+   "lat": 24.817670699999997,
+   "lng": 121.01764349999999
+  },
+  "distance_m": 292,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 竹北華興店",
+  "address": "新竹縣竹北市華興街135號1F",
+  "dashboard": [
+   24.840273,
+   121.003054
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 竹北華興店",
+   "address": "302台灣新竹縣竹北市竹義里華興街135號",
+   "lat": 24.840248799999998,
+   "lng": 121.0030333
+  },
+  "distance_m": 3,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 竹北縣政二店",
+  "address": "新竹縣竹北市縣政二路南段56號",
+  "dashboard": [
+   24.819534,
+   121.012264
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 竹北縣政二店",
+   "address": "302台灣新竹縣竹北市斗崙里縣政二路南段56號",
+   "lat": 24.8198354,
+   "lng": 121.0122143
+  },
+  "distance_m": 34,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 竹南民族二店",
+  "address": "苗栗縣竹南鎮民族街146號",
+  "dashboard": [
+   24.687483,
+   120.878632
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 竹南民族二店",
+   "address": "350台灣苗栗縣竹南鎮照南里民族街146號",
+   "lat": 24.6874835,
+   "lng": 120.8786324
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 西屯青海店",
+  "address": "台中市西屯區青海路一段126，128號",
+  "dashboard": [
+   24.164997,
+   120.654061
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 西屯青海店",
+   "address": "407台灣臺中市西屯區何安里青海路一段126號",
+   "lat": 24.165069199999998,
+   "lng": 120.65410689999999
+  },
+  "distance_m": 9,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 板橋大觀店",
+  "address": "新北市板橋區大觀路三段236號1樓之14、1樓之15",
+  "dashboard": [
+   24.992301,
+   121.429275
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 板橋大觀店",
+   "address": "220台灣新北市板橋區崑崙里大觀路三段236-14號號",
+   "lat": 24.9926685,
+   "lng": 121.42941979999999
+  },
+  "distance_m": 43,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 板橋四維店",
+  "address": "新北市板橋區四維路247、249、251、253號",
+  "dashboard": [
+   25.027571,
+   121.463533
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 板橋四維店",
+   "address": "220台灣新北市板橋區明翠里四維路247號",
+   "lat": 25.0275712,
+   "lng": 121.4635326
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 板橋忠孝店",
+  "address": "新北市板橋區忠孝路237號",
+  "dashboard": [
+   25.002893,
+   121.466101
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 板橋忠孝店",
+   "address": "220台灣新北市板橋區福德里忠孝路237號",
+   "lat": 25.0028884,
+   "lng": 121.46612669999999
+  },
+  "distance_m": 3,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 板橋金門二店",
+  "address": "新北市板橋區金門街153、155、159號",
+  "dashboard": [
+   24.990458,
+   121.432757
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 板橋金門二店",
+   "address": "220台灣新北市板橋區成和里金門街153號",
+   "lat": 24.990443199999998,
+   "lng": 121.43275209999999
+  },
+  "distance_m": 2,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 林口仁愛店",
+  "address": "新北市林口區仁愛路二段89號",
+  "dashboard": [
+   25.075541,
+   121.384512
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 林口仁愛店",
+   "address": "244台灣新北市林口區仁愛路二段89號",
+   "lat": 25.0753749,
+   "lng": 121.38470079999999
+  },
+  "distance_m": 27,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 林口文化一店",
+  "address": "新北市林口區文化三路一段319、321、323、325號",
+  "dashboard": [
+   25.073251,
+   121.365871
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 林口文化一店",
+   "address": "244台灣新北市林口區文化三路一段319號",
+   "lat": 25.0722508,
+   "lng": 121.3641071
+  },
+  "distance_m": 210,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 林口文化三店",
+  "address": "新北市林口區文化三路一段543號",
+  "dashboard": [
+   25.075708,
+   121.369931
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 林口文化三店",
+   "address": "244台灣新北市林口區文化三路一段543號",
+   "lat": 25.07573,
+   "lng": 121.36954069999999
+  },
+  "distance_m": 39,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 南屯黎明店",
+  "address": "台中市南屯區黎明路二段423號",
+  "dashboard": [
+   24.151907,
+   120.63499
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 南屯黎明店",
+   "address": "408台灣臺中市南屯區黎明路二段423號",
+   "lat": 24.1518749,
+   "lng": 120.6348756
+  },
+  "distance_m": 12,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 南港成福店",
+  "address": "台北市南港區成福路183號",
+  "dashboard": [
+   25.040908,
+   121.588615
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 南港成福店",
+   "address": "115台灣臺北市南港區成福里成福路183號",
+   "lat": 25.040889399999998,
+   "lng": 121.58863
+  },
+  "distance_m": 3,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 南港東明店",
+  "address": "台北市南港區東明街99號1樓",
+  "dashboard": [
+   25.054538,
+   121.600061
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 南港東明店",
+   "address": "115台灣臺北市南港區東明街99號1樓",
+   "lat": 25.054637699999997,
+   "lng": 121.60090989999999
+  },
+  "distance_m": 86,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 後龍中山店",
+  "address": "苗栗縣後龍鎮中山路116-120號",
+  "dashboard": [
+   24.6139343,
+   120.7913626
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 後龍中山店",
+   "address": "356台灣苗栗縣後龍鎮大庄里中山路116-120號",
+   "lat": 24.6142264,
+   "lng": 120.79100799999999
+  },
+  "distance_m": 48,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 員林博愛店",
+  "address": "彰化縣員林市博愛路185號",
+  "dashboard": [
+   23.960957,
+   120.572573
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 員林博愛店",
+   "address": "510台灣彰化縣員林市新興里博愛路185號",
+   "lat": 23.9609782,
+   "lng": 120.5725664
+  },
+  "distance_m": 2,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園大興西店",
+  "address": "桃園市桃園區大興西路二段63號、65號",
+  "dashboard": [
+   25.011207,
+   121.298746
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園大興西店",
+   "address": "330台灣桃園市桃園區大興西路二段63號",
+   "lat": 25.0113898,
+   "lng": 121.298689
+  },
+  "distance_m": 21,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園大豐店",
+  "address": "桃園市桃園區大豐路89號",
+  "dashboard": [
+   24.980306,
+   121.31641
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園大豐店",
+   "address": "330台灣桃園市桃園區大豐路89號",
+   "lat": 24.9802318,
+   "lng": 121.31638579999999
+  },
+  "distance_m": 9,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園文化七店",
+  "address": "桃園市龜山區文化七路173號",
+  "dashboard": [
+   25.051965,
+   121.367008
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園文化七店",
+   "address": "333台灣桃園市龜山區文化七路173號",
+   "lat": 25.051869,
+   "lng": 121.36688609999999
+  },
+  "distance_m": 16,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園南華店",
+  "address": "桃園市桃園區南華街77號1樓",
+  "dashboard": [
+   24.991057,
+   121.308029
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園南華店",
+   "address": "330台灣桃園市桃園區南華街77號1樓",
+   "lat": 24.9910262,
+   "lng": 121.30801489999999
+  },
+  "distance_m": 4,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園陸光店",
+  "address": "桃園市龜山區陸光路81號",
+  "dashboard": [
+   24.995602,
+   121.331852
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園陸光店",
+   "address": "333台灣桃園市龜山區陸光路81號",
+   "lat": 24.995495,
+   "lng": 121.331541
+  },
+  "distance_m": 34,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園復興一店",
+  "address": "桃園市龜山區復興一路222號",
+  "dashboard": [
+   25.057393,
+   121.364835
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園復興一店",
+   "address": "333台灣桃園市龜山區復興一路222號",
+   "lat": 25.0574247,
+   "lng": 121.3656288
+  },
+  "distance_m": 80,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園復興店",
+  "address": "桃園市桃園區復興路96號",
+  "dashboard": [
+   24.991159,
+   121.315782
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園復興店",
+   "address": "330台灣桃園市桃園區復興路96號",
+   "lat": 24.991100499999998,
+   "lng": 121.31589729999999
+  },
+  "distance_m": 13,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園萬壽店",
+  "address": "桃園市龜山區萬壽路一段293-295號",
+  "dashboard": [
+   25.017283,
+   121.402968
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園萬壽店",
+   "address": "333台灣桃園市龜山區萬壽路一段293-295號1樓",
+   "lat": 25.0171872,
+   "lng": 121.4030846
+  },
+  "distance_m": 16,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園壽昌店",
+  "address": "桃園市桃園區壽昌街20巷17號",
+  "dashboard": [
+   24.990202,
+   121.293834
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園壽昌店",
+   "address": "330台灣桃園市桃園區壽昌街20巷17號",
+   "lat": 24.9901676,
+   "lng": 121.29355369999999
+  },
+  "distance_m": 29,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 桃園寶山店",
+  "address": "桃園市桃園區寶山街276、278號",
+  "dashboard": [
+   25.011375,
+   121.313624
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 桃園寶山店",
+   "address": "330台灣桃園市桃園區寶山里寶山街276號",
+   "lat": 25.011893,
+   "lng": 121.31466999999999
+  },
+  "distance_m": 120,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 高雄大豐二店",
+  "address": "高雄市三民區大豐二路298號",
+  "dashboard": [
+   22.645657,
+   120.333338
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 高雄大豐二店",
+   "address": "807台灣高雄市三民區大豐二路298號",
+   "lat": 22.6456232,
+   "lng": 120.3332818
+  },
+  "distance_m": 7,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 高雄南屏店",
+  "address": "高雄市鼓山區南屏路551號",
+  "dashboard": [
+   22.663689,
+   120.300331
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 高雄南屏店",
+   "address": "804台灣高雄市鼓山區明誠里南屏路551號",
+   "lat": 22.663688999999998,
+   "lng": 120.300331
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 高雄美術東店",
+  "address": "高雄市鼓山區美術東二路175號",
+  "dashboard": [
+   22.662571,
+   120.288294
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 高雄美術東店",
+   "address": "804台灣高雄市鼓山區美術東二路175號",
+   "lat": 22.6622558,
+   "lng": 120.2882411
+  },
+  "distance_m": 35,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 基隆安樂店",
+  "address": "基隆市安樂區安樂路二段164號B1",
+  "dashboard": [
+   25.121047,
+   121.723327
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 基隆安樂店",
+   "address": "204台灣基隆市安樂區鶯歌里安樂路二段164號B1",
+   "lat": 25.121046999999997,
+   "lng": 121.723327
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 基隆孝二店",
+  "address": "基隆市仁愛區孝二路86號B1",
+  "dashboard": [
+   25.130154,
+   121.7406
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 基隆孝二店",
+   "address": "200台灣基隆市仁愛區新店里孝二路86號B1",
+   "lat": 25.1301471,
+   "lng": 121.74060399999999
+  },
+  "distance_m": 1,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 基隆深溪店",
+  "address": "基隆市信義區深溪路63號、65號",
+  "dashboard": [
+   25.132904,
+   121.782201
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 基隆深溪店",
+   "address": "201台灣基隆市信義區孝忠里深溪路63號1樓",
+   "lat": 25.1329039,
+   "lng": 121.7822013
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 淡水中山北店",
+  "address": "新北市淡水區中山北路一段156號",
+  "dashboard": [
+   25.177784,
+   121.443901
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 淡水中山北店",
+   "address": "251台灣新北市淡水區中山北路一段156號",
+   "lat": 25.1777837,
+   "lng": 121.4439008
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 淡水民權店",
+  "address": "新北市淡水區民權路177巷12、16、18、20號",
+  "dashboard": [
+   25.135137,
+   121.460298
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 淡水民權店",
+   "address": "251台灣新北市淡水區民權路177巷12號",
+   "lat": 25.135043099999997,
+   "lng": 121.4605093
+  },
+  "distance_m": 24,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 淡水沙崙店",
+  "address": "新北市淡水區沙崙路168號",
+  "dashboard": [
+   25.183404,
+   121.424037
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 淡水沙崙店",
+   "address": "251台灣新北市淡水區沙崙路168號",
+   "lat": 25.183376,
+   "lng": 121.424177
+  },
+  "distance_m": 14,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 深坑北深店",
+  "address": "新北市深坑區深坑區北深路三段151號",
+  "dashboard": [
+   25.003405,
+   121.602324
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 深坑北深店",
+   "address": "222台灣新北市深坑區北深路三段151號",
+   "lat": 25.003089499999998,
+   "lng": 121.6028372
+  },
+  "distance_m": 62,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 新竹北大店",
+  "address": "新竹市北區北大路338號1樓",
+  "dashboard": [
+   24.806048,
+   120.961998
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新竹北大店",
+   "address": "300台灣新竹市北區民富里北大路338號",
+   "lat": 24.8061014,
+   "lng": 120.9619719
+  },
+  "distance_m": 6,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新竹明湖店",
+  "address": "新竹市東區明湖路566號",
+  "dashboard": [
+   24.777629,
+   120.967238
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新竹明湖店",
+   "address": "300台灣新竹市東區柴橋里明湖路566號",
+   "lat": 24.777363599999997,
+   "lng": 120.96703959999999
+  },
+  "distance_m": 36,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新竹金山店",
+  "address": "新竹市東區金山街30號",
+  "dashboard": [
+   24.777597,
+   121.021076
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新竹金山店",
+   "address": "300台灣新竹市東區金山里金山街30號",
+   "lat": 24.7773179,
+   "lng": 121.0212131
+  },
+  "distance_m": 34,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新竹長春店",
+  "address": "新竹市東區長春街56號",
+  "dashboard": [
+   24.785656,
+   121.014963
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新竹長春店",
+   "address": "30073台灣新竹市東區新莊里長春街56號",
+   "lat": 24.7857499,
+   "lng": 121.01479239999999
+  },
+  "distance_m": 20,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新竹建中店",
+  "address": "新竹市東區建中路42號、46號",
+  "dashboard": [
+   24.800535,
+   120.994639
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新竹建中店",
+   "address": "300台灣新竹市東區武功里建中路42號",
+   "lat": 24.801170499999998,
+   "lng": 120.9950389
+  },
+  "distance_m": 81,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新店民族店",
+  "address": "新北市新店區民族路71號B1",
+  "dashboard": [
+   24.978036,
+   121.539353
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新店民族店",
+   "address": "b1, No. 71號民族路新店區新北市台灣 231",
+   "lat": 24.978034599999997,
+   "lng": 121.53942719999999
+  },
+  "distance_m": 7,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 新店如意店",
+  "address": "新北市新店區如意街95、97號",
+  "dashboard": [
+   24.947005,
+   121.495361
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新店如意店",
+   "address": "231台灣新北市新店區如意街95號",
+   "lat": 24.9470276,
+   "lng": 121.4953616
+  },
+  "distance_m": 3,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 新店安康二店",
+  "address": "新北市新店區安康路二段136巷59號",
+  "dashboard": [
+   24.963216,
+   121.514147
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新店安康二店",
+   "address": "231台灣新北市新店區安昌里安康路二段136巷59號1樓",
+   "lat": 24.9620714,
+   "lng": 121.5114995
+  },
+  "distance_m": 296,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新店安康店",
+  "address": "新北市新店區安康路二段196號B1",
+  "dashboard": [
+   24.958986,
+   121.509104
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新店安康店",
+   "address": "231台灣新北市新店區安康路二段196號B1",
+   "lat": 24.9599615,
+   "lng": 121.51092009999999
+  },
+  "distance_m": 213,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新店安祥店",
+  "address": "新北市新店區安祥路85-89號",
+  "dashboard": [
+   24.959818,
+   121.487686
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新店安祥店",
+   "address": "231台灣新北市新店區香坡里安祥路85-89號",
+   "lat": 24.962293,
+   "lng": 121.4805052
+  },
+  "distance_m": 774,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新店溪園店",
+  "address": "新北市新店區溪園路399號",
+  "dashboard": [
+   24.977786,
+   121.523948
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新店溪園店",
+   "address": "231台灣新北市新店區中山里溪園路399號",
+   "lat": 24.9776524,
+   "lng": 121.52381319999999
+  },
+  "distance_m": 20,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新莊中平店",
+  "address": "新北市新莊區中平路377巷18、20號",
+  "dashboard": [
+   25.052005,
+   121.443748
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新莊中平店",
+   "address": "242台灣新北市新莊區立廷里中平路377巷18號",
+   "lat": 25.0526658,
+   "lng": 121.44360019999999
+  },
+  "distance_m": 75,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 新莊中信店",
+  "address": "新北市新莊區中信街72號",
+  "dashboard": [
+   25.051966,
+   121.448388
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新莊中信店",
+   "address": "242台灣新北市新莊區中信里中信街72號",
+   "lat": 25.0518002,
+   "lng": 121.44849839999999
+  },
+  "distance_m": 22,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新莊公園一店",
+  "address": "新北市新莊區公園一路110號",
+  "dashboard": [
+   25.037592,
+   121.44395
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新莊公園一店",
+   "address": "242台灣新北市新莊區公園一路110號",
+   "lat": 25.0378065,
+   "lng": 121.4444247
+  },
+  "distance_m": 53,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新莊化成店",
+  "address": "新北市新莊區化成路193號",
+  "dashboard": [
+   25.050378,
+   121.465686
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新莊化成店",
+   "address": "242台灣新北市新莊區化成路193號",
+   "lat": 25.050512599999998,
+   "lng": 121.46578179999999
+  },
+  "distance_m": 18,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新莊昌隆店",
+  "address": "新北市新莊區昌隆街69、75、83號",
+  "dashboard": [
+   25.051318,
+   121.457225
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新莊昌隆店",
+   "address": "242台灣新北市新莊區昌隆街69號",
+   "lat": 25.051327699999998,
+   "lng": 121.45722649999999
+  },
+  "distance_m": 1,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 新莊龍安店",
+  "address": "新北市新莊區龍安路75號",
+  "dashboard": [
+   25.021653,
+   121.415611
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新莊龍安店",
+   "address": "242台灣新北市新莊區龍安路75號",
+   "lat": 25.021537199999997,
+   "lng": 121.4157924
+  },
+  "distance_m": 22,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 新豐建興店",
+  "address": "新竹縣新豐鄉建興路一段116-2號",
+  "dashboard": [
+   24.872737,
+   120.994975
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 新豐建興店",
+   "address": "304台灣新竹縣新豐鄉山崎村建興路一段116之2號",
+   "lat": 24.8725035,
+   "lng": 120.99511349999999
+  },
+  "distance_m": 29,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 楊梅中興店",
+  "address": "桃園市楊梅區中興路67號1樓",
+  "dashboard": [
+   24.917975,
+   121.184539
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 楊梅中興店",
+   "address": "326台灣桃園市楊梅區光華里中興路67號1樓",
+   "lat": 24.917937199999997,
+   "lng": 121.1846849
+  },
+  "distance_m": 15,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 嘉義仁愛店",
+  "address": "嘉義市西區仁愛路211、213號",
+  "dashboard": [
+   23.470677,
+   120.442619
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 嘉義仁愛店",
+   "address": "600台灣嘉義市西區自強里仁愛路211號",
+   "lat": 23.470800099999998,
+   "lng": 120.4425698
+  },
+  "distance_m": 15,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 嘉義德明店",
+  "address": "嘉義市西區德明路128-132號",
+  "dashboard": [
+   23.483143,
+   120.431904
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 嘉義德明店",
+   "address": "600台灣嘉義市西區竹圍里德明路128-132號",
+   "lat": 23.4831249,
+   "lng": 120.4319062
+  },
+  "distance_m": 2,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 樹林太順店",
+  "address": "新北市樹林區太順路64號、66號、68號",
+  "dashboard": [
+   24.979283,
+   121.417558
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 樹林太順店",
+   "address": "238台灣新北市樹林區太順里太順街66號",
+   "lat": 24.9792877,
+   "lng": 121.4177352
+  },
+  "distance_m": 18,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 樹林復興店",
+  "address": "新北市樹林區復興路198號",
+  "dashboard": [
+   24.990956,
+   121.419796
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 樹林復興店",
+   "address": "238台灣新北市樹林區樹西里復興路198號",
+   "lat": 24.990790699999998,
+   "lng": 121.41976389999999
+  },
+  "distance_m": 19,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 樹林學成店",
+  "address": "新北市樹林區學成路536號",
+  "dashboard": [
+   24.945356,
+   121.380602
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 樹林學成店",
+   "address": "238台灣新北市樹林區南園里學成路536號",
+   "lat": 24.945450299999997,
+   "lng": 121.38050009999999
+  },
+  "distance_m": 15,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 頭份中華店",
+  "address": "苗栗縣頭份市中華路1155號",
+  "dashboard": [
+   24.688008,
+   120.9109
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 頭份中華店",
+   "address": "351台灣苗栗縣頭份市自強里中華路1155號",
+   "lat": 24.688008,
+   "lng": 120.9109
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 蘆竹福祿一店",
+  "address": "桃園市蘆竹區福祿一街189-193號",
+  "dashboard": [
+   25.057142,
+   121.296304
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 蘆竹福祿一店",
+   "address": "338台灣桃園市蘆竹區福祿一街189-193號",
+   "lat": 25.0569287,
+   "lng": 121.2964331
+  },
+  "distance_m": 27,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 蘆洲三民店",
+  "address": "新北市蘆洲區三民路54號",
+  "dashboard": [
+   25.083639,
+   121.475411
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 蘆洲三民店",
+   "address": "247台灣新北市蘆洲區仁德里三民路54號",
+   "lat": 25.0835826,
+   "lng": 121.47553219999999
+  },
+  "distance_m": 14,
+  "name_match": true,
+  "address_match": true
+ },
+ {
+  "store": "樂家康 蘆洲中興店",
+  "address": "新北市蘆洲區中興街34、36號",
+  "dashboard": [
+   25.087023,
+   121.481179
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 蘆洲中興店",
+   "address": "247台灣新北市蘆洲區玉清里中興街34號",
+   "lat": 25.087022899999997,
+   "lng": 121.4811788
+  },
+  "distance_m": 0,
+  "name_match": true,
+  "address_match": false
+ },
+ {
+  "store": "樂家康 蘆洲長榮店",
+  "address": "新北市蘆洲區長榮路386號",
+  "dashboard": [
+   25.087819,
+   121.460116
+  ],
+  "how": "cid",
+  "google": {
+   "name": "樂家康超市 蘆洲長榮店",
+   "address": "247台灣新北市蘆洲區長榮路386號",
+   "lat": 25.0873723,
+   "lng": 121.459874
+  },
+  "distance_m": 55,
+  "name_match": true,
+  "address_match": true
+ }
+]
