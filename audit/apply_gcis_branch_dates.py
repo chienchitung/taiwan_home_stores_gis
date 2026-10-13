@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-"""以經濟部商工登記「分公司核准設立日」補上查無新聞來源的門市開店日期。
+"""以經濟部商工登記「分公司核准設立日」標記查無新聞來源的門市（confidence="registry"）。
+
+2026-10-13 起登記日不再當作開幕日：apply_verified_opened_dates.py 只寫入 confirmed，
+registry 紀錄僅保留作為查證參考，儀表板顯示為開幕年份未知。
 
 資料：audit/gcis/<統編>_<公司>.json（商工登記開放資料 API「統編查分公司資料」
 FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB 原始回應）。

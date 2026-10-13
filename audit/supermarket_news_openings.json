@@ -1,0 +1,262 @@
+[
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台中昌平店",
+  "opened_date": "2015-02-11",
+  "source_url": "https://www.chinatimes.com/realtimenews/20150211004287-260405",
+  "source_title": "家樂福便利購 挺進台中市區展店 - 工商時報",
+  "source_type": "news",
+  "evidence": "2015/02/11報導：「家樂福便利購台中市昌平店今（11）日開幕…昌平店為家樂福全台第10家便利購」「位於台中市昌平商圈」—同為台中昌平店（昌平路一段105-1號）",
+  "notes": "Article gives no street number but there is only one 昌平店 (北屯 昌平商圈); store originally opened as 家樂福便利購."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新竹南大店",
+  "opened_date": "2017-10-27",
+  "source_url": "https://www.chinatimes.com/realtimenews/20171027002378-263301",
+  "source_title": "家樂福超市竹市首店進駐 搶攻超市市場 - 中時",
+  "source_type": "news",
+  "evidence": "2017/10/27中時：「家樂福新型態便利購超市大新竹地區首家店「新竹市南大店」27日開幕…便利購超市南大店是全國第41家店」—同為新竹市南大店",
+  "notes": "Article gives no street number; only one 南大店 in 新竹市 (南大路286號). Opened as 家樂福便利購."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 小港漢民店",
+  "opened_date": "2019-08",
+  "source_url": "https://www.ctee.com.tw/news/20190822700655-439803",
+  "source_title": "家樂福接手台糖3家便利購超市 台中水湳店22日歡慶開幕 - 工商時報",
+  "source_type": "news",
+  "evidence": "2019.08.22工商時報：「家樂福便利購超市-高雄小港漢民店、台中水湳店及高雄鳳山甲一店，連續於8/21、8/22、8/23一天一家開幕」—同為小港漢民店（接手台糖超市）",
+  "notes": "Article lists the three stores and the three dates in the same order (implying 小港漢民 = 2019-08-21), but does not explicitly pair 漢民 with a date (only 水湳=22日 is explicit), so recorded at month precision. Store opened as 家樂福便利購 taking over a 台糖 supermarket; article does not give street number but 小港漢民店 name matches.；報導列三店與 8/21～8/23 三個日期，只明寫水湳店 22 日，此店只記到月份"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 北屯總太店",
+  "opened_date": "2024-03-23",
+  "source_url": "https://twpowernews.com/news_pagein.php?iType=1010&n_id=261401",
+  "source_title": "台中家樂福超市北屯總太店慶開幕 -勁報 Power News",
+  "source_type": "news",
+  "evidence": "2024-03-23報導：「家樂福超市北屯總太店於今（23）日隆重開幕」「位於「總太2020」社區內（環太東路477號）」—地址相同",
+  "notes": ""
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 太平環中店",
+  "opened_date": "2015-09-29",
+  "source_url": "https://www.ctee.com.tw/news/20150930700085-439901",
+  "source_title": "台中連開3店 家樂福便利購 進駐太平（工商時報）",
+  "source_type": "news",
+  "evidence": "「位於台中市北太平商圈的太平環中店昨（29）日開幕，成為全台第17家便利購也是第81家分店」（2015-09-30）",
+  "notes": "開幕時為家樂福便利購太平環中店；報導未列門牌，但店名「太平環中店」與現址環中東路三段一致，且為台中太平唯一同名店"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 大甲蔣公店",
+  "opened_date": "2017-10-20",
+  "source_url": "https://n.yam.com/Article/20171021885018",
+  "source_title": "家樂福便利購超市 大甲蔣公店開幕 婆婆媽媽搶購A好康（蕃新聞）",
+  "source_type": "news",
+  "evidence": "「20日便利購再下一城、正式進駐台中大甲蔣公路商圈」（2017-10-21）",
+  "notes": "開幕時為家樂福便利購大甲蔣公店"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北錦州店",
+  "opened_date": "2018-05-25",
+  "source_url": "https://www.chinatimes.com/realtimenews/20180525004133-260405",
+  "source_title": "家樂福24hr便利購 全台第53店開幕（工商時報/中時）",
+  "source_type": "news",
+  "evidence": "「家樂福全台第53家便利購，今（25）在台北市中山區錦州街開幕」（2018-05-25）",
+  "notes": "開幕時為家樂福便利購錦州店；中時2018-05-31另文亦稱25日開錦州店"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 林口仁愛店",
+  "opened_date": "2019-03-08",
+  "source_url": "https://www.ctee.com.tw/news/20190308700147-430404",
+  "source_title": "頂好林口仁愛店慶開幕 祭三大優惠（工商時報）",
+  "source_type": "news",
+  "evidence": "「頂好超市宣布，今（3月8日）婦女節當天，將在新北市林口區開出林口仁愛店」（2019-03-08）",
+  "notes": "報導無門牌；TVBS食尚玩家另列頂好林口仁愛店地址為仁愛路二段91號（與現址89號相鄰，應為同店）。開幕時為頂好"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 大安臨江店",
+  "opened_date": "2019-09-11",
+  "source_url": "https://tw.discount.wave-base.com/sale/4LpVM/",
+  "source_title": "家樂福 - 大安臨江店即將於明天歡慶開幕 9/11開幕當天…（SaleEvents，轉載家樂福貼文）",
+  "source_type": "social",
+  "evidence": "【便利購大安臨江店歡慶開幕】大安臨江店即將於明天歡慶開幕，9/11開幕當天…；頁面含 #臨江街87號；發布時間 2019-09-10",
+  "notes": "開幕時為「家樂福便利購」店型；來源為特賣資訊聚合站轉載家樂福官方貼文"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 龜山文青店",
+  "opened_date": "2021-12-14",
+  "source_url": "https://www.foodnext.net/news/industry/paper/5470657580",
+  "source_title": "家樂福首間千坪店開幕！透過3點經營秘訣滿足生活需求黏住客戶（食力foodNEXT）",
+  "source_type": "magazine",
+  "evidence": "「而2021年12月14日開幕龜山文青店也以全新「居玩型超市」型態亮相，全店設計超過1000坪購物空間」— 店名龜山文青店（機捷A7附近文青路）唯一",
+  "notes": "文中未列門牌，但龜山文青店為唯一同名店"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 太平育賢店",
+  "opened_date": "2024-06-28",
+  "source_url": "https://greatnews.com.tw/news_pagein.php?iType=1004&n_id=293461",
+  "source_title": "家樂福超市太平育賢店慶開幕 插旗樹孝商圈全台第249家（大成報）",
+  "source_type": "news",
+  "evidence": "「家樂褔6月插旗台中太平樹孝商圈，超市太平育賢店28日隆重開幕！」「太平育賢店位在育賢路190號」（報導日期2024-06-30）— 地址相同",
+  "notes": "觀傳媒/獨家報導標題亦為「家樂福超市太平育賢店今6/28歡慶開幕」"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 豐南店",
+  "opened_date": "2013-07-05",
+  "source_url": "https://vpnline.pixnet.net/blog/posts/9134949529",
+  "source_title": "社區概念迷你量販店 首度進軍中台灣（蘋果日報 2013-07-04, repost on pixnet）",
+  "source_type": "news",
+  "evidence": "Jul 4th 2013…大台中第一家店落腳在台中市豐原區，明日（7/5）正式開幕…「家樂福便利購」台中豐南店明日開幕慶",
+  "notes": "Apple Daily realtime article reposted via RSS on a pixnet blog (original Apple Daily URL no longer online). Address 豐南街118號 not in text but 豐南店/豐原區 matches."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新莊丹鳳店",
+  "opened_date": "2015-07",
+  "source_url": "https://www.chinatimes.com/newspapers/20150722000792-260113",
+  "source_title": "消費快訊－家樂福便利購丹鳳開幕 買1送1（中國時報 2015/07/22）",
+  "source_type": "news",
+  "evidence": "2015/07/22 中國時報…家樂福「便利購」進軍新莊開丹鳳店，是該牌小型店的第13家…即日起至28日…另有開幕好康 — only 丹鳳店 of the brand in 新莊.",
+  "notes": "Article dated 2015-07-22 reports the opening ('丹鳳開幕') but gives no exact day, so month precision. Address (雙鳳路59號) not stated in article."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台中漢口店",
+  "opened_date": "2015-12",
+  "source_url": "https://www.facebook.com/carrefour.tw/posts/965862830128081/",
+  "source_title": "家樂福Carrefour FB：又一間【家樂福便利購超市】在台中開幕了",
+  "source_type": "social",
+  "evidence": "又一間【家樂福便利購超市】在台中開幕了 漢口店便利購為您服務…地址：台中市北區漢口路四段295號 (post timestamp 2015-12-11 18:56 +08) — same address.",
+  "notes": "Post (read via FB embed plugin) says the store has opened ('開幕了') but gives no day, so month precision only (opened on or before 2015-12-11). Not to be confused with ex-頂好 '西屯漢口店' converted 2021-07-15 (different store)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 楠梓益群店",
+  "opened_date": "2016-06-24",
+  "source_url": "https://tw.news.yahoo.com/家樂福便利購展店搶超市市場-圖-121101290--finance.html",
+  "source_title": "家樂福便利購展店搶超市市場 (圖)（中央社 2016-06-24）",
+  "source_type": "news",
+  "evidence": "家樂福便利購超市楠梓益群店24日開幕…中央社記者程啟峰高雄攝 105年6月24日 — store name matches (only one 楠梓益群店, 益群路50號).",
+  "notes": "CNA photo caption; address not in caption but store name unique."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 中壢中北店",
+  "opened_date": "2017-01-13",
+  "source_url": "https://enews.tw/article/822715",
+  "source_title": "桃市量販店戰爭開打 家樂福便利購中壢中北店開幕（台灣好新聞/ENews 2017-01-13）",
+  "source_type": "news",
+  "evidence": "家樂福全台第31家的「便利購」～中壢中北店，13日上午在中原大學旁盛大開幕 (article dated 2017-01-13). Carrefour FB post 1266027303444964 (2017-01-11): '1/13 開幕當天…#中北路111號' — same address.",
+  "notes": ""
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園龍安店",
+  "opened_date": "2017-08-31",
+  "source_url": "https://news.ltn.com.tw/news/life/breakingnews/2179483",
+  "source_title": "家樂福便利購超市龍安店 24小時不打烊（自由時報 2017/08/31）",
+  "source_type": "news",
+  "evidence": "家樂福便利購超市龍安店今天開幕…是家樂福在桃園第4間便利購超市 (dated 2017/08/31). 桃園市經發局 FB (2017-08-30): '第4家桃園區龍安店亦將於8月31日開幕…龍安店：桃園區龍安街137號' — same address.",
+  "notes": "LTN describes location as 龍安路、國強一街口; the city EDB post gives 龍安街137號 (our address)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北濟南店",
+  "opened_date": "2017-11-20",
+  "source_url": "https://www.facebook.com/carrefour.tw/posts/1562482737132751/",
+  "source_title": "家樂福Carrefour FB：【開幕優惠接力賽 第三棒跑跑跑】台北濟南店慶開幕",
+  "source_type": "social",
+  "evidence": "11/20 星期一不Blue 台北濟南店慶開幕…#便利購 #台北市中正區 #濟南路2段46號B1 (post timestamp 2017-11-18 16:00 +08) — same address.",
+  "notes": "Also reported by 今日報 (todaynews.com.tw, '家樂福便利購超市台北濟南店11/20隆重開幕', not reachable from here). Opened as 家樂福便利購."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 板橋文化店",
+  "opened_date": "2017-12-19",
+  "source_url": "https://tw.sale-events.com/sale/家樂福便利購-板橋文化店開幕優惠-_RJMRw",
+  "source_title": "家樂福便利購．板橋文化店開幕優惠（SaleEvents, 2017年12月17日）",
+  "source_type": "social",
+  "evidence": "只在12/19 開幕的家樂福板橋文化店！開幕當天會員單筆消費滿800元…地點: 新北市板橋區文化路二段313號 (listing dated 2017年12月17日) — same address.",
+  "notes": "Listing reposts Carrefour's own FB promotion text. A blogger FB post (facebook.com/pekoblog) also confirms 家樂福超市(板橋文化店)開幕, 地址：板橋區文化路二段313號B1."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 土城日月光店",
+  "opened_date": "2018-07-26",
+  "source_url": "https://www.facebook.com/carrefour.tw/posts/1840152572699098/",
+  "source_title": "家樂福Carrefour FB：【土城日月光店歡慶開幕】",
+  "source_type": "social",
+  "evidence": "土城日月光店明天早上11點，就在土城日月光購物廣場地下2樓，歡慶開幕…7/26 前100 名…#便利購 #新北市土城區 #學府路二段210號B2樓 (post timestamp 2018-07-25 16:00 +08) — same address.",
+  "notes": "Same day as ASE WeMall mall grand opening (LTN 2018/07/26)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 北投明德店",
+  "opened_date": "2018-10-31",
+  "source_url": "https://www.facebook.com/carrefour.tw/posts/1997394440308243/",
+  "source_title": "家樂福Carrefour FB：北投明德店歡慶開幕",
+  "source_type": "social",
+  "evidence": "北投明德店明天開幕囉~…10/31 開幕當天…#便利購 #台北市北投區 #明德路161號B1 (post timestamp 2018-10-30 12:00 +08) — same address.",
+  "notes": "Fetched via Facebook embed plugin (facebook.com/plugins/post.php), which gives the post timestamp 2018-10-30; post says 明天開幕 / 10/31 開幕當天."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 三重新北大道店",
+  "opened_date": "2019-06-28",
+  "source_url": "https://www.facebook.com/carrefour.tw/posts/2375222992525384/",
+  "source_title": "家樂福Carrefour FB：【三重新北大道店歡慶開幕】",
+  "source_type": "social",
+  "evidence": "三重新北大道店即將於6/28這週五歡慶開幕…#便利購 #新北市三重區 #新北大道一段115號B1 (post timestamp 2019-06-27 18:00 +08) — same address.",
+  "notes": "Fetched via Facebook embed plugin; post timestamp gives year 2019 (6/28/2019 was a Friday, consistent)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 土城中央店",
+  "opened_date": "2019-09-18",
+  "source_url": "https://www.ptt.cc/bbs/TuCheng/M.1568773535.A.A85.html",
+  "source_title": "[閒聊] 家樂福便利購土城中央店新開幕（PTT TuCheng, 2019-09-18）",
+  "source_type": "social",
+  "evidence": "家樂福便利購土城中央店新開幕！9/18當天買滿300元送雞蛋一盒…地址：土城中央路二段191號B1 (post time Wed Sep 18 10:25:33 2019) — same address.",
+  "notes": "PTT post quoting Carrefour's SMS; replaces former 全聯土城中央二店 site. Opened as 家樂福便利購."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 嘉義民族店",
+  "opened_date": "2023-04-26",
+  "source_url": "https://www.chiayi.gov.tw/News_Content.aspx?n=455&s=778947",
+  "source_title": "點亮金財神大樓 家樂福民族超市盛大開幕剪綵 黃敏惠市長：讓嘉義市快樂又幸福（嘉義市政府 2023-04-26）",
+  "source_type": "official",
+  "evidence": "發布日期：2023-04-26…家樂福於今(26)日宣布第三家分店「民族店」開幕…再度點亮金財神大樓 — 民族店 in 金財神大樓 (民族路610號).",
+  "notes": "Also 觀傳媒/scooptw 2023-04-26: 「民族店」26日上午10時，於金財神大樓開幕營業. Address 610號 from store's FB page; article names the building only."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 太保祥和店",
+  "opened_date": "2024-09-26",
+  "source_url": "https://www.cna.com.tw/news/ahel/202409260214.aspx",
+  "source_title": "家樂福插旗太保 翁章梁：廠商看好嘉義縣治特區發展（中央社 2024/9/26）",
+  "source_type": "news",
+  "evidence": "（中央社記者蔡智明嘉義縣26日電）嘉義縣長翁章梁今天參加家樂福超市太保祥和店開幕…家樂福超市也在此設點今天開幕 — store name matches exactly; located in 嘉義縣治特區 (太保市).",
+  "notes": "Article dated 2024-09-26 and says the store opened 今天."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 鳳山甲1店",
+  "opened_date": "2019-08",
+  "source_url": "https://www.ctee.com.tw/news/20190822700655-439803",
+  "source_title": "家樂福接手台糖3家便利購超市  台中水湳店22日歡慶開幕",
+  "source_type": "news",
+  "evidence": "工商時報2019-08-22：「家樂福便利購超市-高雄小港漢民店、台中水湳店及高雄鳳山甲一店，連續於8/21、8/22、8/23一天一家開幕。其中，台中水湳店22日歡慶開幕」— 鳳山甲一店依序對應8/23；店名『鳳山甲一』與本店(鳳山甲1店)同名、同區，且登記日2019-07-29相符。",
+  "notes": "原為台糖超市，由家樂福接手改為便利購。日期由列舉順序對應(漢民8/21、水湳8/22已證實、甲一8/23)；文中未列地址(五甲一路261號)未能獨立核對。若需保守可用2019-08。；報導列三店與 8/21～8/23 三個日期，只明寫水湳店 22 日，此店只記到月份"
+ }
+]

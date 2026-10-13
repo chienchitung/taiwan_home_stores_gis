@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """Process and synchronize official 全聯福利中心 (Pxmart Supermarket) locations into project datasets.
 
-Verified 100% against official Ministry of Economic Affairs (MOEA / GCIS)
-Company & Branch Registry (商業發展署商工登記公示資料) for exact establishment dates.
+門市清單與座標來自全聯官方門市 API。開幕日期只列新聞、雜誌、官方或社群貼文可查證者
+（audit/supermarket_news_openings.json、RELOCATED_OPENINGS），其餘留空。
+經濟部商工登記分公司核准設立日不等於開幕日，只用來對應分公司，登記日留在 pxmart_location_audit.json 供參考。
 """
 import csv
 import json
@@ -18,6 +19,7 @@ except ImportError:  # 從專案根目錄以 audit.sync_pxmart_stores 匯入時
 BASE_DIR = Path(__file__).resolve().parent
 RAW_JSON = BASE_DIR / "pxmart_stores_raw.json"
 GCIS_JSON = BASE_DIR / "pxmart_gcis_branches.json"
+NEWS_JSON = BASE_DIR / "supermarket_news_openings.json"
 OUTPUT_AUDIT = BASE_DIR / "pxmart_location_audit.json"
 DATA_DIR = BASE_DIR.parent / "data" if (BASE_DIR.parent / "data").exists() else BASE_DIR
 MAIN_JSON = DATA_DIR / "taiwan_home_stores_status.json"
@@ -78,7 +80,14 @@ RELOCATED_OPENINGS = {
 }
 
 
-def parse_pxmart_store(item, match):
+def load_news_openings(brand):
+    """新聞／社群查得的開幕日期：{店名: 紀錄}"""
+    if not NEWS_JSON.exists():
+        return {}
+    return {x["store_name"]: x for x in json.loads(NEWS_JSON.read_text(encoding="utf-8")) if x["brand"] == brand}
+
+
+def parse_pxmart_store(item, match, news=None):
     attr = item['attributes']
     raw_name = attr.get('name', '').strip()
     full_name = f"全聯福利中心 {raw_name}"
@@ -102,31 +111,31 @@ def parse_pxmart_store(item, match):
         if title:
             srv_list.append(title)
     
-    # 經濟部商工登記分公司比對結果（同縣市、一對一；同址重新登記取最早設立日期）
+    # 經濟部商工登記分公司比對結果（同縣市、一對一）：只記分公司，登記日不當開幕日
+    registry_date = ""
     if match:
         branch, how, first = match
-        opened_date = first['opened_date']
-        opened_year = int(opened_date[:4])
+        registry_date = first['opened_date']
         branch_ban = branch.get('branch_ban', '')
         branch_reg_name = branch.get('full_name', '')
-        v_status = f"官方門市與經濟部商工登記分公司比對（{how}）；開店日期採分公司核准設立日期"
-        if raw_name in RELOCATED_OPENINGS:
-            opened_date, url, why = RELOCATED_OPENINGS[raw_name]
-            opened_year = int(opened_date[:4])
-            v_status = f"官方門市與經濟部商工登記分公司比對（{how}）；現址為搬遷後新店，開店日期採新聞記載現址開幕日（{why}；{url}）"
     else:
-        # 找不到可靠對應：不推估，日期留空
-        opened_year = None
-        opened_date = ""
         branch_ban = ""
         branch_reg_name = ""
-        v_status = "官方門市地址與經緯度已核對；商工登記無可靠對應，開店日期未知"
+    if raw_name in RELOCATED_OPENINGS:
+        opened_date, src, why = RELOCATED_OPENINGS[raw_name]
+        v_status = f"開幕日期依新聞（{why}）"
+    elif news:
+        opened_date, src = news['opened_date'], news['source_url']
+        v_status = f"開幕日期依{news.get('source_title') or '新聞／社群'}"
+    else:
+        # 查無新聞、官方或社群來源：不推估，日期留空
+        opened_date, src = "", ""
+        v_status = "官方門市地址與經緯度已核對；查無可查證的開幕日期，未列出"
+    opened_year = int(opened_date[:4]) if opened_date else None
 
     note_parts = []
     if desc:
         note_parts.append(desc)
-    if opened_date:
-        note_parts.append(f"設立日期: {opened_date}")
     if hours_str:
         note_parts.append(f"營業時間: {hours_str}")
     if phone:
@@ -137,7 +146,7 @@ def parse_pxmart_store(item, match):
 
     maps_query = quote(f"全聯福利中心 {raw_name} {addr}")
 
-    return {
+    return registry_date, {
         "brand": "全聯福利中心",
         "store_name": full_name,
         "store_type": "社區生鮮超市",
@@ -166,6 +175,8 @@ def parse_pxmart_store(item, match):
         "core_store": False,
         "store_format": "社區超市",
         "opened_year": opened_year,
+        "opened_date_basis": "新聞／官方" if opened_date else "",
+        "opened_date_source": src,
         "official_branch_ban": branch_ban,
         "branch_registry_name": branch_reg_name
     }
@@ -182,11 +193,17 @@ def main():
 
     raw_items = data.get('data', [])
     matches = match_all([it['attributes'] for it in raw_items], branches)
-    parsed_stores = [parse_pxmart_store(item, matches.get(item['attributes'].get('code'))) for item in raw_items]
+    news = load_news_openings("全聯福利中心")
+    parsed = [parse_pxmart_store(item, matches.get(item['attributes'].get('code')),
+                                 news.get(f"全聯福利中心 {item['attributes'].get('name', '').strip()}"))
+              for item in raw_items]
+    parsed_stores = [p[1] for p in parsed]
+    registry_dates = {p[1]['store_name']: p[0] for p in parsed if p[0]}
     print(f"Parsed {len(parsed_stores)} stores from {RAW_JSON}")
     
     matched_exact = sum(1 for s in parsed_stores if s.get('official_branch_ban'))
-    print(f"Verified against MOEA / GCIS records: {matched_exact} / {len(parsed_stores)} ({matched_exact/len(parsed_stores)*100:.2f}%)")
+    print(f"Matched to MOEA / GCIS branches: {matched_exact} / {len(parsed_stores)}")
+    print(f"Opening dates listed (news/social): {sum(1 for s in parsed_stores if s['opened_date'])}")
 
     # Save audit summary
     audit_data = {
@@ -195,6 +212,8 @@ def main():
         "verification_source": "經濟部商業發展署商工登記公示資料 (GCIS)",
         "total_count": len(parsed_stores),
         "exact_verified_count": matched_exact,
+        "opened_date_rule": "只列新聞、雜誌、官方或社群可查證的開幕日期；商工登記核准設立日不等於開幕日，僅供參考",
+        "registry_estab_dates_reference_only": registry_dates,
         "by_city": {},
         "by_year": {},
         "stores": parsed_stores
@@ -214,13 +233,23 @@ def main():
         with open(MAIN_JSON, 'r', encoding='utf-8') as f:
             existing_stores = json.load(f)
     
-    # Filter out any prior pxmart stores if present
-    base_stores = [s for s in existing_stores if s.get('brand') != '全聯福利中心']
-    combined_stores = base_stores + parsed_stores
-    
-    # Re-index n
-    for idx, s in enumerate(combined_stores, 1):
-        s['n'] = idx
+    # 以本次結果取代既有全聯門市，位置與編號 n 沿用（依官方門市代碼），新門市接在最後的編號
+    old_n = {s.get('official_store_id'): s.get('n') for s in existing_stores if s.get('brand') == '全聯福利中心'}
+    next_n = max([int(s.get('n') or 0) for s in existing_stores] or [0]) + 1
+    for s in parsed_stores:
+        if old_n.get(s['official_store_id']) is not None:
+            s['n'] = old_n[s['official_store_id']]
+        else:
+            s['n'], next_n = next_n, next_n + 1
+    combined_stores, inserted = [], False
+    for s in existing_stores:
+        if s.get('brand') != '全聯福利中心':
+            combined_stores.append(s)
+        elif not inserted:
+            combined_stores.extend(parsed_stores)
+            inserted = True
+    if not inserted:
+        combined_stores.extend(parsed_stores)
 
     with open(MAIN_JSON, 'w', encoding='utf-8') as f:
         json.dump(combined_stores, f, ensure_ascii=False, indent=2)

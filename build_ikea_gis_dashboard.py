@@ -19,10 +19,11 @@ date_year_regex = re.compile(r'^(19\d\d|20\d\d)(?:-\d\d){0,2}$')
 def assign_store_opened_year(s):
     """開幕年份只取有出處的 opened_date（YYYY / YYYY-MM / YYYY-MM-DD）。
 
-    - 全聯福利中心、樂家康：經濟部商工登記分公司核准設立日期（audit/sync_pxmart_stores.py、
-      audit/sync_lejiakang_stores.py；樂家康有開幕新聞者以新聞為準）
+    - 全聯福利中心、樂家康：audit/supermarket_news_openings.json 等新聞／社群可查證的日期
+      （audit/sync_pxmart_stores.py、audit/sync_lejiakang_stores.py 寫入）
     - 其他品牌：audit/store_opened_dates_verified.json 中有新聞／官方來源的日期
       （audit/apply_verified_opened_dates.py 寫入）
+    商工登記核准設立日不等於開幕日，不採用。
     查無可靠來源就回傳 None（前端顯示為未知、不列入時間軸），不推估、不從備註抓年份。
     """
     m = date_year_regex.match(str(s.get('opened_date') or '').strip())
@@ -31,11 +32,7 @@ def assign_store_opened_year(s):
 dashboard_stores = [store for store in stores if not store.get('dashboard_excluded')]
 for store in dashboard_stores:
     store['opened_year'] = assign_store_opened_year(store)
-    # 開幕日期依據：全聯一律為商工登記；其他品牌由 apply_verified_opened_dates.py 寫入
-    if store['opened_year']:
-        store['opened_basis'] = '商工登記' if store.get('brand') == '全聯福利中心' else (store.get('opened_date_basis') or '新聞／官方')
-    else:
-        store['opened_basis'] = ''
+    store['opened_basis'] = (store.get('opened_date_basis') or '新聞／官方') if store['opened_year'] else ''
     # 部分資料的座標是字串（例如 "25.010977"）；Leaflet 的 bounds.contains() 會把字串陣列
     # 誤判成範圍而無限遞迴，導致「只看地圖範圍內」當掉，因此統一轉成數字
     for key in ('lat', 'lng'):

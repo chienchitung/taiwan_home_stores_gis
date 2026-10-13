@@ -1,0 +1,1843 @@
+[
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台中北屯店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched (1 query: HOLA 北屯店 開幕 北屯路); no opening report found."
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台北內湖店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 3 queries. 遠見 2000-07 (https://www.gvm.com.tw/article/6330) says 特力屋內湖店 opened 2000-04-01 at 內湖 特力廣場, and 今周刊 2000-04-13 (https://www.businesstoday.com.tw/article/category/80392/post/200004130022/) says 特力廣場 'combines B&Q 特力屋、HOLA 特力和樂、金沙家具' — but neither explicitly states the HOLA store's own opening date, so not recorded (likely same complex/timeframe, but that would be inference)."
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台北士林店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched (特力屋 士林店 基河路 開幕). Only yam 2016-12-02 renovation article saying 士林店 had operated '約15年' (relative phrase, not acceptable)."
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 台南仁德店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query; nothing relevant."
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 嘉義店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 2 queries; nothing relevant."
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 彰化店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query; nothing relevant."
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 新北中和店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 新北土城店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 新竹店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query. LTN 2024 confirms the store is in the 愛買新竹店 building on 公道五路 but gives no HOLA opening date."
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 高雄夢時代店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query; nothing relevant."
+ },
+ {
+  "brand": "HOLA",
+  "store_name": "HOLA 高雄左營店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query; nothing relevant."
+ },
+ {
+  "brand": "IKEA",
+  "store_name": "IKEA 桃園舊店（中山路店）",
+  "found": true,
+  "searched": true,
+  "notes": "Only IKEA store in Taoyuan at the time = 中山路958號 store (closed 2020-07-22, moved to 青埔). Date derived from 'this Saturday' in a dated article (allowed by rule 1). Registry date 2004-09-01 consistent."
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 台中文心門市（初代首店）",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query; nothing relevant."
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 台北內湖門市",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query; nothing relevant."
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 台南崇善門市",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query; nothing relevant."
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 新北新莊旗艦店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 4 queries. 威傳媒 article republished on yam 2025-06-16 (https://n.yam.com/Article/20250616187107, fetched) says '全新3.0旗艦店於新莊副都心盛大開幕' without an explicit date; LINE Today/100室內設計 confirms address 新北大道四段135號2&3樓. No explicit date → not recorded. Note registry hint 2024-09-19 vs mid-2025 grand-opening coverage: possibly a soft opening earlier or a 3.0 reopening; unresolved."
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 新竹竹北門市",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query; nothing relevant."
+ },
+ {
+  "brand": "MR. LIVING 居家先生",
+  "store_name": "MR. LIVING 高雄巨蛋門市",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query; nothing relevant."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 三民澄清店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query; nothing relevant."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 三重集美店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 佳里佳東店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 八德店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 台中復興店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 台南仁德店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 台南文賢店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 嘉義店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 土城店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 埔里信義店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 基隆義一店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 士林店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 大同重慶北店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 大里國光店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared web-search budget (200 WebSearch calls per turn) ran out before this store was reached. Needs a follow-up run."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 屏東店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 岡山大仁店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 平鎮店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 彰化員林店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 新店店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 新營金華店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 新竹店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 新莊店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 朴子四維店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 東港光復店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 板橋合宜店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 林口中山店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 桃園大業店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 梧棲中華店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 楠梓大學店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 永康復國店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 汐止新台店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 淡水中山北店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "民報 2025-12-30 article (https://www.peoplenews.tw/?p=9317 '挺進雙北房市熱區 特力屋第65店插旗淡水') confirms the 淡水中山北店 opened as the 65th store and mentions '開幕首10日' sales, so it opened before ~2025-12-20, but gives no explicit opening date. Not recorded."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 湖口和愛店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 竹北文興店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 花蓮店",
+  "found": false,
+  "searched": true,
+  "notes": "Only a search-engine summary of findprice.com.tw/supplier/89390488 (supplier directory, Cloudflare-blocked) claiming 特力屋 entered Hualien '2007年底' as the first home-improvement centre in Hualien; could not open the page to verify wording, and the source is not news/official. Not recorded."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 苓雅三多店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared WebSearch budget (200 per turn) was exhausted before this store was reached. Needs a follow-up search."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 苗栗中正店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared WebSearch budget (200 per turn) was exhausted before this store was reached. Needs a follow-up search."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 草屯虎山店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 蘆洲長安店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared WebSearch budget (200 per turn) was exhausted before this store was reached. Needs a follow-up search."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 蘆洲集賢店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 虎尾公安店(社區店)",
+  "found": false,
+  "searched": true,
+  "notes": "ETtoday 2025-08-14 (https://www.ettoday.net/news/20250814/3015256.htm) reports 虎尾公安商場 held its opening ceremony 今(14)日 and lists 特力屋 among tenants (目前有康是美、特力屋…進駐), but does not state the 特力屋 store's own opening date (it may have opened earlier). Mall opening = 2025-08-14 for reference only; not recorded."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 豐原店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 頭份中央店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared WebSearch budget (200 per turn) was exhausted before this store was reached. Needs a follow-up search."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 高雄左營店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 高雄鳳山店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched news/web (brand+store/road+開幕); no source explicitly stating this store's opening date found."
+ },
+ {
+  "brand": "特力屋",
+  "store_name": "特力屋 龍潭北龍店(社區店)",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the shared WebSearch budget (200 per turn) was exhausted before this store was reached. Needs a follow-up search."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北酒泉店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北師大店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 頭份中華店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園復興一店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園萬壽店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 北投公館店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北松德店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北林森北店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 竹南民族二店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched directly (web-search budget exhausted). Incidentally found 大紀元 2014-02-13 (https://www.epochtimes.com/b5/14/2/13/n4082357.htm): 家樂福便利購「民族店」in 竹南 「13日上午盛大開幕」 — but that is very likely a different store (the separate 竹南民族店; this 民族二店 has a 2002 registry, likely ex-頂好). Not matched."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 汐止明峰店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新莊化成店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 五股成泰店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新竹北大店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新竹長春店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 蘆竹福祿一店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北萬大店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 高雄大豐二店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 高雄美術東店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 汐止樟樹一店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園中埔六店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北長安東店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北農安店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 永和永安店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 大溪介壽店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 板橋忠孝店",
+  "found": false,
+  "searched": true,
+  "notes": "Not searched: the shared web-search budget for this turn was exhausted before reaching this store (pre-2013 頂好-era store; low expected chance of a news source)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 南竹店",
+  "found": false,
+  "searched": true,
+  "notes": "Candidate 2013-05 (likely 2013-05-10): zh.wikipedia 台灣家樂福 says 「2013年5月於桃園縣蘆竹開設首間附設小型商場的便利購南竹店」 citing 工商時報 好康報報 2013-05-10 「蘆竹南崁第一間家樂福盛大開幕」 (no URL). The primary article could not be located/fetched (web-search budget ran out), so not recorded per strict rules."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 竹北成功店",
+  "found": false,
+  "searched": true,
+  "notes": "One search, nothing found; listings show it was a 頂好 store (竹北成功CPCK)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台中昌平店",
+  "found": true,
+  "searched": true,
+  "notes": "Article gives no street number but there is only one 昌平店 (北屯 昌平商圈); store originally opened as 家樂福便利購."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 蘆洲長榮店",
+  "found": false,
+  "searched": true,
+  "notes": "Two searches, nothing found."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 大安敦化南店",
+  "found": false,
+  "searched": true,
+  "notes": "Two searches, nothing found (only an NCCC merchant record with 2021-03 contract date, not an opening)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 板橋中正店",
+  "found": false,
+  "searched": true,
+  "notes": "One search, nothing found."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台南北安店",
+  "found": false,
+  "searched": true,
+  "notes": "One search, nothing found."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新竹南大店",
+  "found": true,
+  "searched": true,
+  "notes": "Article gives no street number; only one 南大店 in 新竹市 (南大路286號). Opened as 家樂福便利購."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北內湖1店",
+  "found": false,
+  "searched": true,
+  "notes": "One search, nothing found."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園大興店",
+  "found": false,
+  "searched": true,
+  "notes": "One search, nothing found."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台中大里中興店",
+  "found": false,
+  "searched": true,
+  "notes": "Three searches, nothing found."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園文化七店",
+  "found": false,
+  "searched": true,
+  "notes": "Search found 家樂福超市龜山文青店 opened 2021-12-14 (bnext) near A7, but it is a B1 supermarket in a 1,000-ping complex, no address given, and registry (2018-12) suggests this 文化七路173號 store is a different, earlier (頂好) store — not matched."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 小港漢民店",
+  "found": true,
+  "searched": true,
+  "notes": "Article lists the three stores and the three dates in the same order (implying 小港漢民 = 2019-08-21), but does not explicitly pair 漢民 with a date (only 水湳=22日 is explicit), so recorded at month precision. Store opened as 家樂福便利購 taking over a 台糖 supermarket; article does not give street number but 小港漢民店 name matches."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 八里商港店",
+  "found": false,
+  "searched": true,
+  "notes": "Only found a coupon/DM aggregator post dated 2020-12-29 titled 「家樂福 DM》八里商港店歡樂開幕【2021/1/12 止】」 (https://coupondm.com/68910/) — it does not state an opening date (no 今日/明日/X月X日), so not recorded per strict rules. Suggests opening around late Dec 2020."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 北屯總太店",
+  "found": true,
+  "searched": true,
+  "notes": ""
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 三重五華店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 士林華齡店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 內湖成功二店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 淡水中山北店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 南港舊莊店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 竹北中正東店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 內湖康樂店",
+  "found": false,
+  "searched": true,
+  "notes": "A 2017-08 blog covers a 家樂福便利購 內湖東湖店 on 東湖路 — different road, not a match."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 三峽中山店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 土城立德店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 汐止福德一店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 樹林復興店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北敦化北店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 楊梅中興店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 三重永福店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 五股西雲店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 五股明德店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園南華店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 基隆深溪店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園大興西店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 士林雨聲店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 南屯黎明店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 樹林太順店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園復興店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 竹北六家店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新莊昌隆店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 景安店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 林口文化一店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北光復店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 太平環中店",
+  "found": true,
+  "searched": true,
+  "notes": "開幕時為家樂福便利購太平環中店；報導未列門牌，但店名「太平環中店」與現址環中東路三段一致，且為台中太平唯一同名店"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 高雄小港店",
+  "found": false,
+  "searched": true,
+  "notes": "Not found within budget (store-level news for pre-2016 頂好/便利購 stores is sparse); web-search budget for the session was exhausted partway through, so some stores got only 1 search or none."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 三民建工店",
+  "found": false,
+  "searched": true,
+  "notes": "Only one search done (no hits); web-search budget ran out before 便利購-name queries could be tried."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 屏東自由店",
+  "found": false,
+  "searched": true,
+  "notes": "Only one search done (no hits); web-search budget for the session ran out before 便利購-name queries could be tried."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 大甲蔣公店",
+  "found": true,
+  "searched": true,
+  "notes": "開幕時為家樂福便利購大甲蔣公店"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台中進化店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched as 家樂福超市/便利購 進化店; only directory listings (進化路379號) found. Likely a 2017 家樂福便利購 opening but no dated source found before the web-search budget ran out."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北錦州店",
+  "found": true,
+  "searched": true,
+  "notes": "開幕時為家樂福便利購錦州店；中時2018-05-31另文亦稱25日開錦州店"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 內湖江南店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched as 家樂福超市/頂好/便利購 江南店; only store-locator listings (江南街55號) found, no opening date."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 林口仁愛店",
+  "found": true,
+  "searched": true,
+  "notes": "報導無門牌；TVBS食尚玩家另列頂好林口仁愛店地址為仁愛路二段91號（與現址89號相鄰，應為同店）。開幕時為頂好"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 大安臨江店",
+  "found": true,
+  "searched": true,
+  "notes": "開幕時為「家樂福便利購」店型；來源為特賣資訊聚合站轉載家樂福官方貼文"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 龜山文青店",
+  "found": true,
+  "searched": true,
+  "notes": "文中未列門牌，但龜山文青店為唯一同名店"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 太平育賢店",
+  "found": true,
+  "searched": true,
+  "notes": "觀傳媒/獨家報導標題亦為「家樂福超市太平育賢店今6/28歡慶開幕」"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 永和仁愛店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北羅斯福店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs). Wellcome FB post (snippet, not used) lists 台北羅斯福店 (羅斯福路3段285號B1) among 8 stores reopening 3/4 (2021 rebrand) — conversion, not original opening."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 北投光明店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs). Carrefour FB snippet lists 家樂福超市北投光明 among stores opening 7/1 (2021 rebrand) — conversion only."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 中和興南店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 員林博愛店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 基隆安樂店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs). Formerly 頂好超市常青店 (安樂路二段164號B1, per 黃頁). Carrefour FB snippet: 家樂福超市基隆安樂店 in 7/29 (2021) rebrand openings — conversion only."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 三重重陽店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北八德店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs). Carrefour FB snippet: 台北八德店 (八德路4段83號) in 3/11 (2021) rebrand openings — conversion only. NOTE: '家樂福八德店1/12開幕 全台第95家' (2017) is a different store (hypermarket), not this one."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北新生南店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北信義店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北同安店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 竹北華興店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新店如意店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新豐建興店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 士林社中店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園壽昌店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 嘉義德明店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs). Carrefour FB snippet lists 德明路128-132號 store among 7/29 (2021) rebrand openings — conversion only."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 中和圓通店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 蘆洲中興店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 高雄南屏店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs). NOTE: news of '家樂福左營南屏店 2017-06-22 開幕 (全台第100家)' refers to a different store in 左營, not this 鼓山區南屏路551號 store."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 平鎮廣明店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 中和壽德店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新莊龍安店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs). FB page/posts refer to 頂好超市 新莊龍安店."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新莊公園一店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs). A FB page '頂好Wellcome (新莊公園店)' exists; no opening date found."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北太原店",
+  "found": false,
+  "searched": true,
+  "notes": "Ex-頂好Wellcome store (converted to 家樂福超市 in 2021). No source found stating the original 頂好 opening date at this address; searched 頂好/頂好Wellcome/家樂福超市 names + road (news, FB, blogs). (Not confirmed whether this was 頂好 or early 便利購; nothing found under either name.)"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 豐南店",
+  "found": true,
+  "searched": true,
+  "notes": "Apple Daily realtime article reposted via RSS on a pixnet blog (original Apple Daily URL no longer online). Address 豐南街118號 not in text but 豐南店/豐原區 matches."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 天母中北店",
+  "found": false,
+  "searched": true,
+  "notes": "ETtoday 2014-04-23 只寫「在天母開幕」的全台第8家便利購，未寫店名與地址，無法確認是現址中山北路七段113號，不列"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新莊丹鳳店",
+  "found": true,
+  "searched": true,
+  "notes": "Article dated 2015-07-22 reports the opening ('丹鳳開幕') but gives no exact day, so month precision. Address (雙鳳路59號) not stated in article."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台中漢口店",
+  "found": true,
+  "searched": true,
+  "notes": "Post (read via FB embed plugin) says the store has opened ('開幕了') but gives no day, so month precision only (opened on or before 2015-12-11). Not to be confused with ex-頂好 '西屯漢口店' converted 2021-07-15 (different store)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 楠梓益群店",
+  "found": true,
+  "searched": true,
+  "notes": "CNA photo caption; address not in caption but store name unique."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 中壢中北店",
+  "found": true,
+  "searched": true,
+  "notes": ""
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園龍安店",
+  "found": true,
+  "searched": true,
+  "notes": "LTN describes location as 龍安路、國強一街口; the city EDB post gives 龍安街137號 (our address)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北濟南店",
+  "found": true,
+  "searched": true,
+  "notes": "Also reported by 今日報 (todaynews.com.tw, '家樂福便利購超市台北濟南店11/20隆重開幕', not reachable from here). Opened as 家樂福便利購."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 板橋文化店",
+  "found": true,
+  "searched": true,
+  "notes": "Listing reposts Carrefour's own FB promotion text. A blogger FB post (facebook.com/pekoblog) also confirms 家樂福超市(板橋文化店)開幕, 地址：板橋區文化路二段313號B1."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 土城日月光店",
+  "found": true,
+  "searched": true,
+  "notes": "Same day as ASE WeMall mall grand opening (LTN 2018/07/26)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 北投明德店",
+  "found": true,
+  "searched": true,
+  "notes": "Fetched via Facebook embed plugin (facebook.com/plugins/post.php), which gives the post timestamp 2018-10-30; post says 明天開幕 / 10/31 開幕當天."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 三重新北大道店",
+  "found": true,
+  "searched": true,
+  "notes": "Fetched via Facebook embed plugin; post timestamp gives year 2019 (6/28/2019 was a Friday, consistent)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 土城中央店",
+  "found": true,
+  "searched": true,
+  "notes": "PTT post quoting Carrefour's SMS; replaces former 全聯土城中央二店 site. Opened as 家樂福便利購."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 嘉義民族店",
+  "found": true,
+  "searched": true,
+  "notes": "Also 觀傳媒/scooptw 2023-04-26: 「民族店」26日上午10時，於金財神大樓開幕營業. Address 610號 from store's FB page; article names the building only."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 太保祥和店",
+  "found": true,
+  "searched": true,
+  "notes": "Article dated 2024-09-26 and says the store opened 今天."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新店民族店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched 1 query (頂好 新店 民族路 開幕): only a rental ad mentioning a 頂好 nearby, no opening date. Remaining queries blocked: turn-wide WebSearch budget (200 calls, shared across agents) exhausted. NOT fully searched - re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 士林德行東店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 後龍中山店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新店安康店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北四維店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新莊中信店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 大雅民生二店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 土城學府店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 南港成福店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 汐止大同店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 汐止建成店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 嘉義仁愛店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 淡水民權店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 土城金城店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北大理店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 板橋金門二店",
+  "found": false,
+  "searched": false,
+  "notes": "NOT SEARCHED: the coordinator requested 3 queries, but the turn-wide WebSearch budget (200 calls, shared across agents) was exhausted before this store was reached. Re-run needed."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 三重中正北店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 內湖民權東店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 深坑北深店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園寶山店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 中和民治店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 淡水沙崙店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 文山景隆店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 樹林學成店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新莊中平店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新竹明湖店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 竹北縣政二店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 永康二王店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園陸光店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新店安康二店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 左營重和店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 內湖東湖店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 蘆洲光華店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台中大墩11店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 左營崇德店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 高雄天祥店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台中復興店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 高雄九如1店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 烏日信義店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 基隆孝二店",
+  "found": false,
+  "searched": true,
+  "notes": "Searched web (家樂福超市/頂好 + road/district + 開幕); no source explicitly stating this store's opening date was found. Results were only real-estate listings or unrelated Carrefour news."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北北安店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北忠孝東店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 文山萬慶店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北延吉店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 蘆洲三民店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北長沙店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 西屯青海店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 中和復興店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北忠孝東二店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台北中坡南店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 文山木新店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 三峽光明店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新竹金山店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 南港東明店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新店安祥店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 中壢環北店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 北投致遠一店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 平鎮文化店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 板橋四維店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 三重仁愛二店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新店溪園店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園大豐店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 板橋大觀店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新竹建中店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 林口文化三店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 永和竹林店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 莊敬店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 大安和平東店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 高雄岡山店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 桃園南平店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台南開元店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 三重溪尾店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 台南裕農店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 新莊中港店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 內湖成功店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 中壢成章1店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 鳳山甲1店",
+  "found": true,
+  "searched": true,
+  "notes": "原為台糖超市，由家樂福接手改為便利購。日期由列舉順序對應(漢民8/21、水湳8/22已證實、甲一8/23)；文中未列地址(五甲一路261號)未能獨立核對。若需保守可用2019-08。"
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 土城廣明店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ },
+ {
+  "brand": "樂家康",
+  "store_name": "樂家康 大安仁愛店",
+  "found": false,
+  "searched": true,
+  "notes": "No source found that states the opening date of this store at this address (searched 家樂福超市/便利購/頂好 names)."
+ }
+]
