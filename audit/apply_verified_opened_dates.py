@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """把 store_opened_dates_verified.json 的查核結果寫回主資料的 opened_date。
 
-- 全聯福利中心：日期來自商工登記（sync_pxmart_stores.py），這裡不動。
+- 全聯福利中心、樂家康：日期來自商工登記（sync_pxmart_stores.py／sync_lejiakang_stores.py），這裡不動。
 - 蝦皮店到店：沒有公開的開店日期來源，維持空白。
 - 其他品牌：confidence == "confirmed"（新聞／官方來源明確寫出日期）或 "registry"（經濟部商工登記
   分公司核准設立日，見 apply_gcis_branch_dates.py）才寫入；
@@ -16,7 +16,7 @@ DATA_DIR = BASE_DIR.parent / "data"
 VERIFIED_JSON = BASE_DIR / "store_opened_dates_verified.json"
 MAIN_JSON = DATA_DIR / "taiwan_home_stores_status.json"
 MAIN_CSV = DATA_DIR / "taiwan_home_stores_status.csv"
-SKIP_BRANDS = {"全聯福利中心"}
+SKIP_BRANDS = {"全聯福利中心", "樂家康"}  # 這兩個品牌的日期由各自的 sync 腳本寫入（商工登記＋新聞）
 
 
 def main():

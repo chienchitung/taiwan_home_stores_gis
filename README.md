@@ -11,7 +11,7 @@
 ## 核心功能特色
 
 ### 1. 互動式空間地圖與商圈聚類
-* **全台品牌門市視覺化**：收錄 IKEA、無印良品、宜得利、特力屋、HOLA、hoi! 好好生活、MR. LIVING、Costco 好市多、萬家福/家樂福、大全聯、全聯福利中心，以及數千間蝦皮店到店門市。
+* **全台品牌門市視覺化**：收錄 IKEA、無印良品、宜得利、特力屋、HOLA、hoi! 好好生活、MR. LIVING、Costco 好市多、萬家福（原家樂福量販）、大全聯、全聯福利中心、樂家康（原家樂福超市），以及數千間蝦皮店到店門市。
 * **高密度標記聚類（Marker Cluster）**：支援數千個節點的高流暢平移縮放，依視角自動分群。
 * **共構商圈樞紐辨識**：自動計算並標記 150 公尺內存在同業競爭對手的高密度「商圈共構節點」。
 
@@ -62,8 +62,8 @@ taiwan_home_stores_gis/
 │   └── functions/
 │       └── directions.js                # Serverless 路徑規劃代理（Google Routes API 專用）
 ├── data/                                # 核心乾淨門市資料庫
-│   ├── taiwan_home_stores_status.json   # 5,191 間實體門市完整生命週期資料庫 (JSON)
-│   └── taiwan_home_stores_status.csv    # 5,191 間實體門市歷史狀態對帳表 (CSV)
+│   ├── taiwan_home_stores_status.json   # 5,402 間實體門市完整生命週期資料庫 (JSON)
+│   └── taiwan_home_stores_status.csv    # 5,402 間實體門市歷史狀態對帳表 (CSV)
 └── audit/                               # 歷史門市地毯式查核紀錄與同步腳本
     ├── HOME_BRAND_STORE_AUDIT.md        # 居家品牌查核總報告
     ├── PXMART_STORE_LOCATION_AUDIT.md   # 全聯門市 Google 地圖地理位置核對報告
@@ -72,6 +72,9 @@ taiwan_home_stores_gis/
     ├── finalize_store_audit.py          # 查核彙整產出腳本
     ├── sync_mass_retail_stores.py       # 量販門市同步腳本
     ├── sync_pxmart_stores.py            # 全聯福利中心門市同步腳本
+    ├── sync_lejiakang_stores.py         # 樂家康（原家樂福超市）門市同步＋開幕日期（新聞優先，其餘商工登記）
+    ├── verify_lejiakang_google_maps.py  # 樂家康門市座標逐筆比對 Google 地圖
+    ├── LEJIAKANG_STORE_DATES_AUDIT.md   # 樂家康門市與開幕日期查核報告
     ├── sync_shopee_stores.py            # 蝦皮店到店同步腳本
     ├── mass_retail_location_audit.json  # 量販查核資料庫
     ├── pxmart_location_audit.json       # 全聯門市位置查核紀錄

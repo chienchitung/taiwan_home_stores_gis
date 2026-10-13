@@ -293,7 +293,7 @@ function initBrandPills() {
     chip.dataset.brand = b;
     chip.innerHTML = `<span class="dot" style="background:${cfg.color}"></span> ${b} <span class="cnt">${count}</span>`;
     chip.onclick = async () => {
-      if (b === "全聯福利中心" && !pxmartDataLoaded) {
+      if (DATASET_BRANDS.supermarket.includes(b) && !pxmartDataLoaded) {
         await ensurePxmartData();
       }
       // 複選：點一下選取、再點一下取消；點了哪個品牌就顯示哪個（不自動改回「全部」，
