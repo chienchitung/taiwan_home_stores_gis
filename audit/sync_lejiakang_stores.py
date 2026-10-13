@@ -51,9 +51,18 @@ NEWS_OPENINGS = {
     "新莊新泰店": ("2024-12-20", "https://udn.com/news/story/7270/8438040", "經濟日報：家樂福新莊新泰店 2024-12-20 開幕"),
     "汐止龍安店": ("2024-08-01", "https://www.winnews.com.tw/193378/", "威傳媒：家樂福超市汐止龍安店 2024-08-01 開幕"),
     "花蓮林森店": ("2024-04-30", "https://www.jumpman.tw/carrefour-hualien-market.html", "2024-04-30 開幕（原國聲戲院址，全台第 247 家超市）"),
+    "三峽大學店": ("2024-08-30", "https://times.586.com.tw/2024/08/710461/", "報導：家樂福超市三峽大學店（大學路 119 號，北大特區）2024-08-30 開幕；另一篇 2024-09-03 報導稱「日昨」開幕。商工登記的「J三峽大學分公司」2017 年設立，與此店開幕時間不符，不採用"),
     "台北西藏店": ("1995-01", "https://www.winnews.com.tw/167820/", "威傳媒：台北西藏店自 1995 年 1 月開幕至今（原頂好），2023-12 改裝；查無對應商工登記分公司"),
 }
 SOURCE_URL = "https://www.uni-prosperity.com.tw/stores/?hl=zh-TW"
+
+
+# 官方門市資料座標有誤者，改用可查證的座標
+COORD_FIXES = {
+    # 官方 API 座標與「台北長沙店」完全相同（誤植到台北萬華）；改用 OpenStreetMap 標在後龍鎮中山路的
+    # 「家樂福超市」節點 3513878375（緊鄰後龍鎮公所中山路 152 號），與地址中山路 116-120 號相符
+    "後龍中山店": (24.6139343, 120.7913626, "OpenStreetMap 家樂福超市節點（官方座標誤植為台北長沙店）"),
+}
 
 
 def roc_to_iso(d):
@@ -165,15 +174,15 @@ def main():
             "district": row.get("area_name") or "",
             "channel_format": "社區生鮮超市 / 街邊獨立",
             "status_category": "現行營運中",
-            "lat": float(row["latitude"]),
-            "lng": float(row["longitude"]),
+            "lat": COORD_FIXES[row["name"]][0] if row["name"] in COORD_FIXES else float(row["latitude"]),
+            "lng": COORD_FIXES[row["name"]][1] if row["name"] in COORD_FIXES else float(row["longitude"]),
             "geocode_score": 100,
             "clean_address": address,
             "clean_name": name,
             "clean_query": f"{name} {address}",
             "is_co_location": False,
             "source_url": SOURCE_URL,
-            "coordinate_source": "萬家福／樂家康官方門市地圖座標",
+            "coordinate_source": COORD_FIXES[row["name"]][2] if row["name"] in COORD_FIXES else "萬家福／樂家康官方門市地圖座標",
             "google_maps_url": maps_url(BRAND, row["name"], address),
             "verification_status": "官方門市與經濟部商工登記分公司比對；開店日期採分公司核准設立日期" if b else "官方門市；查無對應商工登記分公司",
             "official_store_id": str(row["id"]),
