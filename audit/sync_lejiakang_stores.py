@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
-"""同步「樂家康（原家樂福超市）」門市；開幕日期只列有開幕新聞可查證者，其餘留空（不以商工登記日代替）。
+"""同步「樂家康（原家樂福超市）」門市；開幕日期有開幕新聞者用新聞日期，其餘用經濟部商工登記分公司核准設立日（儀表板標示「依商工登記」）。
 
 資料來源：
 - 門市清單：萬家福官方門市 API（store_type_id=2「超市」），與 sync_mass_retail_stores.py 的萬家福量販同一支 API。
   2026-07-01 起家樂福量販更名萬家福、家樂福超市更名樂家康（中央社 202607010050）。
-- 分公司登記：商工登記「統編查分公司資料」API（只作比對參考，不當開幕日期），營運公司為
+- 分公司登記：商工登記「統編查分公司資料」API（查無開幕新聞者以核准設立日代表開幕日，並標示依據），營運公司為
   統康生活事業（原惠康百貨／頂好，統編 22662257）與康達盛通生活事業（原家福，統編 22662550）。
 
 比對規則（不做模糊推估）：
 1. 門市資料的 tax_id 若是分公司統編，直接對應該分公司。
 2. 否則以 full_name 的分公司名稱，在兩家公司「核准設立」的分公司中找同名者。
 3. 再找不到則以正規化地址比對同縣市的核准設立分公司（須唯一）。
-4. 仍無對應者不記分公司。
-開幕日期：分公司核准設立日不等於開幕日（可能早於開幕數天到數月，或是公司重組時的重新登記），
-所以只採用 NEWS_OPENINGS 的開幕新聞日期，其餘門市 opened_date 留空；登記日僅保留在 lejiakang_gcis_match.json 供參考。
+4. 仍無對應者 opened_date 留空。
+開幕日期：分公司核准設立日通常早於開幕數天到數月，因此 opened_date_basis 記為「商工登記」，儀表板標示「依商工登記」，
+與全聯相同；有開幕新聞者（NEWS_OPENINGS）以新聞日期為準。
 不跨公司合併同址的舊登記：同址舊分公司多為已廢止的不同門市（例如統康三重二分公司 2000 年設立、已廢止，
 現址康達盛通三重新北大道 2019 年另行設立），無法證明是同一間店連續營業。
 
@@ -40,8 +40,8 @@ GCIS_API = "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3
 COMPANIES = {"22662257": "統康生活事業", "22662550": "康達盛通生活事業"}
 BRAND = "樂家康"
 
-# 有開幕新聞可查證的門市才列開幕日期；其餘留空。
-# 抽查的 10 間登記日都早於開幕 4～119 天，登記日不能當作開幕日。
+# 有開幕新聞的門市以新聞日期為準；其餘用商工登記日並標示依據。
+# 抽查的 10 間登記日都早於開幕 4～119 天。
 NEWS_OPENINGS = {
     "朴子文明南店": ("2026-04-10", "https://udn.com/news/story/7270/9434742", "經濟日報：家樂福超市朴子文明南店盛大開幕（2026-04-10）"),
     "台南文賢二店": ("2026-03-13", "https://www.ettoday.net/news/20260313/3131620.htm", "ETtoday 2026-03-13：家樂福超市台南文賢店（北區文賢路，400 坪複合店）開幕；登記為文賢二分公司 2026-03-09"),
@@ -166,6 +166,8 @@ def main():
         g = gmaps.get(name)
         if news:
             opened, basis, src = news[0], "新聞／官方", news[1]
+        elif b:
+            opened, basis, src = b["opened_date"], "商工登記", GCIS_API
         else:
             opened, basis, src = "", "", ""
         store = {
@@ -191,7 +193,9 @@ def main():
             "source_url": SOURCE_URL,
             "coordinate_source": f"Google 地圖「{g['name']}」地點座標（2026-10-13 逐筆比對）" if g else "萬家福／樂家康官方門市地圖座標",
             "google_maps_url": maps_url(BRAND, row["name"], address),
-            "verification_status": "官方門市；開幕日期依開幕新聞" if news else "官方門市；查無可查證的開幕日期，未列出",
+            "verification_status": ("官方門市；開幕日期依開幕新聞" if news else
+                                    "官方門市；開幕日期採經濟部商工登記分公司核准設立日" if b else
+                                    "官方門市；查無開幕新聞與商工登記，開幕日期未知"),
             "official_store_id": str(row["id"]),
             "store_format": "社區超市",
             "official_branch_ban": b["ban"] if b else "",
@@ -204,7 +208,7 @@ def main():
             "store": name, "api_full_name": row.get("full_name"), "api_tax_id": row.get("tax_id"),
             "match_by": how, "branch": b, "current_address": address,
             "opened_date": opened, "opened_date_basis": basis, "news": news[2] if news else "",
-            "registry_estab_date_reference_only": b["opened_date"] if b else "",
+            "registry_estab_date": b["opened_date"] if b else "",
             "registry_address_differs": bool(b) and norm_addr(b["address"]) != norm_addr(address),
         })
 
@@ -230,7 +234,8 @@ def main():
     print(f"樂家康 {len(stores)} 間；對應商工登記 {matched} 間"
           f"（統編 {sum(a['match_by'] == '分公司統編' for a in audit)}、名稱 {sum(a['match_by'] == '分公司名稱' for a in audit)}、"
           f"地址 {sum(a['match_by'] == '地址' for a in audit)}）；未對應 {len(stores) - matched} 間")
-    print(f"列出開幕日期（新聞）{sum(1 for a in audit if a['news'])} 間；未列出 {sum(1 for a in audit if not a['opened_date'])} 間")
+    print(f"新聞日期 {sum(1 for a in audit if a['news'])} 間；商工登記日 {sum(1 for a in audit if a['opened_date_basis'] == '商工登記')} 間；"
+          f"未知 {sum(1 for a in audit if not a['opened_date'])} 間")
     print(f"登記地址與現址不同：{sum(a['registry_address_differs'] for a in audit)} 間")
 
 

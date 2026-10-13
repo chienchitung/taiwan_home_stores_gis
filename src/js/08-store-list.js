@@ -10,7 +10,9 @@ function renderList() {
       <a href="https://shopee.tw/m/spxservicepoint" target="_blank" rel="noopener" class="btn-card-gmap" style="margin-top:10px">${SVG.external} 開啟蝦皮官方據點查詢</a>
     ` : `
       <div class="title">找不到符合目前篩選條件的門市</div>
-      <div class="desc">${isViewportSync ? "目前地圖視野範圍內無門市，請縮小地圖或關閉視野連動" : "請嘗試清空關鍵字或放寬篩選條件"}</div>
+      <div class="desc">${activeBrands.size
+        ? `已選品牌（${[...activeBrands].join("、")}）在${isViewportSync ? "目前地圖範圍" : "目前條件"}下沒有門市；${isViewportSync ? "移動或縮小地圖" : "放寬篩選條件"}後會自動顯示，或點「全部」查看所有品牌`
+        : isViewportSync ? "目前地圖視野範圍內無門市，請縮小地圖或關閉視野連動" : "請嘗試清空關鍵字或放寬篩選條件"}</div>
     `;
     container.innerHTML = `
       <div class="empty-state">

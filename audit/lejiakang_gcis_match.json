@@ -16,7 +16,7 @@
   "opened_date": "2026-04-10",
   "opened_date_basis": "新聞／官方",
   "news": "經濟日報：家樂福超市朴子文明南店盛大開幕（2026-04-10）",
-  "registry_estab_date_reference_only": "2026-03-25",
+  "registry_estab_date": "2026-03-25",
   "registry_address_differs": false
  },
  {
@@ -36,7 +36,7 @@
   "opened_date": "2026-03-13",
   "opened_date_basis": "新聞／官方",
   "news": "ETtoday 2026-03-13：家樂福超市台南文賢店（北區文賢路，400 坪複合店）開幕；登記為文賢二分公司 2026-03-09",
-  "registry_estab_date_reference_only": "2026-03-09",
+  "registry_estab_date": "2026-03-09",
   "registry_address_differs": false
  },
  {
@@ -56,7 +56,7 @@
   "opened_date": "2025-06-20",
   "opened_date_basis": "新聞／官方",
   "news": "聯合報：家樂福超市插旗屏東潮州，2025-06-20 開幕",
-  "registry_estab_date_reference_only": "2025-05-19",
+  "registry_estab_date": "2025-05-19",
   "registry_address_differs": false
  },
  {
@@ -76,7 +76,7 @@
   "opened_date": "2025-05-23",
   "opened_date_basis": "新聞／官方",
   "news": "中華日報：家樂福超市新莊民安二店歡慶開幕（2025-05-23）",
-  "registry_estab_date_reference_only": "2025-04-18",
+  "registry_estab_date": "2025-04-18",
   "registry_address_differs": true
  },
  {
@@ -96,7 +96,7 @@
   "opened_date": "2025-02",
   "opened_date_basis": "新聞／官方",
   "news": "報導：家樂福新市民生店 21 日開幕；社群貼文 2025-02-20 稱今天開幕，日期略有出入，僅記至月份",
-  "registry_estab_date_reference_only": "2025-02-07",
+  "registry_estab_date": "2025-02-07",
   "registry_address_differs": false
  },
  {
@@ -116,7 +116,7 @@
   "opened_date": "2024-12-20",
   "opened_date_basis": "新聞／官方",
   "news": "經濟日報：家樂福新莊新泰店 2024-12-20 開幕",
-  "registry_estab_date_reference_only": "2024-08-23",
+  "registry_estab_date": "2024-08-23",
   "registry_address_differs": false
  },
  {
@@ -136,7 +136,7 @@
   "opened_date": "2024-08-01",
   "opened_date_basis": "新聞／官方",
   "news": "威傳媒：家樂福超市汐止龍安店 2024-08-01 開幕",
-  "registry_estab_date_reference_only": "2024-07-16",
+  "registry_estab_date": "2024-07-16",
   "registry_address_differs": false
  },
  {
@@ -156,7 +156,7 @@
   "opened_date": "2024-04-30",
   "opened_date_basis": "新聞／官方",
   "news": "2024-04-30 開幕（原國聲戲院址，全台第 247 家超市）",
-  "registry_estab_date_reference_only": "2024-02-26",
+  "registry_estab_date": "2024-02-26",
   "registry_address_differs": false
  },
  {
@@ -173,10 +173,10 @@
    "opened_date": "2023-10-06"
   },
   "current_address": "台北市大安區仁愛路四段151巷37號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2023-10-06",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2023-10-06",
+  "registry_estab_date": "2023-10-06",
   "registry_address_differs": false
  },
  {
@@ -196,7 +196,7 @@
   "opened_date": "2025-09-19",
   "opened_date_basis": "新聞／官方",
   "news": "經濟日報：家樂福超市士林華聲店 9/19 開幕（2025）",
-  "registry_estab_date_reference_only": "2025-08-26",
+  "registry_estab_date": "2025-08-26",
   "registry_address_differs": false
  },
  {
@@ -216,7 +216,7 @@
   "opened_date": "2025-03-28",
   "opened_date_basis": "新聞／官方",
   "news": "中央社好生活 2025-03-28：家樂福左營文上店開幕",
-  "registry_estab_date_reference_only": "2025-03-12",
+  "registry_estab_date": "2025-03-12",
   "registry_address_differs": false
  },
  {
@@ -233,10 +233,10 @@
    "opened_date": "2024-08-23"
   },
   "current_address": "嘉義縣太保市太保二路111號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2024-08-23",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2024-08-23",
+  "registry_estab_date": "2024-08-23",
   "registry_address_differs": false
  },
  {
@@ -256,7 +256,7 @@
   "opened_date": "2024-08-30",
   "opened_date_basis": "新聞／官方",
   "news": "報導：家樂福超市三峽大學店（大學路 119 號，北大特區）2024-08-30 開幕；另一篇 2024-09-03 報導稱「日昨」開幕。商工登記的「J三峽大學分公司」2017 年設立，與此店開幕時間不符，不採用",
-  "registry_estab_date_reference_only": "2017-07-20",
+  "registry_estab_date": "2017-07-20",
   "registry_address_differs": true
  },
  {
@@ -273,10 +273,10 @@
    "opened_date": "2024-04-18"
   },
   "current_address": "台中市太平區育賢路190號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2024-04-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2024-04-18",
+  "registry_estab_date": "2024-04-18",
   "registry_address_differs": false
  },
  {
@@ -293,10 +293,10 @@
    "opened_date": "2024-02-07"
   },
   "current_address": "台中市北屯區環太東路477號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2024-02-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2024-02-07",
+  "registry_estab_date": "2024-02-07",
   "registry_address_differs": false
  },
  {
@@ -313,10 +313,10 @@
    "opened_date": "2023-06-15"
   },
   "current_address": "台中市烏日區信義街164巷9弄17號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2023-06-15",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2023-06-15",
+  "registry_estab_date": "2023-06-15",
   "registry_address_differs": true
  },
  {
@@ -333,10 +333,10 @@
    "opened_date": "2023-03-22"
   },
   "current_address": "嘉義市西區民族路610號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2023-03-22",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2023-03-22",
+  "registry_estab_date": "2023-03-22",
   "registry_address_differs": false
  },
  {
@@ -353,10 +353,10 @@
    "opened_date": "2021-11-09"
   },
   "current_address": "桃園市龜山區文青路137號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2021-11-09",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2021-11-09",
+  "registry_estab_date": "2021-11-09",
   "registry_address_differs": false
  },
  {
@@ -373,10 +373,10 @@
    "opened_date": "2009-04-10"
   },
   "current_address": "桃園市桃園區中埔六街127號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-04-10",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-04-10",
+  "registry_estab_date": "2009-04-10",
   "registry_address_differs": false
  },
  {
@@ -393,10 +393,10 @@
    "opened_date": "2020-11-26"
   },
   "current_address": "新北市八里區商港七路21號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2020-11-26",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2020-11-26",
+  "registry_estab_date": "2020-11-26",
   "registry_address_differs": false
  },
  {
@@ -413,10 +413,10 @@
    "opened_date": "2020-11-12"
   },
   "current_address": "新北市土城區廣明街63巷31號1F",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2020-11-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2020-11-12",
+  "registry_estab_date": "2020-11-12",
   "registry_address_differs": false
  },
  {
@@ -433,10 +433,10 @@
    "opened_date": "2020-03-12"
   },
   "current_address": "高雄市三民區九如一路886號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2020-03-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2020-03-12",
+  "registry_estab_date": "2020-03-12",
   "registry_address_differs": false
  },
  {
@@ -453,10 +453,10 @@
    "opened_date": "2019-08-28"
   },
   "current_address": "新北市土城區中央路二段191號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2019-08-28",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2019-08-28",
+  "registry_estab_date": "2019-08-28",
   "registry_address_differs": false
  },
  {
@@ -473,10 +473,10 @@
    "opened_date": "2019-08-19"
   },
   "current_address": "台北市大安區臨江街87號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2019-08-19",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2019-08-19",
+  "registry_estab_date": "2019-08-19",
   "registry_address_differs": false
  },
  {
@@ -493,10 +493,10 @@
    "opened_date": "2019-07-29"
   },
   "current_address": "高雄市鳳山區和興里五甲一路261號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2019-07-29",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2019-07-29",
+  "registry_estab_date": "2019-07-29",
   "registry_address_differs": false
  },
  {
@@ -513,10 +513,10 @@
    "opened_date": "2019-07-29"
   },
   "current_address": "高雄市小港區漢民路798號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2019-07-29",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2019-07-29",
+  "registry_estab_date": "2019-07-29",
   "registry_address_differs": true
  },
  {
@@ -533,10 +533,10 @@
    "opened_date": "2019-05-30"
   },
   "current_address": "新北市三重區新北大道一段115號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2019-05-30",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2019-05-30",
+  "registry_estab_date": "2019-05-30",
   "registry_address_differs": false
  },
  {
@@ -553,10 +553,10 @@
    "opened_date": "2019-06-03"
   },
   "current_address": "台中市南區復興路二段120號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2019-06-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2019-06-03",
+  "registry_estab_date": "2019-06-03",
   "registry_address_differs": false
  },
  {
@@ -573,10 +573,10 @@
    "opened_date": "2018-12-14"
   },
   "current_address": "桃園市中壢區成章一街88號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2018-12-14",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2018-12-14",
+  "registry_estab_date": "2018-12-14",
   "registry_address_differs": false
  },
  {
@@ -593,10 +593,10 @@
    "opened_date": "2018-11-13"
   },
   "current_address": "高雄市三民區天祥一路102號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2018-11-13",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2018-11-13",
+  "registry_estab_date": "2018-11-13",
   "registry_address_differs": false
  },
  {
@@ -613,10 +613,10 @@
    "opened_date": "2018-10-12"
   },
   "current_address": "台北市內湖區江南街55號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2018-10-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2018-10-12",
+  "registry_estab_date": "2018-10-12",
   "registry_address_differs": false
  },
  {
@@ -633,10 +633,10 @@
    "opened_date": "2018-10-12"
   },
   "current_address": "台北市北投區明德路161號B1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2018-10-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2018-10-12",
+  "registry_estab_date": "2018-10-12",
   "registry_address_differs": false
  },
  {
@@ -653,10 +653,10 @@
    "opened_date": "2018-07-02"
   },
   "current_address": "高雄市左營區崇德路360號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2018-07-02",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2018-07-02",
+  "registry_estab_date": "2018-07-02",
   "registry_address_differs": false
  },
  {
@@ -673,10 +673,10 @@
    "opened_date": "2018-07-03"
   },
   "current_address": "台北市內湖區成功路三段174巷8號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2018-07-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2018-07-03",
+  "registry_estab_date": "2018-07-03",
   "registry_address_differs": false
  },
  {
@@ -693,10 +693,10 @@
    "opened_date": "2018-07-03"
   },
   "current_address": "台中市大里區中興路二段550號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2018-07-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2018-07-03",
+  "registry_estab_date": "2018-07-03",
   "registry_address_differs": false
  },
  {
@@ -713,10 +713,10 @@
    "opened_date": "2015-09-09"
   },
   "current_address": "台中市太平區環中東路三段567號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2015-09-09",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2015-09-09",
+  "registry_estab_date": "2015-09-09",
   "registry_address_differs": false
  },
  {
@@ -733,10 +733,10 @@
    "opened_date": "2018-04-30"
   },
   "current_address": "台北市中山區錦州街276號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2018-04-30",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2018-04-30",
+  "registry_estab_date": "2018-04-30",
   "registry_address_differs": false
  },
  {
@@ -753,10 +753,10 @@
    "opened_date": "2018-05-17"
   },
   "current_address": "新北市土城區學府路二段210號B2樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2018-05-17",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2018-05-17",
+  "registry_estab_date": "2018-05-17",
   "registry_address_differs": false
  },
  {
@@ -773,10 +773,10 @@
    "opened_date": "2018-01-04"
   },
   "current_address": "桃園市桃園區大興路1號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2018-01-04",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2018-01-04",
+  "registry_estab_date": "2018-01-04",
   "registry_address_differs": false
  },
  {
@@ -793,10 +793,10 @@
    "opened_date": "2017-11-17"
   },
   "current_address": "新北市板橋區文化路二段313號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-11-17",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-11-17",
+  "registry_estab_date": "2017-11-17",
   "registry_address_differs": false
  },
  {
@@ -813,10 +813,10 @@
    "opened_date": "2017-10-25"
   },
   "current_address": "台北市內湖區內湖路一段155號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-10-25",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-10-25",
+  "registry_estab_date": "2017-10-25",
   "registry_address_differs": false
  },
  {
@@ -833,10 +833,10 @@
    "opened_date": "2017-11-17"
   },
   "current_address": "台中市南屯區大墩十一街730號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-11-17",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-11-17",
+  "registry_estab_date": "2017-11-17",
   "registry_address_differs": false
  },
  {
@@ -853,10 +853,10 @@
    "opened_date": "2017-10-25"
   },
   "current_address": "台中市北區進化路379號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-10-25",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-10-25",
+  "registry_estab_date": "2017-10-25",
   "registry_address_differs": false
  },
  {
@@ -873,10 +873,10 @@
    "opened_date": "2017-12-13"
   },
   "current_address": "新北市新莊區中港路336號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-12-13",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-12-13",
+  "registry_estab_date": "2017-12-13",
   "registry_address_differs": false
  },
  {
@@ -893,10 +893,10 @@
    "opened_date": "2017-09-26"
   },
   "current_address": "台北市中正區濟南路2段46號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-09-26",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-09-26",
+  "registry_estab_date": "2017-09-26",
   "registry_address_differs": false
  },
  {
@@ -913,10 +913,10 @@
    "opened_date": "2017-09-26"
   },
   "current_address": "新北市蘆洲區光華路200號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-09-26",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-09-26",
+  "registry_estab_date": "2017-09-26",
   "registry_address_differs": false
  },
  {
@@ -933,10 +933,10 @@
    "opened_date": "2017-10-05"
   },
   "current_address": "台南市東區裕農路766號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-10-05",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-10-05",
+  "registry_estab_date": "2017-10-05",
   "registry_address_differs": false
  },
  {
@@ -953,10 +953,10 @@
    "opened_date": "2017-09-19"
   },
   "current_address": "新竹市東區南大路286號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-09-19",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-09-19",
+  "registry_estab_date": "2017-09-19",
   "registry_address_differs": true
  },
  {
@@ -973,10 +973,10 @@
    "opened_date": "2017-09-21"
   },
   "current_address": "台中市大甲區蔣公路295號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-09-21",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-09-21",
+  "registry_estab_date": "2017-09-21",
   "registry_address_differs": false
  },
  {
@@ -993,10 +993,10 @@
    "opened_date": "2017-08-01"
   },
   "current_address": "桃園市桃園區龍安街137號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-08-01",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-08-01",
+  "registry_estab_date": "2017-08-01",
   "registry_address_differs": false
  },
  {
@@ -1013,10 +1013,10 @@
    "opened_date": "2017-08-01"
   },
   "current_address": "台北市內湖區東湖路69號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-08-01",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-08-01",
+  "registry_estab_date": "2017-08-01",
   "registry_address_differs": false
  },
  {
@@ -1033,10 +1033,10 @@
    "opened_date": "2017-07-26"
   },
   "current_address": "屏東縣屏東市自由路618號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-07-26",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-07-26",
+  "registry_estab_date": "2017-07-26",
   "registry_address_differs": true
  },
  {
@@ -1053,10 +1053,10 @@
    "opened_date": "2017-04-10"
   },
   "current_address": "台南市北區北安路一段167號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-04-10",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-04-10",
+  "registry_estab_date": "2017-04-10",
   "registry_address_differs": true
  },
  {
@@ -1073,10 +1073,10 @@
    "opened_date": "2016-11-29"
   },
   "current_address": "高雄市左營區文川路323號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2016-11-29",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2016-11-29",
+  "registry_estab_date": "2016-11-29",
   "registry_address_differs": true
  },
  {
@@ -1093,10 +1093,10 @@
    "opened_date": "2016-11-18"
   },
   "current_address": "桃園市中壢區中北路111號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2016-11-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2016-11-18",
+  "registry_estab_date": "2016-11-18",
   "registry_address_differs": false
  },
  {
@@ -1113,10 +1113,10 @@
    "opened_date": "2017-01-17"
   },
   "current_address": "台南市北區開元路501號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-01-17",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-01-17",
+  "registry_estab_date": "2017-01-17",
   "registry_address_differs": false
  },
  {
@@ -1133,10 +1133,10 @@
    "opened_date": "2016-11-03"
   },
   "current_address": "新北市板橋區中正路302號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2016-11-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2016-11-03",
+  "registry_estab_date": "2016-11-03",
   "registry_address_differs": false
  },
  {
@@ -1153,10 +1153,10 @@
    "opened_date": "2016-11-03"
   },
   "current_address": "高雄市三民區建工路497號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2016-11-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2016-11-03",
+  "registry_estab_date": "2016-11-03",
   "registry_address_differs": false
  },
  {
@@ -1173,10 +1173,10 @@
    "opened_date": "2009-11-12"
   },
   "current_address": "新北市永和區中和路499-1號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-11-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-11-12",
+  "registry_estab_date": "2009-11-12",
   "registry_address_differs": true
  },
  {
@@ -1193,10 +1193,10 @@
    "opened_date": "2013-05-17"
   },
   "current_address": "新北市中和區景平路353號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2013-05-17",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2013-05-17",
+  "registry_estab_date": "2013-05-17",
   "registry_address_differs": false
  },
  {
@@ -1213,10 +1213,10 @@
    "opened_date": "2014-10-31"
   },
   "current_address": "台南市東區莊敬路118號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2014-10-31",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2014-10-31",
+  "registry_estab_date": "2014-10-31",
   "registry_address_differs": false
  },
  {
@@ -1233,10 +1233,10 @@
    "opened_date": "2013-04-19"
   },
   "current_address": "桃園市蘆竹區桃園街118號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2013-04-19",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2013-04-19",
+  "registry_estab_date": "2013-04-19",
   "registry_address_differs": false
  },
  {
@@ -1253,10 +1253,10 @@
    "opened_date": "2014-03-31"
   },
   "current_address": "台北市士林區中山北路七段113號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2014-03-31",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2014-03-31",
+  "registry_estab_date": "2014-03-31",
   "registry_address_differs": false
  },
  {
@@ -1273,10 +1273,10 @@
    "opened_date": "2013-05-23"
   },
   "current_address": "台中市豐原區豐南街118號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2013-05-23",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2013-05-23",
+  "registry_estab_date": "2013-05-23",
   "registry_address_differs": false
  },
  {
@@ -1293,10 +1293,10 @@
    "opened_date": "2014-12-31"
   },
   "current_address": "台中市北屯區昌平路一段105-1號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2014-12-31",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2014-12-31",
+  "registry_estab_date": "2014-12-31",
   "registry_address_differs": false
  },
  {
@@ -1313,10 +1313,10 @@
    "opened_date": "2015-06-10"
   },
   "current_address": "新北市新莊區雙鳳路59號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2015-06-10",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2015-06-10",
+  "registry_estab_date": "2015-06-10",
   "registry_address_differs": false
  },
  {
@@ -1333,10 +1333,10 @@
    "opened_date": "2015-06-15"
   },
   "current_address": "台南市永康區中山南路696號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2015-06-15",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2015-06-15",
+  "registry_estab_date": "2015-06-15",
   "registry_address_differs": false
  },
  {
@@ -1353,10 +1353,10 @@
    "opened_date": "2015-10-16"
   },
   "current_address": "高雄市岡山區岡山路288號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2015-10-16",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2015-10-16",
+  "registry_estab_date": "2015-10-16",
   "registry_address_differs": false
  },
  {
@@ -1373,10 +1373,10 @@
    "opened_date": "2015-11-06"
   },
   "current_address": "高雄市小港區宏平路411號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2015-11-06",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2015-11-06",
+  "registry_estab_date": "2015-11-06",
   "registry_address_differs": false
  },
  {
@@ -1393,10 +1393,10 @@
    "opened_date": "2015-09-22"
   },
   "current_address": "台中市北區漢口路四段295號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2015-09-22",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2015-09-22",
+  "registry_estab_date": "2015-09-22",
   "registry_address_differs": false
  },
  {
@@ -1413,10 +1413,10 @@
    "opened_date": "2016-05-12"
   },
   "current_address": "高雄市楠梓區益群路50號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2016-05-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2016-05-12",
+  "registry_estab_date": "2016-05-12",
   "registry_address_differs": false
  },
  {
@@ -1433,10 +1433,10 @@
    "opened_date": "2016-08-11"
   },
   "current_address": "桃園市桃園區南平路168號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2016-08-11",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2016-08-11",
+  "registry_estab_date": "2016-08-11",
   "registry_address_differs": false
  },
  {
@@ -1453,10 +1453,10 @@
    "opened_date": "2004-03-15"
   },
   "current_address": "台北市松山區敦化北路199巷5號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2004-03-15",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2004-03-15",
+  "registry_estab_date": "2004-03-15",
   "registry_address_differs": false
  },
  {
@@ -1473,10 +1473,10 @@
    "opened_date": "1995-08-03"
   },
   "current_address": "台北市南港區舊莊街一段196號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1995-08-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1995-08-03",
+  "registry_estab_date": "1995-08-03",
   "registry_address_differs": true
  },
  {
@@ -1493,10 +1493,10 @@
    "opened_date": "2008-11-07"
   },
   "current_address": "新北市三重區中正北路67號、69號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-11-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-11-07",
+  "registry_estab_date": "2008-11-07",
   "registry_address_differs": false
  },
  {
@@ -1513,10 +1513,10 @@
    "opened_date": "1990-07-20"
   },
   "current_address": "新北市三重區五華街110巷1-4號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1990-07-20",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1990-07-20",
+  "registry_estab_date": "1990-07-20",
   "registry_address_differs": true
  },
  {
@@ -1533,10 +1533,10 @@
    "opened_date": "2009-05-08"
   },
   "current_address": "新北市三重區仁愛街81號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-05-08",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-05-08",
+  "registry_estab_date": "2009-05-08",
   "registry_address_differs": false
  },
  {
@@ -1553,10 +1553,10 @@
    "opened_date": "2007-06-07"
   },
   "current_address": "新北市三重區永福街245、247、249號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-06-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-06-07",
+  "registry_estab_date": "2007-06-07",
   "registry_address_differs": true
  },
  {
@@ -1573,10 +1573,10 @@
    "opened_date": "2000-09-15"
   },
   "current_address": "新北市三重區重陽路一段41號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2000-09-15",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2000-09-15",
+  "registry_estab_date": "2000-09-15",
   "registry_address_differs": false
  },
  {
@@ -1593,10 +1593,10 @@
    "opened_date": "2017-09-06"
   },
   "current_address": "新北市三重區溪尾街125號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2017-09-06",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2017-09-06",
+  "registry_estab_date": "2017-09-06",
   "registry_address_differs": false
  },
  {
@@ -1613,10 +1613,10 @@
    "opened_date": "2000-11-10"
   },
   "current_address": "新北市三峽區中山路171號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2000-11-10",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2000-11-10",
+  "registry_estab_date": "2000-11-10",
   "registry_address_differs": false
  },
  {
@@ -1633,10 +1633,10 @@
    "opened_date": "2005-07-01"
   },
   "current_address": "新北市三峽區光明路71號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2005-07-01",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2005-07-01",
+  "registry_estab_date": "2005-07-01",
   "registry_address_differs": false
  },
  {
@@ -1653,10 +1653,10 @@
    "opened_date": "2002-08-28"
   },
   "current_address": "新北市土城區立德路105號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2002-08-28",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2002-08-28",
+  "registry_estab_date": "2002-08-28",
   "registry_address_differs": false
  },
  {
@@ -1673,10 +1673,10 @@
    "opened_date": "2007-08-02"
   },
   "current_address": "新北市土城區金城路三段202-6號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-08-02",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-08-02",
+  "registry_estab_date": "2007-08-02",
   "registry_address_differs": false
  },
  {
@@ -1693,10 +1693,10 @@
    "opened_date": "2001-04-23"
   },
   "current_address": "新北市土城區學府路一段157,161號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2001-04-23",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2001-04-23",
+  "registry_estab_date": "2001-04-23",
   "registry_address_differs": true
  },
  {
@@ -1713,10 +1713,10 @@
    "opened_date": "2007-12-12"
   },
   "current_address": "台北市士林區社中街222號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-12-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-12-12",
+  "registry_estab_date": "2007-12-12",
   "registry_address_differs": false
  },
  {
@@ -1733,10 +1733,10 @@
    "opened_date": "2009-04-15"
   },
   "current_address": "台北市士林區雨聲街52號、52-1號、52巷1號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-04-15",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-04-15",
+  "registry_estab_date": "2009-04-15",
   "registry_address_differs": false
  },
  {
@@ -1753,10 +1753,10 @@
    "opened_date": "1992-07-21"
   },
   "current_address": "台北市士林區華齡街175號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1992-07-21",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1992-07-21",
+  "registry_estab_date": "1992-07-21",
   "registry_address_differs": false
  },
  {
@@ -1773,10 +1773,10 @@
    "opened_date": "1992-07-22"
   },
   "current_address": "台北市士林區德行東路230號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1992-07-22",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1992-07-22",
+  "registry_estab_date": "1992-07-22",
   "registry_address_differs": false
  },
  {
@@ -1793,10 +1793,10 @@
    "opened_date": "2015-06-29"
   },
   "current_address": "台北市大安區和平東路一段145號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2015-06-29",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2015-06-29",
+  "registry_estab_date": "2015-06-29",
   "registry_address_differs": false
  },
  {
@@ -1813,10 +1813,10 @@
    "opened_date": "2015-11-05"
   },
   "current_address": "台北市大安區敦化南路二段48號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2015-11-05",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2015-11-05",
+  "registry_estab_date": "2015-11-05",
   "registry_address_differs": false
  },
  {
@@ -1833,10 +1833,10 @@
    "opened_date": "2000-09-28"
   },
   "current_address": "台中市大雅區上雅村民生路一段37號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2000-09-28",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2000-09-28",
+  "registry_estab_date": "2000-09-28",
   "registry_address_differs": false
  },
  {
@@ -1853,10 +1853,10 @@
    "opened_date": "2010-01-21"
   },
   "current_address": "桃園市大溪區介壽路894號、896號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2010-01-21",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2010-01-21",
+  "registry_estab_date": "2010-01-21",
   "registry_address_differs": false
  },
  {
@@ -1873,10 +1873,10 @@
    "opened_date": "2009-08-13"
   },
   "current_address": "新北市中和區民治街120號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-08-13",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-08-13",
+  "registry_estab_date": "2009-08-13",
   "registry_address_differs": false
  },
  {
@@ -1893,10 +1893,10 @@
    "opened_date": "2001-04-23"
   },
   "current_address": "新北市中和區復興路268號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2001-04-23",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2001-04-23",
+  "registry_estab_date": "2001-04-23",
   "registry_address_differs": false
  },
  {
@@ -1913,10 +1913,10 @@
    "opened_date": "2008-12-08"
   },
   "current_address": "新北市中和區圓通路274號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-12-08",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-12-08",
+  "registry_estab_date": "2008-12-08",
   "registry_address_differs": false
  },
  {
@@ -1933,10 +1933,10 @@
    "opened_date": "2009-09-10"
   },
   "current_address": "新北市中和區壽德街20號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-09-10",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-09-10",
+  "registry_estab_date": "2009-09-10",
   "registry_address_differs": false
  },
  {
@@ -1953,10 +1953,10 @@
    "opened_date": "1993-12-27"
   },
   "current_address": "新北市中和區興南路一段20號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1993-12-27",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1993-12-27",
+  "registry_estab_date": "1993-12-27",
   "registry_address_differs": false
  },
  {
@@ -1973,10 +1973,10 @@
    "opened_date": "2008-08-22"
   },
   "current_address": "桃園市中壢區環北路392號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-08-22",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-08-22",
+  "registry_estab_date": "2008-08-22",
   "registry_address_differs": false
  },
  {
@@ -1993,10 +1993,10 @@
    "opened_date": "2004-03-03"
   },
   "current_address": "新北市五股區成泰路一段235號之4",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2004-03-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2004-03-03",
+  "registry_estab_date": "2004-03-03",
   "registry_address_differs": false
  },
  {
@@ -2013,10 +2013,10 @@
    "opened_date": "2007-11-30"
   },
   "current_address": "新北市五股區西雲路169-1號、171號、171-1號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-11-30",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-11-30",
+  "registry_estab_date": "2007-11-30",
   "registry_address_differs": false
  },
  {
@@ -2033,10 +2033,10 @@
    "opened_date": "2008-07-03"
   },
   "current_address": "新北市五股區明德路12巷5號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-07-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-07-03",
+  "registry_estab_date": "2008-07-03",
   "registry_address_differs": false
  },
  {
@@ -2053,10 +2053,10 @@
    "opened_date": "2008-12-08"
   },
   "current_address": "台北市內湖區民權東路六段296巷42-3號地下樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-12-08",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-12-08",
+  "registry_estab_date": "2008-12-08",
   "registry_address_differs": false
  },
  {
@@ -2073,10 +2073,10 @@
    "opened_date": "1992-10-16"
   },
   "current_address": "台北市內湖區成功路二段320巷19號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1992-10-16",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1992-10-16",
+  "registry_estab_date": "1992-10-16",
   "registry_address_differs": false
  },
  {
@@ -2093,10 +2093,10 @@
    "opened_date": "2000-01-14"
   },
   "current_address": "台北市內湖區康樂街150號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2000-01-14",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2000-01-14",
+  "registry_estab_date": "2000-01-14",
   "registry_address_differs": false
  },
  {
@@ -2113,10 +2113,10 @@
    "opened_date": "2003-11-27"
   },
   "current_address": "台北市文山區木新路二段158-1號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2003-11-27",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2003-11-27",
+  "registry_estab_date": "2003-11-27",
   "registry_address_differs": true
  },
  {
@@ -2133,10 +2133,10 @@
    "opened_date": "2010-01-15"
   },
   "current_address": "台北市文山區景隆街36巷2號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2010-01-15",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2010-01-15",
+  "registry_estab_date": "2010-01-15",
   "registry_address_differs": false
  },
  {
@@ -2153,10 +2153,10 @@
    "opened_date": "1993-04-30"
   },
   "current_address": "台北市文山區萬慶街27號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1993-04-30",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1993-04-30",
+  "registry_estab_date": "1993-04-30",
   "registry_address_differs": false
  },
  {
@@ -2173,10 +2173,10 @@
    "opened_date": "1996-07-15"
   },
   "current_address": "台北市北投區公館路198號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1996-07-15",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1996-07-15",
+  "registry_estab_date": "1996-07-15",
   "registry_address_differs": false
  },
  {
@@ -2193,10 +2193,10 @@
    "opened_date": "1992-12-18"
   },
   "current_address": "台北市北投區光明路220號1F",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1992-12-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1992-12-18",
+  "registry_estab_date": "1992-12-18",
   "registry_address_differs": false
  },
  {
@@ -2213,10 +2213,10 @@
    "opened_date": "2008-11-07"
   },
   "current_address": "台北市北投區致遠一路二段19號、21號、23號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-11-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-11-07",
+  "registry_estab_date": "2008-11-07",
   "registry_address_differs": false
  },
  {
@@ -2233,10 +2233,10 @@
    "opened_date": "2001-03-07"
   },
   "current_address": "台北市松山區八德路四段83號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2001-03-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2001-03-07",
+  "registry_estab_date": "2001-03-07",
   "registry_address_differs": true
  },
  {
@@ -2253,10 +2253,10 @@
    "opened_date": "2007-12-24"
   },
   "current_address": "台北市萬華區大理街114號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-12-24",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-12-24",
+  "registry_estab_date": "2007-12-24",
   "registry_address_differs": false
  },
  {
@@ -2273,10 +2273,10 @@
    "opened_date": "2003-03-03"
   },
   "current_address": "台北市南港區中坡南路3號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2003-03-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2003-03-03",
+  "registry_estab_date": "2003-03-03",
   "registry_address_differs": true
  },
  {
@@ -2293,10 +2293,10 @@
    "opened_date": "2012-10-03"
   },
   "current_address": "台北市大同區太原路155、157號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2012-10-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2012-10-03",
+  "registry_estab_date": "2012-10-03",
   "registry_address_differs": false
  },
  {
@@ -2313,10 +2313,10 @@
    "opened_date": "1991-08-05"
   },
   "current_address": "台北市中山區北安路595巷11-13號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1991-08-05",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1991-08-05",
+  "registry_estab_date": "1991-08-05",
   "registry_address_differs": true
  },
  {
@@ -2333,10 +2333,10 @@
    "opened_date": "1996-03-26"
   },
   "current_address": "台北市大安區四維路198巷35號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1996-03-26",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1996-03-26",
+  "registry_estab_date": "1996-03-26",
   "registry_address_differs": false
  },
  {
@@ -2353,10 +2353,10 @@
    "opened_date": "2015-02-04"
   },
   "current_address": "台北市松山區光復北路198號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2015-02-04",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2015-02-04",
+  "registry_estab_date": "2015-02-04",
   "registry_address_differs": false
  },
  {
@@ -2373,10 +2373,10 @@
    "opened_date": "2003-05-20"
   },
   "current_address": "台北市中正區同安街71號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2003-05-20",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2003-05-20",
+  "registry_estab_date": "2003-05-20",
   "registry_address_differs": false
  },
  {
@@ -2389,7 +2389,7 @@
   "opened_date": "1995-01",
   "opened_date_basis": "新聞／官方",
   "news": "威傳媒：台北西藏店自 1995 年 1 月開幕至今（原頂好），2023-12 改裝；查無對應商工登記分公司",
-  "registry_estab_date_reference_only": "",
+  "registry_estab_date": "",
   "registry_address_differs": false
  },
  {
@@ -2406,10 +2406,10 @@
    "opened_date": "1994-07-12"
   },
   "current_address": "台北市大安區延吉街250號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1994-07-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1994-07-12",
+  "registry_estab_date": "1994-07-12",
   "registry_address_differs": false
  },
  {
@@ -2426,10 +2426,10 @@
    "opened_date": "2003-02-07"
   },
   "current_address": "台北市大安區忠孝東路三段218號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2003-02-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2003-02-07",
+  "registry_estab_date": "2003-02-07",
   "registry_address_differs": true
  },
  {
@@ -2446,10 +2446,10 @@
    "opened_date": "1992-07-22"
   },
   "current_address": "台北市大安區忠孝東路四段71號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1992-07-22",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1992-07-22",
+  "registry_estab_date": "1992-07-22",
   "registry_address_differs": true
  },
  {
@@ -2466,10 +2466,10 @@
    "opened_date": "1999-12-16"
   },
   "current_address": "台北市信義區松德路99號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1999-12-16",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1999-12-16",
+  "registry_estab_date": "1999-12-16",
   "registry_address_differs": true
  },
  {
@@ -2486,10 +2486,10 @@
    "opened_date": "2000-10-24"
   },
   "current_address": "台北市中山區林森北路413號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2000-10-24",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2000-10-24",
+  "registry_estab_date": "2000-10-24",
   "registry_address_differs": false
  },
  {
@@ -2506,10 +2506,10 @@
    "opened_date": "2009-05-19"
   },
   "current_address": "台北市中山區長安東路二段63、63-1、63-2號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-05-19",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-05-19",
+  "registry_estab_date": "2009-05-19",
   "registry_address_differs": true
  },
  {
@@ -2526,10 +2526,10 @@
    "opened_date": "1999-08-04"
   },
   "current_address": "台北市萬華區長沙街二段93號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1999-08-04",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1999-08-04",
+  "registry_estab_date": "1999-08-04",
   "registry_address_differs": false
  },
  {
@@ -2546,10 +2546,10 @@
    "opened_date": "2003-02-18"
   },
   "current_address": "台北市大安區信義路四段296號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2003-02-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2003-02-18",
+  "registry_estab_date": "2003-02-18",
   "registry_address_differs": true
  },
  {
@@ -2566,10 +2566,10 @@
    "opened_date": "1991-09-18"
   },
   "current_address": "台北市大安區師大路129號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1991-09-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1991-09-18",
+  "registry_estab_date": "1991-09-18",
   "registry_address_differs": true
  },
  {
@@ -2586,10 +2586,10 @@
    "opened_date": "1989-04-07"
   },
   "current_address": "台北市大同區酒泉街105號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1989-04-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1989-04-07",
+  "registry_estab_date": "1989-04-07",
   "registry_address_differs": true
  },
  {
@@ -2606,10 +2606,10 @@
    "opened_date": "2002-09-24"
   },
   "current_address": "台北市大安區新生南路三段2號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2002-09-24",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2002-09-24",
+  "registry_estab_date": "2002-09-24",
   "registry_address_differs": true
  },
  {
@@ -2626,10 +2626,10 @@
    "opened_date": "2008-06-05"
   },
   "current_address": "台北市萬華區萬大路486巷48號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-06-05",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-06-05",
+  "registry_estab_date": "2008-06-05",
   "registry_address_differs": false
  },
  {
@@ -2646,10 +2646,10 @@
    "opened_date": "2009-08-20"
   },
   "current_address": "台北市中山區農安街257、259號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-08-20",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-08-20",
+  "registry_estab_date": "2009-08-20",
   "registry_address_differs": true
  },
  {
@@ -2666,10 +2666,10 @@
    "opened_date": "1992-07-21"
   },
   "current_address": "台北市大安區羅斯福路三段285號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1992-07-21",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1992-07-21",
+  "registry_estab_date": "1992-07-21",
   "registry_address_differs": false
  },
  {
@@ -2686,10 +2686,10 @@
    "opened_date": "2008-12-16"
   },
   "current_address": "桃園市平鎮區文化街102號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-12-16",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-12-16",
+  "registry_estab_date": "2008-12-16",
   "registry_address_differs": false
  },
  {
@@ -2706,10 +2706,10 @@
    "opened_date": "2009-07-07"
   },
   "current_address": "桃園市平鎮區廣明路1號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-07-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-07-07",
+  "registry_estab_date": "2009-07-07",
   "registry_address_differs": false
  },
  {
@@ -2726,10 +2726,10 @@
    "opened_date": "1990-10-23"
   },
   "current_address": "新北市永和區仁愛路152號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1990-10-23",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1990-10-23",
+  "registry_estab_date": "1990-10-23",
   "registry_address_differs": true
  },
  {
@@ -2746,10 +2746,10 @@
    "opened_date": "2013-07-24"
   },
   "current_address": "新北市永和區竹林路60號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2013-07-24",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2013-07-24",
+  "registry_estab_date": "2013-07-24",
   "registry_address_differs": false
  },
  {
@@ -2766,10 +2766,10 @@
    "opened_date": "2003-02-18"
   },
   "current_address": "新北市汐止區大同路二段285號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2003-02-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2003-02-18",
+  "registry_estab_date": "2003-02-18",
   "registry_address_differs": false
  },
  {
@@ -2786,10 +2786,10 @@
    "opened_date": "2003-02-07"
   },
   "current_address": "新北市汐止區明峰街117號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2003-02-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2003-02-07",
+  "registry_estab_date": "2003-02-07",
   "registry_address_differs": false
  },
  {
@@ -2806,10 +2806,10 @@
    "opened_date": "2003-06-09"
   },
   "current_address": "新北市汐止區建成路39號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2003-06-09",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2003-06-09",
+  "registry_estab_date": "2003-06-09",
   "registry_address_differs": false
  },
  {
@@ -2826,10 +2826,10 @@
    "opened_date": "2003-02-07"
   },
   "current_address": "新北市汐止區福德一路256號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2003-02-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2003-02-07",
+  "registry_estab_date": "2003-02-07",
   "registry_address_differs": false
  },
  {
@@ -2846,10 +2846,10 @@
    "opened_date": "2008-12-16"
   },
   "current_address": "新北市汐止區樟樹一路176號1樓及174號地下室",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-12-16",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-12-16",
+  "registry_estab_date": "2008-12-16",
   "registry_address_differs": true
  },
  {
@@ -2866,10 +2866,10 @@
    "opened_date": "1997-03-12"
   },
   "current_address": "新竹縣竹北市中正東路71號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1997-03-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1997-03-12",
+  "registry_estab_date": "1997-03-12",
   "registry_address_differs": false
  },
  {
@@ -2886,10 +2886,10 @@
    "opened_date": "2010-01-22"
   },
   "current_address": "新竹縣竹北市六家五路一段133號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2010-01-22",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2010-01-22",
+  "registry_estab_date": "2010-01-22",
   "registry_address_differs": false
  },
  {
@@ -2906,10 +2906,10 @@
    "opened_date": "2013-12-25"
   },
   "current_address": "新竹縣竹北市成功八路158號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2013-12-25",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2013-12-25",
+  "registry_estab_date": "2013-12-25",
   "registry_address_differs": false
  },
  {
@@ -2926,10 +2926,10 @@
    "opened_date": "2004-05-04"
   },
   "current_address": "新竹縣竹北市華興街135號1F",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2004-05-04",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2004-05-04",
+  "registry_estab_date": "2004-05-04",
   "registry_address_differs": false
  },
  {
@@ -2946,10 +2946,10 @@
    "opened_date": "2014-07-29"
   },
   "current_address": "新竹縣竹北市縣政二路南段56號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2014-07-29",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2014-07-29",
+  "registry_estab_date": "2014-07-29",
   "registry_address_differs": false
  },
  {
@@ -2966,10 +2966,10 @@
    "opened_date": "2002-06-06"
   },
   "current_address": "苗栗縣竹南鎮民族街146號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2002-06-06",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2002-06-06",
+  "registry_estab_date": "2002-06-06",
   "registry_address_differs": true
  },
  {
@@ -2986,10 +2986,10 @@
    "opened_date": "2000-09-28"
   },
   "current_address": "台中市西屯區青海路一段126，128號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2000-09-28",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2000-09-28",
+  "registry_estab_date": "2000-09-28",
   "registry_address_differs": true
  },
  {
@@ -3006,10 +3006,10 @@
    "opened_date": "2010-01-20"
   },
   "current_address": "新北市板橋區大觀路三段236號1樓之14、1樓之15",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2010-01-20",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2010-01-20",
+  "registry_estab_date": "2010-01-20",
   "registry_address_differs": false
  },
  {
@@ -3026,10 +3026,10 @@
    "opened_date": "2009-03-27"
   },
   "current_address": "新北市板橋區四維路247、249、251、253號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-03-27",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-03-27",
+  "registry_estab_date": "2009-03-27",
   "registry_address_differs": true
  },
  {
@@ -3046,10 +3046,10 @@
    "opened_date": "2012-04-12"
   },
   "current_address": "新北市板橋區忠孝路237號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2012-04-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2012-04-12",
+  "registry_estab_date": "2012-04-12",
   "registry_address_differs": false
  },
  {
@@ -3066,10 +3066,10 @@
    "opened_date": "2008-08-01"
   },
   "current_address": "新北市板橋區金門街153、155、159號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-08-01",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-08-01",
+  "registry_estab_date": "2008-08-01",
   "registry_address_differs": true
  },
  {
@@ -3086,10 +3086,10 @@
    "opened_date": "2019-02-18"
   },
   "current_address": "新北市林口區仁愛路二段89號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2019-02-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2019-02-18",
+  "registry_estab_date": "2019-02-18",
   "registry_address_differs": false
  },
  {
@@ -3106,10 +3106,10 @@
    "opened_date": "2014-02-19"
   },
   "current_address": "新北市林口區文化三路一段319、321、323、325號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2014-02-19",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2014-02-19",
+  "registry_estab_date": "2014-02-19",
   "registry_address_differs": false
  },
  {
@@ -3126,10 +3126,10 @@
    "opened_date": "2013-04-10"
   },
   "current_address": "新北市林口區文化三路一段543號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2013-04-10",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2013-04-10",
+  "registry_estab_date": "2013-04-10",
   "registry_address_differs": false
  },
  {
@@ -3146,10 +3146,10 @@
    "opened_date": "2009-07-03"
   },
   "current_address": "台中市南屯區黎明路二段423號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-07-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-07-03",
+  "registry_estab_date": "2009-07-03",
   "registry_address_differs": false
  },
  {
@@ -3166,10 +3166,10 @@
    "opened_date": "2002-11-21"
   },
   "current_address": "台北市南港區成福路183號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2002-11-21",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2002-11-21",
+  "registry_estab_date": "2002-11-21",
   "registry_address_differs": false
  },
  {
@@ -3186,10 +3186,10 @@
    "opened_date": "2007-10-18"
   },
   "current_address": "台北市南港區東明街99號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-10-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-10-18",
+  "registry_estab_date": "2007-10-18",
   "registry_address_differs": false
  },
  {
@@ -3206,10 +3206,10 @@
    "opened_date": "1993-01-14"
   },
   "current_address": "苗栗縣後龍鎮中山路116-120號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1993-01-14",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1993-01-14",
+  "registry_estab_date": "1993-01-14",
   "registry_address_differs": true
  },
  {
@@ -3226,10 +3226,10 @@
    "opened_date": "1996-01-15"
   },
   "current_address": "彰化縣員林市博愛路185號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1996-01-15",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1996-01-15",
+  "registry_estab_date": "1996-01-15",
   "registry_address_differs": false
  },
  {
@@ -3246,10 +3246,10 @@
    "opened_date": "2008-12-31"
   },
   "current_address": "桃園市桃園區大興西路二段63號、65號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-12-31",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-12-31",
+  "registry_estab_date": "2008-12-31",
   "registry_address_differs": false
  },
  {
@@ -3266,10 +3266,10 @@
    "opened_date": "2009-10-15"
   },
   "current_address": "桃園市桃園區大豐路89號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-10-15",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-10-15",
+  "registry_estab_date": "2009-10-15",
   "registry_address_differs": false
  },
  {
@@ -3286,10 +3286,10 @@
    "opened_date": "2018-12-18"
   },
   "current_address": "桃園市龜山區文化七路173號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2018-12-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2018-12-18",
+  "registry_estab_date": "2018-12-18",
   "registry_address_differs": false
  },
  {
@@ -3306,10 +3306,10 @@
    "opened_date": "2008-10-14"
   },
   "current_address": "桃園市桃園區南華街77號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-10-14",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-10-14",
+  "registry_estab_date": "2008-10-14",
   "registry_address_differs": false
  },
  {
@@ -3326,10 +3326,10 @@
    "opened_date": "2015-09-22"
   },
   "current_address": "桃園市龜山區陸光路81號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2015-09-22",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2015-09-22",
+  "registry_estab_date": "2015-09-22",
   "registry_address_differs": false
  },
  {
@@ -3346,10 +3346,10 @@
    "opened_date": "1993-06-18"
   },
   "current_address": "桃園市龜山區復興一路222號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1993-06-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1993-06-18",
+  "registry_estab_date": "1993-06-18",
   "registry_address_differs": false
  },
  {
@@ -3366,10 +3366,10 @@
    "opened_date": "2009-11-12"
   },
   "current_address": "桃園市桃園區復興路96號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-11-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-11-12",
+  "registry_estab_date": "2009-11-12",
   "registry_address_differs": false
  },
  {
@@ -3386,10 +3386,10 @@
    "opened_date": "1995-07-05"
   },
   "current_address": "桃園市龜山區萬壽路一段293-295號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1995-07-05",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1995-07-05",
+  "registry_estab_date": "1995-07-05",
   "registry_address_differs": true
  },
  {
@@ -3406,10 +3406,10 @@
    "opened_date": "2008-07-11"
   },
   "current_address": "桃園市桃園區壽昌街20巷17號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-07-11",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-07-11",
+  "registry_estab_date": "2008-07-11",
   "registry_address_differs": false
  },
  {
@@ -3426,10 +3426,10 @@
    "opened_date": "2009-05-07"
   },
   "current_address": "桃園市桃園區寶山街276、278號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-05-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-05-07",
+  "registry_estab_date": "2009-05-07",
   "registry_address_differs": true
  },
  {
@@ -3446,10 +3446,10 @@
    "opened_date": "2008-10-03"
   },
   "current_address": "高雄市三民區大豐二路298號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-10-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-10-03",
+  "registry_estab_date": "2008-10-03",
   "registry_address_differs": false
  },
  {
@@ -3466,10 +3466,10 @@
    "opened_date": "2009-04-27"
   },
   "current_address": "高雄市鼓山區南屏路551號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-04-27",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-04-27",
+  "registry_estab_date": "2009-04-27",
   "registry_address_differs": false
  },
  {
@@ -3486,10 +3486,10 @@
    "opened_date": "2008-11-14"
   },
   "current_address": "高雄市鼓山區美術東二路175號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-11-14",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-11-14",
+  "registry_estab_date": "2008-11-14",
   "registry_address_differs": false
  },
  {
@@ -3506,10 +3506,10 @@
    "opened_date": "1997-04-25"
   },
   "current_address": "基隆市安樂區安樂路二段164號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1997-04-25",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1997-04-25",
+  "registry_estab_date": "1997-04-25",
   "registry_address_differs": false
  },
  {
@@ -3522,7 +3522,7 @@
   "opened_date": "",
   "opened_date_basis": "",
   "news": "",
-  "registry_estab_date_reference_only": "",
+  "registry_estab_date": "",
   "registry_address_differs": false
  },
  {
@@ -3539,10 +3539,10 @@
    "opened_date": "2008-12-05"
   },
   "current_address": "基隆市信義區深溪路63號、65號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-12-05",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-12-05",
+  "registry_estab_date": "2008-12-05",
   "registry_address_differs": false
  },
  {
@@ -3559,10 +3559,10 @@
    "opened_date": "1993-10-08"
   },
   "current_address": "新北市淡水區中山北路一段156號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1993-10-08",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1993-10-08",
+  "registry_estab_date": "1993-10-08",
   "registry_address_differs": false
  },
  {
@@ -3579,10 +3579,10 @@
    "opened_date": "2007-03-30"
   },
   "current_address": "新北市淡水區民權路177巷12、16、18、20號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-03-30",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-03-30",
+  "registry_estab_date": "2007-03-30",
   "registry_address_differs": false
  },
  {
@@ -3599,10 +3599,10 @@
    "opened_date": "2009-10-14"
   },
   "current_address": "新北市淡水區沙崙路168號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-10-14",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-10-14",
+  "registry_estab_date": "2009-10-14",
   "registry_address_differs": false
  },
  {
@@ -3619,10 +3619,10 @@
    "opened_date": "2009-03-19"
   },
   "current_address": "新北市深坑區深坑區北深路三段151號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-03-19",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-03-19",
+  "registry_estab_date": "2009-03-19",
   "registry_address_differs": true
  },
  {
@@ -3639,10 +3639,10 @@
    "opened_date": "2006-06-08"
   },
   "current_address": "新竹市北區北大路338號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2006-06-08",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2006-06-08",
+  "registry_estab_date": "2006-06-08",
   "registry_address_differs": true
  },
  {
@@ -3659,10 +3659,10 @@
    "opened_date": "2013-05-30"
   },
   "current_address": "新竹市東區明湖路566號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2013-05-30",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2013-05-30",
+  "registry_estab_date": "2013-05-30",
   "registry_address_differs": true
  },
  {
@@ -3679,10 +3679,10 @@
    "opened_date": "2007-04-12"
   },
   "current_address": "新竹市東區金山街30號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-04-12",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-04-12",
+  "registry_estab_date": "2007-04-12",
   "registry_address_differs": true
  },
  {
@@ -3699,10 +3699,10 @@
    "opened_date": "2007-05-18"
   },
   "current_address": "新竹市東區長春街56號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-05-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-05-18",
+  "registry_estab_date": "2007-05-18",
   "registry_address_differs": true
  },
  {
@@ -3719,10 +3719,10 @@
    "opened_date": "2011-12-22"
   },
   "current_address": "新竹市東區建中路42號、46號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2011-12-22",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2011-12-22",
+  "registry_estab_date": "2011-12-22",
   "registry_address_differs": false
  },
  {
@@ -3739,10 +3739,10 @@
    "opened_date": "1991-06-26"
   },
   "current_address": "新北市新店區民族路71號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1991-06-26",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1991-06-26",
+  "registry_estab_date": "1991-06-26",
   "registry_address_differs": false
  },
  {
@@ -3759,10 +3759,10 @@
    "opened_date": "2007-03-14"
   },
   "current_address": "新北市新店區如意街95、97號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-03-14",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-03-14",
+  "registry_estab_date": "2007-03-14",
   "registry_address_differs": true
  },
  {
@@ -3779,10 +3779,10 @@
    "opened_date": "2016-08-04"
   },
   "current_address": "新北市新店區安康路二段136巷59號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2016-08-04",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2016-08-04",
+  "registry_estab_date": "2016-08-04",
   "registry_address_differs": false
  },
  {
@@ -3799,10 +3799,10 @@
    "opened_date": "1994-04-23"
   },
   "current_address": "新北市新店區安康路二段196號B1",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1994-04-23",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1994-04-23",
+  "registry_estab_date": "1994-04-23",
   "registry_address_differs": false
  },
  {
@@ -3819,10 +3819,10 @@
    "opened_date": "2008-04-07"
   },
   "current_address": "新北市新店區安祥路85-89號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-04-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-04-07",
+  "registry_estab_date": "2008-04-07",
   "registry_address_differs": true
  },
  {
@@ -3839,10 +3839,10 @@
    "opened_date": "2009-08-14"
   },
   "current_address": "新北市新店區溪園路399號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-08-14",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-08-14",
+  "registry_estab_date": "2009-08-14",
   "registry_address_differs": false
  },
  {
@@ -3859,10 +3859,10 @@
    "opened_date": "2012-10-08"
   },
   "current_address": "新北市新莊區中平路377巷18、20號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2012-10-08",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2012-10-08",
+  "registry_estab_date": "2012-10-08",
   "registry_address_differs": false
  },
  {
@@ -3879,10 +3879,10 @@
    "opened_date": "1998-09-25"
   },
   "current_address": "新北市新莊區中信街72號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1998-09-25",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1998-09-25",
+  "registry_estab_date": "1998-09-25",
   "registry_address_differs": true
  },
  {
@@ -3899,10 +3899,10 @@
    "opened_date": "2010-04-20"
   },
   "current_address": "新北市新莊區公園一路110號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2010-04-20",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2010-04-20",
+  "registry_estab_date": "2010-04-20",
   "registry_address_differs": false
  },
  {
@@ -3919,10 +3919,10 @@
    "opened_date": "2003-03-03"
   },
   "current_address": "新北市新莊區化成路193號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2003-03-03",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2003-03-03",
+  "registry_estab_date": "2003-03-03",
   "registry_address_differs": false
  },
  {
@@ -3939,10 +3939,10 @@
    "opened_date": "2012-09-20"
   },
   "current_address": "新北市新莊區昌隆街69、75、83號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2012-09-20",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2012-09-20",
+  "registry_estab_date": "2012-09-20",
   "registry_address_differs": false
  },
  {
@@ -3959,10 +3959,10 @@
    "opened_date": "2009-12-07"
   },
   "current_address": "新北市新莊區龍安路75號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-12-07",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-12-07",
+  "registry_estab_date": "2009-12-07",
   "registry_address_differs": false
  },
  {
@@ -3979,10 +3979,10 @@
    "opened_date": "2007-07-17"
   },
   "current_address": "新竹縣新豐鄉建興路一段116-2號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-07-17",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-07-17",
+  "registry_estab_date": "2007-07-17",
   "registry_address_differs": false
  },
  {
@@ -3999,10 +3999,10 @@
    "opened_date": "2006-11-10"
   },
   "current_address": "桃園市楊梅區中興路67號1樓",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2006-11-10",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2006-11-10",
+  "registry_estab_date": "2006-11-10",
   "registry_address_differs": false
  },
  {
@@ -4019,10 +4019,10 @@
    "opened_date": "2004-08-30"
   },
   "current_address": "嘉義市西區仁愛路211、213號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2004-08-30",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2004-08-30",
+  "registry_estab_date": "2004-08-30",
   "registry_address_differs": true
  },
  {
@@ -4039,10 +4039,10 @@
    "opened_date": "2008-10-29"
   },
   "current_address": "嘉義市西區德明路128-132號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2008-10-29",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2008-10-29",
+  "registry_estab_date": "2008-10-29",
   "registry_address_differs": true
  },
  {
@@ -4059,10 +4059,10 @@
    "opened_date": "2009-08-31"
   },
   "current_address": "新北市樹林區太順路64號、66號、68號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-08-31",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-08-31",
+  "registry_estab_date": "2009-08-31",
   "registry_address_differs": true
  },
  {
@@ -4079,10 +4079,10 @@
    "opened_date": "2003-05-13"
   },
   "current_address": "新北市樹林區復興路198號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2003-05-13",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2003-05-13",
+  "registry_estab_date": "2003-05-13",
   "registry_address_differs": false
  },
  {
@@ -4099,10 +4099,10 @@
    "opened_date": "2010-04-26"
   },
   "current_address": "新北市樹林區學成路536號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2010-04-26",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2010-04-26",
+  "registry_estab_date": "2010-04-26",
   "registry_address_differs": false
  },
  {
@@ -4119,10 +4119,10 @@
    "opened_date": "1992-07-31"
   },
   "current_address": "苗栗縣頭份市中華路1155號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1992-07-31",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1992-07-31",
+  "registry_estab_date": "1992-07-31",
   "registry_address_differs": false
  },
  {
@@ -4139,10 +4139,10 @@
    "opened_date": "2007-10-18"
   },
   "current_address": "桃園市蘆竹區福祿一街189-193號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2007-10-18",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2007-10-18",
+  "registry_estab_date": "2007-10-18",
   "registry_address_differs": true
  },
  {
@@ -4159,10 +4159,10 @@
    "opened_date": "1996-05-23"
   },
   "current_address": "新北市蘆洲區三民路54號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "1996-05-23",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "1996-05-23",
+  "registry_estab_date": "1996-05-23",
   "registry_address_differs": false
  },
  {
@@ -4179,10 +4179,10 @@
    "opened_date": "2009-02-09"
   },
   "current_address": "新北市蘆洲區中興街34、36號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2009-02-09",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2009-02-09",
+  "registry_estab_date": "2009-02-09",
   "registry_address_differs": true
  },
  {
@@ -4199,10 +4199,10 @@
    "opened_date": "2015-08-27"
   },
   "current_address": "新北市蘆洲區長榮路386號",
-  "opened_date": "",
-  "opened_date_basis": "",
+  "opened_date": "2015-08-27",
+  "opened_date_basis": "商工登記",
   "news": "",
-  "registry_estab_date_reference_only": "2015-08-27",
+  "registry_estab_date": "2015-08-27",
   "registry_address_differs": false
  }
 ]

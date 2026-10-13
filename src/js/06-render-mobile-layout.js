@@ -292,10 +292,7 @@ function render() {
   }
 
   // 4. Apply Brand Filter or PK Mode
-  // 已選品牌在目前條件下沒有門市時自動取消，避免清單變空
-  if (activeBrands.size && nonBrandPool.length > 0) {
-    [...activeBrands].forEach(b => { if (!nonBrandPool.some(s => s.brand === b)) activeBrands.delete(b); });
-  }
+  // 已選品牌在目前條件下沒有門市時保留勾選（按鈕顯示 0），放寬篩選或移動地圖後自動恢復
   // 縣市／行政區／型態／狀態的選項與數字跟著已選品牌更新
   initDropdowns();
 
