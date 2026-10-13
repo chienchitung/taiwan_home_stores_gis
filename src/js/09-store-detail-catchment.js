@@ -127,8 +127,8 @@ function openStoreDrawer(s, preferredTab = null, opts = {}) {
         <div><dt>品牌</dt><dd>${s.brand}</dd></div>
         <div><dt>型態</dt><dd>${s.store_format || s.channel_format}</dd></div>
         <div><dt>開幕</dt>${s.opened_year
-          ? `<dd>${s.opened_year} 年</dd>`
-          : `<dd class="sk-unknown" title="查無新聞、雜誌、官方或社群貼文等可查證來源，不推估年份">未知<span class="sk-basis">查無可靠來源</span></dd>`}</div>
+          ? `<dd>${s.opened_year} 年${s.opened_basis === "商工登記" ? `<span class="sk-basis" title="經濟部商工登記分公司核准設立日，通常比實際開幕早 1～4 個月">依商工登記</span>` : ""}</dd>`
+          : `<dd class="sk-unknown" title="查無新聞、官方或商工登記等可靠來源，不推估年份">未知<span class="sk-basis">查無可靠來源</span></dd>`}</div>
       </dl>
       <div class="sk-section">
         <div class="sk-label">地址</div>

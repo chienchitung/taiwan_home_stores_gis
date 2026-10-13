@@ -175,14 +175,13 @@
   {
     "brand": "IKEA",
     "store_name": "IKEA 桃園舊店（中山路店）",
-    "date": "2004-12-18",
+    "date": "2004-09-01",
     "year": 2004,
-    "confidence": "confirmed",
+    "confidence": "registry",
     "sources": [
-      "https://www.taipeitimes.com/News/biz/archives/2004/12/14/2003215086"
+      "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 84309586"
     ],
-    "evidence": "Article dated Tue 2004-12-14: 'starting with a second store, to be launched in downtown Taoyuan this Saturday. The 4,500-ping ... free-standing building' -> Saturday = 2004-12-18. Corroborated by Marie Claire 2020-06-04 (https://www.marieclaire.com.tw/lifestyle/whats-hot/50292): '於2004年底開業、占地超過4500坪的IKEA桃園店' (地址 桃園市中山路958號), and 今周刊 2004-12-23 '日前IKEA在桃園開設…旗艦店…開幕儀式'.",
-    "registry_date_reference_only": "2004-09-01"
+    "evidence": "經濟部商工登記：宜家家居（統編 84309586）桃園分公司，分公司核准設立日 2004-09-01，地址 桃園市中壢區高鐵站前東路1段1號；查無開幕新聞，以登記日代表開店日（桃園分公司2004年設立，2020年隨門市遷至青埔沿用同一登記）"
   },
   {
     "brand": "IKEA",

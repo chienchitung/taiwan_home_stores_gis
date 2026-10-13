@@ -36,7 +36,6 @@ MAIN_JSON = DATA_DIR / "taiwan_home_stores_status.json"
 MAIN_CSV = DATA_DIR / "taiwan_home_stores_status.csv"
 RAW_JSON = BASE_DIR / "lejiakang_stores_raw.json"
 MATCH_JSON = BASE_DIR / "lejiakang_gcis_match.json"
-NEWS_JSON = BASE_DIR / "supermarket_news_openings.json"
 GCIS_API = "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB"
 COMPANIES = {"22662257": "統康生活事業", "22662550": "康達盛通生活事業"}
 BRAND = "樂家康"
@@ -156,9 +155,6 @@ def main():
     branches = fetch_branches()
     by_ban = {b["ban"]: b for b in branches}
     gmaps = google_coords()
-    # 逐店查新聞、雜誌、社群貼文所得的開幕日期（supermarket_news_openings.json）
-    extra_news = {x["store_name"]: (x["opened_date"], x["source_url"], x.get("evidence", ""))
-                  for x in json.loads(NEWS_JSON.read_text(encoding="utf-8")) if x["brand"] == BRAND} if NEWS_JSON.exists() else {}
 
     stores, audit = [], []
     for row in rows:
@@ -166,7 +162,7 @@ def main():
         city = norm_city(row["city_name"])
         b, how = match(row, address, branches, by_ban)
         name = f"{BRAND} {row['name']}"
-        news = NEWS_OPENINGS.get(row["name"]) or extra_news.get(name)
+        news = NEWS_OPENINGS.get(row["name"])
         g = gmaps.get(name)
         if news:
             opened, basis, src = news[0], "新聞／官方", news[1]
@@ -195,7 +191,7 @@ def main():
             "source_url": SOURCE_URL,
             "coordinate_source": f"Google 地圖「{g['name']}」地點座標（2026-10-13 逐筆比對）" if g else "萬家福／樂家康官方門市地圖座標",
             "google_maps_url": maps_url(BRAND, row["name"], address),
-            "verification_status": "官方門市；開幕日期依新聞／社群" if news else "官方門市；查無可查證的開幕日期，未列出",
+            "verification_status": "官方門市；開幕日期依開幕新聞" if news else "官方門市；查無可查證的開幕日期，未列出",
             "official_store_id": str(row["id"]),
             "store_format": "社區超市",
             "official_branch_ban": b["ban"] if b else "",
