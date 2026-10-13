@@ -19,13 +19,14 @@ const BRANDS = {
   "萬家福":             { color: "#0B6E4F", label: "萬家福量販",          tableLabel: "萬家福",   abbr: "萬" },
   "大全聯":             { color: "#E60012", label: "大全聯 MEGA PXMART", tableLabel: "大全聯",   abbr: "大" },
   "全聯福利中心":       { color: "#005BAC", label: "全聯福利中心",        tableLabel: "全聯",     abbr: "全" },
+  "樂家康":             { color: "#7C3AED", label: "樂家康（原家樂福超市）", tableLabel: "樂家康", abbr: "樂" },
   "蝦皮店到店":         { color: "#EE4D2D", label: "蝦皮店到店",           tableLabel: "蝦皮",     abbr: "蝦" },
 };
 const BRAND_KEYS = Object.keys(BRANDS);
 const DATASET_BRANDS = {
   home: ["IKEA", "無印良品", "宜得利", "特力屋", "HOLA", "hoi! 好好生活", "MR. LIVING 居家先生"],
   mass: ["Costco 好市多", "萬家福", "大全聯"],
-  supermarket: ["全聯福利中心"],
+  supermarket: ["全聯福利中心", "樂家康"],
   ecommerce: ["蝦皮店到店"]
 };
 
@@ -685,7 +686,7 @@ function initBrandPills() {
     chip.dataset.brand = b;
     chip.innerHTML = `<span class="dot" style="background:${cfg.color}"></span> ${b} <span class="cnt">${count}</span>`;
     chip.onclick = async () => {
-      if (b === "全聯福利中心" && !pxmartDataLoaded) {
+      if (DATASET_BRANDS.supermarket.includes(b) && !pxmartDataLoaded) {
         await ensurePxmartData();
       }
       // 複選：點一下選取、再點一下取消；點了哪個品牌就顯示哪個（不自動改回「全部」，
@@ -2869,7 +2870,7 @@ document.querySelectorAll(".dataset-switch-btn").forEach(btn => {
         await ensurePxmartData();
       } catch (error) {
         activeDatasetMode = "home";
-        alert("全聯門市資料載入失敗，請確認 pxmart_stores_data.js 與儀表板放在同一資料夾後再試一次。");
+        alert("超市門市資料載入失敗，請確認 pxmart_stores_data.js 與儀表板放在同一資料夾後再試一次。");
       } finally {
         btn.disabled = false;
         btn.textContent = originalText;

@@ -19,13 +19,14 @@ const BRANDS = {
   "萬家福":             { color: "#0B6E4F", label: "萬家福量販",          tableLabel: "萬家福",   abbr: "萬" },
   "大全聯":             { color: "#E60012", label: "大全聯 MEGA PXMART", tableLabel: "大全聯",   abbr: "大" },
   "全聯福利中心":       { color: "#005BAC", label: "全聯福利中心",        tableLabel: "全聯",     abbr: "全" },
+  "樂家康":             { color: "#7C3AED", label: "樂家康（原家樂福超市）", tableLabel: "樂家康", abbr: "樂" },
   "蝦皮店到店":         { color: "#EE4D2D", label: "蝦皮店到店",           tableLabel: "蝦皮",     abbr: "蝦" },
 };
 const BRAND_KEYS = Object.keys(BRANDS);
 const DATASET_BRANDS = {
   home: ["IKEA", "無印良品", "宜得利", "特力屋", "HOLA", "hoi! 好好生活", "MR. LIVING 居家先生"],
   mass: ["Costco 好市多", "萬家福", "大全聯"],
-  supermarket: ["全聯福利中心"],
+  supermarket: ["全聯福利中心", "樂家康"],
   ecommerce: ["蝦皮店到店"]
 };
 

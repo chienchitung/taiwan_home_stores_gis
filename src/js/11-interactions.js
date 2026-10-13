@@ -250,7 +250,7 @@ document.querySelectorAll(".dataset-switch-btn").forEach(btn => {
         await ensurePxmartData();
       } catch (error) {
         activeDatasetMode = "home";
-        alert("全聯門市資料載入失敗，請確認 pxmart_stores_data.js 與儀表板放在同一資料夾後再試一次。");
+        alert("超市門市資料載入失敗，請確認 pxmart_stores_data.js 與儀表板放在同一資料夾後再試一次。");
       } finally {
         btn.disabled = false;
         btn.textContent = originalText;

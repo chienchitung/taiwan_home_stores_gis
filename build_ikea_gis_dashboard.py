@@ -19,7 +19,8 @@ date_year_regex = re.compile(r'^(19\d\d|20\d\d)(?:-\d\d){0,2}$')
 def assign_store_opened_year(s):
     """開幕年份只取有出處的 opened_date（YYYY / YYYY-MM / YYYY-MM-DD）。
 
-    - 全聯福利中心：經濟部商工登記分公司核准設立日期（audit/sync_pxmart_stores.py）
+    - 全聯福利中心、樂家康：經濟部商工登記分公司核准設立日期（audit/sync_pxmart_stores.py、
+      audit/sync_lejiakang_stores.py；樂家康有開幕新聞者以新聞為準）
     - 其他品牌：audit/store_opened_dates_verified.json 中有新聞／官方來源的日期
       （audit/apply_verified_opened_dates.py 寫入）
     查無可靠來源就回傳 None（前端顯示為未知、不列入時間軸），不推估、不從備註抓年份。
@@ -42,8 +43,10 @@ for store in dashboard_stores:
             store[key] = float(store[key])
 
 shopee_stores = [store for store in dashboard_stores if store.get('brand') == '蝦皮店到店']
-pxmart_stores = [store for store in dashboard_stores if store.get('brand') == '全聯福利中心']
-initial_stores = [store for store in dashboard_stores if store.get('brand') not in ('蝦皮店到店', '全聯福利中心')]
+# 超市資料集（全聯、樂家康）門市多，獨立成 pxmart_stores_data.js，切到「超市生鮮」時才載入
+SUPERMARKET_BRANDS = ('全聯福利中心', '樂家康')
+pxmart_stores = [store for store in dashboard_stores if store.get('brand') in SUPERMARKET_BRANDS]
+initial_stores = [store for store in dashboard_stores if store.get('brand') != '蝦皮店到店' and store.get('brand') not in SUPERMARKET_BRANDS]
 SHOPEE_DASHBOARD_FIELDS = {
     'n', 'brand', 'store_name', 'store_type', 'region', 'city', 'address',
     'status', 'note', 'district', 'channel_format', 'status_category', 'lat',
@@ -84,7 +87,7 @@ PXMART_STORES_JS = json.dumps(pxmart_stores, ensure_ascii=False, separators=(','
 ACTIVE_STORE_COUNT = sum(
     1 for store in dashboard_stores if store.get('status_category') == '現行營運中'
 )
-DATA_UPDATED_DATE = '2026-10-07'  # 最近一次門市資料（含開幕日期）更新日
+DATA_UPDATED_DATE = '2026-10-13'  # 最近一次門市資料（含開幕日期）更新日
 
 
 # ─── 前端程式 ───
