@@ -175,13 +175,15 @@
   {
     "brand": "IKEA",
     "store_name": "IKEA 桃園舊店（中山路店）",
-    "date": "2004-09-01",
+    "date": "2004-12-18",
     "year": 2004,
-    "confidence": "registry",
+    "confidence": "confirmed",
     "sources": [
-      "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB?$format=json&$filter=Business_Accounting_NO eq 84309586"
+      "https://www.taipeitimes.com/News/biz/archives/2004/12/14/2003215086",
+      "https://www.marieclaire.com.tw/lifestyle/whats-hot/50292"
     ],
-    "evidence": "經濟部商工登記：宜家家居（統編 84309586）桃園分公司，分公司核准設立日 2004-09-01，地址 桃園市中壢區高鐵站前東路1段1號；查無開幕新聞，以登記日代表開店日（桃園分公司2004年設立，2020年隨門市遷至青埔沿用同一登記）"
+    "evidence": "Taipei Times 2004-12-14（週二）：IKEA 第二家店 \"to be launched in downtown Taoyuan this Saturday\"（4,500 坪獨棟建築）→ 2004-12-18；Marie Claire 2020-06-04：「於2004年底開業、占地超過4500坪的IKEA桃園店」。2026-10-14 開啟兩篇原文確認",
+    "registry_date_reference_only": "2004-09-01"
   },
   {
     "brand": "IKEA",
@@ -3666,9 +3668,10 @@
     "year": 2021,
     "confidence": "confirmed",
     "sources": [
-      "https://zh.wikipedia.org/wiki/萬家福分店列表"
+      "https://zh.wikipedia.org/wiki/萬家福分店列表",
+      "https://www.bnext.com.tw/article/64559/carrefour-nangang-mini-hypermarket-"
     ],
-    "evidence": "維基百科萬家福分店列表「開業日」：1991年1月（第一代） / 2021年8月（第二代）；採家樂福於此址開業日"
+    "evidence": "維基百科萬家福分店列表「開業日」：1991年1月（第一代） / 2021年8月（第二代）；數位時代 2021-08-17：「將在18日開出第67家量販店——家樂福南港店」（同為南港路二段新址）→ 2021-08-18"
   },
   {
     "brand": "萬家福",
@@ -3932,7 +3935,7 @@
     "sources": [
       "https://zh.wikipedia.org/wiki/萬家福分店列表"
     ],
-    "evidence": "維基百科萬家福分店列表「開業日」：2008年11月"
+    "evidence": "維基百科萬家福分店列表「開業日」：2008年11月；開幕日 2008-11-28 經使用者 2026-10-14 查證"
   },
   {
     "brand": "萬家福",
@@ -4119,7 +4122,7 @@
     "sources": [
       "https://zh.wikipedia.org/wiki/萬家福分店列表"
     ],
-    "evidence": "維基百科萬家福分店列表「開業日」：2008年9月"
+    "evidence": "維基百科萬家福分店列表「開業日」：2008年9月；開幕日 2008-09-26 經使用者 2026-10-14 查證"
   },
   {
     "brand": "萬家福",
