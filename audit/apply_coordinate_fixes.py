@@ -5,6 +5,8 @@
 - 桃園遠東百貨（中正路 20 號）：原座標在蘆竹區（約差 6 km），改用 Google 地圖上兩店各自的地點座標。
 - 台中水湳愛買（中清路二段 1199 號）：原座標落在西屯區；Google 地點座標位於北屯區，與地址一致，改用之。
 - 新竹大遠百（西大路 323 號）：座標本來就正確（東區）；宜得利地址誤寫「北區」，改為東區。
+另有 7 間座標正確、但地址沒寫行政區或仍用升格前的「鎮」名（頭份、員林 2015 年升格為市），
+依國土測繪中心查得的行政區補正地址與 district 欄位（DISTRICT_FIXES）。
 可重複執行；需在各 sync／apply 腳本之後執行。
 """
 import csv
@@ -42,6 +44,31 @@ FIXES = {
     },
 }
 
+# (品牌, 店名): (地址中要替換的開頭, 替換後, 行政區)
+DISTRICT_FIXES = {
+    ("大全聯", "大全聯 頭份店"): ("苗栗縣頭份鎮", "苗栗縣頭份市", "頭份市"),
+    ("特力屋", "特力屋 彰化員林店"): ("彰化縣員林鎮", "彰化縣員林市", "員林市"),
+    ("宜得利", "宜得利 新竹巨城店"): ("新竹市", "新竹市東區", "東區"),
+    ("宜得利", "宜得利 北屯大買家店"): ("台中市", "台中市北屯區", "北屯區"),
+    ("特力屋", "特力屋 基隆義一店(社區店)"): ("基隆市", "基隆市中正區", "中正區"),
+    ("特力屋", "特力屋 新竹店"): ("新竹市", "新竹市東區", "東區"),
+    ("HOLA", "HOLA 嘉義店"): ("嘉義市", "嘉義市東區", "東區"),
+}
+for key, (old, new, district) in DISTRICT_FIXES.items():
+    FIXES[key] = {"_prefix": (old, new), "district": district}
+
+
+def apply_fix(s, fix):
+    fix = dict(fix)
+    prefix = fix.pop("_prefix", None)
+    if prefix:
+        old, new = prefix
+        for field in ("address", "clean_address"):
+            if s.get(field, "").startswith(old) and not s[field].startswith(new):
+                s[field] = new + s[field][len(old):]
+        s["clean_query"] = s.get("clean_query", "").replace(old, new, 1) if new not in s.get("clean_query", "") else s["clean_query"]
+    s.update(fix)
+
 
 def main():
     stores = json.loads(MAIN_JSON.read_text(encoding="utf-8"))
@@ -49,7 +76,7 @@ def main():
     for s in stores:
         fix = FIXES.get((s.get("brand"), s.get("store_name")))
         if fix:
-            s.update(fix)
+            apply_fix(s, fix)
             hit += 1
     assert hit == len(FIXES), f"matched {hit}/{len(FIXES)}"
     MAIN_JSON.write_text(json.dumps(stores, ensure_ascii=False, indent=2), encoding="utf-8")
