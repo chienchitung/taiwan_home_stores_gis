@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#0058A3">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-<link rel="stylesheet" href="assets/app.css?v=e71c7808c5">
+<link rel="stylesheet" href="assets/app.css?v=6f56267a6f">
 </head>
 <body>
 
@@ -129,6 +129,12 @@
         </div>
       </div>
     </div>
+
+    <!-- 截圖模式：隱藏所有介面時唯一留下的結束按鈕（平時不顯示，滑過才清楚） -->
+    <button class="btn-exit-screenshot" id="btnExitScreenshot" title="結束截圖模式（Esc）" aria-label="結束截圖模式">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      <span>結束截圖</span>
+    </button>
 
     <!-- TOP-RIGHT: Floating Trigger when Sidebar is collapsed (Scheme 4 Exclusive Zone) -->
     <button class="floating-open-sidebar-btn" id="btnOpenSidebar" title="展開側邊門市面板">
@@ -366,6 +372,6 @@
 <!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
 <script src="vendor/leaflet/leaflet.js"></script>
 <script src="stores_data.js?v=e604362d87"></script>
-<script src="assets/app.js?v=fc32f69a6b"></script>
+<script src="assets/app.js?v=2c965248ec"></script>
 </body>
 </html>
