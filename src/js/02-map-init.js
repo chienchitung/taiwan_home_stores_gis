@@ -9,6 +9,9 @@ const googleNavControl = L.control({ position: "bottomleft" });
 googleNavControl.onAdd = function(map) {
   const container = L.DomUtil.create("div", "google-nav-control-group");
   container.innerHTML = `
+    <button class="btn-google-locate" id="btnMapRecenter" title="置中：縮放到目前篩選的門市（未篩選時回到全台）" role="button" aria-label="地圖置中">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 15H3v4c0 1.1.9 2 2 2h4v-2H5v-4zM5 5h4V3H5c-1.1 0-2 .9-2 2v4h2V5zm14-2h-4v2h4v4h2V5c0-1.1-.9-2-2-2zm0 16h-4v2h4c1.1 0 2-.9 2-2v-4h-2v4zM12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+    </button>
     <button class="btn-google-locate" id="btnMapLocate" title="顯示我的位置 (回到所在座標)" role="button" aria-label="顯示我的位置">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
     </button>
@@ -33,6 +36,13 @@ if (mapLocateBtn) {
   mapLocateBtn.onclick = (e) => {
     e.stopPropagation();
     locateUser();
+  };
+}
+const recenterBtn = document.getElementById("btnMapRecenter");
+if (recenterBtn) {
+  recenterBtn.onclick = (e) => {
+    e.stopPropagation();
+    recenterMap();
   };
 }
 const zoomInBtn = document.getElementById("btnMapZoomIn");

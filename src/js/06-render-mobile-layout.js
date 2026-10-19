@@ -227,7 +227,7 @@ document.getElementById("mAppliedChips").addEventListener("click", e => {
   if (isMobileLayout()) {
     setTimeout(() => {
       map.invalidateSize();
-      map.fitBounds([[21.85, 119.95], [25.35, 122.05]], {
+      map.fitBounds(TAIWAN_BOUNDS, {
         paddingTopLeft: [12, 110], paddingBottomRight: [12, sheetHeightFor(sheetState) + 12], animate: false
       });
     }, 0);

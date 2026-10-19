@@ -217,6 +217,30 @@ function fitMapToFacetSelection() {
     { padding: [50, 50], maxZoom: filterState.district.size ? 15 : 13, duration: 0.8 });
 }
 
+// 地圖「置中」按鈕：縮放到目前條件下的門市（品牌、篩選、搜尋；不受「只看地圖範圍內」影響）。
+// 選了生活圈就回到該生活圈；沒有任何條件時回到全台。手機版扣掉上方搜尋列與下方抽屜／時間軸。
+const TAIWAN_BOUNDS = [[21.85, 119.95], [25.35, 122.05]];
+function recenterMap() {
+  const mobile = isMobileLayout();
+  const bottom = mobile ? (isTimelineMode ? 170 : sheetHeightFor(sheetState)) + 12 : 40;
+  const opts = { paddingTopLeft: mobile ? [12, 110] : [50, 80], paddingBottomRight: [mobile ? 12 : 50, bottom], duration: 0.8 };
+  if (activeRegionLayer) {
+    map.flyToBounds(activeRegionLayer.getBounds(), { ...opts, maxZoom: 12 });
+    return;
+  }
+  const filtered = activeBrands.size || activeFacetCount() || currentSearchQuery();
+  const pool = filtered ? getTimelineStorePool() : [];
+  if (pool.length === 1) {
+    map.flyTo([pool[0].lat, pool[0].lng], 15, { duration: 0.8 });
+  } else if (pool.length) {
+    map.flyToBounds(L.latLngBounds(pool.map(s => [s.lat, s.lng])), { ...opts, maxZoom: 15 });
+  } else if (mobile) {
+    map.flyToBounds(TAIWAN_BOUNDS, opts);
+  } else {
+    map.flyTo([23.75, 120.95], 8, { duration: 0.8 });  // 與開啟時的全台畫面相同
+  }
+}
+
 function initFacetPanel() {
   const panel = document.getElementById("facetPanel");
   panel.addEventListener("toggle", e => {
