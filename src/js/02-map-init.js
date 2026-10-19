@@ -24,6 +24,9 @@ googleNavControl.onAdd = function(map) {
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 13H5v-2h14v2z"/></svg>
       </button>
     </div>
+    <button class="btn-google-locate" id="btnScreenshotMode" title="截圖模式：隱藏所有按鈕與面板，只留地圖（按 Esc 結束）" role="button" aria-label="截圖模式">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 2 7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8.2A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 1 0 12 8.8z"/></svg>
+    </button>
   `;
   L.DomEvent.disableClickPropagation(container);
   L.DomEvent.disableScrollPropagation(container);
