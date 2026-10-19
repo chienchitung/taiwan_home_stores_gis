@@ -4344,5 +4344,27 @@
       "https://www.ikea.com/ms/zh_TW/about_ikea/the_ikea_way/history/1990.html"
     ],
     "evidence": "聯合報〈IKEA來台30年！第一間店設址於東區地下室〉：台灣首店位於敦化南路永琦百貨（現遠東SOGO敦化館）地下室，1994/12/14試賣、12/17正式開幕；採首日對外營業日（2026-10-06 使用者驗證）"
+  },
+  {
+    "brand": "特力屋",
+    "store_name": "特力屋 新莊幸福店(社區店)",
+    "date": "2026-10-04",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "https://tw.sale-events.com/sale/%E7%89%B9%E5%8A%9B%E5%B1%8B/"
+    ],
+    "evidence": "特力屋貼文（SaleEvents 轉載 2026-09-29）：「歡慶特力屋 新莊幸福店，10/4盛大開幕！」；2026-10-04 貼文「正式開幕囉」"
+  },
+  {
+    "brand": "特力屋",
+    "store_name": "特力屋 豐原大社店(社區店)",
+    "date": "2026-10-08",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "https://tw.sale-events.com/sale/%E7%89%B9%E5%8A%9B%E5%B1%8B/"
+    ],
+    "evidence": "特力屋貼文（SaleEvents 轉載 2026-10-07）：「歡慶特力屋 豐原大社店 10/8試營運！」；以試營運首日為開幕日"
   }
 ]
