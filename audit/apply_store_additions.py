@@ -7,6 +7,10 @@
 座標為 Google 地圖上同名地點，並以國土測繪中心「坐標查詢行政區」確認所在行政區。
 開幕日期同步寫入 store_opened_dates_verified.json（apply_verified_opened_dates.py 會依該檔覆寫）。
 
+- HOLA 新北新店店：位於萬家福新店店 4 樓，HOLA 官方 Threads 公告活動到 2026-03-08 後暫停營業、遷至裕隆城
+  （現 HOLA 新店裕隆城店）；原址現為 hoi! 新北旗艦店-新店店。2025 年底仍營業，舊同步程式在它從官方清單消失時
+  直接刪除、未留紀錄，這裡補回歷史紀錄。開幕日期未查得，不列。
+
 另修正：特力屋 彰化和美店 為大型店（官方名稱無「社區店」，且官方大型店 28 間的口徑須含此店），
 店型由「都會／社區門市」改為「大型獨棟／街邊門市」。
 可重複執行；需在各 sync／apply 腳本之後執行。
@@ -41,6 +45,18 @@ NEW_STORES = [
         "opened_date": "2026-10-08",
         "evidence": "特力屋貼文（SaleEvents 轉載 2026-10-07）：「歡慶特力屋 豐原大社店 10/8試營運！」；以試營運首日為開幕日",
     },
+    {
+        "brand": "HOLA", "store_name": "HOLA 新北新店店", "region": "北部", "city": "新北市",
+        "district": "新店區", "address": "新北市新店區中興路三段1號4樓（萬家福新店店）",
+        "clean_address": "新北市新店區中興路三段1號",
+        "lat": 24.9761644, "lng": 121.5465284,
+        "coordinate_source": "與同址特力屋新店店相同座標",
+        "store_format": "量販店中店", "channel_format": "量販店中店 / 超市複合",
+        "status": "已遷址轉型", "status_category": "歷史變動（已熄燈/遷址）",
+        "note": "位於萬家福新店店4樓；HOLA 官方公告活動到2026年3月8日後暫停營業，遷至裕隆城（HOLA 新店裕隆城店），原址現為 hoi! 新北旗艦店-新店店；開幕日期未查得",
+        "opened_date": "",
+        "source_url": "https://www.threads.com/@hola.taiwan/post/DVREMWwEtC6",
+    },
 ]
 FORMAT_FIXES = {("特力屋", "特力屋 彰化和美店"): {"store_format": "大型獨棟／街邊門市"}}
 
@@ -53,15 +69,16 @@ def main():
     for item in NEW_STORES:
         if (item["brand"], item["store_name"]) in existing:
             continue
-        row = {k: v for k, v in item.items() if k != "evidence"}
-        row.update({
+        row = {
             "store_type": "", "channel_format": "", "store_format": "都會／社區門市",
             "status": "營業中", "status_category": "現行營運中", "note": "2026-10-19 官方門市清單核對",
             "geocode_score": 100, "clean_name": item["store_name"],
             "clean_query": f"{item['store_name']} {item['clean_address']}",
             "is_co_location": True, "n": next_n,
-            "opened_date_source": SALE_EVENTS, "opened_date_basis": "新聞／官方",
-        })
+            "opened_date_source": SALE_EVENTS if item.get("opened_date") else "",
+            "opened_date_basis": "新聞／官方" if item.get("opened_date") else "",
+        }
+        row.update({k: v for k, v in item.items() if k != "evidence"})
         stores.append(row)
         next_n += 1
         added += 1
@@ -80,7 +97,7 @@ def main():
     verified = json.loads(raw)
     have = {(v["brand"], v["store_name"]) for v in verified}
     for item in NEW_STORES:
-        if (item["brand"], item["store_name"]) not in have:
+        if item.get("opened_date") and (item["brand"], item["store_name"]) not in have:
             verified.append({
                 "brand": item["brand"], "store_name": item["store_name"], "date": item["opened_date"],
                 "year": int(item["opened_date"][:4]), "confidence": "confirmed",

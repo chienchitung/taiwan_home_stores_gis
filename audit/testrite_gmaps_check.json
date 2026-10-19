@@ -1,0 +1,1556 @@
+[
+ {
+  "brand": "HOLA",
+  "store": "HOLA 花蓮店",
+  "status": "已結束營業",
+  "address": "花蓮縣新城鄉嘉里路15號B1（家樂福花蓮店）",
+  "google": {
+   "name": "HOLA 和樂家居 花蓮店",
+   "address": "971花蓮縣新城鄉嘉里村嘉里路15號B1",
+   "lat": 24.0150348,
+   "lng": 121.6102617
+  },
+  "dist": 60,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 台南永康店",
+  "status": "已歇業",
+  "address": "台南市永康區中華路143號",
+  "google": {
+   "name": "HOLA 特力和樂 - 台南永康店",
+   "address": "710臺南市永康區勝利里中華路143號",
+   "lat": 23.0027039,
+   "lng": 120.2343935
+  },
+  "dist": 5,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 新北中和店",
+  "status": "已歇業",
+  "address": "新北市中和區中山路二段291號2F",
+  "google": null
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 微風松高店（初代首店）",
+  "status": "已結束營業",
+  "address": "台北市信義區松高路16號2樓",
+  "google": {
+   "name": "hoi! 好好生活 (微風松高店)",
+   "address": "110臺北市信義區西村里松高路16號2F",
+   "lat": 25.0381292,
+   "lng": 121.5674456
+  },
+  "dist": 69,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 台北文昌概念店",
+  "status": "已結束營業",
+  "address": "台北市大安區文昌街272號",
+  "google": {
+   "name": "hoi! 好好生活(文昌店)",
+   "address": "106臺北市大安區通化里文昌街270-1號1樓",
+   "lat": 25.032108899999997,
+   "lng": 121.5562954
+  },
+  "dist": 17,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 內湖店",
+  "status": "營業中",
+  "address": "台北市內湖區新湖三路23號B1",
+  "google": {
+   "name": "特力屋 台北內湖店",
+   "address": "114臺北市內湖區湖元里新湖三路23號B1",
+   "lat": 25.062162999999998,
+   "lng": 121.573934
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 南港興華店(社區店)",
+  "status": "營業中",
+  "address": "台北市南港區南港路二段20巷5號B1",
+  "google": {
+   "name": "特力屋 南港興華店(社區店)",
+   "address": "115臺北市南港區東明里南港路二段20巷5號B1",
+   "lat": 25.0544396,
+   "lng": 121.60554909999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 大安安和店(社區店)",
+  "status": "營業中",
+  "address": "台北市大安區安和路2段74巷3號",
+  "google": {
+   "name": "特力屋大安安和店(社區店)",
+   "address": "106臺北市大安區義安里安和路二段74巷3號",
+   "lat": 25.030441699999997,
+   "lng": 121.5516705
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 大同重慶北店(社區店)",
+  "status": "營業中",
+  "address": "台北市大同區重慶北路二段69號",
+  "google": {
+   "name": "特力屋大同重慶北店(社區店)",
+   "address": "103臺北市大同區星明里重慶北路二段69號",
+   "lat": 25.0558405,
+   "lng": 121.5142037
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 士林店",
+  "status": "暫停營業",
+  "address": "台北市士林區基河路258號",
+  "google": {
+   "name": "特力屋 台北士林店",
+   "address": "111臺北市士林區福德里基河路258號",
+   "lat": 25.092604899999998,
+   "lng": 121.5202003
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 汐止新台店(社區店)",
+  "status": "營業中",
+  "address": "新北市汐止區新台五路一段93-3號1樓",
+  "google": {
+   "name": "特力屋 汐止新台店(社區店)",
+   "address": "221新北市汐止區樟樹里新台五路一段93-3號遠雄IFG廣場D棟1樓",
+   "lat": 25.0617657,
+   "lng": 121.64800659999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 三重集美店(社區店)",
+  "status": "營業中",
+  "address": "新北市三重區集美街18-3號",
+  "google": {
+   "name": "特力屋三重集美店(社區店)",
+   "address": "241新北市三重區福祉里集美街18-3號",
+   "lat": 25.055099799999997,
+   "lng": 121.4890219
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 永和得和店(社區店)",
+  "status": "營業中",
+  "address": "新北市永和區得和路102號B1",
+  "google": {
+   "name": "特力屋永和得和店(社區店)",
+   "address": "234新北市永和區民治里得和路102號B1",
+   "lat": 25.000098299999998,
+   "lng": 121.51800899999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 蘆洲集賢店(社區店)",
+  "status": "營業中",
+  "address": "新北市蘆洲區集賢路401號",
+  "google": {
+   "name": "特力屋 蘆洲集賢店(社區店)",
+   "address": "24747新北市蘆洲區恆德里集賢路401號",
+   "lat": 25.0817084,
+   "lng": 121.48032459999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 新店店",
+  "status": "營業中",
+  "address": "新北市新店區中興路三段1號4樓",
+  "google": {
+   "name": "特力屋 台北新店店",
+   "address": "231新北市新店區寶興里中興路三段1號4樓",
+   "lat": 24.9761644,
+   "lng": 121.5465284
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 中和店",
+  "status": "營業中",
+  "address": "新北市中和區中山路二段291號3-4樓",
+  "google": {
+   "name": "特力屋 新北中和店",
+   "address": "235新北市中和區連和里中山路二段291號3F、4F",
+   "lat": 25.0017244,
+   "lng": 121.4960478
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 蘆洲長安店(社區店)",
+  "status": "營業中",
+  "address": "新北市蘆洲區長安街101號",
+  "google": {
+   "name": "特力屋蘆洲長安店(社區店)",
+   "address": "247新北市蘆洲區長安里長安街101號",
+   "lat": 25.0807418,
+   "lng": 121.4615781
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 板橋北門店(社區店)",
+  "status": "營業中",
+  "address": "新北市板橋區北門街11號4F",
+  "google": {
+   "name": "特力屋板橋北門店(社區店)",
+   "address": "220015新北市板橋區黃石里北門街11號黃石市場 (板橋YELLOWSTONE)4F",
+   "lat": 25.0108396,
+   "lng": 121.45708379999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 土城店",
+  "status": "營業中",
+  "address": "新北市土城區青雲路152號2樓",
+  "google": {
+   "name": "特力屋 新北土城店",
+   "address": "236新北市土城區青雲里青雲路152號2樓",
+   "lat": 24.98333,
+   "lng": 121.45896099999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 板橋合宜店(社區店)",
+  "status": "營業中",
+  "address": "新北市板橋區合宜路149號1樓",
+  "google": {
+   "name": "特力屋板橋合宜店(社區店)",
+   "address": "220新北市板橋區合宜路149號1樓",
+   "lat": 24.997715499999998,
+   "lng": 121.44664019999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 新莊店",
+  "status": "營業中",
+  "address": "新北市新莊區中正路620號",
+  "google": {
+   "name": "特力屋 新北新莊店",
+   "address": "242新北市新莊區丹鳳里中正路620號",
+   "lat": 25.029590199999998,
+   "lng": 121.4227473
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 淡水中山北店(社區店)",
+  "status": "營業中",
+  "address": "新北市淡水區中山北路三段102號1樓",
+  "google": {
+   "name": "特力屋淡水中山北店(社區店)",
+   "address": "251新北市淡水區崁頂里中山北路三段102號",
+   "lat": 25.1909618,
+   "lng": 121.4444355
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 林口中山店(社區店)",
+  "status": "營業中",
+  "address": "新北市林口區中山路248號B1",
+  "google": {
+   "name": "特力屋 林口中山店(社區店)",
+   "address": "24446新北市林口區菁湖里中山路248號B1",
+   "lat": 25.0797113,
+   "lng": 121.3856758
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 基隆義一店(社區店)",
+  "status": "營業中",
+  "address": "基隆市中正區義一路99號",
+  "google": {
+   "name": "特力屋基隆義一店(社區店)",
+   "address": "202基隆市中正區港通里義一路99號",
+   "lat": 25.1351442,
+   "lng": 121.74704129999999
+  },
+  "dist": 15,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 三峽店",
+  "status": "營業中",
+  "address": "新北市樹林區大成路85號B1",
+  "google": {
+   "name": "特力屋 台北三峽店",
+   "address": "23854新北市樹林區南園里大成路85號B1",
+   "lat": 24.9476402,
+   "lng": 121.3814919
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 桃園大業店(社區店)",
+  "status": "營業中",
+  "address": "桃園市桃園區大業路一段138號",
+  "google": {
+   "name": "特力屋 桃園大業店(社區店)",
+   "address": "33049桃園市桃園區大業路一段138號",
+   "lat": 25.007012699999997,
+   "lng": 121.31631139999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 南崁店",
+  "status": "營業中",
+  "address": "桃園市蘆竹區中正路1號B1",
+  "google": {
+   "name": "特力屋 南崁店",
+   "address": "338桃園市蘆竹區南榮里中正路1號",
+   "lat": 25.0400904,
+   "lng": 121.29478499999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 八德店",
+  "status": "營業中",
+  "address": "桃園市八德區介壽路一段479號",
+  "google": null
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 平鎮店",
+  "status": "營業中",
+  "address": "桃園市平鎮區環南路二段261號",
+  "google": {
+   "name": "特力屋(平鎮店)",
+   "address": "324桃園市平鎮區新富里環南路二段261號",
+   "lat": 24.9409556,
+   "lng": 121.2146851
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 宜蘭宜興店(社區店)",
+  "status": "營業中",
+  "address": "宜蘭縣宜蘭市宜興路一段159號",
+  "google": {
+   "name": "特力屋宜蘭宜興店(社區店)",
+   "address": "260宜蘭縣宜蘭市大新里宜興路一段159號",
+   "lat": 24.7525494,
+   "lng": 121.75603009999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 龍潭北龍店(社區店)",
+  "status": "營業中",
+  "address": "桃園市龍潭區北龍路19號",
+  "google": {
+   "name": "特力屋龍潭北龍店(社區店)",
+   "address": "325桃園市龍潭區北龍路19號",
+   "lat": 24.8653618,
+   "lng": 121.2111656
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 羅東店",
+  "status": "營業中",
+  "address": "宜蘭縣羅東鎮光榮路388號",
+  "google": {
+   "name": "特力屋 羅東店",
+   "address": "265宜蘭縣羅東鎮東安里光榮路388號",
+   "lat": 24.6794403,
+   "lng": 121.77808759999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 湖口和愛店(社區店)",
+  "status": "營業中",
+  "address": "新竹縣湖口鄉和愛路68號",
+  "google": {
+   "name": "特力屋湖口和愛店 社區店",
+   "address": "303新竹縣湖口鄉愛勢村和愛路68號",
+   "lat": 24.9042632,
+   "lng": 121.0468758
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 竹北文興店(社區店)",
+  "status": "營業中",
+  "address": "新竹縣竹北市文興路347號",
+  "google": {
+   "name": "特力屋 竹北文興店",
+   "address": "30264新竹縣竹北市鹿場里文興路347號",
+   "lat": 24.813853299999998,
+   "lng": 121.02269869999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 新竹店",
+  "status": "營業中",
+  "address": "新竹市東區公道五路二段469號2樓",
+  "google": {
+   "name": "特力屋 新竹店",
+   "address": "300新竹市東區豐功里公道五路二段469號2樓",
+   "lat": 24.804647799999998,
+   "lng": 120.99309459999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 林森店",
+  "status": "營業中",
+  "address": "新竹市東區林森路18號3F",
+  "google": {
+   "name": "特力屋林森店",
+   "address": "30042新竹市東區榮光里林森路18號3樓",
+   "lat": 24.8021079,
+   "lng": 120.9704022
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 頭份中央店(社區店)",
+  "status": "營業中",
+  "address": "苗栗縣頭份市中央路678號",
+  "google": {
+   "name": "特力屋頭份中央店(社區店)",
+   "address": "351苗栗縣頭份市後庄里中央路678號",
+   "lat": 24.6944818,
+   "lng": 120.89194499999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 苗栗中正店(社區店)",
+  "status": "營業中",
+  "address": "苗栗市中正路905-13號",
+  "google": {
+   "name": "特力屋苗栗中正店(社區店)",
+   "address": "360苗栗縣苗栗市新苗里中正路905-13號",
+   "lat": 24.551295399999997,
+   "lng": 120.8165973
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 花蓮店",
+  "status": "營業中",
+  "address": "花蓮市國風里4鄰林森路176號",
+  "google": {
+   "name": "特力屋 花蓮店",
+   "address": "970花蓮縣花蓮市國風里林森路176號",
+   "lat": 23.9785149,
+   "lng": 121.60121009999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 豐原店",
+  "status": "營業中",
+  "address": "台中市豐原區南村里水源路420號",
+  "google": {
+   "name": "特力屋 台中豐原店",
+   "address": "420臺中市豐原區南村里水源路420號",
+   "lat": 24.2569877,
+   "lng": 120.7355032
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 北屯店",
+  "status": "營業中",
+  "address": "台中市北屯區北屯路407-1號",
+  "google": {
+   "name": "特力屋 台中北屯店",
+   "address": "406臺中市北屯區平興里北屯路407-1號",
+   "lat": 24.1734643,
+   "lng": 120.6978534
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 埔里信義店(社區店)",
+  "status": "營業中",
+  "address": "南投縣埔里鎮信義路18號",
+  "google": {
+   "name": "特力屋 埔里信義店(社區店)",
+   "address": "545南投縣埔里鎮大湳里信義路18號",
+   "lat": 23.9742993,
+   "lng": 120.97877009999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 梧棲中華店(社區店)",
+  "status": "營業中",
+  "address": "台中市梧棲區中華路二段561號",
+  "google": {
+   "name": "特力屋梧棲中華店(社區店)",
+   "address": "435臺中市梧棲區南簡里中華路二段561號",
+   "lat": 24.256149699999998,
+   "lng": 120.557796
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 西屯店",
+  "status": "營業中",
+  "address": "台中市西屯區台灣大道四段528號1樓",
+  "google": {
+   "name": "特力屋 台中西屯店",
+   "address": "40764臺中市西屯區福和里台灣大道四段528號",
+   "lat": 24.178438999999997,
+   "lng": 120.6255068
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 台中大墩店",
+  "status": "營業中",
+  "address": "台中市南屯區大墩路533號B1 ",
+  "google": {
+   "name": "特力屋 台中大墩店",
+   "address": "408臺中市南屯區惠中里大墩路533號B1",
+   "lat": 24.1496028,
+   "lng": 120.64965459999999
+  },
+  "dist": 3,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 大里國光店(社區店)",
+  "status": "營業中",
+  "address": "台中市大里區國光路2段363號",
+  "google": {
+   "name": "特力屋大里國光店(社區店)",
+   "address": "412臺中市大里區永隆里國光路二段363號",
+   "lat": 24.1084402,
+   "lng": 120.6798195
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 台中復興店(社區店)",
+  "status": "營業中",
+  "address": "台中市南區復興路一段359號2樓 ",
+  "google": {
+   "name": "特力屋 台中復興店(社區店)",
+   "address": "402臺中市南區樹義里復興路一段359號2樓",
+   "lat": 24.114869799999997,
+   "lng": 120.65422249999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 草屯虎山店(社區店)",
+  "status": "營業中",
+  "address": "南投縣草屯鎮虎山路819號",
+  "google": {
+   "name": "特力屋 草屯虎山店(社區店)",
+   "address": "542南投縣草屯鎮和平里虎山路819號1樓",
+   "lat": 23.976090799999998,
+   "lng": 120.6857579
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 彰化和美店",
+  "status": "營業中",
+  "address": "彰化縣和美鎮彰美路二段49號",
+  "google": {
+   "name": "特力屋 彰化和美店",
+   "address": "508彰化縣和美鎮詔安里彰美路二段49號",
+   "lat": 24.0923229,
+   "lng": 120.53273879999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 彰化員林店",
+  "status": "營業中",
+  "address": "彰化縣員林市中山路二段399號",
+  "google": {
+   "name": "特力屋 彰化員林店",
+   "address": "510彰化縣員林市三多里中山路二段399號",
+   "lat": 23.9694188,
+   "lng": 120.5712085
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 斗六店",
+  "status": "營業中",
+  "address": "雲林縣斗六市莊敬路268號",
+  "google": {
+   "name": "特力屋斗六店",
+   "address": "640雲林縣斗六市公正里莊敬路268號1樓",
+   "lat": 23.703415999999997,
+   "lng": 120.5470759
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 虎尾公安店(社區店)",
+  "status": "營業中",
+  "address": "雲林縣虎尾鎮公安路188號1樓",
+  "google": {
+   "name": "特力屋虎尾公安店(社區店)",
+   "address": "632雲林縣虎尾鎮公安路188號1樓",
+   "lat": 23.7098738,
+   "lng": 120.4327137
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 嘉義店",
+  "status": "營業中",
+  "address": "嘉義市東區忠孝路547號",
+  "google": {
+   "name": "特力屋 嘉義店",
+   "address": "600嘉義市東區中庄里忠孝路547號",
+   "lat": 23.5008411,
+   "lng": 120.4489517
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 朴子四維店(社區店)",
+  "status": "營業中",
+  "address": "嘉義縣朴子市四維路二段62號",
+  "google": {
+   "name": "特力屋朴子四維店(社區店)",
+   "address": "613嘉義縣朴子市竹圍里四維路二段62號",
+   "lat": 23.4587885,
+   "lng": 120.241424
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 新營金華店(社區店)",
+  "status": "營業中",
+  "address": "台南市新營區隋唐街197號",
+  "google": {
+   "name": "特力屋 新營金華店(社區店)",
+   "address": "730臺南市新營區新南里隋唐街197號",
+   "lat": 23.3072566,
+   "lng": 120.29976649999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 佳里佳東店(社區店)",
+  "status": "營業中",
+  "address": "台南市佳里區佳東路481號",
+  "google": {
+   "name": "特力屋 佳里佳東店(社區店)",
+   "address": "722臺南市佳里區六安里佳東路481號",
+   "lat": 23.1650049,
+   "lng": 120.1821135
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 台東店",
+  "status": "營業中",
+  "address": "台東縣台東市寶桑路373號",
+  "google": {
+   "name": "特力屋台東店",
+   "address": "950臺東縣臺東市文化里寶桑路373號",
+   "lat": 22.7581022,
+   "lng": 121.1518088
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 澎湖馬公店(社區店)",
+  "status": "營業中",
+  "address": "澎湖縣馬公市同和路158號3樓 ",
+  "google": {
+   "name": "特力屋澎湖馬公店(社區店)",
+   "address": "880澎湖縣馬公市光復里同和路158號3樓",
+   "lat": 23.5671107,
+   "lng": 119.572237
+  },
+  "dist": 73,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 永康復國店(社區店)",
+  "status": "營業中",
+  "address": "台南市永康區復國一路315巷1號",
+  "google": {
+   "name": "特力屋永康復國店(社區店)",
+   "address": "710臺南市永康區復國里復國一路315巷1號",
+   "lat": 23.0103574,
+   "lng": 120.2462216
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 台南文賢店",
+  "status": "營業中",
+  "address": "台南市北區文賢路720號",
+  "google": {
+   "name": "特力屋 台南文賢店",
+   "address": "704臺南市北區元美里文賢路720號",
+   "lat": 23.010879799999998,
+   "lng": 120.19451369999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 台南仁德店",
+  "status": "營業中",
+  "address": "台南市仁德區中山路799號",
+  "google": {
+   "name": "特力屋 台南仁德店",
+   "address": "717臺南市仁德區仁德里中山路799號",
+   "lat": 22.9730194,
+   "lng": 120.2448847
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 岡山大仁店(社區店)",
+  "status": "營業中",
+  "address": "高雄市岡山區大仁北路303號",
+  "google": {
+   "name": "特力屋岡山大仁店(社區店)",
+   "address": "820高雄市岡山區竹圍里大仁北路303號",
+   "lat": 22.796678699999998,
+   "lng": 120.30250179999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 屏東店",
+  "status": "營業中",
+  "address": "屏東市瑞光里民生路2-27號",
+  "google": {
+   "name": "特力屋 屏東店",
+   "address": "900屏東縣屏東市瑞光里民生路2-27號",
+   "lat": 22.661149899999998,
+   "lng": 120.5101873
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 楠梓大學店(社區店)",
+  "status": "營業中",
+  "address": "高雄市楠梓區大學東路161號",
+  "google": {
+   "name": "特力屋楠梓大學店(社區店)",
+   "address": "811高雄市楠梓區藍田里大學東路161號",
+   "lat": 22.7287088,
+   "lng": 120.2898733
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 高雄左營店",
+  "status": "營業中",
+  "address": "高雄市左營區民族一路948-1號2樓",
+  "google": null
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 三民澄清店(社區店)",
+  "status": "營業中",
+  "address": "高雄市三民區澄清路339號",
+  "google": {
+   "name": "特力屋三民澄清店(社區店)",
+   "address": "807高雄市三民區寶華里澄清路339號",
+   "lat": 22.637972299999998,
+   "lng": 120.34464679999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 高雄大順店",
+  "status": "營業中",
+  "address": "高雄市苓雅區武廟路218號",
+  "google": {
+   "name": "特力屋 高雄大順店",
+   "address": "802高雄市苓雅區五權里武廟路218號",
+   "lat": 22.6318061,
+   "lng": 120.3241018
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 高雄鳳山店",
+  "status": "營業中",
+  "address": "高雄市鳳山區瑞隆東路99號",
+  "google": {
+   "name": "特力屋 高雄鳳山店",
+   "address": "830高雄市鳳山區老爺里瑞隆東路99號",
+   "lat": 22.6061364,
+   "lng": 120.343066
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 苓雅三多店(社區店)",
+  "status": "營業中",
+  "address": "高雄市苓雅區三多三路168號",
+  "google": {
+   "name": "特力屋 苓雅三多店(社區店)",
+   "address": "802高雄市苓雅區日中里三多三路168號",
+   "lat": 22.6157529,
+   "lng": 120.3093669
+  },
+  "dist": 9,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 東港光復店(社區店)",
+  "status": "營業中",
+  "address": "屏東縣東港鎮光復路一段66號",
+  "google": {
+   "name": "特力屋東港光復店(社區店)",
+   "address": "928屏東縣東港鎮新街里光復路一段66號",
+   "lat": 22.470205999999997,
+   "lng": 120.46181899999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 金門太湖店(社區店)",
+  "status": "營業中",
+  "address": "金門縣金湖鎮太湖路二段198號4樓",
+  "google": {
+   "name": "特力屋金門太湖店(社區店)",
+   "address": "891金門縣金湖鎮新市里太湖路二段198號",
+   "lat": 24.4392039,
+   "lng": 118.41839309999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 台北內湖店",
+  "status": "營業中",
+  "address": "台北市內湖區新湖三路23號 1F",
+  "google": {
+   "name": "HOLA 和樂家居 台北內湖店",
+   "address": "1樓, No. 23號新湖三路湖元里內湖區臺北市114",
+   "lat": 25.0622594,
+   "lng": 121.5743164
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 台北士林店",
+  "status": "暫停營業",
+  "address": "台北市士林區基河路258號 B1",
+  "google": {
+   "name": "HOLA和樂家居 台北士林店",
+   "address": "111臺北市士林區基河路258號B1F",
+   "lat": 25.092347999999998,
+   "lng": 121.52014919999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 新店裕隆城店",
+  "status": "營業中",
+  "address": "新北市新店區中興路三段70號1F",
+  "google": {
+   "name": "HOLA 和樂家居 新店裕隆城店",
+   "address": "231新北市新店區寶福里中興路三段70號1 樓",
+   "lat": 24.9780311,
+   "lng": 121.5474338
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 新北重新店",
+  "status": "營業中",
+  "address": "新北市三重區重新路五段654號 B1",
+  "google": {
+   "name": "HOLA 和樂家居 新北重新店",
+   "address": "241新北市三重區重新路五段654號B1",
+   "lat": 25.0432809,
+   "lng": 121.4675154
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 中和環球店",
+  "status": "營業中",
+  "address": "新北市中和區中山路三段122號 B2",
+  "google": {
+   "name": "HOLA 和樂家居 中和環球店",
+   "address": "235新北市中和區員山里中山路三段122號B2樓",
+   "lat": 25.006673199999998,
+   "lng": 121.4747785
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 新北土城店",
+  "status": "營業中",
+  "address": "新北市土城區青雲路 152號  3F",
+  "google": {
+   "name": "HOLA 和樂家居 新北土城店",
+   "address": "236新北市土城區青雲里青雲路152號3樓",
+   "lat": 24.9833595,
+   "lng": 121.4589232
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 林口三井店",
+  "status": "營業中",
+  "address": "新北市林口區文化二路一段123號 1F",
+  "google": {
+   "name": "HOLA 和樂家居 林口三井店",
+   "address": "244新北市林口區南勢里文化二路一段123號1樓",
+   "lat": 25.0685055,
+   "lng": 121.36484259999999
+  },
+  "dist": 61,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 新北三峽店",
+  "status": "營業中",
+  "address": "新北市樹林區大成路85號 B1",
+  "google": {
+   "name": "HOLA 和樂家居 新北三峽店",
+   "address": "238新北市樹林區南園里大成路85號B1",
+   "lat": 24.9476543,
+   "lng": 121.38154809999999
+  },
+  "dist": 6,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 桃園南崁店",
+  "status": "營業中",
+  "address": "桃園市蘆竹區中正路1號 1F",
+  "google": {
+   "name": "HOLA 和樂家居 桃園南崁店",
+   "address": "338桃園市蘆竹區南興里中正路1號",
+   "lat": 25.040182299999998,
+   "lng": 121.2947327
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 宜蘭羅東店",
+  "status": "營業中",
+  "address": "宜蘭縣羅東鎮光榮路388號",
+  "google": null
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 竹北享平方店",
+  "status": "營業中",
+  "address": "新竹縣竹北市自強南路36號",
+  "google": {
+   "name": "HOLA和樂家居 享平方店",
+   "address": "302新竹縣竹北市鹿場里自強南路36號1 樓",
+   "lat": 24.8188908,
+   "lng": 121.02715939999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 新竹店",
+  "status": "營業中",
+  "address": "新竹市東區公道五路二段469號 2F",
+  "google": {
+   "name": "HOLA 和樂家居 新竹店",
+   "address": "300新竹市東區豐功里公道五路二段469號2樓",
+   "lat": 24.8047339,
+   "lng": 120.9929349
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 台中北屯店",
+  "status": "營業中",
+  "address": "台中市北屯區北屯路407-1號 1F",
+  "google": null
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 台中西屯店",
+  "status": "營業中",
+  "address": "台中市西屯區台灣大道四段528號",
+  "google": {
+   "name": "HOLA 和樂家居 台中西屯店",
+   "address": "407臺中市西屯區福和里台灣大道四段528號1樓",
+   "lat": 24.178425999999998,
+   "lng": 120.6255058
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 台中大墩店",
+  "status": "營業中",
+  "address": "台中市南屯區大墩路533號 1F",
+  "google": {
+   "name": "HOLA 和樂家居 台中大墩店",
+   "address": "408臺中市南屯區惠中里大墩路533號1樓",
+   "lat": 24.1496028,
+   "lng": 120.64965459999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 彰化店",
+  "status": "營業中",
+  "address": "彰化縣和美鎮彰美路二段49號",
+  "google": {
+   "name": "HOLA 和樂家居 彰化店",
+   "address": "508彰化縣和美鎮詔安里彰美路二段49號1樓",
+   "lat": 24.0923229,
+   "lng": 120.53273879999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 嘉義店",
+  "status": "營業中",
+  "address": "嘉義市東區忠孝路549號",
+  "google": {
+   "name": "HOLA 和樂家居 嘉義店",
+   "address": "600嘉義市東區中庄里忠孝路549號1樓",
+   "lat": 23.501209499999998,
+   "lng": 120.4487233
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 台中漢神洲際店",
+  "status": "營業中",
+  "address": "台中市北屯區四民里崇德路三段865號5F",
+  "google": {
+   "name": "HOLA 和樂家居 台中漢神洲際店",
+   "address": "406臺中市北屯區崇德路三段865號5樓",
+   "lat": 24.1983601,
+   "lng": 120.6859889
+  },
+  "dist": 24,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 台南三越小北店",
+  "status": "營業中",
+  "address": "台南市北區西門路四段135號3F",
+  "google": {
+   "name": "HOLA 和樂家居 台南三越小北店",
+   "address": "704臺南市北區成德里西門路四段135號3樓",
+   "lat": 23.0100722,
+   "lng": 120.2063922
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 台南仁德店",
+  "status": "營業中",
+  "address": "台南市仁德區中山路779號",
+  "google": {
+   "name": "HOLA 和樂家居 台南仁德店",
+   "address": "717臺南市仁德區仁德里中山路779號1樓",
+   "lat": 22.972749,
+   "lng": 120.24576769999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 高雄左營店",
+  "status": "營業中",
+  "address": "高雄市左營區民族一路948號",
+  "google": {
+   "name": "HOLA 和樂家居 高雄左營店",
+   "address": "813高雄市左營區菜公里民族一路948號1樓",
+   "lat": 22.6752361,
+   "lng": 120.3193695
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "HOLA",
+  "store": "HOLA 高雄夢時代店",
+  "status": "營業中",
+  "address": "高雄市前鎮區中華五路789號B2-B03區",
+  "google": {
+   "name": "HOLA 和樂家居 高雄夢時代店",
+   "address": "806高雄市前鎮區興邦里中華五路789號",
+   "lat": 22.594848199999998,
+   "lng": 120.30573989999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 新北板橋遠百中山店",
+  "status": "營業中",
+  "address": "新北市板橋區中山路一段152號10樓",
+  "google": {
+   "name": "hoi! 好好生活(新北板橋遠百中山店)",
+   "address": "220新北市板橋區深丘里中山路一段152號10樓",
+   "lat": 25.010977,
+   "lng": 121.4644505
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 台中西屯店",
+  "status": "營業中",
+  "address": "台中市西屯區台灣大道四段528號2F",
+  "google": null
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 台北微風南京店",
+  "status": "營業中",
+  "address": "台北市松山區南京東路三段337號B1",
+  "google": {
+   "name": "hoi! 好好生活(台北微風南京店)",
+   "address": "10550臺北市松山區中正里南京東路三段337號B1",
+   "lat": 25.0519356,
+   "lng": 121.5483275
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 台中南屯店",
+  "status": "營業中",
+  "address": "台中市南屯區永春東路1318號",
+  "google": {
+   "name": "hoi! 好好生活 (台中南屯店)",
+   "address": "408臺中市南屯區永定里永春東路1318號",
+   "lat": 24.1373057,
+   "lng": 120.6332965
+  },
+  "dist": 6,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 新北旗艦店-新店店(8/21試營運!)",
+  "status": "營業中",
+  "address": "新北市新店區寶興里中興路三段1號4樓",
+  "google": {
+   "name": "hoi! 好好生活(新北旗艦店)",
+   "address": "231新北市新店區寶興里中興路三段1號4樓",
+   "lat": 24.9764469,
+   "lng": 121.5462938
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 雲林斗六店",
+  "status": "營業中",
+  "address": "雲林縣斗六市公正里莊敬路268號2樓",
+  "google": {
+   "name": "hoi! 好好生活 (雲林斗六店)",
+   "address": "640雲林縣斗六市莊敬路268號2樓",
+   "lat": 23.703415999999997,
+   "lng": 120.5470759
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 台北旗艦店-內湖店",
+  "status": "營業中",
+  "address": "台北市內湖區新湖三路23號2樓",
+  "google": {
+   "name": "hoi! 好好生活(台北旗艦店)",
+   "address": "114臺北市內湖區湖元里新湖三路23號2樓",
+   "lat": 25.0622184,
+   "lng": 121.5741961
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 宜蘭金東店",
+  "status": "營業中",
+  "address": "宜蘭縣宜蘭市宜興路一段159號",
+  "google": {
+   "name": "hoi!好好生活 (宜蘭金東店)",
+   "address": "260宜蘭縣宜蘭市大新里宜興路一段159號1樓",
+   "lat": 24.752582,
+   "lng": 121.7563871
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 台南大遠百成功店",
+  "status": "營業中",
+  "address": "台南市東區前鋒路210號B1F",
+  "google": {
+   "name": "hoi!好好生活 (台南大遠百成功店)",
+   "address": "701臺南市東區成大里前鋒路210號B1",
+   "lat": 22.9962855,
+   "lng": 120.21430749999999
+  },
+  "dist": 180,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 台東店",
+  "status": "營業中",
+  "address": "台東縣台東市寶桑路373號1樓",
+  "google": {
+   "name": "hoi! 好好生活(台東店)",
+   "address": "950006臺東縣臺東市文化里寶桑路373號1樓",
+   "lat": 22.7581272,
+   "lng": 121.1517516
+  },
+  "dist": 26,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 花蓮專櫃(特力屋花蓮店內)",
+  "status": "營業中",
+  "address": "花蓮縣花蓮市林森路176號",
+  "google": {
+   "name": "hoi!好好生活 (花蓮專櫃)",
+   "address": "970花蓮縣花蓮市國風里林森路176號",
+   "lat": 23.978509799999998,
+   "lng": 121.60120529999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 高雄左營店",
+  "status": "營業中",
+  "address": "高雄市左營區民族一路948號2樓",
+  "google": {
+   "name": "hoi! 好好生活(高雄左營店)",
+   "address": "813011高雄市左營區菜公里民族一路948號2樓",
+   "lat": 22.6752361,
+   "lng": 120.3193695
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 台南仁德店",
+  "status": "營業中",
+  "address": "台南市仁德區中山路777號2樓",
+  "google": {
+   "name": "hoi! 好好生活(台南仁德店)",
+   "address": "2F, No. 777號中山路仁德里仁德區臺南市717",
+   "lat": 22.972781599999998,
+   "lng": 120.2460619
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 新北新莊宏匯店",
+  "status": "營業中",
+  "address": "新北市新莊區新北大道四段3號6F",
+  "google": {
+   "name": "hoi!好好生活 (新北新莊宏匯店)",
+   "address": "242新北市新莊區中原里新北大道四段3號6F",
+   "lat": 25.0595872,
+   "lng": 121.44954179999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 台中復興店",
+  "status": "營業中",
+  "address": "台中市南區復興路一段359號2樓",
+  "google": {
+   "name": "hoi! 好好生活 (台中復興店)",
+   "address": "402臺中市南區樹義里復興路一段359號2樓",
+   "lat": 24.114869799999997,
+   "lng": 120.65422249999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 桃園旗艦店-八德",
+  "status": "營業中",
+  "address": "桃園市八德區介壽路一段479號2樓",
+  "google": {
+   "name": "hoi!好好生活 (桃園旗艦店-八德)",
+   "address": "334桃園市八德區大勇里介壽路一段479號2樓",
+   "lat": 24.9688634,
+   "lng": 121.30164359999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 桃園大江店",
+  "status": "營業中",
+  "address": "桃園市中壢區中園路二段501號GB樓",
+  "google": {
+   "name": "大江國際購物中心",
+   "address": "320桃園市中壢區內定里中園路二段501號",
+   "lat": 25.000988,
+   "lng": 121.22865399999999
+  },
+  "dist": 63,
+  "brand_in_name": false
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 新竹遠東竹北店",
+  "status": "營業中",
+  "address": "新竹縣竹北市莊敬北路18號5樓",
+  "google": {
+   "name": "hoi!好好生活(新竹遠東竹北店)",
+   "address": "302新竹縣竹北市十興里莊敬北路18號5樓",
+   "lat": 24.8227315,
+   "lng": 121.0235902
+  },
+  "dist": 149,
+  "brand_in_name": true
+ },
+ {
+  "brand": "hoi! 好好生活",
+  "store": "hoi! 桃園南崁店",
+  "status": "營業中",
+  "address": "桃園市蘆竹區中正路1號B1",
+  "google": {
+   "name": "hoi! 好好生活(桃園南崁店)",
+   "address": "b1, No. 1號中正路南榮里蘆竹區桃園市33863",
+   "lat": 25.040182299999998,
+   "lng": 121.2947327
+  },
+  "dist": 11,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 新莊幸福店(社區店)",
+  "status": "營業中",
+  "address": "新北市新莊區幸福路763號B1（J-MART 佳瑪新莊店）",
+  "google": {
+   "name": "特力屋新莊幸福店(社區店)",
+   "address": "242新北市新莊區中港里幸福路763號J-MART 佳瑪 新莊店B1",
+   "lat": 25.048871899999998,
+   "lng": 121.4478707
+  },
+  "dist": 0,
+  "brand_in_name": true
+ },
+ {
+  "brand": "特力屋",
+  "store": "特力屋 豐原大社店(社區店)",
+  "status": "營業中",
+  "address": "台中市豐原區大社街8號B1之1（Mini G Mall）",
+  "google": {
+   "name": "特力屋豐原大社店(社區店)",
+   "address": "420臺中市豐原區大社街8號B1之1",
+   "lat": 24.2500711,
+   "lng": 120.70139119999999
+  },
+  "dist": 0,
+  "brand_in_name": true
+ }
+]

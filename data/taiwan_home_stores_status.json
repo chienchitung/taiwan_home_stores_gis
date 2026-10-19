@@ -164765,5 +164765,32 @@
     "n": 5413,
     "opened_date_source": "https://tw.sale-events.com/sale/%E7%89%B9%E5%8A%9B%E5%B1%8B/",
     "opened_date_basis": "新聞／官方"
+  },
+  {
+    "store_type": "",
+    "channel_format": "量販店中店 / 超市複合",
+    "store_format": "量販店中店",
+    "status": "已遷址轉型",
+    "status_category": "歷史變動（已熄燈/遷址）",
+    "note": "位於萬家福新店店4樓；HOLA 官方公告活動到2026年3月8日後暫停營業，遷至裕隆城（HOLA 新店裕隆城店），原址現為 hoi! 新北旗艦店-新店店；開幕日期未查得",
+    "geocode_score": 100,
+    "clean_name": "HOLA 新北新店店",
+    "clean_query": "HOLA 新北新店店 新北市新店區中興路三段1號",
+    "is_co_location": true,
+    "n": 5414,
+    "opened_date_source": "",
+    "opened_date_basis": "",
+    "brand": "HOLA",
+    "store_name": "HOLA 新北新店店",
+    "region": "北部",
+    "city": "新北市",
+    "district": "新店區",
+    "address": "新北市新店區中興路三段1號4樓（萬家福新店店）",
+    "clean_address": "新北市新店區中興路三段1號",
+    "lat": 24.9761644,
+    "lng": 121.5465284,
+    "coordinate_source": "與同址特力屋新店店相同座標",
+    "opened_date": "",
+    "source_url": "https://www.threads.com/@hola.taiwan/post/DVREMWwEtC6"
   }
 ]
