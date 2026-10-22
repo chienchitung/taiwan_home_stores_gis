@@ -18,15 +18,27 @@ const BRANDS = {
   "Costco 好市多":      { color: "#E31837", label: "Costco 好市多",       tableLabel: "Costco",  abbr: "CO" },
   "萬家福":             { color: "#0B6E4F", label: "萬家福量販",          tableLabel: "萬家福",   abbr: "萬" },
   "大全聯":             { color: "#E60012", label: "大全聯 MEGA PXMART", tableLabel: "大全聯",   abbr: "大" },
+  "愛買":               { color: "#C026D3", label: "愛買 a.mart",          tableLabel: "愛買",     abbr: "愛" },
   "全聯福利中心":       { color: "#005BAC", label: "全聯福利中心",        tableLabel: "全聯",     abbr: "全" },
   "樂家康":             { color: "#7C3AED", label: "樂家康（原家樂福超市）", tableLabel: "樂家康", abbr: "樂" },
   "蝦皮店到店":         { color: "#EE4D2D", label: "蝦皮店到店",           tableLabel: "蝦皮",     abbr: "蝦" },
+  "新光三越":           { color: "#B91C1C", label: "新光三越",             tableLabel: "新光三越", abbr: "新" },
+  "遠東百貨":           { color: "#1D4ED8", label: "遠東百貨（遠百）",      tableLabel: "遠百",     abbr: "遠" },
+  "遠東SOGO":           { color: "#DB2777", label: "遠東SOGO",             tableLabel: "SOGO",    abbr: "SO" },
+  "微風":               { color: "#111827", label: "微風",                 tableLabel: "微風",     abbr: "微" },
+  "統一時代百貨":       { color: "#EA580C", label: "統一時代百貨",         tableLabel: "統一時代", abbr: "統" },
+  "漢神百貨":           { color: "#0F766E", label: "漢神百貨",             tableLabel: "漢神",     abbr: "漢" },
+  "大立百貨":           { color: "#92400E", label: "大立百貨",             tableLabel: "大立",     abbr: "立" },
+  "中友百貨":           { color: "#7E22CE", label: "中友百貨",             tableLabel: "中友",     abbr: "中" },
+  "廣三SOGO":           { color: "#0891B2", label: "廣三SOGO",             tableLabel: "廣三",     abbr: "廣" },
+  "大葉高島屋":         { color: "#4D7C0F", label: "大葉高島屋",           tableLabel: "高島屋",   abbr: "高" },
 };
 const BRAND_KEYS = Object.keys(BRANDS);
 const DATASET_BRANDS = {
   home: ["IKEA", "無印良品", "宜得利", "特力屋", "HOLA", "hoi! 好好生活", "MR. LIVING 居家先生"],
-  mass: ["Costco 好市多", "萬家福", "大全聯"],
+  mass: ["Costco 好市多", "萬家福", "大全聯", "愛買"],
   supermarket: ["全聯福利中心", "樂家康"],
+  department: ["新光三越", "遠東百貨", "遠東SOGO", "微風", "統一時代百貨", "漢神百貨", "大立百貨", "中友百貨", "廣三SOGO", "大葉高島屋"],
   ecommerce: ["蝦皮店到店"]
 };
 

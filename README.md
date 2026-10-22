@@ -11,7 +11,7 @@
 ## 核心功能特色
 
 ### 1. 互動式空間地圖與商圈聚類
-* **全台品牌門市視覺化**：收錄 IKEA、無印良品、宜得利、特力屋、HOLA、hoi! 好好生活、MR. LIVING、Costco 好市多、萬家福（原家樂福量販）、大全聯、全聯福利中心、樂家康（原家樂福超市），以及數千間蝦皮店到店門市。
+* **全台品牌門市視覺化**：收錄 IKEA、無印良品、宜得利、特力屋、HOLA、hoi! 好好生活、MR. LIVING、Costco 好市多、萬家福（原家樂福量販）、大全聯、愛買、全聯福利中心、樂家康（原家樂福超市），百貨公司（新光三越、遠東百貨、遠東SOGO、微風、統一時代百貨、漢神百貨、大立百貨、中友百貨、廣三SOGO、大葉高島屋），以及數千間蝦皮店到店門市。
 * **高密度標記聚類（Marker Cluster）**：支援數千個節點的高流暢平移縮放，依視角自動分群。
 * **共構商圈樞紐辨識**：自動計算並標記 150 公尺內存在同業競爭對手的高密度「商圈共構節點」。
 
@@ -52,7 +52,7 @@ taiwan_home_stores_gis/
 │   └── js/                              # 互動程式，依檔名順序合併：資料設定、地圖、狀態、篩選、定位、
 │                                        #   清單渲染與手機版面、大頭針、清單、詳情與商圈、路線、互動事件、時光軸、啟動
 ├── favicon.svg / favicon.ico / favicon-32.png / apple-touch-icon.png  # 網站圖示（中性地圖定位針）
-├── stores_data.js                       # 產出檔：居家／量販門市資料
+├── stores_data.js                       # 產出檔：居家／量販／百貨門市資料
 ├── vendor/                              # 內建 Leaflet 與 MarkerCluster（不依賴外部 CDN）
 ├── pxmart_stores_data.js                # 隨選動態載入之全聯福利中心門市資料集
 ├── shopee_stores_data.js                # 隨選動態載入之全台電商門市資料集
@@ -62,8 +62,8 @@ taiwan_home_stores_gis/
 │   └── functions/
 │       └── directions.js                # Serverless 路徑規劃代理（Google Routes API 專用）
 ├── data/                                # 核心乾淨門市資料庫
-│   ├── taiwan_home_stores_status.json   # 5,405 間實體門市完整生命週期資料庫 (JSON)
-│   └── taiwan_home_stores_status.csv    # 5,405 間實體門市歷史狀態對帳表 (CSV)
+│   ├── taiwan_home_stores_status.json   # 5,466 間實體門市完整生命週期資料庫 (JSON)
+│   └── taiwan_home_stores_status.csv    # 5,466 間實體門市歷史狀態對帳表 (CSV)
 └── audit/                               # 歷史門市地毯式查核紀錄與同步腳本
     ├── HOME_BRAND_STORE_AUDIT.md        # 居家品牌查核總報告
     ├── PXMART_STORE_LOCATION_AUDIT.md   # 全聯門市 Google 地圖地理位置核對報告
@@ -71,6 +71,9 @@ taiwan_home_stores_gis/
     ├── audit_store_data.py              # 門市資料檢驗腳本
     ├── finalize_store_audit.py          # 查核彙整產出腳本
     ├── sync_mass_retail_stores.py       # 量販門市同步腳本
+    ├── sync_amart_stores.py             # 愛買門市同步（維基分店清單＋Google 地圖座標）
+    ├── sync_department_stores.py        # 百貨公司門市同步（10 個百貨品牌）
+    ├── AMART_DEPARTMENT_STORES_AUDIT.md # 愛買與百貨公司資料查核報告
     ├── sync_pxmart_stores.py            # 全聯福利中心門市同步腳本
     ├── sync_lejiakang_stores.py         # 樂家康（原家樂福超市）門市同步＋開幕日期（新聞優先，其餘商工登記）
     ├── verify_lejiakang_google_maps.py  # 樂家康門市座標逐筆比對 Google 地圖

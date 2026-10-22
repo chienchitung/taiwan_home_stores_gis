@@ -4366,5 +4366,654 @@
       "https://tw.sale-events.com/sale/%E7%89%B9%E5%8A%9B%E5%B1%8B/"
     ],
     "evidence": "特力屋貼文（SaleEvents 轉載 2026-10-07）：「歡慶特力屋 豐原大社店 10/8試營運！」；以試營運首日為開幕日"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 基隆店",
+    "date": "2010-01-15",
+    "year": 2010,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：2010-01-15；原址為萬家福量販基隆店"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 景美店",
+    "date": "1990-09",
+    "year": 1990,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：1990-09；愛買第1間分店"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 永和店",
+    "date": "1996-07",
+    "year": 1996,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：1996-07"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 三重店",
+    "date": "2008-10-31",
+    "year": 2008,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：2008-10-31；原址為萬家福量販三重店"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 南雅店",
+    "date": "2015-04-29",
+    "year": 2015,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：2015-04-29；2015-01-31 試營運，4/29 正式開業"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 桃園店",
+    "date": "1999-12",
+    "year": 1999,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：1999-12；原址為中南紡織廠"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 楊梅店",
+    "date": "2000-05",
+    "year": 2000,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：2000-05"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 巨城店",
+    "date": "2012-04-28",
+    "year": 2012,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：2012-04-28；位於 Big City 遠東巨城購物中心；2012-04-23 試營運"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 豐原店",
+    "date": "2011-01-12",
+    "year": 2011,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：2011-01-12；原址為亞洲購量販"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 復興店",
+    "date": "1998-12-17",
+    "year": 1998,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：1998-12-17；原為吉安量販台中復興店（1998-12-17 開幕），2000-07 更名愛買吉安"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 水湳店",
+    "date": "2020-09-23",
+    "year": 2020,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：2020-09-23；購物中心型量販店；2020-08-18 試營運"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 台南店",
+    "date": "2000-07",
+    "year": 2000,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：2000-07；原址為遠東鴻利多量販（1995-01 開業、2000-07 結束），由愛買吉安接手開設"
+  },
+  {
+    "brand": "愛買",
+    "store_name": "愛買 花蓮店",
+    "date": "2009-10-28",
+    "year": 2009,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/愛買"
+    ],
+    "evidence": "維基百科〈愛買〉歷史章節開業日：2009-10-28；與遠東百貨花蓮店共構"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 台北南西店",
+    "date": "1991",
+    "year": 1991,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1991；一館1991年、三館（南京西路15號）2008年開業"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 台北車站",
+    "date": "2026-07-25",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2026-07-25；位於台北車站內，原址為微風台北車站"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 台北站前店",
+    "date": "1993",
+    "year": 1993,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1993；位於新光摩天大樓"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 台北天母店",
+    "date": "2004",
+    "year": 2004,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2004；A館天母東路68號、B館忠誠路二段200號"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 台北信義新天地",
+    "date": "1997",
+    "year": 1997,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1997；A11、A9、A8、A4 四館於1997～2005年陸續開業，以首館開業年為準"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 DIAMOND TOWERS",
+    "date": "2023-10-07",
+    "year": 2023,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2023-10-07；業務上稱台北忠孝店；2023-10-07 試營運"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 桃園站前店",
+    "date": "2008",
+    "year": 2008,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2008；原址為衣蝶生活流行館桃園店"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 台中中港店",
+    "date": "2000",
+    "year": 2000,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2000；2025-02-13 氣爆事故停業，2025-09-27 恢復營業"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 嘉義垂楊店",
+    "date": "2008",
+    "year": 2008,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2008；原址為衣蝶生活流行館嘉義店"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 台南中山店",
+    "date": "1996",
+    "year": 1996,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1996；因租約到期，將於2026年10月31日結束營業"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 台南新天地",
+    "date": "2002",
+    "year": 2002,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2002；本館2002年、小西門（二館）2013年12月開業"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 台南小北門店",
+    "date": "2025-09-26",
+    "year": 2025,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2025-09-26；2025-08-29 試營運；位於南山台南廣場"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 高雄三多店",
+    "date": "1993",
+    "year": 1993,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1993"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 高雄左營店",
+    "date": "2010",
+    "year": 2010,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2010；本館與彩虹市集（二館）"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 遠百信義A13",
+    "date": "2020-01-19",
+    "year": 2020,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2020-01-19；2019-12-25 試營運"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 遠百板橋",
+    "date": "2000",
+    "year": 2000,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2000；業務上稱板橋中山店；2000年遷至現址（1983年板橋店、1993年中山店）"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 Mega City 板橋大遠百",
+    "date": "2012-01",
+    "year": 2012,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2012-01；業務上稱板橋新站店"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 遠百桃園",
+    "date": "1999",
+    "year": 1999,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1999；1999年遷至桃園車站旁現址（1984年初開業於中正路）"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 遠百竹北",
+    "date": "2023-01-11",
+    "year": 2023,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2023-01-11"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 新竹大遠百",
+    "date": "2002",
+    "year": 2002,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2002；2002年遷至西大路現址（1987年初開業於中正路）"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 Top City 台中大遠百",
+    "date": "2011-12",
+    "year": 2011,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2011-12；舊台中店2000年停業，2011年12月於現址重新開業"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 遠百嘉義",
+    "date": "1991",
+    "year": 1991,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1991；1991年遷至垂楊路現址（1982年初開業）"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 台南大遠百成功店",
+    "date": "1997",
+    "year": 1997,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1997"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 高雄大遠百",
+    "date": "2001",
+    "year": 2001,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2001；原址1995年停業改建，2001年重新開業"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 遠百花蓮",
+    "date": "2009-10",
+    "year": 2009,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2009-10；2009年10月遷至和平路現址，與愛買花蓮店共構"
+  },
+  {
+    "brand": "遠東SOGO",
+    "store_name": "遠東SOGO 台北店忠孝館",
+    "date": "1987-11-11",
+    "year": 1987,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東SOGO百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1987-11-11"
+  },
+  {
+    "brand": "遠東SOGO",
+    "store_name": "遠東SOGO 台北店復興館",
+    "date": "2006-12-29",
+    "year": 2006,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東SOGO百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2006-12-29"
+  },
+  {
+    "brand": "遠東SOGO",
+    "store_name": "遠東SOGO 天母店",
+    "date": "2009-05-22",
+    "year": 2009,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東SOGO百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2009-05-22"
+  },
+  {
+    "brand": "遠東SOGO",
+    "store_name": "遠東SOGO 遠東Garden City",
+    "date": "2024-05-30",
+    "year": 2024,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東SOGO百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2024-05-30；D區先行開幕"
+  },
+  {
+    "brand": "遠東SOGO",
+    "store_name": "遠東SOGO 中壢店",
+    "date": "1998-09-25",
+    "year": 1998,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東SOGO百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1998-09-25"
+  },
+  {
+    "brand": "遠東SOGO",
+    "store_name": "遠東SOGO 新竹店",
+    "date": "2012-04-28",
+    "year": 2012,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東SOGO百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2012-04-28；位於 Big City 遠東巨城購物中心"
+  },
+  {
+    "brand": "遠東SOGO",
+    "store_name": "遠東SOGO 高雄店",
+    "date": "1996-09-26",
+    "year": 1996,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東SOGO百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1996-09-26"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風廣場",
+    "date": "2001-10-26",
+    "year": 2001,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2001-10-26"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風台大醫院商場",
+    "date": "2014-04",
+    "year": 2014,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2014-04；位於台大醫院B1"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風南京",
+    "date": "2013-09-01",
+    "year": 2013,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2013-09-01"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風信義",
+    "date": "2015-11-05",
+    "year": 2015,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2015-11-05"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風松高",
+    "date": "2014-10-24",
+    "year": 2014,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2014-10-24"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風南山",
+    "date": "2019-01-10",
+    "year": 2019,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2019-01-10"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風 EAST COAST BY BREEZE",
+    "date": "2024-02-01",
+    "year": 2024,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2024-02-01"
+  },
+  {
+    "brand": "漢神百貨",
+    "store_name": "漢神百貨本館",
+    "date": "1995-12-12",
+    "year": 1995,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/漢神百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1995-12-12；1995-05-10 試營運"
+  },
+  {
+    "brand": "大立百貨",
+    "store_name": "大立百貨",
+    "date": "1984",
+    "year": 1984,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/大立百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1984；B館1984年、A館（五福三路57號）2008年11月開業"
+  },
+  {
+    "brand": "統一時代百貨",
+    "store_name": "統一時代百貨台北店",
+    "date": "2010-10-07",
+    "year": 2010,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/統一時代百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2010-10-07；與市府轉運站共構"
+  },
+  {
+    "brand": "統一時代百貨",
+    "store_name": "統一時代百貨 Dream Plaza",
+    "date": "2025-07-25",
+    "year": 2025,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/統一時代百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2025-07-25；位於統一國際大樓"
+  },
+  {
+    "brand": "中友百貨",
+    "store_name": "中友百貨",
+    "date": "1992-04-30",
+    "year": 1992,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/中友百貨公司"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1992-04-30"
+  },
+  {
+    "brand": "廣三SOGO",
+    "store_name": "廣三SOGO",
+    "date": "1995-11-11",
+    "year": 1995,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/廣三崇光百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1995-11-11"
+  },
+  {
+    "brand": "大葉高島屋",
+    "store_name": "大葉高島屋",
+    "date": "1994-11-01",
+    "year": 1994,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/大葉高島屋"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1994-11-01；1994-07-09 試營運"
   }
 ]
