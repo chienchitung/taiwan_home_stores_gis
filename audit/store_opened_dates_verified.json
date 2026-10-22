@@ -5015,5 +5015,269 @@
       "https://zh.wikipedia.org/wiki/大葉高島屋"
     ],
     "evidence": "維基百科分店表「開幕」欄：1994-11-01；1994-07-09 試營運"
+  },
+  {
+    "brand": "明曜百貨",
+    "store_name": "明曜百貨",
+    "date": "1987-04",
+    "year": 1987,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/明曜百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1987-04；2011年3月起全館封館改裝約7個月，2011-09-23 重新開幕（同一門市改裝，採原始開幕日）"
+  },
+  {
+    "brand": "太平洋百貨",
+    "store_name": "太平洋百貨 豐原店",
+    "date": "1991-11",
+    "year": 1991,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/太平洋百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1991-11；太平洋百貨官網「關於我們」：1991年11月開幕；2026年35週年慶"
+  },
+  {
+    "brand": "太平洋百貨",
+    "store_name": "太平洋百貨 屏東店",
+    "date": "1997-08",
+    "year": 1997,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/太平洋百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1997-08；本館中正路72號；日光廣場（二館，公園路25號）2013-11-16 開幕"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 台北南西店二館",
+    "date": "2008",
+    "year": 2008,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2008；原為衣蝶生活流行館台北店；與房東都更條件談不攏未續約，現址為誠品生活南西"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 桃園大有店",
+    "date": "1998",
+    "year": 1998,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1998；原址為八百伴百貨桃園店；新光三越 2022-12-24 宣布結束營業"
+  },
+  {
+    "brand": "新光三越",
+    "store_name": "新光三越 新竹中華店",
+    "date": "2000",
+    "year": 2000,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/新光三越百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2000；租約到期不續約"
+  },
+  {
+    "brand": "遠東SOGO",
+    "store_name": "遠東SOGO 台北店101館",
+    "date": "2003-11",
+    "year": 2003,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東SOGO百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2003-11；位於台北101購物中心2F（結束日期依維基百科，查無新聞佐證）"
+  },
+  {
+    "brand": "遠東SOGO",
+    "store_name": "遠東SOGO 台北店敦化館",
+    "date": "1994-09-16",
+    "year": 1994,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東SOGO百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1994-09-16；原址為永琦百貨；租約到期，2025-12-14 晚間閉店"
+  },
+  {
+    "brand": "遠東SOGO",
+    "store_name": "遠東SOGO 中壢店中央新館",
+    "date": "2004-06",
+    "year": 2004,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東SOGO百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2004-06；原址為遠東百貨中壢店；與元化館距離過近難以區隔，租約到期不續"
+  },
+  {
+    "brand": "遠東SOGO",
+    "store_name": "遠東SOGO 新竹店站前館",
+    "date": "1999-09-23",
+    "year": 1999,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東SOGO百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1999-09-23；租約到期不續約，新竹布局移往巨城、竹北"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風忠孝",
+    "date": "2005-06-10",
+    "year": 2005,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2005-06-10；華新大樓1～2F，原為ATT流行廣場忠孝店；2015-07-09 重新開幕（結束日期依維基百科，查無新聞佐證）"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風A1機場捷運站",
+    "date": "2017-08",
+    "year": 2017,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2017-08；機場捷運台北車站商場；疫情影響，2022年3月租約到期不續約"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風中央研究院",
+    "date": "2018-10-26",
+    "year": 2018,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2018-10-26；中研院學術活動中心美食廣場（蔡元培紀念館咖啡廳仍營業）；結束年份依維基百科，查無新聞佐證"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風三總商店街",
+    "date": "2015-12",
+    "year": 2015,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2015-12；三總內湖總院B1美食街；2024年經營權由大成好食城取得（2025-07 重新開幕）。結束月份依維基百科"
+  },
+  {
+    "brand": "微風",
+    "store_name": "微風台北車站",
+    "date": "2007-10-26",
+    "year": 2007,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/微風廣場"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2007-10-26；2006-12-25 與台鐵簽約，2007-10-26 二樓開業；2026-07-24 經營權期滿，由新光三越接手"
+  },
+  {
+    "brand": "漢神百貨",
+    "store_name": "漢神百貨 臺北景美店",
+    "date": "1996",
+    "year": 1996,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/漢神百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1996；社區型百貨難敵大型百貨競爭；結束月份依維基百科"
+  },
+  {
+    "brand": "漢神百貨",
+    "store_name": "漢神百貨 舊台中店",
+    "date": "1996-12-19",
+    "year": 1996,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/漢神百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1996-12-19；後改名漢神大地球百貨；結束月份依維基百科"
+  },
+  {
+    "brand": "太平洋百貨",
+    "store_name": "太平洋百貨 永和店",
+    "date": "1993",
+    "year": 1993,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/太平洋百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1993；原為中信百貨（1974-09-15 開幕）、鴻源百貨，1993年由太平洋建設接手更名"
+  },
+  {
+    "brand": "太平洋百貨",
+    "store_name": "太平洋百貨 雙和店",
+    "date": "2000-10",
+    "year": 2000,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/太平洋百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2000-10；2013-05 股權售予房東東家建設改為加盟，2014-06 商標授權到期更名比漾廣場續營"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 台北仁愛店",
+    "date": "1977-12",
+    "year": 1977,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1977-12；位於仁愛圓環旁；1987年轉型為全國第一家男仕專業百貨"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 台北三重店",
+    "date": "1983-12",
+    "year": 1983,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1983-12；位於正義南路與光興街口，附設遠東大戲院；門牌由使用者查證"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 中壢店",
+    "date": "1993",
+    "year": 1993,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1993；1981-12 開業於新生路，1993年遷至中央西路現址；2004年交由太平洋SOGO經營，改為中壢店中央新館"
+  },
+  {
+    "brand": "遠東百貨",
+    "store_name": "遠東百貨 舊台中店",
+    "date": "1969-10",
+    "year": 1969,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/遠東百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1969-10；原成功戲院址，位於自由路與中正路（今台灣大道）口；門牌依聯合報系報導並經使用者查證；歷經火災與商圈轉移結束營業，2011年於七期另開 Top City 台中大遠百"
+  },
+  {
+    "brand": "德安百貨",
+    "store_name": "德安百貨 台南店",
+    "date": "2009-11-27",
+    "year": 2009,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/德安百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：2009-11-27；台糖台南百貨大樓，2009-10-31 試營運；租約到期熄燈"
   }
 ]

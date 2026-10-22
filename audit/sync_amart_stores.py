@@ -55,7 +55,8 @@ def main():
     rows = json.loads(MAIN_JSON.read_text(encoding="utf-8"))
     old_n = {r["store_name"]: r["n"] for r in rows if r.get("brand") == BRAND}
     kept = [r for r in rows if r.get("brand") != BRAND]
-    next_n = max(int(r.get("n") or 0) for r in kept) + 1
+    # 新門市編號接在所有既有資料（含本次替換的品牌）之後，避免和沿用舊編號的門市重複
+    next_n = max(int(r.get("n") or 0) for r in rows) + 1
     stores = []
     for name, city, district, address, lat, lng, opened, note in STORES:
         full = f"{BRAND} {name}"
