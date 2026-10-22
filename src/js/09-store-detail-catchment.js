@@ -357,7 +357,7 @@ function updateCatchmentList(s) {
 
   if (nearby.length === 0) {
     resBox.innerHTML = `
-      <div class="sk-empty">此範圍內沒有其他居家品牌門市</div>
+      <div class="sk-empty">此範圍內沒有其他門市</div>
     `;
     return;
   }
