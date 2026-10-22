@@ -11,7 +11,7 @@
 ## 核心功能特色
 
 ### 1. 互動式空間地圖與商圈聚類
-* **全台品牌門市視覺化**：收錄 IKEA、無印良品、宜得利、特力屋、HOLA、hoi! 好好生活、MR. LIVING、Costco 好市多、萬家福（原家樂福量販）、大全聯、愛買、全聯福利中心、樂家康（原家樂福超市），百貨公司（新光三越、遠東百貨、遠東SOGO、微風、統一時代百貨、漢神百貨、大立百貨、中友百貨、廣三SOGO、大葉高島屋），以及數千間蝦皮店到店門市。
+* **全台品牌門市視覺化**：收錄 IKEA、無印良品、宜得利、特力屋、HOLA、hoi! 好好生活、MR. LIVING、Costco 好市多、萬家福（原家樂福量販）、大全聯、愛買、全聯福利中心、樂家康（原家樂福超市），百貨公司（新光三越、遠東百貨、遠東SOGO、微風、統一時代百貨、漢神百貨、大立百貨、中友百貨、廣三SOGO、大葉高島屋、明曜百貨、太平洋百貨），以及數千間蝦皮店到店門市。
 * **高密度標記聚類（Marker Cluster）**：支援數千個節點的高流暢平移縮放，依視角自動分群。
 * **共構商圈樞紐辨識**：自動計算並標記 150 公尺內存在同業競爭對手的高密度「商圈共構節點」。
 
@@ -62,8 +62,8 @@ taiwan_home_stores_gis/
 │   └── functions/
 │       └── directions.js                # Serverless 路徑規劃代理（Google Routes API 專用）
 ├── data/                                # 核心乾淨門市資料庫
-│   ├── taiwan_home_stores_status.json   # 5,466 間實體門市完整生命週期資料庫 (JSON)
-│   └── taiwan_home_stores_status.csv    # 5,466 間實體門市歷史狀態對帳表 (CSV)
+│   ├── taiwan_home_stores_status.json   # 5,469 間實體門市完整生命週期資料庫 (JSON)
+│   └── taiwan_home_stores_status.csv    # 5,469 間實體門市歷史狀態對帳表 (CSV)
 └── audit/                               # 歷史門市地毯式查核紀錄與同步腳本
     ├── HOME_BRAND_STORE_AUDIT.md        # 居家品牌查核總報告
     ├── PXMART_STORE_LOCATION_AUDIT.md   # 全聯門市 Google 地圖地理位置核對報告

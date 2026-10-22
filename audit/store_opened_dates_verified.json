@@ -5015,5 +5015,38 @@
       "https://zh.wikipedia.org/wiki/大葉高島屋"
     ],
     "evidence": "維基百科分店表「開幕」欄：1994-11-01；1994-07-09 試營運"
+  },
+  {
+    "brand": "明曜百貨",
+    "store_name": "明曜百貨",
+    "date": "1987-04",
+    "year": 1987,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/明曜百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1987-04；2011年3月起全館封館改裝約7個月，2011-09-23 重新開幕（同一門市改裝，採原始開幕日）"
+  },
+  {
+    "brand": "太平洋百貨",
+    "store_name": "太平洋百貨 豐原店",
+    "date": "1991-11",
+    "year": 1991,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/太平洋百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1991-11；太平洋百貨官網「關於我們」：1991年11月開幕；2026年35週年慶"
+  },
+  {
+    "brand": "太平洋百貨",
+    "store_name": "太平洋百貨 屏東店",
+    "date": "1997-08",
+    "year": 1997,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/太平洋百貨"
+    ],
+    "evidence": "維基百科分店表「開幕」欄：1997-08；本館中正路72號；日光廣場（二館，公園路25號）2013-11-16 開幕"
   }
 ]

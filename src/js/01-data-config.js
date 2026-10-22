@@ -32,13 +32,15 @@ const BRANDS = {
   "中友百貨":           { color: "#7E22CE", label: "中友百貨",             tableLabel: "中友",     abbr: "中" },
   "廣三SOGO":           { color: "#0891B2", label: "廣三SOGO",             tableLabel: "廣三",     abbr: "廣" },
   "大葉高島屋":         { color: "#4D7C0F", label: "大葉高島屋",           tableLabel: "高島屋",   abbr: "高" },
+  "明曜百貨":           { color: "#9D174D", label: "明曜百貨",             tableLabel: "明曜",     abbr: "明" },
+  "太平洋百貨":         { color: "#0369A1", label: "太平洋百貨",           tableLabel: "太平洋",   abbr: "太" },
 };
 const BRAND_KEYS = Object.keys(BRANDS);
 const DATASET_BRANDS = {
   home: ["IKEA", "無印良品", "宜得利", "特力屋", "HOLA", "hoi! 好好生活", "MR. LIVING 居家先生"],
   mass: ["Costco 好市多", "萬家福", "大全聯", "愛買"],
   supermarket: ["全聯福利中心", "樂家康"],
-  department: ["新光三越", "遠東百貨", "遠東SOGO", "微風", "統一時代百貨", "漢神百貨", "大立百貨", "中友百貨", "廣三SOGO", "大葉高島屋"],
+  department: ["新光三越", "遠東百貨", "遠東SOGO", "微風", "統一時代百貨", "漢神百貨", "大立百貨", "中友百貨", "廣三SOGO", "大葉高島屋", "明曜百貨", "太平洋百貨"],
   ecommerce: ["蝦皮店到店"]
 };
 
