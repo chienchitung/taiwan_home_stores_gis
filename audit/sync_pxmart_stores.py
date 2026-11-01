@@ -77,6 +77,13 @@ RELOCATED_OPENINGS = {
                  "自建五層樓旗艦店 2022-01-22 開幕，原台東中山店遷入；商工登記 2009-01-05 為舊店"),
 }
 
+# 全聯官方「10月新開幕門市」貼文（使用者提供，2026-11-01）：採實際開幕日，不用商工登記核准設立日
+OFFICIAL_POST = "全聯福利中心官方貼文「10 月共有 5 家新門市盛大登場」（使用者提供）"
+OFFICIAL_OPENINGS = {
+    "汐止南陽": "2026-10-07", "太平中山": "2026-10-07", "通霄中山": "2026-10-07",
+    "台中軍福": "2026-10-14", "士林劍潭": "2026-10-16",
+}
+
 
 def parse_pxmart_store(item, match):
     attr = item['attributes']
@@ -114,6 +121,10 @@ def parse_pxmart_store(item, match):
             opened_date, url, why = RELOCATED_OPENINGS[raw_name]
             opened_year = int(opened_date[:4])
             v_status = f"官方門市與經濟部商工登記分公司比對（{how}）；現址為搬遷後新店，開店日期採新聞記載現址開幕日（{why}；{url}）"
+        elif raw_name in OFFICIAL_OPENINGS:
+            opened_date = OFFICIAL_OPENINGS[raw_name]
+            opened_year = int(opened_date[:4])
+            v_status = f"官方門市與經濟部商工登記分公司比對（{how}）；開店日期採{OFFICIAL_POST}（商工登記核准設立 {first['opened_date']}）"
     else:
         # 找不到可靠對應：不推估，日期留空
         opened_year = None

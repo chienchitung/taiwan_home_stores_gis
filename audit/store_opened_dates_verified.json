@@ -1702,7 +1702,7 @@
   },
   {
     "brand": "無印良品",
-    "store_name": "無印良品 員林大潤發門市",
+    "store_name": "無印良品 大全聯員林門市",
     "date": "2024-09-12",
     "year": 2024,
     "confidence": "confirmed",
@@ -5290,5 +5290,27 @@
       "https://www.muji.tw/muji-journal/news/news/261029.html"
     ],
     "evidence": "官方新聞：2026-10-29 開幕，320 坪以上，全台第 76 店"
+  },
+  {
+    "brand": "宜得利",
+    "store_name": "宜得利 ISS萬家福桂林店",
+    "date": "2025-05",
+    "year": 2025,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.nitori.com.tw/about/history"
+    ],
+    "evidence": "ISS 店中店；宜得利官網沿革記載開幕年月，門市查詢頁未列；官網店數 76 含此店（使用者查證確有此店）"
+  },
+  {
+    "brand": "宜得利",
+    "store_name": "宜得利 ISS萬家福重慶店",
+    "date": "2025-12",
+    "year": 2025,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.nitori.com.tw/about/history"
+    ],
+    "evidence": "ISS 店中店；宜得利官網沿革記載開幕年月，門市查詢頁未列；官網店數 76 含此店（使用者查證確有此店）"
   }
 ]
