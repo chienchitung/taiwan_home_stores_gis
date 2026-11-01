@@ -5312,5 +5312,82 @@
       "https://www.nitori.com.tw/about/history"
     ],
     "evidence": "ISS 店中店；宜得利官網沿革記載開幕年月，門市查詢頁未列；官網店數 76 含此店（使用者查證確有此店）"
+  },
+  {
+    "brand": "萬家福",
+    "store_name": "萬家福 桃園店",
+    "date": "1994-03-08",
+    "year": 1994,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/萬家福分店列表"
+    ],
+    "evidence": "原家樂福桃園店，營業 31 年；維基時間軸另記 3/10，依新聞採 3/7"
+  },
+  {
+    "brand": "萬家福",
+    "store_name": "萬家福 北門店",
+    "date": "2008-12",
+    "year": 2008,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/萬家福分店列表"
+    ],
+    "evidence": "原家樂福嘉義北門店；原址改建嘉義市立總圖書館"
+  },
+  {
+    "brand": "萬家福",
+    "store_name": "萬家福 北投店",
+    "date": "2008-12",
+    "year": 2008,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/萬家福分店列表"
+    ],
+    "evidence": "原家樂福北投店"
+  },
+  {
+    "brand": "萬家福",
+    "store_name": "萬家福 竹北店",
+    "date": "1997-09",
+    "year": 1997,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/萬家福分店列表"
+    ],
+    "evidence": "原家樂福竹北店；租約到期"
+  },
+  {
+    "brand": "萬家福",
+    "store_name": "萬家福 大墩店",
+    "date": "1996-10",
+    "year": 1996,
+    "confidence": "confirmed",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/萬家福分店列表"
+    ],
+    "evidence": "原家樂福大墩店；2014-08 停業改裝、2015-09 僅 B1 重新營業"
+  },
+  {
+    "brand": "樂家康",
+    "store_name": "樂家康 台北大直明水店",
+    "date": "2023-11-17",
+    "year": 2023,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.cna.com.tw/news/afe/202311160272.aspx"
+    ],
+    "evidence": "原家樂福超市"
+  },
+  {
+    "brand": "樂家康",
+    "store_name": "樂家康 竹北勝利二店",
+    "date": "2006-10-25",
+    "year": 2006,
+    "confidence": "confirmed",
+    "sources": [
+      "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB"
+    ],
+    "evidence": "原家樂福超市（統康生活事業勝利分公司）；租約到期"
   }
 ]

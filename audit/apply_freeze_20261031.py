@@ -16,6 +16,7 @@ sync_lejiakang_stores.py 只保留官方清單上的門市，這裡把兩間補�
 - 宜得利 淡水店：官方門市清單現名「淡水萬家福店」（同址）。
 - 宜得利 ISS萬家福桂林店（2025-05）、ISS萬家福重慶店（2025-12）：官網沿革有開幕紀錄、門市查詢頁未列，官網店數 76 含此兩店，
   使用者查證確有營業，補入；座標用所在萬家福門市。
+- 萬家福 桃園、北門、北投、竹北、大墩店與樂家康 大直明水、竹北勝利二店：使用者提供熄燈清單，結束日逐店以新聞核對，補入為歷史門市。
 - 無印良品：地址與 Google 地圖不一致者一律以 Google 地圖為準（使用者指示），更正 10 間樓層／門牌，員林門市改名大全聯員林門市。
 可重複執行；需在各 sync 腳本之後、apply_verified_opened_dates.py 之前執行（本腳本同步更新 store_opened_dates_verified.json）。
 """
@@ -121,6 +122,45 @@ for _name, _addr, _dist, _lat, _lng, _ym, _host in (
         "clean_query": f"{_name} {_addr.split('（')[0]}", "is_co_location": True, "store_format": "量販店中店",
         "opened_date_source": "https://www.nitori.com.tw/about/history", "opened_date_basis": "新聞／官方",
         "coordinate_source": f"同址「{_host}」座標（店中店無獨立 Google 地點）",
+    })
+
+WIKI_WJF = "https://zh.wikipedia.org/wiki/萬家福分店列表"
+CLOSED = "歷史變動（已熄燈/遷址）"
+# 使用者提供的萬家福／樂家康熄燈清單，逐店以新聞核對結束日、Google 地圖（已歇業地點）定位（2026-11-01）
+# (品牌, 店名, 縣市, 區, 地址, lat, lng, 開幕, 開幕依據, 開幕來源, 結束, 結束來源, 備註)
+CLOSED_STORES = [
+    ("萬家福", "桃園店", "桃園市", "桃園區", "桃園市桃園區春日路1593號", 25.0242187, 121.3058864, "1994-03-08", "新聞／官方", WIKI_WJF,
+     "2025-03-07", "https://www.mirrormedia.mg/story/20250210edi032", "原家樂福桃園店，營業 31 年；維基時間軸另記 3/10，依新聞採 3/7"),
+    ("萬家福", "北門店", "嘉義市", "東區", "嘉義市東區忠孝路346巷21號", 23.4898953, 120.4554158, "2008-12", "新聞／官方", WIKI_WJF,
+     "2025-09-22", "https://www.cna.com.tw/news/ahel/202509010244.aspx", "原家樂福嘉義北門店；原址改建嘉義市立總圖書館"),
+    ("萬家福", "北投店", "台北市", "北投區", "台北市北投區中和街366號B1", 25.1419374, 121.4992942, "2008-12", "新聞／官方", WIKI_WJF,
+     "2025-10-31", "https://www.chinatimes.com/realtimenews/20251001004498-260405", "原家樂福北投店"),
+    ("萬家福", "竹北店", "新竹縣", "竹北市", "新竹縣竹北市光明六路89號1樓", 24.8270421, 121.0091857, "1997-09", "新聞／官方", WIKI_WJF,
+     "2025-10-31", "https://www.chinatimes.com/realtimenews/20251001004498-260405", "原家樂福竹北店；租約到期"),
+    ("萬家福", "大墩店", "台中市", "南屯區", "台中市南屯區大墩路533號B1", 24.149573, 120.649653, "1996-10", "新聞／官方", WIKI_WJF,
+     "2026-02-28", "https://news.ebc.net.tw/news/living/539775", "原家樂福大墩店；2014-08 停業改裝、2015-09 僅 B1 重新營業"),
+    ("樂家康", "台北大直明水店", "台北市", "中山區", "台北市中山區明水路575號B1（綺麗廣場）", 25.0797796, 121.5518663, "2023-11-17", "新聞／官方",
+     "https://www.cna.com.tw/news/afe/202311160272.aspx", "2025-11-30", "https://www.storm.mg/lifestyle/11084576", "原家樂福超市"),
+    ("樂家康", "竹北勝利二店", "新竹縣", "竹北市", "新竹縣竹北市勝利二路26號1樓", 24.8230448, 121.0248213, "2006-10-25", "商工登記",
+     "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB", "2025-12-15", "https://www.storm.mg/lifestyle/11085988",
+     "原家樂福超市（統康生活事業勝利分公司）；租約到期"),
+]
+for (_b, _n, _city, _dist, _addr, _lat, _lng, _open, _basis, _osrc, _close, _csrc, _note) in CLOSED_STORES:
+    _full = f"{_b} {_n}"
+    _clean = _addr.split("（")[0]
+    _mass = _b == "萬家福"
+    ADD.append({
+        "brand": _b, "store_name": _full, "store_type": "量販店 / 倉儲賣場" if _mass else "社區生鮮超市",
+        "region": "北部" if _city in ("台北市", "桃園市", "新竹縣") else ("中部" if _city == "台中市" else "南部"),
+        "city": _city, "address": _addr, "opened_date": _open, "status": "已結束營業", "note": _note,
+        "district": _dist, "channel_format": "大型獨棟 / 獨立街邊店" if _mass else "社區生鮮超市 / 街邊獨立",
+        "status_category": CLOSED, "closed_date": _close, "closed_date_source": _csrc,
+        "lat": _lat, "lng": _lng, "geocode_score": 100, "clean_address": _clean, "clean_name": _full,
+        "clean_query": f"{_full} {_clean}", "is_co_location": False,
+        **({} if _mass else {"store_format": "社區超市"}),
+        "coordinate_source": "Google 地圖地點座標（已歇業地點，2026-11-01）",
+        "verification_status": "使用者提供熄燈清單，結束日逐店以新聞核對",
+        "opened_date_source": _osrc, "opened_date_basis": _basis,
     })
 
 
