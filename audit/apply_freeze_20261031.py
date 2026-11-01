@@ -216,10 +216,13 @@ def main():
             renames[(st["brand"], st["store_name"])] = new_name
             st["store_name"] = new_name
         st.update(fix)
-    have = {(st["brand"], st["store_name"]) for st in stores}
+    have = {(st["brand"], st["store_name"]): st for st in stores}
     next_n = max(int(st.get("n") or 0) for st in stores) + 1
     for a in ADD:
-        if (a["brand"], a["store_name"]) not in have:
+        existing = have.get((a["brand"], a["store_name"]))
+        if existing:  # 重跑時以本檔內容更新欄位，沿用原本的 n
+            existing.update(a)
+        else:
             stores.append({**a, "n": next_n})
             next_n += 1
     update_verified(renames)
