@@ -11,7 +11,7 @@ sync_lejiakang_stores.py 只保留官方清單上的門市，這裡把兩間補�
 - 新光三越台南中山店 2026-10-31 熄燈：店內的無印良品中山門市（官方公告 2026-11-01 停止營業，最後營業日 10/31）、
   宜得利台南中山新光三越店（隨百貨熄燈，宜得利未另發公告）改列已結束營業，結束日 2026-10-31。
 - 無印良品 國泰小檜溪門市：2026-10-29 開幕（官方新聞 261029），新增。
-- 無印良品 南西門市：2026-05-22 由南西三館（南京西路15號B1）移至南西一館（南京西路12號6F），依遷址規則改採現址開幕日。
+- 無印良品 南西門市：官方公告 2026-05-11 起改裝、5-22 由 B1 移至 6F 重新開幕（南京西路12號6F）；官方稱改裝，同一門市維持原開幕日 2018-08-02，只更新地址與座標。
 - 無印良品 台中港三井Outlet門市：門牌依官方新聞為臺灣大道十段166號（原誤植168號）。
 - 宜得利 淡水店：官方門市清單現名「淡水萬家福店」（同址）。
 - 宜得利 ISS萬家福桂林店（2025-05）、ISS萬家福重慶店（2025-12）：官網沿革有開幕紀錄、門市查詢頁未列，官網店數 76 含此兩店，
@@ -19,6 +19,7 @@ sync_lejiakang_stores.py 只保留官方清單上的門市，這裡把兩間補�
 - 萬家福 桃園、北門、北投、竹北、大墩店與樂家康 大直明水、竹北勝利二店：使用者提供熄燈清單，結束日逐店以新聞核對，補入為歷史門市。
 - 樂家康 台北仁愛店（2026-07-31）、台北仁愛二店（2026-09-14）：結束日依使用者查證，開幕日期查無；士林忠誠店 2025-12-20 租約到期熄燈（新聞），
   開幕日採商工登記士林忠誠分公司核准設立日。
+- 樂家康 台北農安二店：官方清單未列、使用者確認補入；結束日 2025-12-03 依使用者查證，開幕日採商工登記農安二分公司核准設立日。
 - 無印良品：地址與 Google 地圖不一致者一律以 Google 地圖為準（使用者指示），更正 10 間樓層／門牌，員林門市改名大全聯員林門市。
 可重複執行；需在各 sync 腳本之後、apply_verified_opened_dates.py 之前執行（本腳本同步更新 store_opened_dates_verified.json）。
 """
@@ -82,8 +83,8 @@ FIXES = {
     ("無印良品", "無印良品 新光三越台北南西門市"): {
         "address": "台北市中山區南京西路12號6F（新光三越台北南西店一館）", "clean_address": "台北市中山區南京西路12號",
         "clean_query": "無印良品 新光三越台北南西門市 台北市中山區南京西路12號", "lat": 25.0523038, "lng": 121.5211048,
-        "opened_date": "2026-05-22", "opened_date_source": MUJI_NEWS + "260522.html", "opened_date_basis": "新聞／官方",
-        "_note": "2026-05-22 由南西三館 B1 移至南西一館 6F（145→210 坪），依遷址規則採現址開幕日；原 2018-08-02 為三館 B1 開幕日"},
+        "opened_date": "2018-08-02", "opened_date_source": "https://www.muji.tw/tw/news/news/180802.html", "opened_date_basis": "新聞／官方",
+        "_note": "官方公告 2026-05-11 起改裝暫停營業，配合百貨整體規劃由 B1 移至 6F（145→210 坪），2026-05-22 重新開幕；同一門市改裝，維持原開幕日"},
     ("無印良品", "無印良品 台中港三井Outlet門市"): {
         "address": "台中市梧棲區臺灣大道十段166號1F（MITSUI OUTLET PARK 台中港）", "clean_address": "台中市梧棲區臺灣大道十段166號",
         "clean_query": "無印良品 台中港三井Outlet門市 台中市梧棲區臺灣大道十段166號"},
@@ -154,6 +155,10 @@ CLOSED_STORES = [
      "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB", "2025-12-20",
      "https://tw.news.yahoo.com/%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%A3%AB%E6%9E%97%E5%BF%A0%E8%AA%A0%E5%BA%9712-20%E7%86%84%E7%87%88-%E5%9C%A8%E5%9C%B0%E4%BA%BA%E5%98%86-%E5%A4%A9%E6%AF%8D%E5%8D%80%E6%B2%92%E8%90%BD%E4%BA%86-094037729.html",
      "原家樂福超市（康達盛通生活事業士林忠誠分公司）；租約到期"),
+    ("樂家康", "台北農安二店", "台北市", "中山區", "台北市中山區農安街26號、26-1號", 25.0648073, 121.5259531, "2009-12-10", "商工登記",
+     "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB", "2025-12-03", "使用者查證（2026-11-01）",
+     "原家樂福超市（統康生活事業農安二分公司，2023-10-17 廢止；該批分公司 2023～2024 年重整登記，廢止日不作結束日）；"
+     "結束日依使用者查證；座標為門牌地址（Google 地圖已無此店地點）"),
 ]
 for (_b, _n, _city, _dist, _addr, _lat, _lng, _open, _basis, _osrc, _close, _csrc, _note) in CLOSED_STORES:
     _full = f"{_b} {_n}"
@@ -168,8 +173,8 @@ for (_b, _n, _city, _dist, _addr, _lat, _lng, _open, _basis, _osrc, _close, _csr
         "lat": _lat, "lng": _lng, "geocode_score": 100, "clean_address": _clean, "clean_name": _full,
         "clean_query": f"{_full} {_clean}", "is_co_location": False,
         **({} if _mass else {"store_format": "社區超市"}),
-        "coordinate_source": "Google 地圖地點座標（已歇業地點，2026-11-01）",
-        "verification_status": "使用者查證結束日" if _csrc.startswith("使用者") else "使用者提供熄燈清單，結束日逐店以新聞核對",
+        "coordinate_source": "Google 地圖門牌地址座標（2026-11-01）" if "座標為門牌地址" in _note else "Google 地圖地點座標（已歇業地點，2026-11-01）",
+        "verification_status": ("使用者查證結束日" if _csrc.startswith("使用者") else "使用者提供熄燈清單，結束日逐店以新聞核對") if _close else "官方清單未列；結束日期查無",
         "opened_date_source": _osrc, "opened_date_basis": _basis,
     })
 
@@ -181,9 +186,9 @@ def update_verified(renames):
         key = (v["brand"], v["store_name"])
         if key in renames:
             v["store_name"] = renames[key]
-        if v["store_name"] == "無印良品 新光三越台北南西門市" and v["date"] != "2026-05-22":
-            v.update(date="2026-05-22", year=2026, sources=[MUJI_NEWS + "260410.html", MUJI_NEWS + "260522.html"],
-                     evidence="官方新聞：南西門市 2026-05-22 移至南西一館 6F 重新開幕（原 2018-08-02 三館 B1），依遷址規則採現址開幕日")
+        if v["store_name"] == "無印良品 新光三越台北南西門市" and v["date"] != "2018-08-02":
+            v.update(date="2018-08-02", year=2018, sources=["https://www.muji.tw/tw/news/news/180802.html", MUJI_NEWS + "260410.html"],
+                     evidence="MUJI官方新聞 180802：南西門市遷移至南西三館B1，8/2全新開幕；2026-05-11 起改裝、5-22 於 6F 重新開幕（官方稱改裝，同一門市維持原開幕日）")
     have = {(v["brand"], v["store_name"]) for v in verified}
     for a in ADD:
         if (a["brand"], a["store_name"]) not in have and a["opened_date"]:

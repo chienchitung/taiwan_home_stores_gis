@@ -1233,14 +1233,14 @@
   {
     "brand": "無印良品",
     "store_name": "無印良品 新光三越台北南西門市",
-    "date": "2026-05-22",
-    "year": 2026,
+    "date": "2018-08-02",
+    "year": 2018,
     "confidence": "confirmed",
     "sources": [
-      "https://www.muji.tw/muji-journal/news/news/260410.html",
-      "https://www.muji.tw/muji-journal/news/news/260522.html"
+      "https://www.muji.tw/tw/news/news/180802.html",
+      "https://www.muji.tw/muji-journal/news/news/260410.html"
     ],
-    "evidence": "官方新聞：南西門市 2026-05-22 移至南西一館 6F 重新開幕（原 2018-08-02 三館 B1），依遷址規則採現址開幕日"
+    "evidence": "MUJI官方新聞 180802：南西門市遷移至南西三館B1，8/2全新開幕；2026-05-11 起改裝、5-22 於 6F 重新開幕（官方稱改裝，同一門市維持原開幕日）"
   },
   {
     "brand": "無印良品",
@@ -5400,5 +5400,16 @@
       "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB"
     ],
     "evidence": "原家樂福超市（康達盛通生活事業士林忠誠分公司）；租約到期"
+  },
+  {
+    "brand": "樂家康",
+    "store_name": "樂家康 台北農安二店",
+    "date": "2009-12-10",
+    "year": 2009,
+    "confidence": "confirmed",
+    "sources": [
+      "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB"
+    ],
+    "evidence": "原家樂福超市（統康生活事業農安二分公司，2023-10-17 廢止；該批分公司 2023～2024 年重整登記，廢止日不作結束日）；2026-10-13、11-01 官方門市清單皆未列，查無熄燈報導，結束日期不列；座標為門牌地址（Google 地圖已無此店地點）"
   }
 ]
