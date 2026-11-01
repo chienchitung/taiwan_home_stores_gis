@@ -62,8 +62,8 @@ taiwan_home_stores_gis/
 │   └── functions/
 │       └── directions.js                # Serverless 路徑規劃代理（Google Routes API 專用）
 ├── data/                                # 核心乾淨門市資料庫
-│   ├── taiwan_home_stores_status.json   # 5,490 間實體門市完整生命週期資料庫 (JSON)
-│   └── taiwan_home_stores_status.csv    # 5,490 間實體門市歷史狀態對帳表 (CSV)
+│   ├── taiwan_home_stores_status.json   # 5,566 間實體門市完整生命週期資料庫 (JSON，資料凍結於 2026-10-31)
+│   └── taiwan_home_stores_status.csv    # 5,566 間實體門市歷史狀態對帳表 (CSV)
 └── audit/                               # 歷史門市地毯式查核紀錄與同步腳本
     ├── HOME_BRAND_STORE_AUDIT.md        # 居家品牌查核總報告
     ├── PXMART_STORE_LOCATION_AUDIT.md   # 全聯門市 Google 地圖地理位置核對報告
@@ -79,6 +79,7 @@ taiwan_home_stores_gis/
     ├── verify_lejiakang_google_maps.py  # 樂家康門市座標逐筆比對 Google 地圖
     ├── apply_coordinate_fixes.py        # 座標／行政區修正（桃園遠東、台中水湳愛買、新竹大遠百等 12 間）
     ├── apply_store_additions.py         # 補入官方清單已有的新門市（特力屋新莊幸福、豐原大社）與店型修正
+    ├── apply_freeze_20261031.py         # 資料凍結 2026-10-31：官方清單比對後的開關店、遷址、更名（需在 sync 之後、apply_verified_opened_dates 之前執行）
     ├── LEJIAKANG_STORE_DATES_AUDIT.md   # 樂家康門市與開幕日期查核報告
     ├── sync_shopee_stores.py            # 蝦皮店到店同步腳本
     ├── mass_retail_location_audit.json  # 量販查核資料庫
