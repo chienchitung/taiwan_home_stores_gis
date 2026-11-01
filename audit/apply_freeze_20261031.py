@@ -19,6 +19,7 @@ sync_lejiakang_stores.py 只保留官方清單上的門市，這裡把兩間補�
 - 萬家福 桃園、北門、北投、竹北、大墩店與樂家康 大直明水、竹北勝利二店：使用者提供熄燈清單，結束日逐店以新聞核對，補入為歷史門市。
 - 樂家康 台北仁愛店（2026-07-31）、台北仁愛二店（2026-09-14）：結束日依使用者查證，開幕日期查無；士林忠誠店 2025-12-20 租約到期熄燈（新聞），
   開幕日採商工登記士林忠誠分公司核准設立日。
+- 樂家康 台北農安二店：官方清單未列、使用者確認補入；查無熄燈報導，結束日期不列，開幕日採商工登記農安二分公司核准設立日。
 - 無印良品：地址與 Google 地圖不一致者一律以 Google 地圖為準（使用者指示），更正 10 間樓層／門牌，員林門市改名大全聯員林門市。
 可重複執行；需在各 sync 腳本之後、apply_verified_opened_dates.py 之前執行（本腳本同步更新 store_opened_dates_verified.json）。
 """
@@ -154,6 +155,10 @@ CLOSED_STORES = [
      "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB", "2025-12-20",
      "https://tw.news.yahoo.com/%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%A3%AB%E6%9E%97%E5%BF%A0%E8%AA%A0%E5%BA%9712-20%E7%86%84%E7%87%88-%E5%9C%A8%E5%9C%B0%E4%BA%BA%E5%98%86-%E5%A4%A9%E6%AF%8D%E5%8D%80%E6%B2%92%E8%90%BD%E4%BA%86-094037729.html",
      "原家樂福超市（康達盛通生活事業士林忠誠分公司）；租約到期"),
+    ("樂家康", "台北農安二店", "台北市", "中山區", "台北市中山區農安街26號、26-1號", 25.0648073, 121.5259531, "2009-12-10", "商工登記",
+     "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB", "", "",
+     "原家樂福超市（統康生活事業農安二分公司，2023-10-17 廢止；該批分公司 2023～2024 年重整登記，廢止日不作結束日）；"
+     "2026-10-13、11-01 官方門市清單皆未列，查無熄燈報導，結束日期不列；座標為門牌地址（Google 地圖已無此店地點）"),
 ]
 for (_b, _n, _city, _dist, _addr, _lat, _lng, _open, _basis, _osrc, _close, _csrc, _note) in CLOSED_STORES:
     _full = f"{_b} {_n}"
@@ -168,8 +173,8 @@ for (_b, _n, _city, _dist, _addr, _lat, _lng, _open, _basis, _osrc, _close, _csr
         "lat": _lat, "lng": _lng, "geocode_score": 100, "clean_address": _clean, "clean_name": _full,
         "clean_query": f"{_full} {_clean}", "is_co_location": False,
         **({} if _mass else {"store_format": "社區超市"}),
-        "coordinate_source": "Google 地圖地點座標（已歇業地點，2026-11-01）",
-        "verification_status": "使用者查證結束日" if _csrc.startswith("使用者") else "使用者提供熄燈清單，結束日逐店以新聞核對",
+        "coordinate_source": "Google 地圖地點座標（已歇業地點，2026-11-01）" if _close else "Google 地圖門牌地址座標（2026-11-01）",
+        "verification_status": ("使用者查證結束日" if _csrc.startswith("使用者") else "使用者提供熄燈清單，結束日逐店以新聞核對") if _close else "官方清單未列；結束日期查無",
         "opened_date_source": _osrc, "opened_date_basis": _basis,
     })
 
