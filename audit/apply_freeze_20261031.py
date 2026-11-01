@@ -17,6 +17,8 @@ sync_lejiakang_stores.py 只保留官方清單上的門市，這裡把兩間補�
 - 宜得利 ISS萬家福桂林店（2025-05）、ISS萬家福重慶店（2025-12）：官網沿革有開幕紀錄、門市查詢頁未列，官網店數 76 含此兩店，
   使用者查證確有營業，補入；座標用所在萬家福門市。
 - 萬家福 桃園、北門、北投、竹北、大墩店與樂家康 大直明水、竹北勝利二店：使用者提供熄燈清單，結束日逐店以新聞核對，補入為歷史門市。
+- 樂家康 台北仁愛店（2026-07-31）、台北仁愛二店（2026-09-14）：結束日依使用者查證，開幕日期查無；士林忠誠店 2025-12-20 租約到期熄燈（新聞），
+  開幕日採商工登記士林忠誠分公司核准設立日。
 - 無印良品：地址與 Google 地圖不一致者一律以 Google 地圖為準（使用者指示），更正 10 間樓層／門牌，員林門市改名大全聯員林門市。
 可重複執行；需在各 sync 腳本之後、apply_verified_opened_dates.py 之前執行（本腳本同步更新 store_opened_dates_verified.json）。
 """
@@ -144,6 +146,14 @@ CLOSED_STORES = [
     ("樂家康", "竹北勝利二店", "新竹縣", "竹北市", "新竹縣竹北市勝利二路26號1樓", 24.8230448, 121.0248213, "2006-10-25", "商工登記",
      "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB", "2025-12-15", "https://www.storm.mg/lifestyle/11085988",
      "原家樂福超市（統康生活事業勝利分公司）；租約到期"),
+    ("樂家康", "台北仁愛店", "台北市", "大安區", "台北市大安區仁愛路四段50-99、50-100號B1", 25.0375842, 121.5472711, "", "", "",
+     "2026-07-31", "使用者查證（2026-11-01）", "原家樂福超市／頂好超市台北仁愛店；家樂福超市官方貼文記「3月4日」改掛家樂福超市開幕（未載年份），屬同店換品牌，不作開幕日；開幕日期查無（同址統康仁愛分公司 2000-06-26 登記已於 2005 年廢止，不採用）"),
+    ("樂家康", "台北仁愛二店", "台北市", "大安區", "台北市大安區仁愛路四段388號B1", 25.037369, 121.5563314, "", "", "",
+     "2026-09-14", "使用者查證（2026-11-01）", "原家樂福超市；家樂福超市官方貼文記「3月4日」改掛家樂福超市開幕（未載年份），屬同店換品牌，不作開幕日，開幕日期查無；貼文地址為仁愛路四段408號B1，依使用者指示以 Google 地圖地點（388號B1）為準"),
+    ("樂家康", "士林忠誠店", "台北市", "士林區", "台北市士林區忠誠路二段188號1樓（新光天母傑仕堡）", 25.1164015, 121.5336653, "2017-10-24", "商工登記",
+     "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB", "2025-12-20",
+     "https://tw.news.yahoo.com/%E5%AE%B6%E6%A8%82%E7%A6%8F%E5%A3%AB%E6%9E%97%E5%BF%A0%E8%AA%A0%E5%BA%9712-20%E7%86%84%E7%87%88-%E5%9C%A8%E5%9C%B0%E4%BA%BA%E5%98%86-%E5%A4%A9%E6%AF%8D%E5%8D%80%E6%B2%92%E8%90%BD%E4%BA%86-094037729.html",
+     "原家樂福超市（康達盛通生活事業士林忠誠分公司）；租約到期"),
 ]
 for (_b, _n, _city, _dist, _addr, _lat, _lng, _open, _basis, _osrc, _close, _csrc, _note) in CLOSED_STORES:
     _full = f"{_b} {_n}"
@@ -159,7 +169,7 @@ for (_b, _n, _city, _dist, _addr, _lat, _lng, _open, _basis, _osrc, _close, _csr
         "clean_query": f"{_full} {_clean}", "is_co_location": False,
         **({} if _mass else {"store_format": "社區超市"}),
         "coordinate_source": "Google 地圖地點座標（已歇業地點，2026-11-01）",
-        "verification_status": "使用者提供熄燈清單，結束日逐店以新聞核對",
+        "verification_status": "使用者查證結束日" if _csrc.startswith("使用者") else "使用者提供熄燈清單，結束日逐店以新聞核對",
         "opened_date_source": _osrc, "opened_date_basis": _basis,
     })
 
@@ -176,7 +186,7 @@ def update_verified(renames):
                      evidence="官方新聞：南西門市 2026-05-22 移至南西一館 6F 重新開幕（原 2018-08-02 三館 B1），依遷址規則採現址開幕日")
     have = {(v["brand"], v["store_name"]) for v in verified}
     for a in ADD:
-        if (a["brand"], a["store_name"]) not in have:
+        if (a["brand"], a["store_name"]) not in have and a["opened_date"]:
             verified.append({"brand": a["brand"], "store_name": a["store_name"], "date": a["opened_date"],
                              "year": int(a["opened_date"][:4]), "confidence": "confirmed",
                              "sources": [a["opened_date_source"]], "evidence": a["note"]})
@@ -206,10 +216,13 @@ def main():
             renames[(st["brand"], st["store_name"])] = new_name
             st["store_name"] = new_name
         st.update(fix)
-    have = {(st["brand"], st["store_name"]) for st in stores}
+    have = {(st["brand"], st["store_name"]): st for st in stores}
     next_n = max(int(st.get("n") or 0) for st in stores) + 1
     for a in ADD:
-        if (a["brand"], a["store_name"]) not in have:
+        existing = have.get((a["brand"], a["store_name"]))
+        if existing:  # 重跑時以本檔內容更新欄位，沿用原本的 n
+            existing.update(a)
+        else:
             stores.append({**a, "n": next_n})
             next_n += 1
     update_verified(renames)
