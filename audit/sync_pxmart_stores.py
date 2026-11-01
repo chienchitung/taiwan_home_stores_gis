@@ -218,9 +218,14 @@ def main():
     base_stores = [s for s in existing_stores if s.get('brand') != '全聯福利中心']
     combined_stores = base_stores + parsed_stores
     
-    # Re-index n
-    for idx, s in enumerate(combined_stores, 1):
-        s['n'] = idx
+    # 既有門市沿用原本的 n（依官方門市代碼），新門市接在所有既有編號之後，避免整份資料重新編號
+    old_n = {s.get('official_store_id'): s['n'] for s in existing_stores if s.get('brand') == '全聯福利中心'}
+    next_n = max((int(s.get('n') or 0) for s in existing_stores), default=0) + 1
+    for s in parsed_stores:
+        n = old_n.get(s.get('official_store_id'))
+        if n is None:
+            n, next_n = next_n, next_n + 1
+        s['n'] = n
 
     with open(MAIN_JSON, 'w', encoding='utf-8') as f:
         json.dump(combined_stores, f, ensure_ascii=False, indent=2)

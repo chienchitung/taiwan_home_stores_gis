@@ -2660,9 +2660,9 @@
     "branch_ban": "27735151"
   },
   {
-    "name": "花蓮建國",
-    "full_name": "花蓮建國分公司",
-    "address": "花蓮縣吉安鄉建國路１段１１９之３號１樓",
+    "name": "吉安建國",
+    "full_name": "吉安建國分公司",
+    "address": "花蓮縣吉安鄉建國路1段119之3號1樓",
     "status": "核准設立",
     "estab_date_raw": "0940614",
     "opened_year": 2005,
@@ -10468,6 +10468,46 @@
     "opened_year": 2025,
     "opened_date": "2025-04-07",
     "branch_ban": "60745465"
+  },
+  {
+    "name": "文山萬壽",
+    "full_name": "文山萬壽分公司",
+    "address": "台北市文山區萬興里萬壽路27號1、2樓",
+    "status": "核准設立",
+    "estab_date_raw": "1151006",
+    "opened_year": 2026,
+    "opened_date": "2026-10-06",
+    "branch_ban": "62017630"
+  },
+  {
+    "name": "士林格致",
+    "full_name": "士林格致分公司",
+    "address": "台北市士林區陽明里格致路7號1樓",
+    "status": "核准設立",
+    "estab_date_raw": "1151006",
+    "opened_year": 2026,
+    "opened_date": "2026-10-06",
+    "branch_ban": "62017646"
+  },
+  {
+    "name": "潭子榮興",
+    "full_name": "潭子榮興分公司",
+    "address": "台中市潭子區家興里中山路一段9-1號",
+    "status": "核准設立",
+    "estab_date_raw": "1151006",
+    "opened_year": 2026,
+    "opened_date": "2026-10-06",
+    "branch_ban": "62017688"
+  },
+  {
+    "name": "金山中興",
+    "full_name": "金山中興分公司",
+    "address": "新北市金山區和平里媽祖街6、8號",
+    "status": "核准設立",
+    "estab_date_raw": "1151006",
+    "opened_year": 2026,
+    "opened_date": "2026-10-06",
+    "branch_ban": "62017694"
   },
   {
     "name": "水林東平",

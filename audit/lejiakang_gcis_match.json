@@ -1000,26 +1000,6 @@
   "registry_address_differs": false
  },
  {
-  "store": "樂家康 內湖東湖店",
-  "api_full_name": "康達盛通股份有限公司內湖東湖分公司",
-  "api_tax_id": "51462601",
-  "match_by": "分公司統編",
-  "branch": {
-   "company": "康達盛通生活事業",
-   "ban": "51462601",
-   "name": "內湖東湖分公司",
-   "address": "台北市內湖區東湖路69號地下1樓",
-   "status": "核准設立",
-   "opened_date": "2017-08-01"
-  },
-  "current_address": "台北市內湖區東湖路69號B1",
-  "opened_date": "2017-08-01",
-  "opened_date_basis": "商工登記",
-  "news": "",
-  "registry_estab_date": "2017-08-01",
-  "registry_address_differs": false
- },
- {
   "store": "樂家康 屏東自由店",
   "api_full_name": "康達盛通生活事業股份有限公司屏東自由分公司",
   "api_tax_id": "51450703",
@@ -2471,26 +2451,6 @@
   "news": "",
   "registry_estab_date": "1999-12-16",
   "registry_address_differs": true
- },
- {
-  "store": "樂家康 台北林森北店",
-  "api_full_name": "統康生活事業股份有限公司東光分公司",
-  "api_tax_id": "70788494",
-  "match_by": "分公司統編",
-  "branch": {
-   "company": "統康生活事業",
-   "ban": "70788494",
-   "name": "東光分公司",
-   "address": "台北市中山區林森北路413號地下一層，錦州街46號地下一層",
-   "status": "核准設立",
-   "opened_date": "2000-10-24"
-  },
-  "current_address": "台北市中山區林森北路413號B1",
-  "opened_date": "2000-10-24",
-  "opened_date_basis": "商工登記",
-  "news": "",
-  "registry_estab_date": "2000-10-24",
-  "registry_address_differs": false
  },
  {
   "store": "樂家康 台北長安東店",
