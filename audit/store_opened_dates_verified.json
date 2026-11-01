@@ -5389,5 +5389,16 @@
       "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB"
     ],
     "evidence": "原家樂福超市（統康生活事業勝利分公司）；租約到期"
+  },
+  {
+    "brand": "樂家康",
+    "store_name": "樂家康 士林忠誠店",
+    "date": "2017-10-24",
+    "year": 2017,
+    "confidence": "confirmed",
+    "sources": [
+      "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB"
+    ],
+    "evidence": "原家樂福超市（康達盛通生活事業士林忠誠分公司）；租約到期"
   }
 ]
