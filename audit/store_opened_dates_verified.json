@@ -1233,14 +1233,14 @@
   {
     "brand": "無印良品",
     "store_name": "無印良品 新光三越台北南西門市",
-    "date": "2018-08-02",
-    "year": 2018,
+    "date": "2026-05-22",
+    "year": 2026,
     "confidence": "confirmed",
     "sources": [
-      "https://www.muji.tw/tw/news/news/180802.html",
-      "https://www.muji.tw/tw/news/news/180504.html"
+      "https://www.muji.tw/muji-journal/news/news/260410.html",
+      "https://www.muji.tw/muji-journal/news/news/260522.html"
     ],
-    "evidence": "MUJI官方新聞 180802：南西門市遷移至南西三館B1，8/2全新開幕；2026-05-22 再移至6F改裝"
+    "evidence": "官方新聞：南西門市 2026-05-22 移至南西一館 6F 重新開幕（原 2018-08-02 三館 B1），依遷址規則採現址開幕日"
   },
   {
     "brand": "無印良品",
@@ -2363,7 +2363,7 @@
   },
   {
     "brand": "宜得利",
-    "store_name": "宜得利 淡水店",
+    "store_name": "宜得利 淡水萬家福店",
     "date": "2013-04",
     "year": 2013,
     "confidence": "confirmed",
@@ -5279,5 +5279,16 @@
       "https://zh.wikipedia.org/wiki/德安百貨"
     ],
     "evidence": "維基百科分店表「開幕」欄：2009-11-27；台糖台南百貨大樓，2009-10-31 試營運；租約到期熄燈"
+  },
+  {
+    "brand": "無印良品",
+    "store_name": "無印良品 國泰小檜溪門市",
+    "date": "2026-10-29",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.muji.tw/muji-journal/news/news/261029.html"
+    ],
+    "evidence": "官方新聞：2026-10-29 開幕，320 坪以上，全台第 76 店"
   }
 ]

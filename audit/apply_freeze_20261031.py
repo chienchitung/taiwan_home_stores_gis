@@ -6,7 +6,15 @@
 - 樂家康 台北林森北店：2026-11-01 官方門市 API 已無此店，但商工登記「統康生活事業東光分公司」仍為核准設立，
   也查無熄燈新聞，維持營業中並在備註標示待確認。
 sync_lejiakang_stores.py 只保留官方清單上的門市，這裡把兩間補回主資料（沿用原本的 n 與欄位）。
-可重複執行；需在 sync_lejiakang_stores.py 之後、apply_verified_opened_dates.py 之前或之後皆可。
+
+居家品牌（2026-11-01 比對官方門市清單／API 與官方新聞）：
+- 新光三越台南中山店 2026-10-31 熄燈：店內的無印良品中山門市（官方公告 2026-11-01 停止營業，最後營業日 10/31）、
+  宜得利台南中山新光三越店（隨百貨熄燈，宜得利未另發公告）改列已結束營業，結束日 2026-10-31。
+- 無印良品 國泰小檜溪門市：2026-10-29 開幕（官方新聞 261029），新增。
+- 無印良品 南西門市：2026-05-22 由南西三館（南京西路15號B1）移至南西一館（南京西路12號6F），依遷址規則改採現址開幕日。
+- 無印良品 台中港三井Outlet門市：門牌依官方新聞為臺灣大道十段166號（原誤植168號）。
+- 宜得利 淡水店：官方門市清單現名「淡水萬家福店」（同址）。
+可重複執行；需在各 sync 腳本之後、apply_verified_opened_dates.py 之前執行（本腳本同步更新 store_opened_dates_verified.json）。
 """
 import csv
 import json
@@ -16,6 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR.parent / "data"
 MAIN_JSON = DATA_DIR / "taiwan_home_stores_status.json"
 MAIN_CSV = DATA_DIR / "taiwan_home_stores_status.csv"
+VERIFIED_JSON = BASE_DIR / "store_opened_dates_verified.json"
 GCIS_API = "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB"
 OFFICIAL = "https://www.uni-prosperity.com.tw/stores/?hl=zh-TW"
 
@@ -54,6 +63,58 @@ RESTORE = [
      "n": 5325},
 ]
 
+MUJI_NEWS = "https://www.muji.tw/muji-journal/news/news/"
+CLOSE_TAINAN = {"status": "已結束營業", "status_category": "歷史變動（已熄燈/遷址）", "closed_date": "2026-10-31"}
+# (品牌, 店名): 要更新的欄位；"_rename" 改店名、"_note" 附加在備註後
+FIXES = {
+    ("無印良品", "無印良品 新光三越台南中山門市"): {
+        **CLOSE_TAINAN, "closed_date_source": MUJI_NEWS + "261002.html",
+        "_note": "官方公告中山門市 2026-11-01 停止營業（最後營業日 10/31），隨新光三越台南中山店熄燈"},
+    ("宜得利", "宜得利 台南中山新光三越店"): {
+        **CLOSE_TAINAN, "closed_date_source": "https://www.nownews.com/news/6888059",
+        "_note": "新光三越台南中山店 2026-10-31 熄燈，店內門市隨之結束；宜得利未另發閉店公告（2026-11-01 官方門市清單仍列此店）"},
+    ("無印良品", "無印良品 新光三越台北南西門市"): {
+        "address": "台北市中山區南京西路12號6F（新光三越台北南西店一館）", "clean_address": "台北市中山區南京西路12號",
+        "clean_query": "無印良品 新光三越台北南西門市 台北市中山區南京西路12號", "lat": 25.0523038, "lng": 121.5211048,
+        "opened_date": "2026-05-22", "opened_date_source": MUJI_NEWS + "260522.html", "opened_date_basis": "新聞／官方",
+        "_note": "2026-05-22 由南西三館 B1 移至南西一館 6F（145→210 坪），依遷址規則採現址開幕日；原 2018-08-02 為三館 B1 開幕日"},
+    ("無印良品", "無印良品 台中港三井Outlet門市"): {
+        "address": "台中市梧棲區臺灣大道十段166號1F（MITSUI OUTLET PARK 台中港）", "clean_address": "台中市梧棲區臺灣大道十段166號",
+        "clean_query": "無印良品 台中港三井Outlet門市 台中市梧棲區臺灣大道十段166號"},
+    ("宜得利", "宜得利 淡水店"): {"_rename": "宜得利 淡水萬家福店", "clean_name": "宜得利 淡水萬家福店",
+                                  "clean_query": "宜得利 淡水萬家福店 新北市淡水區中山北路二段383號"},
+}
+ADD = [{
+    "brand": "無印良品", "store_name": "無印良品 國泰小檜溪門市", "store_type": "購物中心門市", "region": "北部", "city": "桃園市",
+    "address": "桃園市桃園區春日路515號1F（國泰置地生活廣場 小檜溪）", "opened_date": "2026-10-29", "status": "營業中",
+    "note": "官方新聞：2026-10-29 開幕，320 坪以上，全台第 76 店", "district": "桃園區",
+    "channel_format": "百貨商場 / 購物中心", "status_category": "現行營運中", "lat": 25.0038871, "lng": 121.312874,
+    "geocode_score": 100, "clean_address": "桃園市桃園區春日路515號", "clean_name": "無印良品 國泰小檜溪門市",
+    "clean_query": "無印良品 國泰小檜溪門市 桃園市桃園區春日路515號", "is_co_location": True,
+    "store_format": "百貨／購物中心門市", "opened_date_source": MUJI_NEWS + "261029.html", "opened_date_basis": "新聞／官方",
+    "coordinate_source": "Google 地圖地點座標（國土測繪中心確認桃園區）",
+}]
+
+
+def update_verified(renames):
+    raw = VERIFIED_JSON.read_text(encoding="utf-8")
+    verified = json.loads(raw)
+    for v in verified:
+        key = (v["brand"], v["store_name"])
+        if key in renames:
+            v["store_name"] = renames[key]
+        if v["store_name"] == "無印良品 新光三越台北南西門市" and v["date"] != "2026-05-22":
+            v.update(date="2026-05-22", year=2026, sources=[MUJI_NEWS + "260410.html", MUJI_NEWS + "260522.html"],
+                     evidence="官方新聞：南西門市 2026-05-22 移至南西一館 6F 重新開幕（原 2018-08-02 三館 B1），依遷址規則採現址開幕日")
+    have = {(v["brand"], v["store_name"]) for v in verified}
+    for a in ADD:
+        if (a["brand"], a["store_name"]) not in have:
+            verified.append({"brand": a["brand"], "store_name": a["store_name"], "date": a["opened_date"],
+                             "year": int(a["opened_date"][:4]), "confidence": "confirmed",
+                             "sources": [a["opened_date_source"]], "evidence": a["note"]})
+    VERIFIED_JSON.write_text(json.dumps(verified, ensure_ascii=False, indent=2) + ("\n" if raw.endswith("\n") else ""),
+                             encoding="utf-8")
+
 
 def main():
     stores = json.loads(MAIN_JSON.read_text(encoding="utf-8"))
@@ -63,6 +124,27 @@ def main():
     for row in RESTORE:
         assert row["n"] not in used_n, f"n {row['n']} 已被其他門市使用"
         stores.append(dict(row))
+    renames = {}
+    for st in stores:
+        fix = FIXES.get((st["brand"], st["store_name"]))
+        if not fix:
+            continue
+        fix = dict(fix)
+        note = fix.pop("_note", "")
+        new_name = fix.pop("_rename", None)
+        if note and note not in (st.get("note") or ""):
+            st["note"] = (st["note"] + "；" if st.get("note") else "") + note
+        if new_name:
+            renames[(st["brand"], st["store_name"])] = new_name
+            st["store_name"] = new_name
+        st.update(fix)
+    have = {(st["brand"], st["store_name"]) for st in stores}
+    next_n = max(int(st.get("n") or 0) for st in stores) + 1
+    for a in ADD:
+        if (a["brand"], a["store_name"]) not in have:
+            stores.append({**a, "n": next_n})
+            next_n += 1
+    update_verified(renames)
     MAIN_JSON.write_text(json.dumps(stores, ensure_ascii=False, indent=2), encoding="utf-8")
     fields = list(dict.fromkeys(k for row in stores for k in row))
     with open(MAIN_CSV, "w", encoding="utf-8-sig", newline="") as f:
