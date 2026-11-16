@@ -2,7 +2,9 @@
 """同步「詩肯」「東稻家居」門市（2026-11-16 查核；資料凍結於 2026-10-31，10/31 後查無異動）。
 
 - 詩肯（詩肯股份有限公司，統編 89403884；旗下詩肯柚木、詩肯居家、詩肯睡眠等品牌，2026-11-16 起品牌統一稱「詩肯」）：詩肯柚木官網門市頁 https://www.scanteak.com.tw/our-stores/ 的 AJAX 清單共 72 間，
-  全數列為營業中。原始整理見 audit/scanteak_stores_20261116.json。
+  全數列為營業中。原始整理見 audit/scanteak_stores_20261116.json。另依使用者指示「依地點計算」，補入詩肯居家／詩肯睡眠
+  官網清單中不在柚木清單的 4 個地點（微風南京、台中文心、彰化金馬、台北民生一），見 audit/scanteak_extra_stores_20261116.json；
+  共 76 個地點。公司公布 2026-10 月底全台門市 84 店（鉅亨網 2026-11-12），差額疑為同址居家專櫃另計，未經來源證實。
 - 東稻家居（H&D，東稻股份有限公司，統編 27558042）：官網門市資料 https://www.hdlife.com.tw/zSharedFiles/_db_json/store/store.json
   共 8 間；依使用者指示只收營業中的一般門市，睡眠館（台北內湖睡眠館）、快閃店與遷址舊店不計，收 7 間。
   原始整理見 audit/hd_stores_20261116.json（含未收錄的遷址舊店，供日後參考）。
@@ -23,6 +25,8 @@ DATA_DIR = BASE_DIR.parent / "data"
 MAIN_JSON = DATA_DIR / "taiwan_home_stores_status.json"
 MAIN_CSV = DATA_DIR / "taiwan_home_stores_status.csv"
 VERIFIED_JSON = BASE_DIR / "store_opened_dates_verified.json"
+# 詩肯居家／詩肯睡眠官網門市清單中、不在詩肯柚木清單的地點（依地點計算，同址的居家／睡眠專櫃不另計）
+EXTRA_SOURCES = {"詩肯": BASE_DIR / "scanteak_extra_stores_20261116.json"}
 LEGACY_BRANDS = {"詩肯柚木": "詩肯"}  # 舊品牌名：重跑時移除並沿用原本的 n
 SOURCES = {
     "詩肯": (BASE_DIR / "scanteak_stores_20261116.json", "https://www.scanteak.com.tw/our-stores/"),
@@ -144,10 +148,13 @@ def main():
     next_n = max(int(r.get("n") or 0) for r in rows) + 1
     new = []
     for brand, (path, url) in SOURCES.items():
-        for item in json.loads(path.read_text(encoding="utf-8")):
+        items = json.loads(path.read_text(encoding="utf-8"))
+        if brand in EXTRA_SOURCES:
+            items += json.loads(EXTRA_SOURCES[brand].read_text(encoding="utf-8"))
+        for item in items:
             if brand == "東稻家居" and not keep_hd(item):
                 continue
-            row = build(brand, item, url)
+            row = build(brand, item, item.get("source_url") or url)
             n = old_n.get((brand, row["store_name"]))
             if n is None:
                 n, next_n = next_n, next_n + 1
