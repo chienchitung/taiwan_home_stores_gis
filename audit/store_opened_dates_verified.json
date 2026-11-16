@@ -5411,5 +5411,148 @@
       "https://data.gcis.nat.gov.tw/od/data/api/FDB8D2C8-573D-4276-BFA4-8D3925ABE1CB"
     ],
     "evidence": "原家樂福超市（統康生活事業農安二分公司，2023-10-17 廢止；該批分公司 2023～2024 年重整登記，廢止日不作結束日）；2026-10-13、11-01 官方門市清單皆未列，查無熄燈報導，結束日期不列；座標為門牌地址（Google 地圖已無此店地點）"
+  },
+  {
+    "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 台中麗寶店",
+    "date": "2026-05-29",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "使用者查證（2026-11-16）"
+    ],
+    "evidence": "開幕日 2026-05-29（使用者人工查證）"
+  },
+  {
+    "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 新店中興店(萬家福)",
+    "date": "2026-05-12",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "使用者查證（2026-11-16）"
+    ],
+    "evidence": "開幕日 2026-05-12（使用者人工查證）"
+  },
+  {
+    "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 北屯松竹店",
+    "date": "2026-01-31",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "使用者查證（2026-11-16）"
+    ],
+    "evidence": "開幕日 2026-01-31（使用者人工查證）"
+  },
+  {
+    "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 台中廣三SOGO店",
+    "date": "2026-10-18",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "使用者查證（2026-11-16）"
+    ],
+    "evidence": "開幕日 2026-10-18（使用者人工查證）"
+  },
+  {
+    "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 新竹大遠百店",
+    "date": "2025-04-25",
+    "year": 2025,
+    "confidence": "confirmed",
+    "sources": [
+      "使用者查證（2026-11-16）"
+    ],
+    "evidence": "開幕日 2025-04-25（使用者人工查證）"
+  },
+  {
+    "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 台北大舊宗店",
+    "date": "2019-11-13",
+    "year": 2019,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.chinatimes.com/realtimenews/20191113002653-260410"
+    ],
+    "evidence": "開幕日 2019-11-13（官方公告或新聞）"
+  },
+  {
+    "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 民生店",
+    "date": "1994",
+    "year": 1994,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.moneyweekly.com.tw/ArticleData/Info/Article/160672/"
+    ],
+    "evidence": "開幕日 1994（官方公告或新聞）"
+  },
+  {
+    "brand": "東稻家居",
+    "store_name": "東稻家居 新北五股門市",
+    "date": "2025-11-01",
+    "year": 2025,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.hdlife.com.tw/HotNews/Messages/441"
+    ],
+    "evidence": "開幕日 2025-11-01（官方公告或新聞）"
+  },
+  {
+    "brand": "東稻家居",
+    "store_name": "東稻家居 新北新莊門市",
+    "date": "2021-01-06",
+    "year": 2021,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.hdlife.com.tw/HotNews/Messages/349"
+    ],
+    "evidence": "開幕日 2021-01-06（官方公告或新聞）"
+  },
+  {
+    "brand": "東稻家居",
+    "store_name": "東稻家居 桃園門市",
+    "date": "2019-08",
+    "year": 2019,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.hdlife.com.tw/HotNews/Messages/294"
+    ],
+    "evidence": "開幕日 2019-08（官方公告或新聞）"
+  },
+  {
+    "brand": "東稻家居",
+    "store_name": "東稻家居 新竹竹北門市",
+    "date": "2022-09-30",
+    "year": 2022,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.hdlife.com.tw/Articles/Detail/297"
+    ],
+    "evidence": "開幕日 2022-09-30（官方公告或新聞）"
+  },
+  {
+    "brand": "東稻家居",
+    "store_name": "東稻家居 台南北區門市",
+    "date": "2026-01-31",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.hdlife.com.tw/HotNews/Messages/446"
+    ],
+    "evidence": "開幕日 2026-01-31（官方公告或新聞）"
+  },
+  {
+    "brand": "東稻家居",
+    "store_name": "東稻家居 高雄左營門市",
+    "date": "2019-03",
+    "year": 2019,
+    "confidence": "confirmed",
+    "sources": [
+      "https://www.hdlife.com.tw/HotNews/Messages/284"
+    ],
+    "evidence": "開幕日 2019-03（官方公告或新聞）"
   }
 ]
