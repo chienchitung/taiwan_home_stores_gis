@@ -35,6 +35,12 @@ SCANTEAK_OPENINGS = {
     "民生": ("1994", "https://www.moneyweekly.com.tw/ArticleData/Info/Article/160672/", "理財周刊：自 1994 年開業（僅年份）"),
 }
 
+# 官網標「NEW」但開幕日查無者，已查得確定早於凍結日的佐證（2026-11-16）
+SCANTEAK_NOTES = {
+    "嘉義新北港": "官網標 NEW，但 2021-09-28 嘉義市長已到店參觀（官網 store_event/210928、中時 2021-10-02「全台最大旗艦店設北港路」），開幕早於 2026-10-31；確切開幕日查無",
+    "泰山店(原 大新莊店)": "官網標 NEW；同址 2014 年官方門市清單即為大新莊店，屬更名，開幕早於 2026-10-31；確切開幕日查無",
+}
+
 
 def region_for(city):
     if city in {"台北市", "新北市", "基隆市", "桃園市", "新竹市", "新竹縣", "苗栗縣"}:
@@ -87,6 +93,8 @@ def build(brand, item, source_url):
     note_parts = [p for p in (item.get("note") or "",) if p and p != "None"]
     if item["name"] == "新店裕隆誠品":  # 店名比對用官網原名
         note_parts.append("商場誠品生活新店 2023-09-28 開幕時已列進駐品牌，但品牌本身開幕日查無，不以商場開幕日代替")
+    if item["name"] in SCANTEAK_NOTES:
+        note_parts.append(SCANTEAK_NOTES[item["name"]])
     if fmt == "店型待確認":
         note_parts.append("所在建物未查證，店型待確認")
     row = {
