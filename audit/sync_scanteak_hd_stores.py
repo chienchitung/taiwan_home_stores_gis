@@ -4,9 +4,10 @@
 - 詩肯柚木（詩肯股份有限公司，統編 89403884）：官網門市頁 https://www.scanteak.com.tw/our-stores/ 的 AJAX 清單共 72 間，
   全數列為營業中。原始整理見 audit/scanteak_stores_20261116.json。
 - 東稻家居（H&D，東稻股份有限公司，統編 27558042）：官網門市資料 https://www.hdlife.com.tw/zSharedFiles/_db_json/store/store.json
-  共 8 間，另收 2 間有官方公告佐證的遷址舊店（台南中西區、新莊三和路）。原始整理見 audit/hd_stores_20261116.json。
+  共 8 間；依使用者指示只收營業中的一般門市，睡眠館（台北內湖睡眠館）、快閃店與遷址舊店不計，收 7 間。
+  原始整理見 audit/hd_stores_20261116.json（含未收錄的遷址舊店，供日後參考）。
 - 座標：逐店在 Google 地圖搜尋品牌地點，查無品牌地點者用門牌地址座標（coordinate_source 註明），並以國土測繪中心確認行政區。
-- 開幕日期：只採官方公告或新聞載明的正式開幕日（遷址店採現址開幕日）；查無者留空。詩肯 2010 年的商工登記分公司核准日為一次性
+- 開幕日期：只採官方公告、新聞載明或使用者人工查證的正式開幕日（遷址店採現址開幕日）；查無者留空。詩肯 2010 年的商工登記分公司核准日為一次性
   集中登記，不作開幕日；以商場開幕日推論的日期（新店裕隆誠品）也不採用。開幕日期同步寫入 store_opened_dates_verified.json。
 - 店型：開在特力屋／HOLA 賣場內者列「店中店／專櫃」，開在萬家福內者列「量販店中店」；所在建物未查證者列「店型待確認」。
 可重複執行：先移除主資料中這兩個品牌，再以本清單寫回；既有門市沿用原本的 n。需在各 sync 腳本之後、apply_verified_opened_dates.py 之前執行。
@@ -28,11 +29,18 @@ SOURCES = {
 }
 CHANNEL = {"大型獨棟／街邊門市": "大型獨棟 / 獨立街邊店", "百貨／購物中心門市": "百貨商場 / 購物中心",
            "量販店中店": "量販店中店 / 超市複合", "店中店／專櫃": "店中店 / 專櫃", "店型待確認": "店型待確認"}
-# 開幕日期：只收官方或新聞載明者（詩肯 72 間僅 2 間查得）
+USER_CHECKED = "使用者查證（2026-11-16）"
+# 開幕日期：只收官方或新聞載明者，以及使用者人工查證者
 SCANTEAK_OPENINGS = {
     "台北大舊宗": ("2019-11-13", "https://www.chinatimes.com/realtimenews/20191113002653-260410",
                    "時報資訊 2019-11-13「詩肯台北旗艦店今日正式開幕」；位置「內湖舊宗路與南京東路口」（自由財經），對應本店"),
     "民生": ("1994", "https://www.moneyweekly.com.tw/ArticleData/Info/Article/160672/", "理財周刊：自 1994 年開業（僅年份）"),
+    # 官網標 NEW 的門市，開幕日由使用者人工查證（2026-11-16）
+    "台中廣三SOGO": ("2026-10-18", USER_CHECKED, "使用者查證"),
+    "台中麗寶": ("2026-05-29", USER_CHECKED, "使用者查證"),
+    "新店中興(萬家福)": ("2026-05-12", USER_CHECKED, "使用者查證"),
+    "北屯松竹": ("2026-01-31", USER_CHECKED, "使用者查證"),
+    "新竹大遠百": ("2025-04-25", USER_CHECKED, "使用者查證"),
 }
 
 # 官網標「NEW」但開幕日查無者，已查得確定早於凍結日的佐證（2026-11-16）
@@ -82,7 +90,7 @@ def build(brand, item, source_url):
     opened, osrc, basis = "", "", ""
     if brand == "詩肯柚木" and item["name"] in SCANTEAK_OPENINGS:
         opened, osrc, _ = SCANTEAK_OPENINGS[item["name"]]
-        basis = "新聞／官方"
+        basis = "使用者查證" if osrc == USER_CHECKED else "新聞／官方"
     elif brand == "東稻家居" and re.match(r"\d{4}", item.get("opened_date") or ""):
         opened = item["opened_date"]
         osrc = (re.findall(r"https?://[^\s）)，；]+", item.get("opened_source") or "") or [source_url])[0]
@@ -117,6 +125,11 @@ def build(brand, item, source_url):
     return row
 
 
+def keep_hd(item):
+    """東稻家居依使用者指示只收營業中的一般門市：睡眠館、快閃店與已遷址舊店不計"""
+    return item["status"] == "營業中" and "睡眠館" not in item["name"] and "快閃" not in item["name"]
+
+
 def main():
     rows = json.loads(MAIN_JSON.read_text(encoding="utf-8"))
     old_n = {(r["brand"], r["store_name"]): r["n"] for r in rows if r.get("brand") in SOURCES}
@@ -125,6 +138,8 @@ def main():
     new = []
     for brand, (path, url) in SOURCES.items():
         for item in json.loads(path.read_text(encoding="utf-8")):
+            if brand == "東稻家居" and not keep_hd(item):
+                continue
             row = build(brand, item, url)
             n = old_n.get((brand, row["store_name"]))
             if n is None:
@@ -145,7 +160,8 @@ def main():
         if r["opened_date"]:
             verified.append({"brand": r["brand"], "store_name": r["store_name"], "date": r["opened_date"],
                              "year": int(r["opened_date"][:4]), "confidence": "confirmed",
-                             "sources": [r["opened_date_source"]], "evidence": f"開幕日 {r['opened_date']}（官方公告或新聞）"})
+                             "sources": [r["opened_date_source"]],
+                             "evidence": f"開幕日 {r['opened_date']}（" + ("使用者人工查證" if r["opened_date_source"] == USER_CHECKED else "官方公告或新聞") + "）"})
     VERIFIED_JSON.write_text(json.dumps(verified, ensure_ascii=False, indent=2) + ("\n" if raw.endswith("\n") else ""),
                              encoding="utf-8")
     count = {b: sum(1 for r in new if r["brand"] == b and r["status"] == "營業中") for b in SOURCES}

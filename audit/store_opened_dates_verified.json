@@ -5414,6 +5414,61 @@
   },
   {
     "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 台中麗寶店",
+    "date": "2026-05-29",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "使用者查證（2026-11-16）"
+    ],
+    "evidence": "開幕日 2026-05-29（使用者人工查證）"
+  },
+  {
+    "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 新店中興店(萬家福)",
+    "date": "2026-05-12",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "使用者查證（2026-11-16）"
+    ],
+    "evidence": "開幕日 2026-05-12（使用者人工查證）"
+  },
+  {
+    "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 北屯松竹店",
+    "date": "2026-01-31",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "使用者查證（2026-11-16）"
+    ],
+    "evidence": "開幕日 2026-01-31（使用者人工查證）"
+  },
+  {
+    "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 台中廣三SOGO店",
+    "date": "2026-10-18",
+    "year": 2026,
+    "confidence": "confirmed",
+    "sources": [
+      "使用者查證（2026-11-16）"
+    ],
+    "evidence": "開幕日 2026-10-18（使用者人工查證）"
+  },
+  {
+    "brand": "詩肯柚木",
+    "store_name": "詩肯柚木 新竹大遠百店",
+    "date": "2025-04-25",
+    "year": 2025,
+    "confidence": "confirmed",
+    "sources": [
+      "使用者查證（2026-11-16）"
+    ],
+    "evidence": "開幕日 2025-04-25（使用者人工查證）"
+  },
+  {
+    "brand": "詩肯柚木",
     "store_name": "詩肯柚木 台北大舊宗店",
     "date": "2019-11-13",
     "year": 2019,
@@ -5433,17 +5488,6 @@
       "https://www.moneyweekly.com.tw/ArticleData/Info/Article/160672/"
     ],
     "evidence": "開幕日 1994（官方公告或新聞）"
-  },
-  {
-    "brand": "東稻家居",
-    "store_name": "東稻家居 台北內湖睡眠館",
-    "date": "2024-02-21",
-    "year": 2024,
-    "confidence": "confirmed",
-    "sources": [
-      "https://www.youtube.com/watch?v=1Y8A4wM-Hj0"
-    ],
-    "evidence": "開幕日 2024-02-21（官方公告或新聞）"
   },
   {
     "brand": "東稻家居",
@@ -5510,16 +5554,5 @@
       "https://www.hdlife.com.tw/HotNews/Messages/284"
     ],
     "evidence": "開幕日 2019-03（官方公告或新聞）"
-  },
-  {
-    "brand": "東稻家居",
-    "store_name": "東稻家居 台南中西區門市",
-    "date": "2022-06",
-    "year": 2022,
-    "confidence": "confirmed",
-    "sources": [
-      "https://www.hdlife.com.tw/Articles/Detail/254"
-    ],
-    "evidence": "開幕日 2022-06（官方公告或新聞）"
   }
 ]
