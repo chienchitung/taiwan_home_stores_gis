@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""同步「詩肯柚木」「東稻家居」門市（2026-11-16 查核；資料凍結於 2026-10-31，10/31 後查無異動）。
+"""同步「詩肯」「東稻家居」門市（2026-11-16 查核；資料凍結於 2026-10-31，10/31 後查無異動）。
 
-- 詩肯柚木（詩肯股份有限公司，統編 89403884）：官網門市頁 https://www.scanteak.com.tw/our-stores/ 的 AJAX 清單共 72 間，
+- 詩肯（詩肯股份有限公司，統編 89403884；旗下詩肯柚木、詩肯居家、詩肯睡眠等品牌，2026-11-16 起品牌統一稱「詩肯」）：詩肯柚木官網門市頁 https://www.scanteak.com.tw/our-stores/ 的 AJAX 清單共 72 間，
   全數列為營業中。原始整理見 audit/scanteak_stores_20261116.json。
 - 東稻家居（H&D，東稻股份有限公司，統編 27558042）：官網門市資料 https://www.hdlife.com.tw/zSharedFiles/_db_json/store/store.json
   共 8 間；依使用者指示只收營業中的一般門市，睡眠館（台北內湖睡眠館）、快閃店與遷址舊店不計，收 7 間。
@@ -23,8 +23,9 @@ DATA_DIR = BASE_DIR.parent / "data"
 MAIN_JSON = DATA_DIR / "taiwan_home_stores_status.json"
 MAIN_CSV = DATA_DIR / "taiwan_home_stores_status.csv"
 VERIFIED_JSON = BASE_DIR / "store_opened_dates_verified.json"
+LEGACY_BRANDS = {"詩肯柚木": "詩肯"}  # 舊品牌名：重跑時移除並沿用原本的 n
 SOURCES = {
-    "詩肯柚木": (BASE_DIR / "scanteak_stores_20261116.json", "https://www.scanteak.com.tw/our-stores/"),
+    "詩肯": (BASE_DIR / "scanteak_stores_20261116.json", "https://www.scanteak.com.tw/our-stores/"),
     "東稻家居": (BASE_DIR / "hd_stores_20261116.json", "https://www.hdlife.com.tw/Store/"),
 }
 CHANNEL = {"大型獨棟／街邊門市": "大型獨棟 / 獨立街邊店", "百貨／購物中心門市": "百貨商場 / 購物中心",
@@ -88,7 +89,7 @@ def build(brand, item, source_url):
     address = item["address"].replace("臺", "台")
     fmt = store_format(brand, item)
     opened, osrc, basis = "", "", ""
-    if brand == "詩肯柚木" and item["name"] in SCANTEAK_OPENINGS:
+    if brand == "詩肯" and item["name"] in SCANTEAK_OPENINGS:
         opened, osrc, _ = SCANTEAK_OPENINGS[item["name"]]
         basis = "使用者查證" if osrc == USER_CHECKED else "新聞／官方"
     elif brand == "東稻家居" and re.match(r"\d{4}", item.get("opened_date") or ""):
@@ -132,8 +133,14 @@ def keep_hd(item):
 
 def main():
     rows = json.loads(MAIN_JSON.read_text(encoding="utf-8"))
-    old_n = {(r["brand"], r["store_name"]): r["n"] for r in rows if r.get("brand") in SOURCES}
-    kept = [r for r in rows if r.get("brand") not in SOURCES]
+    old_n = {}
+    for r in rows:
+        if r.get("brand") in LEGACY_BRANDS:
+            new_brand = LEGACY_BRANDS[r["brand"]]
+            old_n[(new_brand, r["store_name"].replace(r["brand"], new_brand, 1))] = r["n"]
+        elif r.get("brand") in SOURCES:
+            old_n[(r["brand"], r["store_name"])] = r["n"]
+    kept = [r for r in rows if r.get("brand") not in SOURCES and r.get("brand") not in LEGACY_BRANDS]
     next_n = max(int(r.get("n") or 0) for r in rows) + 1
     new = []
     for brand, (path, url) in SOURCES.items():
@@ -155,7 +162,7 @@ def main():
         writer.writerows(all_rows)
 
     raw = VERIFIED_JSON.read_text(encoding="utf-8")
-    verified = [v for v in json.loads(raw) if v["brand"] not in SOURCES]
+    verified = [v for v in json.loads(raw) if v["brand"] not in SOURCES and v["brand"] not in LEGACY_BRANDS]
     for r in new:
         if r["opened_date"]:
             verified.append({"brand": r["brand"], "store_name": r["store_name"], "date": r["opened_date"],
@@ -165,7 +172,7 @@ def main():
     VERIFIED_JSON.write_text(json.dumps(verified, ensure_ascii=False, indent=2) + ("\n" if raw.endswith("\n") else ""),
                              encoding="utf-8")
     count = {b: sum(1 for r in new if r["brand"] == b and r["status"] == "營業中") for b in SOURCES}
-    print(f"詩肯柚木／東稻家居：{len(new)} 筆；營業中 {count}")
+    print(f"詩肯／東稻家居：{len(new)} 筆；營業中 {count}")
 
 
 if __name__ == "__main__":

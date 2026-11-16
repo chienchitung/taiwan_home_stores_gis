@@ -15,7 +15,7 @@ const BRANDS = {
   "HOLA":              { color: "#D97706", label: "HOLA 和樂家居",        tableLabel: "HOLA",    abbr: "HO" },
   "hoi! 好好生活":      { color: "#E11D48", label: "hoi! 好好生活",       tableLabel: "hoi!",    abbr: "hi" },
   "MR. LIVING 居家先生":{ color: "#1E293B", label: "MR. LIVING 居家先生", tableLabel: "MR.",     abbr: "MR" },
-  "詩肯柚木":           { color: "#8B5A2B", label: "詩肯柚木 (Scanteak)",  tableLabel: "詩肯",     abbr: "詩" },
+  "詩肯":               { color: "#8B5A2B", label: "詩肯（柚木／居家／睡眠）", tableLabel: "詩肯", abbr: "詩" },
   "東稻家居":           { color: "#4338CA", label: "東稻家居 (H&D)",       tableLabel: "東稻",     abbr: "東" },
   "Costco 好市多":      { color: "#E31837", label: "Costco 好市多",       tableLabel: "Costco",  abbr: "CO" },
   "萬家福":             { color: "#0B6E4F", label: "萬家福量販",          tableLabel: "萬家福",   abbr: "萬" },
@@ -40,7 +40,7 @@ const BRANDS = {
 };
 const BRAND_KEYS = Object.keys(BRANDS);
 const DATASET_BRANDS = {
-  home: ["IKEA", "無印良品", "宜得利", "特力屋", "HOLA", "hoi! 好好生活", "MR. LIVING 居家先生", "詩肯柚木", "東稻家居"],
+  home: ["IKEA", "無印良品", "宜得利", "特力屋", "HOLA", "hoi! 好好生活", "MR. LIVING 居家先生", "詩肯", "東稻家居"],
   mass: ["Costco 好市多", "萬家福", "大全聯", "愛買"],
   supermarket: ["全聯福利中心", "樂家康"],
   department: ["新光三越", "遠東百貨", "遠東SOGO", "微風", "統一時代百貨", "漢神百貨", "大立百貨", "中友百貨", "廣三SOGO", "大葉高島屋", "明曜百貨", "太平洋百貨", "德安百貨"],
