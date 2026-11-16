@@ -64,8 +64,17 @@ def region_for(city):
         return "南部"
     return "東部/離島"
 
+# 2026-11-16 逐間以 Google 地圖與同址門市核對店型（官網原名 → (店型, 依據)）
+FORMAT_OVERRIDES = {
+    "南崁": ("店中店／專櫃", "與特力屋南崁店（B1）、HOLA 桃園南崁店（1F）同為蘆竹區中正路1號"),
+    "內湖新湖": ("店中店／專櫃", "與特力屋內湖店（B1）、HOLA 台北內湖店（1F）、hoi! 內湖店（2F）同為新湖三路23號，官網地址為 2 樓 E 櫃"),
+    "汐止新五": ("百貨／購物中心門市", "Google 地圖 iFG 遠雄廣場地址為新台五路一段93-99號，門市位於 97 號 3 樓"),
+}
+
 
 def store_format(brand, item):
+    if item["name"] in FORMAT_OVERRIDES:
+        return FORMAT_OVERRIDES[item["name"]][0]
     fmt, basis = item["store_format"], item.get("format_basis") or ""
     if "未判定" in fmt or "查無" in fmt:
         return "店型待確認"
@@ -108,6 +117,8 @@ def build(brand, item, source_url):
         note_parts.append("商場誠品生活新店 2023-09-28 開幕時已列進駐品牌，但品牌本身開幕日查無，不以商場開幕日代替")
     if item["name"] in SCANTEAK_NOTES:
         note_parts.append(SCANTEAK_NOTES[item["name"]])
+    if item["name"] in FORMAT_OVERRIDES:
+        note_parts.append("店型依據：" + FORMAT_OVERRIDES[item["name"]][1])
     if fmt == "店型待確認":
         note_parts.append("所在建物未查證，店型待確認")
     row = {
