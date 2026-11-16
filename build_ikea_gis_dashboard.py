@@ -87,7 +87,7 @@ PXMART_STORES_JS = json.dumps(pxmart_stores, ensure_ascii=False, separators=(','
 ACTIVE_STORE_COUNT = sum(
     1 for store in dashboard_stores if store.get('status_category') == '現行營運中'
 )
-DATA_UPDATED_DATE = '2026-10-13'  # 最近一次門市資料（含開幕日期）更新日
+DATA_UPDATED_DATE = '2026-11-16'  # 最近一次門市資料（含開幕日期）更新日；門市狀態凍結於 2026-10-31
 
 
 # ─── 前端程式 ───
